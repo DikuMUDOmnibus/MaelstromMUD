@@ -5,3 +5,7 @@ area/notes.txt
 area/bugs.txt
 area/clan.dat
 banned.lst
+*.o
+*.core
+src/envy
+nohup.out
