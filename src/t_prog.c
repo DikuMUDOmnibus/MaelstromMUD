@@ -51,28 +51,28 @@ char *	tprg_next_command	args( ( char* clist ) );
 bool	tprg_seval		args( ( char* lhs, char* opr, char* rhs ) );
 bool	tprg_veval		args( ( int lhs, char* opr, int rhs ) );
 bool	tprg_do_ifchck		args( ( char* ifchck, ROOM_INDEX_DATA *room,
-				       OBJ_INDEX_DATA *tObj,
-				       CHAR_DATA* actor, OBJ_DATA* obj,
-				       void* vo, CHAR_DATA* rndm ) );
+			OBJ_INDEX_DATA *tObj,
+			CHAR_DATA* actor, OBJ_DATA* obj,
+			void* vo, CHAR_DATA* rndm ) );
 char *	tprg_process_if	args( ( char* ifchck, char* com_list, 
-				       ROOM_INDEX_DATA *room,
-				       OBJ_INDEX_DATA *tObj, 
-				       CHAR_DATA* actor,
-				       OBJ_DATA* obj, void* vo,
-				       CHAR_DATA* rndm ) );
+			ROOM_INDEX_DATA *room,
+			OBJ_INDEX_DATA *tObj, 
+			CHAR_DATA* actor,
+			OBJ_DATA* obj, void* vo,
+			CHAR_DATA* rndm ) );
 void	tprg_translate		args( ( char ch, char* t, 
-				       ROOM_INDEX_DATA *room,
-				       OBJ_INDEX_DATA *tObj,
-				       CHAR_DATA* actor, OBJ_DATA* obj,
-				       void* vo, CHAR_DATA* rndm ) );
+			ROOM_INDEX_DATA *room,
+			OBJ_INDEX_DATA *tObj,
+			CHAR_DATA* actor, OBJ_DATA* obj,
+			void* vo, CHAR_DATA* rndm ) );
 void	tprg_process_cmnd	args( ( char* cmnd, ROOM_INDEX_DATA *room,
-				       OBJ_INDEX_DATA *tObj, 
-				       CHAR_DATA* actor, OBJ_DATA* obj,
-				       void* vo, CHAR_DATA* rndm ) );
+			OBJ_INDEX_DATA *tObj, 
+			CHAR_DATA* actor, OBJ_DATA* obj,
+			void* vo, CHAR_DATA* rndm ) );
 void	tprg_driver		args( ( char* com_list, ROOM_INDEX_DATA *room,
-				       OBJ_INDEX_DATA *tObj,
-				       CHAR_DATA* actor, OBJ_DATA* obj,
-				       void* vo ) );
+			OBJ_INDEX_DATA *tObj,
+			CHAR_DATA* actor, OBJ_DATA* obj,
+			void* vo ) );
 
 /***************************************************************************
  * Local function code and brief comments.
@@ -83,12 +83,12 @@ void	tprg_driver		args( ( char* com_list, ROOM_INDEX_DATA *room,
 #ifdef DUNNO_STRSTR
 char * strstr(s1,s2) const char *s1; const char *s2;
 {
-  char *cp;
-  int i,j=strlen(s1)-strlen(s2),k=strlen(s2);
-  if(j<0)
-    return NULL;
-  for(i=0; i<=j && strncmp(s1++,s2, k)!=0; i++);
-  return (i>j) ? NULL : (s1-1);
+	char *cp;
+	int i,j=strlen(s1)-strlen(s2),k=strlen(s2);
+	if(j<0)
+		return NULL;
+	for(i=0; i<=j && strncmp(s1++,s2, k)!=0; i++);
+	return (i>j) ? NULL : (s1-1);
 }
 #endif
 
@@ -98,17 +98,17 @@ char * strstr(s1,s2) const char *s1; const char *s2;
  */
 char *tprg_next_command( char *clist )
 {
-  char *pointer;
+	char *pointer;
 
-  pointer = clist;
-  while ( *pointer != '\n' && *pointer != '\0' )
-    pointer++;
-  if ( *pointer == '\n' )
-    *pointer++ = '\0';
-  if ( *pointer == '\r' )
-    *pointer++ = '\0';
+	pointer = clist;
+	while ( *pointer != '\n' && *pointer != '\0' )
+		pointer++;
+	if ( *pointer == '\n' )
+		*pointer++ = '\0';
+	if ( *pointer == '\r' )
+		*pointer++ = '\0';
 
-  return pointer;
+	return pointer;
 
 }
 
@@ -122,42 +122,42 @@ char *tprg_next_command( char *clist )
 bool tprg_seval( char *lhs, char *opr, char *rhs )
 {
 
-  if ( !str_cmp( opr, "==" ) )
-    return ( bool )( !str_cmp( lhs, rhs ) );
-  if ( !str_cmp( opr, "!=" ) )
-    return ( bool )( str_cmp( lhs, rhs ) );
-  if ( !str_cmp( opr, "/" ) )
-    return ( bool )( !str_infix( rhs, lhs ) );
-  if ( !str_cmp( opr, "!/" ) )
-    return ( bool )( str_infix( rhs, lhs ) );
+	if ( !str_cmp( opr, "==" ) )
+		return ( bool )( !str_cmp( lhs, rhs ) );
+	if ( !str_cmp( opr, "!=" ) )
+		return ( bool )( str_cmp( lhs, rhs ) );
+	if ( !str_cmp( opr, "/" ) )
+		return ( bool )( !str_infix( rhs, lhs ) );
+	if ( !str_cmp( opr, "!/" ) )
+		return ( bool )( str_infix( rhs, lhs ) );
 
-  bug ( "Improper TRAPprog operator\n\r", 0 );
-  return 0;
+	bug ( "Improper TRAPprog operator\n\r", 0 );
+	return 0;
 
 }
 
 bool tprg_veval( int lhs, char *opr, int rhs )
 {
 
-  if ( !str_cmp( opr, "==" ) )
-    return ( lhs == rhs );
-  if ( !str_cmp( opr, "!=" ) )
-    return ( lhs != rhs );
-  if ( !str_cmp( opr, ">" ) )
-    return ( lhs > rhs );
-  if ( !str_cmp( opr, "<" ) )
-    return ( lhs < rhs );
-  if ( !str_cmp( opr, ">=" ) )
-    return ( lhs <= rhs );
-  if ( !str_cmp( opr, ">=" ) )
-    return ( lhs >= rhs );
-  if ( !str_cmp( opr, "&" ) )
-    return ( lhs & rhs );
-  if ( !str_cmp( opr, "|" ) )
-    return ( lhs | rhs );
+	if ( !str_cmp( opr, "==" ) )
+		return ( lhs == rhs );
+	if ( !str_cmp( opr, "!=" ) )
+		return ( lhs != rhs );
+	if ( !str_cmp( opr, ">" ) )
+		return ( lhs > rhs );
+	if ( !str_cmp( opr, "<" ) )
+		return ( lhs < rhs );
+	if ( !str_cmp( opr, ">=" ) )
+		return ( lhs <= rhs );
+	if ( !str_cmp( opr, ">=" ) )
+		return ( lhs >= rhs );
+	if ( !str_cmp( opr, "&" ) )
+		return ( lhs & rhs );
+	if ( !str_cmp( opr, "|" ) )
+		return ( lhs | rhs );
 
-  bug ( "Improper TRAPprog operator\n\r", 0 );
-  return 0;
+	bug ( "Improper TRAPprog operator\n\r", 0 );
+	return 0;
 
 }
 
@@ -172,835 +172,835 @@ bool tprg_veval( int lhs, char *opr, int rhs )
  * If there are errors, then return -1 otherwise return boolean 1,0
  */
 bool tprg_do_ifchck( char *ifchck, ROOM_INDEX_DATA *room, OBJ_INDEX_DATA *tObj,
-            CHAR_DATA *actor, OBJ_DATA *obj, void *vo, CHAR_DATA *rndm)
+		CHAR_DATA *actor, OBJ_DATA *obj, void *vo, CHAR_DATA *rndm)
 {
 
-  char buf[ MAX_INPUT_LENGTH ];
-  char arg[ MAX_INPUT_LENGTH ];
-  char opr[ MAX_INPUT_LENGTH ];
-  char val[ MAX_INPUT_LENGTH ];
-  CHAR_DATA *vict = (CHAR_DATA *) vo;
-  OBJ_DATA *v_obj = (OBJ_DATA  *) vo;
-  char     *bufpt = buf;
-  char     *argpt = arg;
-  char     *oprpt = opr;
-  char     *valpt = val;
-  char     *point = ifchck;
-  int       lhsvl;
-  int       rhsvl;
+	char buf[ MAX_INPUT_LENGTH ];
+	char arg[ MAX_INPUT_LENGTH ];
+	char opr[ MAX_INPUT_LENGTH ];
+	char val[ MAX_INPUT_LENGTH ];
+	CHAR_DATA *vict = (CHAR_DATA *) vo;
+	OBJ_DATA *v_obj = (OBJ_DATA  *) vo;
+	char     *bufpt = buf;
+	char     *argpt = arg;
+	char     *oprpt = opr;
+	char     *valpt = val;
+	char     *point = ifchck;
+	int       lhsvl;
+	int       rhsvl;
 
-  if ( *point == '\0' ) 
-    {
-      if ( room )
-      bug( "Room: %d null ifchck", room->vnum );
-      if ( tObj )
-      bug( "Obj: %d null ifchck", tObj->vnum );
-      return -1;
-    }   
-  /* skip leading spaces */
-  while ( *point == ' ' )
-    point++;
-
-  /* get whatever comes before the left paren.. ignore spaces */
-  while ( *point != '(' ) 
-    if ( *point == '\0' ) 
-      {
-      /*
-	bug ( "Trap: %d ifchck syntax error (missing opening '(' )", mob->pIndexData->vnum );  */
-	return -1;
-      }   
-    else
-      if ( *point == ' ' )
-	point++;
-      else 
-	*bufpt++ = *point++; 
-
-  *bufpt = '\0';
-  point++;
-
-  /* get whatever is in between the parens.. ignore spaces */
-  while ( *point != ')' ) 
-    if ( *point == '\0' ) 
-      {
-      /*
-	bug ( "Mob: %d ifchck syntax error (missing closing ')' )", mob->pIndexData->vnum );  */
-	return -1;
-      }   
-    else
-      if ( *point == ' ' )
-	point++;
-      else 
-	*argpt++ = *point++; 
-
-  *argpt = '\0';
-  point++;
-
-  /* check to see if there is an operator */
-  while ( *point == ' ' )
-    point++;
-  if ( *point == '\0' ) 
-    {
-      *opr = '\0';
-      *val = '\0';
-    }   
-  else /* there should be an operator and value, so get them */
-    {
-      while ( ( *point != ' ' ) && ( !isalnum( *point ) ) ) 
 	if ( *point == '\0' ) 
-	  {
-	  /*
-	    bug ( "Mob: %d ifchck operator without value",
-		 mob->pIndexData->vnum );  */
-	    return -1;
-	  }   
-	else
-	  *oprpt++ = *point++; 
+	{
+		if ( room )
+			bug( "Room: %d null ifchck", room->vnum );
+		if ( tObj )
+			bug( "Obj: %d null ifchck", tObj->vnum );
+		return -1;
+	}   
+	/* skip leading spaces */
+	while ( *point == ' ' )
+		point++;
 
-      *oprpt = '\0';
- 
-      /* finished with operator, skip spaces and then get the value */
-      while ( *point == ' ' )
+	/* get whatever comes before the left paren.. ignore spaces */
+	while ( *point != '(' ) 
+		if ( *point == '\0' ) 
+		{
+			/*
+			   bug ( "Trap: %d ifchck syntax error (missing opening '(' )", mob->pIndexData->vnum );  */
+			return -1;
+		}   
+		else
+			if ( *point == ' ' )
+				point++;
+			else 
+				*bufpt++ = *point++; 
+
+	*bufpt = '\0';
 	point++;
-      for( ; ; )
+
+	/* get whatever is in between the parens.. ignore spaces */
+	while ( *point != ')' ) 
+		if ( *point == '\0' ) 
+		{
+			/*
+			   bug ( "Mob: %d ifchck syntax error (missing closing ')' )", mob->pIndexData->vnum );  */
+			return -1;
+		}   
+		else
+			if ( *point == ' ' )
+				point++;
+			else 
+				*argpt++ = *point++; 
+
+	*argpt = '\0';
+	point++;
+
+	/* check to see if there is an operator */
+	while ( *point == ' ' )
+		point++;
+	if ( *point == '\0' ) 
 	{
-	  if ( ( *point != ' ' ) && ( *point == '\0' ) )
-	    break;
-	  else
-	    *valpt++ = *point++; 
+		*opr = '\0';
+		*val = '\0';
+	}   
+	else /* there should be an operator and value, so get them */
+	{
+		while ( ( *point != ' ' ) && ( !isalnum( *point ) ) ) 
+			if ( *point == '\0' ) 
+			{
+				/*
+				   bug ( "Mob: %d ifchck operator without value",
+				   mob->pIndexData->vnum );  */
+				return -1;
+			}   
+			else
+				*oprpt++ = *point++; 
+
+		*oprpt = '\0';
+
+		/* finished with operator, skip spaces and then get the value */
+		while ( *point == ' ' )
+			point++;
+		for( ; ; )
+		{
+			if ( ( *point != ' ' ) && ( *point == '\0' ) )
+				break;
+			else
+				*valpt++ = *point++; 
+		}
+
+		*valpt = '\0';
+	}
+	bufpt = buf;
+	argpt = arg;
+	oprpt = opr;
+	valpt = val;
+
+	/* Ok... now buf contains the ifchck, arg contains the inside of the
+	 *  parentheses, opr contains an operator if one is present, and val
+	 *  has the value if an operator was present.
+	 *  So.. basically use if statements and run over all known ifchecks
+	 *  Once inside, use the argument and expand the lhs. Then if need be
+	 *  send the lhs,opr,rhs off to be evaluated.
+	 */
+
+	if ( !str_cmp( buf, "rand" ) )
+	{
+		return ( number_percent() <= atoi(arg) );
 	}
 
-      *valpt = '\0';
-    }
-  bufpt = buf;
-  argpt = arg;
-  oprpt = opr;
-  valpt = val;
-
-  /* Ok... now buf contains the ifchck, arg contains the inside of the
-   *  parentheses, opr contains an operator if one is present, and val
-   *  has the value if an operator was present.
-   *  So.. basically use if statements and run over all known ifchecks
-   *  Once inside, use the argument and expand the lhs. Then if need be
-   *  send the lhs,opr,rhs off to be evaluated.
-   */
-
-  if ( !str_cmp( buf, "rand" ) )
-    {
-      return ( number_percent() <= atoi(arg) );
-    }
-
-  if ( !str_cmp( buf, "ispc" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+	if ( !str_cmp( buf, "ispc" ) )
 	{
-	case 'i': return 0;
-	case 'n': if ( actor )
- 	             return ( !IS_NPC( actor ) );
-	          else return -1;
-	case 't': if ( vict )
-                     return ( !IS_NPC( vict ) );
-	          else return -1;
-	case 'r': if ( rndm )
-                     return ( !IS_NPC( rndm ) );
-	          else return -1;
-	default:
-	/*
-	  sprintf( log_buf, "Mob: %d bad argument to 'ispc' (%s)", 
-	   	mob->pIndexData->vnum, arg ); 
-	  bug ( log_buf, 0 ); */
-	  return -1;
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			case 'i': return 0;
+			case 'n': if ( actor )
+						  return ( !IS_NPC( actor ) );
+					  else return -1;
+			case 't': if ( vict )
+						  return ( !IS_NPC( vict ) );
+					  else return -1;
+			case 'r': if ( rndm )
+						  return ( !IS_NPC( rndm ) );
+					  else return -1;
+			default:
+					  /*
+						 sprintf( log_buf, "Mob: %d bad argument to 'ispc' (%s)", 
+						 mob->pIndexData->vnum, arg ); 
+						 bug ( log_buf, 0 ); */
+					  return -1;
+		}
 	}
-    }
 
-  if ( !str_cmp( buf, "isnpc" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+	if ( !str_cmp( buf, "isnpc" ) )
 	{
-	case 'i': return 1;
-	case 'n': if ( actor )
-	             return IS_NPC( actor );
-	          else return -1;
-	case 't': if ( vict )
-                     return IS_NPC( vict );
-	          else return -1;
-	case 'r': if ( rndm )
-	             return IS_NPC( rndm );
-	          else return -1;
-	default:
-	/*
-	  sprintf(log_buf, "Mob: %d bad argument to 'isnpc' (%s)", mob->pIndexData->vnum,
-	   arg ); 
-	  bug (log_buf, 0 ); */
-	  return -1;
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			case 'i': return 1;
+			case 'n': if ( actor )
+						  return IS_NPC( actor );
+					  else return -1;
+			case 't': if ( vict )
+						  return IS_NPC( vict );
+					  else return -1;
+			case 'r': if ( rndm )
+						  return IS_NPC( rndm );
+					  else return -1;
+			default:
+					  /*
+						 sprintf(log_buf, "Mob: %d bad argument to 'isnpc' (%s)", mob->pIndexData->vnum,
+						 arg ); 
+						 bug (log_buf, 0 ); */
+					  return -1;
+		}
 	}
-    }
 
-  if ( !str_cmp( buf, "isclan" ) )
-  {
-    switch ( arg[1] )
-    {
-    case 'n' : if (actor)
-      if (!IS_NPC( actor ) )
-      {
-	lhsvl = actor->clan;
-	rhsvl = atoi(val);
-	return tprg_veval( lhsvl, opr,  rhsvl );
-      }
-      else return -1;
-    default:
-    /*
-      sprintf(log_buf, "Mob: %d bad arg to ifchck 'isclan' (%s)", mob->pIndexData->vnum,
-	      arg );
-      bug( log_buf, 0 ); */
-      return -1;
-    }	
-  }
-                    
-  if ( !str_cmp( buf, "isgood" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+	if ( !str_cmp( buf, "isclan" ) )
 	{
-/*	case 'i': return IS_GOOD( mob ); */
-	case 'n': if ( actor )
-	             return IS_GOOD( actor );
-	          else return -1;
-	case 't': if ( vict )
-	             return IS_GOOD( vict );
-	          else return -1;
-	case 'r': if ( rndm )
-	             return IS_GOOD( rndm );
-	          else return -1;
-	default:
-	/*
-	  sprintf(log_buf,  "Mob: %d bad argument to 'isgood' (%s)", mob->pIndexData->vnum,
-	  arg ); 
-	  bug( log_buf, 0 ); */
-	  return -1;
+		switch ( arg[1] )
+		{
+			case 'n' : if (actor)
+						   if (!IS_NPC( actor ) )
+						   {
+							   lhsvl = actor->clan;
+							   rhsvl = atoi(val);
+							   return tprg_veval( lhsvl, opr,  rhsvl );
+						   }
+						   else return -1;
+			default:
+					   /*
+						  sprintf(log_buf, "Mob: %d bad arg to ifchck 'isclan' (%s)", mob->pIndexData->vnum,
+						  arg );
+						  bug( log_buf, 0 ); */
+					   return -1;
+		}	
 	}
-    }
 
-  if ( !str_cmp( buf, "isfight" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+	if ( !str_cmp( buf, "isgood" ) )
 	{
-/*	case 'i': return ( mob->fighting ) ? 1 : 0; */
-	case 'n': if ( actor )
-	             return ( actor->fighting ) ? 1 : 0;
-	          else return -1;
-	case 't': if ( vict )
-	             return ( vict->fighting ) ? 1 : 0;
-	          else return -1;
-	case 'r': if ( rndm )
-	             return ( rndm->fighting ) ? 1 : 0;
-	          else return -1;
-	default:
-	/*
-	  bug ( "Mob: %d bad argument to 'isfight'", mob->pIndexData->vnum );  */
-	  return -1;
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			/*	case 'i': return IS_GOOD( mob ); */
+			case 'n': if ( actor )
+						  return IS_GOOD( actor );
+					  else return -1;
+			case 't': if ( vict )
+						  return IS_GOOD( vict );
+					  else return -1;
+			case 'r': if ( rndm )
+						  return IS_GOOD( rndm );
+					  else return -1;
+			default:
+					  /*
+						 sprintf(log_buf,  "Mob: %d bad argument to 'isgood' (%s)", mob->pIndexData->vnum,
+						 arg ); 
+						 bug( log_buf, 0 ); */
+					  return -1;
+		}
 	}
-    }
 
-  if ( !str_cmp( buf, "isimmort" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+	if ( !str_cmp( buf, "isfight" ) )
 	{
-/*	case 'i': return ( get_trust( mob ) > LEVEL_IMMORTAL ); */
-	case 'n': if ( actor )
-	             return ( get_trust( actor ) > LEVEL_IMMORTAL );
-  	          else return -1;
-	case 't': if ( vict )
-	             return ( get_trust( vict ) > LEVEL_IMMORTAL );
-                  else return -1;
-	case 'r': if ( rndm )
-	             return ( get_trust( rndm ) > LEVEL_IMMORTAL );
-                  else return -1;
-	default:
-/*	  bug ( "Mob: %d bad argument to 'isimmort'", mob->pIndexData->vnum );  */
-	  return -1;
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			/*	case 'i': return ( mob->fighting ) ? 1 : 0; */
+			case 'n': if ( actor )
+						  return ( actor->fighting ) ? 1 : 0;
+					  else return -1;
+			case 't': if ( vict )
+						  return ( vict->fighting ) ? 1 : 0;
+					  else return -1;
+			case 'r': if ( rndm )
+						  return ( rndm->fighting ) ? 1 : 0;
+					  else return -1;
+			default:
+					  /*
+						 bug ( "Mob: %d bad argument to 'isfight'", mob->pIndexData->vnum );  */
+					  return -1;
+		}
 	}
-    }
 
-  if ( !str_cmp( buf, "ischarmed" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+	if ( !str_cmp( buf, "isimmort" ) )
 	{
-/*	case 'i': return (bool) IS_AFFECTED( mob, AFF_CHARM ); */
-	case 'n': if ( actor )
-	             return (bool) IS_AFFECTED( actor, AFF_CHARM );
-	          else return -1;
-	case 't': if ( vict )
-	             return (bool) IS_AFFECTED( vict, AFF_CHARM );
-	          else return -1;
-	case 'r': if ( rndm )
-	             return (bool) IS_AFFECTED( rndm, AFF_CHARM );
-	          else return -1;
-	default:
-	/*
-	  bug ( "Mob: %d bad argument to 'ischarmed'",
-	       mob->pIndexData->vnum ); */
-	  return -1;
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			/*	case 'i': return ( get_trust( mob ) > LEVEL_IMMORTAL ); */
+			case 'n': if ( actor )
+						  return ( get_trust( actor ) > LEVEL_IMMORTAL );
+					  else return -1;
+			case 't': if ( vict )
+						  return ( get_trust( vict ) > LEVEL_IMMORTAL );
+					  else return -1;
+			case 'r': if ( rndm )
+						  return ( get_trust( rndm ) > LEVEL_IMMORTAL );
+					  else return -1;
+			default:
+					  /*	  bug ( "Mob: %d bad argument to 'isimmort'", mob->pIndexData->vnum );  */
+					  return -1;
+		}
 	}
-    }
 
-  if ( !str_cmp( buf, "isfollow" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+	if ( !str_cmp( buf, "ischarmed" ) )
 	{
-/*	case 'i': return ( mob->master != NULL
-			  && mob->master->in_room == mob->in_room ); */
-	case 'n': if ( actor )
-	             return ( actor->master != NULL
-			     && actor->master->in_room == actor->in_room );
-	          else return -1;
-	case 't': if ( vict )
-	             return ( vict->master != NULL
-			     && vict->master->in_room == vict->in_room );
-	          else return -1;
-	case 'r': if ( rndm )
-	             return ( rndm->master != NULL
-			     && rndm->master->in_room == rndm->in_room );
-	          else return -1;
-	default:
-	/*
-	  bug ( "Mob: %d bad argument to 'isfollow'", mob->pIndexData->vnum );  */
-	  return -1;
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			/*	case 'i': return (bool) IS_AFFECTED( mob, AFF_CHARM ); */
+			case 'n': if ( actor )
+						  return (bool) IS_AFFECTED( actor, AFF_CHARM );
+					  else return -1;
+			case 't': if ( vict )
+						  return (bool) IS_AFFECTED( vict, AFF_CHARM );
+					  else return -1;
+			case 'r': if ( rndm )
+						  return (bool) IS_AFFECTED( rndm, AFF_CHARM );
+					  else return -1;
+			default:
+					  /*
+						 bug ( "Mob: %d bad argument to 'ischarmed'",
+						 mob->pIndexData->vnum ); */
+					  return -1;
+		}
 	}
-    }
 
-  if ( !str_cmp( buf, "isaffected" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+	if ( !str_cmp( buf, "isfollow" ) )
 	{
-/*	case 'i': return ( mob->affected_by & atoi( arg ) ); */
-	case 'n': if ( actor )
-	             return ( actor->affected_by & atoi( arg ) );
-	          else return -1;
-	case 't': if ( vict )
-	             return ( vict->affected_by & atoi( arg ) );
-	          else return -1;
-	case 'r': if ( rndm )
-	             return ( rndm->affected_by & atoi( arg ) );
-	          else return -1;
-	default:
-/*	  bug ( "Mob: %d bad argument to 'isaffected'",
-	       mob->pIndexData->vnum );  */
-	  return -1;
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			/*	case 'i': return ( mob->master != NULL
+				&& mob->master->in_room == mob->in_room ); */
+			case 'n': if ( actor )
+						  return ( actor->master != NULL
+								  && actor->master->in_room == actor->in_room );
+					  else return -1;
+			case 't': if ( vict )
+						  return ( vict->master != NULL
+								  && vict->master->in_room == vict->in_room );
+					  else return -1;
+			case 'r': if ( rndm )
+						  return ( rndm->master != NULL
+								  && rndm->master->in_room == rndm->in_room );
+					  else return -1;
+			default:
+					  /*
+						 bug ( "Mob: %d bad argument to 'isfollow'", mob->pIndexData->vnum );  */
+					  return -1;
+		}
 	}
-    }
 
-  if ( !str_cmp( buf, "hitprcnt" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+	if ( !str_cmp( buf, "isaffected" ) )
 	{
-/*	case 'i': lhsvl = mob->hit / mob->max_hit;
-	          rhsvl = atoi( val );
-         	  return tprg_veval( lhsvl, opr, rhsvl ); */
-	case 'n': if ( actor )
-	          {
-		    lhsvl = actor->hit / actor->max_hit;
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	case 't': if ( vict )
-	          {
-		    lhsvl = vict->hit / vict->max_hit;
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	case 'r': if ( rndm )
-	          {
-		    lhsvl = rndm->hit / rndm->max_hit;
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	default:
-	/*
-	  bug ( "Mob: %d bad argument to 'hitprcnt'", mob->pIndexData->vnum );  */
-	  return -1;
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			/*	case 'i': return ( mob->affected_by & atoi( arg ) ); */
+			case 'n': if ( actor )
+						  return ( actor->affected_by & atoi( arg ) );
+					  else return -1;
+			case 't': if ( vict )
+						  return ( vict->affected_by & atoi( arg ) );
+					  else return -1;
+			case 'r': if ( rndm )
+						  return ( rndm->affected_by & atoi( arg ) );
+					  else return -1;
+			default:
+					  /*	  bug ( "Mob: %d bad argument to 'isaffected'",
+							  mob->pIndexData->vnum );  */
+					  return -1;
+		}
 	}
-    }
 
-  if ( !str_cmp( buf, "inroom" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+	if ( !str_cmp( buf, "hitprcnt" ) )
 	{
-/*	case 'i': lhsvl = mob->in_room->vnum;
-	          rhsvl = atoi(val);
-	          return tprg_veval( lhsvl, opr, rhsvl ); */
-	case 'n': if ( actor )
-	          {
-		    lhsvl = actor->in_room->vnum;
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	case 't': if ( vict )
-	          {
-		    lhsvl = vict->in_room->vnum;
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	case 'r': if ( rndm )
-	          {
-		    lhsvl = rndm->in_room->vnum;
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	default:
-	/*
-	  bug ( "Mob: %d bad argument to 'inroom'", mob->pIndexData->vnum );  */
-	  return -1;
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			/*	case 'i': lhsvl = mob->hit / mob->max_hit;
+				rhsvl = atoi( val );
+				return tprg_veval( lhsvl, opr, rhsvl ); */
+			case 'n': if ( actor )
+					  {
+						  lhsvl = actor->hit / actor->max_hit;
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			case 't': if ( vict )
+					  {
+						  lhsvl = vict->hit / vict->max_hit;
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			case 'r': if ( rndm )
+					  {
+						  lhsvl = rndm->hit / rndm->max_hit;
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			default:
+					  /*
+						 bug ( "Mob: %d bad argument to 'hitprcnt'", mob->pIndexData->vnum );  */
+					  return -1;
+		}
 	}
-    }
 
-  if ( !str_cmp( buf, "sex" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+	if ( !str_cmp( buf, "inroom" ) )
 	{
-/*	case 'i': lhsvl = mob->sex;
-	          rhsvl = atoi( val );
-	          return tprg_veval( lhsvl, opr, rhsvl ); */
-	case 'n': if ( actor )
-	          {
-		    lhsvl = actor->sex;
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	case 't': if ( vict )
-	          {
-		    lhsvl = vict->sex;
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	case 'r': if ( rndm )
-	          {
-		    lhsvl = rndm->sex;
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	default:
-	/*
-	  bug ( "Mob: %d bad argument to 'sex'", mob->pIndexData->vnum );  */
-	  return -1;
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			/*	case 'i': lhsvl = mob->in_room->vnum;
+				rhsvl = atoi(val);
+				return tprg_veval( lhsvl, opr, rhsvl ); */
+			case 'n': if ( actor )
+					  {
+						  lhsvl = actor->in_room->vnum;
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			case 't': if ( vict )
+					  {
+						  lhsvl = vict->in_room->vnum;
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			case 'r': if ( rndm )
+					  {
+						  lhsvl = rndm->in_room->vnum;
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			default:
+					  /*
+						 bug ( "Mob: %d bad argument to 'inroom'", mob->pIndexData->vnum );  */
+					  return -1;
+		}
 	}
-    }
 
-  if ( !str_cmp( buf, "position" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+	if ( !str_cmp( buf, "sex" ) )
 	{
-/*	case 'i': lhsvl = mob->position;
-	          rhsvl = atoi( val );
-	          return tprg_veval( lhsvl, opr, rhsvl ); */
-	case 'n': if ( actor )
-	          {
-		    lhsvl = actor->position;
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	case 't': if ( vict )
-	          {
-		    lhsvl = vict->position;
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	case 'r': if ( rndm )
-	          {
-		    lhsvl = rndm->position;
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	default:
-	/*
-	  bug ( "Mob: %d bad argument to 'position'", mob->pIndexData->vnum );  */
-	  return -1;
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			/*	case 'i': lhsvl = mob->sex;
+				rhsvl = atoi( val );
+				return tprg_veval( lhsvl, opr, rhsvl ); */
+			case 'n': if ( actor )
+					  {
+						  lhsvl = actor->sex;
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			case 't': if ( vict )
+					  {
+						  lhsvl = vict->sex;
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			case 'r': if ( rndm )
+					  {
+						  lhsvl = rndm->sex;
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			default:
+					  /*
+						 bug ( "Mob: %d bad argument to 'sex'", mob->pIndexData->vnum );  */
+					  return -1;
+		}
 	}
-    }
 
-  if ( !str_cmp( buf, "level" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+	if ( !str_cmp( buf, "position" ) )
 	{
-/*	case 'i': lhsvl = get_trust( mob );
-	          rhsvl = atoi( val );
-	          return tprg_veval( lhsvl, opr, rhsvl ); */
-	case 'n': if ( actor )
-	          {
-		    lhsvl = get_trust( actor );
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else 
-		    return -1;
-	case 't': if ( vict )
-	          {
-		    lhsvl = get_trust( vict );
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	case 'r': if ( rndm )
-	          {
-		    lhsvl = get_trust( rndm );
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	default:
-	/*
-	  bug ( "Mob: %d bad argument to 'level'", mob->pIndexData->vnum );  */
-	  return -1;
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			/*	case 'i': lhsvl = mob->position;
+				rhsvl = atoi( val );
+				return tprg_veval( lhsvl, opr, rhsvl ); */
+			case 'n': if ( actor )
+					  {
+						  lhsvl = actor->position;
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			case 't': if ( vict )
+					  {
+						  lhsvl = vict->position;
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			case 'r': if ( rndm )
+					  {
+						  lhsvl = rndm->position;
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			default:
+					  /*
+						 bug ( "Mob: %d bad argument to 'position'", mob->pIndexData->vnum );  */
+					  return -1;
+		}
 	}
-    }
 
-  if ( !str_cmp( buf, "class" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+	if ( !str_cmp( buf, "level" ) )
 	{
-/*	case 'i': lhsvl = mob->class;
-	          rhsvl = atoi( val );
-                  return tprg_veval( lhsvl, opr, rhsvl ); */
-	case 'n': if ( actor )
-	          {
-		    lhsvl = actor->class;
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else 
-		    return -1;
-	case 't': if ( vict )
-	          {
-		    lhsvl = vict->class;
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	case 'r': if ( rndm )
-	          {
-		    lhsvl = rndm->class;
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	default:
-	/*
-	  bug ( "Mob: %d bad argument to 'class'", mob->pIndexData->vnum ); */
-	  return -1;
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			/*	case 'i': lhsvl = get_trust( mob );
+				rhsvl = atoi( val );
+				return tprg_veval( lhsvl, opr, rhsvl ); */
+			case 'n': if ( actor )
+					  {
+						  lhsvl = get_trust( actor );
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else 
+						  return -1;
+			case 't': if ( vict )
+					  {
+						  lhsvl = get_trust( vict );
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			case 'r': if ( rndm )
+					  {
+						  lhsvl = get_trust( rndm );
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			default:
+					  /*
+						 bug ( "Mob: %d bad argument to 'level'", mob->pIndexData->vnum );  */
+					  return -1;
+		}
 	}
-    }
 
-  if ( !str_cmp( buf, "goldamt" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+	if ( !str_cmp( buf, "class" ) )
 	{
-/*	case 'i': lhsvl = mob->gold;
-                  rhsvl = atoi( val );
-                  return tprg_veval( lhsvl, opr, rhsvl ); */
-	case 'n': if ( actor )
-	          {
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			/*	case 'i': lhsvl = mob->class;
+				rhsvl = atoi( val );
+				return tprg_veval( lhsvl, opr, rhsvl ); */
+			case 'n': if ( actor )
+					  {
+						  lhsvl = actor->class;
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else 
+						  return -1;
+			case 't': if ( vict )
+					  {
+						  lhsvl = vict->class;
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			case 'r': if ( rndm )
+					  {
+						  lhsvl = rndm->class;
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			default:
+					  /*
+						 bug ( "Mob: %d bad argument to 'class'", mob->pIndexData->vnum ); */
+					  return -1;
+		}
+	}
+
+	if ( !str_cmp( buf, "goldamt" ) )
+	{
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			/*	case 'i': lhsvl = mob->gold;
+				rhsvl = atoi( val );
+				return tprg_veval( lhsvl, opr, rhsvl ); */
+			case 'n': if ( actor )
+					  {
 #ifdef NEW_MONEY
-		    lhsvl = actor->money.gold;
+						  lhsvl = actor->money.gold;
 #else
-		    lhsvl = actor->gold;
+						  lhsvl = actor->gold;
 #endif
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	case 't': if ( vict )
-	          {
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			case 't': if ( vict )
+					  {
 #ifdef NEW_MONEY
-		    lhsvl = vict->money.gold;
+						  lhsvl = vict->money.gold;
 #else
-		    lhsvl = vict->gold;
+						  lhsvl = vict->gold;
 #endif
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	case 'r': if ( rndm )
-	          {
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			case 'r': if ( rndm )
+					  {
 #ifdef NEW_MONEY
-		    lhsvl = rndm->money.gold;
+						  lhsvl = rndm->money.gold;
 #else
-		    lhsvl = rndm->gold;
+						  lhsvl = rndm->gold;
 #endif
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	default:
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			default:
+					  /*
+						 bug ( "Mob: %d bad argument to 'goldamt'", mob->pIndexData->vnum );  */
+					  return -1;
+		}
+	}
+
+	if ( !str_cmp( buf, "objtype" ) )
+	{
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			case 'o': if ( obj )
+					  {
+						  lhsvl = obj->item_type;
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			case 'p': if ( v_obj )
+					  {
+						  lhsvl = v_obj->item_type;
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			default:
+					  /*
+						 bug ( "Mob: %d bad argument to 'objtype'", mob->pIndexData->vnum );  */
+					  return -1;
+		}
+	}
+
+	if ( !str_cmp( buf, "objval0" ) )
+	{
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			case 'o': if ( obj )
+					  {
+						  lhsvl = obj->value[0];
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			case 'p': if ( v_obj )
+					  {
+						  lhsvl = v_obj->value[0];
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else 
+						  return -1;
+			default:
+					  /*
+						 bug ( "Mob: %d bad argument to 'objval0'", mob->pIndexData->vnum );  */
+					  return -1;
+		}
+	}
+
+	if ( !str_cmp( buf, "objval1" ) )
+	{
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			case 'o': if ( obj )
+					  {
+						  lhsvl = obj->value[1];
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			case 'p': if ( v_obj )
+					  {
+						  lhsvl = v_obj->value[1];
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			default:
+					  /*
+						 bug ( "Mob: %d bad argument to 'objval1'", mob->pIndexData->vnum );  */
+					  return -1;
+		}
+	}
+
+	if ( !str_cmp( buf, "objval2" ) )
+	{
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			case 'o': if ( obj )
+					  {
+						  lhsvl = obj->value[2];
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			case 'p': if ( v_obj )
+					  {
+						  lhsvl = v_obj->value[2];
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			default:
+					  /*
+						 bug ( "Mob: %d bad argument to 'objval2'", mob->pIndexData->vnum );  */
+					  return -1;
+		}
+	}
+
+	if ( !str_cmp( buf, "objval3" ) )
+	{
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			case 'o': if ( obj )
+					  {
+						  lhsvl = obj->value[3];
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			case 'p': if ( v_obj ) 
+					  {
+						  lhsvl = v_obj->value[3];
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			default:
+					  /*
+						 bug ( "Mob: %d bad argument to 'objval3'", mob->pIndexData->vnum );  */
+					  return -1;
+		}
+	}
+
+	if ( !str_cmp( buf, "number" ) )
+	{
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			/*	case 'i': lhsvl = mob->gold;
+				rhsvl = atoi( val );
+				return tprg_veval( lhsvl, opr, rhsvl ); */
+			case 'n': if ( actor )
+					  {
+						  if IS_NPC( actor )
+						  {
+							  lhsvl = actor->pIndexData->vnum;
+							  rhsvl = atoi( val );
+							  return tprg_veval( lhsvl, opr, rhsvl );
+						  }
+					  }
+					  else
+						  return -1;
+			case 't': if ( vict )
+					  {
+						  if IS_NPC( actor )
+						  {
+							  lhsvl = vict->pIndexData->vnum;
+							  rhsvl = atoi( val );
+							  return tprg_veval( lhsvl, opr, rhsvl );
+						  }
+					  }
+					  else
+						  return -1;
+			case 'r': if ( rndm )
+					  {
+						  if IS_NPC( rndm )
+						  {
+							  lhsvl = rndm->pIndexData->vnum;
+							  rhsvl = atoi( val );
+							  return tprg_veval( lhsvl, opr, rhsvl );
+						  }
+					  }
+					  else return -1;
+			case 'o': if ( obj )
+					  {
+						  lhsvl = obj->pIndexData->vnum;
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			case 'p': if ( v_obj )
+					  {
+						  lhsvl = v_obj->pIndexData->vnum;
+						  rhsvl = atoi( val );
+						  return tprg_veval( lhsvl, opr, rhsvl );
+					  }
+					  else
+						  return -1;
+			default:
+					  /*	  bug ( "Mob: %d bad argument to 'number'", mob->pIndexData->vnum );  */
+					  return -1;
+		}
+	}
+
+	if ( !str_cmp( buf, "name" ) )
+	{
+		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
+		{
+			/*	case 'i': return tprg_seval( mob->name, opr, val ); */
+			case 'n': if ( actor )
+						  return tprg_seval( actor->name, opr, val );
+					  else
+						  return -1;
+			case 't': if ( vict )
+						  return tprg_seval( vict->name, opr, val );
+					  else
+						  return -1;
+			case 'r': if ( rndm )
+						  return tprg_seval( rndm->name, opr, val );
+					  else
+						  return -1;
+			case 'o': if ( obj )
+						  return tprg_seval( obj->name, opr, val );
+					  else
+						  return -1;
+			case 'p': if ( v_obj )
+						  return tprg_seval( v_obj->name, opr, val );
+					  else
+						  return -1;
+			default:
+					  /*	  bug ( "Mob: %d bad argument to 'name'", mob->pIndexData->vnum );  */
+					  return -1;
+		}
+	}
+
+	/* Ok... all the ifchcks are done, so if we didnt find ours then something
+	 * odd happened.  So report the bug and abort the MOBprogram (return error)
+	 */
 	/*
-	  bug ( "Mob: %d bad argument to 'goldamt'", mob->pIndexData->vnum );  */
-	  return -1;
-	}
-    }
-
-  if ( !str_cmp( buf, "objtype" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
-	{
-	case 'o': if ( obj )
-	          {
-		    lhsvl = obj->item_type;
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	         else
-		   return -1;
-	case 'p': if ( v_obj )
-	          {
-		    lhsvl = v_obj->item_type;
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	default:
-	/*
-	  bug ( "Mob: %d bad argument to 'objtype'", mob->pIndexData->vnum );  */
-	  return -1;
-	}
-    }
-
-  if ( !str_cmp( buf, "objval0" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
-	{
-	case 'o': if ( obj )
-	          {
-		    lhsvl = obj->value[0];
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	case 'p': if ( v_obj )
-	          {
-		    lhsvl = v_obj->value[0];
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else 
-		    return -1;
-	default:
-	/*
-	  bug ( "Mob: %d bad argument to 'objval0'", mob->pIndexData->vnum );  */
-	  return -1;
-	}
-    }
-
-  if ( !str_cmp( buf, "objval1" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
-	{
-	case 'o': if ( obj )
-	          {
-		    lhsvl = obj->value[1];
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	case 'p': if ( v_obj )
-	          {
-		    lhsvl = v_obj->value[1];
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	default:
-	/*
-	  bug ( "Mob: %d bad argument to 'objval1'", mob->pIndexData->vnum );  */
-	  return -1;
-	}
-    }
-
-  if ( !str_cmp( buf, "objval2" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
-	{
-	case 'o': if ( obj )
-	          {
-		    lhsvl = obj->value[2];
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	case 'p': if ( v_obj )
-	          {
-		    lhsvl = v_obj->value[2];
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	default:
-	/*
-	  bug ( "Mob: %d bad argument to 'objval2'", mob->pIndexData->vnum );  */
-	  return -1;
-	}
-    }
-
-  if ( !str_cmp( buf, "objval3" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
-	{
-	case 'o': if ( obj )
-	          {
-		    lhsvl = obj->value[3];
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	case 'p': if ( v_obj ) 
-	          {
-		    lhsvl = v_obj->value[3];
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	default:
-	/*
-	  bug ( "Mob: %d bad argument to 'objval3'", mob->pIndexData->vnum );  */
-	  return -1;
-	}
-    }
-
-  if ( !str_cmp( buf, "number" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
-	{
-/*	case 'i': lhsvl = mob->gold;
-	          rhsvl = atoi( val );
-	          return tprg_veval( lhsvl, opr, rhsvl ); */
-	case 'n': if ( actor )
-	          {
-		    if IS_NPC( actor )
-		    {
-		      lhsvl = actor->pIndexData->vnum;
-		      rhsvl = atoi( val );
-		      return tprg_veval( lhsvl, opr, rhsvl );
-		    }
-		  }
-	          else
-		    return -1;
-	case 't': if ( vict )
-	          {
-		    if IS_NPC( actor )
-		    {
-		      lhsvl = vict->pIndexData->vnum;
-		      rhsvl = atoi( val );
-		      return tprg_veval( lhsvl, opr, rhsvl );
-		    }
-		  }
-                  else
-		    return -1;
-	case 'r': if ( rndm )
-	          {
-		    if IS_NPC( rndm )
-		    {
-		      lhsvl = rndm->pIndexData->vnum;
-		      rhsvl = atoi( val );
-		      return tprg_veval( lhsvl, opr, rhsvl );
-		    }
-		  }
-	         else return -1;
-	case 'o': if ( obj )
-	          {
-		    lhsvl = obj->pIndexData->vnum;
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	case 'p': if ( v_obj )
-	          {
-		    lhsvl = v_obj->pIndexData->vnum;
-		    rhsvl = atoi( val );
-		    return tprg_veval( lhsvl, opr, rhsvl );
-		  }
-	          else
-		    return -1;
-	default:
-/*	  bug ( "Mob: %d bad argument to 'number'", mob->pIndexData->vnum );  */
-	  return -1;
-	}
-    }
-
-  if ( !str_cmp( buf, "name" ) )
-    {
-      switch ( arg[1] )  /* arg should be "$*" so just get the letter */
-	{
-/*	case 'i': return tprg_seval( mob->name, opr, val ); */
-	case 'n': if ( actor )
-	            return tprg_seval( actor->name, opr, val );
-	          else
-		    return -1;
-	case 't': if ( vict )
-	            return tprg_seval( vict->name, opr, val );
-	          else
-		    return -1;
-	case 'r': if ( rndm )
-	            return tprg_seval( rndm->name, opr, val );
-	          else
-		    return -1;
-	case 'o': if ( obj )
-	            return tprg_seval( obj->name, opr, val );
-	          else
-		    return -1;
-	case 'p': if ( v_obj )
-	            return tprg_seval( v_obj->name, opr, val );
-	          else
-		    return -1;
-	default:
-/*	  bug ( "Mob: %d bad argument to 'name'", mob->pIndexData->vnum );  */
-	  return -1;
-	}
-    }
-
-  /* Ok... all the ifchcks are done, so if we didnt find ours then something
-   * odd happened.  So report the bug and abort the MOBprogram (return error)
-   */
-   /*
-  sprintf( log_buf, "Mob: %d unkown ifchck (%s)", mob->pIndexData->vnum,
-         buf );
-  bug( log_buf, 0 ); */
-  return -1;
+	   sprintf( log_buf, "Mob: %d unkown ifchck (%s)", mob->pIndexData->vnum,
+	   buf );
+	   bug( log_buf, 0 ); */
+	return -1;
 
 }
 /* Quite a long and arduous function, this guy handles the control
@@ -1016,177 +1016,177 @@ bool tprg_do_ifchck( char *ifchck, ROOM_INDEX_DATA *room, OBJ_INDEX_DATA *tObj,
  * MOBprograms, so if the mud crashes here, check the mob carefully!
  */
 char *tprg_process_if( char *ifchck, char *com_list, ROOM_INDEX_DATA *room,
-		       OBJ_INDEX_DATA *tObj,
-		       CHAR_DATA *actor, OBJ_DATA *obj, void *vo,
-		       CHAR_DATA *rndm )
+		OBJ_INDEX_DATA *tObj,
+		CHAR_DATA *actor, OBJ_DATA *obj, void *vo,
+		CHAR_DATA *rndm )
 {
- static char null[ 1 ];
- char buf[ MAX_INPUT_LENGTH ];
- char *morebuf = '\0';
- char    *cmnd = '\0';
- bool loopdone = FALSE;
- bool     flag = FALSE;
- int  legal;
+	static char null[ 1 ];
+	char buf[ MAX_INPUT_LENGTH ];
+	char *morebuf = '\0';
+	char    *cmnd = '\0';
+	bool loopdone = FALSE;
+	bool     flag = FALSE;
+	int  legal;
 
- null[0] = '\0';
+	null[0] = '\0';
 
- /* check for trueness of the ifcheck */
- if ( ( legal = tprg_do_ifchck( ifchck, room, tObj, actor, obj, vo, rndm ) ) )
-   if ( legal == 1 )
-     flag = TRUE;
-   else
-     return null;
+	/* check for trueness of the ifcheck */
+	if ( ( legal = tprg_do_ifchck( ifchck, room, tObj, actor, obj, vo, rndm ) ) )
+		if ( legal == 1 )
+			flag = TRUE;
+		else
+			return null;
 
- while( loopdone == FALSE ) /*scan over any existing or statements */
- {
-     cmnd     = com_list;
-     com_list = tprg_next_command( com_list );
-     while ( *cmnd == ' ' )
-       cmnd++;
-     if ( *cmnd == '\0' )
-     {
-     /*
-	 bug ( "Mob: %d no commands after IF/OR", mob->pIndexData->vnum );  */
-	 return null;
-     }
-     morebuf = one_argument( cmnd, buf );
-     if ( !str_cmp( buf, "or" ) )
-     {
-	 if ( ( legal = tprg_do_ifchck( morebuf,room,tObj,actor,obj,vo,rndm ) ) )
-	   if ( legal == 1 )
-	     flag = TRUE;
-	   else
-	     return null;
-     }
-     else
-       loopdone = TRUE;
- }
- 
- if ( flag )
-   for ( ; ; ) /*ifcheck was true, do commands but ignore else to endif*/ 
-   {
-       if ( !str_cmp( buf, "if" ) )
-       { 
-	   com_list = tprg_process_if(morebuf,com_list,room,tObj,actor,obj,vo,rndm);
-	   while ( *cmnd==' ' )
-	     cmnd++;
-	   if ( *com_list == '\0' )
-	     return null;
-	   cmnd     = com_list;
-	   com_list = tprg_next_command( com_list );
-	   morebuf  = one_argument( cmnd,buf );
-	   continue;
-       }
-       if ( !str_cmp( buf, "break" ) )
-	 return null;
-       if ( !str_cmp( buf, "endif" ) )
-	 return com_list; 
-       if ( !str_cmp( buf, "else" ) ) 
-       {
-	   while ( str_cmp( buf, "endif" ) ) 
-	   {
-	       cmnd     = com_list;
-	       com_list = tprg_next_command( com_list );
-	       while ( *cmnd == ' ' )
-		 cmnd++;
-	       if ( *cmnd == '\0' )
-	       {
-	       /*
-		   bug ( "Mob: %d missing endif after else",
-			mob->pIndexData->vnum ); */
-		   return null;
-	       }
-	       morebuf = one_argument( cmnd,buf );
-	   }
-	   return com_list; 
-       }
-       tprg_process_cmnd( cmnd, room, tObj, actor, obj, vo, rndm );
-       cmnd     = com_list;
-       com_list = tprg_next_command( com_list );
-       while ( *cmnd == ' ' )
-	 cmnd++;
-       if ( *cmnd == '\0' )
-       {
-       /*
-           bug ( "Mob: %d missing else or endif", mob->pIndexData->vnum );  */
-           return null;
-       }
-       morebuf = one_argument( cmnd, buf );
-   }
- else /*false ifcheck, find else and do existing commands or quit at endif*/
-   {
-     while ( ( str_cmp( buf, "else" ) ) && ( str_cmp( buf, "endif" ) ) )
-       {
-	 cmnd     = com_list;
-	 com_list = tprg_next_command( com_list );
-	 while ( *cmnd == ' ' )
-	   cmnd++;
-	 if ( *cmnd == '\0' )
-	   {
-	   /*
-	     bug ( "Mob: %d missing an else or endif",
-		  mob->pIndexData->vnum );  */
-	     return null;
-	   }
-	 morebuf = one_argument( cmnd, buf );
-       }
+	while( loopdone == FALSE ) /*scan over any existing or statements */
+	{
+		cmnd     = com_list;
+		com_list = tprg_next_command( com_list );
+		while ( *cmnd == ' ' )
+			cmnd++;
+		if ( *cmnd == '\0' )
+		{
+			/*
+			   bug ( "Mob: %d no commands after IF/OR", mob->pIndexData->vnum );  */
+			return null;
+		}
+		morebuf = one_argument( cmnd, buf );
+		if ( !str_cmp( buf, "or" ) )
+		{
+			if ( ( legal = tprg_do_ifchck( morebuf,room,tObj,actor,obj,vo,rndm ) ) )
+				if ( legal == 1 )
+					flag = TRUE;
+				else
+					return null;
+		}
+		else
+			loopdone = TRUE;
+	}
 
-     /* found either an else or an endif.. act accordingly */
-     if ( !str_cmp( buf, "endif" ) )
-       return com_list;
-     cmnd     = com_list;
-     com_list = tprg_next_command( com_list );
-     while ( *cmnd == ' ' )
-       cmnd++;
-     if ( *cmnd == '\0' )
-       { 
-       /*
-	 bug ( "Mob: %d missing endif", mob->pIndexData->vnum );  */
-	 return null;
-       }
-     morebuf = one_argument( cmnd, buf );
-     
-     for ( ; ; ) /*process the post-else commands until an endif is found.*/
-       {
-	 if ( !str_cmp( buf, "if" ) )
-	   { 
-	     com_list = tprg_process_if( morebuf, com_list, room, tObj, actor,
-					 obj, vo, rndm );
-	     while ( *cmnd == ' ' )
-	       cmnd++;
-	     if ( *com_list == '\0' )
-	       return null;
-	     cmnd     = com_list;
-	     com_list = tprg_next_command( com_list );
-	     morebuf  = one_argument( cmnd,buf );
-	     continue;
-	   }
-	 if ( !str_cmp( buf, "else" ) ) 
-	   {
-	   /*
-	     bug ( "Mob: %d found else in an else section",
-		  mob->pIndexData->vnum );  */
-	     return null;
-	   }
-	 if ( !str_cmp( buf, "break" ) )
-	   return null;
-	 if ( !str_cmp( buf, "endif" ) )
-	   return com_list; 
-	 tprg_process_cmnd( cmnd, room, tObj, actor, obj, vo, rndm );
-	 cmnd     = com_list;
-	 com_list = tprg_next_command( com_list );
-	 while ( *cmnd == ' ' )
-	   cmnd++;
-	 if ( *cmnd == '\0' )
-	   {
-	   /*
-	     bug ( "Mob:%d missing endif in else section",
-		  mob->pIndexData->vnum );  */
-	     return null;
-	   }
-	 morebuf = one_argument( cmnd, buf );
-       }
-   }
+	if ( flag )
+		for ( ; ; ) /*ifcheck was true, do commands but ignore else to endif*/ 
+		{
+			if ( !str_cmp( buf, "if" ) )
+			{ 
+				com_list = tprg_process_if(morebuf,com_list,room,tObj,actor,obj,vo,rndm);
+				while ( *cmnd==' ' )
+					cmnd++;
+				if ( *com_list == '\0' )
+					return null;
+				cmnd     = com_list;
+				com_list = tprg_next_command( com_list );
+				morebuf  = one_argument( cmnd,buf );
+				continue;
+			}
+			if ( !str_cmp( buf, "break" ) )
+				return null;
+			if ( !str_cmp( buf, "endif" ) )
+				return com_list; 
+			if ( !str_cmp( buf, "else" ) ) 
+			{
+				while ( str_cmp( buf, "endif" ) ) 
+				{
+					cmnd     = com_list;
+					com_list = tprg_next_command( com_list );
+					while ( *cmnd == ' ' )
+						cmnd++;
+					if ( *cmnd == '\0' )
+					{
+						/*
+						   bug ( "Mob: %d missing endif after else",
+						   mob->pIndexData->vnum ); */
+						return null;
+					}
+					morebuf = one_argument( cmnd,buf );
+				}
+				return com_list; 
+			}
+			tprg_process_cmnd( cmnd, room, tObj, actor, obj, vo, rndm );
+			cmnd     = com_list;
+			com_list = tprg_next_command( com_list );
+			while ( *cmnd == ' ' )
+				cmnd++;
+			if ( *cmnd == '\0' )
+			{
+				/*
+				   bug ( "Mob: %d missing else or endif", mob->pIndexData->vnum );  */
+				return null;
+			}
+			morebuf = one_argument( cmnd, buf );
+		}
+	else /*false ifcheck, find else and do existing commands or quit at endif*/
+	{
+		while ( ( str_cmp( buf, "else" ) ) && ( str_cmp( buf, "endif" ) ) )
+		{
+			cmnd     = com_list;
+			com_list = tprg_next_command( com_list );
+			while ( *cmnd == ' ' )
+				cmnd++;
+			if ( *cmnd == '\0' )
+			{
+				/*
+				   bug ( "Mob: %d missing an else or endif",
+				   mob->pIndexData->vnum );  */
+				return null;
+			}
+			morebuf = one_argument( cmnd, buf );
+		}
+
+		/* found either an else or an endif.. act accordingly */
+		if ( !str_cmp( buf, "endif" ) )
+			return com_list;
+		cmnd     = com_list;
+		com_list = tprg_next_command( com_list );
+		while ( *cmnd == ' ' )
+			cmnd++;
+		if ( *cmnd == '\0' )
+		{ 
+			/*
+			   bug ( "Mob: %d missing endif", mob->pIndexData->vnum );  */
+			return null;
+		}
+		morebuf = one_argument( cmnd, buf );
+
+		for ( ; ; ) /*process the post-else commands until an endif is found.*/
+		{
+			if ( !str_cmp( buf, "if" ) )
+			{ 
+				com_list = tprg_process_if( morebuf, com_list, room, tObj, actor,
+						obj, vo, rndm );
+				while ( *cmnd == ' ' )
+					cmnd++;
+				if ( *com_list == '\0' )
+					return null;
+				cmnd     = com_list;
+				com_list = tprg_next_command( com_list );
+				morebuf  = one_argument( cmnd,buf );
+				continue;
+			}
+			if ( !str_cmp( buf, "else" ) ) 
+			{
+				/*
+				   bug ( "Mob: %d found else in an else section",
+				   mob->pIndexData->vnum );  */
+				return null;
+			}
+			if ( !str_cmp( buf, "break" ) )
+				return null;
+			if ( !str_cmp( buf, "endif" ) )
+				return com_list; 
+			tprg_process_cmnd( cmnd, room, tObj, actor, obj, vo, rndm );
+			cmnd     = com_list;
+			com_list = tprg_next_command( com_list );
+			while ( *cmnd == ' ' )
+				cmnd++;
+			if ( *cmnd == '\0' )
+			{
+				/*
+				   bug ( "Mob:%d missing endif in else section",
+				   mob->pIndexData->vnum );  */
+				return null;
+			}
+			morebuf = one_argument( cmnd, buf );
+		}
+	}
 }
 
 /* This routine handles the variables for command expansion.
@@ -1201,228 +1201,228 @@ char *tprg_process_if( char *ifchck, char *com_list, ROOM_INDEX_DATA *room,
  * but this would require a lot of small changes all over the code.
  */
 void tprg_translate( char ch, char *t, ROOM_INDEX_DATA *room,
-		    OBJ_INDEX_DATA *tObj, CHAR_DATA *actor,
-                    OBJ_DATA *obj, void *vo, CHAR_DATA *rndm )
+		OBJ_INDEX_DATA *tObj, CHAR_DATA *actor,
+		OBJ_DATA *obj, void *vo, CHAR_DATA *rndm )
 {
- static char *he_she        [] = { "it",  "he",  "she" };
- static char *him_her       [] = { "it",  "him", "her" };
- static char *his_her       [] = { "its", "his", "her" };
- CHAR_DATA   *vict             = (CHAR_DATA *) vo;
- OBJ_DATA    *v_obj            = (OBJ_DATA  *) vo;
+	static char *he_she        [] = { "it",  "he",  "she" };
+	static char *him_her       [] = { "it",  "him", "her" };
+	static char *his_her       [] = { "its", "his", "her" };
+	CHAR_DATA   *vict             = (CHAR_DATA *) vo;
+	OBJ_DATA    *v_obj            = (OBJ_DATA  *) vo;
 
- *t = '\0';
- switch ( ch ) {
-/*     case 'i':
-         one_argument( mob->name, t );
-      break; 
+	*t = '\0';
+	switch ( ch ) {
+		/*     case 'i':
+			   one_argument( mob->name, t );
+			   break; 
 
-     case 'I':
-         strcpy( t, mob->short_descr );
-      break; */
+			   case 'I':
+			   strcpy( t, mob->short_descr );
+			   break; */
 
-     case 'n':
-         if ( actor )
-	 {
-	   if ( can_see( mob,actor ) )
-	     one_argument( actor->name, t );
-	   if ( !IS_NPC( actor ) )
-	     *t = UPPER( *t );
-	 }
-	 else
-	   strcpy( t, "someone" );
-      break;
+		case 'n':
+			if ( actor )
+			{
+				if ( can_see( mob,actor ) )
+					one_argument( actor->name, t );
+				if ( !IS_NPC( actor ) )
+					*t = UPPER( *t );
+			}
+			else
+				strcpy( t, "someone" );
+			break;
 
-     case 'N':
-         if ( actor ) 
-            if ( can_see( mob, actor ) )
-	       if ( IS_NPC( actor ) )
-		 strcpy( t, actor->short_descr );
-	       else
-	       {
-		   strcpy( t, actor->name );
-/*		   strcat( t, " " );*/
-		   strcat( t, actor->pcdata->title );
-	       }
-	    else
-	      strcpy( t, "someone" );
-	 break;
+		case 'N':
+			if ( actor ) 
+				if ( can_see( mob, actor ) )
+					if ( IS_NPC( actor ) )
+						strcpy( t, actor->short_descr );
+					else
+					{
+						strcpy( t, actor->name );
+						/*		   strcat( t, " " );*/
+						strcat( t, actor->pcdata->title );
+					}
+				else
+					strcpy( t, "someone" );
+			break;
 
-     case 't':
-         if ( vict )
-	 {
-	   if ( can_see( mob, vict ) )
-	     one_argument( vict->name, t );
-	   if ( !IS_NPC( vict ) )
-	     *t = UPPER( *t );
-	 }
-	 else
-	   strcpy( t, "someone" );
-	 break;
+		case 't':
+			if ( vict )
+			{
+				if ( can_see( mob, vict ) )
+					one_argument( vict->name, t );
+				if ( !IS_NPC( vict ) )
+					*t = UPPER( *t );
+			}
+			else
+				strcpy( t, "someone" );
+			break;
 
-     case 'T':
-         if ( vict ) 
-            if ( can_see( mob, vict ) )
-	       if ( IS_NPC( vict ) )
-		 strcpy( t, vict->short_descr );
-	       else
-	       {
-		 strcpy( t, vict->name );
-		 strcat( t, " " );
-		 strcat( t, vict->pcdata->title );
-	       }
-	    else
-	      strcpy( t, "someone" );
-	 break;
-     
-     case 'r':
-         if ( rndm )
-	 {
-	   if ( can_see( mob, rndm ) )
-	     one_argument( rndm->name, t );
-	   if ( !IS_NPC( rndm ) )
-	     *t = UPPER( *t );
-	 }
-	 else
-	   strcpy(t, "someone" );
-      break;
+		case 'T':
+			if ( vict ) 
+				if ( can_see( mob, vict ) )
+					if ( IS_NPC( vict ) )
+						strcpy( t, vict->short_descr );
+					else
+					{
+						strcpy( t, vict->name );
+						strcat( t, " " );
+						strcat( t, vict->pcdata->title );
+					}
+				else
+					strcpy( t, "someone" );
+			break;
 
-     case 'R':
-         if ( rndm ) 
-            if ( can_see( mob, rndm ) )
-	       if ( IS_NPC( rndm ) )
-		 strcpy(t,rndm->short_descr);
-	       else
-	       {
-		 strcpy( t, rndm->name );
-/*		 strcat( t, " " );*/
-		 strcat( t, rndm->pcdata->title );
-	       }
-	    else
-	      strcpy( t, "someone" );
-	 break;
+		case 'r':
+			if ( rndm )
+			{
+				if ( can_see( mob, rndm ) )
+					one_argument( rndm->name, t );
+				if ( !IS_NPC( rndm ) )
+					*t = UPPER( *t );
+			}
+			else
+				strcpy(t, "someone" );
+			break;
 
-     case 'e':
-         if ( actor )
-	   can_see( mob, actor ) ? strcpy( t, he_she[ actor->sex ] )
-	                         : strcpy( t, "someone" );
-	 break;
-  
-     case 'm':
-         if ( actor )
-	   can_see( mob, actor ) ? strcpy( t, him_her[ actor->sex ] )
-                                 : strcpy( t, "someone" );
-	 break;
-  
-     case 's':
-         if ( actor )
-	   can_see( mob, actor ) ? strcpy( t, his_her[ actor->sex ] )
-	                         : strcpy( t, "someone's" );
-	 break;
-     
-     case 'E':
-         if ( vict )
-	   can_see( mob, vict ) ? strcpy( t, he_she[ vict->sex ] )
-                                : strcpy( t, "someone" );
-	 break;
-  
-     case 'M':
-         if ( vict )
-	   can_see( mob, vict ) ? strcpy( t, him_her[ vict->sex ] )
-                                : strcpy( t, "someone" );
-	 break;
-  
-     case 'S':
-         if ( vict )
-	   can_see( mob, vict ) ? strcpy( t, his_her[ vict->sex ] )
-                                : strcpy( t, "someone's" ); 
-	 break;
+		case 'R':
+			if ( rndm ) 
+				if ( can_see( mob, rndm ) )
+					if ( IS_NPC( rndm ) )
+						strcpy(t,rndm->short_descr);
+					else
+					{
+						strcpy( t, rndm->name );
+						/*		 strcat( t, " " );*/
+						strcat( t, rndm->pcdata->title );
+					}
+				else
+					strcpy( t, "someone" );
+			break;
 
-     case 'j':
-	 strcpy( t, he_she[ mob->sex ] );
-	 break;
-  
-     case 'k':
-	 strcpy( t, him_her[ mob->sex ] );
-	 break;
-  
-     case 'l':
-	 strcpy( t, his_her[ mob->sex ] );
-	 break;
+		case 'e':
+			if ( actor )
+				can_see( mob, actor ) ? strcpy( t, he_she[ actor->sex ] )
+					: strcpy( t, "someone" );
+			break;
 
-     case 'J':
-         if ( rndm )
-	   can_see( mob, rndm ) ? strcpy( t, he_she[ rndm->sex ] )
-	                        : strcpy( t, "someone" );
-	 break;
-  
-     case 'K':
-         if ( rndm )
-	   can_see( mob, rndm ) ? strcpy( t, him_her[ rndm->sex ] )
-                                : strcpy( t, "someone" );
-	 break;
-  
-     case 'L':
-         if ( rndm )
-	   can_see( mob, rndm ) ? strcpy( t, his_her[ rndm->sex ] )
-	                        : strcpy( t, "someone's" );
-	 break;
+		case 'm':
+			if ( actor )
+				can_see( mob, actor ) ? strcpy( t, him_her[ actor->sex ] )
+					: strcpy( t, "someone" );
+			break;
 
-     case 'o':
-         if ( obj )
-	   can_see_obj( mob, obj ) ? one_argument( obj->name, t )
-                                   : strcpy( t, "something" );
-	 break;
+		case 's':
+			if ( actor )
+				can_see( mob, actor ) ? strcpy( t, his_her[ actor->sex ] )
+					: strcpy( t, "someone's" );
+			break;
 
-     case 'O':
-         if ( obj )
-	   can_see_obj( mob, obj ) ? strcpy( t, obj->short_descr )
-                                   : strcpy( t, "something" );
-	 break;
+		case 'E':
+			if ( vict )
+				can_see( mob, vict ) ? strcpy( t, he_she[ vict->sex ] )
+					: strcpy( t, "someone" );
+			break;
 
-     case 'p':
-         if ( v_obj )
-	   can_see_obj( mob, v_obj ) ? one_argument( v_obj->name, t )
-                                     : strcpy( t, "something" );
-	 break;
+		case 'M':
+			if ( vict )
+				can_see( mob, vict ) ? strcpy( t, him_her[ vict->sex ] )
+					: strcpy( t, "someone" );
+			break;
 
-     case 'P':
-         if ( v_obj )
-	   can_see_obj( mob, v_obj ) ? strcpy( t, v_obj->short_descr )
-                                     : strcpy( t, "something" );
-      break;
+		case 'S':
+			if ( vict )
+				can_see( mob, vict ) ? strcpy( t, his_her[ vict->sex ] )
+					: strcpy( t, "someone's" ); 
+			break;
 
-     case 'a':
-         if ( obj ) 
-          switch ( *( obj->name ) )
-	  {
-	    case 'a': case 'e': case 'i':
-            case 'o': case 'u': strcpy( t, "an" );
-	      break;
-            default: strcpy( t, "a" );
-          }
-	 break;
+		case 'j':
+			strcpy( t, he_she[ mob->sex ] );
+			break;
 
-     case 'A':
-         if ( v_obj ) 
-          switch ( *( v_obj->name ) )
-	  {
-            case 'a': case 'e': case 'i':
-	    case 'o': case 'u': strcpy( t, "an" );
-	      break;
-            default: strcpy( t, "a" );
-          }
-	 break;
+		case 'k':
+			strcpy( t, him_her[ mob->sex ] );
+			break;
 
-     case '$':
-         strcpy( t, "$" );
-	 break;
+		case 'l':
+			strcpy( t, his_her[ mob->sex ] );
+			break;
 
-     default:
-         bug( "Mob: %d bad $var", mob->pIndexData->vnum );
-	 break;
-       }
+		case 'J':
+			if ( rndm )
+				can_see( mob, rndm ) ? strcpy( t, he_she[ rndm->sex ] )
+					: strcpy( t, "someone" );
+			break;
 
- return;
+		case 'K':
+			if ( rndm )
+				can_see( mob, rndm ) ? strcpy( t, him_her[ rndm->sex ] )
+					: strcpy( t, "someone" );
+			break;
+
+		case 'L':
+			if ( rndm )
+				can_see( mob, rndm ) ? strcpy( t, his_her[ rndm->sex ] )
+					: strcpy( t, "someone's" );
+			break;
+
+		case 'o':
+			if ( obj )
+				can_see_obj( mob, obj ) ? one_argument( obj->name, t )
+					: strcpy( t, "something" );
+			break;
+
+		case 'O':
+			if ( obj )
+				can_see_obj( mob, obj ) ? strcpy( t, obj->short_descr )
+					: strcpy( t, "something" );
+			break;
+
+		case 'p':
+			if ( v_obj )
+				can_see_obj( mob, v_obj ) ? one_argument( v_obj->name, t )
+					: strcpy( t, "something" );
+			break;
+
+		case 'P':
+			if ( v_obj )
+				can_see_obj( mob, v_obj ) ? strcpy( t, v_obj->short_descr )
+					: strcpy( t, "something" );
+			break;
+
+		case 'a':
+			if ( obj ) 
+				switch ( *( obj->name ) )
+				{
+					case 'a': case 'e': case 'i':
+					case 'o': case 'u': strcpy( t, "an" );
+										break;
+					default: strcpy( t, "a" );
+				}
+			break;
+
+		case 'A':
+			if ( v_obj ) 
+				switch ( *( v_obj->name ) )
+				{
+					case 'a': case 'e': case 'i':
+					case 'o': case 'u': strcpy( t, "an" );
+										break;
+					default: strcpy( t, "a" );
+				}
+			break;
+
+		case '$':
+			strcpy( t, "$" );
+			break;
+
+		default:
+			bug( "Mob: %d bad $var", mob->pIndexData->vnum );
+			break;
+	}
+
+	return;
 
 }
 
@@ -1431,46 +1431,46 @@ void tprg_translate( char ch, char *t, ROOM_INDEX_DATA *room,
  * code scrutinizer will notice that this is taken from act()
  */
 void tprg_process_cmnd( char *cmnd, ROOM_INDEX_DATA *room,
-		        OBJ_INDEX_DATA *tObj, CHAR_DATA *actor,
-			OBJ_DATA *obj, void *vo, CHAR_DATA *rndm )
+		OBJ_INDEX_DATA *tObj, CHAR_DATA *actor,
+		OBJ_DATA *obj, void *vo, CHAR_DATA *rndm )
 {
-  char buf[ MAX_INPUT_LENGTH ];
-  char tmp[ MAX_INPUT_LENGTH ];
-  char *str;
-  char *i;
-  char *point;
-  CHAR_DATA *mob;
+	char buf[ MAX_INPUT_LENGTH ];
+	char tmp[ MAX_INPUT_LENGTH ];
+	char *str;
+	char *i;
+	char *point;
+	CHAR_DATA *mob;
 
-  point   = buf;
-  str     = cmnd;
+	point   = buf;
+	str     = cmnd;
 
 
-  while ( *str != '\0' )
-  {
-    if ( *str != '$' )
-    {
-      *point++ = *str++;
-      continue;
-    }
-    str++;
-    tprg_translate( *str, tmp, room, tObj, actor, obj, vo, rndm );
-    i = tmp;
-    ++str;
-    while ( ( *point = *i ) != '\0' )
-      ++point, ++i;
-  }
-  *point = '\0';
-  
-  mob = create_mobile( MOB_VNUM_SUPERMOB );
-  mob->player_name = str_dup( ( room ) ? room->name : tObj->name );
-  mob->short_desc = str_dup( ( room ) ? room->name : tObj->name );
-  mob->level = ( actor ) ? actor->level + 5 : 10;
-  char_to_room( mob, ( room ) ? room : ( tObj ) ? ( tObj->carried_by ) ?
-  tObj->carried_by->in_room : tObj->in_room );
-  interpret( mob, buf );
-  char_from_room( mob );
-  extract_char( mob );
-  return;
+	while ( *str != '\0' )
+	{
+		if ( *str != '$' )
+		{
+			*point++ = *str++;
+			continue;
+		}
+		str++;
+		tprg_translate( *str, tmp, room, tObj, actor, obj, vo, rndm );
+		i = tmp;
+		++str;
+		while ( ( *point = *i ) != '\0' )
+			++point, ++i;
+	}
+	*point = '\0';
+
+	mob = create_mobile( MOB_VNUM_SUPERMOB );
+	mob->player_name = str_dup( ( room ) ? room->name : tObj->name );
+	mob->short_desc = str_dup( ( room ) ? room->name : tObj->name );
+	mob->level = ( actor ) ? actor->level + 5 : 10;
+	char_to_room( mob, ( room ) ? room : ( tObj ) ? ( tObj->carried_by ) ?
+			tObj->carried_by->in_room : tObj->in_room );
+	interpret( mob, buf );
+	char_from_room( mob );
+	extract_char( mob );
+	return;
 
 }
 
@@ -1480,91 +1480,91 @@ void tprg_process_cmnd( char *cmnd, ROOM_INDEX_DATA *room,
  *  complex procedures, everything is farmed out to the other guys.
  */
 void tprg_driver ( char *com_list,ROOM_INDEX_DATA *room,
-		   OBJ_INDEX_DATA *tObj, CHAR_DATA *actor,
-		   OBJ_DATA *obj, void *vo)
+		OBJ_INDEX_DATA *tObj, CHAR_DATA *actor,
+		OBJ_DATA *obj, void *vo)
 {
 
- char tmpcmndlst[ MAX_STRING_LENGTH ];
- char buf       [ MAX_INPUT_LENGTH ];
- char *morebuf;
- char *command_list;
- char *cmnd;
- CHAR_DATA *rndm  = NULL;
- CHAR_DATA *vch   = NULL;
- int        count = 0;
+	char tmpcmndlst[ MAX_STRING_LENGTH ];
+	char buf       [ MAX_INPUT_LENGTH ];
+	char *morebuf;
+	char *command_list;
+	char *cmnd;
+	CHAR_DATA *rndm  = NULL;
+	CHAR_DATA *vch   = NULL;
+	int        count = 0;
 
-/*
- * For things like rand_progs with $r in them, ect.. that really have no
- * effect on the game, but make a lotta bugs if they have stuff like
- * 'MPKill $r'..
- * And for those people who have things like rand_progs with chats...
- * They're too annoying anyways.. :)..
- * -- Altrag
- */
+	/*
+	 * For things like rand_progs with $r in them, ect.. that really have no
+	 * effect on the game, but make a lotta bugs if they have stuff like
+	 * 'MPKill $r'..
+	 * And for those people who have things like rand_progs with chats...
+	 * They're too annoying anyways.. :)..
+	 * -- Altrag
+	 */
 
- if ( room )
-   if ( !room->people )
-     return;
- 
- if ( tObj )
-   if ( tObj->in_room && !tObj->in_room->people )
-     return;
-     
+	if ( room )
+		if ( !room->people )
+			return;
 
- if ( actor && !IS_NPC(actor) && IS_SET(actor->act, PLR_WIZINVIS) &&
-      actor->wizinvis > LEVEL_MORTAL )
-   return;
+	if ( tObj )
+		if ( tObj->in_room && !tObj->in_room->people )
+			return;
 
-/*
- if ( mob->wait > 0 )
-   return; */
 
-/* if IS_AFFECTED( mob, AFF_CHARM )
-   return; */
+	if ( actor && !IS_NPC(actor) && IS_SET(actor->act, PLR_WIZINVIS) &&
+			actor->wizinvis > LEVEL_MORTAL )
+		return;
 
- /* get a random visable mortal player who is in the room with the mob */
- if ( room )
-   for ( vch = room->people; vch; vch = vch->next_in_room )
-     {
-       if ( number_range( 0, count ) == 0 )
-         rndm = vch;
-       count++;
-     }
- if ( tObj )
-   if ( !tObj->carried_by )
-     {
-     for ( vch = tObj->in_room->people; vch; vch = vch->next_in_room )
-       {
-         if ( number_range( 0, count ) == 0 )
-           rndm = vch;
-         count++;
-       }
-     }
-    else
-     for ( vch = tObj->carried_by->in_room->people; vch; vch = vch->next_in_room )
-       {
-         if ( number_range( 0, count ) == 0 )
-           rndm = vch;
-         count++;
-       }
- 
- strcpy( tmpcmndlst, com_list );
- command_list = tmpcmndlst;
- cmnd         = command_list;
- command_list = tprg_next_command( command_list );
- while ( *cmnd != '\0' )
-   {
-     morebuf = one_argument( cmnd, buf );
-     if ( !str_cmp( buf, "if" ) )
-       command_list = tprg_process_if( morebuf, command_list, room, tObj,
-				       actor, obj, vo, rndm );
-     else
-       tprg_process_cmnd( cmnd, room, tObj, actor, obj, vo, rndm );
-     cmnd         = command_list;
-     command_list = tprg_next_command( command_list );
-   }
+	/*
+	   if ( mob->wait > 0 )
+	   return; */
 
- return;
+	/* if IS_AFFECTED( mob, AFF_CHARM )
+	   return; */
+
+	/* get a random visable mortal player who is in the room with the mob */
+	if ( room )
+		for ( vch = room->people; vch; vch = vch->next_in_room )
+		{
+			if ( number_range( 0, count ) == 0 )
+				rndm = vch;
+			count++;
+		}
+	if ( tObj )
+		if ( !tObj->carried_by )
+		{
+			for ( vch = tObj->in_room->people; vch; vch = vch->next_in_room )
+			{
+				if ( number_range( 0, count ) == 0 )
+					rndm = vch;
+				count++;
+			}
+		}
+		else
+			for ( vch = tObj->carried_by->in_room->people; vch; vch = vch->next_in_room )
+			{
+				if ( number_range( 0, count ) == 0 )
+					rndm = vch;
+				count++;
+			}
+
+	strcpy( tmpcmndlst, com_list );
+	command_list = tmpcmndlst;
+	cmnd         = command_list;
+	command_list = tprg_next_command( command_list );
+	while ( *cmnd != '\0' )
+	{
+		morebuf = one_argument( cmnd, buf );
+		if ( !str_cmp( buf, "if" ) )
+			command_list = tprg_process_if( morebuf, command_list, room, tObj,
+					actor, obj, vo, rndm );
+		else
+			tprg_process_cmnd( cmnd, room, tObj, actor, obj, vo, rndm );
+		cmnd         = command_list;
+		command_list = tprg_next_command( command_list );
+	}
+
+	return;
 
 }
 
@@ -1577,90 +1577,90 @@ void tprg_driver ( char *com_list,ROOM_INDEX_DATA *room,
  *  To see how this works, look at the various trigger routines..
  */
 void tprg_wordlist_check( char *arg, ROOM_INDEX_DATA *room,
-			  OBJ_INDEX_DATA *tObj, CHAR_DATA *actor,
-			  OBJ_DATA *obj, void *vo, int type )
+		OBJ_INDEX_DATA *tObj, CHAR_DATA *actor,
+		OBJ_DATA *obj, void *vo, int type )
 {
 
-  char        temp1[ MAX_STRING_LENGTH ];
-  char        temp2[ MAX_INPUT_LENGTH ];
-  char        word[ MAX_INPUT_LENGTH ];
-  TRAP_DATA  *tprg;
-  char       *list;
-  char       *start;
-  char       *dupl;
-  char       *end;
-  int         i;
+	char        temp1[ MAX_STRING_LENGTH ];
+	char        temp2[ MAX_INPUT_LENGTH ];
+	char        word[ MAX_INPUT_LENGTH ];
+	TRAP_DATA  *tprg;
+	char       *list;
+	char       *start;
+	char       *dupl;
+	char       *end;
+	int         i;
 
-/*
-  if (mob == actor )
-    return; */
+	/*
+	   if (mob == actor )
+	   return; */
 
-  for ( tprg = ( ( room ) ? room->traps : tObj->traps ); tprg != NULL; tprg = tprg->next )
-    if ( tprg->type & type )
-      {
-	strcpy( temp1, tprg->arglist );
-	list = temp1;
-	for ( i = 0; i < strlen( list ); i++ )
-	  list[i] = LOWER( list[i] );
-	strcpy( temp2, arg );
-	dupl = temp2;
-	for ( i = 0; i < strlen( dupl ); i++ )
-	  dupl[i] = LOWER( dupl[i] );
-	if ( ( list[0] == 'p' ) && ( list[1] == ' ' ) )
-	  {
-	    list += 2;
-	    while ( ( start = strstr( dupl, list ) ) )
-	      if ( (start == dupl || *(start-1) == ' ' )
-		  && ( *(end = start + strlen( list ) ) == ' '
-		      || *end == '\n'
-		      || *end == '\r'
-		      || *end == '\0' ) )
+	for ( tprg = ( ( room ) ? room->traps : tObj->traps ); tprg != NULL; tprg = tprg->next )
+		if ( tprg->type & type )
 		{
-		  tprg_driver( tprg->comlist, room, tObj, actor, obj, vo );
-		  break;
+			strcpy( temp1, tprg->arglist );
+			list = temp1;
+			for ( i = 0; i < strlen( list ); i++ )
+				list[i] = LOWER( list[i] );
+			strcpy( temp2, arg );
+			dupl = temp2;
+			for ( i = 0; i < strlen( dupl ); i++ )
+				dupl[i] = LOWER( dupl[i] );
+			if ( ( list[0] == 'p' ) && ( list[1] == ' ' ) )
+			{
+				list += 2;
+				while ( ( start = strstr( dupl, list ) ) )
+					if ( (start == dupl || *(start-1) == ' ' )
+							&& ( *(end = start + strlen( list ) ) == ' '
+								|| *end == '\n'
+								|| *end == '\r'
+								|| *end == '\0' ) )
+					{
+						tprg_driver( tprg->comlist, room, tObj, actor, obj, vo );
+						break;
+					}
+					else
+						dupl = start+1;
+			}
+			else
+			{
+				list = one_argument( list, word );
+				for( ; word[0] != '\0'; list = one_argument( list, word ) )
+					while ( ( start = strstr( dupl, word ) ) )
+						if ( ( start == dupl || *(start-1) == ' ' )
+								&& ( *(end = start + strlen( word ) ) == ' '
+									|| *end == '\n'
+									|| *end == '\r'
+									|| *end == '\0' ) )
+						{
+							tprg_driver( tprg->comlist, room, tObj, actor, obj, vo );
+							break;
+						}
+						else
+							dupl = start+1;
+			}
 		}
-	      else
-		dupl = start+1;
-	  }
-	else
-	  {
-	    list = one_argument( list, word );
-	    for( ; word[0] != '\0'; list = one_argument( list, word ) )
-	      while ( ( start = strstr( dupl, word ) ) )
-		if ( ( start == dupl || *(start-1) == ' ' )
-		    && ( *(end = start + strlen( word ) ) == ' '
-			|| *end == '\n'
-			|| *end == '\r'
-			|| *end == '\0' ) )
-		  {
-		    tprg_driver( tprg->comlist, room, tObj, actor, obj, vo );
-		    break;
-		  }
-		else
-		  dupl = start+1;
-	  }
-      }
 
-  return;
+	return;
 
 }
 
 void tprg_percent_check( ROOM_INDEX_DATA *room, OBJ_INDEX_DATA *tObj,
- 			 CHAR_DATA *actor, OBJ_DATA *obj,
-			 void *vo, int type)
+		CHAR_DATA *actor, OBJ_DATA *obj,
+		void *vo, int type)
 {
- TRAP_DATA * tprg;
+	TRAP_DATA * tprg;
 
- for ( tprg =( ( room ) ? room->traps : tObj->traps ); tprg != NULL; tprg = tprg->next )
-   if ( ( tprg->type & type )
-       && ( number_percent( ) < atoi( trpg->arglist ) ) )
-     {
-       tprg_driver( mprg->comlist, room, tObj, actor, obj, vo );
-/*       if ( type != GREET_PROG && type != ALL_GREET_PROG ) 
-	 break; */
-     }
+	for ( tprg =( ( room ) ? room->traps : tObj->traps ); tprg != NULL; tprg = tprg->next )
+		if ( ( tprg->type & type )
+				&& ( number_percent( ) < atoi( trpg->arglist ) ) )
+		{
+			tprg_driver( mprg->comlist, room, tObj, actor, obj, vo );
+			/*       if ( type != GREET_PROG && type != ALL_GREET_PROG ) 
+					 break; */
+		}
 
- return;
+	return;
 
 }
 
@@ -1673,33 +1673,33 @@ void tprg_percent_check( ROOM_INDEX_DATA *room, OBJ_INDEX_DATA *tObj,
  * trigger calls.
  */
 void tprg_act_trigger( char *buf, CHAR_DATA *mob, CHAR_DATA *ch,
-		       OBJ_DATA *obj, void *vo)
+		OBJ_DATA *obj, void *vo)
 {
-/*extern int port;*/
-  MPROG_ACT_LIST * tmp_act;
+	/*extern int port;*/
+	MPROG_ACT_LIST * tmp_act;
 
-  if ( IS_NPC( mob )
-      && ( mob->pIndexData->progtypes & ACT_PROG ) )
-    {
-      tmp_act = alloc_mem( sizeof( MPROG_ACT_LIST ) , "t_prog.c 1672");
-/*      if ( mob->mpactnum > 0 )
-	tmp_act->next = mob->mpact->next;
-      else
-	tmp_act->next = NULL;*/
-      tmp_act->next = mob->mpact;
+	if ( IS_NPC( mob )
+			&& ( mob->pIndexData->progtypes & ACT_PROG ) )
+	{
+		tmp_act = alloc_mem( sizeof( MPROG_ACT_LIST ) , "t_prog.c 1672");
+		/*      if ( mob->mpactnum > 0 )
+				tmp_act->next = mob->mpact->next;
+				else
+				tmp_act->next = NULL;*/
+		tmp_act->next = mob->mpact;
 
-      mob->mpact      = tmp_act;
-      mob->mpact->buf = str_dup( buf );
-      mob->mpact->ch  = ch; 
-      mob->mpact->obj = obj; 
-      mob->mpact->vo  = vo; 
-      mob->mpactnum++;
-    }
-/*  if ( IS_NPC( mob ) && ( mob->pIndexData->progtypes & ACT_PROG )
-       && mob->in_room->area->nplayer > 0 )
-    tprg_wordlist_check( buf, mob, ch, obj, vo, ACT_PROG );*/
+		mob->mpact      = tmp_act;
+		mob->mpact->buf = str_dup( buf );
+		mob->mpact->ch  = ch; 
+		mob->mpact->obj = obj; 
+		mob->mpact->vo  = vo; 
+		mob->mpactnum++;
+	}
+	/*  if ( IS_NPC( mob ) && ( mob->pIndexData->progtypes & ACT_PROG )
+		&& mob->in_room->area->nplayer > 0 )
+		tprg_wordlist_check( buf, mob, ch, obj, vo, ACT_PROG );*/
 
-  return;
+	return;
 
 }
 
@@ -1710,192 +1710,192 @@ void tprg_bribe_trigger( CHAR_DATA *mob, CHAR_DATA *ch, int amount )
 #endif
 {
 
-  char        buf[ MAX_STRING_LENGTH ];
-  MPROG_DATA *mprg;
-  OBJ_DATA   *obj;
+	char        buf[ MAX_STRING_LENGTH ];
+	MPROG_DATA *mprg;
+	OBJ_DATA   *obj;
 
-  if ( IS_NPC( mob )
-      && ( mob->pIndexData->progtypes & BRIBE_PROG ) )
-    {
-      obj = create_object( get_obj_index( OBJ_VNUM_MONEY_SOME ), 0 );
+	if ( IS_NPC( mob )
+			&& ( mob->pIndexData->progtypes & BRIBE_PROG ) )
+	{
+		obj = create_object( get_obj_index( OBJ_VNUM_MONEY_SOME ), 0 );
 #ifdef NEW_MONEY
-      obj->value[0] = amount.gold;
-      obj->value[1] = amount.silver;
-      obj->value[2] = amount.copper;
-      obj_to_char( obj, mob );
-      sub_money( &mob->money, amount );
+		obj->value[0] = amount.gold;
+		obj->value[1] = amount.silver;
+		obj->value[2] = amount.copper;
+		obj_to_char( obj, mob );
+		sub_money( &mob->money, amount );
 
-      for ( mprg = mob->pIndexData->mobprogs; mprg != NULL; mprg = mprg->next )
-        if ( ( mprg->type & BRIBE_PROG )
-            && ( (amount.gold + (amount.silver/SILVER_PER_GOlD) +
-		 (amount.copper/COPPER_PER_GOLD) ) >= atoi( mprg->arglist ) ) )
-          {
-            tprg_driver( mprg->comlist, mob, ch, obj, NULL );
-            break;
-          }
+		for ( mprg = mob->pIndexData->mobprogs; mprg != NULL; mprg = mprg->next )
+			if ( ( mprg->type & BRIBE_PROG )
+					&& ( (amount.gold + (amount.silver/SILVER_PER_GOlD) +
+							(amount.copper/COPPER_PER_GOLD) ) >= atoi( mprg->arglist ) ) )
+			{
+				tprg_driver( mprg->comlist, mob, ch, obj, NULL );
+				break;
+			}
 #else
-      sprintf( buf, obj->short_descr, amount );
-      free_string( obj->short_descr );
-      obj->short_descr = str_dup( buf );
-      obj->value[0]    = amount;
-      obj_to_char( obj, mob );
-      mob->gold -= amount;
+		sprintf( buf, obj->short_descr, amount );
+		free_string( obj->short_descr );
+		obj->short_descr = str_dup( buf );
+		obj->value[0]    = amount;
+		obj_to_char( obj, mob );
+		mob->gold -= amount;
 
-      for ( mprg = mob->pIndexData->mobprogs; mprg != NULL; mprg = mprg->next )
-	if ( ( mprg->type & BRIBE_PROG )
-	    && ( amount >= atoi( mprg->arglist ) ) )
-	  {
-	    tprg_driver( mprg->comlist, mob, ch, obj, NULL );
-	    break;
-	  }
+		for ( mprg = mob->pIndexData->mobprogs; mprg != NULL; mprg = mprg->next )
+			if ( ( mprg->type & BRIBE_PROG )
+					&& ( amount >= atoi( mprg->arglist ) ) )
+			{
+				tprg_driver( mprg->comlist, mob, ch, obj, NULL );
+				break;
+			}
 #endif
-    }
-  
-  return;
+	}
+
+	return;
 
 }
 
 void tprg_death_trigger( CHAR_DATA *mob, CHAR_DATA *ch )
 {
 
- if ( IS_NPC( mob )
-     && ( mob->pIndexData->progtypes & DEATH_PROG ) )
-   {
-     int oldpos;
+	if ( IS_NPC( mob )
+			&& ( mob->pIndexData->progtypes & DEATH_PROG ) )
+	{
+		int oldpos;
 
-     oldpos = mob->position;
-     mob->position = POS_STANDING;
-     tprg_percent_check( mob, ch, NULL, NULL, DEATH_PROG );
-     mob->position = oldpos;
-   }
+		oldpos = mob->position;
+		mob->position = POS_STANDING;
+		tprg_percent_check( mob, ch, NULL, NULL, DEATH_PROG );
+		mob->position = oldpos;
+	}
 
- death_cry( mob );
- return;
+	death_cry( mob );
+	return;
 
 }
 
 void tprg_entry_trigger( CHAR_DATA *mob )
 {
 
- if ( IS_NPC( mob )
-     && ( mob->pIndexData->progtypes & ENTRY_PROG ) )
- {
-   tprg_percent_check( mob, NULL, NULL, NULL, ENTRY_PROG );
- }
+	if ( IS_NPC( mob )
+			&& ( mob->pIndexData->progtypes & ENTRY_PROG ) )
+	{
+		tprg_percent_check( mob, NULL, NULL, NULL, ENTRY_PROG );
+	}
 
- return;
+	return;
 
 }
 
 void tprg_fight_trigger( CHAR_DATA *mob, CHAR_DATA *ch )
 {
- if ( IS_NPC( mob )
-     && ( mob->pIndexData->progtypes & FIGHT_PROG ) )
- {
-   tprg_percent_check( mob, ch, NULL, NULL, FIGHT_PROG );
- }
- return;
+	if ( IS_NPC( mob )
+			&& ( mob->pIndexData->progtypes & FIGHT_PROG ) )
+	{
+		tprg_percent_check( mob, ch, NULL, NULL, FIGHT_PROG );
+	}
+	return;
 }
 
 void tprg_give_trigger( CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj )
 {
 
- char        buf[MAX_INPUT_LENGTH];
- MPROG_DATA *mprg;
+	char        buf[MAX_INPUT_LENGTH];
+	MPROG_DATA *mprg;
 
- if ( IS_NPC( mob )
-     && ( mob->pIndexData->progtypes & GIVE_PROG ) )
- {
-   for ( mprg = mob->pIndexData->mobprogs; mprg != NULL; mprg = mprg->next )
-     {
-       one_argument( mprg->arglist, buf );
-       if ( ( mprg->type & GIVE_PROG )
-	   && ( ( !str_cmp( obj->name, mprg->arglist ) )
-	       || ( !str_cmp( "all", buf ) ) ) )
-	 {
-	   tprg_driver( mprg->comlist, mob, ch, obj, NULL );
-	   break;
-	 }
-     }
- }
+	if ( IS_NPC( mob )
+			&& ( mob->pIndexData->progtypes & GIVE_PROG ) )
+	{
+		for ( mprg = mob->pIndexData->mobprogs; mprg != NULL; mprg = mprg->next )
+		{
+			one_argument( mprg->arglist, buf );
+			if ( ( mprg->type & GIVE_PROG )
+					&& ( ( !str_cmp( obj->name, mprg->arglist ) )
+						|| ( !str_cmp( "all", buf ) ) ) )
+			{
+				tprg_driver( mprg->comlist, mob, ch, obj, NULL );
+				break;
+			}
+		}
+	}
 
- return;
+	return;
 
 }
 
 void tprg_greet_trigger( CHAR_DATA *ch )
 {
 
- CHAR_DATA *vmob;
+	CHAR_DATA *vmob;
 
- for ( vmob = ch->in_room->people; vmob != NULL; vmob = vmob->next_in_room )
-   if ( IS_NPC( vmob )
-       && ch != vmob
-       && can_see( vmob, ch )
-       && ( vmob->fighting == NULL )
-       && IS_AWAKE( vmob )
-       && ( vmob->pIndexData->progtypes & GREET_PROG) )
-   {
-     tprg_percent_check( vmob, ch, NULL, NULL, GREET_PROG );
-   }
-   else
-     if ( IS_NPC( vmob )
-	 && ch != vmob
-	 && ( vmob->fighting == NULL )
-	 && IS_AWAKE( vmob )
-	 && ( vmob->pIndexData->progtypes & ALL_GREET_PROG ) )
-     {
-       tprg_percent_check(vmob,ch,NULL,NULL,ALL_GREET_PROG);
-     }
+	for ( vmob = ch->in_room->people; vmob != NULL; vmob = vmob->next_in_room )
+		if ( IS_NPC( vmob )
+				&& ch != vmob
+				&& can_see( vmob, ch )
+				&& ( vmob->fighting == NULL )
+				&& IS_AWAKE( vmob )
+				&& ( vmob->pIndexData->progtypes & GREET_PROG) )
+		{
+			tprg_percent_check( vmob, ch, NULL, NULL, GREET_PROG );
+		}
+		else
+			if ( IS_NPC( vmob )
+					&& ch != vmob
+					&& ( vmob->fighting == NULL )
+					&& IS_AWAKE( vmob )
+					&& ( vmob->pIndexData->progtypes & ALL_GREET_PROG ) )
+			{
+				tprg_percent_check(vmob,ch,NULL,NULL,ALL_GREET_PROG);
+			}
 
- return;
+	return;
 
 }
 
 void tprg_hitprcnt_trigger( CHAR_DATA *mob, CHAR_DATA *ch)
 {
 
- MPROG_DATA *mprg;
+	MPROG_DATA *mprg;
 
- if ( IS_NPC( mob )
-     && ( mob->pIndexData->progtypes & HITPRCNT_PROG ) )
- {
-   for ( mprg = mob->pIndexData->mobprogs; mprg != NULL; mprg = mprg->next )
-     if ( ( mprg->type & HITPRCNT_PROG )
-	 && ( ( 100*mob->hit / mob->max_hit ) < atoi( mprg->arglist ) ) )
-       {
-	 tprg_driver( mprg->comlist, mob, ch, NULL, NULL );
-	 break;
-       }
- }
- 
- return;
+	if ( IS_NPC( mob )
+			&& ( mob->pIndexData->progtypes & HITPRCNT_PROG ) )
+	{
+		for ( mprg = mob->pIndexData->mobprogs; mprg != NULL; mprg = mprg->next )
+			if ( ( mprg->type & HITPRCNT_PROG )
+					&& ( ( 100*mob->hit / mob->max_hit ) < atoi( mprg->arglist ) ) )
+			{
+				tprg_driver( mprg->comlist, mob, ch, NULL, NULL );
+				break;
+			}
+	}
+
+	return;
 
 }
 
 void tprg_random_trigger( CHAR_DATA *mob )
 {
 
-  if ( mob->pIndexData->progtypes & RAND_PROG)
-  {
-    tprg_percent_check(mob,NULL,NULL,NULL,RAND_PROG);
-  }
+	if ( mob->pIndexData->progtypes & RAND_PROG)
+	{
+		tprg_percent_check(mob,NULL,NULL,NULL,RAND_PROG);
+	}
 
-  return;
+	return;
 
 }
 
 void tprg_speech_trigger( char *txt, CHAR_DATA *mob )
 {
 
-  CHAR_DATA *vmob;
+	CHAR_DATA *vmob;
 
-  for ( vmob = mob->in_room->people; vmob != NULL; vmob = vmob->next_in_room )
-    if ( IS_NPC( vmob ) && ( vmob->pIndexData->progtypes & SPEECH_PROG ) )
-    {
-      tprg_wordlist_check( txt, vmob, mob, NULL, NULL, SPEECH_PROG );
-    }
-  
-  return;
+	for ( vmob = mob->in_room->people; vmob != NULL; vmob = vmob->next_in_room )
+		if ( IS_NPC( vmob ) && ( vmob->pIndexData->progtypes & SPEECH_PROG ) )
+		{
+			tprg_wordlist_check( txt, vmob, mob, NULL, NULL, SPEECH_PROG );
+		}
+
+	return;
 
 }

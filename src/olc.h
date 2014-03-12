@@ -91,8 +91,8 @@ void  race_edit		args( ( CHAR_DATA *ch, char *argument ) );
  */
 struct olc_cmd_type
 {
-    char * const	name;
-    OLC_FUN *		olc_fun;
+	char * const	name;
+	OLC_FUN *		olc_fun;
 };
 
 /*
@@ -100,8 +100,8 @@ struct olc_cmd_type
  */
 struct	editor_cmd_type
 {
-    char * const	name;
-    DO_FUN *		do_fun;
+	char * const	name;
+	DO_FUN *		do_fun;
 };
 
 
@@ -112,11 +112,11 @@ struct	editor_cmd_type
 AREA_DATA *get_vnum_area	args ( ( int vnum ) );
 AREA_DATA *get_area_data	args ( ( int vnum ) );
 int flag_value			args ( ( const struct flag_type *flag_table,
-				         char *argument) );
+			char *argument) );
 char *flag_string		args ( ( const struct flag_type *flag_table,
-				         int bits ) );
+			int bits ) );
 void add_reset			args ( ( ROOM_INDEX_DATA *room, 
-				         RESET_DATA *pReset, int index ) );
+			RESET_DATA *pReset, int index ) );
 
 
 
@@ -176,7 +176,7 @@ DECLARE_OLC_FUN( aedit_color		);
 /*
  * Clan Editor Prototypes
  */
-  
+
 DECLARE_OLC_FUN( cedit_show             );
 DECLARE_OLC_FUN( cedit_create           );
 DECLARE_OLC_FUN( cedit_name             );
@@ -388,9 +388,9 @@ DECLARE_OLC_FUN( race_edit_delete		);
  * Macros
  */
 #define IS_BUILDER(ch, Area)	( ( ch->pcdata->security >= Area->security  \
-				|| strstr( Area->builders, ch->name )	    \
-				|| strstr( Area->builders, "All" ) )	    \
-				&& !IS_SWITCHED( ch ) )
+			|| strstr( Area->builders, ch->name )	    \
+			|| strstr( Area->builders, "All" ) )	    \
+		&& !IS_SWITCHED( ch ) )
 
 /* #define TOGGLE_BIT(var, bit)    ((var) ^= (bit)) */
 

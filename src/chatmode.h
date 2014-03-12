@@ -11,9 +11,9 @@ typedef struct chat_room CHAT_ROOM;
 
 struct chat_room
 {
-  CHAT_ROOM *next;
-  ROOM_INDEX_DATA *pRoom;
-  char *invited;
+	CHAT_ROOM *next;
+	ROOM_INDEX_DATA *pRoom;
+	char *invited;
 };
 
 extern CHAT_ROOM *chat_rooms;

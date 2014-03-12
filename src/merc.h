@@ -125,10 +125,10 @@ typedef struct money_data	 	MONEY_DATA;
  * Function types.
  */
 typedef	void DO_FUN                     args( ( CHAR_DATA *ch,
-					       char *argument ) );
+			char *argument ) );
 typedef bool SPEC_FUN                   args( ( CHAR_DATA *ch ) );
 typedef void SPELL_FUN                  args( ( int sn, int level,
-					       CHAR_DATA *ch, void *vo ) );
+			CHAR_DATA *ch, void *vo ) );
 
 /*
  * String and memory management parameters.
@@ -194,74 +194,74 @@ typedef void SPELL_FUN                  args( ( int sn, int level,
  */
 
 /* is not used -Deck
-struct  userl_data
-{
-    USERL_DATA *  next;
-    char *        name;
-    int           level;
-    char *        user;
-    char *        host;
-    char *        lastlogin;
-    char *        desc;
-}; */
+   struct  userl_data
+   {
+   USERL_DATA *  next;
+   char *        name;
+   int           level;
+   char *        user;
+   char *        host;
+   char *        lastlogin;
+   char *        desc;
+   }; */
 
 
 #ifdef NEW_MONEY 
 struct money_data
 {
-  int           gold;
-  int           silver;
-  int           copper;
+	int           gold;
+	int           silver;
+	int           copper;
 };
 #endif 
 
 struct arena_data
 {
-  AREA_DATA *area;	/* Arena area */
-  CHAR_DATA *cch;	/* Challenger char */
-  CHAR_DATA *och;	/* optional challengee char */
-  CHAR_DATA *fch;	/* First char in arena */
-  CHAR_DATA *sch;	/* Second char in arena */
-  int award;		/* Money in the pot */
-  int count;		/* Update ticker */
+	AREA_DATA *area;	/* Arena area */
+	CHAR_DATA *cch;	/* Challenger char */
+	CHAR_DATA *och;	/* optional challengee char */
+	CHAR_DATA *fch;	/* First char in arena */
+	CHAR_DATA *sch;	/* Second char in arena */
+	int award;		/* Money in the pot */
+	int count;		/* Update ticker */
 };
 
 struct war_data
 {
-    AREA_DATA *area;    /* battlefield */
-    CHAR_DATA *fch;
-    CHAR_DATA *sch;
-    bool iswar;
-    int wartype;
-    int max_level;
-    int min_level;
-    int inwar;
-    int team_red;
-    int team_blue;
+	AREA_DATA *area;    /* battlefield */
+	CHAR_DATA *fch;
+	CHAR_DATA *sch;
+	bool iswar;
+	int wartype;
+	int max_level;
+	int min_level;
+	int inwar;
+	int team_red;
+	int team_blue;
 	int clan_chlng;
 	int clan_accpt;
-    int timeleft;
-    int count;
-    int ticker;
+	int timeleft;
+	int count;
+	int ticker;
 };
 
 
 struct wiznet_type
 {
-    char *      name;
-    long        flag;
-    int         level;
+	char *      name;
+	long        flag;
+	int         level;
 };
-            
+
 /*
  * Site ban structure.
  */
 struct	ban_data
 {
-    BAN_DATA *	next;
-    char	type;
-    char *	name;
-    char *      user;
+	BAN_DATA *	next;
+	char	type;
+	char *	name;
+	char *      user;
 };
 
 
@@ -301,18 +301,18 @@ bool    MOBtrigger;
 
 struct	time_info_data
 {
-    int		hour;
-    int		day;
-    int		month;
-    int		year;
+	int		hour;
+	int		day;
+	int		month;
+	int		year;
 };
 
 struct	weather_data
 {
-    int		mmhg;
-    int		change;
-    int		sky;
-    int		sunlight;
+	int		mmhg;
+	int		change;
+	int		sky;
+	int		sunlight;
 };
 
 
@@ -380,30 +380,30 @@ struct	weather_data
  */
 struct	descriptor_data
 {
-    DESCRIPTOR_DATA *	next;
-    DESCRIPTOR_DATA *	snoop_by;
-    CHAR_DATA *		character;
-    CHAR_DATA *		original;
-    char *		host;
-    char *              user;
-    int		        descriptor;
-    int		        connected;
-    bool		fcommand;
-    char		inbuf		[ MAX_INPUT_LENGTH*4 ];
-    char		incomm		[ MAX_INPUT_LENGTH   ];
-    char		inlast		[ MAX_INPUT_LENGTH   ];
-    int			repeat;
-    char *              showstr_head;
-    char *              showstr_point;
-    char *		outbuf;
-    int			outsize;
-    int			outtop;
-    void *              pEdit;		/* OLC */
-    void *              inEdit;         /* Altrag, for nested editors */
-    char **             pString;	/* OLC */
-    int			editor;		/* OLC */
-    int                 editin;         /* Altrag, again for nesting */
-    bool		ansi;  
+	DESCRIPTOR_DATA *	next;
+	DESCRIPTOR_DATA *	snoop_by;
+	CHAR_DATA *		character;
+	CHAR_DATA *		original;
+	char *		host;
+	char *              user;
+	int		        descriptor;
+	int		        connected;
+	bool		fcommand;
+	char		inbuf		[ MAX_INPUT_LENGTH*4 ];
+	char		incomm		[ MAX_INPUT_LENGTH   ];
+	char		inlast		[ MAX_INPUT_LENGTH   ];
+	int			repeat;
+	char *              showstr_head;
+	char *              showstr_point;
+	char *		outbuf;
+	int			outsize;
+	int			outtop;
+	void *              pEdit;		/* OLC */
+	void *              inEdit;         /* Altrag, for nested editors */
+	char **             pString;	/* OLC */
+	int			editor;		/* OLC */
+	int                 editin;         /* Altrag, again for nesting */
+	bool		ansi;  
 };
 
 
@@ -413,31 +413,31 @@ struct	descriptor_data
  */
 struct	str_app_type
 {
-    int 	        tohit;
-    int         	todam;
-    int                 carry;
-    int         	wield;
+	int 	        tohit;
+	int         	todam;
+	int                 carry;
+	int         	wield;
 };
 
 struct	int_app_type
 {
-    int         	learn;
+	int         	learn;
 };
 
 struct	wis_app_type
 {
-    int         	practice;
+	int         	practice;
 };
 
 struct	dex_app_type
 {
-    int         	defensive;
+	int         	defensive;
 };
 
 struct	con_app_type
 {
-    int         	hitp;
-    int         	shock;
+	int         	hitp;
+	int         	shock;
 };
 
 
@@ -458,11 +458,11 @@ struct	con_app_type
  */
 struct	help_data
 {
-    HELP_DATA * 	next;
-    /*AREA_DATA *		area;*/		/* OLC 1.1b */
-    int 	        level;
-    char *      	keyword;
-    char *      	text;
+	HELP_DATA * 	next;
+	/*AREA_DATA *		area;*/		/* OLC 1.1b */
+	int 	        level;
+	char *      	keyword;
+	char *      	text;
 };
 
 
@@ -471,23 +471,23 @@ struct	help_data
  */
 struct  social_data
 {
-    SOCIAL_DATA	*	next;
-    char *              name;
-    char *              char_no_arg;
-    char *  	        others_no_arg;
-    char * 	        char_found;
-    char * 	        others_found;
-    char * 	        vict_found;
-    char * 	        char_auto;
-    char * 	        others_auto;
+	SOCIAL_DATA	*	next;
+	char *              name;
+	char *              char_no_arg;
+	char *  	        others_no_arg;
+	char * 	        char_found;
+	char * 	        others_found;
+	char * 	        vict_found;
+	char * 	        char_auto;
+	char * 	        others_auto;
 };
 
 struct  newbie_data
 {
-    NEWBIE_DATA *	next;
-    char *		keyword;
-    char *		answer1;
-    char * 		answer2;
+	NEWBIE_DATA *	next;
+	char *		keyword;
+	char *		answer1;
+	char * 		answer2;
 };
 
 
@@ -498,13 +498,13 @@ struct  newbie_data
 
 struct	shop_data
 {
-    SHOP_DATA *	next;			/* Next shop in list		*/
-    int 	keeper;			/* Vnum of shop keeper mob	*/
-    int 	buy_type [ MAX_TRADE ];	/* Item types shop will buy	*/
-    int 	profit_buy;		/* Cost multiplier for buying	*/
-    int 	profit_sell;		/* Cost multiplier for selling	*/
-    int 	open_hour;		/* First opening hour		*/
-    int 	close_hour;		/* First closing hour		*/
+	SHOP_DATA *	next;			/* Next shop in list		*/
+	int 	keeper;			/* Vnum of shop keeper mob	*/
+	int 	buy_type [ MAX_TRADE ];	/* Item types shop will buy	*/
+	int 	profit_buy;		/* Cost multiplier for buying	*/
+	int 	profit_sell;		/* Cost multiplier for selling	*/
+	int 	open_hour;		/* First opening hour		*/
+	int 	close_hour;		/* First closing hour		*/
 };
 
 /*
@@ -512,13 +512,13 @@ struct	shop_data
  */
 struct playerlist_data
 {
-  PLAYERLIST_DATA * next;
-  char * name;
-  unsigned char level;
-  char * clan_name;
-  unsigned char clan_rank;
-  char * guild_name;
-  unsigned char guild_rank;
+	PLAYERLIST_DATA * next;
+	char * name;
+	unsigned char level;
+	char * clan_name;
+	unsigned char clan_rank;
+	char * guild_name;
+	unsigned char guild_rank;
 };
 
 #define CLASS_MAGE           0
@@ -560,85 +560,85 @@ struct playerlist_data
 
 struct	class_type
 {
-    char 	who_name	[ 4 ];	/* Three-letter name for 'who'	*/
-    char        who_long        [ 15 ]; /* Long name of Class           */
-    int 	attr_prime;		/* Prime attribute		*/
-    int 	weapon;			/* First weapon			*/
-    int 	guild;			/* Vnum of guild room		*/
-    int 	skill_adept;		/* Maximum skill level		*/
-    int 	thac0_00;		/* Thac0 for level  0		*/
-    int 	thac0_97;		/* Thac0 for level 47		*/
-    int  	hp_min;			/* Min hp gained on leveling	*/
-    int	        hp_max;			/* Max hp gained on leveling	*/
-    bool	fMana;			/* Class gains mana on level	*/
-    bool	races[ MAX_RACE ];	/* Can a race be a class?	*/
-    bool	multi[ MAX_CLASS ];	/* Which classes can multiclass */
-    bool	objtype[ 14 ];		/* Which classes can wield what types of weapons */
+	char 	who_name	[ 4 ];	/* Three-letter name for 'who'	*/
+	char        who_long        [ 15 ]; /* Long name of Class           */
+	int 	attr_prime;		/* Prime attribute		*/
+	int 	weapon;			/* First weapon			*/
+	int 	guild;			/* Vnum of guild room		*/
+	int 	skill_adept;		/* Maximum skill level		*/
+	int 	thac0_00;		/* Thac0 for level  0		*/
+	int 	thac0_97;		/* Thac0 for level 47		*/
+	int  	hp_min;			/* Min hp gained on leveling	*/
+	int	        hp_max;			/* Max hp gained on leveling	*/
+	bool	fMana;			/* Class gains mana on level	*/
+	bool	races[ MAX_RACE ];	/* Can a race be a class?	*/
+	bool	multi[ MAX_CLASS ];	/* Which classes can multiclass */
+	bool	objtype[ 14 ];		/* Which classes can wield what types of weapons */
 };
 #if 0
 struct  race_type
 {
-    char        race_name      [ 4 ];
-    char        race_full      [ 20 ];
-    int		mstr;
-    int		mint;
-    int		mwis;
-    int		mdex;
-    int		mcon;
-/*  int         atribmod1;
-    int         atribmod2;     OLD VERSION.
-    int         modamount1;
-    int         modamount2; */
+	char        race_name      [ 4 ];
+	char        race_full      [ 20 ];
+	int		mstr;
+	int		mint;
+	int		mwis;
+	int		mdex;
+	int		mcon;
+	/*  int         atribmod1;
+		int         atribmod2;     OLD VERSION.
+		int         modamount1;
+		int         modamount2; */
 };
 #endif
 
 struct  race_data
 {
-    RACE_DATA * next;
-    int		vnum;
-    char *     	race_name;
-    char *     	race_full;
-    int		mstr;
-    int		mint;
-    int		mwis;
-    int		mdex;
-    int		mcon;
+	RACE_DATA * next;
+	int		vnum;
+	char *     	race_name;
+	char *     	race_full;
+	int		mstr;
+	int		mint;
+	int		mwis;
+	int		mdex;
+	int		mcon;
 };
 
 /* not used - Decklarean
-struct  nrace_type
-{
-    char        lname  [20];
-    char        sname  [4];
-    int         size;
-    int         mstr;
-    int         mdex;
-    int         mint;
-    int         mwis;
-    int         mcon;
-    int         mods [5];
-    long        res_flags;
-    long        vul_flags;
-    long        affects;
-    int         hplev;
-    int         manalev;
-    int         movelev;
-};
-*/    
+   struct  nrace_type
+   {
+   char        lname  [20];
+   char        sname  [4];
+   int         size;
+   int         mstr;
+   int         mdex;
+   int         mint;
+   int         mwis;
+   int         mcon;
+   int         mods [5];
+   long        res_flags;
+   long        vul_flags;
+   long        affects;
+   int         hplev;
+   int         manalev;
+   int         movelev;
+   };
+   */    
 /*
  * Data structure for notes.
  */
 struct	note_data
 {
-    NOTE_DATA *	next;
-    char *	sender;
-    char *	date;
-    char *	to_list;
-    char *	subject;
-    char *	text;
-    time_t      date_stamp;
-    bool        protected;
-    int         on_board;
+	NOTE_DATA *	next;
+	char *	sender;
+	char *	date;
+	char *	to_list;
+	char *	subject;
+	char *	text;
+	time_t      date_stamp;
+	bool        protected;
+	int         on_board;
 };
 
 
@@ -648,14 +648,14 @@ struct	note_data
  */
 struct	affect_data
 {
-    AFFECT_DATA *	next;
-    int 		type;
-    int			level;
-    int 		duration;
-    int 		location;
-    int 		modifier;
-    int			bitvector;
-    bool                deleted;
+	AFFECT_DATA *	next;
+	int 		type;
+	int			level;
+	int 		duration;
+	int 		location;
+	int 		modifier;
+	int			bitvector;
+	bool                deleted;
 };
 
 
@@ -665,8 +665,8 @@ struct	affect_data
  */
 struct	kill_data
 {
-    int                 number;
-    int                 killed;
+	int                 number;
+	int                 killed;
 };
 
 /* Bitvector values.. replaces the old A,B,C system. */
@@ -933,7 +933,7 @@ struct	kill_data
 #define IMM_SILVER              (Y)
 #define IMM_IRON                (Z)
 #define IMM_NERVE		(aa)
- 
+
 /* RES bits for mobs */
 #define RES_SUMMON		(A)
 #define RES_CHARM		(B)
@@ -958,7 +958,7 @@ struct	kill_data
 #define RES_WOOD                (X)
 #define RES_SILVER              (Y)
 #define RES_IRON                (Z)
- 
+
 /* VULN bits for mobs */
 #define VULN_SUMMON		(A)
 #define VULN_CHARM		(B)
@@ -983,7 +983,7 @@ struct	kill_data
 #define VULN_WOOD               (X)
 #define VULN_SILVER             (Y)
 #define VULN_IRON		(Z)
- 
+
 
 /* weapon class */
 #define WEAPON_EXOTIC		0
@@ -1581,41 +1581,41 @@ struct	kill_data
  */
 struct	mob_index_data
 {
-    MOB_INDEX_DATA *	next;
-    SPEC_FUN *		spec_fun;
-    SHOP_DATA *		pShop;
-    AREA_DATA *		area;			/* OLC */
-    MPROG_DATA *        mobprogs;
-    char *		player_name;
-    char *		short_descr;
-    char *		long_descr;
-    char *		description;
-    int 		vnum;
-    int			progtypes;
-    int 		count;
-    int 		killed;
-    short 		sex;
-    short		class;
-    int		 	level;
-    int			act;
-    long		affected_by;
-    long		affected_by2;
-    long		imm_flags;	/* XOR */
-    long		res_flags;
-    long		vul_flags;	/* XOR */
-    int 		alignment;
-    int 		hitroll;		/* Unused */
-    int 		ac;			/* Unused */
-    int 		hitnodice;		/* Unused */
-    int 		hitsizedice;		/* Unused */
-    int 		hitplus;		/* Unused */
-    int 		damnodice;		/* Unused */
-    int 		damsizedice;		/* Unused */
-    int 		damplus;		/* Unused */
+	MOB_INDEX_DATA *	next;
+	SPEC_FUN *		spec_fun;
+	SHOP_DATA *		pShop;
+	AREA_DATA *		area;			/* OLC */
+	MPROG_DATA *        mobprogs;
+	char *		player_name;
+	char *		short_descr;
+	char *		long_descr;
+	char *		description;
+	int 		vnum;
+	int			progtypes;
+	int 		count;
+	int 		killed;
+	short 		sex;
+	short		class;
+	int		 	level;
+	int			act;
+	long		affected_by;
+	long		affected_by2;
+	long		imm_flags;	/* XOR */
+	long		res_flags;
+	long		vul_flags;	/* XOR */
+	int 		alignment;
+	int 		hitroll;		/* Unused */
+	int 		ac;			/* Unused */
+	int 		hitnodice;		/* Unused */
+	int 		hitsizedice;		/* Unused */
+	int 		hitplus;		/* Unused */
+	int 		damnodice;		/* Unused */
+	int 		damsizedice;		/* Unused */
+	int 		damplus;		/* Unused */
 #ifdef NEW_MONEY
-    MONEY_DATA		money;
+	MONEY_DATA		money;
 #else 
-    int			gold;			/* Unused */
+	int			gold;			/* Unused */
 #endif 
 };
 
@@ -1624,10 +1624,10 @@ struct	mob_index_data
  */
 struct  gskill_data
 {
-    int                 sn;
-    void *              victim;
-    int                 level;
-    int                 timer;
+	int                 sn;
+	void *              victim;
+	int                 level;
+	int                 timer;
 };
 
 /*
@@ -1635,155 +1635,155 @@ struct  gskill_data
  */
 struct	char_data
 {
-    CHAR_DATA *		next;
-    CHAR_DATA *		next_in_room;
-    CHAR_DATA *		master;
-    CHAR_DATA *		leader;
-    CHAR_DATA *		fighting;
-    CHAR_DATA *         hunting;
-    CHAR_DATA *		reply;
-    CHAR_DATA *         questgiver;
-    CHAR_DATA *         questmob;
-    SPEC_FUN *		spec_fun;
-    MOB_INDEX_DATA *	pIndexData;
-    DESCRIPTOR_DATA *	desc;
-    AFFECT_DATA *	affected;
-    AFFECT_DATA *	affected2;
-    NOTE_DATA *		pnote;
-    OBJ_DATA *		carrying;
-    OBJ_DATA *          questobj;
-    ROOM_INDEX_DATA *	in_room;
-    ROOM_INDEX_DATA *	was_in_room;
-    POWERED_DATA *	powered;
-    PC_DATA *		pcdata;
-    MPROG_ACT_LIST *    mpact;
-    GSPELL_DATA *       gspell;
-/*    PHOBIA_DATA *       phobia;*/
-    char *		name;
-    char *		short_descr;
-    char *		long_descr;
-    char *		description;
-    char *              prompt;
-    int                 cquestpnts;    /* for clan quests */
-    int                 questpoints;   /* for autoquests  */
-    int                 nextquest;
-    int                 countdown;
-    short 		sex;
-/* FOR MULTICLASS BELOW */
-    short 		class[ MAX_CLASS ];
-/* FOR MULTICLASS ABOVE */
-    int                 mpactnum;
-    short 		race;
-    short               clan;
-    char                clev;
-    int                 ctimer;
-    int                 wizinvis;
-    int			cloaked;
-    int			level;
-    int                 antidisarm;
-    int  		trust;
-    bool                wizbit;
-    int			played;
-    time_t		logon;
-    time_t		save_time;
-    time_t              last_note;
-    int 		timer;
-    int 		wait;
-    int                 race_wait; 
-    int 		hit;
-/*    int 		max_hit; */
-    int			perm_hit;
-    int			mod_hit;
-    int 		mana;
-/*    int 		max_mana;*/
-    int			perm_mana;
-    int			mod_mana;
-    int 		move;
-/*    int 		max_move; */
-    int			perm_move;
-    int			mod_move;
-    int                 bp;
-/*    int                 max_bp;*/
-    int			perm_bp;
-    int		 	mod_bp;
-    int			charisma; 
+	CHAR_DATA *		next;
+	CHAR_DATA *		next_in_room;
+	CHAR_DATA *		master;
+	CHAR_DATA *		leader;
+	CHAR_DATA *		fighting;
+	CHAR_DATA *         hunting;
+	CHAR_DATA *		reply;
+	CHAR_DATA *         questgiver;
+	CHAR_DATA *         questmob;
+	SPEC_FUN *		spec_fun;
+	MOB_INDEX_DATA *	pIndexData;
+	DESCRIPTOR_DATA *	desc;
+	AFFECT_DATA *	affected;
+	AFFECT_DATA *	affected2;
+	NOTE_DATA *		pnote;
+	OBJ_DATA *		carrying;
+	OBJ_DATA *          questobj;
+	ROOM_INDEX_DATA *	in_room;
+	ROOM_INDEX_DATA *	was_in_room;
+	POWERED_DATA *	powered;
+	PC_DATA *		pcdata;
+	MPROG_ACT_LIST *    mpact;
+	GSPELL_DATA *       gspell;
+	/*    PHOBIA_DATA *       phobia;*/
+	char *		name;
+	char *		short_descr;
+	char *		long_descr;
+	char *		description;
+	char *              prompt;
+	int                 cquestpnts;    /* for clan quests */
+	int                 questpoints;   /* for autoquests  */
+	int                 nextquest;
+	int                 countdown;
+	short 		sex;
+	/* FOR MULTICLASS BELOW */
+	short 		class[ MAX_CLASS ];
+	/* FOR MULTICLASS ABOVE */
+	int                 mpactnum;
+	short 		race;
+	short               clan;
+	char                clev;
+	int                 ctimer;
+	int                 wizinvis;
+	int			cloaked;
+	int			level;
+	int                 antidisarm;
+	int  		trust;
+	bool                wizbit;
+	int			played;
+	time_t		logon;
+	time_t		save_time;
+	time_t              last_note;
+	int 		timer;
+	int 		wait;
+	int                 race_wait; 
+	int 		hit;
+	/*    int 		max_hit; */
+	int			perm_hit;
+	int			mod_hit;
+	int 		mana;
+	/*    int 		max_mana;*/
+	int			perm_mana;
+	int			mod_mana;
+	int 		move;
+	/*    int 		max_move; */
+	int			perm_move;
+	int			mod_move;
+	int                 bp;
+	/*    int                 max_bp;*/
+	int			perm_bp;
+	int		 	mod_bp;
+	int			charisma; 
 #ifdef NEW_MONEY
-    MONEY_DATA		money;
+	MONEY_DATA		money;
 #else
-    int			gold;
+	int			gold;
 #endif
-    int			exp;
-    int			act;
+	int			exp;
+	int			act;
 	int			act2;
-    long		affected_by;
-    long		affected_by2;
-    long		imm_flags;
-    long		res_flags;
-    long		vul_flags;
-    int 		position;
-    int 		practice;
-    int 		carry_weight;
-    int 		carry_number;
-    int 		saving_throw;
-    short 		alignment;
-    char		start_align;
-    int 		hitroll;
-    int 		damroll;
-    int 		armor;
-    int 		wimpy;
-    int 		deaf;
-    bool                deleted;
-    int			combat_timer;	/* XOR */
-    int			summon_timer;	/* XOR */
-    char		guild_rank;
-    GUILD_DATA *	guild;
-    int                 stunned[STUN_MAX];
-    int			wiznet;
-    int			warpts;
+	long		affected_by;
+	long		affected_by2;
+	long		imm_flags;
+	long		res_flags;
+	long		vul_flags;
+	int 		position;
+	int 		practice;
+	int 		carry_weight;
+	int 		carry_number;
+	int 		saving_throw;
+	short 		alignment;
+	char		start_align;
+	int 		hitroll;
+	int 		damroll;
+	int 		armor;
+	int 		wimpy;
+	int 		deaf;
+	bool                deleted;
+	int			combat_timer;	/* XOR */
+	int			summon_timer;	/* XOR */
+	char		guild_rank;
+	GUILD_DATA *	guild;
+	int                 stunned[STUN_MAX];
+	int			wiznet;
+	int			warpts;
 	int			warkills;
 	int			wardeaths;
-    int			pkills;
-    int			pkilled;
-    int			arenawon;
-    int			arenalost;
-    int			incarnations;
-    int			raisepts;
+	int			pkills;
+	int			pkilled;
+	int			arenawon;
+	int			arenalost;
+	int			incarnations;
+	int			raisepts;
 
 };
 
 
 struct guild_data
 {
-  char *	name;
-  char *	deity;
-  int		color;
-  int		type;
+	char *	name;
+	char *	deity;
+	int		color;
+	int		type;
 };
 
 struct quest_data
 {
-  char *        name;
-  char *        colorname;
-  int           vnum;
-  int           qp;
-  int           level;
+	char *        name;
+	char *        colorname;
+	int           vnum;
+	int           qp;
+	int           level;
 };
 
 struct  mob_prog_act_list
 {
-    MPROG_ACT_LIST * next;
-    char *           buf;
-    CHAR_DATA *      ch;
-    OBJ_DATA *       obj;
-    void *           vo;
+	MPROG_ACT_LIST * next;
+	char *           buf;
+	CHAR_DATA *      ch;
+	OBJ_DATA *       obj;
+	void *           vo;
 };
 
 struct  mob_prog_data
 {
-    MPROG_DATA *next;
-    int         type;
-    char *      arglist;
-    char *      comlist;
+	MPROG_DATA *next;
+	int         type;
+	char *      arglist;
+	char *      comlist;
 };
 
 /*
@@ -1791,57 +1791,57 @@ struct  mob_prog_data
  */
 struct	pc_data
 {
-    PC_DATA *		next;
-    ALIAS_DATA *        alias_list;
-    char *		pwd;
-    char *              afkchar; 
-    char *		bamfin;
-    char *		bamfout;
-    char *		bamfusee;
-    char *              transto;
-    char *              transfrom;
-    char *              transvict;
-    char *              slayusee;
-    char *              slayroom;
-    char *              slayvict;
-    char *		whotype;
-    char *		title;
-    char *              lname;
-    char *		empowerments;
-    char *		detractments;
-    int 		perm_str;
-    int 		perm_int;
-    int 		perm_wis;
-    int 		perm_dex;
-    int 		perm_con;
-    int 		mod_str;
-    int 		mod_int;
-    int 		mod_wis;
-    int 		mod_dex;
-    int 		mod_con;
-    int 		condition	[ 3 ];
-    int                 pagelen;
-    int 		learned		[ MAX_SKILL ];
-    bool                switched;
-    int 		security;	/* OLC - Builder security */
+	PC_DATA *		next;
+	ALIAS_DATA *        alias_list;
+	char *		pwd;
+	char *              afkchar; 
+	char *		bamfin;
+	char *		bamfout;
+	char *		bamfusee;
+	char *              transto;
+	char *              transfrom;
+	char *              transvict;
+	char *              slayusee;
+	char *              slayroom;
+	char *              slayvict;
+	char *		whotype;
+	char *		title;
+	char *              lname;
+	char *		empowerments;
+	char *		detractments;
+	int 		perm_str;
+	int 		perm_int;
+	int 		perm_wis;
+	int 		perm_dex;
+	int 		perm_con;
+	int 		mod_str;
+	int 		mod_int;
+	int 		mod_wis;
+	int 		mod_dex;
+	int 		mod_con;
+	int 		condition	[ 3 ];
+	int                 pagelen;
+	int 		learned		[ MAX_SKILL ];
+	bool                switched;
+	int 		security;	/* OLC - Builder security */
 #ifdef NEW_MONEY
-    MONEY_DATA		bankaccount;
+	MONEY_DATA		bankaccount;
 #else
-    int                 bankaccount;
+	int                 bankaccount;
 #endif
-    OBJ_DATA          * storage;
-    int                 storcount;
-    int                 corpses;
-    char *		plan;
-    char *		email;
+	OBJ_DATA          * storage;
+	int                 storcount;
+	int                 corpses;
+	char *		plan;
+	char *		email;
 	bool	confirm_remort;
 };
 
 struct  alias_data
 {
-    ALIAS_DATA *next;
-    char       *old;
-    char       *new;
+	ALIAS_DATA *next;
+	char       *old;
+	char       *new;
 };
 
 /* Not used -Deck
@@ -1856,10 +1856,10 @@ struct  alias_data
 
 struct  phobia_data
 {
-    PHOBIA_DATA *next;
-    int          type;
-    int          duration;
-    int          strength;
+PHOBIA_DATA *next;
+int          type;
+int          duration;
+int          strength;
 };
 */
 
@@ -1939,19 +1939,19 @@ struct  phobia_data
 
 struct trap_data
 {
-    TRAP_DATA *next;
-    TRAP_DATA *next_here;
-    OBJ_INDEX_DATA *on_obj;
-    ROOM_INDEX_DATA *in_room;
-    EXIT_DATA *on_exit;
-    int type;
-    char *arglist;
-    char *comlist;
-    bool disarmable;
-    bool disarmed;
-    int disarm_dur;
+	TRAP_DATA *next;
+	TRAP_DATA *next_here;
+	OBJ_INDEX_DATA *on_obj;
+	ROOM_INDEX_DATA *in_room;
+	EXIT_DATA *on_exit;
+	int type;
+	char *arglist;
+	char *comlist;
+	bool disarmable;
+	bool disarmed;
+	int disarm_dur;
 };
-    
+
 
 /*
  * Liquids.
@@ -1961,9 +1961,9 @@ struct trap_data
 
 struct	liq_type
 {
-    char               *liq_name;
-    char               *liq_color;
-    int                 liq_affect [ 3 ];
+	char               *liq_name;
+	char               *liq_color;
+	int                 liq_affect [ 3 ];
 };
 
 
@@ -1973,10 +1973,10 @@ struct	liq_type
  */
 struct	extra_descr_data
 {
-    EXTRA_DESCR_DATA *next;	   /* Next in list                     */
-    char             *keyword;     /* Keyword in look/examine          */
-    char             *description; /* What to see                      */
-    bool              deleted;
+	EXTRA_DESCR_DATA *next;	   /* Next in list                     */
+	char             *keyword;     /* Keyword in look/examine          */
+	char             *description; /* What to see                      */
+	bool              deleted;
 };
 
 
@@ -1986,39 +1986,39 @@ struct	extra_descr_data
  */
 struct	obj_index_data
 {
-    OBJ_INDEX_DATA *	next;
-    EXTRA_DESCR_DATA *	extra_descr;
-    AFFECT_DATA *	affected;
-    AREA_DATA *		area;			/* OLC */
-    TRAP_DATA *         traps;
-    int                 traptypes;
-    char *		name;
-    char *		short_descr;
-    char *		description;
-    int 		vnum;
-    int 		item_type;
-    int 		extra_flags;
-/* FOR NEW FLAGS */
-    int                 anti_race_flags;
-    int                 anti_class_flags;
- 
-    int 		wear_flags;
-    int 		count;
-    int 		weight;
+	OBJ_INDEX_DATA *	next;
+	EXTRA_DESCR_DATA *	extra_descr;
+	AFFECT_DATA *	affected;
+	AREA_DATA *		area;			/* OLC */
+	TRAP_DATA *         traps;
+	int                 traptypes;
+	char *		name;
+	char *		short_descr;
+	char *		description;
+	int 		vnum;
+	int 		item_type;
+	int 		extra_flags;
+	/* FOR NEW FLAGS */
+	int                 anti_race_flags;
+	int                 anti_class_flags;
+
+	int 		wear_flags;
+	int 		count;
+	int 		weight;
 #ifdef NEW_MONEY
-    MONEY_DATA		cost;
+	MONEY_DATA		cost;
 #else
-    int			cost;			/* Unused */
+	int			cost;			/* Unused */
 #endif
-    int                 level;
-    int			value	[ 4 ];
-    int                 ac_type;
-    int                 ac_vnum;
-    char *              ac_spell;
-    int                 ac_charge [ 2 ];
-    int                 join;
-    int                 sep_one;
-    int                 sep_two;
+	int                 level;
+	int			value	[ 4 ];
+	int                 ac_type;
+	int                 ac_vnum;
+	char *              ac_spell;
+	int                 ac_charge [ 2 ];
+	int                 join;
+	int                 sep_one;
+	int                 sep_two;
 };
 
 
@@ -2028,40 +2028,40 @@ struct	obj_index_data
  */
 struct	obj_data
 {
-    OBJ_DATA *		next;
-    OBJ_DATA *		next_content;
-    OBJ_DATA *		contains;
-    OBJ_DATA *		in_obj;
-    CHAR_DATA *		carried_by;
-    CHAR_DATA *         stored_by;
-    EXTRA_DESCR_DATA *	extra_descr;
-    AFFECT_DATA *	affected;
-    OBJ_INDEX_DATA *	pIndexData;
-    ROOM_INDEX_DATA *	in_room;
-    char *		name;
-    char *		short_descr;
-    char *		description;
-    int 		item_type;
-    int 		extra_flags;
-/* FOR NEW FLAGS */
-    int			anti_race_flags;
-    int			anti_class_flags;
-    int 		wear_flags;
-    int 		wear_loc;
-    int 		weight;
+	OBJ_DATA *		next;
+	OBJ_DATA *		next_content;
+	OBJ_DATA *		contains;
+	OBJ_DATA *		in_obj;
+	CHAR_DATA *		carried_by;
+	CHAR_DATA *         stored_by;
+	EXTRA_DESCR_DATA *	extra_descr;
+	AFFECT_DATA *	affected;
+	OBJ_INDEX_DATA *	pIndexData;
+	ROOM_INDEX_DATA *	in_room;
+	char *		name;
+	char *		short_descr;
+	char *		description;
+	int 		item_type;
+	int 		extra_flags;
+	/* FOR NEW FLAGS */
+	int			anti_race_flags;
+	int			anti_class_flags;
+	int 		wear_flags;
+	int 		wear_loc;
+	int 		weight;
 #ifdef NEW_MONEY
-    MONEY_DATA		cost;
+	MONEY_DATA		cost;
 #else
-    int			cost;
+	int			cost;
 #endif
-    int 		level;
-    int 		timer;
-    int			value	[ 4 ];
-    int                 ac_type;
-    int                 ac_vnum;
-    char *              ac_spell;
-    int                 ac_charge [ 2 ];
-    bool                deleted;
+	int 		level;
+	int 		timer;
+	int			value	[ 4 ];
+	int                 ac_type;
+	int                 ac_vnum;
+	char *              ac_spell;
+	int                 ac_charge [ 2 ];
+	bool                deleted;
 };
 
 
@@ -2071,16 +2071,16 @@ struct	obj_data
  */
 struct	exit_data
 {
-    ROOM_INDEX_DATA *	to_room;
-    EXIT_DATA *		next;		/* OLC */
-    TRAP_DATA *         traps;
-    int                 traptypes;
-    int			rs_flags;	/* OLC */
-    int 		vnum;
-    int 		exit_info;
-    int 		key;
-    char *		keyword;
-    char *		description;
+	ROOM_INDEX_DATA *	to_room;
+	EXIT_DATA *		next;		/* OLC */
+	TRAP_DATA *         traps;
+	int                 traptypes;
+	int			rs_flags;	/* OLC */
+	int 		vnum;
+	int 		exit_info;
+	int 		key;
+	char *		keyword;
+	char *		description;
 };
 
 
@@ -2103,11 +2103,11 @@ struct	exit_data
  */
 struct	reset_data
 {
-    RESET_DATA *	next;
-    char		command;
-    int 		arg1;
-    int 		arg2;
-    int 		arg3;
+	RESET_DATA *	next;
+	char		command;
+	int 		arg1;
+	int 		arg2;
+	int 		arg3;
 };
 
 
@@ -2117,96 +2117,96 @@ struct	reset_data
  */
 struct	area_data
 {
-    AREA_DATA *		next;
-    char *		name;
-    int                 recall;
-    int 		age;
-    int 		nplayer;
-    char *		filename;	/* OLC */
-    char *		builders;	/* OLC - Listing of builders */
-    int			security;	/* OLC - Value 0-infinity  */
-    int			lvnum;		/* OLC - Lower vnum */
-    int			uvnum;		/* OLC - Upper vnum */
-    int			vnum;		/* OLC - Area vnum  */
-    int			area_flags;	/* OLC */
-    char *              reset_sound;    /* Altrag */
-    int			windstr;
-    int			winddir;
-    short		llevel;		/* lowest player level suggested */
-    short		ulevel;		/* upper player level suggested */
-    int			def_color;
+	AREA_DATA *		next;
+	char *		name;
+	int                 recall;
+	int 		age;
+	int 		nplayer;
+	char *		filename;	/* OLC */
+	char *		builders;	/* OLC - Listing of builders */
+	int			security;	/* OLC - Value 0-infinity  */
+	int			lvnum;		/* OLC - Lower vnum */
+	int			uvnum;		/* OLC - Upper vnum */
+	int			vnum;		/* OLC - Area vnum  */
+	int			area_flags;	/* OLC */
+	char *              reset_sound;    /* Altrag */
+	int			windstr;
+	int			winddir;
+	short		llevel;		/* lowest player level suggested */
+	short		ulevel;		/* upper player level suggested */
+	int			def_color;
 };
 
 struct  new_clan_data
 {
-    CLAN_DATA *         next;
-    MONEY_DATA 		bankaccount;
-    char *              name;
-    char *              diety;
-    char *              description;
-    char *              leader;
-    char *              first;
-    char *              second;
-    char *              champ;
-    bool                isleader;
-    bool                isfirst;
-    bool                issecond;
-    bool                ischamp;
-    int                 vnum;
-    int                 recall;
-    int                 pkills;
-    int                 mkills;
-    int                 members;
-    int                 pdeaths;
-    int                 mdeaths;
-    int                 obj_vnum_1;
-    int                 obj_vnum_2;
-    int                 obj_vnum_3;
-    int                 settings;
+	CLAN_DATA *         next;
+	MONEY_DATA 		bankaccount;
+	char *              name;
+	char *              diety;
+	char *              description;
+	char *              leader;
+	char *              first;
+	char *              second;
+	char *              champ;
+	bool                isleader;
+	bool                isfirst;
+	bool                issecond;
+	bool                ischamp;
+	int                 vnum;
+	int                 recall;
+	int                 pkills;
+	int                 mkills;
+	int                 members;
+	int                 pdeaths;
+	int                 mdeaths;
+	int                 obj_vnum_1;
+	int                 obj_vnum_2;
+	int                 obj_vnum_3;
+	int                 settings;
 }; 
 /* 
  * ROOM AFFECT type 
  */
 struct	room_affect_data
 {
-    ROOM_AFFECT_DATA *	next;
-    ROOM_INDEX_DATA *	room;
-    CHAR_DATA * 	powered_by;
-    OBJ_DATA *		material;
-    int 		type;
-    int 		location;
+	ROOM_AFFECT_DATA *	next;
+	ROOM_INDEX_DATA *	room;
+	CHAR_DATA * 	powered_by;
+	OBJ_DATA *		material;
+	int 		type;
+	int 		location;
 };
 struct	powered_data
 {
-    POWERED_DATA *	next;
-    ROOM_INDEX_DATA *	room;
-    ROOM_AFFECT_DATA *	raf;
-    int			type;
-    int			cost;
+	POWERED_DATA *	next;
+	ROOM_INDEX_DATA *	room;
+	ROOM_AFFECT_DATA *	raf;
+	int			type;
+	int			cost;
 };
 /*
  * Room type.
  */
 struct	room_index_data
 {
-    ROOM_INDEX_DATA *	next;
-    ROOM_AFFECT_DATA *  rAffect;
-    CHAR_DATA *		people;
-    OBJ_DATA *		contents;
-    EXTRA_DESCR_DATA *	extra_descr;
-    AREA_DATA *		area;
-    EXIT_DATA *		exit	[ 6 ];
-    RESET_DATA *	reset_first;	/* OLC */
-    RESET_DATA *	reset_last;	/* OLC */
-    TRAP_DATA *         traps;
-    int                 traptypes;
-    char *		name;
-    char *		description;
-    int 		vnum;
-    int 		room_flags;
-    int 		light;
-    char 		sector_type;
-    int                 rd;    /* TRI ( Room damage ) */
+	ROOM_INDEX_DATA *	next;
+	ROOM_AFFECT_DATA *  rAffect;
+	CHAR_DATA *		people;
+	OBJ_DATA *		contents;
+	EXTRA_DESCR_DATA *	extra_descr;
+	AREA_DATA *		area;
+	EXIT_DATA *		exit	[ 6 ];
+	RESET_DATA *	reset_first;	/* OLC */
+	RESET_DATA *	reset_last;	/* OLC */
+	TRAP_DATA *         traps;
+	int                 traptypes;
+	char *		name;
+	char *		description;
+	int 		vnum;
+	int 		room_flags;
+	int 		light;
+	char 		sector_type;
+	int                 rd;    /* TRI ( Room damage ) */
 };
 
 
@@ -2242,19 +2242,19 @@ struct	room_index_data
  */
 struct	skill_type
 {
-    char *	name;			   /* Name of skill		 */
-    int 	skill_level [ MAX_CLASS+3 ]; /* Level needed by class */
-    SPELL_FUN *	spell_fun;		   /* Spell pointer (for spells) */
-    int 	target;			   /* Legal targets		 */
-    int 	minimum_position;	   /* Position for caster / user */
-    int *	pgsn;			   /* Pointer to associated gsn	 */
-    int 	min_mana;		   /* Minimum mana used		 */
-    int 	beats;			   /* Waiting time after use	 */
-    char *	noun_damage;		   /* Damage message		 */
-    char *	msg_off;		   /* Wear off message		 */
-    char *      room_msg_off;		   /* Room Wear off message	 */
-    bool	dispelable;
-    int         slot;                      /* For object loading         */
+	char *	name;			   /* Name of skill		 */
+	int 	skill_level [ MAX_CLASS+3 ]; /* Level needed by class */
+	SPELL_FUN *	spell_fun;		   /* Spell pointer (for spells) */
+	int 	target;			   /* Legal targets		 */
+	int 	minimum_position;	   /* Position for caster / user */
+	int *	pgsn;			   /* Pointer to associated gsn	 */
+	int 	min_mana;		   /* Minimum mana used		 */
+	int 	beats;			   /* Waiting time after use	 */
+	char *	noun_damage;		   /* Damage message		 */
+	char *	msg_off;		   /* Wear off message		 */
+	char *      room_msg_off;		   /* Room Wear off message	 */
+	bool	dispelable;
+	int         slot;                      /* For object loading         */
 };
 
 /*
@@ -2262,9 +2262,9 @@ struct	skill_type
  */
 struct gskill_type
 {
-    int         wait;                      /* Wait for casters in ticks  */
-    int         slot;                      /* Matching skill_table sn    */
-    int         casters[MAX_CLASS];        /* Casters needed by class    */
+	int         wait;                      /* Wait for casters in ticks  */
+	int         slot;                      /* Matching skill_table sn    */
+	int         casters[MAX_CLASS];        /* Casters needed by class    */
 };
 
 
@@ -2398,12 +2398,12 @@ extern int		gsn_unholystrength;
 #define UMIN( a, b )		( ( a ) < ( b ) ? ( a ) : ( b ) )
 #define UMAX( a, b )		( ( a ) > ( b ) ? ( a ) : ( b ) )
 #define URANGE( a, b, c )	( ( b ) < ( a ) ? ( a )				\
-				                : ( ( b ) > ( c ) ? ( c )		\
-						                  : ( b ) ) )
+		: ( ( b ) > ( c ) ? ( c )		\
+			: ( b ) ) )
 #define LOWER( c )		( ( c ) >= 'A' && ( c ) <= 'Z'          \
-				                ? ( c ) + 'a' - 'A' : ( c ) )
+		? ( c ) + 'a' - 'A' : ( c ) )
 #define UPPER( c )		( ( c ) >= 'a' && ( c ) <= 'z'          \
-				                ? ( c ) + 'A' - 'a' : ( c ) )
+		? ( c ) + 'A' - 'a' : ( c ) )
 #define IS_SET( flag, bit )	( ( flag ) &   ( bit ) )
 #define SET_BIT( var, bit )	( ( var )  |=  ( bit ) )
 #define REMOVE_BIT( var, bit )	( ( var )  &= ~( bit ) )
@@ -2432,39 +2432,39 @@ extern int		gsn_unholystrength;
 
 #define IS_AWAKE( ch )		( ch->position > POS_SLEEPING )
 #define GET_AC( ch )		( ( ch )->armor				                     \
-				    + ( IS_AWAKE( ch )			                             \
-				    ? dex_app[get_curr_dex( ch )].defensive                  \
-				    : 0 ) )
+		+ ( IS_AWAKE( ch )			                             \
+			? dex_app[get_curr_dex( ch )].defensive                  \
+			: 0 ) )
 #define GET_HITROLL( ch )      	( ( ch )->hitroll                            \
-				 + str_app[get_curr_str( ch )].tohit )
+		+ str_app[get_curr_str( ch )].tohit )
 #define GET_DAMROLL( ch )      	( ( ch )->damroll                            \
-				 + str_app[get_curr_str( ch )].todam )
+		+ str_app[get_curr_str( ch )].todam )
 
 #define IS_OUTSIDE( ch )       	( !IS_SET(				                     \
-				    ( ch )->in_room->room_flags,       	                     \
-				    ROOM_INDOORS ) )
+			( ch )->in_room->room_flags,       	                     \
+			ROOM_INDOORS ) )
 
 #define WAIT_STATE( ch, pulse ) ( ( ch )->wait = UMAX( ( ch )->wait,         \
-						      ( pulse ) ) )
+			( pulse ) ) )
 
 
 #define STUN_CHAR( ch, pulse, type ) ( (ch)->stunned[(type)] =               \
-				       UMAX( (ch)->stunned[(type)],                          \
-					     (pulse) ) )
+		UMAX( (ch)->stunned[(type)],                          \
+			(pulse) ) )
 
 #define IS_STUNNED( ch, type ) ( (ch)->stunned[(type)] > 0 )
 int	mmlvl_mana	args( ( CHAR_DATA *ch, int sn ) );
 #define MANA_COST( ch, sn )     ( IS_NPC( ch ) ? 0 : UMAX (                  \
-				skill_table[sn].min_mana,                                    \
-				100 / ( 2 + ch->level -                                      \
-			        mmlvl_mana( ch, sn ) ) ) )
+			skill_table[sn].min_mana,                                    \
+			100 / ( 2 + ch->level -                                      \
+				mmlvl_mana( ch, sn ) ) ) )
 #define SPELL_COST( ch, sn )	( is_class( ch, CLASS_VAMPIRE )              \
-				? MANA_COST( ch, sn ) / 4 		                             \
-				: MANA_COST( ch, sn ) )
+		? MANA_COST( ch, sn ) / 4 		                             \
+		: MANA_COST( ch, sn ) )
 #define MT( ch )		( is_class( ch, CLASS_VAMPIRE ) ? ch->bp : ch->mana )
 #define MT_MAX( ch )		( is_class( ch, CLASS_VAMPIRE )                  \
-				? MAX_BP(ch)                                                 \
-				: MAX_MANA(ch) )
+		? MAX_BP(ch)                                                 \
+		: MAX_MANA(ch) )
 #define IS_SWITCHED( ch )       ( ch->pcdata->switched )
 
 #define UNDEAD_TYPE( ch )	( IS_NPC( ch ) ? ACT_UNDEAD : PLR_UNDEAD )
@@ -2475,7 +2475,7 @@ int	mmlvl_mana	args( ( CHAR_DATA *ch, int sn ) );
 #define MAX_MOVE( ch ) 		( (ch)->perm_move + (ch)->mod_move )
 
 #define CAN_FLY( ch )		( (ch->race == RACE_PIXIE) || (ch->race == RACE_ELDER) || \
-				  (IS_AFFECTED( ch, AFF_FLYING )) )
+		(IS_AFFECTED( ch, AFF_FLYING )) )
 /*
  * Object macros.
  */
@@ -2490,8 +2490,8 @@ int	mmlvl_mana	args( ( CHAR_DATA *ch, int sn ) );
  * Description macros.
  */
 #define PERS( ch, looker )	( can_see( looker, ( ch ) ) ?		            \
-				( IS_NPC( ch ) ? ( ch )->short_descr	                    \
-				               : ( ch )->name ) : "someone" )
+		( IS_NPC( ch ) ? ( ch )->short_descr	                    \
+		  : ( ch )->name ) : "someone" )
 
 
 
@@ -2499,19 +2499,19 @@ int	mmlvl_mana	args( ( CHAR_DATA *ch, int sn ) );
  * Arena macro.
  */
 #define IS_ARENA(ch)	(!IS_NPC((ch)) && (ch)->in_room &&                  \
-			(ch)->in_room->area == arena.area &&                            \
-			((ch) == arena.fch || (ch) == arena.sch))
+		(ch)->in_room->area == arena.area &&                            \
+		((ch) == arena.fch || (ch) == arena.sch))
 
 /*
  * Structure for a command in the command lookup table.
  */
 struct	cmd_type
 {
-    char * const	name;
-    DO_FUN *		do_fun;
-    int 		position;
-    int 		level;
-    int 		log;
+	char * const	name;
+	DO_FUN *		do_fun;
+	int 		position;
+	int 		level;
+	int 		log;
 };
 
 
@@ -2520,18 +2520,18 @@ struct	cmd_type
  * Structure for a social in the socials table.
  */
 /*
-struct	social_type
-{
-    char * const	name;
-    char * const	char_no_arg;
-    char * const	others_no_arg;
-    char * const	char_found;
-    char * const	others_found;
-    char * const	vict_found;
-    char * const	char_auto;
-    char * const	others_auto;
-};
-*/
+   struct	social_type
+   {
+   char * const	name;
+   char * const	char_no_arg;
+   char * const	others_no_arg;
+   char * const	char_found;
+   char * const	others_found;
+   char * const	vict_found;
+   char * const	char_auto;
+   char * const	others_auto;
+   };
+   */
 
 
 /*
@@ -2554,8 +2554,8 @@ extern	const	struct	skill_type	skill_table	[ MAX_SKILL ];
 extern  const   struct  gskill_type     gskill_table    [ MAX_GSPELL  ];
 /*extern	const	struct	social_type	social_table	[ ];*/
 extern	char *	const			title_table	[ MAX_CLASS+3 ]
-							[ MAX_LEVEL+1 ]
-							[ 2 ];
+[ MAX_LEVEL+1 ]
+[ 2 ];
 
 
 
@@ -2671,7 +2671,7 @@ DECLARE_DO_FUN( do_autosplit    );
 DECLARE_DO_FUN(	do_backstab	);
 DECLARE_DO_FUN( do_bamf		);
 /*DECLARE_DO_FUN(	do_bamfin	);
-DECLARE_DO_FUN(	do_bamfout	); */
+  DECLARE_DO_FUN(	do_bamfout	); */
 DECLARE_DO_FUN(	do_bash 	);
 DECLARE_DO_FUN( do_berserk      );
 DECLARE_DO_FUN( do_bid          );
@@ -3390,12 +3390,12 @@ void	move_char	args( ( CHAR_DATA *ch, int door, bool Fall ) );
 /* act_wiz.c */
 ROOM_INDEX_DATA *	find_location	args( ( CHAR_DATA *ch, char *arg ) );
 void wiznet             args( (char *string, CHAR_DATA *ch, OBJ_DATA *obj,
-                               long flag, long flag_skip, int min_level ) );
+			long flag, long flag_skip, int min_level ) );
 
 /* comm.c */
 void	close_socket	 args( ( DESCRIPTOR_DATA *dclose ) );
 void	write_to_buffer	 args( ( DESCRIPTOR_DATA *d, const char *txt,
-				int length ) );
+			int length ) );
 void    send_to_all_char args( ( const char *text ) );
 void    send_to_al       args( ( int clr, int level, char *text ) );
 /* send to above level---^   TRI */
@@ -3403,8 +3403,8 @@ void	send_to_char	 args( ( int AType, const char *txt, CHAR_DATA *ch ) );
 void    set_char_color   args( ( int AType, CHAR_DATA *ch ) );
 void    show_string      args( ( DESCRIPTOR_DATA *d, char *input ) );
 void	act	         args( ( int AType, const char *format, CHAR_DATA *ch,
-				const void *arg1, const void *arg2,
-				int type ) );
+			const void *arg1, const void *arg2,
+			int type ) );
 
 /* db.c */
 void	boot_db		args( ( void ) );
@@ -3459,7 +3459,7 @@ void    arena_chann	args( ( const char *str, int param1, int param2 ) );
 void	violence_update	args( ( void ) );
 void	multi_hit	args( ( CHAR_DATA *ch, CHAR_DATA *victim, int dt ) );
 void	damage		args( ( CHAR_DATA *ch, CHAR_DATA *victim, int dam,
-			       int dt ) );
+			int dt ) );
 void	update_pos	args( ( CHAR_DATA *victim ) );
 void	stop_fighting	args( ( CHAR_DATA *ch, bool fBoth ) );
 void	raw_kill	args( ( CHAR_DATA *ch, CHAR_DATA *victim ) );
@@ -3509,7 +3509,7 @@ CD *	get_char_world	args( ( CHAR_DATA *ch, char *argument ) );
 CD *	get_pc_world	args( ( CHAR_DATA *ch, char *argument ) );
 OD *	get_obj_type	args( ( OBJ_INDEX_DATA *pObjIndexData ) );
 OD *	get_obj_list	args( ( CHAR_DATA *ch, char *argument,
-			       OBJ_DATA *list ) );
+			OBJ_DATA *list ) );
 OD *	get_obj_carry	args( ( CHAR_DATA *ch, char *argument ) );
 OD *    get_obj_storage args( ( CHAR_DATA *ch, char *argument ) );
 OD *	get_obj_wear	args( ( CHAR_DATA *ch, char *argument ) );
@@ -3578,10 +3578,10 @@ bool    is_sn           args( ( int sn ) );
 int	skill_lookup	args( ( const char *name ) );
 bool	saves_spell	args( ( int level, CHAR_DATA *victim ) );
 void	obj_cast_spell	args( ( int sn, int level, CHAR_DATA *ch,
-			       CHAR_DATA *victim, OBJ_DATA *obj ) );
+			CHAR_DATA *victim, OBJ_DATA *obj ) );
 void    update_skpell   args( ( CHAR_DATA *ch, int sn ) );
 void    do_acspell      args( ( CHAR_DATA *ch, OBJ_DATA *pObj,
-			        char *argument ) );
+			char *argument ) );
 
 /* save.c */
 bool    pstat            args( ( char *name ) );
@@ -3611,24 +3611,24 @@ OBJ_INDEX_DATA *rand_figment_obj args( ( CHAR_DATA *ch ) );
 char *  strstr                  args ( (const char *s1, const char *s2 ) );
 #endif
 void    mprog_wordlist_check    args ( ( char * arg, CHAR_DATA *mob,
-                			CHAR_DATA* actor, OBJ_DATA* object,
-					void* vo, int type ) );
+			CHAR_DATA* actor, OBJ_DATA* object,
+			void* vo, int type ) );
 void    mprog_percent_check     args ( ( CHAR_DATA *mob, CHAR_DATA* actor,
-					OBJ_DATA* object, void* vo,
-					int type ) );
+			OBJ_DATA* object, void* vo,
+			int type ) );
 void    mprog_act_trigger       args ( ( char* buf, CHAR_DATA* mob,
-		                        CHAR_DATA* ch, OBJ_DATA* obj,
-					void* vo ) );
+			CHAR_DATA* ch, OBJ_DATA* obj,
+			void* vo ) );
 #ifdef NEW_MONEY
 void	mprog_bribe_trigger	args ( ( CHAR_DATA* mob, CHAR_DATA* ch,
-					MONEY_DATA *amount ) );
+			MONEY_DATA *amount ) );
 #else
 void    mprog_bribe_trigger     args ( ( CHAR_DATA* mob, CHAR_DATA* ch,
-		                        int amount ) );
+			int amount ) );
 #endif
 void    mprog_entry_trigger     args ( ( CHAR_DATA* mob ) );
 void    mprog_give_trigger      args ( ( CHAR_DATA* mob, CHAR_DATA* ch,
-                		        OBJ_DATA* obj ) );
+			OBJ_DATA* obj ) );
 void    mprog_greet_trigger     args ( ( CHAR_DATA* mob ) );
 void    mprog_fight_trigger     args ( ( CHAR_DATA* mob, CHAR_DATA* ch ) );
 void    mprog_hitprcnt_trigger  args ( ( CHAR_DATA* mob, CHAR_DATA* ch ) );
@@ -3645,39 +3645,39 @@ void    mprog_speech_trigger    args ( ( char* txt, CHAR_DATA* mob ) );
  */
 void    oprog_get_trigger       args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
 void    oprog_get_from_trigger  args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-					 OBJ_DATA *secondary ) );
+			OBJ_DATA *secondary ) );
 void    oprog_give_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-					 CHAR_DATA *victim ) );
+			CHAR_DATA *victim ) );
 void    oprog_drop_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
 void    oprog_put_trigger       args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-					 OBJ_DATA *secondary ) );
+			OBJ_DATA *secondary ) );
 void    oprog_fill_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-					 OBJ_DATA *spring ) );
+			OBJ_DATA *spring ) );
 void    oprog_wear_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
 void    oprog_look_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
 void    oprog_look_in_trigger   args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
 void    oprog_invoke_trigger    args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-					 void *vo ) );
+			void *vo ) );
 void    oprog_use_trigger       args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-					 void *vo ) );
+			void *vo ) );
 void    oprog_cast_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
 void    oprog_cast_sn_trigger   args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-					 int sn, void *vo ) );
+			int sn, void *vo ) );
 void    oprog_join_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-					 OBJ_DATA *secondary ) );
+			OBJ_DATA *secondary ) );
 void    oprog_separate_trigger  args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
 void    oprog_buy_trigger       args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-					 CHAR_DATA *vendor ) );
+			CHAR_DATA *vendor ) );
 void    oprog_sell_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-					 CHAR_DATA *vendor ) );
+			CHAR_DATA *vendor ) );
 void    oprog_store_trigger     args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
 void    oprog_retrieve_trigger  args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
 void    oprog_open_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
 void    oprog_close_trigger     args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
 void    oprog_lock_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-					 OBJ_DATA *key ) );
+			OBJ_DATA *key ) );
 void    oprog_unlock_trigger    args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-					 OBJ_DATA *key ) );
+			OBJ_DATA *key ) );
 void    oprog_pick_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
 void    oprog_random_trigger    args ( ( OBJ_DATA *obj ) );
 void    oprog_throw_trigger     args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
@@ -3686,24 +3686,24 @@ void    oprog_throw_trigger     args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
  * Room triggers
  */
 void    rprog_enter_trigger     args ( ( ROOM_INDEX_DATA *room,
-					 CHAR_DATA *ch ) );
+			CHAR_DATA *ch ) );
 void    rprog_exit_trigger      args ( ( ROOM_INDEX_DATA *room,
-					 CHAR_DATA *ch ) );
+			CHAR_DATA *ch ) );
 void    rprog_pass_trigger      args ( ( ROOM_INDEX_DATA *room,
-					 CHAR_DATA *ch ) );
+			CHAR_DATA *ch ) );
 void    rprog_cast_trigger      args ( ( ROOM_INDEX_DATA *room,
-					 CHAR_DATA *ch ) );
+			CHAR_DATA *ch ) );
 void    rprog_cast_sn_trigger   args ( ( ROOM_INDEX_DATA *room,
-					 CHAR_DATA *ch, int sn,
-					 void *vo ) );
+			CHAR_DATA *ch, int sn,
+			void *vo ) );
 void    rprog_sleep_trigger     args ( ( ROOM_INDEX_DATA *room,
-					 CHAR_DATA *ch ) );
+			CHAR_DATA *ch ) );
 void    rprog_wake_trigger      args ( ( ROOM_INDEX_DATA *room,
-					 CHAR_DATA *ch ) );
+			CHAR_DATA *ch ) );
 void    rprog_rest_trigger      args ( ( ROOM_INDEX_DATA *room,
-					 CHAR_DATA *ch ) );
+			CHAR_DATA *ch ) );
 void    rprog_death_trigger     args ( ( ROOM_INDEX_DATA *room,
-					 CHAR_DATA *ch ) );
+			CHAR_DATA *ch ) );
 void    rprog_time_trigger      args ( ( ROOM_INDEX_DATA *room, int hour ) );
 void    rprog_random_trigger    args ( ( ROOM_INDEX_DATA *room ) );
 
@@ -3711,35 +3711,35 @@ void    rprog_random_trigger    args ( ( ROOM_INDEX_DATA *room ) );
  * Exit triggers
  */
 void    eprog_enter_trigger     args ( ( EXIT_DATA *pExit,
-					 ROOM_INDEX_DATA *room,
-					 CHAR_DATA *ch ) );
+			ROOM_INDEX_DATA *room,
+			CHAR_DATA *ch ) );
 void    eprog_exit_trigger      args ( ( EXIT_DATA *pExit,
-					 ROOM_INDEX_DATA *room,
-					 CHAR_DATA *ch ) );
+			ROOM_INDEX_DATA *room,
+			CHAR_DATA *ch ) );
 void    eprog_pass_trigger      args ( ( EXIT_DATA *pExit,
-					 ROOM_INDEX_DATA *room,
-					 CHAR_DATA *ch, bool fEnter ) );
+			ROOM_INDEX_DATA *room,
+			CHAR_DATA *ch, bool fEnter ) );
 void    eprog_look_trigger      args ( ( EXIT_DATA *pExit,
-					 ROOM_INDEX_DATA *room,
-					 CHAR_DATA *ch ) );
+			ROOM_INDEX_DATA *room,
+			CHAR_DATA *ch ) );
 void    eprog_scry_trigger      args ( ( EXIT_DATA *pExit,
-					 ROOM_INDEX_DATA *room,
-					 CHAR_DATA *ch ) );
+			ROOM_INDEX_DATA *room,
+			CHAR_DATA *ch ) );
 void    eprog_open_trigger      args ( ( EXIT_DATA *pExit,
-					 ROOM_INDEX_DATA *room,
-					 CHAR_DATA *ch ) );
+			ROOM_INDEX_DATA *room,
+			CHAR_DATA *ch ) );
 void    eprog_close_trigger     args ( ( EXIT_DATA *pExit,
-					 ROOM_INDEX_DATA *room,
-					 CHAR_DATA *ch ) );
+			ROOM_INDEX_DATA *room,
+			CHAR_DATA *ch ) );
 void    eprog_lock_trigger      args ( ( EXIT_DATA *pExit,
-					 ROOM_INDEX_DATA *room,
-					 CHAR_DATA *ch, OBJ_DATA *obj ) );
+			ROOM_INDEX_DATA *room,
+			CHAR_DATA *ch, OBJ_DATA *obj ) );
 void    eprog_unlock_trigger    args ( ( EXIT_DATA *pExit,
-					 ROOM_INDEX_DATA *room,
-					 CHAR_DATA *ch, OBJ_DATA *obj ) );
+			ROOM_INDEX_DATA *room,
+			CHAR_DATA *ch, OBJ_DATA *obj ) );
 void    eprog_pick_trigger      args ( ( EXIT_DATA *pExit,
-					 ROOM_INDEX_DATA *room,
-					 CHAR_DATA *ch ) );
+			ROOM_INDEX_DATA *room,
+			CHAR_DATA *ch ) );
 
 /*
  * gr_magic.c
@@ -3747,7 +3747,7 @@ void    eprog_pick_trigger      args ( ( EXIT_DATA *pExit,
  */
 void    check_gcast             args ( ( CHAR_DATA *ch ) );
 void    group_cast              args ( ( int sn, int level, CHAR_DATA *ch,
-					 char *argument ) );
+			char *argument ) );
 void    set_gspell              args ( ( CHAR_DATA *ch, GSPELL_DATA *gsp ) );
 void    end_gspell              args ( ( CHAR_DATA *ch ) );
 
@@ -3787,8 +3787,8 @@ void    chat_interp             args ( ( CHAR_DATA *ch, char *argument ) );
  */
 struct spec_type
 {
-    char *	spec_name;
-    SPEC_FUN *	spec_fun;
+	char *	spec_name;
+	SPEC_FUN *	spec_fun;
 };
 
 
@@ -3798,9 +3798,9 @@ struct spec_type
  */
 struct flag_type
 {
-    char * name;
-    int  bit;
-    bool settable;
+	char * name;
+	int  bit;
+	bool settable;
 };
 
 
@@ -3957,7 +3957,7 @@ extern const struct flag_type   eprog_types[];
 
 /* olc_act.c */
 extern int flag_value       args ( ( const struct flag_type *flag_table,
-				     char *argument ) );
+			char *argument ) );
 extern AFFECT_DATA  *new_affect   args ( ( void ) );    
 extern OBJ_INDEX_DATA    *new_obj_index          args ( ( void ) );
 extern void free_affect		  args ( ( AFFECT_DATA *pAf ) );
@@ -3970,7 +3970,7 @@ extern RESET_DATA *new_reset_data args ( ( void ) ) ;
 
 extern void check_nofloor         args ( ( CHAR_DATA *ch ) );
 extern char *flag_string     args ( ( const struct flag_type *flag_table,
- 				      int bits ) );
+			int bits ) );
 extern void save_clans            args ( ( ) );
 extern void save_social 	  args ( ( ) );
 extern void save_race	 	  args ( ( ) );
