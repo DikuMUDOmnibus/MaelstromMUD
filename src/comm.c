@@ -4146,9 +4146,9 @@ void do_hotreboot (CHAR_DATA *ch, char * argument)
 		CHAR_DATA * och = d->original ? d->original : d->character;
 		d_next = d->next; /* We delete from the list , so need to save this */
 
-		if (    !d->character 			/* drop those logging on */
-				||  d->connected != CON_PLAYING    /* check if there playing */
-				||  d->connected != CON_CHATTING   /* check if there in the chat room */
+		if (    !d->character								/* drop those logging on */
+				||  (d->connected != CON_PLAYING			/* check if they're playing */
+						&&  d->connected != CON_CHATTING)   /* check if they're in the chat room */
 		   ) 
 		{
 			write_to_descriptor ( "\n\rSorry, we are rebooting.  Try again in a minute.\n\r", 0, d );
@@ -4156,7 +4156,7 @@ void do_hotreboot (CHAR_DATA *ch, char * argument)
 		}
 		else
 		{
-			fprintf (fp, "%d %s %s %s\n", d->descriptor, och->name, d->user, d->host);
+			fprintf (fp, "%d %s %s %s %d\n", d->descriptor, och->name, d->user, d->host, d->ansi);
 			if (och->level == 1)
 			{
 				write_to_descriptor ( "Since you are level one, and level one characters do not save, you gain a free level!\n\r", 0, d);
@@ -4179,10 +4179,7 @@ void do_hotreboot (CHAR_DATA *ch, char * argument)
 
 	sprintf (buf, "%d", port);
 	sprintf (buf2, "%d", control);
-	if ( port == 1045 )
-		execl ("../../src/tmp/envy", "Envy", buf, "hotreboot", buf2, (char *) NULL);
-	else
-		execl (EXE_FILE, "Envy", buf, "hotreboot", buf2, (char *) NULL);
+	execl (EXE_FILE, "Envy", buf, "hotreboot", buf2, (char *) NULL);
 
 	/* Failed - sucessful exec will not return */
 
@@ -4201,6 +4198,7 @@ void hotreboot_recover ( )
 	char name [100];
 	char user [100];
 	char host[MAX_STRING_LENGTH];
+	int ansi;
 	int desc;
 	bool fOld;
 
@@ -4217,26 +4215,27 @@ void hotreboot_recover ( )
 
 	for (;;)
 	{
-		fscanf (fp, "%d %s %s %s\n", &desc, name, user, host);
+		fscanf (fp, "%d %s %s %s %d\n", &desc, name, user, host, &ansi);
+	
 		if (desc == -1)
 			break;
-
-		/* Write something, and check if it goes error-free */		
-		if (!write_to_descriptor ( "\n\rRecovering from hotreboot.\n\r",0, desc))
-		{
-			close (desc); /* nope */
-			continue;
-		}
 
 		d = alloc_perm (sizeof(DESCRIPTOR_DATA));
 		init_descriptor (d,desc); /* set up various stuff */
 
+		/* Write something, and check if it goes error-free */		
+		if (!write_to_descriptor ( "\n\rRecovering from hotreboot.\n\r",0, d))
+		{
+			close (d); /* nope */
+			continue;
+		}
+
 		d->user = str_dup (user);
 		d->host = str_dup (host);
+		d->ansi = ansi;
 		d->next = descriptor_list;
 		descriptor_list = d;
 		d->connected = CON_HOTREBOOT_RECOVER; /* -15, so close_socket frees the char */
-
 
 		/* Now, find the pfile */
 
@@ -4244,12 +4243,12 @@ void hotreboot_recover ( )
 
 		if (!fOld) /* Player file not found?! */
 		{
-			write_to_descriptor ("\n\rUnable to find your character.  Sorry.\n\r", 0, desc);
+			write_to_descriptor ("\n\rUnable to find your character.  Sorry.\n\r", 0, d);
 			close_socket (d);			
 		}
 		else /* ok! */
 		{
-			write_to_descriptor ( "\n\rHotReboot complete.\n\r",0, desc);
+			write_to_descriptor ( "\n\rHotReboot complete.\n\r",0, d);
 
 			/* Just In Case */
 			if (!d->character->in_room)

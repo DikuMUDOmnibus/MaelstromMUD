@@ -20,6 +20,7 @@
 
 /* To turn on and off certain features off the mud */
 #define NEW_MONEY   
+#define HOTREBOOT
 
 #include "colors.h"   /* Include the ansi color routines. */
 
@@ -346,34 +347,34 @@ struct	weather_data
 /*
  * Connected state for a channel.
  */
-#define CON_PLAYING			0
-#define CON_GET_NAME			1
-#define CON_GET_OLD_PASSWORD		2
-#define CON_CONFIRM_NEW_NAME		3
-#define CON_GET_NEW_PASSWORD		4
-#define CON_CONFIRM_NEW_PASSWORD	5
-#define CON_GET_NEW_SEX			6
-#define CON_GET_NEW_CLASS		7
-#define CON_READ_MOTD			8
-#define CON_GET_NEW_RACE	        9
-#define CON_CONFIRM_RACE               10
-#define CON_CONFIRM_CLASS              11
-#define CON_CHECK_AUTHORIZE   	       12
-#define CON_GET_2ND_CLASS	       13
-#define CON_CONFIRM_2ND_CLASS	       14
-#define CON_WANT_MULTI		       15
-#define CON_GET_3RD_CLASS	       16
-#define CON_CONFIRM_3RD_CLASS	       17
-#define CON_WANT_MULTI_2	       18
-#define CON_BEGIN_REMORT			19
-
-#define CON_GET_ANSI			105
-#define CON_AUTHORIZE_NAME		100
-#define CON_AUTHORIZE_NAME1		101
-#define CON_AUTHORIZE_NAME2		102
-#define CON_AUTHORIZE_NAME3		103
+#define CON_HOTREBOOT_RECOVER		-15
+#define CON_PLAYING					  0
+#define CON_GET_NAME				  1
+#define CON_GET_OLD_PASSWORD		  2
+#define CON_CONFIRM_NEW_NAME		  3
+#define CON_GET_NEW_PASSWORD		  4
+#define CON_CONFIRM_NEW_PASSWORD	  5
+#define CON_GET_NEW_SEX				  6
+#define CON_GET_NEW_CLASS			  7
+#define CON_READ_MOTD				  8
+#define CON_GET_NEW_RACE			  9
+#define CON_CONFIRM_RACE             10
+#define CON_CONFIRM_CLASS            11
+#define CON_CHECK_AUTHORIZE   	     12
+#define CON_GET_2ND_CLASS			 13
+#define CON_CONFIRM_2ND_CLASS		 14
+#define CON_WANT_MULTI				 15
+#define CON_GET_3RD_CLASS			 16
+#define CON_CONFIRM_3RD_CLASS	     17
+#define CON_WANT_MULTI_2			 18
+#define CON_BEGIN_REMORT			 19
+#define CON_GET_ANSI				105
+#define CON_AUTHORIZE_NAME			100
+#define CON_AUTHORIZE_NAME1			101
+#define CON_AUTHORIZE_NAME2			102
+#define CON_AUTHORIZE_NAME3			103
 #define CON_AUTHORIZE_LOGOUT		104
-#define CON_CHATTING                    200
+#define CON_CHATTING            	200
 
 /*
  * Descriptor (channel) structure.
@@ -3348,6 +3349,7 @@ char *	crypt		args( ( const char *key, const char *salt ) );
 #define AUTH_LIST       "auth.txt"      /* List of who auth who         */
 #define PLAYERLIST_FILE "player.lst"    /* Player List 			*/
 #define NEWBIE_FILE     "newbie.dat"    /* Newbie help file		*/
+#define EXE_FILE		"../src/envy"	/* EXE file*/
 #if defined( HOTREBOOT )
 #define HOTREBOOT_FILE 	"hotreboot.dat"  /* temporary data file used 	*/
 #endif

@@ -67,6 +67,8 @@ OBJ_DATA  *random_object( int level )
 	pObjIndex = get_obj_index(OBJ_VNUM_DUMMY);
 	obj = create_object( pObjIndex, level );
 
+	obj->wear_flags ^= ITEM_TAKE;
+
 	switch( dice( 1, 6 ) )
 	{
 		case 1:
@@ -77,13 +79,14 @@ OBJ_DATA  *random_object( int level )
 			obj->item_type = ITEM_ARMOR;
 			switch( dice( 1, 18 ) )
 			{
-				case 1: /* finger */
-					obj->wear_flags ^= ITEM_TAKE;
+				case 1:
+					/* finger */
 					obj->wear_flags ^= ITEM_WEAR_FINGER;
 					sprintf( buf, "Ring" );
+					
 					break;
-				case 2: /* neck */
-					obj->wear_flags ^= ITEM_TAKE;
+				case 2:
+					/* neck */
 					obj->wear_flags ^= ITEM_WEAR_NECK;
 					switch( dice( 1,3))
 					{
@@ -93,9 +96,11 @@ OBJ_DATA  *random_object( int level )
 							sprintf( buf, "Collar" ); break;
 						case 3:
 							sprintf( buf, "Talisman" ); break;
-					} break;
-				case 3: /* body */
-					obj->wear_flags ^= ITEM_TAKE;
+					}
+					
+					break;
+				case 3: 
+					/* body */
 					obj->wear_flags ^= ITEM_WEAR_BODY;
 					switch( dice( 1,3))
 					{
@@ -105,9 +110,11 @@ OBJ_DATA  *random_object( int level )
 							sprintf( buf, "Shirt" ); break;
 						case 3:
 							sprintf( buf, "Breastplate" ); break;
-					} break;
-				case 4: /* head */
-					obj->wear_flags ^= ITEM_TAKE;
+					} 
+					
+					break;
+				case 4: 
+					/* head */
 					obj->wear_flags ^= ITEM_WEAR_HEAD;
 					switch( dice( 1,3))
 					{
@@ -117,9 +124,11 @@ OBJ_DATA  *random_object( int level )
 							sprintf( buf, "Helmet" ); break;
 						case 3:
 							sprintf( buf, "Helm" ); break;
-					} break;
-				case 5: /* legs */
-					obj->wear_flags ^= ITEM_TAKE;
+					} 
+					
+					break;
+				case 5: 
+					/* legs */
 					obj->wear_flags ^= ITEM_WEAR_LEGS;
 					switch( dice( 1,3))
 					{
@@ -129,9 +138,11 @@ OBJ_DATA  *random_object( int level )
 							sprintf( buf, "Pants" ); break;
 						case 3:
 							sprintf( buf, "Kilt" ); break;
-					} break;
-				case 6: /* feet */
-					obj->wear_flags ^= ITEM_TAKE;
+					} 
+					
+					break;
+				case 6: 
+					/* feet */
 					obj->wear_flags ^= ITEM_WEAR_FEET;
 					switch( dice( 1,2))
 					{
@@ -139,9 +150,11 @@ OBJ_DATA  *random_object( int level )
 							sprintf( buf, "Shoes" ); break;
 						case 2:
 							sprintf( buf, "Boots" ); break;
-					} break;
-				case 7: /* hands */
-					obj->wear_flags ^= ITEM_TAKE;
+					} 
+					
+					break;
+				case 7: 
+					/* hands */
 					obj->wear_flags ^= ITEM_WEAR_HANDS;
 					switch( dice( 1,2))
 					{
@@ -149,9 +162,11 @@ OBJ_DATA  *random_object( int level )
 							sprintf( buf, "Gloves" ); break;
 						case 2:
 							sprintf( buf, "Gauntlets" ); break;
-					} break;
-				case 8: /* arm */
-					obj->wear_flags ^= ITEM_TAKE;
+					} 
+					
+					break;
+				case 8: 
+					/* arm */
 					obj->wear_flags ^= ITEM_WEAR_ARMS;
 					switch( dice( 1,2))
 					{
@@ -159,14 +174,16 @@ OBJ_DATA  *random_object( int level )
 							sprintf( buf, "Sleeves" ); break;
 						case 2:
 							sprintf( buf, "Vambrace" ); break;
-					} break;
-				case 9: /* sheild */
-					obj->wear_flags ^= ITEM_TAKE;
+					} 
+					
+					break;
+				case 9: 
+					/* sheild */
 					obj->wear_flags ^= ITEM_WEAR_SHIELD;
 					sprintf( buf, "Shield" );
 					break;
-				case 10: /* about */
-					obj->wear_flags ^= ITEM_TAKE;
+				case 10: 
+					/* about */
 					obj->wear_flags ^= ITEM_WEAR_ABOUT;
 					switch( dice( 1,3))
 					{
@@ -176,9 +193,11 @@ OBJ_DATA  *random_object( int level )
 							sprintf( buf, "Cloak" ); break;
 						case 3:
 							sprintf( buf, "Cape" ); break;
-					} break;
-				case 11: /* waist */
-					obj->wear_flags ^= ITEM_TAKE;
+					} 
+					
+					break;
+				case 11: 
+					/* waist */
 					obj->wear_flags ^= ITEM_WEAR_WAIST;
 					switch( dice( 1,3))
 					{
@@ -188,9 +207,11 @@ OBJ_DATA  *random_object( int level )
 							sprintf( buf, "Sash" ); break;
 						case 3:
 							sprintf( buf, "Cord" ); break;
-					} break;
-				case 12: /* wrist */
-					obj->wear_flags ^= ITEM_TAKE;
+					} 
+					
+					break;
+				case 12: 
+					/* wrist */
 					obj->wear_flags ^= ITEM_WEAR_WRIST;
 					switch( dice( 1,2))
 					{
@@ -198,14 +219,16 @@ OBJ_DATA  *random_object( int level )
 							sprintf( buf, "Bracer" ); break;
 						case 2:
 							sprintf( buf, "Bracelet" ); break;
-					} break;
-				case 13: /* hold */
-					obj->wear_flags ^= ITEM_TAKE;
+					} 
+					
+					break;
+				case 13: 
+					/* hold */
 					obj->wear_flags ^= ITEM_HOLD;
 					sprintf( buf, "Sceptre" );
 					break;
-				case 14: /* orbit */
-					obj->wear_flags ^= ITEM_TAKE;
+				case 14: 
+					/* orbit */
 					obj->wear_flags ^= ITEM_WEAR_ORBIT;
 					switch( dice( 1,2))
 					{
@@ -213,9 +236,11 @@ OBJ_DATA  *random_object( int level )
 							sprintf( buf, "Orb" ); break;
 						case 2:
 							sprintf( buf, "Faerie" ); break;
-					} break;
-				case 15: /* face */
-					obj->wear_flags ^= ITEM_TAKE;
+					} 
+					
+					break;
+				case 15: 
+					/* face */
 					obj->wear_flags ^= ITEM_WEAR_FACE;
 					switch( dice( 1,2))
 					{
@@ -223,9 +248,11 @@ OBJ_DATA  *random_object( int level )
 							sprintf( buf, "Mask" ); break;
 						case 2:
 							sprintf( buf, "Veil" ); break;
-					} break;
-				case 16: /* contact */
-					obj->wear_flags ^= ITEM_TAKE;
+					} 
+					
+					break;
+				case 16: 
+					/* contact */
 					obj->wear_flags ^= ITEM_WEAR_CONTACT;
 					switch( dice( 1,3))
 					{
@@ -235,14 +262,16 @@ OBJ_DATA  *random_object( int level )
 							sprintf( buf, "Eyes" ); break;
 						case 3:
 							sprintf( buf, "Lenses" ); break;
-					} break;
-				case 17: /* ears */
-					obj->wear_flags ^= ITEM_TAKE;
+					} 
+					
+					break;
+				case 17: 
+					/* ears */
 					obj->wear_flags ^= ITEM_WEAR_EARS;
 					sprintf( buf, "Collar" );
 					break;
-				case 18: /* ankle */
-					obj->wear_flags ^= ITEM_TAKE;
+				case 18: 
+					/* ankle */
 					obj->wear_flags ^= ITEM_WEAR_ANKLE;
 					switch( dice( 1,2))
 					{
@@ -250,106 +279,136 @@ OBJ_DATA  *random_object( int level )
 							sprintf( buf, "Anklet" ); break;
 						case 2:
 							sprintf( buf, "Stocking" ); break;
-					} break;
-			} break;
+					} 
+					
+					break;
+			} 
+			
+			break;
 		case 6:
 			obj->item_type = ITEM_WEAPON;
 			lowdam = number_range( 1, level );
 			highdam = number_range(lowdam, level + 5 );
+
 			obj->value[1] = lowdam;
 			obj->value[2] = highdam;
+
 			switch( dice( 1, 5 ) )
 			{
-				case 1: /* bash */
-					obj->wear_flags ^= ITEM_TAKE;
-					obj->wear_flags ^= ITEM_WIELD;
+				obj->wear_flags ^= ITEM_WIELD;
+
+				case 1: 
+					/* crush */
 					obj->value[3] = 8;
+
 					switch( dice( 1,2))
 					{
 						case 1:
-							sprintf( buf, "Hammer" ); break;
+							sprintf( buf, "Hammer" );
+							break;
 						case 2:
-							sprintf( buf, "Mace" ); break;
-					} break;
-				case 2: /* pierce */
-					obj->wear_flags ^= ITEM_TAKE;
-					obj->wear_flags ^= ITEM_WIELD;
+							sprintf( buf, "Mace" );
+							break;
+					}
+					
+					break;
+				case 2: 
+					/* pierce */
 					obj->value[3] = 11;
+
 					switch( dice( 1,2))
 					{
 						case 1:
-							sprintf( buf, "Dagger" ); break;
+							sprintf( buf, "Dagger" );
+							break;
 						case 2:
-							sprintf( buf, "Knife" ); break;
-					} break;
-				case 3: /* slash */
-					obj->wear_flags ^= ITEM_TAKE;
-					obj->wear_flags ^= ITEM_WIELD;
+							sprintf( buf, "Knife" );
+							break;
+					}
+					
+					break;
+				case 3:
+					/* slash */
 					obj->value[3] = 3;
+
 					switch( dice( 1,2))
 					{
 						case 1:
 							sprintf( buf, "Sword" ); break;
 						case 2:
 							sprintf( buf, "Long Sword" ); break;
-					} break;
-				case 4: /* pierce */
-					obj->wear_flags ^= ITEM_TAKE;
-					obj->wear_flags ^= ITEM_WIELD;
+					}
+					
+					break;
+				case 4:
+					/* chop */
 					obj->value[3] = 13;
+
 					switch( dice( 1,2))
 					{
 						case 1:
 							sprintf( buf, "Axe" ); break;
 						case 2:
 							sprintf( buf, "Battle Axe" ); break;
-					} break;
-				case 5: /* pierce */
-					obj->wear_flags ^= ITEM_TAKE;
-					obj->wear_flags ^= ITEM_WIELD;
+					}
+					
+					break;
+				case 5:
+					/* whip */
 					obj->value[3] = 4;
+
 					switch( dice( 1,2))
 					{
 						case 1:
 							sprintf( buf, "Whip" ); break;
 						case 2:
 							sprintf( buf, "Bull Whip" ); break;
-					} break;
-
-			} break;
-	} /* big switch */
-	if ( lowhigh )
-		switch ( dice( 1, 10 ) )
-		{
+					}
+					
+					break;
+			}
+			
+			break;
+	}
+	
+	if ( lowhigh ) {
+		switch ( dice( 1, 10 ) ) {
 			case 1:
 			case 2:
 			case 3:
 			case 4:
-			case 5: /* no applies */
+			case 5:
 				break;
 			case 6:
 				singlename = FALSE;
-				random_affect( obj, buf, 1); break;
+				random_affect( obj, buf, 1);
+				break;
 			case 7:
 				singlename = FALSE;
-				random_affect(obj, buf, 2); break;
+				random_affect(obj, buf, 2);
+				break;
 			case 8:
 				singlename = FALSE;
-				random_affect(obj, buf, 3); break;
+				random_affect(obj, buf, 3);
+				break;
 			case 9:
 				singlename = FALSE;
-				random_affect(obj, buf, 4); break;
+				random_affect(obj, buf, 4);
+				break;
 			case 10:
 				singlename = FALSE;
-				random_affect(obj, buf, 5); break;
-		} 
-	if ( singlename )
-	{
+				random_affect(obj, buf, 5);
+				break;
+		}
+	}
+
+	if ( singlename ) {
 		sprintf( long_desc, "A %s has been left here.", buf );
 		obj->name        = str_dup( buf );
 		obj->short_descr = str_dup( buf );
 		obj->description = str_dup( long_desc );
 	}
+
 	obj->level = level;
 
 	return obj;
