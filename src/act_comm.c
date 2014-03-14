@@ -55,30 +55,19 @@ void auc_channel    args( ( char *auction ) );
 bool	is_note_to	args( ( CHAR_DATA *ch, NOTE_DATA *pnote ) );
 void	note_attach	args( ( CHAR_DATA *ch ) );
 void	note_remove	args( ( CHAR_DATA *ch, NOTE_DATA *pnote ) );
-void	talk_channel	args( ( CHAR_DATA *ch, char *argument,
-			int channel, const char *verb ) );
+void	talk_channel	args( ( CHAR_DATA *ch, char *argument, int channel, const char *verb ) );
 void    newbie_help	args( ( CHAR_DATA *ch, char *argument ) );
-
-/*
- *  playerlist   -- Decklarean
- */
 void delete_playerlist  args( ( char * name ) );
-
-/* Sigh.. this is really a slow way of purging notes..
- * but efficiency isnt as useful if it doesnt work anyways.. -- Altrag 
- */
 void    note_delete     args( ( NOTE_DATA *pnote ) );
-/* More note stuff from the Alt man.. :).. -- Altrag */
 bool    check_note_room args( ( CHAR_DATA *ch, NOTE_DATA *pnote ) );
 extern EXTRA_DESCR_DATA *new_extra_descr args( (void) );
-void note_delete( NOTE_DATA *pnote )
-{
+
+void note_delete( NOTE_DATA *pnote ) {
 	NOTE_DATA *prev;
 
-	if (pnote == note_list )
+	if (pnote == note_list ) {
 		note_list = pnote->next;
-	else
-	{
+	} else {
 		for ( prev = note_list; prev; prev = prev->next )
 		{
 			if ( prev->next == pnote )

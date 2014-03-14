@@ -1423,23 +1423,26 @@ void do_exits( CHAR_DATA *ch, char *argument )
 	found = FALSE;
 	for ( door = 0; door <= 5; door++ )
 	{
-		if ( ( pexit = ch->in_room->exit[door] )
-				&& pexit->to_room
-				&& !IS_SET( pexit->exit_info, EX_CLOSED ) )
-		{
+		if ( ( pexit = ch->in_room->exit[door] ) && pexit->to_room ) {
 			found = TRUE;
-			if ( fAuto )
-			{
-				strcat( buf, "&W " );
-				strcat( buf, dir_name[door] );
-			}
-			else
-			{
+			
+			if ( fAuto ) {
+				if ( !IS_SET( pexit->exit_info, EX_CLOSED ) ) {
+					strcat( buf, "&W " );
+					strcat( buf, dir_name[door] );
+				} else {
+					strcat( buf, "&W &z[&w" );
+					strcat( buf, dir_name[door] );
+					strcat( buf, "&z]&W" );
+				}
+			} else {
 				sprintf( buf + strlen( buf ), "&W%-5s&w - &W%s\n\r",
 						capitalize( dir_name[door] ),
 						room_is_dark( pexit->to_room )
 						?  "&zToo dark to tell"
-						: pexit->to_room->name
+						: (IS_SET( pexit->exit_info, EX_CLOSED )
+							? "&z[&wCLOSED&z]"
+							: pexit->to_room->name)
 					   );
 			}
 		}
