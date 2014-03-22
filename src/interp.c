@@ -106,7 +106,7 @@ struct	cmd_type	cmd_table	[ ] =
 	{ "order",		do_order,	POS_RESTING,	 0,  LOG_NORMAL	},
 	{ "rest",		do_rest,	POS_SLEEPING,	 0,  LOG_NORMAL	},
 	{ "repair",         do_repair,      POS_RESTING,     0,  LOG_NORMAL },
-	{ "sing",		do_cast,	POS_FIGHTING,	 0,  LOG_NORMAL },
+	// { "sing",		do_cast,	POS_FIGHTING,	 0,  LOG_NORMAL },
 	{ "sleep",		do_sleep,	POS_SLEEPING,	 0,  LOG_NORMAL	},
 	{ "stand",		do_stand,	POS_SLEEPING,	 0,  LOG_NORMAL	},
 	{ "tell",		do_tell,	POS_RESTING,	 0,  LOG_NORMAL	},
@@ -2204,18 +2204,6 @@ void interpret( CHAR_DATA *ch, char *argument )
 	{
 		REMOVE_BIT( ch->act, PLR_AFK );
 		send_to_char( AT_YELLOW, "You are no longer AFK.\n\r", ch );
-	}
-	if ( !strcmp( cmd_table[cmd].name, "sing" )
-			&& prime_class(ch) != CLASS_BARD )
-	{
-		send_to_char( C_DEFAULT, "What do you think you are, a BARD???\n\r", ch );
-		return;
-	}
-	else if ( !strcmp( cmd_table[cmd].name, "cast" )
-			&& prime_class(ch) == CLASS_BARD )
-	{
-		send_to_char( C_DEFAULT, "You're a bard, SING!\n\r", ch );
-		return;
 	}
 
 	/* Here checks if ch is fighting in the arena **/

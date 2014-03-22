@@ -264,12 +264,8 @@ void say_spell( CHAR_DATA *ch, int sn )
 			length = 1;
 	}
 
-	sprintf( buf2, "$n %s the words, '%s'.", 
-			prime_class(ch) != CLASS_BARD ?
-			"utters" : "sings", buf );
-	sprintf( buf,  "$n %s the words, '%s'.", 
-			prime_class(ch) != CLASS_BARD ?
-			"utters" : "sings", skill_table[sn].name );
+	sprintf( buf2, "$n utters the words, '%s'.", buf );
+	sprintf( buf,  "$n utters the words, '%s'.", skill_table[sn].name );
 
 	for ( rch = ch->in_room->people; rch; rch = rch->next_in_room )
 	{
@@ -534,10 +530,7 @@ void do_cast( CHAR_DATA *ch, char *argument )
 
 	if ( arg1[0] == '\0' )
 	{
-		if ( prime_class(ch) != CLASS_BARD )
-			send_to_char(AT_BLUE, "Cast which what where?\n\r", ch );
-		else
-			send_to_char(AT_BLUE, "Sing what song?\n\r", ch );
+		send_to_char(AT_BLUE, "Cast which what where?\n\r", ch );
 		return;
 	}
 
@@ -587,10 +580,7 @@ void do_cast( CHAR_DATA *ch, char *argument )
 	   */
 	if ( IS_STUNNED( ch, STUN_MAGIC ) )
 	{
-		if ( prime_class(ch) != CLASS_BARD )
-			send_to_char(AT_LBLUE, "You're too stunned to cast spells.\n\r", ch );
-		else
-			send_to_char(AT_LBLUE, "You're too stunned to sing songs.\n\r", ch );
+		send_to_char(AT_LBLUE, "You're too stunned to cast spells.\n\r", ch );
 		return;
 	}
 
@@ -643,10 +633,7 @@ void do_cast( CHAR_DATA *ch, char *argument )
 			{
 				if ( !( victim = ch->fighting ) )
 				{
-					if ( prime_class(ch) != CLASS_BARD )
-						send_to_char(AT_BLUE, "Cast the spell on whom?\n\r", ch );
-					else
-						send_to_char(AT_BLUE, "Sing the song to whom?\n\r", ch );
+					send_to_char(AT_BLUE, "Cast the spell on whom?\n\r", ch );
 					return;
 				}
 			}
@@ -698,10 +685,7 @@ void do_cast( CHAR_DATA *ch, char *argument )
 		case TAR_CHAR_SELF:
 			if ( arg2[0] != '\0' && !is_name( ch, arg2, ch->name ) )
 			{
-				if ( prime_class(ch) != CLASS_BARD )
-					send_to_char(AT_BLUE, "You cannot cast this spell on another.\n\r", ch );
-				else
-					send_to_char(AT_BLUE, "You cannot sing this song for others.\n\r", ch );
+				send_to_char(AT_BLUE, "You cannot cast this spell on another.\n\r", ch );
 				return;
 			}
 
@@ -2458,7 +2442,6 @@ void spell_holysword( int sn, int level, CHAR_DATA *ch, void *vo )
 	}
 	SET_BIT( obj->anti_class_flags, ITEM_ANTI_WARRIOR );
 	SET_BIT( obj->anti_class_flags, ITEM_ANTI_MAGE );
-	SET_BIT( obj->anti_class_flags, ITEM_ANTI_BARD );
 	SET_BIT( obj->anti_class_flags, ITEM_ANTI_RANGER );
 	SET_BIT( obj->anti_class_flags, ITEM_ANTI_VAMP ); 
 	SET_BIT( obj->anti_class_flags, ITEM_ANTI_DRUID );
@@ -8004,12 +7987,6 @@ void spell_purify( int sn, int level, CHAR_DATA *ch, void *vo )
 		if ( IS_ANTI_CLASS( obj, ITEM_ANTI_PALADIN ) )
 		{
 			REMOVE_BIT( obj->anti_class_flags, ITEM_ANTI_PALADIN );
-			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
-			yesno = TRUE;
-		}
-		if ( IS_ANTI_CLASS( obj, ITEM_ANTI_BARD ) )
-		{
-			REMOVE_BIT( obj->anti_class_flags, ITEM_ANTI_BARD );
 			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
 			yesno = TRUE;
 		}
