@@ -201,8 +201,9 @@ void say_spell( CHAR_DATA *ch, int sn )
 {
 	CHAR_DATA *rch;
 	char      *pName;
-	char       buf       [ MAX_STRING_LENGTH ];
-	char       buf2      [ MAX_STRING_LENGTH ];
+	char       spell       [ MAX_STRING_LENGTH ];
+	char       room      [ MAX_STRING_LENGTH ];
+	char       caster      [ MAX_STRING_LENGTH ];
 	int        iSyl;
 	int        length;
 
@@ -246,16 +247,11 @@ void say_spell( CHAR_DATA *ch, int sn )
 		{ "", "" }
 	};
 
-	buf[0]	= '\0';
-	for ( pName = skill_table[sn].name; *pName != '\0'; pName += length )
-	{
-		for ( iSyl = 0;
-				( length = strlen( syl_table[iSyl].old ) ) != 0;
-				iSyl++ )
-		{
-			if ( !str_prefix( syl_table[iSyl].old, pName ) )
-			{
-				strcat( buf, syl_table[iSyl].new );
+	spell[0]	= '\0';
+	for ( pName = skill_table[sn].name; *pName != '\0'; pName += length ) {
+		for ( iSyl = 0; ( length = strlen( syl_table[iSyl].old ) ) != 0; iSyl++ ) {
+			if ( !str_prefix( syl_table[iSyl].old, pName ) ) {
+				strcat( spell, syl_table[iSyl].new );
 				break;
 			}
 		}
@@ -264,20 +260,11 @@ void say_spell( CHAR_DATA *ch, int sn )
 			length = 1;
 	}
 
-	// sprintf( buf2, "$n %s the words, '%s'.", prime_class(ch) != CLASS_BARD ? "utters" : "sings", buf );
-	// sprintf( buf,  "$n %s the words, '%s'.", prime_class(ch) != CLASS_BARD ? "utters" : "sings", skill_table[sn].name );
+	sprintf( room, "$n utters the words, '%s'.", spell );
+	sprintf( caster, "You utter the words, '%s'.\n\r", spell );
 
-	sprintf( buf2, "$n utters the words, '%s'.", buf );
-	sprintf( buf,  "$n utters the words, '%s'.", skill_table[sn].name );
-
-	for ( rch = ch->in_room->people; rch; rch = rch->next_in_room )
-	{
-		if ( rch != ch )
-			act(AT_BLUE, 
-					is_class( rch, prime_class(ch) )
-					? buf 
-					: buf2, ch, NULL, rch, TO_VICT );
-	}
+	act(AT_GREY, room, ch, NULL, NULL, TO_ROOM );
+	send_to_char( AT_GREY, caster, ch );
 
 	return;
 }
@@ -736,8 +723,8 @@ void do_cast( CHAR_DATA *ch, char *argument )
 			}
 
 
-	if ( str_cmp( skill_table[sn].name, "ventriloquate" ) )
-		say_spell( ch, sn );
+	// if ( str_cmp( skill_table[sn].name, "ventriloquate" ) )
+	say_spell( ch, sn );
 
 	if ( IS_SET( ch->in_room->room_flags, ROOM_NO_MAGIC ) )
 	{
