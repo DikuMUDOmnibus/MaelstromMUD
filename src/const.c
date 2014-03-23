@@ -2692,7 +2692,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 	/*
 	   {
 	   "Name",
-	   {MAG,CLE,THI,WAR,PSY,DRU,RAN,PAL,BAR,VAM,
+	   {MAG,CLE,THI,WAR,PSY,DRU,RAN,PAL,VAM,
 	   NEC,WWF,MNK,PRO,PRO,PRO}
 	   function,		target type,		position,
 	   gsn,			min mana,	wait,
@@ -2712,7 +2712,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 	{
 		"acid blast",
-		{ 20, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+		{ 20, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 			L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 		spell_acid_blast,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 		NULL,			20,	12,
@@ -2721,7 +2721,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 	{
 		"animate dead",
-		{ L_APP, 33, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 67,
+		{ L_APP, 33, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 67,
 			24, L_APP, L_APP, L_APP, L_APP, L_APP },
 		spell_animate,  	TAR_OBJ_INV,		POS_STANDING,
 		NULL,			100,	24,
@@ -2730,7 +2730,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 	{
 		"armor",
-		{     13,     7, L_APP, L_APP, L_APP, 11, 15, 8, L_APP, L_APP,
+		{     13,     7, L_APP, L_APP, L_APP, 11, 15, 8, L_APP,
 			L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 		spell_armor,		TAR_CHAR_DEFENSIVE,	POS_STANDING,
 		NULL,			5,	12,
@@ -2742,7 +2742,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 	{
 		"astral walk",
-		{ 26, 32, L_APP, L_APP,  32, 42, L_APP, L_APP, L_APP, L_APP,
+		{ 26, 32, L_APP, L_APP,  32, 42, L_APP, L_APP, L_APP,
 			L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 		spell_astral,		TAR_IGNORE,		POS_STANDING,
 		NULL,			50,	12,
@@ -2751,7 +2751,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 	/*
 	   "barkskin"
-	   { L_APP, L_APP, L_APP, L_APP, 18, L_APP, 15, L_APP, L_APP, L_APP,
+	   { L_APP, L_APP, L_APP, L_APP, 18, L_APP, 15, L_APP, L_APP,
 	   L_APP, L_APP, L_APP, L_APP, L_APP, L_APP},
 	   spell_barkskin,           TAR_CHAR_DEFENSIVE,     POS_STANDING,
 	   NULL,                     15,     12,
@@ -2762,7 +2762,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"bless",
-	{ L_APP, 5, L_APP, L_APP, L_APP, 14, L_APP, 6, L_APP, L_APP,
+	{ L_APP, 5, L_APP, L_APP, L_APP, 14, L_APP, 6, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_bless,		TAR_CHAR_DEFENSIVE,	POS_STANDING,
 	NULL,			5,	12,
@@ -2774,7 +2774,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"blindness",
-	{ 18,  28, L_APP, L_APP, L_APP, 60, L_APP, L_APP, L_APP, L_APP,
+	{ 18,  28, L_APP, L_APP, L_APP, 60, L_APP, L_APP, L_APP,
 		55, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_blindness,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_blindness,		5,	12,
@@ -2786,7 +2786,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"bloodbath",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 47,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 47,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_blood_bath,	TAR_CHAR_DEFENSIVE,	POS_STANDING,
 	NULL,	        	100,	12,
@@ -2795,7 +2795,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"burning hands",
-	{ 9, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 9, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		5, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_burning_hands,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			15,	12,
@@ -2804,7 +2804,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"call lightning",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, 21, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, 21, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_call_lightning,	TAR_IGNORE,		POS_FIGHTING,
 	NULL,			15,	12,
@@ -2813,7 +2813,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"cause critical",
-	{ L_APP, 19, L_APP, L_APP, L_APP, L_APP, L_APP, 24, L_APP, L_APP, 
+	{ L_APP, 19, L_APP, L_APP, L_APP, L_APP, L_APP, 24, L_APP, 
 		18, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_cause_critical,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			20,	12,
@@ -2822,7 +2822,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"cause light",
-	{ L_APP,     5, L_APP, L_APP, L_APP, 3, L_APP, 8, L_APP, L_APP, 
+	{ L_APP,     5, L_APP, L_APP, L_APP, 3, L_APP, 8, L_APP, 
 		3, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_cause_light,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			15,	12,
@@ -2831,7 +2831,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"cause serious",
-	{ L_APP,     13, L_APP, L_APP, L_APP, 21, L_APP, 17, L_APP, L_APP,
+	{ L_APP,     13, L_APP, L_APP, L_APP, 21, L_APP, 17, L_APP,
 		10, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_cause_serious,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			17,	12,
@@ -2840,7 +2840,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"change sex",
-	{ 40, L_APP, L_APP, L_APP, L_APP, 42, L_APP, L_APP, L_APP, L_APP,
+	{ 40, L_APP, L_APP, L_APP, L_APP, 42, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_change_sex,	TAR_CHAR_DEFENSIVE,	POS_FIGHTING,
 	NULL,			15,	12,
@@ -2852,7 +2852,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"charm person",
-	{  24, L_APP, L_APP, L_APP, L_APP, 50, 29, L_APP, L_APP, 19,
+	{  24, L_APP, L_APP, L_APP, L_APP, 50, 29, L_APP, 19,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_charm_person,	TAR_CHAR_OFFENSIVE,	POS_STANDING,
 	&gsn_charm_person,	5,	12,
@@ -2864,7 +2864,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"chill touch",
-	{ 5, L_APP, L_APP, L_APP, L_APP, L_APP, 7, L_APP, L_APP, 7,
+	{ 5, L_APP, L_APP, L_APP, L_APP, L_APP, 7, L_APP, 7,
 		8, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_chill_touch,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			15,	12,
@@ -2875,7 +2875,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"colour spray",
-	{ 22, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 22, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_colour_spray,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			15,	12,
@@ -2885,7 +2885,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"continual light",
-	{ 6, 7, L_APP, L_APP, L_APP, 13, L_APP, 11, L_APP, L_APP,
+	{ 6, 7, L_APP, L_APP, L_APP, 13, L_APP, 11, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_continual_light,      TAR_IGNORE,             POS_STANDING,
 	NULL,			7,	12,
@@ -2894,7 +2894,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"control weather",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, 21, L_APP, L_APP, L_APP, L_APP, 
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, 21, L_APP, L_APP, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_control_weather,      TAR_IGNORE,             POS_STANDING,
 	NULL,			25,	12,
@@ -2903,7 +2903,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"create food",
-	{ L_APP, 12, L_APP, L_APP, L_APP, 26, L_APP, 37, L_APP, L_APP, 
+	{ L_APP, 12, L_APP, L_APP, L_APP, 26, L_APP, 37, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_create_food,	TAR_IGNORE,		POS_STANDING,
 	NULL,			5,	12,
@@ -2912,7 +2912,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"create spring",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, 20, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, 20, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_create_spring,	TAR_IGNORE,		POS_STANDING,
 	NULL,			20,	12,
@@ -2921,7 +2921,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"create water",
-	{ L_APP, 7, L_APP, L_APP, L_APP, 13, L_APP, L_APP, L_APP, L_APP, 
+	{ L_APP, 7, L_APP, L_APP, L_APP, 13, L_APP, L_APP, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_create_water,	TAR_OBJ_INV,		POS_STANDING,
 	NULL,			5,	12,
@@ -2930,7 +2930,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"cure blindness",
-	{ L_APP, 30, L_APP, L_APP, L_APP, 63, L_APP, L_APP, L_APP, L_APP, 
+	{ L_APP, 30, L_APP, L_APP, L_APP, 63, L_APP, L_APP, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_cure_blindness,	TAR_CHAR_DEFENSIVE,	POS_FIGHTING,
 	NULL,			5,	12,
@@ -2939,7 +2939,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"cure critical",
-	{ L_APP, 17, L_APP, L_APP, L_APP, L_APP, L_APP, 37, L_APP, L_APP, 
+	{ L_APP, 17, L_APP, L_APP, L_APP, L_APP, L_APP, 37, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_cure_critical,	TAR_CHAR_DEFENSIVE,	POS_FIGHTING,
 	NULL,			20,	12,
@@ -2948,7 +2948,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"cure light",
-	{ L_APP,     5, L_APP, L_APP, L_APP, 7, 7, 6, L_APP, L_APP, 
+	{ L_APP,     5, L_APP, L_APP, L_APP, 7, 7, 6, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_cure_light,	TAR_CHAR_DEFENSIVE,	POS_FIGHTING,
 	NULL,			10,	12,
@@ -2957,7 +2957,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"cure poison",
-	{ L_APP, 17, L_APP, L_APP, L_APP, 19, L_APP, L_APP, L_APP, L_APP, 
+	{ L_APP, 17, L_APP, L_APP, L_APP, 19, L_APP, L_APP, L_APP, 
 		36, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_cure_poison,	TAR_CHAR_DEFENSIVE,	POS_STANDING,
 	NULL,			5,	12,
@@ -2966,7 +2966,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"cure serious",
-	{ L_APP, 13, L_APP, L_APP, L_APP, 17, 19, 15, L_APP, L_APP, 
+	{ L_APP, 13, L_APP, L_APP, L_APP, 17, 19, 15, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_cure_serious,	TAR_CHAR_DEFENSIVE,	POS_FIGHTING,
 	NULL,			15,	12,
@@ -2975,7 +2975,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"curse",
-	{ L_APP, 22, L_APP, L_APP, L_APP, 28, L_APP, L_APP, L_APP, 38, 
+	{ L_APP, 22, L_APP, L_APP, L_APP, 28, L_APP, L_APP, 38, 
 		34, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_curse,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_curse,		20,	12,
@@ -2985,7 +2985,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"detect evil",
-	{ L_APP,     6, L_APP, L_APP, L_APP, 6, 6, 6, L_APP, L_APP, 
+	{ L_APP,     6, L_APP, L_APP, L_APP, 6, 6, 6, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_detect_evil,	TAR_CHAR_SELF,		POS_STANDING,
 	NULL,			5,	12,
@@ -2995,7 +2995,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"detect hidden",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 39, L_APP, L_APP, 23, 
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 39, L_APP, 23, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_detect_hidden,	TAR_CHAR_SELF,		POS_STANDING,
 	NULL,			5,	12,
@@ -3005,7 +3005,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"detect invis",
-	{    21,   25,    L_APP, L_APP, L_APP, 24, L_APP, L_APP, L_APP, L_APP, 
+	{    21,   25,    L_APP, L_APP, L_APP, 24, L_APP, L_APP, L_APP, 
 		15, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_detect_invis,	TAR_CHAR_SELF,		POS_STANDING,
 	NULL,			5,	12,
@@ -3015,7 +3015,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"detect magic",
-	{     6,     9, L_APP, L_APP, L_APP, 6, L_APP, L_APP, L_APP, 10, 
+	{     6,     9, L_APP, L_APP, L_APP, 6, L_APP, L_APP, 10, 
 		6, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_detect_magic,	TAR_CHAR_SELF,		POS_STANDING,
 	NULL,			5,	12,
@@ -3025,7 +3025,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"detect poison",
-	{ L_APP, 11, 17, L_APP, L_APP, 11, 27, 11, L_APP, L_APP, 
+	{ L_APP, 11, 17, L_APP, L_APP, 11, 27, 11, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_detect_poison,	TAR_OBJ_INV,		POS_STANDING,
 	NULL,			5,	12,
@@ -3034,7 +3034,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"dispel evil",
-	{ L_APP, 17, L_APP, L_APP, L_APP, L_APP, 41, 19, L_APP, L_APP,
+	{ L_APP, 17, L_APP, L_APP, L_APP, L_APP, 41, 19, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_dispel_evil,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			15,	12,
@@ -3043,7 +3043,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"dispel magic",
-	{ 46, 51, L_APP, L_APP, L_APP, 62, L_APP, L_APP, L_APP, L_APP,
+	{ 46, 51, L_APP, L_APP, L_APP, 62, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, 62, L_APP, L_APP },
 	spell_dispel_magic,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			15,	16,
@@ -3052,7 +3052,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"earthquake",
-	{ L_APP, 17, L_APP, L_APP, L_APP, 17, L_APP, L_APP, L_APP, L_APP, 
+	{ L_APP, 17, L_APP, L_APP, L_APP, 17, L_APP, L_APP, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_earthquake,	TAR_IGNORE,		POS_FIGHTING,
 	NULL,			15,	12,
@@ -3061,7 +3061,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"enchant weapon",
-	{ 50, L_APP, L_APP, L_APP, L_APP, 50, L_APP, L_APP, L_APP, L_APP,
+	{ 50, L_APP, L_APP, L_APP, L_APP, 50, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, 57, L_APP, L_APP },
 	spell_enchant_weapon,	TAR_OBJ_INV,		POS_STANDING,
 	NULL,			100,	24,
@@ -3070,7 +3070,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"energy drain",
-	{ 23, L_APP, L_APP, L_APP, 24, L_APP, L_APP, L_APP, L_APP, 23,
+	{ 23, L_APP, L_APP, L_APP, 24, L_APP, L_APP, L_APP, 23,
 		33, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_energy_drain,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			35,	12,
@@ -3079,7 +3079,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"faerie fire",
-	{L_APP, 31, L_APP, L_APP, L_APP, 31, 47, L_APP, L_APP, L_APP, 
+	{L_APP, 31, L_APP, L_APP, L_APP, 31, 47, L_APP, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_faerie_fire,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			5,	12,
@@ -3091,7 +3091,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"faerie fog",
-	{  L_APP, L_APP, L_APP, L_APP, L_APP, 41, 57, L_APP, L_APP, L_APP,
+	{  L_APP, L_APP, L_APP, L_APP, L_APP, 41, 57, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_faerie_fog,	TAR_IGNORE,		POS_STANDING,
 	NULL,			12,	12,
@@ -3100,7 +3100,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"fireball",
-	{ 21, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 21, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_fireball,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			15,	12,
@@ -3109,7 +3109,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"fireshield",
-	{ 65,  23, L_APP, L_APP, L_APP, 34, 51, L_APP, L_APP, L_APP,
+	{ 65,  23, L_APP, L_APP, L_APP, 34, 51, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_fireshield,	TAR_CHAR_DEFENSIVE,	POS_STANDING,
 	NULL,			75,	12,
@@ -3121,7 +3121,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"flamestrike",
-	{ L_APP, 13, L_APP, L_APP, L_APP, 19, 24, 14, L_APP, L_APP,
+	{ L_APP, 13, L_APP, L_APP, L_APP, 19, 24, 14, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_flamestrike,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			20,	12,
@@ -3130,7 +3130,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"fly",
-	{     9,    12, L_APP, L_APP, L_APP, 14, 14, 12, L_APP, 6,
+	{     9,    12, L_APP, L_APP, L_APP, 14, 14, 12, 6,
 		14, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_fly,		TAR_CHAR_DEFENSIVE,	POS_STANDING,
 	NULL,			10,	18,
@@ -3142,7 +3142,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"gate",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_gate,		TAR_CHAR_DEFENSIVE,	POS_FIGHTING,
 	NULL,			50,	12,
@@ -3151,7 +3151,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"giant strength",
-	{ 7, L_APP, L_APP, L_APP, L_APP, 13, 13, 34, L_APP, 15,
+	{ 7, L_APP, L_APP, L_APP, L_APP, 13, 13, 34, 15,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_giant_strength,	TAR_CHAR_DEFENSIVE,	POS_STANDING,
 	NULL,			20,	12,
@@ -3162,7 +3162,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"eternal intellect",
-	{ 16, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 16, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_eternal_intellect,       TAR_CHAR_DEFENSIVE,     POS_STANDING,
 	NULL,                       20,     12,
@@ -3173,7 +3173,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"goodberry",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_goodberry,	TAR_OBJ_INV,	        POS_STANDING,
 	NULL,			25,	8,
@@ -3182,7 +3182,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"harm",
-	{ L_APP, 25, L_APP, L_APP, L_APP, 41, 69, 30, L_APP, L_APP, 
+	{ L_APP, 25, L_APP, L_APP, L_APP, 41, 69, 30, L_APP, 
 		22, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_harm,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			35,	12,
@@ -3191,7 +3191,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"heal",
-	{ L_APP, 24, L_APP, L_APP, L_APP, 49, L_APP, 36, L_APP, L_APP, 
+	{ L_APP, 24, L_APP, L_APP, L_APP, 49, L_APP, 36, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_heal,		TAR_CHAR_DEFENSIVE,	POS_FIGHTING,
 	NULL,			50,	12,
@@ -3200,7 +3200,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"iceshield",
-	{ L_APP, 53, L_APP, L_APP, L_APP, 73, L_APP, L_APP, L_APP, 63,
+	{ L_APP, 53, L_APP, L_APP, L_APP, 73, L_APP, L_APP, 63,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_iceshield,	TAR_CHAR_SELF,  	POS_STANDING,
 	NULL,			150,	12,
@@ -3212,7 +3212,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"icestorm",
-	{  31, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{  31, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_icestorm,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			25,	8,
@@ -3221,7 +3221,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"identify",
-	{   10,   10,   25, L_APP,    13, 10, 17, 17, L_APP, 16, 
+	{   10,   10,   25, L_APP,    13, 10, 17, 17, 16, 
 		11, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_identify,		TAR_OBJ_INV,		POS_STANDING,
 	NULL,			12,	24,
@@ -3230,7 +3230,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"vibrate",
-	{ L_APP, L_APP, L_APP, L_APP, 30, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, 30, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_vibrate, 	       TAR_CHAR_DEFENSIVE,	POS_STANDING,
 	NULL,			75,	0,
@@ -3241,7 +3241,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"infravision",
-	{   6,   9, L_APP, L_APP, L_APP, 9, 9, 9, L_APP, 9,
+	{   6,   9, L_APP, L_APP, L_APP, 9, 9, 9, 9,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_infravision,	TAR_CHAR_DEFENSIVE,	POS_STANDING,
 	NULL,			5,	18,
@@ -3251,7 +3251,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"incinerate",
-	{ 14, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 14, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		25, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_incinerate,	TAR_CHAR_OFFENSIVE,	POS_STANDING,
 	&gsn_incinerate,	30,	12,
@@ -3261,7 +3261,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"invis",
-	{  24, L_APP,   L_APP, L_APP, L_APP, 30, 24, L_APP, L_APP, 26,
+	{  24, L_APP,   L_APP, L_APP, L_APP, 30, 24, L_APP, 26,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_invis,		TAR_CHAR_DEFENSIVE,	POS_STANDING,
 	&gsn_invis,		5,	12,
@@ -3273,7 +3273,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"know alignment",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_know_alignment,	TAR_CHAR_DEFENSIVE,	POS_FIGHTING,
 	NULL,			9,	12,
@@ -3282,7 +3282,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"lightning bolt",
-	{ 17, L_APP, L_APP, L_APP, L_APP, 18, 43, L_APP, L_APP, L_APP,
+	{ 17, L_APP, L_APP, L_APP, L_APP, 18, 43, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_lightning_bolt,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			15,	12,
@@ -3291,7 +3291,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"locate object",
-	{     29,    29, L_APP, L_APP, 85, 36, L_APP, L_APP, L_APP, L_APP, 
+	{     29,    29, L_APP, L_APP, 85, 36, L_APP, L_APP, L_APP, 
 		36, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_locate_object,	TAR_IGNORE,		POS_STANDING,
 	NULL,			20,	18,
@@ -3300,7 +3300,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"magic missile",
-	{ 3, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 
+	{ 3, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_magic_missile,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			15,	12,
@@ -3309,7 +3309,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"mana",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_mana,           TAR_CHAR_DEFENSIVE,      POS_STANDING,
 	NULL,                  0, 0,
@@ -3318,7 +3318,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"mass invis",
-	{ 35, L_APP, L_APP, L_APP, L_APP, 35, L_APP, L_APP, L_APP, L_APP,
+	{ 35, L_APP, L_APP, L_APP, L_APP, 35, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_mass_invis,	TAR_IGNORE,		POS_STANDING,
 	&gsn_mass_invis,	20,	24,
@@ -3329,7 +3329,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"pass door",
-	{    28, L_APP, L_APP, L_APP, L_APP, 27, 48, L_APP, L_APP, L_APP,
+	{    28, L_APP, L_APP, L_APP, L_APP, 27, 48, L_APP, L_APP,
 		50, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_pass_door,	TAR_CHAR_SELF,		POS_STANDING,
 	NULL,			20,	12,
@@ -3340,7 +3340,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"aura of peace",
-	{ L_APP, 70, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, 70, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_aura,     	TAR_CHAR_SELF,	POS_STANDING,
 	NULL,			100,	12,
@@ -3351,7 +3351,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"permenancy",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_permenancy,	TAR_OBJ_INV,		POS_STANDING,
 	NULL,			200,	24,
@@ -3360,7 +3360,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"poison",
-	{ L_APP, L_APP, 35, L_APP, L_APP, 19, 29, L_APP, L_APP, 9,
+	{ L_APP, L_APP, 35, L_APP, L_APP, 19, 29, L_APP, 9,
 		30, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_poison,		TAR_CHAR_OFFENSIVE,	POS_STANDING,
 	&gsn_poison,		10,	12,
@@ -3371,7 +3371,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"portal",
-	{ 37, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 37, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		67, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_portal,		TAR_IGNORE,     	POS_STANDING,
 	NULL,   		100,	12,
@@ -3380,7 +3380,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"protection evil",
-	{ L_APP,  L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP,  L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_protection,	TAR_CHAR_SELF,		POS_STANDING,
 	NULL,			5,	12,
@@ -3392,7 +3392,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"refresh",
-	{ L_APP,  3, L_APP, L_APP, L_APP, 4, L_APP, 5, L_APP, L_APP,
+	{ L_APP,  3, L_APP, L_APP, L_APP, 4, L_APP, 5, L_APP,
 		3, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_refresh,		TAR_CHAR_DEFENSIVE,	POS_STANDING,
 	NULL,			12,	18,
@@ -3401,7 +3401,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"remove curse",
-	{ L_APP, 22, L_APP, L_APP, L_APP, 21, L_APP, 26, L_APP, L_APP,
+	{ L_APP, 22, L_APP, L_APP, L_APP, 21, L_APP, 26, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_remove_curse,	TAR_CHAR_DEFENSIVE,	POS_STANDING,
 	NULL,			5,	12,
@@ -3410,7 +3410,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"sanctuary",
-	{ L_APP, 20, L_APP, L_APP, L_APP, 29, L_APP, 27, L_APP, L_APP,
+	{ L_APP, 20, L_APP, L_APP, L_APP, 29, L_APP, 27, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_sanctuary,	TAR_CHAR_DEFENSIVE,	POS_STANDING,
 	NULL,			75,	12,
@@ -3421,7 +3421,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"scry",
-	{    13, 13, L_APP, L_APP, 9, 24, 31, 27, L_APP, 19,
+	{    13, 13, L_APP, L_APP, 9, 24, 31, 27, 19,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_scry,		TAR_CHAR_SELF,  	POS_STANDING,
 	NULL,			35,	20,
@@ -3431,7 +3431,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"shield",
-	{ 13, L_APP, L_APP, L_APP, L_APP, 16, 21, L_APP, L_APP, 16,
+	{ 13, L_APP, L_APP, L_APP, L_APP, 16, 21, L_APP, 16,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_shield,		TAR_CHAR_DEFENSIVE,	POS_STANDING,
 	NULL,			12,	18,
@@ -3443,7 +3443,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"shocking grasp",
-	{ 10, L_APP, L_APP, L_APP, L_APP, 10, 14, L_APP, L_APP, 12,
+	{ 10, L_APP, L_APP, L_APP, L_APP, 10, 14, L_APP, 12,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_shocking_grasp,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			15,	12,
@@ -3453,7 +3453,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"shockshield",
-	{ 79, L_APP, L_APP, L_APP, L_APP, 61, L_APP, L_APP, L_APP, L_APP,
+	{ 79, L_APP, L_APP, L_APP, L_APP, 61, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_shockshield,	TAR_CHAR_SELF,  	POS_STANDING,
 	NULL,			100,	12,
@@ -3465,7 +3465,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"sleep",
-	{    23, L_APP, L_APP, L_APP, L_APP, 41, 52, L_APP, L_APP, 46,
+	{    23, L_APP, L_APP, L_APP, L_APP, 41, 52, L_APP, 46,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_sleep,		TAR_CHAR_OFFENSIVE,	POS_STANDING,
 	&gsn_sleep,		15,	12,
@@ -3475,7 +3475,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"spell bind",
-	{ 46, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 46, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_spell_bind,	TAR_OBJ_INV,		POS_STANDING,
 	NULL,			100,	24,
@@ -3484,7 +3484,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"stone skin",
-	{ 27, L_APP, L_APP, L_APP, L_APP, 35, 41, L_APP, L_APP, L_APP,
+	{ 27, L_APP, L_APP, L_APP, L_APP, 35, 41, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_stone_skin,	TAR_CHAR_SELF,		POS_STANDING,
 	NULL,			12,	18,
@@ -3496,7 +3496,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"summon",
-	{  45, 45, L_APP, L_APP, 61, 52, L_APP, L_APP, L_APP, 61,
+	{  45, 45, L_APP, L_APP, 61, 52, L_APP, L_APP, 61,
 		45, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_summon,		TAR_IGNORE,		POS_STANDING,
 	NULL,			50,	12,
@@ -3505,7 +3505,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"teleport",
-	{ 90, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 90, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_teleport,		TAR_CHAR_SELF,		POS_FIGHTING,
 	NULL,	 		35,	12,
@@ -3514,7 +3514,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"ventriloquate",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_ventriloquate,	TAR_IGNORE,		POS_STANDING,
 	NULL,			5,	12,
@@ -3523,7 +3523,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"weaken",
-	{ 17, L_APP, L_APP, L_APP, L_APP, L_APP, 29, L_APP, L_APP, 29,
+	{ 17, L_APP, L_APP, L_APP, L_APP, L_APP, 29, L_APP, 29,
 		39, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_weaken,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			20,	12,
@@ -3535,7 +3535,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"word of recall",
-	{ 21, 16, L_APP, L_APP, 23, 32, 51, 54, L_APP, 53, 
+	{ 21, 16, L_APP, L_APP, 23, 32, 51, 54, 53, 
 		25, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_word_of_recall,	TAR_CHAR_SELF,		POS_RESTING,
 	NULL,			5,	12,
@@ -3547,7 +3547,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 	 */
 {
 	"acid breath",
-	{ 63, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 63, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_acid_breath,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			50,	12,
@@ -3556,7 +3556,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"fire breath",
-	{ 64, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 
+	{ 64, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_fire_breath,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			50,	12,
@@ -3565,7 +3565,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"frost breath",
-	{ 61, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 
+	{ 61, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_frost_breath,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			50,	12,
@@ -3574,7 +3574,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"gas breath",
-	{ 65, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 65, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_gas_breath,	TAR_IGNORE,		POS_FIGHTING,
 	NULL,			50,	12,
@@ -3583,20 +3583,20 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"lightning breath",	
-	{ 62, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 62, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_lightning_breath,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			50,	12,
 	"&cblast of &Blightning",	"!Lightning Breath!", "", FALSE, SLOT(0)
 },
 	/*
-	   {MAG,THI,CLE,WAR,PSY,DRU,RAN,PAL,BAR,VAM,
+	   {MAG,THI,CLE,WAR,PSY,DRU,RAN,PAL,VAM,
 	   NEC,WWF,PRO,PRO,PRO,PRO}
 	   */
 	/* XOR */
 {
 	"summon swarm",
-	{ L_APP, 80, L_APP, L_APP, L_APP, 60, 70, L_APP, L_APP, L_APP,
+	{ L_APP, 80, L_APP, L_APP, L_APP, 60, 70, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_summon_swarm,	TAR_CHAR_SELF,		POS_FIGHTING,
 	NULL,			50,	12,
@@ -3605,7 +3605,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"summon pack",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, 70, 80, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, 70, 80, L_APP, L_APP,
 		L_APP, 58, L_APP, L_APP, L_APP, L_APP },
 	spell_summon_pack,	TAR_CHAR_SELF,		POS_FIGHTING,
 	NULL,			50,	12,
@@ -3614,7 +3614,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"summon demon",
-	{ 90, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 90,
+	{ 90, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 90,
 		95, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_summon_demon,	TAR_CHAR_SELF,		POS_FIGHTING,
 	NULL,			50,	12,
@@ -3626,7 +3626,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 	 */
 {
 	"backstab",
-	{ L_APP, L_APP, 9, L_APP, L_APP, L_APP, L_APP, L_APP, 42, L_APP,
+	{ L_APP, L_APP, 9, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_STANDING,
 	&gsn_backstab,		0,	24,
@@ -3635,7 +3635,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"double backstab",
-	{ L_APP, L_APP, 85, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, 85, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_STANDING,
 	&gsn_backstab_2,		0,	24,
@@ -3644,7 +3644,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"palm",
-	{ L_APP, L_APP, 20, L_APP, L_APP, L_APP, L_APP, L_APP, 40, L_APP,
+	{ L_APP, L_APP, 20, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,			TAR_IGNORE, POS_RESTING,
 	&gsn_palm,			0, 0,
@@ -3653,7 +3653,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"bash",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_STANDING,
 	&gsn_bash,		0,	24,
@@ -3662,7 +3662,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"disarm",
-	{ L_APP, L_APP,    11, 9, L_APP, L_APP, 12, 14, 15, L_APP,
+	{ L_APP, L_APP,    11, 9, L_APP, L_APP, 12, 14, L_APP,
 		L_APP, 30, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_disarm,		0,	24,
@@ -3671,7 +3671,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"dodge",
-	{ 29, 26,     4, 5, 9, 25, 7, 11, 7, 14,
+	{ 29, 26,     4, 5, 9, 25, 7, 11, 14,
 		29, 5, 4, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_dodge,		0,	 0,
@@ -3680,7 +3680,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"dual",
-	{ L_APP, L_APP, 21,  14, L_APP, L_APP, 27, 21, 25, 37,
+	{ L_APP, L_APP, 21,  14, L_APP, L_APP, 27, 21, 37,
 		L_APP, L_APP, 22, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,	POS_RESTING,
 	&gsn_dual,		0,	 0,
@@ -3689,7 +3689,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"eighth attack",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_eighth_attack,	0,	 0,
@@ -3698,7 +3698,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"enhanced damage",
-	{ L_APP, 49, 14, 3, L_APP, 57, 13, 11, 26, 23,
+	{ L_APP, 49, 14, 3, L_APP, 57, 13, 11, 23,
 		L_APP, 13, 12, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_enhanced_damage,	0,	 0,
@@ -3707,7 +3707,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"enhanced damage two",
-	{ L_APP, L_APP, L_APP, 20, L_APP, L_APP,   42, 38, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, 20, L_APP, L_APP,   42, 38, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_enhanced_two,	0,	 0,
@@ -3716,7 +3716,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"enhanced hit",
-	{ L_APP, L_APP, 17, 15, 26, L_APP, 17, 16,    15, 31,
+	{ L_APP, L_APP, 17, 15, 26, L_APP, 17, 16, 31,
 		L_APP, 17, 20, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_enhanced_hit,	0,	 0,
@@ -3725,7 +3725,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"feed",			
-	{ L_APP, L_APP, L_APP,  L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 3, 
+	{ L_APP, L_APP, L_APP,  L_APP, L_APP, L_APP, L_APP, L_APP, 3, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_feed,		0,	 12,
@@ -3734,7 +3734,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"fifth attack",
-	{ L_APP, L_APP, L_APP, 29, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, 29, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_fifth_attack,	0,	 0,
@@ -3743,7 +3743,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"fourth attack",
-	{ L_APP, L_APP, L_APP, 23, L_APP, L_APP, 34, 29, 45, 40, 
+	{ L_APP, L_APP, L_APP, 23, L_APP, L_APP, 34, 29, 40, 
 		L_APP, 50, 40, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_fourth_attack,	0,	 0,
@@ -3752,7 +3752,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"hide",
-	{ L_APP, L_APP,     4, L_APP, L_APP, L_APP, 7, L_APP, 5, 8,
+	{ L_APP, L_APP,     4, L_APP, L_APP, L_APP, 7, L_APP, 8,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_RESTING,
 	&gsn_hide,		0,	12,
@@ -3763,7 +3763,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"iron grip",
-	{ L_APP, L_APP, L_APP,  19, L_APP, L_APP, L_APP, 27, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP,  19, L_APP, L_APP, L_APP, 27, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,   	 	POS_STANDING,
 	&gsn_grip,		0,	 8,
@@ -3774,7 +3774,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"flury",
-	{ L_APP, L_APP,  L_APP,  44, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP,  L_APP,  44, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_flury,		0,	 50,
@@ -3783,7 +3783,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"kick",
-	{ L_APP, L_APP,  50,  10, L_APP, L_APP, 23, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP,  50,  10, L_APP, L_APP, 23, L_APP, L_APP,
 		L_APP, L_APP, 6, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_kick,		0,	 8,
@@ -3792,7 +3792,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"high kick",
-	{ L_APP, L_APP, L_APP,  35, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP,  35, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_high_kick,		0,	 10,
@@ -3801,7 +3801,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"jump kick",
-	{ L_APP, L_APP, L_APP,  50, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP,  50, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_jump_kick,		0,	 20,
@@ -3810,7 +3810,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"spin kick",
-	{ L_APP, L_APP, L_APP,  60, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP,  60, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_spin_kick,		0,	 25,
@@ -3819,7 +3819,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"parry",
-	{ L_APP, 27, 5, 6, L_APP, 27, 9, 7, 7, 15,
+	{ L_APP, 27, 5, 6, L_APP, 27, 9, 7, 15,
 		L_APP, 5, 7, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_parry,		0,	 0,
@@ -3828,7 +3828,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"peek",
-	{ L_APP, L_APP, 23, L_APP, L_APP, L_APP, L_APP, L_APP, 29, L_APP,
+	{ L_APP, L_APP, 23, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_STANDING,
 	&gsn_peek,		0,	 0,
@@ -3837,7 +3837,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"pick lock",
-	{ L_APP, L_APP,  5, L_APP, L_APP, L_APP, L_APP, L_APP, 9, L_APP,
+	{ L_APP, L_APP,  5, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_STANDING,
 	&gsn_pick_lock,		0,	12,
@@ -3846,7 +3846,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"poison weapon",
-	{ L_APP, L_APP, 43, L_APP, L_APP, L_APP, L_APP, L_APP, 72, L_APP,
+	{ L_APP, L_APP, 43, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_OBJ_INV,		POS_STANDING,
 	&gsn_poison_weapon,	0,	12,
@@ -3855,7 +3855,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"punch",
-	{ L_APP, L_APP, L_APP,  31, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP,  31, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, 17, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_punch,		0,	 10,
@@ -3864,7 +3864,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"jab punch",
-	{ L_APP, L_APP, L_APP,  35, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP,  35, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_jab_punch,		0,	 10,
@@ -3873,7 +3873,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"kidney punch",
-	{ L_APP, L_APP, L_APP,  40, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP,  40, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_kidney_punch,		0,	 10,
@@ -3882,7 +3882,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"cross punch",
-	{ L_APP, L_APP, L_APP,  45, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP,  45, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_cross_punch,		0,	 10,
@@ -3891,7 +3891,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"roundhouse punch",
-	{ L_APP, L_APP, L_APP,  50, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP,  50, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_roundhouse_punch,		0,	 18,
@@ -3900,7 +3900,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"uppercut punch",
-	{ L_APP, L_APP, L_APP,  55, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP,  55, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_uppercut_punch,		0,	 18,
@@ -3909,7 +3909,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"rescue",
-	{ L_APP, 19, L_APP, 7, L_APP, 31, 11, 11, L_APP, L_APP,
+	{ L_APP, 19, L_APP, 7, L_APP, 31, 11, 11, L_APP,
 		L_APP, L_APP, 35, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_rescue,		0,	12,
@@ -3918,7 +3918,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"second attack",
-	{ 12, 17, 11, 3, 16, 16, 12, 8, 21, 19,
+	{ 12, 17, 11, 3, 16, 16, 12, 8, 19,
 		18, 6, 10, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_second_attack,	0,	 0,
@@ -3927,7 +3927,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"seventh attack",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_seventh_attack,	0,	 0,
@@ -3936,7 +3936,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"sixth attack",
-	{ L_APP, L_APP, L_APP, 70, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, 70, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_sixth_attack,	0,	 0,
@@ -3945,7 +3945,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"sneak",
-	{ L_APP, L_APP,  22, L_APP, L_APP, L_APP, 33, L_APP, 23, 29,
+	{ L_APP, L_APP,  22, L_APP, L_APP, L_APP, 33, L_APP, 29,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_STANDING,
 	&gsn_sneak,		0,	12,
@@ -3954,7 +3954,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"steal",
-	{ L_APP, L_APP, 13, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, 13, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_STANDING,
 	&gsn_steal,		0,	24,
@@ -3963,7 +3963,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"third attack",
-	{ L_APP, 31, 22, 9, 60, 50, 24, 19, 33, 31, 
+	{ L_APP, 31, 22, 9, 60, 50, 24, 19, 31, 
 		60, 25, 25, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_third_attack,	0,	 0,
@@ -3975,7 +3975,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 	 */
 {
 	"general purpose",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_general_purpose,  TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                   0,      12,
@@ -3984,7 +3984,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"high explosive",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_high_explosive,   TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                   0,      12,
@@ -3999,7 +3999,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"adrenaline control",
-	{ L_APP, L_APP, L_APP, L_APP, 17, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, 17, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, 30, L_APP, L_APP, L_APP },
 	spell_adrenaline_control,       TAR_CHAR_SELF,  POS_STANDING,
 	NULL,                           6,      12,
@@ -4010,7 +4010,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"agitation",
-	{ L_APP, L_APP, L_APP, L_APP,    6, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,    6, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_agitation,        TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                   10,     12,
@@ -4019,7 +4019,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"aura sight",
-	{ L_APP, L_APP, L_APP, L_APP,   14, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,   14, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_aura_sight,       TAR_CHAR_DEFENSIVE,     POS_STANDING,
 	NULL,                   9,     12,
@@ -4028,7 +4028,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"awe",
-	{ L_APP, L_APP, L_APP, L_APP,   21, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,   21, L_APP, L_APP, L_APP, L_APP,
 		85, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_awe,              TAR_CHAR_DEFENSIVE,     POS_FIGHTING,
 	NULL,                   35,     12,
@@ -4037,7 +4037,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"ballistic attack",
-	{ L_APP, L_APP, L_APP, L_APP,    3, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,    3, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_ballistic_attack, TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                   5,     12,
@@ -4046,7 +4046,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"biofeedback",
-	{ L_APP, L_APP, L_APP, L_APP,   18, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,   18, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_biofeedback,      TAR_CHAR_SELF,          POS_STANDING,
 	NULL,                   75,     12,
@@ -4058,7 +4058,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"cell adjustment",
-	{ L_APP, L_APP, L_APP, L_APP,   11, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,   11, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, 24, L_APP, L_APP, L_APP },
 	spell_cell_adjustment,  TAR_CHAR_SELF,          POS_STANDING,
 	NULL,                   8,     12,
@@ -4067,7 +4067,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"chameleon power",
-	{ L_APP, L_APP, L_APP, L_APP,   6, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,   6, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,             TAR_IGNORE,             POS_STANDING,
 	&gsn_chameleon,         0,     12,
@@ -4076,7 +4076,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"chaos field",
-	{ L_APP,  L_APP, L_APP, L_APP, 67, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP,  L_APP, L_APP, L_APP, 67, L_APP, L_APP, L_APP, L_APP,
 		75, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_chaosfield,	TAR_CHAR_SELF,  	POS_STANDING,
 	NULL,			150,	12,
@@ -4087,7 +4087,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"combat mind",
-	{ L_APP, L_APP, L_APP, L_APP,  15, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,  15, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_combat_mind,      TAR_CHAR_DEFENSIVE,     POS_STANDING,
 	NULL,                   15,     12,
@@ -4097,7 +4097,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"complete healing",
-	{ L_APP, 70, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, 70, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_complete_healing, TAR_CHAR_SELF,          POS_STANDING,
 	NULL,                   200,    12,
@@ -4106,7 +4106,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"control flames",
-	{ L_APP, L_APP, L_APP, L_APP, 11, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, 11, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_control_flames,   TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                   15,     12,
@@ -4115,7 +4115,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"create sound",
-	{ L_APP, L_APP, L_APP, L_APP, 3, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, 3, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_create_sound,     TAR_CHAR_DEFENSIVE,     POS_STANDING,
 	NULL,                   5,     12,
@@ -4124,7 +4124,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"death field",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 68,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 68,
 		70, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_death_field,      TAR_IGNORE,             POS_FIGHTING,
 	NULL,                   200,    18,
@@ -4133,7 +4133,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"detonate",
-	{ L_APP, L_APP, L_APP, L_APP,   27, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,   27, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_detonate,         TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                   35,     24,
@@ -4142,7 +4142,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"disintegrate",
-	{ L_APP, L_APP, L_APP, L_APP,   97, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,   97, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_disintegrate,     TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                   150,    18,
@@ -4151,7 +4151,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"displacement",
-	{ L_APP, L_APP, L_APP, L_APP,    9, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,    9, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_displacement,     TAR_CHAR_SELF,          POS_STANDING,
 	NULL,                   10,     12,
@@ -4162,7 +4162,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"domination",
-	{ L_APP, L_APP, L_APP, L_APP,   16, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,   16, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_domination,       TAR_CHAR_OFFENSIVE,     POS_STANDING,
 	&gsn_domination,        5,     12,
@@ -4173,7 +4173,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"ectoplasmic form",
-	{ L_APP, L_APP, L_APP, L_APP,   19, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,   19, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_ectoplasmic_form, TAR_CHAR_SELF,          POS_STANDING,
 	NULL,                   20,     12,
@@ -4185,7 +4185,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"ego whip",
-	{ L_APP, L_APP, L_APP, L_APP,   13, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,   13, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_ego_whip,         TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                   20,     12,
@@ -4196,7 +4196,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"energy containment",
-	{ L_APP, L_APP, L_APP, L_APP,   10, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,   10, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_energy_containment,       TAR_CHAR_SELF,  POS_STANDING,
 	NULL,                           10,     12,
@@ -4207,7 +4207,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"enhance armor",
-	{ L_APP, 60, L_APP, L_APP, L_APP, 60, 43, L_APP, L_APP, L_APP,
+	{ L_APP, 60, L_APP, L_APP, L_APP, 60, 43, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_enhance_armor,    TAR_OBJ_INV,    POS_STANDING,
 	NULL,                   100,    24,
@@ -4216,7 +4216,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"enhanced strength",
-	{ L_APP, L_APP, L_APP, L_APP,    7, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,    7, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, 19, L_APP, L_APP, L_APP },
 	spell_enhanced_strength,        TAR_CHAR_SELF,  POS_STANDING,
 	NULL,                           20,     12,
@@ -4228,7 +4228,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"flesh armor",
-	{ L_APP, L_APP, L_APP, L_APP,   11, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,   11, L_APP, L_APP, L_APP, L_APP,
 		43, L_APP, 21, L_APP, L_APP, L_APP },
 	spell_flesh_armor,      TAR_CHAR_SELF,          POS_STANDING,
 	NULL,                   15,     12,
@@ -4239,7 +4239,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"heighten senses",
-	{ L_APP, L_APP, 10, L_APP,      3, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, 10, L_APP,      3, L_APP, L_APP, L_APP, L_APP,
 		L_APP, 23, 14, L_APP, L_APP, L_APP },
 	spell_null,             TAR_CHAR_SELF,          POS_STANDING,
 	&gsn_heighten,          0,      0,
@@ -4249,7 +4249,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"inertial barrier",
-	{ L_APP, L_APP, L_APP, L_APP,   19, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,   19, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_inertial_barrier, TAR_IGNORE,             POS_STANDING,
 	NULL,                   40,     24,
@@ -4260,7 +4260,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"inflict pain",
-	{ L_APP, L_APP, L_APP, L_APP,    5, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,    5, L_APP, L_APP, L_APP, L_APP,
 		9, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_inflict_pain,     TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                   10,     12,
@@ -4269,7 +4269,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"intellect fortress",
-	{ L_APP, L_APP, L_APP, L_APP,   12, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,   12, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_intellect_fortress,       TAR_IGNORE,     POS_STANDING,
 	NULL,                           25,     24,
@@ -4281,7 +4281,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"lend health",
-	{ L_APP, L_APP, L_APP, L_APP,   10, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,   10, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_lend_health,      TAR_CHAR_DEFENSIVE,     POS_STANDING,
 	NULL,                   10,     12,
@@ -4290,7 +4290,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"levitation",
-	{ L_APP, L_APP, L_APP, L_APP,    3, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,    3, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, 16, L_APP, L_APP, L_APP },
 	spell_levitation,       TAR_CHAR_DEFENSIVE,     POS_STANDING,
 	NULL,                   10,     18,
@@ -4302,7 +4302,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"mental barrier",
-	{ L_APP, L_APP, L_APP, L_APP,    6, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,    6, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, 48, L_APP, L_APP, L_APP },
 	spell_mental_barrier,   TAR_CHAR_SELF,          POS_STANDING,
 	NULL,                   8,     12,
@@ -4312,7 +4312,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"mind thrust",
-	{ L_APP, L_APP, L_APP, L_APP,    3, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,    3, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_mind_thrust,      TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                   8,     12,
@@ -4321,7 +4321,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"project force",
-	{ L_APP, L_APP, L_APP, L_APP,    9, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,    9, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_project_force,    TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                   18,     12,
@@ -4330,7 +4330,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"psionic blast",
-	{ L_APP, L_APP, L_APP, L_APP,   17, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,   17, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_psionic_blast,    TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                   25,     12,
@@ -4339,7 +4339,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"psychic crush",
-	{ L_APP, L_APP, L_APP, L_APP,    8, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,    8, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_psychic_crush,    TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                   15,     18,
@@ -4348,7 +4348,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"psychic drain",
-	{ L_APP, L_APP, L_APP, L_APP,    4, L_APP, L_APP, L_APP, L_APP, L_APP, 
+	{ L_APP, L_APP, L_APP, L_APP,    4, L_APP, L_APP, L_APP, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_psychic_drain,    TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                   20,     12,
@@ -4360,7 +4360,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"psychic healing",
-	{ L_APP, L_APP, L_APP, L_APP,   5, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,   5, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, 15, L_APP, L_APP, L_APP },
 	spell_psychic_healing,  TAR_CHAR_SELF,          POS_STANDING,
 	NULL,                   20,      12,
@@ -4369,7 +4369,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"shadow form",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,             TAR_IGNORE,             POS_STANDING,
 	&gsn_shadow,            0,     12,
@@ -4379,7 +4379,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"share strength",
-	{ L_APP, L_APP, L_APP, L_APP,   11, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,   11, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_share_strength,   TAR_CHAR_DEFENSIVE,     POS_STANDING,
 	NULL,                   8,     12,
@@ -4389,7 +4389,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"thought shield",
-	{ L_APP, L_APP, L_APP, L_APP,    3, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,    3, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, 11, L_APP, L_APP, L_APP },
 	spell_thought_shield,   TAR_CHAR_SELF,          POS_STANDING,
 	NULL,                   5,     12,
@@ -4399,7 +4399,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"ultrablast",
-	{ L_APP, L_APP, L_APP, L_APP,   25, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,   25, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_ultrablast,       TAR_IGNORE,             POS_FIGHTING,
 	NULL,                   75,     24,
@@ -4409,7 +4409,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"cancellation",
-	{ L_APP, 56, L_APP, L_APP, L_APP, 72, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, 56, L_APP, L_APP, L_APP, 72, L_APP, L_APP, L_APP,
 		60, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_cancellation,	TAR_CHAR_DEFENSIVE,	POS_FIGHTING,
 	NULL, 			15,	16,
@@ -4418,7 +4418,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"throw",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null, TAR_CHAR_OFFENSIVE, POS_STANDING,
 	&gsn_throw,   0,  0,
@@ -4431,7 +4431,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 	 */
 {
 	"turn undead",
-	{ L_APP, 58, L_APP, L_APP, L_APP, L_APP, L_APP, 71, L_APP, L_APP,
+	{ L_APP, 58, L_APP, L_APP, L_APP, L_APP, L_APP, 71, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_turn_undead, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
 	NULL,              100,     12,
@@ -4440,7 +4440,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"mental block",
-	{ L_APP, L_APP, L_APP, L_APP, 27, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, 27, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, 100, L_APP, L_APP, L_APP },
 	spell_mental_block, TAR_CHAR_DEFENSIVE, POS_STANDING,
 	NULL,               25,     8,
@@ -4453,7 +4453,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 	 */
 {
 	"patch",
-	{ L_APP, L_APP, L_APP, 26, L_APP, L_APP, 68, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, 26, L_APP, L_APP, 68, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,     TAR_IGNORE, POS_STANDING,
 	&gsn_patch,     0, 0,
@@ -4462,7 +4462,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"flamesphere",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	gspell_flamesphere, TAR_GROUP_OFFENSIVE, POS_STANDING,
 	NULL,           14, 20,
@@ -4471,7 +4471,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"bash door",
-	{ L_APP, L_APP, L_APP,   18, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP,   18, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_STANDING,
 	&gsn_bash_door,		0,	24,
@@ -4480,7 +4480,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"mental drain",
-	{ L_APP, L_APP, L_APP, L_APP,  30, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP,  30, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_mental_drain,	0,	12,
@@ -4489,7 +4489,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"drain life",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 10,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 10,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_drain_life,	0,	12,
@@ -4498,7 +4498,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"holy strength",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 30, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 30, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_holy_strength,	TAR_CHAR_SELF,		POS_STANDING,
 	NULL,			100,	12,
@@ -4508,7 +4508,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"curse of nature",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, 30, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, 30, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_curse_of_nature,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			100,	12,
@@ -4518,7 +4518,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"detect good",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 22, L_APP, L_APP, 15,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 22, L_APP, 15,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_detect_good,	TAR_CHAR_SELF,		POS_STANDING,
 	NULL,			5,	12,
@@ -4528,7 +4528,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"protection good",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_protection_good,	TAR_CHAR_SELF,		POS_STANDING,
 	NULL,			5,	12,
@@ -4538,7 +4538,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"shield block",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_shield_block,	0,	 0,
@@ -4547,7 +4547,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"enchantment",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 30, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_enchanted_song,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			100,	12,
@@ -4557,7 +4557,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"turn evil",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_turn_evil,		0,	12,
@@ -4566,7 +4566,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"mass shield",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	gspell_mass_shield,     TAR_GROUP_ALL,    POS_STANDING,
 	NULL,              80,  12,
@@ -4575,7 +4575,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"gouge",
-	{ L_APP, L_APP, 20, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, 20, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,             TAR_IGNORE,             POS_FIGHTING,
 	&gsn_gouge,             0,      12,
@@ -4584,7 +4584,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"holy sword", 
-	{ L_APP, 52, L_APP, L_APP, L_APP, L_APP, L_APP, 56, L_APP, L_APP,
+	{ L_APP, 52, L_APP, L_APP, L_APP, L_APP, L_APP, 56, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_holysword,         TAR_OBJ_INV,        POS_STANDING,
 	NULL,			100,	24,
@@ -4593,7 +4593,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"summon angel",
-	{ L_APP, 80, L_APP, L_APP, L_APP, L_APP, L_APP, 86, L_APP, L_APP,
+	{ L_APP, 80, L_APP, L_APP, L_APP, L_APP, L_APP, 86, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_summon_angel,	TAR_CHAR_SELF,		POS_FIGHTING,
 	NULL,			100,	12,
@@ -4602,7 +4602,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"holy fires",
-	{ L_APP, 32, L_APP, L_APP, L_APP, L_APP, L_APP, 40, L_APP, L_APP,
+	{ L_APP, 32, L_APP, L_APP, L_APP, L_APP, L_APP, 40, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_holy_fires,	TAR_CHAR_OFFENSIVE,      POS_FIGHTING,
 	NULL,			50,	12,
@@ -4611,7 +4611,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"true sight",
-	{    51,   55,   L_APP, L_APP, 36, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{    51,   55,   L_APP, L_APP, 36, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_truesight,	TAR_CHAR_SELF,		POS_STANDING,
 	NULL,			59,	12,
@@ -4621,7 +4621,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"blade barrier",
-	{ L_APP,  100, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP,  100, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_bladebarrier,	TAR_CHAR_SELF,  	POS_STANDING,
 	NULL,			150,	12,
@@ -4631,7 +4631,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 { 
 	"alchemy",
-	{ L_APP, 75, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, 75, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,              TAR_IGNORE,             POS_STANDING,
 	&gsn_alchemy,             0,  50,
@@ -4640,7 +4640,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 { 
 	"scribe",
-	{ 60, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 60, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		72, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,              TAR_IGNORE,             POS_STANDING,
 	&gsn_scribe,             0,  50,
@@ -4649,7 +4649,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"flame blade", 
-	{ L_APP, 62, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, 62, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_flame_blade,       TAR_OBJ_INV,        POS_STANDING,
 	NULL,			100,	24,
@@ -4658,7 +4658,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"chaos blade", 
-	{ L_APP, L_APP, L_APP, L_APP, 60, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, 60, L_APP, L_APP, L_APP, L_APP,
 		90, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_chaos_blade,       TAR_OBJ_INV,        POS_STANDING,
 	NULL,			100,	24,
@@ -4667,7 +4667,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"frost blade", 
-	{ L_APP, 82, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, 82, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_frost_blade,       TAR_OBJ_INV,        POS_STANDING,
 	NULL,			100,	24,
@@ -4676,7 +4676,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"stun",
-	{ L_APP, L_APP, L_APP, 43, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, 43, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,           TAR_IGNORE,           POS_FIGHTING,
 	&gsn_stun,            0, 0,
@@ -4685,7 +4685,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"berserk",
-	{ L_APP, L_APP, L_APP, 76, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, 76, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,       TAR_IGNORE,       POS_FIGHTING,
 	&gsn_berserk,     0, 0,
@@ -4695,7 +4695,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"web", 
-	{ 12, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 12, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_web,         TAR_CHAR_OFFENSIVE,        POS_FIGHTING,      
 	NULL,			25,	14,
@@ -4705,7 +4705,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"entangle", 
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, 19, 32, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, 19, 32, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_entangle,          TAR_CHAR_OFFENSIVE,        POS_FIGHTING,
 	NULL,			25,	14,
@@ -4715,7 +4715,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"dark blessing",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 26,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 26,
 		61, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_darkbless,       TAR_CHAR_DEFENSIVE,        POS_STANDING,
 	NULL,			50,	24,
@@ -4725,7 +4725,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 	/* 250 */
 {
 	"bio-acceleration", 
-	{ L_APP, L_APP, L_APP, L_APP, 29, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, 29, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_bio_acceleration,  TAR_CHAR_SELF,        POS_STANDING,
 	NULL,			50,	24,
@@ -4735,7 +4735,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"confusion", 
-	{ 57, L_APP, L_APP, L_APP, 58, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 57, L_APP, L_APP, L_APP, 58, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_confusion,       TAR_CHAR_OFFENSIVE,        POS_FIGHTING,
 	NULL,			50,	24,
@@ -4745,7 +4745,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"mind probe", 
-	{ L_APP, L_APP, L_APP, L_APP, 43, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, 43, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_mind_probe,       TAR_CHAR_DEFENSIVE,        POS_STANDING,
 	NULL,			50,	24,
@@ -4754,7 +4754,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"haste",
-	{ 75, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 75, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_haste,		TAR_CHAR_DEFENSIVE,	POS_STANDING,
 	NULL,			30,	12,
@@ -4764,7 +4764,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"trip",
-	{ L_APP, L_APP, 35, L_APP, L_APP, L_APP, L_APP, L_APP, 55, L_APP,
+	{ L_APP, L_APP, 35, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,             TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_trip,              0,      12,
@@ -4773,7 +4773,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"dirt kick",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,             TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_dirt_kick,		0,      12,
@@ -4782,7 +4782,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"chain lightning",
-	{ 42, L_APP, L_APP, L_APP, L_APP, 57, L_APP, L_APP, L_APP, L_APP,
+	{ 42, L_APP, L_APP, L_APP, L_APP, 57, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_chain_lightning,	TAR_IGNORE,		POS_FIGHTING,
 	NULL,			50,	22,
@@ -4791,7 +4791,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"meteor swarm",
-	{ 72, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 72, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_meteor_swarm,	TAR_IGNORE,		POS_FIGHTING,
 	NULL,			150,	25,
@@ -4800,7 +4800,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"psychic quake",
-	{ L_APP, L_APP, L_APP, L_APP, 79, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, 79, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_psychic_quake,	TAR_IGNORE,		POS_FIGHTING,
 	NULL,			150,	25,
@@ -4809,7 +4809,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"fumble", 
-	{ 37, L_APP, L_APP, L_APP, 38, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 37, L_APP, L_APP, L_APP, 38, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_fumble,       TAR_CHAR_OFFENSIVE,        POS_STANDING,
 	NULL,			50,	24,
@@ -4819,7 +4819,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"dancing lights",
-	{ 41, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 41, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_dancing_lights,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			50,	12,
@@ -4829,7 +4829,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"shadow walk",
-	{ L_APP, L_APP, 71, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, 71, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,             TAR_IGNORE,             POS_STANDING,
 	&gsn_shadow_walk,       0,     22,
@@ -4838,7 +4838,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"circle",
-	{ L_APP, L_APP, 80, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, 80, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_circle,		0,	 12,
@@ -4847,7 +4847,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"summon shadow",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 69,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 69,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_summon_shadow,	TAR_CHAR_SELF,		POS_FIGHTING,
 	NULL,			100,	12,
@@ -4856,7 +4856,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"summon beast",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, 47, 62, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, 47, 62, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_summon_beast,	TAR_CHAR_SELF,		POS_FIGHTING,
 	NULL,			100,	12,
@@ -4865,7 +4865,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"summon treant",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, 76, 97, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, 76, 97, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_summon_trent,	TAR_CHAR_SELF,		POS_FIGHTING,
 	NULL,			100,	12,
@@ -4874,7 +4874,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"shatter",
-	{ 79, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 79, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_shatter,  	TAR_CHAR_OFFENSIVE,		POS_FIGHTING,
 	NULL,		        150,	32,
@@ -4883,7 +4883,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"molecular unbinding",
-	{ L_APP, L_APP, L_APP, L_APP, 66, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, 66, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_molecular_unbind,	TAR_CHAR_OFFENSIVE,		POS_FIGHTING,
 	NULL,			100,	32,
@@ -4892,7 +4892,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"phase shift",
-	{ L_APP, L_APP, L_APP, L_APP, 70, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, 70, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_phase_shift,	TAR_CHAR_SELF,		POS_STANDING,
 	NULL,			100,	12,
@@ -4902,7 +4902,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"disrupt",
-	{ L_APP, L_APP, L_APP, L_APP, 92, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, 92, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_disrupt,        TAR_CHAR_OFFENSIVE,       POS_FIGHTING,
 	NULL,                 125,     12,
@@ -4912,7 +4912,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"soulstrike",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 73, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 73, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,           TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	&gsn_soulstrike,      0,      24,
@@ -4921,7 +4921,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"healing hands",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 48, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 48, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_healing_hands,      TAR_CHAR_DEFENSIVE,    POS_STANDING,
 	NULL,              40,     12,
@@ -4930,7 +4930,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"pray",
-	{ L_APP, 23, L_APP, L_APP, L_APP, L_APP, L_APP, 27, L_APP, L_APP,
+	{ L_APP, 23, L_APP, L_APP, L_APP, L_APP, L_APP, 27, L_APP,
 		L_APP, L_APP, 43, L_APP, L_APP, L_APP },
 	spell_null,           TAR_CHAR_SELF,    POS_RESTING,
 	&gsn_prayer,       0, 12,
@@ -4939,7 +4939,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"spellcraft",
-	{ 25, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 25, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		60, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		  TAR_IGNORE,	POS_FIGHTING,
 	&gsn_spellcraft,	0, 0,
@@ -4947,7 +4947,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"multiburst",
-	{ 80, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 80, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_multiburst,	0, 8,
@@ -4956,7 +4956,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 	/* Necromancer spells by Hannibal. */
 {
 	"hex",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		60, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_hex,		 TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,	 	75, 12,
@@ -4965,7 +4965,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"dark ritual",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		10, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_dark_ritual,  TAR_IGNORE,		POS_STANDING,
 	NULL,		5, 12,
@@ -4973,7 +4973,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"gravebind",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		10, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_OBJ_INV,		POS_RESTING,
 	&gsn_gravebind,		0, 0,
@@ -4981,7 +4981,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"field of decay",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		80, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_field_of_decay,	TAR_CHAR_SELF, POS_RESTING,
 	NULL,			300, 12,
@@ -4990,7 +4990,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"stench of decay",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		25, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_stench_of_decay,	TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			15, 12,
@@ -4999,7 +4999,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 	/* Werewolf starts here -- Hannibal */
 {
 	"enhanced claws",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, 3, L_APP, L_APP, L_APP, L_APP },
 	spell_null,			TAR_IGNORE, POS_FIGHTING,
 	&gsn_enhanced_claw,		0, 0,
@@ -5007,7 +5007,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"dual claws",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, 9, L_APP, L_APP, L_APP, L_APP },
 	spell_null,			TAR_IGNORE, POS_FIGHTING,
 	&gsn_dualclaw,		0, 0,
@@ -5015,7 +5015,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"fast healing",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, 21, L_APP, L_APP, L_APP, L_APP },
 	spell_null,			TAR_IGNORE, POS_SLEEPING,
 	&gsn_fastheal,		0, 0,
@@ -5023,7 +5023,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"rage",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, 9, L_APP, L_APP, L_APP, L_APP },
 	spell_null,			TAR_IGNORE,	POS_RESTING,
 	&gsn_rage,			0, 24,
@@ -5032,7 +5032,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"bite",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, 9, L_APP, L_APP, L_APP, L_APP },
 	spell_null,			TAR_CHAR_OFFENSIVE, POS_FIGHTING,
 	&gsn_bite,			0, 12,
@@ -5040,7 +5040,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 }, 
 {
 	"adrenaline rush",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, 27, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,	POS_RESTING,
 	&gsn_rush,			0, 12,
@@ -5051,7 +5051,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"howl of fear",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, 60, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_howlfear,		0, 24,
@@ -5061,7 +5061,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"scent",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, 60, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_RESTING,
 	&gsn_scent,			0, 0,
@@ -5069,7 +5069,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"frenzy",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, 75, L_APP, L_APP, L_APP, L_APP },
 	spell_null,       TAR_IGNORE,       POS_FIGHTING,
 	&gsn_frenzy,     0, 0,
@@ -5078,7 +5078,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"enhanced reflexes",
-	{ L_APP, L_APP, 70, 79, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, 70, 79, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, 70, 76, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_SELF,	POS_STANDING,
 	&gsn_reflex,	0, 36,
@@ -5086,7 +5086,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"rake eyes",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, 55, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_STANDING,
 	&gsn_rake,		0, 36,
@@ -5095,7 +5095,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"song of sanctuary",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 41, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_sanctuary,    TAR_CHAR_DEFENSIVE,     POS_STANDING,
 	NULL,                       75,     12,
@@ -5105,7 +5105,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"missiles",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 3, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_magic_missile,        TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                       15,     12,
@@ -5114,7 +5114,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"voices",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 3, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_ventriloquate,        TAR_IGNORE,             POS_STANDING,
 	NULL,                       5,      12,
@@ -5123,7 +5123,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"song of evil sight",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },   
 	spell_detect_evil,  TAR_CHAR_SELF,          POS_STANDING,
 	NULL,                       5,      12,
@@ -5133,7 +5133,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"icy touch",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 7, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_chill_touch,  TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                       15,     12,
@@ -5143,7 +5143,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"song of alignment",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_know_alignment,       TAR_CHAR_DEFENSIVE,     POS_FIGHTING,
 	NULL,                       9,      12,
@@ -5152,7 +5152,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"night vision",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 9, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_infravision,  TAR_CHAR_DEFENSIVE,     POS_STANDING,
 	NULL,                       5,      18,
@@ -5162,7 +5162,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"protection",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 10, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_armor,                TAR_CHAR_DEFENSIVE,     POS_STANDING,
 	NULL,                       5,      12,
@@ -5172,7 +5172,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"fiery touch",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 10, L_APP, 
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_burning_hands,        TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                       15,     12,
@@ -5181,7 +5181,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"soothing",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 10, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_cure_light,   TAR_CHAR_DEFENSIVE,     POS_FIGHTING,
 	NULL,                       10,     12,
@@ -5199,7 +5199,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"sight",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 13, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_detect_magic, TAR_CHAR_SELF,          POS_STANDING,
 	NULL,                       5,      12,
@@ -5209,7 +5209,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"flight",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 17, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_fly,          TAR_CHAR_DEFENSIVE,     POS_STANDING,
 	NULL,                       10,     18,
@@ -5219,7 +5219,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"shocking",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 15, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_shocking_grasp,       TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                       15,     12,
@@ -5229,7 +5229,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"enticement",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 21, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_charm_person, TAR_CHAR_OFFENSIVE,     POS_STANDING,
 	&gsn_charm_person,  5,      12,
@@ -5239,7 +5239,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"vision",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 21, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_scry,         TAR_CHAR_SELF,          POS_STANDING,
 	NULL,                       35,     20,
@@ -5249,7 +5249,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"giants",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 7, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_giant_strength,       TAR_CHAR_DEFENSIVE,     POS_STANDING,
 	NULL,                       20,     12,
@@ -5259,7 +5259,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"seeing",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 28, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_detect_invis, TAR_CHAR_SELF,          POS_STANDING,
 	NULL,                       5,      12,
@@ -5269,7 +5269,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"flames",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 23, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_flamestrike,  TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                       20,     12,
@@ -5278,7 +5278,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"location",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 29, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_locate_object,        TAR_IGNORE,             POS_STANDING,
 	NULL,                       20,     18,
@@ -5287,7 +5287,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"invisibility",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 31, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_invis,                TAR_CHAR_DEFENSIVE,     POS_STANDING,
 	&gsn_invis,         5,      12,
@@ -5297,7 +5297,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"homeward bound",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 31, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_word_of_recall,       TAR_CHAR_SELF,          POS_RESTING,
 	NULL,                       5,      12,
@@ -5306,7 +5306,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"poison sight",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 32, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_detect_poison,        TAR_OBJ_INV,            POS_STANDING,
 	NULL,                       5,      12,
@@ -5315,7 +5315,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"shielding",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 19, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_shield,               TAR_CHAR_DEFENSIVE,     POS_STANDING,
 	NULL,                       12,     18,
@@ -5325,7 +5325,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"boosting",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 25, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_adrenaline_control,       TAR_CHAR_SELF,  POS_STANDING,
 	NULL,                           6,      12,
@@ -5335,7 +5335,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"song of acid blast",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 35, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_acid_blast,   TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                       20,     12,
@@ -5344,7 +5344,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"song of colour spray",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 34, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_colour_spray, TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	NULL,                       15,     12,
@@ -5354,7 +5354,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"song of hidden sight",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 43, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_detect_hidden,        TAR_CHAR_SELF,          POS_STANDING,
 	NULL,                       5,      12,
@@ -5364,7 +5364,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"song of cursing",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 35, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_curse,                TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
 	&gsn_curse,                 20,     12,
@@ -5374,7 +5374,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"song of earthquake",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 41, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_earthquake,           TAR_IGNORE,             POS_FIGHTING,
 	NULL,                       15,     12,
@@ -5383,7 +5383,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"song of faerie fire",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 34, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_faerie_fire,          TAR_CHAR_OFFENSIVE,    POS_FIGHTING,
 	NULL,                       5,      12,
@@ -5393,7 +5393,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"song of astral travel",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 54, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_astral,               TAR_IGNORE,            POS_STANDING,
 	NULL,                       50,     12,
@@ -5402,7 +5402,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"song of the ghosts",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 57, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_pass_door,            TAR_CHAR_SELF,         POS_STANDING,
 	NULL,                       20,     12,
@@ -5412,7 +5412,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"song of revealing",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 59, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_faerie_fog,            TAR_IGNORE,           POS_STANDING,
 	NULL,                        12,     12,
@@ -5421,7 +5421,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"song of stone",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 49, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_stone_skin,            TAR_CHAR_SELF,        POS_STANDING,
 	NULL,                        12,     18,
@@ -5431,7 +5431,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"lullaby",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 64, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_sleep,                 TAR_CHAR_OFFENSIVE,   POS_STANDING,
 	&gsn_sleep,                  15,     12,
@@ -5441,7 +5441,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"song of fiery death",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 58, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_fireball,             TAR_CHAR_OFFENSIVE,   POS_FIGHTING,
 	NULL,                       15,     12,
@@ -5450,7 +5450,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"song of cancellation",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 86, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_cancellation,          TAR_CHAR_DEFENSIVE,   POS_FIGHTING,
 	NULL,                        15,     16,
@@ -5459,7 +5459,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"song of sight",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 90, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_truesight,             TAR_CHAR_SELF,        POS_STANDING,
 	NULL,                        59,     12,  
@@ -5469,7 +5469,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"song of fireshield",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 71, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_fireshield,            TAR_CHAR_DEFENSIVE,   POS_STANDING,
 	NULL,                        75,     12,
@@ -5479,7 +5479,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"song of portal",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 91, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_portal,                TAR_IGNORE,           POS_STANDING,
 	NULL,                        100,    12,
@@ -5488,7 +5488,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"song of healing",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 47, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_heal,                  TAR_CHAR_DEFENSIVE,   POS_FIGHTING,
 	NULL,                        50,     12,
@@ -5496,7 +5496,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"track",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,    30, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,    30, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,         TAR_IGNORE,             POS_STANDING,
 	&gsn_track,         0,       0,
@@ -5504,7 +5504,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 }, 
 {
 	"headbutt",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_headbutt,	0,	0,
@@ -5512,7 +5512,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"pass plant",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP,    80, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP,    80, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_pass_plant,               TAR_IGNORE,             POS_STANDING,
 	NULL,                       50,     12,
@@ -5521,7 +5521,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"flamehand",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, 35, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_SELF,		POS_STANDING,
 	&gsn_flamehand,	0,	0,
@@ -5530,7 +5530,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"frosthand",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, 60, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_SELF,		POS_STANDING,
 	&gsn_frosthand,	0,	0,
@@ -5539,7 +5539,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"chaoshand",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, 85, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_SELF,		POS_STANDING,
 	&gsn_chaoshand,	0,	0,
@@ -5549,7 +5549,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"bladepalm",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, 55, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_bladepalm,	0,	18,
@@ -5557,7 +5557,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"flying kick",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, 50, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_flykick,	0,	12,
@@ -5565,7 +5565,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"anatomy knowledge",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, 75, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_STANDING,
 	&gsn_anatomyknow,	0,	0,
@@ -5573,7 +5573,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"blackbelt",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, 13, L_APP, L_APP, L_APP },
 	spell_null,         TAR_IGNORE,             POS_FIGHTING,
 	&gsn_blackbelt,     0,      0,
@@ -5581,7 +5581,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"nerve",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, 95, L_APP, L_APP, L_APP },
 	spell_null,         TAR_CHAR_OFFENSIVE,             POS_FIGHTING,
 	&gsn_nerve,     0,      24,
@@ -5590,7 +5590,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"soulbind",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		100, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_soul_bind,         TAR_CHAR_OFFENSIVE,             POS_FIGHTING,
 	NULL,     200,      18,
@@ -5598,7 +5598,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"iron skin",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, 65, L_APP, L_APP, L_APP },
 	spell_iron_skin,      TAR_CHAR_SELF,          POS_STANDING,
 	NULL,                   50,     12,
@@ -5608,7 +5608,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"chi shield",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, 45, L_APP, L_APP, L_APP },
 	spell_chi_shield,      TAR_CHAR_SELF,          POS_STANDING,
 	NULL,                   75,     12,
@@ -5617,7 +5617,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"ironfist",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, 25, L_APP, L_APP, L_APP },
 	spell_null,      TAR_CHAR_SELF,          POS_STANDING,
 	&gsn_ironfist,     0,     12,
@@ -5626,7 +5626,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"Globe of Darkness",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_globedark,		50,	0,
@@ -5636,7 +5636,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"drow fire",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_drowfire,	0,	12,
@@ -5648,7 +5648,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"snatch",
-	{ L_APP, L_APP, 45, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, 45, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_snatch,		0,	12,
@@ -5657,7 +5657,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"enhanced damage three",
-	{ L_APP, L_APP, L_APP, 55, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, 55, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_enhanced_three,	0,	 0,
@@ -5666,7 +5666,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"retreat",
-	{ L_APP, L_APP, 25, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, 25, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_retreat,	0,	 0,
@@ -5676,7 +5676,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"antidote",
-	{ L_APP, L_APP, 57, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, 57, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_antidote,	0,	 0,
@@ -5684,7 +5684,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"haggle",
-	{ L_APP, L_APP, 8, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, 8, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_haggle,	0,	 0,
@@ -5692,7 +5692,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"blind fighting",
-	{ L_APP, L_APP, 55, 45, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, 55, 45, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_blindfight,	0,	 0,
@@ -5700,7 +5700,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"enhanced dodge",
-	{ L_APP, L_APP, 20, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, 20, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_dodge_two,	0,	 0,
@@ -5709,7 +5709,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"ethereal mist", 
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 39,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 39,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },   
 	spell_pass_door,    TAR_CHAR_SELF,          POS_STANDING,
 	NULL,                       20,     12,
@@ -5719,7 +5719,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"mist form",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 42,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 42,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_mist_form,  TAR_CHAR_SELF,          POS_STANDING,
 	NULL,                       100,    12,
@@ -5729,7 +5729,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"golden aura",
-	{ L_APP, 60, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, 60, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_golden_aura,	TAR_CHAR_DEFENSIVE,	POS_STANDING,
 	NULL,			75,	12,
@@ -5739,7 +5739,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"shriek",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 43, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	&gsn_shriek,	0,	 16,
@@ -5747,7 +5747,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"acidic spit",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_IGNORE,		POS_FIGHTING,
 	&gsn_spit,	0,	0,
@@ -5756,7 +5756,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"ward of safety", 
-	{ L_APP, 100, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, 100, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,       TAR_IGNORE,        POS_STANDING,
 	&gsn_ward_safe,			100,	12,
@@ -5766,7 +5766,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"ward of healing", 
-	{ L_APP, 100, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, 100, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,       TAR_IGNORE,        POS_STANDING,
 	&gsn_ward_heal,			200,	12,
@@ -5777,7 +5777,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"thunder strike",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, 70, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, 70, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_thunder_strike,		TAR_CHAR_OFFENSIVE, POS_FIGHTING,
 	NULL,			15,	12,
@@ -5786,7 +5786,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"inspiration",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 50, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_inspiration,		TAR_CHAR_DEFENSIVE, POS_STANDING,
 	NULL,			15,	12,
@@ -5796,7 +5796,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"warcry",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 60, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_war_cry,		TAR_CHAR_OFFENSIVE, POS_FIGHTING,
 	NULL,			15,	12,
@@ -5805,7 +5805,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"group healing",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_group_healing,       TAR_CHAR_DEFENSIVE,     POS_FIGHTING,
 	NULL,                       50,     12,
@@ -5814,7 +5814,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"chant",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_chant,		TAR_CHAR_OFFENSIVE,	POS_FIGHTING,
 	NULL,			50,	12,
@@ -5823,7 +5823,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"aid",
-	{ L_APP, 36, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, 36, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_aid,		TAR_CHAR_DEFENSIVE,	POS_STANDING,
 	NULL,			30,	12,
@@ -5835,7 +5835,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"bark skin",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, 40, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, 40, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_bark_skin,	TAR_CHAR_SELF,		POS_STANDING,
 	NULL,			8,	18,
@@ -5847,7 +5847,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"blur",
-	{ 10, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 10, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_blur,     TAR_CHAR_SELF,          POS_STANDING,
 	NULL,                   15,     12,
@@ -5858,7 +5858,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"firewall",
-	{ 50, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 50, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_firewall,	TAR_IGNORE,		POS_FIGHTING,
 	NULL,			55,	22,
@@ -5867,7 +5867,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"draw strength", 
-	{ L_APP, L_APP, L_APP, L_APP, 82, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, 82, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_draw_strength,  TAR_CHAR_SELF,        POS_STANDING,
 	NULL,			80,	40,
@@ -5877,7 +5877,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"scrolls",
-	{ 3, 5, 15, 20, 8, 7, 18, 18, 12, 17, 7, 20, 18, L_APP, L_APP, L_APP },
+	{ 3, 5, 15, 20, 8, 7, 18, 18, 17, 7, 20, 18, L_APP, L_APP, L_APP },
 	spell_null,           TAR_IGNORE,   POS_STANDING,
 	&gsn_scrolls,    0, 0,
 	"&Wfailure",    "!Scrolls!", "", FALSE, SLOT(0)
@@ -5885,7 +5885,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"wands",
-	{ 3, 5, 15, 20, 8, 7, 18, 18, 12, 17, 7, 20, 18, L_APP, L_APP, L_APP },
+	{ 3, 5, 15, 20, 8, 7, 18, 18, 17, 7, 20, 18, L_APP, L_APP, L_APP },
 	spell_null,           TAR_IGNORE,   POS_STANDING,
 	&gsn_wands,    0, 0,
 	"&Wfailure",    "!Wands!", "", FALSE, SLOT(0)
@@ -5893,7 +5893,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"staves",
-	{ 3, 5, 15, 20, 8, 7, 18, 18, 12, 17, 7, 20, 18, L_APP, L_APP, L_APP },
+	{ 3, 5, 15, 20, 8, 7, 18, 18, 17, 7, 20, 18, L_APP, L_APP, L_APP },
 	spell_null,           TAR_IGNORE,   POS_STANDING,
 	&gsn_staves,    0, 0,
 	"&Wfailure",    "!Staves!", "", FALSE, SLOT(0)
@@ -5901,21 +5901,21 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"purify",
-	{ L_APP, 100, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, 100, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_purify, TAR_CHAR_DEFENSIVE, POS_STANDING,
 	NULL, 70, 12, "", "!purify!", FALSE,  SLOT(0)
 },
 {
 	"lure",
-	{ L_APP, L_APP, 8, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, 8, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP,      L_APP,      L_APP, L_APP,      L_APP,      L_APP },
 	spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
 	&gsn_lure, 0,   32, "", "!lure!", FALSE, SLOT(0)
 },
 {
 	"image",
-	{ 100, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 100, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP,      L_APP,      L_APP, L_APP,      L_APP,      L_APP },
 	spell_image, TAR_CHAR_DEFENSIVE, POS_STANDING,
 	&gsn_image, 50, 12, "",
@@ -5924,7 +5924,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"silence",
-	{ 75, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 
+	{ 75, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 
 		L_APP,      L_APP,      L_APP, L_APP,      L_APP,      L_APP },
 	spell_silence,	TAR_CHAR_OFFENSIVE, POS_STANDING,
 	NULL, 60,	12, "", "You may cast spells again.", 
@@ -5933,14 +5933,14 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"flip",
-	{ L_APP, L_APP, 4, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, 4, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP,      L_APP,      L_APP, L_APP,      L_APP,      L_APP },
 	spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
 	&gsn_flip, 0,  32, "flip", "!flip!", FALSE, SLOT(0)
 },
 {
 	"hallucinate",
-	{ 19, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 
+	{ 19, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 
 		L_APP,      L_APP,      L_APP, L_APP,      L_APP,      L_APP },
 	spell_hallucinate,	TAR_CHAR_OFFENSIVE, POS_STANDING,
 	NULL, 160,	12, "", "You regain your sanity.", 
@@ -5948,7 +5948,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"unholystrength",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		80,      L_APP,      L_APP, L_APP,      L_APP,      L_APP },
 	spell_unholystrength, TAR_CHAR_DEFENSIVE, POS_STANDING,
 	&gsn_unholystrength, 50, 12, "",
@@ -5957,7 +5957,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"plague",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_null,		TAR_CHAR_OFFENSIVE,	POS_STANDING,
 	&gsn_plague,		10,	12,
@@ -5967,7 +5967,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 {
 	"manabomb",
-	{ 100, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
+	{ 100, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_manabomb,		TAR_CHAR_DEFENSIVE,	POS_STANDING,
 	NULL,			500,	12,
@@ -5976,7 +5976,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 {
 	"vaccinate",
-	{ L_APP, 18, L_APP, L_APP, L_APP, 20, L_APP, L_APP, L_APP, L_APP, 
+	{ L_APP, 18, L_APP, L_APP, L_APP, 20, L_APP, L_APP, L_APP, 
 		37, L_APP, L_APP, L_APP, L_APP, L_APP },
 	spell_vaccinate,	TAR_CHAR_DEFENSIVE,	POS_STANDING,
 	NULL,			5,	12,
@@ -5992,7 +5992,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 	 */
 {
 	"",
-	{999,999,999,999,999,999,999,999,999,999,
+	{999,999,999,999,999,999,999,999,999,
 		999,999,999,999,999,999},
 	spell_null,     0, 0,
 	NULL, 0, 0,
@@ -6006,8 +6006,8 @@ const struct gskill_type gskill_table [MAX_GSPELL] =
 	 * The globals for group spells..
 	 * -- Altrag
 	 */
-	/*{wait,SLOT(slot),{MAG,CLE,THI,WAR,PSI,DRU,RAN,PAL,BAR,VAM,
+	/*{wait,SLOT(slot),{MAG,CLE,THI,WAR,PSI,DRU,RAN,PAL,VAM,
 	  NEC,WWF,MNK,PRO,PRO,PRO},*/
-	{ 3, SLOT(221), {0,0,0,0,0,0,0,0,0,1,0} },
+	{ 3, SLOT(221), {0,0,0,0,0,0,0,0,1,0,0} },
 	{ 2, SLOT(227), {2,1,0,0,2,1,0,0,0,0,0} },
 };

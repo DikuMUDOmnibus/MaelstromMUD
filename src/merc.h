@@ -147,7 +147,7 @@ typedef void SPELL_FUN                  args( ( int sn, int level,
  */
 #define MAX_SKILL		   344
 #define MAX_GSPELL                 2
-#define MAX_CLASS		   13
+#define MAX_CLASS		   12
 #define MAX_RACE                   18
 #define MAX_CLAN                   21 /*max 20 clans + 1 for clan 0*/
 #define MAX_LEVEL		   113
