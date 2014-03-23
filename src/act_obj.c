@@ -1984,11 +1984,11 @@ void do_triple( CHAR_DATA *ch, char *argument )
 		send_to_char(AT_WHITE, "You cannot.\n\r", ch );
 		return;
 	}
-	if ( ch->race != RACE_KREEN )
-	{   
-		send_to_char( AT_WHITE, "You aren't a Kreen.\n\r", ch );
-		return;
-	}
+	// if ( ch->race != RACE_KREEN )
+	// {   
+	// 	send_to_char( AT_WHITE, "You aren't a Kreen.\n\r", ch );
+	// 	return;
+	// }
 
 	if ( CAN_WEAR( obj, ITEM_WIELD ) )
 	{ 

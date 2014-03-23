@@ -1730,8 +1730,8 @@ void spell_cure_critical( int sn, int level, CHAR_DATA *ch, void *vo )
 	int        heal;
 
 	heal = dice( 3, 8 ) + level - 6;
-	if ( ch->race == RACE_ANGEL )
-		heal = heal * 2;
+	// if ( ch->race == RACE_ANGEL )
+	// 	heal = heal * 2;
 	victim->hit = UMIN( victim->hit + heal, MAX_HIT(victim)) ;
 	update_pos( victim );
 
@@ -1749,8 +1749,8 @@ void spell_cure_light( int sn, int level, CHAR_DATA *ch, void *vo )
 	int        heal;
 
 	heal = dice( 1, 8 ) + level / 3;
-	if ( ch->race == RACE_ANGEL )
-		heal = heal * 2;
+	// if ( ch->race == RACE_ANGEL )
+	// 	heal = heal * 2;
 	victim->hit = UMIN( victim->hit + heal, MAX_HIT(victim));
 	update_pos( victim );
 
@@ -1786,8 +1786,8 @@ void spell_cure_serious( int sn, int level, CHAR_DATA *ch, void *vo )
 	int        heal;
 
 	heal = dice( 2, 8 ) + level / 2 ;
-	if ( ch->race == RACE_ANGEL )
-		heal = heal * 2;
+	// if ( ch->race == RACE_ANGEL )
+	// 	heal = heal * 2;
 	victim->hit = UMIN( victim->hit + heal,  MAX_HIT(victim));
 	update_pos( victim );
 	send_to_char(AT_BLUE, "You feel better!\n\r", victim );
@@ -3011,8 +3011,8 @@ void spell_heal( int sn, int level, CHAR_DATA *ch, void *vo )
 	int heal;
 
 	heal = UMIN( (victim->hit + (ch->level*5)), MAX_HIT(victim) );
-	if ( ch->race == RACE_ANGEL )
-		heal = heal * 2;
+	// if ( ch->race == RACE_ANGEL )
+	// 	heal = heal * 2;
 	if ( heal > MAX_HIT(victim))
 		heal = MAX_HIT( victim );
 	victim->hit = heal;
@@ -5116,8 +5116,8 @@ void spell_complete_healing ( int sn, int level, CHAR_DATA *ch, void *vo )
 	int heal;
 
 	heal = UMIN( victim->hit + 600, MAX_HIT(victim) );
-	if ( ch->race == RACE_ANGEL )
-		heal = heal * 2;
+	// if ( ch->race == RACE_ANGEL )
+	// 	heal = heal * 2;
 	if ( heal > MAX_HIT(victim))
 		heal = MAX_HIT( victim );
 	victim->hit = heal;

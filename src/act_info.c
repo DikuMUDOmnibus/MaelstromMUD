@@ -755,7 +755,7 @@ void show_char_to_char_1( CHAR_DATA *victim, CHAR_DATA *ch, char *argument )
 						&& victim->pcdata->learned[gsn_dualclaw] > 0 ) ) )
 		{
 			send_to_char(AT_BLUE, where_name[iWear], ch );
-			sprintf( buf, "%s%s%s&ca Werewolf Claw",
+			sprintf( buf, "%s%s%s&ca Claw",
 					is_affected( victim, gsn_flamehand ) ? "&r(Burning) " : "",
 					is_affected( victim, gsn_chaoshand ) ? "&Y(Chaotic) " : "",
 					is_affected( victim, gsn_frosthand ) ? "&B(Frosty) " : "" );
@@ -2678,7 +2678,7 @@ void do_equipment( CHAR_DATA *ch, char *argument )
 							&& ch->pcdata->learned[gsn_dualclaw] > 0 ) ) )
 			{
 				send_to_char(AT_BLUE, where_name[iWear], ch );
-				sprintf( buf, "%s%s%s&ca Werewolf Claw",
+				sprintf( buf, "%s%s%s&ca Claw",
 						is_affected( ch, gsn_flamehand ) ? "&r(Burning) " : "",
 						is_affected( ch, gsn_chaoshand ) ? "&Y(Chaotic) " : "",
 						is_affected( ch, gsn_frosthand ) ? "&B(Frosty) " : "" );

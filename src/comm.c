@@ -2923,7 +2923,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 				if ( ( ch->race == RACE_GHOUL ) ||
 						( ch->race == RACE_OGRE )  ||
 						( ch->race == RACE_DEMON ) ||
-						( ch->race == RACE_KREEN ) ||
+						// ( ch->race == RACE_KREEN ) ||
 						( ch->race == RACE_TROLL ) )
 					ch->charisma = number_range( 10, 14 );
 				if ( ( ch->race == RACE_SHADOW )    ||
@@ -2939,8 +2939,8 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 				if ( ( ch->race == RACE_PIXIE )  ||
 						( ch->race == RACE_ELF )    ||
 						( ch->race == RACE_TABAXI ) ||
-						( ch->race == RACE_HALFLING ) ||
-						( ch->race == RACE_ANGEL ) )
+						// ( ch->race == RACE_ANGEL ) ||
+						( ch->race == RACE_HALFLING ) )
 					ch->charisma = number_range( 25, 30 );
 
 				sprintf( buf, "the %s %s", 

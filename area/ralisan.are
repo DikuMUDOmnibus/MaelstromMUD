@@ -455,17 +455,17 @@ reserved~
 0 0
 0 5635 5639
 A
-1 1
-A
-19 11
-A
-13 100
-A
-17 -105
+24 -13
 A
 18 10
 A
-24 -13
+17 -105
+A
+13 100
+A
+19 11
+A
+1 1
 #5560
 scroll recall ralisan searnia~
 &ca scroll of recall&w~
@@ -601,11 +601,11 @@ reserved~
 0 0
 0 0 0
 A
-17 -75
+19 10
 A
 18 10
 A
-19 10
+17 -75
 #5598
 white apron ralisan searnia~
 &wa &Wwhite&w apron~
@@ -667,15 +667,15 @@ reserved~
 0 0
 0 0 0
 A
-1 2
-A
-17 -80
-A
-13 75
+19 25
 A
 18 25
 A
-19 25
+13 75
+A
+17 -80
+A
+1 2
 #5604
 belt ralisan searnia~
 &ca sword belt&w~
@@ -689,13 +689,13 @@ reserved~
 0 0
 0 0 0
 A
-1 1
-A
-17 -75
+19 9
 A
 18 9
 A
-19 9
+17 -75
+A
+1 1
 #5605
 leather jerkin ralisan searnia~
 &ca &Oleather jerkin &cwith &wsteel discs&c attached~
@@ -709,13 +709,13 @@ reserved~
 0 0
 0 0 0
 A
-2 2
-A
-17 -95
+19 22
 A
 18 25
 A
-19 22
+17 -95
+A
+2 2
 #5606
 iron helm ralisan searnia~
 &can &wiron &chelm&w~
@@ -729,19 +729,19 @@ reserved~
 0 0
 0 0 0
 A
-23 -30
-A
-24 -30
-A
-5 1
-A
-2 1
-A
-17 -25
+19 9
 A
 18 9
 A
-19 9
+17 -25
+A
+2 1
+A
+5 1
+A
+24 -30
+A
+23 -30
 #5607
 medalion ralisan searnia~
 &cthe captain's medalion of rank~
@@ -755,17 +755,17 @@ reserved~
 0 0
 0 0 0
 A
-17 -45
-A
-23 -25
-A
-24 -25
-A
-13 75
+19 10
 A
 18 10
 A
-19 10
+13 75
+A
+24 -25
+A
+23 -25
+A
+17 -45
 #5608
 balls gleeman colourful ralisan searnia~
 &ca gleeman's &Rc&Bo&Cl&zo&Gu&Wr&Pf&Yu&Rl&c juggling balls~
@@ -779,13 +779,13 @@ reserved~
 0 0
 0 0 0
 A
-17 -50
-A
-18 10
+13 100
 A
 19 10
 A
-13 100
+18 10
+A
+17 -50
 #5609
 gleeman cloak ralisan searnia~
 &Ca gleeman's &rc&bo&cl&Oo&wu&gr&pf&ru&bl &Ccloak of patches~
@@ -799,19 +799,19 @@ reserved~
 0 0
 0 0 0
 A
-26 50
-A
-13 100
-A
-24 -20
-A
-23 -20
-A
-17 -125
+19 39
 A
 18 21
 A
-19 39
+17 -125
+A
+23 -20
+A
+24 -20
+A
+13 100
+A
+26 50
 #5610
 gleeman flute silver ralisan searnia~
 &ca gleeman's &wsilver flute&c~
@@ -825,15 +825,15 @@ enchanted song~
 10 10
 0 0 0
 A
-1 2
-A
-13 75
-A
-17 -75
+19 10
 A
 18 10
 A
-19 10
+17 -75
+A
+13 75
+A
+1 2
 #5611
 gleeman harp case ralisan searnia~
 &ca gleeman's &Owooden &charp case~
@@ -847,17 +847,17 @@ reserved~
 0 0
 0 0 0
 A
-24 -20
-A
-23 -20
-A
-13 75
-A
-17 -50
+19 10
 A
 18 10
 A
-19 10
+17 -50
+A
+13 75
+A
+23 -20
+A
+24 -20
 #5612
 oily rag ralisan searnia~
 &wa small &zoily &wrag~
@@ -883,17 +883,17 @@ reserved~
 0 0
 0 0 0
 A
-13 100
-A
-24 -15
-A
-23 -15
-A
-18 20
+12 100
 A
 19 15
 A
-12 100
+18 20
+A
+23 -15
+A
+24 -15
+A
+13 100
 #5614
 breeches brown ralisan searnia~
 &Obaggy brown breeches&c~
@@ -907,9 +907,9 @@ reserved~
 0 0
 0 0 0
 A
-17 -30
-A
 19 4
+A
+17 -30
 #5615
 gray tan tunic ralisan searnia~
 &ca &wgrayish-&Otan &ctunic~
@@ -937,9 +937,9 @@ reserved~
 0 0
 0 0 0
 A
-23 -15
-A
 19 4
+A
+23 -15
 #5617
 white blouse ralisan searnia~
 &ca &Wwhite blouse&c~
@@ -953,11 +953,11 @@ reserved~
 0 0
 0 0 0
 A
-17 -25
+19 5
 A
 18 3
 A
-19 5
+17 -25
 #5618
 shiny chainmail vest ralisan searnia~
 &ca &Cshiny chainmail &cvest&w~
@@ -971,17 +971,17 @@ reserved~
 0 0
 0 0 0
 A
-19 35
-A
-18 25
-A
-17 -125
-A
-1 2
+13 85
 A
 2 -2
 A
-13 85
+1 2
+A
+17 -125
+A
+18 25
+A
+19 35
 #5620
 fountain spring ralisan searnia~
 &Ca gushing water spring~
@@ -1067,13 +1067,13 @@ reserved~
 0 0
 0 0 0
 A
-17 -85
-A
-13 90
+19 20
 A
 18 25
 A
-19 20
+13 90
+A
+17 -85
 #5627
 sword broadsword ralisan searnia~
 &ba ralisan guard's steel broadsword~
@@ -1087,17 +1087,17 @@ reserved~
 0 0
 0 0 0
 A
-19 34
-A
-18 26
-A
-1 2
-A
-2 -1
+17 -115
 A
 13 95
 A
-17 -115
+2 -1
+A
+1 2
+A
+18 26
+A
+19 34
 #5628
 hat ralisan searnia~
 &ca &zdark &cwide-brimmed hat&w~
@@ -1111,13 +1111,13 @@ reserved~
 0 0
 0 0 0
 A
-24 -30
-A
-17 -50
+19 11
 A
 18 10
 A
-19 11
+17 -50
+A
+24 -30
 #5629
 wagon merchantwagon ralisan searnia~
 a merchant's wagon~
@@ -1143,28 +1143,28 @@ reserved~
 0 0
 0 0 0
 A
-19 7
-A
-17 -45
-A
-1 1
+18 6
 A
 13 65
 A
-18 6
-E
-helm~
-Several dents mar the once polished surface of this steel helm showing
-it's long use.  The remains of dirt still crammed into the corners where
-metal parts connect even after being polished give weight in your mind as to
-just how long it's been used.  
-~
+1 1
+A
+17 -45
+A
+19 7
 E
 steel~
 Several dents mar the once polished surface of this steel helm showing
 it's long use.  The remains of dirt still crammed into the corners where
 metal parts connect even after being polished give weight in your mind as to
 just how long it's been used.
+~
+E
+helm~
+Several dents mar the once polished surface of this steel helm showing
+it's long use.  The remains of dirt still crammed into the corners where
+metal parts connect even after being polished give weight in your mind as to
+just how long it's been used.  
 ~
 #5631
 shattershield shield ralisan searnia~
@@ -1179,26 +1179,26 @@ shatter~
 3 3
 0 0 0
 A
-19 11
-A
-18 9
-A
-17 -110
-A
-1 2
+13 90
 A
 12 100
 A
-13 90
+1 2
+A
+17 -110
+A
+18 9
+A
+19 11
 E
-shield~
+shattershield~
 A blueish ice encases the entire shield from top to bottom giving it a
 faint glow, yet not making it abnormally cool to the touch.  Looking on the
 inside of the shield you notice what appears to be latch marks to connect
 the shield to arm gear.  
 ~
 E
-shattershield~
+shield~
 A blueish ice encases the entire shield from top to bottom giving it a
 faint glow, yet not making it abnormally cool to the touch.  Looking on the
 inside of the shield you notice what appears to be latch marks to connect
@@ -1217,17 +1217,17 @@ reserved~
 0 0
 0 0 0
 A
-19 7
-A
-13 75
-A
-24 -25
-A
-23 -25
+17 -45
 A
 18 9
 A
-17 -45
+23 -25
+A
+24 -25
+A
+13 75
+A
+19 7
 #5633
 chainmail shirt ralisan searnia~
 &ca chainmail shirt&w~
@@ -1241,17 +1241,17 @@ reserved~
 0 0
 0 0 0
 A
-19 23
-A
-18 25
-A
-17 -80
-A
-13 65
+1 1
 A
 2 -1
 A
-1 1
+13 65
+A
+17 -80
+A
+18 25
+A
+19 23
 #5634
 ringmail sleeves ralisan searnia~
 &ca pair of ringmail sleeves&w~
@@ -1265,13 +1265,13 @@ reserved~
 0 0
 0 0 0
 A
-17 -35
-A
-19 4
+13 15
 A
 18 3
 A
-13 15
+19 4
+A
+17 -35
 #5635
 black platemail gauntlets ralisan searnia~
 &zblack platemail &cgauntlets~
@@ -1285,15 +1285,15 @@ reserved~
 0 0
 5559 0 0
 A
-1 2
-A
-13 55
-A
-18 10
+17 -95
 A
 19 10
 A
-17 -95
+18 10
+A
+13 55
+A
+1 2
 E
 gauntlets~
 &BGlistening &zdark black&B in the &Ysunlight&B these gauntlets of
@@ -1314,15 +1314,15 @@ reserved~
 0 0
 0 0 0
 A
-2 2
-A
-17 -25
-A
-19 8
+13 135
 A
 18 12
 A
-13 135
+19 8
+A
+17 -25
+A
+2 2
 E
 gloves~
 Examining them a bit closer you see a thin line of fur lacing the inside
@@ -1343,15 +1343,15 @@ reserved~
 0 0
 0 0 0
 A
-18 12
-A
-19 8
-A
-17 -85
+13 75
 A
 23 -19
 A
-13 75
+17 -85
+A
+19 8
+A
+18 12
 #5638
 heavy leather boots ralisan searnia~
 &ca pair of &Oheavy leather &cboots~
@@ -1365,15 +1365,15 @@ reserved~
 0 0
 0 0 0
 A
-19 8
-A
-13 65
-A
-17 -75
+2 1
 A
 18 11
 A
-2 1
+17 -75
+A
+13 65
+A
+19 8
 #5639
 blade tipped bracers ralisan searnia~
 &ca blade-tipped bracer&w~
@@ -1387,18 +1387,18 @@ reserved~
 0 0
 5559 0 0
 A
-13 75
-A
-17 -55
+18 7
 A
 19 8
 A
-18 7
+17 -55
+A
+13 75
 E
-tipped~
+bracer~
 A four inch long steel blade lies fastened to the sides of the bracer at
 it's front adding to the protection of your hands.  Small latches line the
-rim of the hand side of the bracer for some reason.
+rim of the hand side of the bracer for some reason.  
 ~
 E
 blade~
@@ -1407,10 +1407,10 @@ it's front adding to the protection of your hands.  Small latches line the
 rim of the hand side of the bracer for some reason.
 ~
 E
-bracer~
+tipped~
 A four inch long steel blade lies fastened to the sides of the bracer at
 it's front adding to the protection of your hands.  Small latches line the
-rim of the hand side of the bracer for some reason.  
+rim of the hand side of the bracer for some reason.
 ~
 #5640
 silver ankle guard ralisan searnia~
@@ -1425,13 +1425,13 @@ reserved~
 0 0
 0 0 0
 A
-17 -40
-A
-13 50
+19 8
 A
 18 12
 A
-19 8
+13 50
+A
+17 -40
 #5643
 shield light ralisan searnia~
 &cthe &Wshield &cof &Wlight~
@@ -1445,17 +1445,17 @@ reserved~
 0 -1
 0 0 0
 A
-17 -105
-A
-24 -35
-A
-13 50
-A
-12 100
+19 11
 A
 1 2
 A
-19 11
+12 100
+A
+13 50
+A
+24 -35
+A
+17 -105
 #0
 
 
@@ -1466,6 +1466,67 @@ Searnia Valley Information Room~
 ~
 0 4 0
 Rd     0
+E
+searnia~
+SEARNIA AREAS:
+&W
+Sub-areas:&w
+________________________________________________________________________________
+| Sub-Area Name         | 1st Vnum | Last Vnum | Level Range | Grouped areas?  |
+|-----------------------|----------|-----------|-------------|-----------------|
+| Mareci Pass           |   5551   |   5594    |     N\A     | Ralisan &       |
+| Ralisan               |   5595   |   5651    |   40 - 100  | Mareci Pass     |
+|-----------------------|----------|-----------|-------------|-----------------|
+| North Averil Forest   |   5652   |   6124    |    1 - 100  | Averil Forest,  |
+| Fire Wells Lake       |   6125   |   6147    |     N\A     | Fire Wells Lake,|
+| Thief's Lair          |   6148   |   6173    |   65 - 70   | & Thief's Lair  |
+|-----------------------|----------|-----------|-------------|-----------------|
+| Dreylin Keep          |   6174   |   6226    |   50 - 65   | N\A             |
+|-----------------------|----------|-----------|-------------|-----------------|
+| Harim's Tower         |   6227   |   6296    |   35 - 50   | N\A             |
+|-----------------------|----------|-----------|-------------|-----------------|
+| Alor Tyer             |   6297   |   6349    |   70 - 85   | N\A             |
+|-----------------------|----------|-----------|-------------|-----------------|
+| Alor Raharo           |   ????   |   ????    |    1 - 100  | N\A             |
+|_______________________|__________|___________|_____________|_________________|
+~
+E
+ralisan~
+&zRALISAN ITEMS:
+_______________________________________________________________________
+| Vnum | Name                      | Vnum | Name                      |
+|------|---------------------------|------|---------------------------|
+&z|&R05595 &z|&B Jharel's purple robes     &z|&R05624 &z|&B a saddle                  &z|
+&z|&R05596 &z|&B leather blacksmith's vest &z|&R05625 &z|&B lantern                   &z|
+&z|&R05597 &z|&B blacksmith's steel hammer &z|&R05626 &z|&B blue silk gown            &z|
+&z|&R05598 &z|&B white apron               &z|&R05627 &z|&B guard's sword             &z|
+&z|&R05599 &z|&B ledger of records         &z|&R05628 &z|&B merchant driver's hat     &z|
+&z|&R05600 &z|&B chain of office           &z|&R05629 &z|&B merchant wagon            &z|
+&z|&R05601 &z|&B druid robe                &z|&R05630 &z|&B sturdy steel helm         &z|
+&z|&R05602 &z|&B basket full of fruit      &z|&R05631 &z|&B battered shattershield    &z|
+&z|&R05603 &z|&B guard's spear             &z|&R05632 &z|&B green traveler's cloak    &z|
+&z|&R05604 &z|&B sword belt                &z|&R05633 &z|&B chainmail shirt           &z|
+&z|&R05605 &z|&B leather jerkin w/discs    &z|&R05634 &z|&B ringmail sleeves          &z|
+&z|&R05606 &z|&B hard leather helm         &z|&R05635 &z|&B black platemail gauntlets &z|
+&z|&R05607 &z|&B captain's medalion        &z|&R05636 &z|&B leather gloves            &z|
+&z|&R05608 &z|&B gleeman's juggling balls  &z|&R05637 &z|&B steel visor               &z|
+&z|&R05609 &z|&B gleeman's patched cloak   &z|&R05638 &z|&B heavy leather boots       &z|
+&z|&R05610 &z|&B gleeman's flute           &z|&R05639 &z|&B blade-tipped bracer       &z|
+&z|&R05611 &z|&B gleeman's harp case       &z|&R05640 &z|&B silver ankle guards       &z|
+&z|&R05612 &z|&B oily rag                  &z|&R05641 &z|&B ring of hatred            &z|
+&z|&R05613 &z|&B village elder's staff     &z|&R05642 &z|&B band of justice           &z|
+&z|&R05614 &z|&B brown breeches            &z|&R05643 &z|&B shield of light           &z|
+&z|&R05615 &z|&B grayish-tan tunic         &z|&R05644 &z|&B pendant of duty           &z|
+&z|&R05616 &z|&B light brown skirts        &z|&R05645 &z|&B dark amulet               &z|
+&z|&R05617 &z|&B white blouse              &z|&R05646 &z|&B sling                     &z|
+&z|&R05618 &z|&B heavy chainmail vest      &z|&R05647 &z|&B wooden longbow            &z|
+&z|&R05619 &z|&B gleeman's throwing knife  &z|&R05648 &z|&B oak  quarterstaff         &z|
+&z|&R05620 &z|&B fountain (village green)  &z|&R05649 &z|&B throwing knife            &z|
+&z|&R05621 &z|&B mug of ale                &z|&R05650 &z|&B spellbook                 &z|
+&z|&R05622 &z|&B pouch of tabac            &z|&R05651 &z|&B a heightened sense...     &z|
+&z|&R05623 &z|&B roasted chicken           &z|&R      &z|&B ...of awareness           &z|
+|______|___________________________|______|___________________________|
+~
 E
 map~
 &z*** &RLanAs of &BSearnia&R. &z***
@@ -1508,67 +1569,6 @@ map~
 &z|&r#&z| &C- Building\City          &R%&C - Fire Wells Lake
 &z"""                          &c?&C - Unknown
 who
-~
-E
-ralisan~
-&zRALISAN ITEMS:
-_______________________________________________________________________
-| Vnum | Name                      | Vnum | Name                      |
-|------|---------------------------|------|---------------------------|
-&z|&R05595 &z|&B Jharel's purple robes     &z|&R05624 &z|&B a saddle                  &z|
-&z|&R05596 &z|&B leather blacksmith's vest &z|&R05625 &z|&B lantern                   &z|
-&z|&R05597 &z|&B blacksmith's steel hammer &z|&R05626 &z|&B blue silk gown            &z|
-&z|&R05598 &z|&B white apron               &z|&R05627 &z|&B guard's sword             &z|
-&z|&R05599 &z|&B ledger of records         &z|&R05628 &z|&B merchant driver's hat     &z|
-&z|&R05600 &z|&B chain of office           &z|&R05629 &z|&B merchant wagon            &z|
-&z|&R05601 &z|&B druid robe                &z|&R05630 &z|&B sturdy steel helm         &z|
-&z|&R05602 &z|&B basket full of fruit      &z|&R05631 &z|&B battered shattershield    &z|
-&z|&R05603 &z|&B guard's spear             &z|&R05632 &z|&B green traveler's cloak    &z|
-&z|&R05604 &z|&B sword belt                &z|&R05633 &z|&B chainmail shirt           &z|
-&z|&R05605 &z|&B leather jerkin w/discs    &z|&R05634 &z|&B ringmail sleeves          &z|
-&z|&R05606 &z|&B hard leather helm         &z|&R05635 &z|&B black platemail gauntlets &z|
-&z|&R05607 &z|&B captain's medalion        &z|&R05636 &z|&B leather gloves            &z|
-&z|&R05608 &z|&B gleeman's juggling balls  &z|&R05637 &z|&B steel visor               &z|
-&z|&R05609 &z|&B gleeman's patched cloak   &z|&R05638 &z|&B heavy leather boots       &z|
-&z|&R05610 &z|&B gleeman's flute           &z|&R05639 &z|&B blade-tipped bracer       &z|
-&z|&R05611 &z|&B gleeman's harp case       &z|&R05640 &z|&B silver ankle guards       &z|
-&z|&R05612 &z|&B oily rag                  &z|&R05641 &z|&B ring of hatred            &z|
-&z|&R05613 &z|&B village elder's staff     &z|&R05642 &z|&B band of justice           &z|
-&z|&R05614 &z|&B brown breeches            &z|&R05643 &z|&B shield of light           &z|
-&z|&R05615 &z|&B grayish-tan tunic         &z|&R05644 &z|&B pendant of duty           &z|
-&z|&R05616 &z|&B light brown skirts        &z|&R05645 &z|&B dark amulet               &z|
-&z|&R05617 &z|&B white blouse              &z|&R05646 &z|&B sling                     &z|
-&z|&R05618 &z|&B heavy chainmail vest      &z|&R05647 &z|&B wooden longbow            &z|
-&z|&R05619 &z|&B gleeman's throwing knife  &z|&R05648 &z|&B oak  quarterstaff         &z|
-&z|&R05620 &z|&B fountain (village green)  &z|&R05649 &z|&B throwing knife            &z|
-&z|&R05621 &z|&B mug of ale                &z|&R05650 &z|&B spellbook                 &z|
-&z|&R05622 &z|&B pouch of tabac            &z|&R05651 &z|&B a heightened sense...     &z|
-&z|&R05623 &z|&B roasted chicken           &z|&R      &z|&B ...of awareness           &z|
-|______|___________________________|______|___________________________|
-~
-E
-searnia~
-SEARNIA AREAS:
-&W
-Sub-areas:&w
-________________________________________________________________________________
-| Sub-Area Name         | 1st Vnum | Last Vnum | Level Range | Grouped areas?  |
-|-----------------------|----------|-----------|-------------|-----------------|
-| Mareci Pass           |   5551   |   5594    |     N\A     | Ralisan &       |
-| Ralisan               |   5595   |   5651    |   40 - 100  | Mareci Pass     |
-|-----------------------|----------|-----------|-------------|-----------------|
-| North Averil Forest   |   5652   |   6124    |    1 - 100  | Averil Forest,  |
-| Fire Wells Lake       |   6125   |   6147    |     N\A     | Fire Wells Lake,|
-| Thief's Lair          |   6148   |   6173    |   65 - 70   | & Thief's Lair  |
-|-----------------------|----------|-----------|-------------|-----------------|
-| Dreylin Keep          |   6174   |   6226    |   50 - 65   | N\A             |
-|-----------------------|----------|-----------|-------------|-----------------|
-| Harim's Tower         |   6227   |   6296    |   35 - 50   | N\A             |
-|-----------------------|----------|-----------|-------------|-----------------|
-| Alor Tyer             |   6297   |   6349    |   70 - 85   | N\A             |
-|-----------------------|----------|-----------|-------------|-----------------|
-| Alor Raharo           |   ????   |   ????    |    1 - 100  | N\A             |
-|_______________________|__________|___________|_____________|_________________|
 ~
 S
 #5551

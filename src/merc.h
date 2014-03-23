@@ -148,7 +148,7 @@ typedef void SPELL_FUN                  args( ( int sn, int level,
 #define MAX_SKILL		   344
 #define MAX_GSPELL                 2
 #define MAX_CLASS		   12
-#define MAX_RACE                   18
+#define MAX_RACE                   16
 #define MAX_CLAN                   21 /*max 20 clans + 1 for clan 0*/
 #define MAX_LEVEL		   113
 #define STUN_MAX                   5
@@ -552,8 +552,8 @@ struct playerlist_data
 #define RACE_TROLL	    13
 #define RACE_SHADOW         14
 #define RACE_TABAXI	    15
-#define RACE_KREEN		16
-#define RACE_ANGEL		17
+// #define RACE_KREEN		16
+// #define RACE_ANGEL		17
 /*
  * Per-class stuff.
  */
@@ -2243,19 +2243,19 @@ struct	room_index_data
  */
 struct	skill_type
 {
-	char *	name;			   /* Name of skill		 */
-	int 	skill_level [ MAX_CLASS+3 ]; /* Level needed by class */
-	SPELL_FUN *	spell_fun;		   /* Spell pointer (for spells) */
-	int 	target;			   /* Legal targets		 */
-	int 	minimum_position;	   /* Position for caster / user */
-	int *	pgsn;			   /* Pointer to associated gsn	 */
-	int 	min_mana;		   /* Minimum mana used		 */
-	int 	beats;			   /* Waiting time after use	 */
-	char *	noun_damage;		   /* Damage message		 */
-	char *	msg_off;		   /* Wear off message		 */
-	char *      room_msg_off;		   /* Room Wear off message	 */
+	char *	name;			   				/* Name of skill		 		*/
+	int 	skill_level [ MAX_CLASS+3 ]; 	/* Level needed by class 		*/
+	SPELL_FUN *	spell_fun;		   			/* Spell pointer (for spells) 	*/
+	int 	target;			   				/* Legal targets		 		*/
+	int 	minimum_position;	   			/* Position for caster / user 	*/
+	int *	pgsn;			   				/* Pointer to associated gsn	*/
+	int 	min_mana;		   				/* Minimum mana used		 	*/
+	int 	beats;			   				/* Waiting time after use	 	*/
+	char *	noun_damage;		   			/* Damage message		 		*/
+	char *	msg_off;		   				/* Wear off message		 		*/
+	char *      room_msg_off;		   		/* Room Wear off message	 	*/
 	bool	dispelable;
-	int         slot;                      /* For object loading         */
+	int         slot;                      	/* For object loading        	*/
 };
 
 /*
