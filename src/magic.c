@@ -199,13 +199,14 @@ int skill_lookup( const char *name )
  */
 void say_spell( CHAR_DATA *ch, int sn )
 {
-	CHAR_DATA *rch;
-	char      *pName;
-	char       spell       [ MAX_STRING_LENGTH ];
-	char       room      [ MAX_STRING_LENGTH ];
-	char       caster      [ MAX_STRING_LENGTH ];
-	int        iSyl;
-	int        length;
+	CHAR_DATA  *rch;
+	char       *pName;
+	char        spell       [ MAX_STRING_LENGTH ];
+	char        room      [ MAX_STRING_LENGTH ];
+	char        caster      [ MAX_STRING_LENGTH ];
+	int         iSyl;
+	int         length;
+	int 		spaces = 0;
 
 	struct syl_type
 	{
@@ -251,17 +252,22 @@ void say_spell( CHAR_DATA *ch, int sn )
 	for ( pName = skill_table[sn].name; *pName != '\0'; pName += length ) {
 		for ( iSyl = 0; ( length = strlen( syl_table[iSyl].old ) ) != 0; iSyl++ ) {
 			if ( !str_prefix( syl_table[iSyl].old, pName ) ) {
+				if ( !strcmp(syl_table[iSyl].new, " ") ) {
+					spaces++;
+				}
+
 				strcat( spell, syl_table[iSyl].new );
 				break;
 			}
 		}
 
-		if ( length == 0 )
+		if ( length == 0 ) {
 			length = 1;
+		}
 	}
 
-	sprintf( room, "$n utters the words, '%s'.", spell );
-	sprintf( caster, "You utter the words, '%s'.\n\r", spell );
+	sprintf( room, "$n utters the word%s, '%s'.", spaces == 0 ? "" : "s", spell );
+	sprintf( caster, "You utter the word%s, '%s'.\n\r", spaces == 0 ? "" : "s", spell );
 
 	act(AT_GREY, room, ch, NULL, NULL, TO_ROOM );
 	send_to_char( AT_GREY, caster, ch );
