@@ -579,7 +579,7 @@ struct	kill_data
 #define ITEM_ANTI_DRUID         1048576
 #define ITEM_ANTI_RANGER        2097152
 #define ITEM_ANTI_PALADIN       4194304
-#define ITEM_ANTI_BARD          8388608
+// #define ITEM_ANTI_BARD          8388608
 #define ITEM_FLAMING           16777216
 /*
  * Wear flags.

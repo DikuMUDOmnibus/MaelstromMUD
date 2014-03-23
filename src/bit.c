@@ -378,7 +378,7 @@ const struct flag_type anti_class_flags[] =
 	{   "anti-psi",             ITEM_ANTI_PSI,          TRUE    },
 	{   "anti-druid",           ITEM_ANTI_DRUID,        TRUE    },
 	{   "anti-ranger",          ITEM_ANTI_RANGER,       TRUE    },
-	{   "anti-bard",            ITEM_ANTI_BARD,         TRUE    },
+	// {   "anti-bard",            ITEM_ANTI_BARD,         TRUE    },
 	{   "anti-vamp",            ITEM_ANTI_VAMP,         TRUE    },
 	{   "anti-necro",           ITEM_ANTI_NECRO,        TRUE    },
 	{   "anti-werewolf",        ITEM_ANTI_WWF,     	TRUE    },

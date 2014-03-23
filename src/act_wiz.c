@@ -5050,8 +5050,8 @@ void do_oset( CHAR_DATA *ch, char *argument )
 			value = ITEM_ANTI_RANGER;
 		if (!str_cmp( arg3, "paladin" ) || !str_cmp( arg3, "pal" ) )
 			value = ITEM_ANTI_PALADIN;
-		if (!str_cmp( arg3, "bard" ) || !str_cmp( arg3, "brd" ) )
-			value = ITEM_ANTI_BARD;
+		// if (!str_cmp( arg3, "bard" ) || !str_cmp( arg3, "brd" ) )
+		// 	value = ITEM_ANTI_BARD;
 		if (!str_cmp( arg3, "vampire" ) || !str_cmp( arg3, "vam" ) )
 			value = ITEM_ANTI_VAMP;
 		if (!str_cmp( arg3, "necromancer" ) || !str_cmp( arg3, "nec" ) )
