@@ -2703,7 +2703,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 	{
 		"reserved",
-		{ 999, 999, 999, 999, 999, 999, 999, 999, 999, 999,
+		{ 999, 999, 999, 999, 999, 999, 999, 999, 999,
 			999, 999, 999, 999, 999, 999 },
 		0,			TAR_IGNORE,		POS_STANDING,
 		NULL,			0,	 0,
