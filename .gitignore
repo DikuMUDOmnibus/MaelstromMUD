@@ -9,3 +9,5 @@ banned.lst
 *.core
 src/envy
 nohup.out
+.vagrant/*
+/Makefile
