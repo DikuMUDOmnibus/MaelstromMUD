@@ -2002,7 +2002,7 @@ void do_mfind( CHAR_DATA *ch, char *argument )
 			{
 				found = TRUE;
 				sprintf( buf, "&z[&W%5d&z] &w%s\n\r",
-						pMobIndex->vnum, capitalize( pMobIndex->short_descr ) );
+						pMobIndex->vnum, pMobIndex->short_descr );
 				send_to_char(AT_RED, buf, ch );
 			}
 		}
@@ -2092,7 +2092,7 @@ void do_ofind( CHAR_DATA *ch, char *argument )
 					{
 						found = TRUE;
 						sprintf( buf, "[&W%5d&z] &w%s\n\r",
-								pObjIndex->vnum, capitalize( pObjIndex->short_descr ) );
+								pObjIndex->vnum, pObjIndex->short_descr );
 						send_to_char(AT_DGREY, buf, ch );
 						continue;
 					}
@@ -2102,7 +2102,7 @@ void do_ofind( CHAR_DATA *ch, char *argument )
 					{
 						found = TRUE;
 						sprintf( buf, "[&W%5d&z] &w%s\n\r",
-								pObjIndex->vnum, capitalize( pObjIndex->short_descr ) );
+								pObjIndex->vnum, pObjIndex->short_descr );
 						send_to_char(AT_DGREY, buf, ch );
 						continue;
 					}
@@ -2111,7 +2111,7 @@ void do_ofind( CHAR_DATA *ch, char *argument )
 					{
 						found = TRUE;
 						sprintf( buf, "[&W%5d&z] &w%s\n\r",
-								pObjIndex->vnum, capitalize( pObjIndex->short_descr ) );
+								pObjIndex->vnum, pObjIndex->short_descr );
 						send_to_char(AT_DGREY, buf, ch );
 					}
 				}
@@ -2135,7 +2135,7 @@ void do_ofind( CHAR_DATA *ch, char *argument )
 					{
 						found = TRUE;
 						sprintf( buf, "[&W%5d&z] &w%s\n\r",
-								pObjIndex->vnum, capitalize( pObjIndex->short_descr ) );
+								pObjIndex->vnum, pObjIndex->short_descr );
 						send_to_char( AT_GREY, buf, ch );
 					}
 				}
@@ -2154,7 +2154,7 @@ void do_ofind( CHAR_DATA *ch, char *argument )
 			{
 				found = TRUE;
 				sprintf( buf, "&z[&W%5d&z] &w%s\n\r",
-						pObjIndex->vnum, capitalize( pObjIndex->short_descr ) );
+						pObjIndex->vnum, pObjIndex->short_descr );
 				send_to_char(AT_RED, buf, ch );
 			}
 		}
