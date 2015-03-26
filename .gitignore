@@ -11,3 +11,4 @@ src/envy
 nohup.out
 .vagrant/*
 /Makefile
+inspiration/
