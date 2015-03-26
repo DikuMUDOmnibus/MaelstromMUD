@@ -144,7 +144,8 @@ struct	cmd_type	cmd_table	[ ] =
 	{ "enter",          do_enter,       POS_STANDING,    0,  LOG_NORMAL },
 	{ "equipment",	do_equipment,	POS_DEAD,	 0,  LOG_NORMAL	},
 	{ "examine",	do_examine,	POS_RESTING,	 0,  LOG_NORMAL	},
-	{ "finger",         do_finger,      POS_DEAD,        0,  LOG_ALWAYS },
+	// saving finger data is busted, disabling for now -- Ristowe
+	// { "finger",         do_finger,      POS_DEAD,        0,  LOG_ALWAYS }, 
 	{ "forge",		do_forge,	POS_STANDING,   30,  LOG_ALWAYS },
 	{ "help",		do_help,	POS_DEAD,	 0,  LOG_NORMAL	},
 	{ "idea",		do_idea,	POS_DEAD,	 0,  LOG_NORMAL	},

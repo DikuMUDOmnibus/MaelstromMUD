@@ -1706,6 +1706,9 @@ void corpse_back( CHAR_DATA *ch, OBJ_DATA *corpse )
 
 void save_finger ( CHAR_DATA *ch )
 {
+	// busted, disabling for now -- Ristowe
+	return;
+
 	FILE *fp;
 	char buf      [ MAX_STRING_LENGTH ];
 	char fingsave [ MAX_INPUT_LENGTH  ];
@@ -1716,8 +1719,7 @@ void save_finger ( CHAR_DATA *ch )
 	if ( ch->desc && ch->desc->original )
 		ch = ch->desc->original;
 
-	sprintf( fingsave, "%s%c/%s.fng", PLAYER_DIR, LOWER(ch->name[0]),
-			capitalize( ch->name ) );
+	sprintf( fingsave, "%s%c/%s.fng", PLAYER_DIR, LOWER(ch->name[0]), capitalize( ch->name ) );
 
 	fclose(fpReserve);
 	if ( !( fp = fopen ( fingsave, "w" ) ) )
