@@ -3804,7 +3804,6 @@ void do_areas( CHAR_DATA *ch, char *argument )
 	send_to_char( AT_BLUE, "\n\rTHE WORLD OF THE STORM\n\r", ch );
 
 	buf1[0] = '\0'; 
-	col = 0;
 
 	for ( pArea = area_first; pArea; pArea = pArea->next ) {
 		if (!IS_SET( pArea->area_flags, AREA_PROTOTYPE )
@@ -3814,9 +3813,7 @@ void do_areas( CHAR_DATA *ch, char *argument )
 		} 
 	}
 
-	if ( col != 0 ) {
-		send_to_char( C_DEFAULT, buf1 , ch );
-	}
+	send_to_char( C_DEFAULT, buf1 , ch );
 }                
 
 void do_memory( CHAR_DATA *ch, char *argument )
