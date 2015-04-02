@@ -3778,73 +3778,6 @@ void free_string( char *pstr )
 	return;
 }
 
-
-/*  This is a total mess, the new one is below it.  -Decklarean
-	void do_areas( CHAR_DATA *ch, char *argument )
-	{
-	AREA_DATA *pArea1;
-	AREA_DATA *pArea2;
-	char        buf  [ MAX_STRING_LENGTH   ];
-	int         iArea = 0;
-	int         iAreaHalf;
-	int		num;
-
-	if ( argument[0] != '\0' )
-	num = is_number( argument ) ? atoi( argument ) : 0;
-	else
-	num = 0;
-
-	for ( pArea1 = area_first; pArea1; pArea1 = pArea1->next )
-	if ( !IS_SET( pArea1->area_flags, AREA_PROTOTYPE ) )
-	iArea++;
-
-	iAreaHalf = ( iArea + 1 ) / 2;
-	pArea1    = area_first;
-	pArea2    = area_first;
-
-	for ( iArea = 0; pArea2; pArea2 = pArea2->next )
-	{
-	if ( !IS_SET( pArea2->area_flags, AREA_PROTOTYPE ) )
-	iArea++;
-	if ( iArea >= iAreaHalf )
-	break;
-	}
-
-	for ( iArea = 0; iArea < iAreaHalf; iArea++ )
-	{
-	if ( num == 0 )
-	{
-	sprintf( buf, "%-39s%-39s\n\r",
-	pArea1->name, ( pArea2 ) ? pArea2->name : "" );
-	send_to_char( C_DEFAULT, buf, ch );
-	}
-	else
-	{
-	if ( ( pArea1->llevel <= num ) && ( num <= pArea1->ulevel ) )
-	{
-	sprintf( buf, "%-39s\n\r", pArea1->name );  
-	send_to_char( C_DEFAULT, buf, ch );
-	}
-	if ( ( pArea2->llevel <= num ) && ( num <= pArea2->ulevel ) )
-	{
-	sprintf( buf, "%-39s\n\r", pArea2->name );
-	send_to_char( C_DEFAULT, buf, ch );
-	}
-	}
-
-	for ( pArea1 = pArea1->next; pArea1; pArea1 = pArea1->next )
-	if ( !IS_SET( pArea1->area_flags, AREA_PROTOTYPE ) )
-	break;
-	if ( pArea2 )
-	for ( pArea2 = pArea2->next; pArea2; pArea2 = pArea2->next )
-	if ( !IS_SET( pArea2->area_flags, AREA_PROTOTYPE ) )
-	break;
-	}
-
-	return;
-	}
-	*/
-
 /*
  *  New do_areas by Decklarean.
  */
@@ -3863,8 +3796,9 @@ void do_areas( CHAR_DATA *ch, char *argument )
 	/* get level */
 	argument = one_argument( argument, level );
 
-	if ( level[0] != '\0' && is_number( level ) )
+	if ( level[0] != '\0' && is_number( level ) ) {
 		ilevel = atoi( level );
+	}
 
 	/* display the area files */
 	send_to_char( AT_BLUE, "\n\rTHE WORLD OF THE STORM\n\r", ch );
@@ -3872,28 +3806,17 @@ void do_areas( CHAR_DATA *ch, char *argument )
 	buf1[0] = '\0'; 
 	col = 0;
 
-	for ( pArea = area_first; pArea; pArea = pArea->next )
-	{
-
-		if (    !IS_SET( pArea->area_flags, AREA_PROTOTYPE ) &&
-				( ilevel == 0 || (     ( pArea->llevel <= ilevel ) 
-									   && ( pArea->ulevel >= ilevel ) )
-				)
-		   )
-		{
-			sprintf( buf, "&W%-8.8s &G%-18.18s &B%-10.10s",
-					pArea->name,
-					&pArea->name[9],
-					&pArea->name[28] ); 
-			strcat( buf1, buf );
-			if ( ++col % 2 == 0 )
-				strcat( buf1, "\n\r" );
+	for ( pArea = area_first; pArea; pArea = pArea->next ) {
+		if (!IS_SET( pArea->area_flags, AREA_PROTOTYPE )
+			&& ( ilevel == 0 || ( pArea->llevel <= ilevel && pArea->ulevel >= ilevel ))){
+				sprintf( buf, "&W[%3d - %3d] &G%-18.18s &B%-10.10s\n\r", pArea->llevel, pArea->ulevel, pArea->name, pArea->builders ); 
+				strcat( buf1, buf );
 		} 
 	}
-	if ( col % 2 != 0 )
-		strcat( buf1, "\n\r" );
-	if ( col != 0 )
+
+	if ( col != 0 ) {
 		send_to_char( C_DEFAULT, buf1 , ch );
+	}
 }                
 
 void do_memory( CHAR_DATA *ch, char *argument )
