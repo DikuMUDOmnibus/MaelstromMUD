@@ -3788,7 +3788,6 @@ void do_areas( CHAR_DATA *ch, char *argument )
 	/* used to display areas */
 	char buf[MAX_STRING_LENGTH];
 	char buf1[MAX_STRING_LENGTH];
-	int col;
 
 	char level[MAX_STRING_LENGTH];
 	int ilevel = 0;
@@ -3803,12 +3802,15 @@ void do_areas( CHAR_DATA *ch, char *argument )
 	/* display the area files */
 	send_to_char( AT_BLUE, "\n\rTHE WORLD OF THE STORM\n\r", ch );
 
-	buf1[0] = '\0'; 
+	buf1[0] = '\0';
+
+	sprintf( buf, "&W[  Levels ] Area Name\n\r", pArea->llevel, pArea->ulevel, pArea->name ); 
+	strcat( buf1, buf );
 
 	for ( pArea = area_first; pArea; pArea = pArea->next ) {
 		if (!IS_SET( pArea->area_flags, AREA_PROTOTYPE )
 			&& ( ilevel == 0 || ( pArea->llevel <= ilevel && pArea->ulevel >= ilevel ))){
-				sprintf( buf, "&W[%3d - %3d] &G%-18.18s &B%-10.10s\n\r", pArea->llevel, pArea->ulevel, pArea->name, pArea->builders ); 
+				sprintf( buf, "&W[%3d - %3d] &G%-56.56s\n\r", pArea->llevel, pArea->ulevel, pArea->name ); 
 				strcat( buf1, buf );
 		} 
 	}
