@@ -2049,10 +2049,9 @@ void do_who( CHAR_DATA *ch, char *argument )
 	/*    fGuildRestrict = FALSE;  */
 	tClan          = NULL;
 
-	send_to_char(C_DEFAULT ,
-			"\n\r&W==================================================================\n\r",ch );
-	send_to_char(C_DEFAULT,"&W===                  &wEntropy &zof the &wSoul                       ===\n\r",ch);
-	send_to_char(C_DEFAULT,"&W==================================================================\n\r \n\r",ch);
+	send_to_char(C_DEFAULT, "&W\n\r==================================================================\n\r",ch );
+	send_to_char(C_DEFAULT, "&W===                          OASIS MUD                         ===\n\r",ch);
+	send_to_char(C_DEFAULT, "&W==================================================================\n\r \n\r",ch);
 
 	for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
 		noclass[iClass] = 0;
