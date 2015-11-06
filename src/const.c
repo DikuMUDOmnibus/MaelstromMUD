@@ -79,47 +79,6 @@ const   struct  quest_data      quest_table     []              =
 	{     "",                     "",         0,           0,       0      }
 };
 
-
-#if 0
-const   struct  race_type       race_table      [MAX_RACE]      =
-{
-	/*  {  "Sml", "Full Name", mstr, mint, mwis, mdex, mcon }, */
-	{  "Hum", "Human",  0, 0, 0, 0, 0  },
-	{  "Elf", "Elf", 0, 1, 0, 0, -1  },
-	{  "Dwa", "Dwarf", 0, -2, 0, 0, 2 },
-	{  "Pix", "Pixie", -2, 0, 0, 2, 0 },
-	{  "Hlf", "Halfling", 0, 0, -2, 2, 0 },
-	{  "Drw", "Drow", -1, 0, 0, 1, 0 },
-	{  "Eld", "Elder", -3, 0, 3, 0, 0 },
-	{  "Ogr", "Ogre", 3, -3, 0, 0, 0 },
-	{  "Liz", "Lizardman", 0, 0, 0, -2, 2 },
-	{  "Dem", "Demon", 0, 0, -4, 0, 4 },
-	{  "Ghl", "Ghoul", 2, -1, -1, -1, 1 },
-	{  "Ill", "Illithid", -3, 3, 2, 0, -2 },
-	{  "Min", "Minotaur",  1, 0, 2, -4, 1 },
-	{  "Tro", "Troll", 0, -1, -1, -2, 4 },
-	{  "Shd", "Shadow", 0, -2, 0, 2, 0 },
-	{  "Tbx", "Tabaxi", 1, -2, -2, 2, 1 },
-	// {  "Krn", "Kreen", -1, -1, 0, 2, 0 },
-	// {  "Ang", "Angel", 0, 0, 4, 0, -4 }
-};
-#endif
-/* Karen
-   const   struct  weapon_data	wield_table	[MAX_CLASS]	=
-   {
-   {   0,   
-   { MAG, CLE, THI, WAR, PSI, DRU, RNG, PAL, BRD,
-   VAM, NEC, WWF, MNK }
-   },
-
-   {   0,
-   { TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
-   TRUE, TRUE, TRUE, TRUE, TRUE }
-   },
-
-
-*/
-
 const	struct	class_type	class_table	[MAX_CLASS]	=
 {
 	/*  {   "Who", "Long", PRIME_STAT, START_WEAPON,

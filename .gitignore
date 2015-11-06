@@ -12,3 +12,4 @@ nohup.out
 .vagrant/*
 /Makefile
 inspiration/
+environment

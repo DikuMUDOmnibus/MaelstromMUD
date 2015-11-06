@@ -54,33 +54,29 @@ void update_playerlist  args( ( CHAR_DATA *ch ));
 /*
  * Local functions.
  */
-void	fwrite_char	args( ( CHAR_DATA *ch,  FILE *fp ) );
-void	fwrite_obj	args( ( CHAR_DATA *ch,  OBJ_DATA  *obj,
-			FILE *fp, int iNest, bool storage ) );
-void	fread_char	args( ( CHAR_DATA *ch,  FILE *fp ) );
-void	fread_obj	args( ( CHAR_DATA *ch,  FILE *fp, bool storage ) );
-void    fread_pet       args( ( CHAR_DATA *ch, FILE *fp ) );
-void    save_pet        args( ( CHAR_DATA *ch, FILE *fp, CHAR_DATA *pet ) );
-void    add_alias       args( ( CHAR_DATA *ch, ALIAS_DATA *pAl, char *old,
-			char *new ) );
-void    fwrite_alias    args( ( CHAR_DATA *ch, FILE *fp ) );
-void    fread_alias     args( ( CHAR_DATA *ch, FILE *fp ) );
-void fread_finger args( ( CHAR_DATA *ch, FILE *fp, char *name ) );
-
+void fwrite_char		args( ( CHAR_DATA *ch,  FILE *fp ) );
+void fwrite_obj			args( ( CHAR_DATA *ch,  OBJ_DATA  *obj, FILE *fp, int iNest, bool storage ) );
+void fread_char			args( ( CHAR_DATA *ch,  FILE *fp ) );
+void fread_obj 			args( ( CHAR_DATA *ch,  FILE *fp, bool storage ) );
+void fread_pet 			args( ( CHAR_DATA *ch, FILE *fp ) );
+void save_pet 			args( ( CHAR_DATA *ch, FILE *fp, CHAR_DATA *pet ) );
+void add_alias 			args( ( CHAR_DATA *ch, ALIAS_DATA *pAl, char *old, char *new ) );
+void fwrite_alias		args( ( CHAR_DATA *ch, FILE *fp ) );
+void fread_alias		args( ( CHAR_DATA *ch, FILE *fp ) );
+void fread_finger		args( ( CHAR_DATA *ch, FILE *fp, char *name ) );
 
 /* Check to see if a player exists */
-bool pstat( char *name )
-{
+bool pstat( char *name ) {
 	bool found;
 	char strsave[256];
 	FILE *fp;
 
-	sprintf( strsave, "%s%c/%s", PLAYER_DIR, LOWER(name[0]),
-			capitalize( name ) );
+	sprintf( strsave, "%s%c/%s", PLAYER_DIR, LOWER(name[0]), capitalize( name ) );
 
 	found = ( fp = fopen( strsave, "r" ) ) != NULL;
 	fclose( fp );
 	fpReserve = fopen( NULL_FILE, "r" );
+
 	return found;
 }
 

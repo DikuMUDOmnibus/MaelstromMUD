@@ -2989,11 +2989,14 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 				}
 			}
 
-
-			if (     !IS_SET( ch->act, PLR_WIZINVIS )
-					&& !IS_SET ( ch->act, PLR_CLOAKED) )
+			if ( !IS_SET( ch->act, PLR_WIZINVIS ) && !IS_SET ( ch->act, PLR_CLOAKED) ) {
 				info( "%s has returned to the storm.", (int)(ch->name), 0 );
+			}
 
+			/* Log player login */
+			json_t *obj = json_object();
+			json_object_set_new(obj, "player_name", json_string( ch->name ));
+			write_analytics(obj, "logins");
 
 			if ( ch->pcdata->corpses >= 2 )
 			{
@@ -3007,12 +3010,11 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 				sprintf( strfng, "%s%s.cps", PLAYER_DIR, capitalize( ch->name );
 #endif
 						if ( remove( strfng ) != 0 )
-						perror( strfng );
+							perror( strfng );
 						}
-						sprintf(log_buf,"%s!%s@%s has connected.", ch->name, d->user,
-							d->host);
-						log_string(log_buf, (ch->level == L_IMP ? 1 :
-								CHANNEL_LOG), ch->level - 1 );
+
+						sprintf(log_buf,"%s!%s@%s has connected.", ch->name, d->user, d->host);
+						log_string(log_buf, (ch->level == L_IMP ? 1 : CHANNEL_LOG), ch->level - 1 );
 
 						if ( !IS_NPC( ch ) && ch->pcdata->storage )
 						{

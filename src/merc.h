@@ -22,7 +22,9 @@
 #define NEW_MONEY   
 #define HOTREBOOT
 
-#include "colors.h"   /* Include the ansi color routines. */
+#include <jansson.h>
+#include "devops.h" /* Include devops attributes */
+#include "colors.h" /* Include the ansi color routines */
 
 /*
  * Accommodate old non-Ansi compilers.
@@ -69,44 +71,48 @@ typedef unsigned char			bool;
 /*
  * Structure types.
  */
-typedef struct	affect_data		AFFECT_DATA;
-typedef struct	area_data		AREA_DATA;
-typedef struct	arena_data		ARENA_DATA;
-typedef struct  	new_clan_data     CLAN_DATA;
-typedef struct	ban_data		BAN_DATA;
-/*typedef struct  userl_data         USERL_DATA;*/
-typedef struct  	gskill_data       GSPELL_DATA;
-typedef struct	char_data		CHAR_DATA;
-typedef struct  	social_data		SOCIAL_DATA;
-typedef struct  	race_data		RACE_DATA;
-typedef struct	descriptor_data	DESCRIPTOR_DATA;
-typedef struct	exit_data		EXIT_DATA;
+typedef struct	affect_data				AFFECT_DATA;
+typedef struct	area_data					AREA_DATA;
+typedef struct	arena_data				ARENA_DATA;
+typedef struct  new_clan_data   	CLAN_DATA;
+typedef struct	ban_data					BAN_DATA;
+typedef struct  gskill_data     	GSPELL_DATA;
+typedef struct	char_data					CHAR_DATA;
+typedef struct  social_data				SOCIAL_DATA;
+typedef struct  race_data					RACE_DATA;
+typedef struct	descriptor_data		DESCRIPTOR_DATA;
+typedef struct	exit_data					EXIT_DATA;
 typedef struct	extra_descr_data	EXTRA_DESCR_DATA;
-typedef struct	help_data		HELP_DATA;
-typedef struct	kill_data		KILL_DATA;
+typedef struct	help_data					HELP_DATA;
+typedef struct	kill_data					KILL_DATA;
 typedef struct	mob_index_data		MOB_INDEX_DATA;
-typedef struct	note_data		NOTE_DATA;
-typedef struct	obj_data		OBJ_DATA;
+typedef struct	note_data					NOTE_DATA;
+typedef struct	obj_data					OBJ_DATA;
 typedef struct	obj_index_data		OBJ_INDEX_DATA;
-typedef struct	pc_data			PC_DATA;
-typedef struct	reset_data		RESET_DATA;
+typedef struct	pc_data						PC_DATA;
+typedef struct	reset_data				RESET_DATA;
 typedef struct	room_affect_data	ROOM_AFFECT_DATA;
-typedef struct	powered_data		POWERED_DATA;
+typedef struct	powered_data			POWERED_DATA;
 typedef struct	room_index_data		ROOM_INDEX_DATA;
-typedef struct	shop_data		SHOP_DATA;
+typedef struct	shop_data					SHOP_DATA;
 typedef struct	time_info_data		TIME_INFO_DATA;
-typedef struct	weather_data		WEATHER_DATA;
-typedef struct  mob_prog_data           MPROG_DATA;
-typedef struct  mob_prog_act_list       MPROG_ACT_LIST;
-typedef struct	guild_data		GUILD_DATA;	/* XOR */
-typedef struct  quest_data              QUEST_DATA;     /* Angi */
-typedef struct  alias_data              ALIAS_DATA;     /* Altrag */
-/*typedef struct  phobia_data             PHOBIA_DATA; */   /* Altrag */
-typedef struct  trap_data               TRAP_DATA;      /* Altrag */
-typedef struct	playerlist_data		PLAYERLIST_DATA; /*Decklarean*/
-typedef struct skill_type		SKILL_TYPE;
-typedef struct newbie_data		NEWBIE_DATA; 	 /* Angi */
-typedef struct  war_data		WAR_DATA;
+typedef struct	weather_data			WEATHER_DATA;
+typedef struct  mob_prog_data			MPROG_DATA;
+typedef struct  mob_prog_act_list	MPROG_ACT_LIST;
+typedef struct	guild_data				GUILD_DATA;				/* XOR */
+typedef struct  quest_data				QUEST_DATA;     	/* Angi */
+typedef struct  alias_data				ALIAS_DATA;     	/* Altrag */
+typedef struct  trap_data					TRAP_DATA;      	/* Altrag */
+typedef struct	playerlist_data		PLAYERLIST_DATA; 	/*Decklarean*/
+typedef struct 	skill_type				SKILL_TYPE;
+typedef struct 	newbie_data				NEWBIE_DATA; 	 		/* Angi */
+typedef struct  war_data					WAR_DATA;
+
+/*
+ * Deprecated
+ */
+//typedef struct  phobia_data			  PHOBIA_DATA;   	  /* Altrag */
+//typedef struct  userl_data			  USERL_DATA;
 
 
 #ifdef NEW_MONEY
@@ -347,33 +353,33 @@ struct	weather_data
 /*
  * Connected state for a channel.
  */
-#define CON_HOTREBOOT_RECOVER		-15
-#define CON_PLAYING					  0
-#define CON_GET_NAME				  1
+#define CON_HOTREBOOT_RECOVER			-15
+#define CON_PLAYING								0
+#define CON_GET_NAME							1
 #define CON_GET_OLD_PASSWORD		  2
 #define CON_CONFIRM_NEW_NAME		  3
 #define CON_GET_NEW_PASSWORD		  4
-#define CON_CONFIRM_NEW_PASSWORD	  5
-#define CON_GET_NEW_SEX				  6
-#define CON_GET_NEW_CLASS			  7
-#define CON_READ_MOTD				  8
-#define CON_GET_NEW_RACE			  9
-#define CON_CONFIRM_RACE             10
-#define CON_CONFIRM_CLASS            11
-#define CON_CHECK_AUTHORIZE   	     12
-#define CON_GET_2ND_CLASS			 13
-#define CON_CONFIRM_2ND_CLASS		 14
-#define CON_WANT_MULTI				 15
-#define CON_GET_3RD_CLASS			 16
-#define CON_CONFIRM_3RD_CLASS	     17
-#define CON_WANT_MULTI_2			 18
-#define CON_BEGIN_REMORT			 19
-#define CON_GET_ANSI				105
-#define CON_AUTHORIZE_NAME			100
-#define CON_AUTHORIZE_NAME1			101
-#define CON_AUTHORIZE_NAME2			102
-#define CON_AUTHORIZE_NAME3			103
-#define CON_AUTHORIZE_LOGOUT		104
+#define CON_CONFIRM_NEW_PASSWORD	5
+#define CON_GET_NEW_SEX				  	6
+#define CON_GET_NEW_CLASS			  	7
+#define CON_READ_MOTD				 		 	8
+#define CON_GET_NEW_RACE				  9
+#define CON_CONFIRM_RACE					10
+#define CON_CONFIRM_CLASS					11
+#define CON_CHECK_AUTHORIZE				12
+#define CON_GET_2ND_CLASS			 		13
+#define CON_CONFIRM_2ND_CLASS		 	14
+#define CON_WANT_MULTI				 		15
+#define CON_GET_3RD_CLASS			 		16
+#define CON_CONFIRM_3RD_CLASS			17
+#define CON_WANT_MULTI_2			 		18
+#define CON_BEGIN_REMORT			 		19
+#define CON_GET_ANSI							105
+#define CON_AUTHORIZE_NAME				100
+#define CON_AUTHORIZE_NAME1				101
+#define CON_AUTHORIZE_NAME2				102
+#define CON_AUTHORIZE_NAME3				103
+#define CON_AUTHORIZE_LOGOUT			104
 #define CON_CHATTING            	200
 
 /*
@@ -447,10 +453,10 @@ struct	con_app_type
  * TO types for act.
  */
 #define TO_ROOM		    0
-#define TO_NOTVICT	    1
+#define TO_NOTVICT		1
 #define TO_VICT		    2
 #define TO_CHAR		    3
-#define TO_COMBAT           4
+#define TO_COMBAT			4
 
 
 
@@ -576,22 +582,6 @@ struct	class_type
 	bool	multi[ MAX_CLASS ];	/* Which classes can multiclass */
 	bool	objtype[ 14 ];		/* Which classes can wield what types of weapons */
 };
-#if 0
-struct  race_type
-{
-	char        race_name      [ 4 ];
-	char        race_full      [ 20 ];
-	int		mstr;
-	int		mint;
-	int		mwis;
-	int		mdex;
-	int		mcon;
-	/*  int         atribmod1;
-		int         atribmod2;     OLD VERSION.
-		int         modamount1;
-		int         modamount2; */
-};
-#endif
 
 struct  race_data
 {
@@ -606,26 +596,6 @@ struct  race_data
 	int		mcon;
 };
 
-/* not used - Decklarean
-   struct  nrace_type
-   {
-   char        lname  [20];
-   char        sname  [4];
-   int         size;
-   int         mstr;
-   int         mdex;
-   int         mint;
-   int         mwis;
-   int         mcon;
-   int         mods [5];
-   long        res_flags;
-   long        vul_flags;
-   long        affects;
-   int         hplev;
-   int         manalev;
-   int         movelev;
-   };
-   */    
 /*
  * Data structure for notes.
  */
@@ -642,8 +612,6 @@ struct	note_data
 	int         on_board;
 };
 
-
-
 /*
  * An affect.
  */
@@ -658,8 +626,6 @@ struct	affect_data
 	int			bitvector;
 	bool                deleted;
 };
-
-
 
 /*
  * A kill structure (indexed by level).
@@ -1967,8 +1933,6 @@ struct	liq_type
 	int                 liq_affect [ 3 ];
 };
 
-
-
 /*
  * Extra description data for a room or object.
  */
@@ -1979,8 +1943,6 @@ struct	extra_descr_data
 	char             *description; /* What to see                      */
 	bool              deleted;
 };
-
-
 
 /*
  * Prototype for an object.
@@ -2021,8 +1983,6 @@ struct	obj_index_data
 	int                 sep_one;
 	int                 sep_two;
 };
-
-
 
 /*
  * One object.
@@ -2065,8 +2025,6 @@ struct	obj_data
 	bool                deleted;
 };
 
-
-
 /*
  * Exit data.
  */
@@ -2083,8 +2041,6 @@ struct	exit_data
 	char *		keyword;
 	char *		description;
 };
-
-
 
 /*
  * Reset commands:
@@ -2110,8 +2066,6 @@ struct	reset_data
 	int 		arg2;
 	int 		arg3;
 };
-
-
 
 /*
  * Area definition.
@@ -2165,6 +2119,7 @@ struct  new_clan_data
 	int                 obj_vnum_3;
 	int                 settings;
 }; 
+
 /* 
  * ROOM AFFECT type 
  */
@@ -2177,6 +2132,7 @@ struct	room_affect_data
 	int 		type;
 	int 		location;
 };
+
 struct	powered_data
 {
 	POWERED_DATA *	next;
@@ -2185,6 +2141,7 @@ struct	powered_data
 	int			type;
 	int			cost;
 };
+
 /*
  * Room type.
  */
@@ -2210,8 +2167,6 @@ struct	room_index_data
 	int                 rd;    /* TRI ( Room damage ) */
 };
 
-
-
 /*
  * Types of attacks.
  * Must be non-overlapping with spell/skill types,
@@ -2219,8 +2174,6 @@ struct	room_index_data
  */
 #define TYPE_UNDEFINED             -1
 #define TYPE_HIT                 1000
-
-
 
 /*
  *  Target types.
@@ -2235,8 +2188,6 @@ struct	room_index_data
 #define TAR_GROUP_ALL               7
 #define TAR_GROUP_OBJ               8
 #define TAR_GROUP_IGNORE            9
-
-
 
 /*
  * Skills include spells as a particular case.
@@ -2515,26 +2466,6 @@ struct	cmd_type
 	int 		log;
 };
 
-
-
-/*
- * Structure for a social in the socials table.
- */
-/*
-   struct	social_type
-   {
-   char * const	name;
-   char * const	char_no_arg;
-   char * const	others_no_arg;
-   char * const	char_found;
-   char * const	others_found;
-   char * const	vict_found;
-   char * const	char_auto;
-   char * const	others_auto;
-   };
-   */
-
-
 /*
  * Global constants.
  */
@@ -2545,7 +2476,6 @@ extern	const	struct	dex_app_type	dex_app		[ 31 ];
 extern	const	struct	con_app_type	con_app		[ 31 ];
 
 extern	const	struct	class_type	class_table	[ MAX_CLASS   ];
-/*extern	const	struct	race_type	race_table	[ MAX_RACE    ];*/
 extern  const   struct  wiznet_type     wiznet_table    [ ];
 extern  const   struct  guild_data      guild_table     [ ];
 extern  const   struct  quest_data      quest_table     [ ];
@@ -2553,7 +2483,6 @@ extern	struct	cmd_type	cmd_table	[ ];
 extern	const	struct	liq_type	liq_table	[ LIQ_MAX     ];
 extern	const	struct	skill_type	skill_table	[ MAX_SKILL ];
 extern  const   struct  gskill_type     gskill_table    [ MAX_GSPELL  ];
-/*extern	const	struct	social_type	social_table	[ ];*/
 extern	char *	const			title_table	[ MAX_CLASS+3 ]
 [ MAX_LEVEL+1 ]
 [ 2 ];
@@ -3391,22 +3320,21 @@ void	move_char	args( ( CHAR_DATA *ch, int door, bool Fall ) );
 
 /* act_wiz.c */
 ROOM_INDEX_DATA *	find_location	args( ( CHAR_DATA *ch, char *arg ) );
-void wiznet             args( (char *string, CHAR_DATA *ch, OBJ_DATA *obj,
-			long flag, long flag_skip, int min_level ) );
+void wiznet             args( (char *string, CHAR_DATA *ch, OBJ_DATA *obj, long flag, long flag_skip, int min_level ) );
 
 /* comm.c */
 void	close_socket	 args( ( DESCRIPTOR_DATA *dclose ) );
-void	write_to_buffer	 args( ( DESCRIPTOR_DATA *d, const char *txt,
-			int length ) );
+void	write_to_buffer	 args( ( DESCRIPTOR_DATA *d, const char *txt, int length ) );
 void    send_to_all_char args( ( const char *text ) );
 void    send_to_al       args( ( int clr, int level, char *text ) );
 /* send to above level---^   TRI */
 void	send_to_char	 args( ( int AType, const char *txt, CHAR_DATA *ch ) );
 void    set_char_color   args( ( int AType, CHAR_DATA *ch ) );
 void    show_string      args( ( DESCRIPTOR_DATA *d, char *input ) );
-void	act	         args( ( int AType, const char *format, CHAR_DATA *ch,
-			const void *arg1, const void *arg2,
-			int type ) );
+void	act	         args( ( int AType, const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, int type ) );
+
+/* devops.c */
+void 	write_analytics args( ( json_t* obj, const char *collection ) );
 
 /* db.c */
 void	boot_db		args( ( void ) );
@@ -3586,15 +3514,15 @@ void    do_acspell      args( ( CHAR_DATA *ch, OBJ_DATA *pObj,
 			char *argument ) );
 
 /* save.c */
-bool    pstat            args( ( char *name ) );
-void	save_char_obj	args( ( CHAR_DATA *ch, bool leftgame ) );
-bool	load_char_obj	args( ( DESCRIPTOR_DATA *d, char *name ) );
-void    corpse_back     args( ( CHAR_DATA *ch, OBJ_DATA *corpse ) );
-void    read_finger	args( ( CHAR_DATA *ch, char *argument ) );
-void    save_finger     args( ( CHAR_DATA *ch ) );
-void    fwrite_finger   args( ( CHAR_DATA *ch, FILE *fp ) );
-void    fread_finger    args( ( CHAR_DATA *ch, FILE *fp, char *name ) );
-void	save_banlist	args( ( BAN_DATA *ban_list ) );
+bool	pstat           args( ( char *name ) );
+void	save_char_obj		args( ( CHAR_DATA *ch, bool leftgame ) );
+bool	load_char_obj		args( ( DESCRIPTOR_DATA *d, char *name ) );
+void	corpse_back     args( ( CHAR_DATA *ch, OBJ_DATA *corpse ) );
+void	read_finger			args( ( CHAR_DATA *ch, char *argument ) );
+void	save_finger     args( ( CHAR_DATA *ch ) );
+void	fwrite_finger   args( ( CHAR_DATA *ch, FILE *fp ) );
+void	fread_finger    args( ( CHAR_DATA *ch, FILE *fp, char *name ) );
+void	save_banlist		args( ( BAN_DATA *ban_list ) );
 
 /* special.c */
 SF *	spec_lookup	args( ( const char *name ) );
@@ -3813,25 +3741,21 @@ struct flag_type
  */
 #define OBJ_VNUM_DUMMY	1
 
-
-
 /*
  * Area flags.
  */
-#define         AREA_NONE       0
-#define         AREA_CHANGED    1	/* Area has been modified. */
-#define         AREA_ADDED      2	/* Area has been added to. */
-#define         AREA_LOADING    4	/* Used for counting in db.c */
-#define		AREA_VERBOSE	8	/* Used for saving in save.c */
-#define	 	AREA_PROTOTYPE 16       /* Prototype area(no mortals) */
-#define		AREA_CLAN_HQ   32	/* Area is a CLAN HQ */
-#define		AREA_NO_QUEST  64	/* No quests allowed */
+#define		AREA_NONE       0
+#define		AREA_CHANGED    1		/* Area has been modified. */
+#define		AREA_ADDED      2		/* Area has been added to. */
+#define		AREA_LOADING    4		/* Used for counting in db.c */
+#define		AREA_VERBOSE		8		/* Used for saving in save.c */
+#define	 	AREA_PROTOTYPE 16		/* Prototype area(no mortals) */
+#define		AREA_CLAN_HQ   32		/* Area is a CLAN HQ */
+#define		AREA_NO_QUEST  64		/* No quests allowed */
 #define 	AREA_MUDSCHOOL 128	/* Used for mudschool only */
 
-#define MAX_DIR	6
+#define MAX_DIR		6
 #define NO_FLAG -99	/* Must not be used in flags or stats. */
-
-
 
 /*
  * Interp.c
@@ -3840,19 +3764,19 @@ DECLARE_DO_FUN( do_aedit        );	/* OLC 1.1b */
 DECLARE_DO_FUN( do_redit        );	/* OLC 1.1b */
 DECLARE_DO_FUN( do_oedit        );	/* OLC 1.1b */
 DECLARE_DO_FUN( do_medit        );	/* OLC 1.1b */
-DECLARE_DO_FUN( do_cedit        );      /* IchiCode 1.1b */
-DECLARE_DO_FUN( do_hedit        );      /* XOR 3.14159265359r^2 */
-DECLARE_DO_FUN( do_sedit	);	/* Decklarean */
-DECLARE_DO_FUN( do_spedit	);	/* Decklarean */
-DECLARE_DO_FUN( do_rename_obj	);	/* Decklarean */
-DECLARE_DO_FUN( do_race_edit	);	/* Decklarean */
-DECLARE_DO_FUN( do_mreset	);	/* Decklarean */
-DECLARE_DO_FUN( do_nedit	);	/* Angi */
-DECLARE_DO_FUN( do_asave	);
-DECLARE_DO_FUN( do_alist	);
-DECLARE_DO_FUN( do_resets	);
+DECLARE_DO_FUN( do_cedit        );	/* IchiCode 1.1b */
+DECLARE_DO_FUN( do_hedit        );	/* XOR 3.14159265359r^2 */
+DECLARE_DO_FUN( do_sedit				);	/* Decklarean */
+DECLARE_DO_FUN( do_spedit				);	/* Decklarean */
+DECLARE_DO_FUN( do_rename_obj		);	/* Decklarean */
+DECLARE_DO_FUN( do_race_edit		);	/* Decklarean */
+DECLARE_DO_FUN( do_mreset				);	/* Decklarean */
+DECLARE_DO_FUN( do_nedit				);	/* Angi */
+DECLARE_DO_FUN( do_asave				);
+DECLARE_DO_FUN( do_alist				);
+DECLARE_DO_FUN( do_resets				);
 DECLARE_DO_FUN( do_alias        );
-DECLARE_DO_FUN( do_clear        );      /* Angi */
+DECLARE_DO_FUN( do_clear        );	/* Angi */
 
 
 
@@ -3863,8 +3787,6 @@ DECLARE_DO_FUN( do_clear        );      /* Angi */
 extern	char *	const	dir_name        [];
 extern	const	int	rev_dir         [];
 extern	const	struct	spec_type	spec_table	[];
-
-
 
 /*
  * Global variables
