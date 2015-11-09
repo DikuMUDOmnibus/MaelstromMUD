@@ -19,11 +19,14 @@
  ***************************************************************************/
 
 #define unix 1
+
 #if defined( macintosh )
 #include <types.h>
 #else
 #include <sys/types.h>
 #endif
+
+#include <unistd.h>
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -99,25 +102,31 @@ void trigger_incident( const char* description ) {
  * @param payload The Payload
  */
 void curl_json_post(const char* url, char* payload) {
-  CURL *curl;
-  struct curl_slist *headers = NULL;
+  pid_t pid;
 
-  curl_global_init(CURL_GLOBAL_ALL);
+  pid = fork();
 
-  if ( (curl = curl_easy_init()) ) {
-    headers = curl_slist_append(headers, "Content-Type: application/json");
+  if ( pid == 0 ) {
+    CURL *curl;
+    struct curl_slist *headers = NULL;
 
-    curl_easy_setopt(curl, CURLOPT_URL, url);
-    curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
-    curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, "POST");
-    curl_easy_setopt(curl, CURLOPT_POSTFIELDS, payload);
+    curl_global_init(CURL_GLOBAL_ALL);
 
-    curl_easy_perform( curl );
+    if ( (curl = curl_easy_init()) ) {
+      headers = curl_slist_append(headers, "Content-Type: application/json");
+
+      curl_easy_setopt(curl, CURLOPT_URL, url);
+      curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+      curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, "POST");
+      curl_easy_setopt(curl, CURLOPT_POSTFIELDS, payload);
+
+      curl_easy_perform( curl );
+    }
+    
+    curl_easy_cleanup(curl);
+    curl_slist_free_all(headers);
+    curl_global_cleanup();
   }
-  
-  curl_easy_cleanup(curl);
-  curl_slist_free_all(headers);
-  curl_global_cleanup();
 
   return;
 }
