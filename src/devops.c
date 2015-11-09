@@ -104,9 +104,9 @@ void trigger_incident( const char* description ) {
 void curl_json_post(const char* url, char* payload) {
   pid_t pid;
 
-  pid = fork();
-
   curl_global_init(CURL_GLOBAL_ALL);
+
+  pid = fork();
 
   if ( pid == 0 ) {
     CURL *curl;
@@ -125,6 +125,7 @@ void curl_json_post(const char* url, char* payload) {
     
     curl_easy_cleanup(curl);
     curl_slist_free_all(headers);
+  } else if (pid > 0 ) {
     curl_global_cleanup();
   }
 
