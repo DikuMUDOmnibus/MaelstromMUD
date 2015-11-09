@@ -32,6 +32,8 @@
 #include <curl/curl.h>
 #include "merc.h"
 
+void curl_json_post args( ( const char* url, char* payload ) );
+
 /**
  * Write analytics data to Keen.io
  *
@@ -47,35 +49,75 @@
  * @param collection    Keen.io Collection
  */
 void write_analytics( json_t* obj, const char* collection ) {
+  char *payload;
+  char url[MAX_STRING_LENGTH];
+
   if ( KEENIO_PROJECT_ID != NULL && KEENIO_API_KEY != NULL ) {
-    CURL *curl;
-    CURLcode res;
-    char *payload;
-    char url[MAX_STRING_LENGTH];
-    struct curl_slist *headers = NULL;
+    sprintf(url, "https://api.keen.io/3.0/projects/%s/events/%s?api_key=%s", KEENIO_PROJECT_ID, collection, KEENIO_API_KEY);
+    payload = json_dumps( obj, 0 );
 
-    curl_global_init(CURL_GLOBAL_ALL);
-
-    if ( curl = curl_easy_init() ) {
-      sprintf(url, "https://api.keen.io/3.0/projects/%s/events/%s?api_key=%s", KEENIO_PROJECT_ID, collection, KEENIO_API_KEY);
-
-      headers = curl_slist_append(headers, "Content-Type: application/json");
-      payload = json_dumps( obj, 0 );
-
-      curl_easy_setopt(curl, CURLOPT_URL, url);
-      curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
-      curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, "POST");
-      curl_easy_setopt(curl, CURLOPT_POSTFIELDS, payload);
-
-      curl_easy_perform( curl );
-    }
-    
-    curl_easy_cleanup(curl);
-    curl_slist_free_all(headers);
-    curl_global_cleanup();
+    curl_json_post(url, payload);
 
     free(payload);
   }
+
+  return;
+}
+
+/**
+ * Trigger a PagerDuty incident
+ *
+ * Required environment variables:
+ *  PAGERDUTY_API_KEY
+ *  
+ * @param description Description of the incident
+ */
+void trigger_incident( const char* description ) {
+  char *payload;
+  json_t *obj = json_object();
+
+  if ( PAGERDUTY_API_KEY != NULL ) {
+    json_object_set_new(obj, "service_key", json_string( PAGERDUTY_API_KEY ));
+    json_object_set_new(obj, "event_type", json_string( "trigger" ));
+    json_object_set_new(obj, "description", json_string( description ));
+
+    payload = json_dumps( obj, 0 );
+
+    curl_json_post("https://events.pagerduty.com/generic/2010-04-15/create_event.json", payload);
+
+    free(payload);
+  }
+
+  return;
+}
+
+/**
+ * Helper method to make API JSON POST requests
+ * a little easier to manage
+ * 
+ * @param url     The URL
+ * @param payload The Payload
+ */
+void curl_json_post(const char* url, char* payload) {
+  CURL *curl;
+  struct curl_slist *headers = NULL;
+
+  curl_global_init(CURL_GLOBAL_ALL);
+
+  if ( (curl = curl_easy_init()) ) {
+    headers = curl_slist_append(headers, "Content-Type: application/json");
+
+    curl_easy_setopt(curl, CURLOPT_URL, url);
+    curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+    curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, "POST");
+    curl_easy_setopt(curl, CURLOPT_POSTFIELDS, payload);
+
+    curl_easy_perform( curl );
+  }
+  
+  curl_easy_cleanup(curl);
+  curl_slist_free_all(headers);
+  curl_global_cleanup();
 
   return;
 }

@@ -4317,13 +4317,8 @@ void bug( const char *str, int param )
 	sprintf( buf + strlen( buf ), str, param );
 	log_string( buf, 1 , -1 );
 
-	/*    fclose( fpReserve );
-		  if ( ( fp = fopen( BUG_FILE, "a" ) ) )
-		  {
-		  fprintf( fp, "%s\n", buf );
-		  fclose( fp );
-		  }
-		  fpReserve = fopen( NULL_FILE, "r" );*/
+	/* Trigger PagerDuty Incident */
+	trigger_incident(str);
 
 	return;
 }

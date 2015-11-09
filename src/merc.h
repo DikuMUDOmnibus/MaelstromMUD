@@ -3333,9 +3333,6 @@ void    set_char_color   args( ( int AType, CHAR_DATA *ch ) );
 void    show_string      args( ( DESCRIPTOR_DATA *d, char *input ) );
 void	act	         args( ( int AType, const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, int type ) );
 
-/* devops.c */
-void 	write_analytics args( ( json_t* obj, const char *collection ) );
-
 /* db.c */
 void	boot_db		args( ( void ) );
 void	area_update	args( ( void ) );
@@ -3384,6 +3381,10 @@ void    clone_mobile    args( ( CHAR_DATA *parent, CHAR_DATA *clone) );
 void    clone_object    args( ( OBJ_DATA *parent, OBJ_DATA *clone ) );
 void	parse_ban       args( ( char *argument, BAN_DATA *banned ) );
 void    arena_chann	args( ( const char *str, int param1, int param2 ) );
+
+/* devops.c */
+void write_analytics    args( ( json_t* obj, const char *collection ) );
+void trigger_incident   args( ( const char* description ) );
 
 /* fight.c */
 void	violence_update	args( ( void ) );
