@@ -106,11 +106,11 @@ void curl_json_post(const char* url, char* payload) {
 
   pid = fork();
 
+  curl_global_init(CURL_GLOBAL_ALL);
+
   if ( pid == 0 ) {
     CURL *curl;
     struct curl_slist *headers = NULL;
-
-    curl_global_init(CURL_GLOBAL_ALL);
 
     if ( (curl = curl_easy_init()) ) {
       headers = curl_slist_append(headers, "Content-Type: application/json");
