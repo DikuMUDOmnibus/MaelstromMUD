@@ -1,7 +1,5 @@
 ### TODO
 * Fix `todo` functionality
-* Fix `ideas` functionality
-* Fix `typos` functionality
 * Fix `changes` functionality
 * Fix `ban` functionality
 * Fix `aedit` last modified functionality
@@ -14,13 +12,14 @@
 * ~~Fix `hotreboot` functionality~~
 * ~~Display closed doors~~
 * ~~Fix `&O` in `ofind`~~
+* ~~Fix `ideas` functionality~~
+* ~~Fix `typos` functionality~~
 
 ### IDEAS
 
 #### DevOps Integrations
 
 * slack channel integration
-* github issue tracking
 * iron.io message queue
 * compose.io elasticsearch helpfile indexing
 * coveralls.io code coverage reporting

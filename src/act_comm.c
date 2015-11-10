@@ -2366,7 +2366,7 @@ void do_info( CHAR_DATA *ch, char *argument )
 
 void do_bug( CHAR_DATA *ch, char *argument )
 {
-	append_file( ch, BUG_FILE,  argument );
+	report_issue(argument, NULL, GITHUB_LABEL_BUG);
 	send_to_char(AT_WHITE, "Ok.  Thanks.\n\r", ch );
 	return;
 }
@@ -2375,7 +2375,7 @@ void do_bug( CHAR_DATA *ch, char *argument )
 
 void do_idea( CHAR_DATA *ch, char *argument )
 {
-	append_file( ch, IDEA_FILE, argument );
+	report_issue(argument, NULL, GITHUB_LABEL_IDEA);
 	send_to_char(AT_WHITE, "Ok.  Thanks.\n\r", ch );
 	return;
 }
@@ -2384,7 +2384,7 @@ void do_idea( CHAR_DATA *ch, char *argument )
 
 void do_typo( CHAR_DATA *ch, char *argument )
 {
-	append_file( ch, TYPO_FILE, argument );
+	report_issue(argument, NULL, GITHUB_LABEL_TYPO);
 	send_to_char(AT_WHITE, "Ok.  Thanks.\n\r", ch );
 	return;
 }

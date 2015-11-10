@@ -801,6 +801,8 @@ void game_loop_unix( int control )
 	struct timeval last_time;
 
 	signal( SIGPIPE, SIG_IGN );
+	signal( SIGCHLD, SIG_IGN );
+
 	gettimeofday( &last_time, NULL );
 	current_time = (time_t) last_time.tv_sec;
 	if ( current_time < TIMEOFS ) current_time += TIMEOFS;

@@ -3265,9 +3265,6 @@ char *	crypt		args( ( const char *key, const char *salt ) );
 
 #define AREA_LIST	"area.lst"	/* List of areas		*/
 #define BAN_LIST	"../banned.lst" /* List of banned sites & users */
-#define BUG_FILE	"bugs.txt"      /* For 'bug' and bug( )		*/
-#define IDEA_FILE	"ideas.txt"	/* For 'idea'			*/
-#define TYPO_FILE	"typos.txt"     /* For 'typo'			*/
 #define NOTE_FILE	"notes.txt"	/* For 'notes'			*/
 #define CLAN_FILE       "clan.dat"      /* For 'clans'                  */
 #define SOCIAL_FILE	"social.dat"	/* For 'socials'		*/
@@ -3385,6 +3382,7 @@ void    arena_chann	args( ( const char *str, int param1, int param2 ) );
 /* devops.c */
 void write_analytics    args( ( json_t* obj, const char *collection ) );
 void trigger_incident   args( ( const char* description ) );
+void report_issue				args( ( const char* title, const char* description, const char* label ) );
 
 /* fight.c */
 void	violence_update	args( ( void ) );
