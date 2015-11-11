@@ -19,11 +19,7 @@
  ***************************************************************************/
 
 #define unix 1
-#if defined( macintosh )
-#include <types.h>
-#else
 #include <sys/types.h>
-#endif
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -31,13 +27,7 @@
 #include <time.h>
 #include "merc.h"
 
-#if !defined( macintosh )
 extern	int	_filbuf		args( (FILE *) );
-#endif
-
-#if defined( ultrix ) || defined( sequent )
-void    system          args( ( char *string ) );
-#endif
 
 /*
  * Array of containers read for proper re-nesting of objects.
@@ -105,12 +95,8 @@ void save_char_obj( CHAR_DATA *ch, bool leftgame )
 	fclose( fpReserve );
 
 	/* player files parsed directories by Yaz 4th Realm */
-#if !defined( macintosh ) && !defined( MSDOS )
-	sprintf( strsave, "%s%c/%s", PLAYER_DIR, LOWER(ch->name[0]),
-			capitalize( ch->name ) );
-#else
-	sprintf( strsave, "%s%s", PLAYER_DIR, capitalize( ch->name ) );
-#endif
+	sprintf( strsave, "%s%c/%s", PLAYER_DIR, LOWER(ch->name[0]), capitalize( ch->name ) );
+
 	if ( !( fp = fopen( strsave, "w" ) ) )
 	{
 		sprintf( buf, "Save_char_obj: fopen %s: ", ch->name );
@@ -138,13 +124,11 @@ void save_char_obj( CHAR_DATA *ch, bool leftgame )
 	}
 	fclose( fp );
 
-#if !defined( macintosh ) && !defined( MSDOS )
 	if ( leftgame )
 	{
 		sprintf( buf, "gzip -1fq %s", strsave );
 		system( buf );
 	}
-#endif
 
 	fpReserve = fopen( NULL_FILE, "r" );
 	/*    tail_chain();*/
@@ -484,9 +468,7 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name )
 	FILE      *fp;
 	static PC_DATA    pcdata_zero;
 	CHAR_DATA *ch;
-#if !defined( MSDOS )
 	char       buf     [ MAX_STRING_LENGTH ];
-#endif
 	char       strsave [ MAX_INPUT_LENGTH ];
 	bool       found;
 
@@ -572,24 +554,17 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name )
 
 	/* parsed player file directories by Yaz of 4th Realm */
 	/* decompress if .gz file exists - Thx Alander */
-#if !defined( macintosh ) && !defined( MSDOS )
-	sprintf( strsave, "%s%c/%s.gz", PLAYER_DIR, LOWER(ch->name[0]),
-			capitalize( name ) );
+	sprintf( strsave, "%s%c/%s.gz", PLAYER_DIR, LOWER(ch->name[0]), capitalize( name ) );
 	if ( ( fp = fopen( strsave, "r" ) ) )
 	{
 		fclose( fp );
 		sprintf( buf, "gzip -dfq %s", strsave );
 		system( buf );
 	}
-#endif
 
 
-#if !defined( macintosh ) && !defined( MSDOS )
-	sprintf( strsave, "%s%c/%s", PLAYER_DIR, LOWER(ch->name[0]),
-			capitalize( name ) );
-#else
-	sprintf( strsave, "%s%s", PLAYER_DIR, capitalize( name ) );
-#endif
+	sprintf( strsave, "%s%c/%s", PLAYER_DIR, LOWER(ch->name[0]), capitalize( name ) );
+
 	if ( ( fp = fopen( strsave, "r" ) ) )
 	{
 		int iNest;
@@ -1602,12 +1577,7 @@ void corpse_back( CHAR_DATA *ch, OBJ_DATA *corpse )
 	fclose( fpReserve );
 
 	/* player files parsed directories by Yaz 4th Realm */
-#if !defined( macintosh ) && !defined( MSDOS )
-	sprintf( strsave, "%s%c/%s.cps", PLAYER_DIR, LOWER(ch->name[0]),
-			capitalize( ch->name ) );
-#else
-	sprintf( strsave, "%s%s.cps", PLAYER_DIR, capitalize( ch->name ) );
-#endif
+	sprintf( strsave, "%s%c/%s.cps", PLAYER_DIR, LOWER(ch->name[0]), capitalize( ch->name ) );
 
 	if ( !( fp = fopen( strsave, "w" ) ) )
 	{

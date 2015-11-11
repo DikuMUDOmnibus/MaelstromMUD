@@ -20,12 +20,7 @@
 
 #define unix 1
 
-#if defined( macintosh )
-#include <types.h>
-#else
 #include <sys/types.h>
-#endif
-
 #include <unistd.h>
 #include <ctype.h>
 #include <stdio.h>

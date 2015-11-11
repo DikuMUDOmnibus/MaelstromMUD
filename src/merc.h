@@ -25,33 +25,18 @@
 
 /* To turn on and off certain features off the mud */
 #define NEW_MONEY   
-#define HOTREBOOT
 
 #include <jansson.h>
 #include "devops.h" /* Include devops attributes */
 #include "colors.h" /* Include the ansi color routines */
 
-/*
- * Accommodate old non-Ansi compilers.
- */
-#if defined( TRADITIONAL )
-#define const
-#define args( list )			( )
-#define DECLARE_DO_FUN( fun )		void fun( )
-#define DECLARE_SPEC_FUN( fun )		bool fun( )
-#define DECLARE_SPELL_FUN( fun )	void fun( )
-#else
-#define args( list )			list
-#define DECLARE_DO_FUN( fun )		DO_FUN    fun
+#define args( list )							list
+#define DECLARE_DO_FUN( fun )			DO_FUN    fun
 #define DECLARE_SPEC_FUN( fun )		SPEC_FUN  fun
 #define DECLARE_SPELL_FUN( fun )	SPELL_FUN fun
-#endif
-
-
 
 /*
- * Short scalar types.
- * Diavolo reports AIX compiler has bugs with short types.
+ * Boolean Definitions
  */
 #if	!defined( FALSE )
 #define FALSE	 0
@@ -61,17 +46,7 @@
 #define TRUE	 1
 #endif
 
-#if	defined( _AIX )
-#if	!defined( const )
-#define const
-#endif
-typedef int				bool;
-#define unix
-#else
 typedef unsigned char			bool;
-#endif
-
-
 
 /*
  * Structure types.
@@ -136,11 +111,9 @@ typedef struct money_data	 	MONEY_DATA;
 /*
  * Function types.
  */
-typedef	void DO_FUN                     args( ( CHAR_DATA *ch,
-			char *argument ) );
+typedef	void DO_FUN                     args( ( CHAR_DATA *ch, char *argument ) );
 typedef bool SPEC_FUN                   args( ( CHAR_DATA *ch ) );
-typedef void SPELL_FUN                  args( ( int sn, int level,
-			CHAR_DATA *ch, void *vo ) );
+typedef void SPELL_FUN                  args( ( int sn, int level, CHAR_DATA *ch, void *vo ) );
 
 /*
  * String and memory management parameters.
@@ -545,7 +518,7 @@ struct playerlist_data
 #define CLASS_VAMPIRE        8
 #define CLASS_NECROMANCER    9
 #define CLASS_WEREWOLF      10
-#define CLASS_MONK	    	11
+#define CLASS_MONK	    		11
 
 #define RACE_HUMAN           0
 #define RACE_ELF             1
@@ -560,9 +533,9 @@ struct playerlist_data
 #define RACE_GHOUL          10
 #define RACE_ILLITHID       11
 #define RACE_MINOTAUR       12
-#define RACE_TROLL	    13
+#define RACE_TROLL	    		13
 #define RACE_SHADOW         14
-#define RACE_TABAXI	    15
+#define RACE_TABAXI	    		15
 // #define RACE_KREEN		16
 // #define RACE_ANGEL		17
 /*
@@ -572,20 +545,20 @@ struct playerlist_data
 
 struct	class_type
 {
-	char 	who_name	[ 4 ];	/* Three-letter name for 'who'	*/
-	char        who_long        [ 15 ]; /* Long name of Class           */
-	int 	attr_prime;		/* Prime attribute		*/
-	int 	weapon;			/* First weapon			*/
-	int 	guild;			/* Vnum of guild room		*/
-	int 	skill_adept;		/* Maximum skill level		*/
-	int 	thac0_00;		/* Thac0 for level  0		*/
-	int 	thac0_97;		/* Thac0 for level 47		*/
-	int  	hp_min;			/* Min hp gained on leveling	*/
-	int	        hp_max;			/* Max hp gained on leveling	*/
-	bool	fMana;			/* Class gains mana on level	*/
+	char 	who_name[ 4 ];			/* Three-letter name for 'who'	*/
+	char	who_long[ 15 ]; 		/* Long name of Class           */
+	int 	attr_prime;					/* Prime attribute		*/
+	int 	weapon;							/* First weapon			*/
+	int 	guild;							/* Vnum of guild room		*/
+	int 	skill_adept;				/* Maximum skill level		*/
+	int 	thac0_00;						/* Thac0 for level  0		*/
+	int 	thac0_97;						/* Thac0 for level 47		*/
+	int  	hp_min;							/* Min hp gained on leveling	*/
+	int		hp_max;							/* Max hp gained on leveling	*/
+	bool	fMana;							/* Class gains mana on level	*/
 	bool	races[ MAX_RACE ];	/* Can a race be a class?	*/
 	bool	multi[ MAX_CLASS ];	/* Which classes can multiclass */
-	bool	objtype[ 14 ];		/* Which classes can wield what types of weapons */
+	bool	objtype[ 14 ];			/* Which classes can wield what types of weapons */
 };
 
 struct  race_data
@@ -607,14 +580,15 @@ struct  race_data
 struct	note_data
 {
 	NOTE_DATA *	next;
+
 	char *	sender;
 	char *	date;
 	char *	to_list;
 	char *	subject;
 	char *	text;
-	time_t      date_stamp;
-	bool        protected;
-	int         on_board;
+	time_t	date_stamp;
+	bool		protected;
+	int			on_board;
 };
 
 /*
@@ -623,13 +597,14 @@ struct	note_data
 struct	affect_data
 {
 	AFFECT_DATA *	next;
+
 	int 		type;
 	int			level;
 	int 		duration;
 	int 		location;
 	int 		modifier;
 	int			bitvector;
-	bool                deleted;
+	bool		deleted;
 };
 
 /*
@@ -677,7 +652,7 @@ struct	kill_data
 
 /* RT ASCII conversions -- used so we can have letters in this file */
 
-#define A		  	1
+#define A			1
 #define B			2
 #define C			4
 #define D			8
@@ -688,7 +663,7 @@ struct	kill_data
 
 #define I			256
 #define J			512
-#define K		        1024
+#define K			1024
 #define L		 	2048
 #define M			4096
 #define N		 	8192
@@ -706,11 +681,11 @@ struct	kill_data
 
 #define Y			16777216
 #define Z			33554432
-#define aa			67108864 	/* doubled due to conflicts */
-#define bb			134217728
-#define cc			268435456    
-#define dd			536870912
-#define ee			1073741824
+#define aa		67108864 	/* doubled due to conflicts */
+#define bb		134217728
+#define cc		268435456    
+#define dd		536870912
+#define ee		1073741824
 
 /***************************************************************************
  *                                                                         *
@@ -2694,10 +2669,8 @@ DECLARE_DO_FUN(	do_hide		);
 DECLARE_DO_FUN( do_high_kick	);
 DECLARE_DO_FUN( do_hlist        );
 DECLARE_DO_FUN(	do_holylight	);
-#if defined( HOTREBOOT )
 DECLARE_DO_FUN(	do_hotreboo	);
 DECLARE_DO_FUN(	do_hotreboot	);
-#endif
 DECLARE_DO_FUN(	do_idea		);
 DECLARE_DO_FUN(	do_ideas		);
 DECLARE_DO_FUN( do_imc		);
@@ -3149,88 +3122,19 @@ DECLARE_SPELL_FUN(    spell_pass_plant 		); /*Deck*/
 
 DECLARE_SPELL_FUN(    spell_soul_bind 		); /*Malaclypse*/
 
-/*
- * OS-dependent declarations.
- * These are all very standard library functions,
- *   but some systems have incomplete or non-ansi header files.
- */
-#if	defined( _AIX )
 char *	crypt		args( ( const char *key, const char *salt ) );
-#endif
-
-#if	defined( apollo )
-int	atoi		args( ( const char *string ) );
-void *	calloc		args( ( unsigned nelem, size_t size ) );
-char *	crypt		args( ( const char *key, const char *salt ) );
-#endif
-
-#if	defined( hpux )
-char *	crypt		args( ( const char *key, const char *salt ) );
-#endif
-
-#if	defined( linux )
-char *	crypt		args( ( const char *key, const char *salt ) );
-#endif
-
-#if	defined( macintosh )
-#define NOCRYPT
-#if	defined( unix )
-#undef	unix
-#endif
-#endif
-
-#if	defined( MIPS_OS )
-char *	crypt		args( ( const char *key, const char *salt ) );
-#endif
-
-#if	defined( MSDOS )
-#define NOCRYPT
-#if	defined( unix )
-#undef	unix
-#endif
-#endif
-
-#if	defined( NeXT )
-char *	crypt		args( ( const char *key, const char *salt ) );
-#endif
-
-#if	defined( sequent )
-char *	crypt		args( ( const char *key, const char *salt ) );
-int	fclose		args( ( FILE *stream ) );
-int	fprintf		args( ( FILE *stream, const char *format, ... ) );
-int	fread		args( ( void *ptr, int size, int n, FILE *stream ) );
-int	fseek		args( ( FILE *stream, long offset, int ptrname ) );
-void	perror		args( ( const char *s ) );
-int	ungetc		args( ( int c, FILE *stream ) );
-#endif
-
-#if	defined( sun )
-char *	crypt		args( ( const char *key, const char *salt ) );
-int	fclose		args( ( FILE *stream ) );
-int	fprintf		args( ( FILE *stream, const char *format, ... ) );
-size_t	fread	args( ( void *ptr, size_t size, size_t n, FILE *stream ) );
-int	fseek		args( ( FILE *stream, long offset, int ptrname ) );
-void	perror		args( ( const char *s ) );
-int	ungetc		args( ( int c, FILE *stream ) );
-#endif
-
-#if	defined( ultrix )
-char *	crypt		args( ( const char *key, const char *salt ) );
-#endif
-
-
 
 /*
  * The crypt(3) function is not available on some operating systems.
+ * 
  * In particular, the U.S. Government prohibits its export from the
- *   United States to foreign countries.
+ * United States to foreign countries.
+ * 
  * Turn on NOCRYPT to keep passwords in plain text.
  */
 #if	defined( NOCRYPT )
 #define crypt( s1, s2 )	( s1 )
 #endif
-
-
 
 /*
  * Data files used by the server.
@@ -3243,47 +3147,23 @@ char *	crypt		args( ( const char *key, const char *salt ) );
  *   so players can go ahead and telnet to all the other descriptors.
  * Then we close it whenever we need to open a file (e.g. a save file).
  */
-#if defined( macintosh )
-#define PLAYER_DIR	""		/* Player files			*/
-#define NULL_FILE	"proto.are"	/* To reserve one stream	*/
-#endif
-
-#if defined( MSDOS )
-#define PLAYER_DIR	""		/* Player files                 */
-#define NULL_FILE	"nul"		/* To reserve one stream	*/
-#endif
-
-#if defined( unix )
-#define PLAYER_DIR	"../player/"	/* Player files			*/
-#define NULL_FILE	"/dev/null"	/* To reserve one stream	*/
-#endif
-
-#if defined( linux )
-#define PLAYER_DIR	"../player/"	/* Player files			*/
-#define NULL_FILE	"/dev/null"	/* To reserve one stream	*/
-#endif
-
-#if defined( linux )
-#define MOB_DIR		"../MOBProgs/"  	/* MOBProg files	*/
-#define NULL_FILE       "/dev/null"
-#endif
-
-#define AREA_LIST	"area.lst"	/* List of areas		*/
-#define BAN_LIST	"../banned.lst" /* List of banned sites & users */
-#define NOTE_FILE	"notes.txt"	/* For 'notes'			*/
+#define PLAYER_DIR			"../player/"	/* Player files			*/
+#define NULL_FILE				"/dev/null"	/* To reserve one stream	*/
+#define AREA_LIST				"area.lst"	/* List of areas		*/
+#define BAN_LIST				"../banned.lst" /* List of banned sites & users */
+#define NOTE_FILE				"notes.txt"	/* For 'notes'			*/
 #define CLAN_FILE       "clan.dat"      /* For 'clans'                  */
-#define SOCIAL_FILE	"social.dat"	/* For 'socials'		*/
-#define RACE_FILE		"race.dat"		/* For 'races'		*/
-#define SHUTDOWN_FILE	"shutdown.txt"	/* For 'shutdown'		*/
+#define SOCIAL_FILE			"social.dat"	/* For 'socials'		*/
+#define RACE_FILE				"race.dat"		/* For 'races'		*/
+#define SHUTDOWN_FILE		"shutdown.txt"	/* For 'shutdown'		*/
 #define DOWN_TIME_FILE  "time.txt"      /* For automatic shutdown       */
 #define USERLIST_FILE   "users.txt"     /* Userlist -- using identd TRI */
 #define AUTH_LIST       "auth.txt"      /* List of who auth who         */
 #define PLAYERLIST_FILE "player.lst"    /* Player List 			*/
 #define NEWBIE_FILE     "newbie.dat"    /* Newbie help file		*/
-#define EXE_FILE		"../src/envy"	/* EXE file*/
-#if defined( HOTREBOOT )
+#define EXE_FILE				"../src/envy"	/* EXE file*/
 #define HOTREBOOT_FILE 	"hotreboot.dat"  /* temporary data file used 	*/
-#endif
+
 /*
  * Our function prototypes.
  * One big lump ... this is every function in Merc.
@@ -3293,25 +3173,26 @@ char *	crypt		args( ( const char *key, const char *salt ) );
 #define OD	OBJ_DATA
 #define OID	OBJ_INDEX_DATA
 #define RID	ROOM_INDEX_DATA
-#define CID     CLAN_DATA
+#define CID CLAN_DATA
 #define SF	SPEC_FUN
 #define BD	BAN_DATA
+
 /* act_comm.c */
-void	add_follower	args( ( CHAR_DATA *ch, CHAR_DATA *master ) );
-void	stop_follower	args( ( CHAR_DATA *ch ) );
-void	die_follower	args( ( CHAR_DATA *ch, char *name ) );
-bool	is_same_group	args( ( CHAR_DATA *ach, CHAR_DATA *bch ) );
-bool	is_note_to	args( ( CHAR_DATA *ch, NOTE_DATA *pnote ) );
+void	add_follower				args( ( CHAR_DATA *ch, CHAR_DATA *master ) );
+void	stop_follower				args( ( CHAR_DATA *ch ) );
+void	die_follower				args( ( CHAR_DATA *ch, char *name ) );
+bool	is_same_group				args( ( CHAR_DATA *ach, CHAR_DATA *bch ) );
+bool	is_note_to					args( ( CHAR_DATA *ch, NOTE_DATA *pnote ) );
 
 /* act_info.c */
-void	set_title	args( ( CHAR_DATA *ch, char *title ) );
-bool	check_blind	args( ( CHAR_DATA *ch ) );
+void	set_title						args( ( CHAR_DATA *ch, char *title ) );
+bool	check_blind					args( ( CHAR_DATA *ch ) );
 
 #ifdef NEW_MONEY
-MONEY_DATA *add_money    args( ( MONEY_DATA *a, MONEY_DATA *b ) );
-MONEY_DATA *sub_money	 args( ( MONEY_DATA *a, MONEY_DATA *b ) );
-MONEY_DATA *take_money   args( ( CHAR_DATA *ch, int amt, char *type, char *verb ) );
-MONEY_DATA *spend_money  args( ( MONEY_DATA *a, MONEY_DATA *b ) );
+MONEY_DATA *add_money    	args( ( MONEY_DATA *a, MONEY_DATA *b ) );
+MONEY_DATA *sub_money	 		args( ( MONEY_DATA *a, MONEY_DATA *b ) );
+MONEY_DATA *take_money   	args( ( CHAR_DATA *ch, int amt, char *type, char *verb ) );
+MONEY_DATA *spend_money  	args( ( MONEY_DATA *a, MONEY_DATA *b ) );
 char       *money_string  args( ( MONEY_DATA *money ) );
 #endif
 
@@ -3507,68 +3388,56 @@ bool    IS_SWITCHED     args( ( CHAR_DATA *ch ) );
 void	arena_master	args( ( CHAR_DATA *ch, char *argument, char *arg2 ) );
 
 /* magic.c */
-int     slot_lookup     args( ( int slot ) );
-bool    is_sn           args( ( int sn ) );
-int	skill_lookup	args( ( const char *name ) );
-bool	saves_spell	args( ( int level, CHAR_DATA *victim ) );
-void	obj_cast_spell	args( ( int sn, int level, CHAR_DATA *ch,
-			CHAR_DATA *victim, OBJ_DATA *obj ) );
-void    update_skpell   args( ( CHAR_DATA *ch, int sn ) );
-void    do_acspell      args( ( CHAR_DATA *ch, OBJ_DATA *pObj,
-			char *argument ) );
+int slot_lookup     	args( ( int slot ) );
+bool is_sn           	args( ( int sn ) );
+int	skill_lookup			args( ( const char *name ) );
+bool saves_spell			args( ( int level, CHAR_DATA *victim ) );
+void obj_cast_spell		args( ( int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj ) );
+void update_skpell   	args( ( CHAR_DATA *ch, int sn ) );
+void do_acspell      	args( ( CHAR_DATA *ch, OBJ_DATA *pObj, char *argument ) );
 
 /* save.c */
-bool	pstat           args( ( char *name ) );
-void	save_char_obj		args( ( CHAR_DATA *ch, bool leftgame ) );
-bool	load_char_obj		args( ( DESCRIPTOR_DATA *d, char *name ) );
-void	corpse_back     args( ( CHAR_DATA *ch, OBJ_DATA *corpse ) );
-void	read_finger			args( ( CHAR_DATA *ch, char *argument ) );
-void	save_finger     args( ( CHAR_DATA *ch ) );
-void	fwrite_finger   args( ( CHAR_DATA *ch, FILE *fp ) );
-void	fread_finger    args( ( CHAR_DATA *ch, FILE *fp, char *name ) );
-void	save_banlist		args( ( BAN_DATA *ban_list ) );
+bool pstat           	args( ( char *name ) );
+void save_char_obj		args( ( CHAR_DATA *ch, bool leftgame ) );
+bool load_char_obj		args( ( DESCRIPTOR_DATA *d, char *name ) );
+void corpse_back     	args( ( CHAR_DATA *ch, OBJ_DATA *corpse ) );
+void read_finger			args( ( CHAR_DATA *ch, char *argument ) );
+void save_finger     	args( ( CHAR_DATA *ch ) );
+void fwrite_finger   	args( ( CHAR_DATA *ch, FILE *fp ) );
+void fread_finger    	args( ( CHAR_DATA *ch, FILE *fp, char *name ) );
+void save_banlist			args( ( BAN_DATA *ban_list ) );
 
 /* special.c */
 SF *	spec_lookup	args( ( const char *name ) );
 
 /* update.c */
-void	advance_level	args( ( CHAR_DATA *ch ) );
-void	gain_exp	args( ( CHAR_DATA *ch, int gain ) );
-void	gain_condition	args( ( CHAR_DATA *ch, int iCond, int value ) );
-void	update_handler	args( ( void ) );
-CHAR_DATA *rand_figment args( ( CHAR_DATA *ch ) );
-MOB_INDEX_DATA *rand_figment_mob args( ( CHAR_DATA *ch ) );
-OBJ_INDEX_DATA *rand_figment_obj args( ( CHAR_DATA *ch ) );
+void	advance_level								args( ( CHAR_DATA *ch ) );
+void	gain_exp										args( ( CHAR_DATA *ch, int gain ) );
+void	gain_condition							args( ( CHAR_DATA *ch, int iCond, int value ) );
+void	update_handler							args( ( void ) );
+CHAR_DATA *rand_figment 					args( ( CHAR_DATA *ch ) );
+MOB_INDEX_DATA *rand_figment_mob 	args( ( CHAR_DATA *ch ) );
+OBJ_INDEX_DATA *rand_figment_obj 	args( ( CHAR_DATA *ch ) );
 
 /* mob_prog.c */
-#ifdef DUNNO_STRSTR
-char *  strstr                  args ( (const char *s1, const char *s2 ) );
-#endif
-void    mprog_wordlist_check    args ( ( char * arg, CHAR_DATA *mob,
-			CHAR_DATA* actor, OBJ_DATA* object,
-			void* vo, int type ) );
-void    mprog_percent_check     args ( ( CHAR_DATA *mob, CHAR_DATA* actor,
-			OBJ_DATA* object, void* vo,
-			int type ) );
-void    mprog_act_trigger       args ( ( char* buf, CHAR_DATA* mob,
-			CHAR_DATA* ch, OBJ_DATA* obj,
-			void* vo ) );
+void mprog_wordlist_check    args ( ( char * arg, CHAR_DATA *mob, CHAR_DATA* actor, OBJ_DATA* object, void* vo, int type ) );
+void mprog_percent_check     args ( ( CHAR_DATA *mob, CHAR_DATA* actor, OBJ_DATA* object, void* vo, int type ) );
+void mprog_act_trigger       args ( ( char* buf, CHAR_DATA* mob, CHAR_DATA* ch, OBJ_DATA* obj, void* vo ) );
+
 #ifdef NEW_MONEY
-void	mprog_bribe_trigger	args ( ( CHAR_DATA* mob, CHAR_DATA* ch,
-			MONEY_DATA *amount ) );
+void mprog_bribe_trigger		 args ( ( CHAR_DATA* mob, CHAR_DATA* ch, MONEY_DATA *amount ) );
 #else
-void    mprog_bribe_trigger     args ( ( CHAR_DATA* mob, CHAR_DATA* ch,
-			int amount ) );
+void mprog_bribe_trigger     args ( ( CHAR_DATA* mob, CHAR_DATA* ch, int amount ) );
 #endif
-void    mprog_entry_trigger     args ( ( CHAR_DATA* mob ) );
-void    mprog_give_trigger      args ( ( CHAR_DATA* mob, CHAR_DATA* ch,
-			OBJ_DATA* obj ) );
-void    mprog_greet_trigger     args ( ( CHAR_DATA* mob ) );
-void    mprog_fight_trigger     args ( ( CHAR_DATA* mob, CHAR_DATA* ch ) );
-void    mprog_hitprcnt_trigger  args ( ( CHAR_DATA* mob, CHAR_DATA* ch ) );
-void    mprog_death_trigger     args ( ( CHAR_DATA* mob, CHAR_DATA* ch ) );
-void    mprog_random_trigger    args ( ( CHAR_DATA* mob ) );
-void    mprog_speech_trigger    args ( ( char* txt, CHAR_DATA* mob ) );
+
+void mprog_entry_trigger     args ( ( CHAR_DATA* mob ) );
+void mprog_give_trigger      args ( ( CHAR_DATA* mob, CHAR_DATA* ch, OBJ_DATA* obj ) );
+void mprog_greet_trigger     args ( ( CHAR_DATA* mob ) );
+void mprog_fight_trigger     args ( ( CHAR_DATA* mob, CHAR_DATA* ch ) );
+void mprog_hitprcnt_trigger  args ( ( CHAR_DATA* mob, CHAR_DATA* ch ) );
+void mprog_death_trigger     args ( ( CHAR_DATA* mob, CHAR_DATA* ch ) );
+void mprog_random_trigger    args ( ( CHAR_DATA* mob ) );
+void mprog_speech_trigger    args ( ( char* txt, CHAR_DATA* mob ) );
 
 /*
  * Lotsa triggers for ore_progs.. (ore_prog.c)
@@ -3577,111 +3446,68 @@ void    mprog_speech_trigger    args ( ( char* txt, CHAR_DATA* mob ) );
 /*
  * Object triggers
  */
-void    oprog_get_trigger       args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
-void    oprog_get_from_trigger  args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-			OBJ_DATA *secondary ) );
-void    oprog_give_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-			CHAR_DATA *victim ) );
-void    oprog_drop_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
-void    oprog_put_trigger       args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-			OBJ_DATA *secondary ) );
-void    oprog_fill_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-			OBJ_DATA *spring ) );
-void    oprog_wear_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
-void    oprog_look_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
-void    oprog_look_in_trigger   args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
-void    oprog_invoke_trigger    args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-			void *vo ) );
-void    oprog_use_trigger       args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-			void *vo ) );
-void    oprog_cast_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
-void    oprog_cast_sn_trigger   args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-			int sn, void *vo ) );
-void    oprog_join_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-			OBJ_DATA *secondary ) );
-void    oprog_separate_trigger  args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
-void    oprog_buy_trigger       args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-			CHAR_DATA *vendor ) );
-void    oprog_sell_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-			CHAR_DATA *vendor ) );
-void    oprog_store_trigger     args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
-void    oprog_retrieve_trigger  args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
-void    oprog_open_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
-void    oprog_close_trigger     args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
-void    oprog_lock_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-			OBJ_DATA *key ) );
-void    oprog_unlock_trigger    args ( ( OBJ_DATA *obj, CHAR_DATA *ch,
-			OBJ_DATA *key ) );
-void    oprog_pick_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
-void    oprog_random_trigger    args ( ( OBJ_DATA *obj ) );
-void    oprog_throw_trigger     args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
+void oprog_get_trigger       args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
+void oprog_get_from_trigger  args ( ( OBJ_DATA *obj, CHAR_DATA *ch, OBJ_DATA *secondary ) );
+void oprog_give_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim ) );
+void oprog_drop_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
+void oprog_put_trigger       args ( ( OBJ_DATA *obj, CHAR_DATA *ch, OBJ_DATA *secondary ) );
+void oprog_fill_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch, OBJ_DATA *spring ) );
+void oprog_wear_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
+void oprog_look_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
+void oprog_look_in_trigger   args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
+void oprog_invoke_trigger    args ( ( OBJ_DATA *obj, CHAR_DATA *ch, void *vo ) );
+void oprog_use_trigger       args ( ( OBJ_DATA *obj, CHAR_DATA *ch, void *vo ) );
+void oprog_cast_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
+void oprog_cast_sn_trigger   args ( ( OBJ_DATA *obj, CHAR_DATA *ch, int sn, void *vo ) );
+void oprog_join_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch, OBJ_DATA *secondary ) );
+void oprog_separate_trigger  args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
+void oprog_buy_trigger       args ( ( OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *vendor ) );
+void oprog_sell_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch,CHAR_DATA *vendor ) );
+void oprog_store_trigger     args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
+void oprog_retrieve_trigger  args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
+void oprog_open_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
+void oprog_close_trigger     args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
+void oprog_lock_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch,OBJ_DATA *key ) );
+void oprog_unlock_trigger    args ( ( OBJ_DATA *obj, CHAR_DATA *ch,OBJ_DATA *key ) );
+void oprog_pick_trigger      args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
+void oprog_random_trigger    args ( ( OBJ_DATA *obj ) );
+void oprog_throw_trigger     args ( ( OBJ_DATA *obj, CHAR_DATA *ch ) );
 
 /*
  * Room triggers
  */
-void    rprog_enter_trigger     args ( ( ROOM_INDEX_DATA *room,
-			CHAR_DATA *ch ) );
-void    rprog_exit_trigger      args ( ( ROOM_INDEX_DATA *room,
-			CHAR_DATA *ch ) );
-void    rprog_pass_trigger      args ( ( ROOM_INDEX_DATA *room,
-			CHAR_DATA *ch ) );
-void    rprog_cast_trigger      args ( ( ROOM_INDEX_DATA *room,
-			CHAR_DATA *ch ) );
-void    rprog_cast_sn_trigger   args ( ( ROOM_INDEX_DATA *room,
-			CHAR_DATA *ch, int sn,
-			void *vo ) );
-void    rprog_sleep_trigger     args ( ( ROOM_INDEX_DATA *room,
-			CHAR_DATA *ch ) );
-void    rprog_wake_trigger      args ( ( ROOM_INDEX_DATA *room,
-			CHAR_DATA *ch ) );
-void    rprog_rest_trigger      args ( ( ROOM_INDEX_DATA *room,
-			CHAR_DATA *ch ) );
-void    rprog_death_trigger     args ( ( ROOM_INDEX_DATA *room,
-			CHAR_DATA *ch ) );
-void    rprog_time_trigger      args ( ( ROOM_INDEX_DATA *room, int hour ) );
-void    rprog_random_trigger    args ( ( ROOM_INDEX_DATA *room ) );
+void rprog_enter_trigger     args ( ( ROOM_INDEX_DATA *room, CHAR_DATA *ch ) );
+void rprog_exit_trigger      args ( ( ROOM_INDEX_DATA *room, CHAR_DATA *ch ) );
+void rprog_pass_trigger      args ( ( ROOM_INDEX_DATA *room, CHAR_DATA *ch ) );
+void rprog_cast_trigger      args ( ( ROOM_INDEX_DATA *room, CHAR_DATA *ch ) );
+void rprog_cast_sn_trigger   args ( ( ROOM_INDEX_DATA *room, CHAR_DATA *ch, int sn, void *vo ) );
+void rprog_sleep_trigger     args ( ( ROOM_INDEX_DATA *room, CHAR_DATA *ch ) );
+void rprog_wake_trigger      args ( ( ROOM_INDEX_DATA *room, CHAR_DATA *ch ) );
+void rprog_rest_trigger      args ( ( ROOM_INDEX_DATA *room, CHAR_DATA *ch ) );
+void rprog_death_trigger     args ( ( ROOM_INDEX_DATA *room, CHAR_DATA *ch ) );
+void rprog_time_trigger      args ( ( ROOM_INDEX_DATA *room, int hour ) );
+void rprog_random_trigger    args ( ( ROOM_INDEX_DATA *room ) );
 
 /*
  * Exit triggers
  */
-void    eprog_enter_trigger     args ( ( EXIT_DATA *pExit,
-			ROOM_INDEX_DATA *room,
-			CHAR_DATA *ch ) );
-void    eprog_exit_trigger      args ( ( EXIT_DATA *pExit,
-			ROOM_INDEX_DATA *room,
-			CHAR_DATA *ch ) );
-void    eprog_pass_trigger      args ( ( EXIT_DATA *pExit,
-			ROOM_INDEX_DATA *room,
-			CHAR_DATA *ch, bool fEnter ) );
-void    eprog_look_trigger      args ( ( EXIT_DATA *pExit,
-			ROOM_INDEX_DATA *room,
-			CHAR_DATA *ch ) );
-void    eprog_scry_trigger      args ( ( EXIT_DATA *pExit,
-			ROOM_INDEX_DATA *room,
-			CHAR_DATA *ch ) );
-void    eprog_open_trigger      args ( ( EXIT_DATA *pExit,
-			ROOM_INDEX_DATA *room,
-			CHAR_DATA *ch ) );
-void    eprog_close_trigger     args ( ( EXIT_DATA *pExit,
-			ROOM_INDEX_DATA *room,
-			CHAR_DATA *ch ) );
-void    eprog_lock_trigger      args ( ( EXIT_DATA *pExit,
-			ROOM_INDEX_DATA *room,
-			CHAR_DATA *ch, OBJ_DATA *obj ) );
-void    eprog_unlock_trigger    args ( ( EXIT_DATA *pExit,
-			ROOM_INDEX_DATA *room,
-			CHAR_DATA *ch, OBJ_DATA *obj ) );
-void    eprog_pick_trigger      args ( ( EXIT_DATA *pExit,
-			ROOM_INDEX_DATA *room,
-			CHAR_DATA *ch ) );
+void eprog_enter_trigger     args ( ( EXIT_DATA *pExit, ROOM_INDEX_DATA *room, CHAR_DATA *ch ) );
+void eprog_exit_trigger      args ( ( EXIT_DATA *pExit, ROOM_INDEX_DATA *room, CHAR_DATA *ch ) );
+void eprog_pass_trigger      args ( ( EXIT_DATA *pExit, ROOM_INDEX_DATA *room, CHAR_DATA *ch, bool fEnter ) );
+void eprog_look_trigger      args ( ( EXIT_DATA *pExit, ROOM_INDEX_DATA *room, CHAR_DATA *ch ) );
+void eprog_scry_trigger      args ( ( EXIT_DATA *pExit, ROOM_INDEX_DATA *room, CHAR_DATA *ch ) );
+void eprog_open_trigger      args ( ( EXIT_DATA *pExit, ROOM_INDEX_DATA *room, CHAR_DATA *ch ) );
+void eprog_close_trigger     args ( ( EXIT_DATA *pExit, ROOM_INDEX_DATA *room, CHAR_DATA *ch ) );
+void eprog_lock_trigger      args ( ( EXIT_DATA *pExit, ROOM_INDEX_DATA *room, CHAR_DATA *ch, OBJ_DATA *obj ) );
+void eprog_unlock_trigger    args ( ( EXIT_DATA *pExit, ROOM_INDEX_DATA *room, CHAR_DATA *ch, OBJ_DATA *obj ) );
+void eprog_pick_trigger      args ( ( EXIT_DATA *pExit, ROOM_INDEX_DATA *room, CHAR_DATA *ch ) );
 
 /*
  * gr_magic.c
  * -- Altrag
  */
 void    check_gcast             args ( ( CHAR_DATA *ch ) );
-void    group_cast              args ( ( int sn, int level, CHAR_DATA *ch,
-			char *argument ) );
+void    group_cast              args ( ( int sn, int level, CHAR_DATA *ch, char *argument ) );
 void    set_gspell              args ( ( CHAR_DATA *ch, GSPELL_DATA *gsp ) );
 void    end_gspell              args ( ( CHAR_DATA *ch ) );
 

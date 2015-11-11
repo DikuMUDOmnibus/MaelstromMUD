@@ -19,11 +19,7 @@
  ***************************************************************************/
 
 #define unix 1
-#if defined( macintosh )
-#include <types.h>
-#else
 #include <sys/types.h>
-#endif
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -412,10 +408,8 @@ struct	cmd_type	cmd_table	[ ] =
 	{ "hero",           do_hero,        POS_DEAD,    100,    LOG_NORMAL },
 	{ "hlist",          do_hlist,       POS_DEAD,    L_APP,  LOG_NORMAL },
 	{ "holylight",      do_holylight,   POS_DEAD,  L_APP,  LOG_NORMAL },
-#if defined ( HOTREBOOT )
 	{ "hotreboo",      	do_hotreboo,    POS_DEAD,  L_DIR,  LOG_ALWAYS },
 	{ "hotreboot",      do_hotreboot,   POS_DEAD,  L_DIR,  LOG_ALWAYS },
-#endif
 	{ "ideas",          do_ideas,       POS_DEAD,  L_DIR,  LOG_ALWAYS },
 	{ "imc",		do_imc,         POS_DEAD,  L_APP,  LOG_NORMAL },
 	{ "immtalk",        do_immtalk,     POS_DEAD,  L_APP,  LOG_NORMAL },
