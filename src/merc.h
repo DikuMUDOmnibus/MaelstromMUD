@@ -18,6 +18,11 @@
  *  around, comes around.                                                  *
  ***************************************************************************/
 
+/*
+ * The current version of the OASIS
+ */
+#define VERSION "0.0.3"
+
 /* To turn on and off certain features off the mud */
 #define NEW_MONEY   
 #define HOTREBOOT

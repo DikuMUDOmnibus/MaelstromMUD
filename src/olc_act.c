@@ -50,13 +50,13 @@ struct olc_help_type
 
 bool show_version( CHAR_DATA *ch, char *argument )
 {
-	send_to_char(C_DEFAULT, VERSION, ch );
+	send_to_char(C_DEFAULT, OLC_VERSION, ch );
 	send_to_char(C_DEFAULT, "\n\r", ch );
-	send_to_char(C_DEFAULT, AUTHOR, ch );
+	send_to_char(C_DEFAULT, OLC_AUTHOR, ch );
 	send_to_char(C_DEFAULT, "\n\r", ch );
-	send_to_char(C_DEFAULT, DATE, ch );
+	send_to_char(C_DEFAULT, OLC_DATE, ch );
 	send_to_char(C_DEFAULT, "\n\r", ch );
-	send_to_char(C_DEFAULT, CREDITS, ch );
+	send_to_char(C_DEFAULT, OLC_CREDITS, ch );
 	send_to_char(C_DEFAULT, "\n\r", ch );
 
 	return FALSE;

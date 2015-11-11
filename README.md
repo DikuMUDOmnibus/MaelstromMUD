@@ -1,30 +1,7 @@
-### TODO
-* Fix `todo` functionality
-* Fix `changes` functionality
-* Fix `ban` functionality
-* Fix `aedit` last modified functionality
-* Fix UPPER/LOWER to not affect color codes
-* Separate out immortals and mortals on `who` list
-* Remove classes
- * Make spells and skills available to all players
+# OASIS MUD
 
-#### Completed
-* ~~Fix `hotreboot` functionality~~
-* ~~Display closed doors~~
-* ~~Fix `&O` in `ofind`~~
-* ~~Fix `ideas` functionality~~
-* ~~Fix `typos` functionality~~
+OASIS is a work-in-progress MUD with the ultimate goal of building a modern DikuMUD variant inspired by the OASIS, as described in Earnest Cline's "Ready Player One."
 
-### IDEAS
+## Changes
 
-#### DevOps Integrations
-
-* slack channel integration
-* iron.io message queue
-* compose.io elasticsearch helpfile indexing
-* coveralls.io code coverage reporting
-* codeship continuous integration
-* authy two-factor authentication
-* loggly log management
-* lingohub localization
-* ifttt just because
+To see what has changed in recent versions of OASIS, see the [CHANGELOG](https://github.com/zachflower/oasis-mud/blob/master/CHANGELOG.md).

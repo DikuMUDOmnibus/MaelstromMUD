@@ -23,10 +23,10 @@
  * It is displayed in the game by typing 'version' while editing.
  * Do not remove these from the code - by request of Jason Dinkel
  */
-#define VERSION	"ILAB Online Creation [Beta 1.1]"
-#define AUTHOR	"     By Jason(jdinkel@mines.colorado.edu)"
-#define DATE	"     (May. 15, 1995)"
-#define CREDITS "     Original by Surreality(cxw197@psu.edu) and Locke(locke@lm.com)"
+#define OLC_VERSION			"ILAB Online Creation [Beta 1.1]"
+#define OLC_AUTHOR			"     By Jason(jdinkel@mines.colorado.edu)"
+#define OLC_DATE				"     (May. 15, 1995)"
+#define OLC_CREDITS 		"     Original by Surreality(cxw197@psu.edu) and Locke(locke@lm.com)"
 
 
 
