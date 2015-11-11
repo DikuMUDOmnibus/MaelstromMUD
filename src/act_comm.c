@@ -2419,11 +2419,14 @@ void do_quit( CHAR_DATA *ch, char *argument )
 		send_to_char( AT_WHITE, "You cannot quit in this room.\n\r", ch );
 		return;
 	}
-	if ( ch->questobj )
-		if ( ch->questobj->carried_by == ch )
+	if ( ch->questobj ) {
+		if ( ch->questobj->carried_by == ch ){
 			extract_obj( ch->questobj ); /* if on char extract */
-		else
+		} else{
 			ch->questobj->timer = 1; /* Let obj_update extract it - Hann */
+		}
+	}
+
 	raffect_remall( ch );
 #ifdef NEW_MONEY
 
@@ -2738,26 +2741,30 @@ if ( auc_bid && auc_bid == ch && auc_obj )
 #endif
 
 
-sprintf(log_buf, "rm -f %s%c/%s", PLAYER_DIR, LOWER(ch->name[0]),
-		capitalize(ch->name));
-system( log_buf );
-/*  remove(log_buf); */ /* Don't think was working right */
-strcat(log_buf, ".fng");
-system( log_buf );
-/*  remove(log_buf); */
-sprintf(log_buf, "rm %s%c/%s.cps", PLAYER_DIR, LOWER(ch->name[0]),
-		capitalize(ch->name));
-/*  remove(log_buf);*/
-system( log_buf );
+	/* Delete Player File */
+	sprintf(log_buf, "%s%c/%s", PLAYER_DIR, LOWER(ch->name[0]), capitalize(ch->name));
+	remove(log_buf); 
 
-delete_playerlist( ch->name );
+	/* Delete Finger File */
+	sprintf(log_buf, "%s%c/%s.fng", PLAYER_DIR, LOWER(ch->name[0]), capitalize(ch->name));
+	remove(log_buf);
 
-d = ch->desc;
-extract_char(ch, TRUE);
-if ( d )
-	close_socket(d);
-	return;
+	/* Delete Corpses */
+	sprintf(log_buf, "%s%c/%s.cps", PLAYER_DIR, LOWER(ch->name[0]), capitalize(ch->name));
+	remove(log_buf);
+
+	delete_playerlist( ch->name );
+
+	d = ch->desc;
+	
+	extract_char(ch, TRUE);
+
+	if ( d ) {
+		close_socket(d);
 	}
+
+	return;
+}
 
 
 
