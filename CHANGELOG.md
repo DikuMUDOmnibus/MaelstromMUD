@@ -1,8 +1,13 @@
-## 0.0.3 (2015-11-10)
+## 0.0.3 (2015-11-12)
 
 Features:
 
   - `idea`, `bug`, and `typo` reports are now delivered as GitHub issues
+
+Bugfixes:
+
+  - Changed default page length to 60 with a maximum of 150 lines because
+    it isn't 1990 anymore
 
 ## 0.0.2 (2015-02-13)
 
