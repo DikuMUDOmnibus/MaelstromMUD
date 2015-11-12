@@ -5338,3 +5338,185 @@ void do_patch( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
+void do_identify( CHAR_DATA *ch, char *argument ) {
+	OBJ_DATA    *obj;
+	AFFECT_DATA *paf;
+	char         buf [ MAX_STRING_LENGTH ];
+	int          spn;
+	char 				 arg [ MAX_STRING_LENGTH ];
+
+	one_argument( argument, arg );
+
+	if ( arg[0] == '\0' ) {
+		send_to_char(AT_CYAN, "You can't find it.\n\r", ch );
+		return;
+	}
+
+	if ( !( obj = get_obj_here( ch, arg ) ) ) {
+		send_to_char(AT_CYAN, "You do not have that item.\n\r", ch );
+		return;
+	}
+
+	sprintf( buf, "Object '%s' is type %s, extra flags %s %s %s.\n\r",
+			obj->name,
+			item_type_name( obj ),
+			obj->extra_flags ? extra_bit_name( obj->extra_flags ) : "",
+			obj->anti_race_flags ? antirace_bit_name(obj->anti_race_flags) : "",
+			obj->anti_class_flags ? anticlass_bit_name(obj->anti_class_flags) : "");
+	send_to_char(AT_CYAN, buf, ch );
+
+	sprintf( buf, "Weight : %d, level : %d.\n\r", obj->weight, obj->level );
+	send_to_char( AT_CYAN, buf, ch );
+
+	sprintf( buf, "Gold Value: %d  Silver Value: %d  Copper Value: %d\n\r", obj->cost.gold, obj->cost.silver, obj->cost.copper );
+	send_to_char(AT_CYAN, buf, ch );
+
+	switch ( obj->item_type ) {
+		case ITEM_PILL:  
+		case ITEM_SCROLL: 
+		case ITEM_POTION:
+			sprintf( buf, "Level %d spells of:", obj->value[0] );
+			send_to_char(AT_CYAN, buf, ch );
+
+			if ( is_sn(obj->value[1]) ) {
+				send_to_char(AT_CYAN, " '", ch );
+				send_to_char(AT_WHITE, skill_table[obj->value[1]].name, ch );
+				send_to_char(AT_CYAN, "'", ch );
+			}
+
+			if ( is_sn(obj->value[2]) ) {
+				send_to_char(AT_CYAN, " '", ch );
+				send_to_char(AT_WHITE, skill_table[obj->value[2]].name, ch );
+				send_to_char(AT_CYAN, "'", ch );
+			}
+
+			if ( is_sn(obj->value[3]) ) {
+				send_to_char(AT_CYAN, " '", ch );
+				send_to_char(AT_WHITE, skill_table[obj->value[3]].name, ch );
+				send_to_char(AT_CYAN, "'", ch );
+			}
+
+			send_to_char(AT_CYAN, ".\n\r", ch );
+			break;
+
+		case ITEM_WAND: 
+		case ITEM_LENSE:
+		case ITEM_STAFF: 
+			if (!(obj->value[1] == -1 ) ) {
+				sprintf( buf, "Has %d(%d) charges of level %d", obj->value[1], obj->value[2], obj->value[0] );
+			} else {
+				sprintf( buf, "Has unlimited charges of level %d", obj->value[0] );
+			}
+
+			send_to_char(AT_CYAN, buf, ch );
+
+			if ( is_sn(obj->value[3]) ) {
+				send_to_char(AT_CYAN, " '", ch );
+				send_to_char(AT_WHITE, skill_table[obj->value[3]].name, ch );
+				send_to_char(AT_CYAN, "'", ch );
+			}
+
+			send_to_char(AT_CYAN, ".\n\r", ch );
+			break;
+
+		case ITEM_WEAPON:
+			sprintf( buf, "Damage is %d to %d (average %d).\n\r", obj->value[1], obj->value[2], ( obj->value[1] + obj->value[2] ) / 2 );
+			send_to_char(AT_RED, buf, ch );
+			break;
+
+		case ITEM_ARMOR:
+			sprintf( buf, "Armor class is %d.\n\r", obj->value[0] );
+			send_to_char(AT_CYAN, buf, ch );
+			break;
+	}
+
+	if ( obj->ac_type != 0 ) {
+		switch( obj->ac_type ) {
+			default:
+				send_to_char(AT_CYAN, "Invoke Type Unknown.\n\r", ch );
+				break;
+			case 1 :
+					  {
+						  if ( obj->ac_charge[1] != -1 ) {
+							  sprintf( buf, "Object creation invoke, with [%d/%d] charges.\n\r", obj->ac_charge[0], obj->ac_charge[1] );
+						  } else {
+							  sprintf( buf, "Object creation invoke, with unlimited charges.\n\r" );
+						  }
+
+						  send_to_char(AT_CYAN, buf, ch );
+
+						  break;
+					  }
+			case 2 :
+					  {
+						  if ( obj->ac_charge[1] != -1 ) {
+							  sprintf( buf, "Monster creation invoke, with [%d/%d] charges.\n\r", obj->ac_charge[0], obj->ac_charge[1] );
+						  } else {
+							  sprintf( buf, "Monster creation invoke, with unlimited charges.\n\r" );
+						  }
+
+						  send_to_char(AT_CYAN, buf, ch );
+						  break;        
+					  }
+			case 3 :
+					  {
+						  if ( obj->ac_charge[1] != -1 ) {
+							  sprintf( buf, "Transfer invoke, with [%d/%d] charges.\n\r", obj->ac_charge[0], obj->ac_charge[1] );
+						  } else {
+							  sprintf( buf, "Transfer invoke, with unlimited charges.\n\r" );
+						  }
+
+						  send_to_char(AT_CYAN, buf, ch );
+						  break;
+					  }
+			case 4 :
+					  {
+						  if ( obj->ac_charge[1] != -1 ) {
+							  sprintf( buf, "Object morph invoke, with [%d/%d] charges.\n\r", obj->ac_charge[0], obj->ac_charge[1] );
+						  } else {
+							  sprintf( buf, "Object morph invoke, with unlimited charges.\n\r" );
+						  }
+
+						  send_to_char(AT_CYAN, buf, ch );
+						  break;
+					  }
+			case 5 :
+					  {
+						  if ( obj->ac_charge[1] != -1 ) {
+							  sprintf( buf, "Spell invoke, has [%d/%d] charges of ", obj->ac_charge[0], obj->ac_charge[1] );
+						  } else {
+							  sprintf( buf, "Spell invoke, with unlimited charges of " );
+						  }
+
+						  send_to_char(AT_CYAN, buf, ch );
+
+						  spn = skill_lookup( obj->ac_spell );
+
+						  if ( is_sn(spn) ) {
+							  send_to_char(AT_CYAN, " '", ch );
+							  send_to_char(AT_WHITE, spn ? obj->ac_spell : "(none)", ch );
+							  send_to_char(AT_CYAN, "'\n\r", ch );
+						  }
+
+						  break;
+					  }
+		}   
+	} 
+
+	for ( paf = obj->pIndexData->affected; paf; paf = paf->next ) {
+		if ( paf->location != APPLY_NONE && paf->modifier != 0 ) {
+			sprintf( buf, "Affects %s by %d.\n\r", affect_loc_name( paf->location ), paf->modifier );
+			send_to_char(AT_BLUE, buf, ch );
+		}
+	}
+
+	for ( paf = obj->affected; paf; paf = paf->next ) {
+		if ( paf->location != APPLY_NONE && paf->modifier != 0 ) {
+			sprintf( buf, "Affects %s by %d.\n\r", affect_loc_name( paf->location ), paf->modifier );
+			send_to_char(AT_BLUE, buf, ch );
+		}
+	}
+
+	return;
+}
+

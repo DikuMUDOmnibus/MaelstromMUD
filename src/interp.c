@@ -95,6 +95,7 @@ struct	cmd_type	cmd_table	[ ] =
 	{ "get",		do_get,		POS_RESTING,	 0,  LOG_NORMAL	},
 	{ "palm",		do_palm,	POS_RESTING,	 0,  LOG_NORMAL },
 	{ "inventory",	do_inventory,	POS_DEAD,	 0,  LOG_NORMAL	},
+	{ "identify", do_identify, POS_RESTING, 0, LOG_NORMAL },
 	{ "invoke",         do_invoke,      POS_RESTING,     0,  LOG_NORMAL },
 	{ "kill",		do_kill,	POS_FIGHTING,	 0,  LOG_NORMAL	},
 	{ "look",		do_look,	POS_RESTING,	 0,  LOG_NORMAL	},

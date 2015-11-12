@@ -3175,15 +3175,6 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 },
 
 {
-	"identify",
-	{   10,   10,   25, L_APP,    13, 10, 17, 17, 16, 
-		11, L_APP, L_APP, L_APP, L_APP, L_APP },
-	spell_identify,		TAR_OBJ_INV,		POS_STANDING,
-	NULL,			12,	24,
-	"",			"!Identify!", "", FALSE, SLOT(0)
-},
-
-{
 	"vibrate",
 	{ L_APP, L_APP, L_APP, L_APP, 30, L_APP, L_APP, L_APP, L_APP,
 		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },
@@ -5141,15 +5132,6 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 	spell_cure_light,   TAR_CHAR_DEFENSIVE,     POS_FIGHTING,
 	NULL,                       10,     12,
 	"",                 "!Cure Light!", "", FALSE, SLOT(0)
-},
-
-{
-	"song of identify",
-	{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
-		L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },   
-	spell_identify,             TAR_OBJ_INV,            POS_STANDING,
-	NULL,                       12,     24,
-	"",                 "!Identify!", "", FALSE, SLOT(0)
 },
 
 {
