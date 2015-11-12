@@ -183,13 +183,9 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
 			ch->mod_mana, ch->move, ch->perm_move, ch->mod_move, ch->bp,
 			ch->perm_bp, ch->mod_bp );
 	fprintf( fp, "Charisma    %d\n",    ch->charisma		);
-#ifdef NEW_MONEY
 	fprintf( fp, "Gold	      %d\n",	ch->money.gold		);
 	fprintf( fp, "Silver      %d\n",  	ch->money.silver	);
 	fprintf( fp, "Copper      %d\n",	ch->money.copper	);
-#else
-	fprintf( fp, "Gold        %d\n",	ch->gold		);
-#endif
 	fprintf( fp, "GRank       %d\n",	ch->guild_rank		);
 	fprintf( fp, "Guild       %s~\n",
 			(ch->guild != NULL) ? ch->guild->name : "\0"		);
@@ -257,14 +253,10 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
 		fprintf( fp, "Incarnations %d\n",		ch->incarnations		);
 		fprintf( fp, "Raisepts    %d\n",		ch->raisepts				);
 
-#ifdef NEW_MONEY
 		fprintf( fp, "Bank   	  %d %d %d\n",	
 				ch->pcdata->bankaccount.gold,
 				ch->pcdata->bankaccount.silver,
 				ch->pcdata->bankaccount.copper );
-#else
-		fprintf( fp, "Bank        %d\n",        ch->pcdata->bankaccount );
-#endif
 		fprintf( fp, "Ttle        %s~\n",	ch->pcdata->title	);
 		fprintf( fp, "Whotype	  %s~\n",	ch->pcdata->whotype	);
 		fprintf( fp, "AtrPrm      %d %d %d %d %d\n",
@@ -382,13 +374,9 @@ void fwrite_obj( CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest,
 	fprintf( fp, "Weight       %d\n",	obj->weight		     );
 	fprintf( fp, "Level        %d\n",	obj->level		     );
 	fprintf( fp, "Timer        %d\n",	obj->timer		     );
-#ifdef NEW_MONEY 
 	fprintf( fp, "Gold         %d\n",	obj->cost.gold		     );
 	fprintf( fp, "Silver       %d\n",   obj->cost.silver	     );
 	fprintf( fp, "Copper       %d\n",   obj->cost.copper	     );
-#else
-	fprintf( fp, "Cost         %d\n",	obj->cost		     );
-#endif
 	fprintf( fp, "Values       %d %d %d %d\n",
 			obj->value[0], obj->value[1], obj->value[2], obj->value[3]   );
 	fprintf( fp, "Activates    %d %d %d %d\n",
@@ -524,7 +512,7 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name )
 	ch->pcdata->perm_con		= 13;
 	ch->pcdata->condition[COND_THIRST]	= MAX_THIRST;  /*  48  */
 	ch->pcdata->condition[COND_FULL]	= MAX_FULL;    /*  48  */
-	ch->pcdata->pagelen                 = 20;
+	ch->pcdata->pagelen                 = 60;
 	ch->pcdata->security		= 0;	/* OLC */
 
 	ch->pcdata->switched                = FALSE;
@@ -534,13 +522,9 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name )
 	ch->res_flags			= 0;	/* XOR */
 	ch->vul_flags			= 0;	/* XOR */
 	ch->guild				= NULL;	/* XOR */
-#ifdef NEW_MONEY
 	ch->pcdata->bankaccount.gold	= 0;
 	ch->pcdata->bankaccount.silver	= 0;
 	ch->pcdata->bankaccount.copper	= 0;
-#else
-	ch->pcdata->bankaccount             = 0;    /* TRI */
-#endif
 	ch->pcdata->alias_list		= NULL; /* TRI */
 	ch->pcdata->corpses			= 0;
 	ch->pcdata->empowerments		= str_dup("");
@@ -754,7 +738,6 @@ void fread_char( CHAR_DATA *ch, FILE *fp )
 				KEY( "Bmfin",	ch->pcdata->bamfin,	fread_string( fp ) );
 				KEY( "Bmfout",	ch->pcdata->bamfout,	fread_string( fp ) );
 				KEY( "Bmfsee",      ch->pcdata->bamfusee,   fread_string( fp ) );
-#ifdef NEW_MONEY
 				if ( !str_cmp( word, "Bank" ) )
 				{
 					ch->pcdata->bankaccount.gold   = fread_number( fp );
@@ -763,9 +746,6 @@ void fread_char( CHAR_DATA *ch, FILE *fp )
 					fMatch = TRUE;
 					break;
 				}
-#else
-				KEY( "Bank",        ch->pcdata->bankaccount,fread_number( fp ) );
-#endif
 				break;
 
 			case 'C':
@@ -773,9 +753,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp )
 				KEY( "Corpses",	ch->pcdata->corpses,	fread_number( fp ) );
 				KEY( "Clan",        ch->clan,               fread_number( fp ) );
 				KEY( "Clvl",        ch->clev,               fread_number( fp ) );
-#ifdef NEW_MONEY
 				KEY( "Copper",	ch->money.copper,	fread_number( fp ) );
-#endif
 				KEY( "Ctmr",        ch->ctimer,             fread_number( fp ) );
 				if ( !str_cmp( word, "Cla" ) )
 				{
@@ -827,11 +805,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp )
 				break;
 
 			case 'G':
-#ifdef NEW_MONEY
 				KEY( "Gold",	ch->money.gold,		fread_number( fp ) );
-#else
-				KEY( "Gold",	ch->gold,		fread_number( fp ) );
-#endif
 				KEY( "GRank",	ch->guild_rank,		fread_number( fp ) );
 				if(!str_cmp(word, "Guild"))
 				{
@@ -936,9 +910,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp )
 				KEY( "SavThr",	ch->saving_throw,	fread_number( fp ) );
 				KEY( "SAlign",	ch->start_align,	fread_letter( fp ) );
 				KEY( "Sx",		ch->sex,		fread_number( fp ) );
-#ifdef NEW_MONEY
 				KEY( "Silver",	ch->money.silver,	fread_number( fp ) );
-#endif
 				KEY( "Slyuc",	ch->pcdata->slayusee,	fread_string( fp ) );
 				KEY( "Slyrm",	ch->pcdata->slayroom,	fread_string( fp ) );
 				KEY( "Slyvict",	ch->pcdata->slayvict,	fread_string( fp ) );
@@ -1022,17 +994,15 @@ void fread_char( CHAR_DATA *ch, FILE *fp )
 		}
 
 		/* Make sure old chars have this field - Kahn */
-		if ( !ch->pcdata->pagelen )
-			ch->pcdata->pagelen = 20;
-		if ( !ch->prompt || ch->prompt == '\0' )
-			ch->prompt = str_dup ( "<%hhp %mm %vmv> " );
-
-		/* Make sure old chars do not have pagelen > 60 - Kahn */
-		if ( ch->pcdata->pagelen > 60 )
+		if ( !ch->pcdata->pagelen ) {
 			ch->pcdata->pagelen = 60;
+		}
 
-		if ( !fMatch )
-		{
+		if ( !ch->prompt || ch->prompt == '\0' ) {
+			ch->prompt = str_dup ( "<%hhp %mm %vmv> " );
+		}
+
+		if ( !fMatch ) {
 			sprintf( buf, "Fread_char: %s -> no match.", word );
 			bug( buf, 0 );
 			fread_to_eol( fp );
@@ -1132,12 +1102,8 @@ void fread_obj( CHAR_DATA *ch, FILE *fp, bool storage )
 				break;
 
 			case 'C':
-#ifdef NEW_MONEY
 				KEY( "Copper", 	obj->cost.copper,	fread_number( fp ) ); 
 				KEY( "Cost",	obj->cost.copper,	fread_number( fp ) );
-#else
-				KEY( "Cost",	obj->cost,		fread_number( fp ) );
-#endif
 				break;
 
 			case 'D':
@@ -1203,11 +1169,9 @@ void fread_obj( CHAR_DATA *ch, FILE *fp, bool storage )
 					}
 				}
 				break;
-#ifdef NEW_MONEY
 			case 'G':
 				KEY( "Gold",	obj->cost.gold,		fread_number( fp ) );
 				break; 
-#endif
 			case 'I':
 				KEY( "ItemType",	obj->item_type,		fread_number( fp ) );
 				break;
@@ -1237,9 +1201,7 @@ void fread_obj( CHAR_DATA *ch, FILE *fp, bool storage )
 
 			case 'S':
 				KEY( "ShortDescr",	obj->short_descr,	fread_string( fp ) );
-#ifdef NEW_MONEY
 				KEY( "Silver", 	obj->cost.silver,	fread_number( fp ) ); 
-#endif
 				if ( !str_cmp( word, "Spell" ) )
 				{
 					int iValue;

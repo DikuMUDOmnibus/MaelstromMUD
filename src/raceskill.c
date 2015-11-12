@@ -347,14 +347,9 @@ void do_forge( CHAR_DATA *ch, char *argument )
 	}
 	if ( wear )
 	{
-#ifdef NEW_MONEY
 		if ( (ch->money.gold + (ch->money.silver/SILVER_PER_GOLD) +
 					(ch->money.copper/COPPER_PER_GOLD) ) < (lvl * 100) )
 		{
-#else
-			if ( ch->gold < lvl * 10000 )
-			{
-#endif
 				send_to_char( AT_GREY, "You do not have enough money to create the base item of this level.\n\r", ch );
 				return;
 			}
@@ -363,12 +358,8 @@ void do_forge( CHAR_DATA *ch, char *argument )
 					obj = create_object( get_obj_index( OBJ_VNUM_TO_FORGE_W ), lvl );
 				else
 					obj = create_object( get_obj_index( OBJ_VNUM_TO_FORGE_A ), lvl );
-#ifdef NEW_MONEY
 			obj->cost.silver = obj->cost.copper = 0;
 			obj->cost.gold = lvl * 100;
-#else
-			obj->cost = lvl * 10000;
-#endif
 			obj->weight = lvl * 0.15;
 			obj->level = lvl;
 			obj->anti_race_flags = antirace;

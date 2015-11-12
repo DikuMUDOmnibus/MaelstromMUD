@@ -3086,18 +3086,10 @@ void spell_identify( int sn, int level, CHAR_DATA *ch, void *vo )
 			obj->anti_race_flags ? antirace_bit_name(obj->anti_race_flags) : "",
 			obj->anti_class_flags ? anticlass_bit_name(obj->anti_class_flags) : "");
 	send_to_char(AT_CYAN, buf, ch );
-#ifdef NEW_MONEY
 	sprintf( buf, "Weight : %d, level : %d.\n\r", obj->weight, obj->level );
 	send_to_char( AT_CYAN, buf, ch );
 	sprintf( buf, "Gold Value: %d  Silver Value: %d  Copper Value: %d\n\r",
 			obj->cost.gold, obj->cost.silver, obj->cost.copper );
-#else
-	sprintf( buf,
-			"Weight : %d, value : %d, level : %d.\n\r",
-			obj->weight,
-			obj->cost,
-			obj->level );
-#endif
 	send_to_char(AT_CYAN, buf, ch );
 
 	switch ( obj->item_type )
@@ -4031,20 +4023,11 @@ void spell_mind_probe( int sn, int level, CHAR_DATA *ch, void *vo )
 	send_to_char( AT_PINK, buf, ch );
 
 	send_to_char( AT_CYAN, "You have scored ", ch );
-#ifdef NEW_MONEY
 	sprintf( buf, "&W%d &cexperience points.\n\r", victim->exp );
 	send_to_char( AT_WHITE, buf, ch );
 	sprintf( buf, "&cYou have accumulated &W%d &Ygold, &W%d &wsilver, &cand &W%d &Ocopper &ccoins.\n\r",
 			victim->money.gold, victim->money.silver, victim->money.copper );
 	send_to_char( AT_WHITE, buf, ch );
-#else
-	sprintf( buf, "%d ", victim->exp );
-	send_to_char( AT_WHITE, buf, ch );
-	send_to_char( AT_CYAN, "exp, and have accumulated ", ch );
-	sprintf( buf, "%d ", victim->gold );
-	send_to_char( AT_YELLOW, buf, ch );
-	send_to_char( AT_CYAN, "gold coins.\n\r", ch );
-#endif
 
 	if ( !IS_NPC( victim ) && victim->pcdata->condition[COND_DRUNK]   > 10 )
 		send_to_char( AT_GREY, "You are drunk.\n\r", ch );
@@ -4628,16 +4611,12 @@ void spell_acid_breath( int sn, int level, CHAR_DATA *ch, void *vo )
 									victim->armor -= apply_ac( obj_lose, iWear );
 									obj_lose->value[0] -= 1;*/
 						/* 5% -- Altrag */
-#ifdef NEW_MONEY
 						obj_lose->cost.gold   = (obj_lose->cost.gold > 0) ?
 							(obj_lose->cost.gold - (obj_lose->cost.gold/20)) : 0;
 						obj_lose->cost.silver = (obj_lose->cost.silver > 0) ?
 							(obj_lose->cost.silver - (obj_lose->cost.silver/20)) : 0;
 						obj_lose->cost.copper = (obj_lose->cost.copper > 0) ?
 							(obj_lose->cost.copper - (obj_lose->cost.copper/20)) : 0;
-#else
-						obj_lose->cost     -= (obj_lose->cost / 20);
-#endif
 						/*		    if ( iWear != WEAR_NONE )
 									victim->armor += apply_ac( obj_lose, iWear );*/
 					}
@@ -5610,11 +5589,7 @@ void spell_enhance_armor (int sn, int level, CHAR_DATA *ch, void *vo )
 		/* Bad Enhancement ... opps! :) */
 	{
 		paf->modifier   = level / 8;
-#ifdef NEW_MONEY
 		obj->cost.gold = obj->cost.silver = obj->cost.copper = 0;
-#else
-		obj->cost       = 0;
-#endif
 		SET_BIT( obj->extra_flags, ITEM_NODROP );
 		act(AT_DGREY, "$p turns black.", ch, obj, NULL, TO_CHAR );
 	}
@@ -7556,12 +7531,8 @@ void spell_soul_bind( int sn, int level, CHAR_DATA *ch, void *vo )
 	soulgem->ac_vnum = victim->pIndexData->vnum;
 	soulgem->level = ch->level;
 	soulgem->timer = ch->level / 4;
-#ifdef NEW_MONEY
 	soulgem->cost.silver = soulgem->cost.copper = 0;
 	soulgem->cost.gold = victim->level * 10;
-#else
-	soulgem->cost  = victim->level * 10;
-#endif
 	soulgem->ac_charge[0] = soulgem->ac_charge[1] = 1;
 	obj_to_char( soulgem , ch );
 

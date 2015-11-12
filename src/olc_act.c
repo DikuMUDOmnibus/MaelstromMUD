@@ -2631,11 +2631,7 @@ bool redit_oreset( CHAR_DATA *ch, char *argument )
 			add_reset( pRoom, pReset, 0/* Last slot*/ );
 
 			newobj = create_object( pObjIndex, number_fuzzy( olevel ) );
-#ifdef NEW_MONEY
 			newobj->cost.gold = newobj->cost.silver = newobj->cost.copper = 0;
-#else
-			newobj->cost = 0;
-#endif
 			obj_to_obj( newobj, to_obj );
 
 			sprintf( output, "%s (%d) has been loaded into "
@@ -2981,18 +2977,12 @@ void show_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *obj )
 			break;
 
 		case ITEM_MONEY:
-#ifdef NEW_MONEY
 			sprintf( buf, "&z[&Wv0&z] &cGold&w:   &z[&R%d&z]\n\r"
 					"&z[&Wv1&z] &cSilver&w: &z[&R%d&z]\n\r",
 					obj->value[0], obj->value[1] );
 			send_to_char(C_DEFAULT, buf, ch );
 			sprintf( buf, "&z[&Wv2&z] &cCopper&w: &z[&R%d&z]\n\r",
 					obj->value[2] );
-
-#else
-			sprintf( buf, "&z[&Wv0&z] &cGold&w:   &z[&R%d&z]\n\r",
-					obj->value[0] );
-#endif
 			send_to_char(C_DEFAULT, buf, ch );
 			break;
 	}
@@ -3420,13 +3410,8 @@ bool set_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *a
 				case 0:
 					send_to_char(C_DEFAULT, "GOLD AMOUNT SET.\n\r\n\r", ch );
 					pObj->value[0] = atoi( argument );
-#ifdef NEW_MONEY
 					pObj->cost.gold = pObj->value[0];
-#else
-					pObj->cost = pObj->value[0];
-#endif
 					break;
-#ifdef NEW_MONEY
 				case 1:
 					send_to_char(C_DEFAULT, "SILVER AMOUNT SET.\n\r\n\r", ch );
 					pObj->value[1] = atoi( argument );
@@ -3437,7 +3422,6 @@ bool set_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *a
 					pObj->value[2] = atoi( argument );
 					pObj->cost.copper = pObj->value[2];
 					break;
-#endif
 			}
 			break;
 	}
@@ -3491,7 +3475,6 @@ bool oedit_show( CHAR_DATA *ch, char *argument )
 
 	sprintf( buf, "&cLevel&w:&z       [&R%d&z]\n\r", pObj->level );
 	send_to_char(C_DEFAULT, buf, ch);
-#ifdef NEW_MONEY
 	sprintf( buf, "&cWeight&w:&z      [&R%d&z]\n\r"
 			"&cGold Cost&w:&z   [&R%d&z]\n\r",
 			pObj->weight, pObj->cost.gold );
@@ -3499,11 +3482,6 @@ bool oedit_show( CHAR_DATA *ch, char *argument )
 	sprintf( buf, "&cSilver Cost&w:&z [&R%d&z]\n\r"
 			"&cCopper Cost&w:&z [&R%d&z]\n\r",
 			pObj->cost.silver, pObj->cost.copper );
-#else
-	sprintf( buf, "&cWeight&w:&z      [&R%d&z]\n\r"
-			"&cCost&w:&z        [&R%d&z]\n\r",
-			pObj->weight, pObj->cost );
-#endif
 	send_to_char(C_DEFAULT, buf, ch );
 	if ( pObj->join )
 	{
@@ -3943,12 +3921,9 @@ bool oedit_weight( CHAR_DATA *ch, char *argument )
 bool oedit_cost( CHAR_DATA *ch, char *argument )
 {
 	OBJ_INDEX_DATA *pObj;
-#ifdef NEW_MONEY
 	char arg  [ MAX_STRING_LENGTH ];
 	char arg2 [ MAX_STRING_LENGTH ];
-#endif
 	EDIT_OBJ(ch, pObj);
-#ifdef NEW_MONEY
 
 	argument = one_argument( argument, arg );
 	one_argument( argument, arg2 );
@@ -3982,17 +3957,6 @@ bool oedit_cost( CHAR_DATA *ch, char *argument )
 		return FALSE;
 	}
 
-#else
-	if ( argument[0] == '\0' || !is_number( argument ) )
-	{
-		send_to_char(C_DEFAULT, "Syntax:  cost [number]\n\r", ch );
-		return FALSE;
-	}
-
-	pObj->cost = atoi( argument );
-
-	send_to_char(C_DEFAULT, "Cost set.\n\r", ch);
-#endif
 	return TRUE;
 }
 
@@ -4822,7 +4786,6 @@ bool medit_show( CHAR_DATA *ch, char *argument )
 			"&cAlign&w:&z         [&R%4d&z]\n\r",
 			pMob->level,       pMob->alignment );
 	send_to_char(C_DEFAULT, buf, ch );
-#ifdef NEW_MONEY
 	sprintf( buf,
 			"&cHit Points&w:&z    [&R%5d&z]\n\r"
 			"&cGold&w:&z          [&R%7d&z]\n\r"
@@ -4830,13 +4793,6 @@ bool medit_show( CHAR_DATA *ch, char *argument )
 			"&cCopper&w:&z	       [&R%7d&z]\n\r",
 			pMob->hitnodice, pMob->money.gold, pMob->money.silver, pMob->money.copper );
 	send_to_char(C_DEFAULT, buf, ch);
-#else
-	sprintf( buf,
-			"&cHit Points&w:&z    [&R%5d&z]\n\r"
-			"&cGold&w:&z          [&R%d&z]\n\r",
-			pMob->hitnodice, pMob->gold );
-	send_to_char(C_DEFAULT, buf, ch);
-#endif
 	sprintf( buf, "&cAffected by&w:&z   [&W%s&z]\n\r",
 			flag_string( affect_flags, pMob->affected_by ) );
 	send_to_char(C_DEFAULT, buf, ch );
@@ -5129,17 +5085,12 @@ bool medit_gold( CHAR_DATA *ch, char *argument )
 		send_to_char(C_DEFAULT, "Syntax:  gold [amount]\n\r", ch );
 		return FALSE;
 	}
-#ifdef NEW_MONEY
 	pMob->money.gold = atoi( argument );
-#else
-	pMob->gold = atoi( argument );
-#endif
 
 	send_to_char(C_DEFAULT, "Gold coins set.\n\r", ch);
 	return TRUE;
 }
 
-#ifdef NEW_MONEY
 bool medit_silver( CHAR_DATA *ch, char *argument )
 {
 	MOB_INDEX_DATA *pMob;
@@ -5175,7 +5126,6 @@ bool medit_copper( CHAR_DATA *ch, char *argument )
 	send_to_char(C_DEFAULT, "Copper coins set.\n\r", ch);
 	return TRUE;
 }
-#endif
 
 bool medit_hitpoint( CHAR_DATA *ch, char *argument )
 {
@@ -6633,14 +6583,10 @@ bool forge_show(CHAR_DATA *ch, char *argument)
 			sprintf( buf, "%d&w- &z[      &Wnone&z] [       &R0&z]\n\r", cnt );
 		send_to_char( AT_WHITE, buf, ch );
 	}
-#ifdef NEW_MONEY
 	sprintf( buf, "Gold Cost&w:   &z[&R%d&z]\n\r"
 			"Silver Cost&w: &z[&R%d&z]\n\r"
 			"Copper Cost&w: &z[&R%d&z]\n\r",
 			pObj->cost.gold, pObj->cost.silver, pObj->cost.copper );
-#else
-	sprintf( buf, "Object Cost&w: &z[&R%d&z]\n\r", pObj->cost );
-#endif
 	send_to_char( AT_WHITE, buf, ch );
 	return FALSE;
 }
@@ -6911,11 +6857,7 @@ bool forge_addaffect( CHAR_DATA *ch, char *argument )
 	pObj->affected  =   pAf;
 	sprintf( buf, "Added %d %s for a cost of %d.\n\r", Mod, loc, cost );
 	send_to_char(C_DEFAULT, buf, ch);
-#ifdef NEW_MONEY
 	pObj->cost.gold += cost;
-#else
-	pObj->cost += cost;
-#endif
 	return TRUE;
 }
 bool forge_type( CHAR_DATA *ch, char *argument )

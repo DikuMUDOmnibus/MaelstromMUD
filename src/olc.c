@@ -495,9 +495,7 @@ const struct olc_cmd_type medit_table[] =
 
 	{   "alignment",	medit_align		},
 	{   "commands",	show_commands		},
-#ifdef NEW_MONEY
 	{   "copper",	medit_copper		},
-#endif
 	{   "create",	medit_create		},
 	{   "desc",		medit_desc		},
 	{   "delet",	medit_delet		},
@@ -511,9 +509,7 @@ const struct olc_cmd_type medit_table[] =
 	{   "class",	medit_class	        },
 	{   "short",	medit_short		},
 	{	"show",		medit_show		},
-#ifdef NEW_MONEY
 	{   "silver", 	medit_silver		},
-#endif
 	{   "spec",		medit_spec		},
 	{   "immune",	medit_immune		},	/* XOR */
 	{   "mpedit",       medit_mpedit            },      /* Altrag */
@@ -2830,7 +2826,6 @@ void forge_pay_cost( CHAR_DATA *ch )
 
 	FORGE_OBJ(ch, obj);
 
-#ifdef NEW_MONEY
 
 	if ( ( (ch->money.gold*C_PER_G) + (ch->money.silver*S_PER_G) + 
 				(ch->money.copper) ) < ( (obj->cost.gold*C_PER_G) + (obj->cost.silver*S_PER_G) +
@@ -2842,16 +2837,6 @@ void forge_pay_cost( CHAR_DATA *ch )
 	}
 	obj_to_char( obj, ch );
 	spend_money( &ch->money, &obj->cost );
-#else
-	if ( ch->gold < obj->cost )
-	{
-		send_to_char( AT_GREY, "You cannot afford to forge this object.\n\r", ch );
-		extract_obj( obj );
-		return;
-	}
-	obj_to_char( obj, ch );
-	ch->gold -= obj->cost;
-#endif
 	return;
 }
 

@@ -725,11 +725,7 @@ bool tprg_do_ifchck( char *ifchck, ROOM_INDEX_DATA *room, OBJ_INDEX_DATA *tObj,
 				return tprg_veval( lhsvl, opr, rhsvl ); */
 			case 'n': if ( actor )
 					  {
-#ifdef NEW_MONEY
 						  lhsvl = actor->money.gold;
-#else
-						  lhsvl = actor->gold;
-#endif
 						  rhsvl = atoi( val );
 						  return tprg_veval( lhsvl, opr, rhsvl );
 					  }
@@ -737,11 +733,7 @@ bool tprg_do_ifchck( char *ifchck, ROOM_INDEX_DATA *room, OBJ_INDEX_DATA *tObj,
 						  return -1;
 			case 't': if ( vict )
 					  {
-#ifdef NEW_MONEY
 						  lhsvl = vict->money.gold;
-#else
-						  lhsvl = vict->gold;
-#endif
 						  rhsvl = atoi( val );
 						  return tprg_veval( lhsvl, opr, rhsvl );
 					  }
@@ -749,11 +741,7 @@ bool tprg_do_ifchck( char *ifchck, ROOM_INDEX_DATA *room, OBJ_INDEX_DATA *tObj,
 						  return -1;
 			case 'r': if ( rndm )
 					  {
-#ifdef NEW_MONEY
 						  lhsvl = rndm->money.gold;
-#else
-						  lhsvl = rndm->gold;
-#endif
 						  rhsvl = atoi( val );
 						  return tprg_veval( lhsvl, opr, rhsvl );
 					  }
@@ -1703,11 +1691,7 @@ void tprg_act_trigger( char *buf, CHAR_DATA *mob, CHAR_DATA *ch,
 
 }
 
-#ifdef NEW_MONEY
 void tprg_bribe_trigger( CHAR_DATA *mob, CHAR_DATA *ch, MONEY_DATA *amount )
-#else
-void tprg_bribe_trigger( CHAR_DATA *mob, CHAR_DATA *ch, int amount )
-#endif
 {
 
 	char        buf[ MAX_STRING_LENGTH ];
@@ -1718,7 +1702,6 @@ void tprg_bribe_trigger( CHAR_DATA *mob, CHAR_DATA *ch, int amount )
 			&& ( mob->pIndexData->progtypes & BRIBE_PROG ) )
 	{
 		obj = create_object( get_obj_index( OBJ_VNUM_MONEY_SOME ), 0 );
-#ifdef NEW_MONEY
 		obj->value[0] = amount.gold;
 		obj->value[1] = amount.silver;
 		obj->value[2] = amount.copper;
@@ -1733,22 +1716,6 @@ void tprg_bribe_trigger( CHAR_DATA *mob, CHAR_DATA *ch, int amount )
 				tprg_driver( mprg->comlist, mob, ch, obj, NULL );
 				break;
 			}
-#else
-		sprintf( buf, obj->short_descr, amount );
-		free_string( obj->short_descr );
-		obj->short_descr = str_dup( buf );
-		obj->value[0]    = amount;
-		obj_to_char( obj, mob );
-		mob->gold -= amount;
-
-		for ( mprg = mob->pIndexData->mobprogs; mprg != NULL; mprg = mprg->next )
-			if ( ( mprg->type & BRIBE_PROG )
-					&& ( amount >= atoi( mprg->arglist ) ) )
-			{
-				tprg_driver( mprg->comlist, mob, ch, obj, NULL );
-				break;
-			}
-#endif
 	}
 
 	return;

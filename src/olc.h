@@ -278,12 +278,8 @@ DECLARE_OLC_FUN( medit_desc		);
 DECLARE_OLC_FUN( medit_level		);
 DECLARE_OLC_FUN( medit_hitpoint         );
 DECLARE_OLC_FUN( medit_gold             );
-
-#ifdef NEW_MONEY
 DECLARE_OLC_FUN( medit_silver		);
 DECLARE_OLC_FUN( medit_copper		);
-#endif
-
 DECLARE_OLC_FUN( medit_align		);
 DECLARE_OLC_FUN( medit_spec		);
 DECLARE_OLC_FUN( medit_immune		);/* XOR */

@@ -118,7 +118,6 @@ void do_mpstat( CHAR_DATA *ch, char *argument )
 			victim->move,        victim->perm_move, MAX_MOVE(victim) );
 	send_to_char(C_DEFAULT, buf, ch );
 
-#ifdef NEW_MONEY
 	sprintf( buf,
 			"Lv: %d.  Class: %s.  Align: %d.  AC: %d.  Exp: %d.\n\r",
 			victim->level,  class_numbers( victim, FALSE ), victim->alignment,
@@ -127,13 +126,6 @@ void do_mpstat( CHAR_DATA *ch, char *argument )
 	sprintf( buf, "Gold: %d   Silver: %d   Copper: %d.\n\r",
 			victim->money.gold, victim->money.silver, victim->money.copper );
 	send_to_char(C_DEFAULT, buf, ch ); 
-#else
-	sprintf( buf,
-			"Lv: %d.  Class: %s.  Align: %d.  AC: %d.  Gold: %d.  Exp: %d.\n\r",
-			victim->level,  class_numbers( victim, FALSE ), victim->alignment,
-			GET_AC( victim ),    victim->gold,         victim->exp );
-	send_to_char(C_DEFAULT, buf, ch );
-#endif
 	for ( mprg = victim->pIndexData->mobprogs; mprg != NULL;
 			mprg = mprg->next )
 	{

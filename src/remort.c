@@ -128,11 +128,7 @@ void do_remort( CHAR_DATA *ch, char *argument )
 			d->character->hitroll = 0;
 			d->character->damroll = 0;
 			d->character->armor = 100;
-#ifdef NEW_MONEY
 			d->character->money.gold = d->character->money.silver = d->character->money.copper = 0;
-#else
-			d->character->gold = 0;
-#endif
 			d->character->exp = 0;
 			d->character->raisepts = 0;
 

@@ -1161,13 +1161,8 @@ void bust_a_prompt( DESCRIPTOR_DATA *d )
 			case 'X' :
 				sprintf( buf2, "%d", xp_tolvl( ch ) - ch->exp             );
 				i = buf2; break;
-#ifdef NEW_MONEY
 			case 'g' :
 				sprintf( buf2, "%d", ch->money.gold			       );
-#else
-			case 'g' :
-				sprintf( buf2, "%d", ch->gold                              );
-#endif
 				i = buf2; break;
 			case 'a' :
 				if( ch->level >= 5 )
@@ -1542,9 +1537,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 	int	       iCount;
 	int        notes;
 	bool       fOld;
-#ifdef NEW_MONEY
 	MONEY_DATA amt;
-#endif
 
 	while ( isspace( *argument ) )
 		argument++;
@@ -2282,7 +2275,6 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			write_to_buffer( d, "\n\r", 2 );
 			ch->pcdata->pagelen = 60;
 			do_help( ch, "motd" );
-			ch->pcdata->pagelen = 20;
 
 			/* if authorize is on:  */
 
@@ -2490,13 +2482,9 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 						for ( obj = ch->pcdata->storage; obj; obj = obj_next, count++ )
 						{
 						obj_next = obj->next_content;
-#ifdef NEW_MONEY
 						if ( (ch->pcdata->bankaccount.gold +
 									(ch->pcdata->bankaccount.silver/S_PER_G) +
 									(ch->pcdata->bankaccount.copper/C_PER_G) ) < count * 1000 )
-#else
-							if ( ch->pcdata->bankaccount < count * 1000 )
-#endif
 							{
 								sprintf( buf,
 										"The bank has repossessed %s from your storage.\n\r",
@@ -2511,13 +2499,9 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 						"The bank deducts %dgp from your account for the storage of %d items.\n\r",
 						ch->pcdata->storcount * 1000, ch->pcdata->storcount );
 				send_to_char( AT_PINK, buf, ch );
-#ifdef NEW_MONEY
 				amt.silver = amt.copper = 0;
 				amt.gold = ch->pcdata->storcount * 1000;
 				spend_money( &ch->pcdata->bankaccount, &amt );
-#else
-				ch->pcdata->bankaccount -= ch->pcdata->storcount * 1000;
-#endif
 						}
 
 				do_look( ch, "auto" );

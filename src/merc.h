@@ -23,9 +23,6 @@
  */
 #define VERSION "0.0.3"
 
-/* To turn on and off certain features off the mud */
-#define NEW_MONEY   
-
 #include <jansson.h>
 #include "devops.h" /* Include devops attributes */
 #include "colors.h" /* Include the ansi color routines */
@@ -95,7 +92,6 @@ typedef struct  war_data					WAR_DATA;
 //typedef struct  userl_data			  USERL_DATA;
 
 
-#ifdef NEW_MONEY
 typedef struct money_data	 	MONEY_DATA; 
 
 #define S_PER_G				10
@@ -105,7 +101,6 @@ typedef struct money_data	 	MONEY_DATA;
 #define SILVER_PER_GOLD			10
 #define COPPER_PER_SILVER		10
 #define COPPER_PER_GOLD			(SILVER_PER_GOLD*COPPER_PER_SILVER)
-#endif
 
 
 /*
@@ -191,14 +186,12 @@ typedef void SPELL_FUN                  args( ( int sn, int level, CHAR_DATA *ch
    }; */
 
 
-#ifdef NEW_MONEY 
 struct money_data
 {
 	int           gold;
 	int           silver;
 	int           copper;
 };
-#endif 
 
 struct arena_data
 {
@@ -1559,11 +1552,7 @@ struct	mob_index_data
 	int 		damnodice;		/* Unused */
 	int 		damsizedice;		/* Unused */
 	int 		damplus;		/* Unused */
-#ifdef NEW_MONEY
 	MONEY_DATA		money;
-#else 
-	int			gold;			/* Unused */
-#endif 
 };
 
 /*
@@ -1654,11 +1643,7 @@ struct	char_data
 	int			perm_bp;
 	int		 	mod_bp;
 	int			charisma; 
-#ifdef NEW_MONEY
 	MONEY_DATA		money;
-#else
-	int			gold;
-#endif
 	int			exp;
 	int			act;
 	int			act2;
@@ -1771,11 +1756,7 @@ struct	pc_data
 	int 		learned		[ MAX_SKILL ];
 	bool                switched;
 	int 		security;	/* OLC - Builder security */
-#ifdef NEW_MONEY
 	MONEY_DATA		bankaccount;
-#else
-	int                 bankaccount;
-#endif
 	OBJ_DATA          * storage;
 	int                 storcount;
 	int                 corpses;
@@ -1948,11 +1929,7 @@ struct	obj_index_data
 	int 		wear_flags;
 	int 		count;
 	int 		weight;
-#ifdef NEW_MONEY
 	MONEY_DATA		cost;
-#else
-	int			cost;			/* Unused */
-#endif
 	int                 level;
 	int			value	[ 4 ];
 	int                 ac_type;
@@ -1990,11 +1967,7 @@ struct	obj_data
 	int 		wear_flags;
 	int 		wear_loc;
 	int 		weight;
-#ifdef NEW_MONEY
 	MONEY_DATA		cost;
-#else
-	int			cost;
-#endif
 	int 		level;
 	int 		timer;
 	int			value	[ 4 ];
@@ -3188,13 +3161,11 @@ bool	is_note_to					args( ( CHAR_DATA *ch, NOTE_DATA *pnote ) );
 void	set_title						args( ( CHAR_DATA *ch, char *title ) );
 bool	check_blind					args( ( CHAR_DATA *ch ) );
 
-#ifdef NEW_MONEY
 MONEY_DATA *add_money    	args( ( MONEY_DATA *a, MONEY_DATA *b ) );
 MONEY_DATA *sub_money	 		args( ( MONEY_DATA *a, MONEY_DATA *b ) );
 MONEY_DATA *take_money   	args( ( CHAR_DATA *ch, int amt, char *type, char *verb ) );
 MONEY_DATA *spend_money  	args( ( MONEY_DATA *a, MONEY_DATA *b ) );
 char       *money_string  args( ( MONEY_DATA *money ) );
-#endif
 
 /* act_move.c */
 void	move_char	args( ( CHAR_DATA *ch, int door, bool Fall ) );
@@ -3333,11 +3304,7 @@ OD *	get_obj_wear	args( ( CHAR_DATA *ch, char *argument ) );
 OD *	get_obj_here	args( ( CHAR_DATA *ch, char *argument ) );
 OD *	get_obj_world	args( ( CHAR_DATA *ch, char *argument ) );
 
-#ifdef NEW_MONEY
 OD *  	create_money	args( ( MONEY_DATA *amount ) );
-#else
-OD *	create_money	args( ( int amount ) );
-#endif
 
 int	get_obj_number	args( ( OBJ_DATA *obj ) );
 int	get_obj_weight	args( ( OBJ_DATA *obj ) );
@@ -3425,11 +3392,7 @@ void mprog_wordlist_check    args ( ( char * arg, CHAR_DATA *mob, CHAR_DATA* act
 void mprog_percent_check     args ( ( CHAR_DATA *mob, CHAR_DATA* actor, OBJ_DATA* object, void* vo, int type ) );
 void mprog_act_trigger       args ( ( char* buf, CHAR_DATA* mob, CHAR_DATA* ch, OBJ_DATA* obj, void* vo ) );
 
-#ifdef NEW_MONEY
 void mprog_bribe_trigger		 args ( ( CHAR_DATA* mob, CHAR_DATA* ch, MONEY_DATA *amount ) );
-#else
-void mprog_bribe_trigger     args ( ( CHAR_DATA* mob, CHAR_DATA* ch, int amount ) );
-#endif
 
 void mprog_entry_trigger     args ( ( CHAR_DATA* mob ) );
 void mprog_give_trigger      args ( ( CHAR_DATA* mob, CHAR_DATA* ch, OBJ_DATA* obj ) );

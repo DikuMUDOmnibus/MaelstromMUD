@@ -874,11 +874,7 @@ bool spec_poison( CHAR_DATA *ch )
 bool spec_thief( CHAR_DATA *ch )
 {
 	CHAR_DATA *victim;
-#ifdef NEW_MONEY
 	MONEY_DATA amount;
-#else
-	int        gold = 0;
-#endif
 
 	if ( ch->position == POS_FIGHTING )
 	{
@@ -914,7 +910,6 @@ bool spec_thief( CHAR_DATA *ch )
 		}
 		else
 		{
-#ifdef NEW_MONEY
 			amount.gold = amount.silver = amount.copper = 0;
 			amount.gold   = ( victim->money.gold   * number_range( 1, 20 ) / 100 );
 			if ( chance( 50 ) )
@@ -926,11 +921,6 @@ bool spec_thief( CHAR_DATA *ch )
 			ch->money.silver += 7 * amount.silver / 8;
 			ch->money.copper += 7 * amount.copper / 8;
 			sub_money( &victim->money, &amount );
-#else
-			gold = victim->gold * number_range( 1, 20 ) / 100;
-			ch->gold     += 7 * gold / 8;
-			victim->gold -= gold;
-#endif
 			return TRUE;
 		}
 	}

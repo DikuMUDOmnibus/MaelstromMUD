@@ -1174,16 +1174,9 @@ void load_mobiles( FILE *fp )
 		pMobIndex->damsizedice          = fread_number( fp );   /* Unused */
 		/* '+'		*/                fread_letter( fp );   /* Unused */
 		pMobIndex->damplus              = fread_number( fp );   /* Unused */
-#ifndef NEW_MONEY 
-		pMobIndex->gold                 = fread_number( fp );   /* Unused */
-
-		/* gold		*/		  fread_number( fp );
-#else
-
 		pMobIndex->money.gold           = fread_number( fp );
 		pMobIndex->money.silver         = fread_number( fp );
 		pMobIndex->money.copper         = fread_number( fp );
-#endif
 		/* xp           */                fread_number( fp );   /* Unused */
 		/* position	*/                fread_number( fp );   /* Unused */
 		/* start pos	*/                fread_number( fp );   /* Unused */
@@ -1316,15 +1309,9 @@ void load_objects( FILE *fp )
 		value[2]		        = fread_string( fp );
 		value[3]		        = fread_string( fp );
 		pObjIndex->weight		= fread_number( fp );
-#ifdef NEW_MONEY
 		pObjIndex->cost.gold		= fread_number( fp );
 		pObjIndex->cost.silver		= fread_number( fp );
 		pObjIndex->cost.copper		= fread_number( fp );
-
-#else
-		pObjIndex->cost			= fread_number( fp );
-		/* Obj cost */                    fread_number( fp ); 
-#endif
 		/* Cost per day */ 		  fread_number( fp );   /* Unused */
 		pObjIndex->ac_type              = fread_number( fp );
 		pObjIndex->ac_vnum              = fread_number( fp );
@@ -2760,13 +2747,9 @@ CHAR_DATA *create_mobile( MOB_INDEX_DATA *pMobIndex )
 	mob->sex		= pMobIndex->sex;
 
 	mob->armor		= interpolate( mob->level, 100, -100 );
-#ifdef NEW_MONEY
 	mob->money.gold  	= pMobIndex->money.gold;
 	mob->money.silver	= pMobIndex->money.silver;
 	mob->money.copper	= pMobIndex->money.copper;
-#else
-	mob->gold           = pMobIndex->gold;
-#endif
 	mob->perm_hit	= pMobIndex->hitnodice + 1;
 	mob->mod_hit	= 0;
 	mob->hit		= MAX_HIT(mob);
@@ -2814,13 +2797,9 @@ void clone_mobile(CHAR_DATA *parent, CHAR_DATA *clone)
 	clone->move		= parent->move;
 	clone->perm_move	= parent->perm_move;
 	clone->mod_move	= parent->mod_move;
-#ifdef NEW_MONEY
 	clone->money.gold   = parent->money.gold;
 	clone->money.silver	= parent->money.silver;
 	clone->money.copper = parent->money.copper;
-#else
-	clone->gold		= parent->gold;
-#endif
 	clone->exp		= parent->exp;
 	clone->act		= parent->act;
 	clone->affected_by	= parent->affected_by;
@@ -2887,13 +2866,9 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA *pObjIndex, int level )
 	obj->value[2]	= pObjIndex->value[2];
 	obj->value[3]	= pObjIndex->value[3];
 	obj->weight		= pObjIndex->weight;
-#ifdef NEW_MONEY
 	obj->cost.gold	= pObjIndex->cost.gold;
 	obj->cost.silver	= pObjIndex->cost.silver;
 	obj->cost.copper	= pObjIndex->cost.copper;
-#else
-	obj->cost		= pObjIndex->cost;
-#endif
 	obj->ac_type        = pObjIndex->ac_type;
 	obj->ac_vnum        = pObjIndex->ac_vnum;
 	obj->ac_spell       = str_dup(pObjIndex->ac_spell);
@@ -2959,13 +2934,9 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA *pObjIndex, int level )
 			break;
 
 		case ITEM_MONEY:
-#ifdef NEW_MONEY
 			obj->value[0]	= obj->cost.gold;
 			obj->value[1] 	= obj->cost.silver;
 			obj->value[2]	= obj->cost.copper;
-#else
-			obj->value[0]   = obj->cost;
-#endif
 			break;
 	}
 
@@ -3011,13 +2982,9 @@ void clone_object(OBJ_DATA *parent, OBJ_DATA *clone)
 	clone->anti_class_flags = parent->anti_class_flags;
 	clone->wear_flags	= parent->wear_flags;
 	clone->weight	= parent->weight;
-#ifdef NEW_MONEY
 	clone->cost.gold	= parent->cost.gold;
 	clone->cost.silver	= parent->cost.silver;
 	clone->cost.copper	= parent->cost.copper;
-#else
-	clone->cost		= parent->cost;
-#endif
 	clone->level	= parent->level;
 	clone->timer	= parent->timer;
 

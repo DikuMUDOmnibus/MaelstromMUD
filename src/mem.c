@@ -614,13 +614,9 @@ OBJ_INDEX_DATA *new_obj_index( void )
 	pObj->wear_flags    =   0;
 	pObj->count         =   0;
 	pObj->weight        =   0;
-#ifdef NEW_MONEY
 	pObj->cost.gold	=   0;
 	pObj->cost.silver	=   0;
 	pObj->cost.copper	=   0;
-#else
-	pObj->cost          =   0;
-#endif
 	pObj->level		=   0;
 	for ( value=0; value<4; value++ )
 		pObj->value[value]  =   0;
@@ -726,13 +722,9 @@ MOB_INDEX_DATA *new_mob_index( void )
 	pMob->damnodice	=   0;
 	pMob->damsizedice	=   0;
 	pMob->damplus	=   0;
-#ifdef NEW_MONEY
 	pMob->money.gold	=   0;
 	pMob->money.silver	=   0;
 	pMob->money.copper	=   0;
-#else
-	pMob->gold          =   0;
-#endif
 
 	return pMob;
 }

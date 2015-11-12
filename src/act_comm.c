@@ -32,12 +32,7 @@
 OBJ_DATA *auc_obj;
 CHAR_DATA *auc_bid;
 
-/* Due to new money format gold/silver/copper */
-#ifdef NEW_MONEY
 MONEY_DATA auc_cost;
-#else
-int auc_cost;
-#endif
 
 int auc_count = -1;
 CHAR_DATA *auc_held;
@@ -1208,16 +1203,11 @@ void do_auction( CHAR_DATA *ch, char *argument )
 {
 	char arg[MAX_STRING_LENGTH];
 	char arg1[MAX_STRING_LENGTH];
-#ifdef NEW_MONEY
 	MONEY_DATA aucamt;
 	char arg3 [ MAX_STRING_LENGTH ];
-#else
-	int bid = 0;
-#endif
 
 	argument = one_argument( argument, arg );
 	argument = one_argument( argument, arg1 );
-#ifdef NEW_MONEY
 	/* Synax: auction boots 5 copper,gold, or silver */
 
 	aucamt.gold = aucamt.silver = aucamt.copper = 0;
@@ -1233,9 +1223,6 @@ void do_auction( CHAR_DATA *ch, char *argument )
 		send_to_char( AT_WHITE, "&WSyntax: &Rauction <item> <amount> <currency type>\n\r", ch );
 		return;
 	}
-#else
-	bid = is_number( arg1 ) ? atoi( arg1 ) : 0;
-#endif    
 
 	if ( IS_NPC( ch ) )
 	{
@@ -1271,17 +1258,12 @@ void do_auction( CHAR_DATA *ch, char *argument )
 		auc_obj = NULL;
 		auc_held = NULL;
 
-#ifdef NEW_MONEY
 		auc_cost.gold = auc_cost.silver = auc_cost.copper = 0;
-#else
-		auc_cost = 0;
-#endif
 
 		auc_count = -1;
 		return;
 	}
 
-#ifdef NEW_MONEY
 	if ( ( aucamt.gold <= 0 ) && ( aucamt.silver <= 0 ) &&
 			( aucamt.copper <= 0 ) )
 	{
@@ -1296,21 +1278,6 @@ void do_auction( CHAR_DATA *ch, char *argument )
 				ch );
 		return;
 	}
-
-#else
-
-	if ( bid <= 0 )
-	{
-		send_to_char(AT_WHITE, "Auction it for how much?\n\r",ch );
-		return;
-	}
-
-	if ( bid < 100 )
-	{
-		send_to_char( AT_WHITE, "That is too low of a starting bidding price.\n\r", ch );
-		return;
-	}
-#endif    
 
 	if ( auc_obj )
 	{
@@ -1338,21 +1305,13 @@ void do_auction( CHAR_DATA *ch, char *argument )
 			auc_held = ch;
 			auc_bid = NULL;
 
-#ifdef NEW_MONEY
 			/* Only one currency will be above zero */
 			auc_cost.gold   = aucamt.gold;
 			auc_cost.silver = aucamt.silver;
 			auc_cost.copper = aucamt.copper;
 			auc_count = 0;
-			sprintf( log_buf, "%s a level %d object for %s",
-					auc_obj->short_descr, auc_obj->level, money_string( &auc_cost ));
+			sprintf( log_buf, "%s a level %d object for %s", auc_obj->short_descr, auc_obj->level, money_string( &auc_cost ));
 
-#else
-
-			auc_cost = bid;
-			auc_count = 0;
-			sprintf( log_buf, "%s a level %d object for %d gold coins.", auc_obj->short_descr, auc_obj->level, bid );
-#endif
 			auc_channel( log_buf );
 			sprintf( log_buf, "%s auctioning %s.", auc_held->name, auc_obj->name );
 			log_string( log_buf, CHANNEL_GOD, -1 );
@@ -1374,14 +1333,10 @@ void do_bid( CHAR_DATA *ch, char *argument )
 {
 	char buf[MAX_STRING_LENGTH];
 	char arg[MAX_INPUT_LENGTH];
-#ifdef NEW_MONEY
 	MONEY_DATA amt;
 	char arg2 [ MAX_STRING_LENGTH ];
 	int min_bid = 0;
 	bool bid_amt = TRUE;
-#else
-	int bid = 0;
-#endif
 
 	if ( !auc_obj )
 	{
@@ -1409,7 +1364,6 @@ void do_bid( CHAR_DATA *ch, char *argument )
 
 	argument = one_argument( argument, arg );
 
-#ifdef NEW_MONEY 
 	amt.gold = amt.silver = amt.copper = 0;
 
 	/* New syntax: bid 1000 copper */
@@ -1483,32 +1437,6 @@ void do_bid( CHAR_DATA *ch, char *argument )
 	auc_bid = ch;
 	return;
 }
-#else
-bid = is_number( arg ) ? atoi( arg ) : 0;
-
-if ( auc_cost > bid - 100 )
-{
-	sprintf( buf, "You must bid at least %d gold coins in this auction.\n\r", auc_cost + 100 );
-	send_to_char( AT_WHITE, buf, ch );
-	return;
-}
-
-if ( ch->gold < bid )
-{
-	send_to_char( AT_WHITE, "You are not carrying that much gold.\n\r", ch );
-	return;
-}
-
-REMOVE_BIT(ch->deaf, CHANNEL_AUCTION);
-sprintf( buf, "%d gold coins bid on %s.", bid, auc_obj->short_descr );
-auc_channel( buf );
-
-auc_cost = bid;
-auc_count = 0;
-auc_bid = ch;
-return;
-}
-#endif
 
 void do_chat( CHAR_DATA *ch, char *argument )
 {
@@ -2391,9 +2319,7 @@ void do_quit( CHAR_DATA *ch, char *argument )
 	DESCRIPTOR_DATA *d;
 	CHAR_DATA *PeT;
 	CHAR_DATA *gch;
-#ifdef NEW_MONEY
 	MONEY_DATA tax;     
-#endif
 
 	if ( IS_NPC( ch ) )
 		return;
@@ -2428,7 +2354,6 @@ void do_quit( CHAR_DATA *ch, char *argument )
 	}
 
 	raffect_remall( ch );
-#ifdef NEW_MONEY
 
 	if ( (ch->money.gold > 500000) ||
 			(ch->money.silver/SILVER_PER_GOLD > 500000) ||
@@ -2447,21 +2372,6 @@ void do_quit( CHAR_DATA *ch, char *argument )
 		send_to_char( AT_WHITE, log_buf, ch );
 		sub_money( &ch->money, &tax );
 	}
-
-#else
-
-	if ( ch->gold > 500000 )
-	{
-		int tax;
-
-		tax = ch->gold * 0.15 ;
-
-		sprintf( log_buf, "You have been charged %d coin%s as a fee for the out of bank protection of your gold while you are away.\n\r",
-				tax, tax > 1 ? "s" : "" );
-		send_to_char( AT_WHITE, log_buf, ch );
-		ch->gold -= tax;
-	}
-#endif
 
 	send_to_char(AT_BLUE, "[ The clear sky of reality slowly crosses the horizon.\n\r", ch );
 	send_to_char(AT_BLUE, "  With much effort you tear yourself free of the storm, but\n\r  ", ch );
@@ -2510,7 +2420,6 @@ void do_quit( CHAR_DATA *ch, char *argument )
 	{
 		if ( auc_bid )
 		{
-#ifdef NEW_MONEY
 			if ( ( (auc_bid->money.gold*C_PER_G) + (auc_bid->money.silver*S_PER_G) +
 						auc_bid->money.copper ) < ( (auc_cost.gold*C_PER_G) +
 							(auc_cost.silver*S_PER_G) + auc_cost.copper ) )
@@ -2542,37 +2451,6 @@ void do_quit( CHAR_DATA *ch, char *argument )
 		auc_count = -1;
 	}
 
-#else
-	if ( auc_bid->gold < auc_cost )
-	{
-		sprintf(log_buf, "Holder of %s has left; bidder cannot pay for item; returning to owner.", auc_obj->short_descr);
-		obj_to_char( auc_obj, ch );
-	}
-	else
-	{
-		sprintf(log_buf, "Holder of %s has left; selling item to last bidder.",
-				auc_obj->short_descr );
-		obj_to_char( auc_obj, auc_bid );
-		auc_bid->gold -= auc_cost;
-		ch->gold += auc_cost;
-	}
-}
-else
-{
-	sprintf(log_buf, "Holder of %s has left; removing item from auction.",
-			auc_obj->short_descr );
-	auc_channel( log_buf );
-	obj_to_char( auc_obj, ch );
-}
-auc_obj = NULL;
-auc_bid = NULL;
-auc_held = NULL;
-auc_cost = 0;
-auc_count = -1;
-}
-
-#endif
-
 if ( auc_bid && auc_bid == ch && auc_obj )
 {
 	sprintf(log_buf, "Highest bidder for %s has left; returning item to owner.", auc_obj->short_descr );
@@ -2582,11 +2460,7 @@ if ( auc_bid && auc_bid == ch && auc_obj )
 	auc_obj = NULL;
 	auc_bid = NULL;
 	auc_held = NULL;
-#ifdef NEW_MONEY
 	auc_cost.gold = auc_cost.silver = auc_cost.copper = 0;
-#else
-	auc_cost = 0;
-#endif
 	auc_count = -1;
 }
 
@@ -2648,7 +2522,6 @@ void do_delete( CHAR_DATA *ch, char *argument )
 	{
 		if ( auc_bid )
 		{
-#ifdef NEW_MONEY
 			if ( ( (auc_bid->money.gold*C_PER_G) + (auc_bid->money.silver*S_PER_G) +
 						auc_bid->money.copper ) < ( (auc_cost.gold*C_PER_G) +
 							(auc_cost.silver*S_PER_G) + auc_cost.copper ) )
@@ -2693,53 +2566,6 @@ void do_delete( CHAR_DATA *ch, char *argument )
 		auc_cost.gold = auc_cost.silver = auc_cost.copper = 0;
 		auc_count = -1;
 	}
-
-#else
-
-	if ( auc_bid->gold < auc_cost )
-	{
-		sprintf(log_buf, "Holder of %s has left; bidder cannot pay for item; "
-				"returning to owner.", auc_obj->short_descr);
-		obj_to_char( auc_obj, ch );
-	}
-	else
-	{
-		sprintf(log_buf, "Holder of %s has left; selling item to last bidder.",
-				auc_obj->short_descr );
-		obj_to_char( auc_obj, auc_bid );
-		auc_bid->gold -= auc_cost;
-		ch->gold += auc_cost;
-	}
-}
-else
-{
-	sprintf(log_buf, "Holder of %s has left; removing item from auction.",
-			auc_obj->short_descr );
-	auc_channel( log_buf );
-	obj_to_char( auc_obj, ch );
-}
-auc_obj = NULL;
-auc_bid = NULL;
-auc_held = NULL;
-auc_cost = 0;
-auc_count = -1;
-}
-
-if ( auc_bid && auc_bid == ch && auc_obj )
-{
-	sprintf(log_buf, "Highest bidder for %s has left; returning item to owner.", auc_obj->short_descr );
-	if ( auc_held )
-		obj_to_char( auc_obj, auc_held );
-	auc_channel( log_buf);
-	auc_obj = NULL;
-	auc_bid = NULL;
-	auc_held = NULL;
-	auc_cost = 0;
-	auc_count = -1;
-}
-
-#endif
-
 
 	/* Delete Player File */
 	sprintf(log_buf, "%s%c/%s", PLAYER_DIR, LOWER(ch->name[0]), capitalize(ch->name));
@@ -3115,10 +2941,8 @@ void do_split( CHAR_DATA *ch, char *argument )
 	int        amount = 0;
 	int        share  = 0;
 	int        extra  = 0;
-#ifdef NEW_MONEY
 	MONEY_DATA amt;
 	char arg2 [ MAX_STRING_LENGTH ];
-#endif
 
 	argument = one_argument( argument, arg );
 	argument = one_argument( argument, arg2 );
@@ -3127,7 +2951,6 @@ void do_split( CHAR_DATA *ch, char *argument )
 		send_to_char(AT_YELLOW, "Split how much?\n\r", ch );
 		return;
 	}
-#ifdef NEW_MONEY
 	/* split 5 copper,gold,silver */
 
 	amount = is_number( arg ) ? atoi( arg ) : 0;
@@ -3167,29 +2990,6 @@ void do_split( CHAR_DATA *ch, char *argument )
 		send_to_char(AT_YELLOW, buf, ch );
 		return;
 	}
-#else    
-
-	amount = atoi( arg );
-
-	if ( amount < 0 )
-	{
-		send_to_char(AT_YELLOW, "Your group wouldn't like that.\n\r", ch );
-		return;
-	}
-
-	if ( amount == 0 )
-	{
-		send_to_char(AT_YELLOW, "You hand out zero coins, but no one notices.\n\r", ch );
-		return;
-	}
-
-	if ( ch->gold < amount )
-	{
-		send_to_char(AT_YELLOW, "You don't have that much gold.\n\r", ch );
-		return;
-	}
-
-#endif  
 
 	members = 0;
 	for ( gch = ch->in_room->people; gch; gch = gch->next_in_room )
@@ -3213,7 +3013,6 @@ void do_split( CHAR_DATA *ch, char *argument )
 		send_to_char(AT_YELLOW, "Don't even bother, cheapskate.\n\r", ch );
 		return;
 	}
-#ifdef NEW_MONEY
 
 	if ( !str_cmp( arg2, "gold" ) )
 	{
@@ -3239,19 +3038,6 @@ void do_split( CHAR_DATA *ch, char *argument )
 	sprintf( buf, "$n splits %s  Your share is %d %s coins.",
 			money_string( &amt ), share, arg2 );
 
-#else
-
-	ch->gold -= amount;
-	ch->gold += share + extra;
-
-	sprintf( buf,
-			"You split %d gold coins.  Your share is %d gold coins.\n\r",
-			amount, share + extra );
-	send_to_char(AT_YELLOW, buf, ch );
-
-	sprintf( buf, "$n splits %d gold coins.  Your share is %d gold coins.",
-			amount, share );
-#endif
 	for ( gch = ch->in_room->people; gch; gch = gch->next_in_room )
 	{
 		if ( gch->deleted )
@@ -3259,16 +3045,12 @@ void do_split( CHAR_DATA *ch, char *argument )
 		if ( gch != ch && is_same_group( gch, ch ) )
 		{
 			act(C_DEFAULT, buf, ch, NULL, gch, TO_VICT );
-#ifdef NEW_MONEY
 			gch->money.gold   += ( !str_cmp( arg2, "gold" ) ) ?
 				share : 0;
 			gch->money.silver += ( !str_cmp( arg2, "silver" ) ) ?
 				share : 0;
 			gch->money.copper += ( !str_cmp( arg2, "copper" ) ) ?
 				share : 0;
-#else
-			gch->gold += share;
-#endif
 		}
 	}
 
@@ -3338,11 +3120,7 @@ void do_pray( CHAR_DATA *ch, char *argument )
 	else if (!IS_NPC(ch) && ch->pcdata->learned[gsn_prayer] < number_percent( ))
 	{
 		send_to_char(AT_BLUE, "Thalador smiles upon you, and sends you a gold coin.\n\r", ch );
-#ifdef NEW_MONEY
 		ch->money.gold += 1;
-#else
-		ch->gold++;
-#endif
 	}
 	else if ( !is_affected( ch, gsn_prayer ) )
 	{

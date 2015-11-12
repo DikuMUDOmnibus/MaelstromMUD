@@ -1719,17 +1719,12 @@ void item_damage( CHAR_DATA *ch, int dam )
 			continue;
 		if ( number_bits( 2 ) != 0 )
 			continue;
-#ifdef NEW_MONEY
 		/* Check if total cost in copper is less than 500,000 */
 
 		if ( ( (obj_lose->pIndexData->cost.gold*C_PER_G) +
 					(obj_lose->pIndexData->cost.silver*S_PER_G) +
 					(obj_lose->pIndexData->cost.copper) ) < 5000*100 )
 			continue;
-#else
-		if ( obj_lose->pIndexData->cost < 5000 )
-			continue; 
-#endif
 		if ( obj_lose->wear_loc == WEAR_NONE )
 			continue;
 		if ( IS_SET( obj_lose->extra_flags, ITEM_NO_DAMAGE ) )
@@ -1749,7 +1744,6 @@ void item_damage( CHAR_DATA *ch, int dam )
 				break;
 			case ITEM_WEAPON:
 			case ITEM_ARMOR:
-#ifdef NEW_MONEY
 				/*		 if ( ( obj_lose->cost.gold +
 						 (obj_lose->cost.silver/SILVER_PER_GOLD) +
 						 (obj_lose->cost.copper/COPPER_PER_GOLD) ) != 0 )
@@ -1772,11 +1766,6 @@ void item_damage( CHAR_DATA *ch, int dam )
 				if ( ( (obj_lose->cost.gold*100) +
 							(obj_lose->cost.silver*10) +
 							(obj_lose->cost.copper) ) < 0 )
-#else
-					if ( obj_lose->cost != 0 )
-						obj_lose->cost -= dam/6;
-				if (obj_lose->cost < 0)
-#endif
 				{
 					OBJ_DATA       *pObj;
 					OBJ_INDEX_DATA *pObjIndex;
@@ -2267,11 +2256,7 @@ void make_corpse( CHAR_DATA *ch )
 		/* wiznet(log_buf, NULL, NULL, WIZ_DEATHS, 0, 0); */
 		log_string(log_buf, CHANNEL_LOG, -1);
 		challenge(log_buf, 0, 0);
-#ifdef NEW_MONEY
 		gch->money.gold += award;
-#else
-		gch->gold += award;
-#endif
 		sprintf(log_buf, "You have been awarded %d gold coins for your victory."
 				"\n\r", award);
 		send_to_char(AT_YELLOW, log_buf, gch);
@@ -2293,30 +2278,18 @@ void make_corpse( CHAR_DATA *ch )
 		 * in extract_obj() when the updating list got shifted from
 		 * object_list to obj_free.          --- Thelonius (Monk)
 		 */
-#ifdef NEW_MONEY
 		if ( (ch->money.gold > 0) || (ch->money.silver > 0) ||
 				(ch->money.copper > 0) )
-#else
-			if ( ch->gold > 0 )
-#endif
 			{
 				OBJ_DATA * coins;
-#ifdef NEW_MONEY
 				coins	  = create_money( &ch->money );
-#else
-				coins         = create_money( ch->gold );
-#endif
 				name	  = ch->short_descr;
 				corpse	  = create_object(
 						get_obj_index( OBJ_VNUM_CORPSE_NPC ),
 						0 );
 				corpse->timer = number_range( 2, 4 );
 				obj_to_obj( coins, corpse );
-#ifdef NEW_MONEY
 				ch->money.gold = ch->money.silver = ch->money.copper = 0;
-#else
-				ch->gold = 0;
-#endif
 			}
 			else
 			{
@@ -2334,7 +2307,6 @@ void make_corpse( CHAR_DATA *ch )
 				get_obj_index( OBJ_VNUM_CORPSE_PC ),
 				0 );
 		corpse->timer	= number_range( 25, 40 );
-#ifdef NEW_MONEY
 		/* Check if ch has any money, doesn't matter about converting */
 
 		if ( ( ( ch->money.gold + ch->money.silver + 
@@ -2346,15 +2318,6 @@ void make_corpse( CHAR_DATA *ch )
 			obj_to_obj( coins, corpse );
 			ch->money.gold = ch->money.silver = ch->money.copper = 0;
 		}
-#else
-		if ( ( ch->gold > 0 ) && ( ch->level > 5 ) )
-		{
-			OBJ_DATA * coins;
-			coins = create_money( ch->gold );
-			obj_to_obj( coins, corpse );
-			ch->gold = 0;
-		}
-#endif
 	}
 
 	sprintf( buf, corpse->short_descr, name );
@@ -5265,9 +5228,7 @@ void do_challenge(CHAR_DATA *ch, char *argument)
 	char arg1[MAX_INPUT_LENGTH];
 	char arg2[MAX_INPUT_LENGTH];
 	int rvnum = ch->in_room->vnum;
-#ifdef NEW_MONEY
 	MONEY_DATA amount;    
-#endif
 
 	if ( IS_NPC(ch) )
 	{
@@ -5328,17 +5289,12 @@ void do_challenge(CHAR_DATA *ch, char *argument)
 	}
 	else
 		award = atoi(arg1);
-#ifdef NEW_MONEY
 	/* Convert and compare copper values: */
 	if ( award*100 > ( ch->money.gold*C_PER_G + ch->money.silver*S_PER_G +
 				ch->money.copper ) )
 		/*  if ( award > ( ch->money.gold + (ch->money.silver/SILVER_PER_GOLD) +
 			(ch->money.copper/COPPER_PER_GOLD) ) )  */
 	{
-#else
-		if ( award > ch->gold )
-		{
-#endif
 			send_to_char( C_DEFAULT, "You can't afford that.\n\r", ch );
 			arena.och = NULL;
 			return;
@@ -5352,13 +5308,9 @@ void do_challenge(CHAR_DATA *ch, char *argument)
 		arena.cch = ch;
 		arena.count = 0;
 		arena.award = award;
-#ifdef NEW_MONEY
 		amount.silver = amount.copper = 0;
 		amount.gold = award;
 		spend_money( &ch->money, &amount );
-#else
-		ch->gold -= award;
-#endif
 		if ( arena.och )
 			sprintf(log_buf, "&C%s &cchallenges &C%s &cto a fight in the arena for &W%d &cgold coins.", 
 					ch->name, arena.och->name, award );
@@ -5376,9 +5328,7 @@ void do_challenge(CHAR_DATA *ch, char *argument)
 	{
 		CHAR_DATA *cch, *och;
 		int rvnum = ch->in_room->vnum;
-#ifdef NEW_MONEY
 		MONEY_DATA amount;
-#endif
 
 		if ( IS_NPC(ch) )
 		{
@@ -5411,7 +5361,6 @@ void do_challenge(CHAR_DATA *ch, char *argument)
 			send_to_char( C_DEFAULT, "You are not the one being challenged.\n\r", ch );
 			return;
 		}
-#ifdef NEW_MONEY
 		if ( ( ch->money.gold*C_PER_G + ch->money.silver*S_PER_G +
 					ch->money.copper ) < arena.award*100 )
 			/*  if ( (ch->money.gold + (ch->money.silver/SILVER_PER_GOLD) +
@@ -5424,14 +5373,6 @@ void do_challenge(CHAR_DATA *ch, char *argument)
 		amount.silver = amount.copper = 0;
 		amount.gold = arena.award;
 		spend_money( &ch->money, &amount );
-#else
-		if ( ch->gold < arena.award )
-		{
-			send_to_char( C_DEFAULT, "You cannot afford that.\n\r", ch );
-			return;
-		}
-		ch->gold -= arena.award;
-#endif
 		arena.award *= 2;
 		arena.fch = cch;
 		arena.sch = ch;

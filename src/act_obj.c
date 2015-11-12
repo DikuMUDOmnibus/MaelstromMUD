@@ -42,11 +42,7 @@ void obj_random_apply args(( OBJ_DATA *obj, int total, char *buf ));
 void	wear_obj	args( ( CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace ) );
 CHAR_DATA *	find_keeper	args( ( CHAR_DATA *ch ) );
 
-#ifdef NEW_MONEY
 MONEY_DATA *get_cost    args( ( CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy ) );
-#else
-int	get_cost	args( ( CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy ) );
-#endif
 
 void    do_acoload      args( ( CHAR_DATA *ch, OBJ_DATA *obj, int vnum ) );
 void    do_acmload      args( ( CHAR_DATA *ch, OBJ_DATA *obj, int vnum ) );
@@ -56,11 +52,9 @@ void    do_acmorph      args( ( CHAR_DATA *ch, OBJ_DATA *obj, int vnum ) );
 
 
 bool get_obj( CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container, bool palming ) {
-#ifdef NEW_MONEY
 	MONEY_DATA amount;
 	/*  int tot_coins; */
 
-#endif
 	if ( !CAN_WEAR( obj, ITEM_TAKE ) && obj->item_type != ITEM_CORPSE_PC )
 	{
 		send_to_char(AT_WHITE, "You can't take that.\n\r", ch );
@@ -128,7 +122,6 @@ bool get_obj( CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container, bool palming ) 
 	if ( obj->item_type == ITEM_MONEY )
 	{
 		char buf [ MAX_STRING_LENGTH ];
-#ifdef NEW_MONEY
 		amount.gold   = obj->value[0];
 		amount.silver = obj->value[1];
 		amount.copper = obj->value[2];
@@ -164,22 +157,6 @@ bool get_obj( CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container, bool palming ) 
 				do_split( ch, buf );
 			}
 		}
-#else
-		int  amount;
-
-		amount = obj->value[0];
-		if ( amount > 1 )
-			sprintf( buf, "You counted %d coins.\n\r", amount );
-		else
-			sprintf( buf, "You counted 1 coin.\n\r" );
-		send_to_char(AT_YELLOW, buf, ch );
-		ch->gold += amount;
-		if ( IS_SET( ch->act, PLR_AUTOSPLIT ) && amount > 1 )
-		{
-			sprintf( buf, "%d", amount );
-			do_split( ch, buf );
-		}
-#endif
 
 		extract_obj( obj );
 		return 0;
@@ -607,7 +584,6 @@ void do_drop( CHAR_DATA *ch, char *argument )
 		/* 'drop NNNN coins' */
 		OBJ_DATA *obj_next;
 
-#ifdef NEW_MONEY
 		MONEY_DATA *howmuch;
 		int amount;
 
@@ -656,52 +632,6 @@ void do_drop( CHAR_DATA *ch, char *argument )
 		act(AT_YELLOW, "$n drops some coins.", ch, NULL, NULL, TO_ROOM );
 		return;
 	}                
-#else
-	int       amount;
-	amount   = atoi( arg );
-	argument = one_argument( argument, arg );
-	if ( amount <= 0 || str_prefix( arg, "coins" ) )
-	{
-		send_to_char(AT_DGREEN, "Sorry, you can't do that.\n\r", ch );
-		return;
-	}
-
-	if ( ch->gold < amount )
-	{
-		send_to_char(AT_DGREEN, "You haven't got that many coins.\n\r", ch );
-		return;
-	}
-
-	ch->gold -= amount;
-
-	for ( obj = ch->in_room->contents; obj; obj = obj_next )
-	{
-		obj_next = obj->next_content;
-
-		if ( obj->deleted )
-			continue;
-
-		switch ( obj->pIndexData->vnum )
-		{
-			case OBJ_VNUM_MONEY_ONE:
-				amount += 1;
-				extract_obj( obj );
-				break;
-
-			case OBJ_VNUM_MONEY_SOME:
-				amount += obj->value[0];
-				extract_obj( obj );
-				break;
-		}
-	}
-
-	obj_to_room( create_money( amount ), ch->in_room );
-	send_to_char(AT_YELLOW, "OK.\n\r", ch );
-	act(AT_YELLOW, "$n drops some gold.", ch, NULL, NULL, TO_ROOM );
-	return;
-}
-
-#endif
 
 if ( str_cmp( arg, "all" ) && str_prefix( "all.", arg ) )
 {
@@ -792,11 +722,9 @@ void do_give( CHAR_DATA *ch, char *argument )
 	char       buf [ MAX_STRING_LENGTH ];
 	char       arg1 [ MAX_INPUT_LENGTH ];
 	char       arg2 [ MAX_INPUT_LENGTH ];
-#ifdef NEW_MONEY
 	MONEY_DATA *howmuch;
 	char       arg3 [ MAX_INPUT_LENGTH ];
 	int        amount;
-#endif
 	argument = one_argument( argument, arg1 );
 	argument = one_argument( argument, arg2 );
 
@@ -809,7 +737,6 @@ void do_give( CHAR_DATA *ch, char *argument )
 	if ( is_number( arg1 ) )
 	{
 		/* 'give NNNN coins victim' */
-#ifdef NEW_MONEY
 		/* 'give NNNN type victim' */
 
 		amount = atoi( arg1 );
@@ -850,48 +777,6 @@ void do_give( CHAR_DATA *ch, char *argument )
 
 		return;
 	}
-
-#else
-	int amount;
-	amount   = atoi( arg1 );
-	if ( amount <= 0 || str_prefix( arg2, "coins" ) )
-	{
-		send_to_char(AT_DGREEN, "Sorry, you can't do that.\n\r", ch );
-		return;
-	}
-
-	argument = one_argument( argument, arg2 );
-	if ( arg2[0] == '\0' )
-	{
-		send_to_char(AT_DGREEN, "Give what to whom?\n\r", ch );
-		return;
-	}
-
-	if ( !( victim = get_char_room( ch, arg2 ) ) )
-	{
-		send_to_char(AT_DGREEN, "They aren't here.\n\r", ch );
-		return;
-	}
-
-	if ( ch->gold < amount )
-	{
-		send_to_char(AT_YELLOW, "You haven't got that much gold.\n\r", ch );
-		return;
-	}
-
-	ch->gold     -= amount;
-	victim->gold += amount;
-	sprintf( buf, "You give %s %d coins.", victim->name, amount );
-	act(AT_YELLOW, buf, ch, NULL, victim, TO_CHAR );
-	sprintf( buf, "%s gives you %d coins.", 
-			can_see( victim, ch ) ? ch->name : "someone", amount );
-	act(AT_YELLOW, buf, ch, NULL, victim, TO_VICT );
-	act(AT_YELLOW, "$n gives $N some gold.",  ch, NULL, victim, TO_NOTVICT );
-	mprog_bribe_trigger( victim, ch, amount );
-	return;
-}
-
-#endif
 
 if ( !( obj = get_obj_carry( ch, arg1 ) ) )
 {
@@ -2173,11 +2058,7 @@ void do_sacrifice( CHAR_DATA *ch, char *argument )
 		case 1:
 			award = number_range ( 1, 6 );
 			sprintf( buf1, "%d copper coin%s", award, (award != 1) ? "s" : "" );
-#ifdef NEW_MONEY
 			ch->money.copper += award;
-#else
-			ch->gold += award;
-#endif
 			break;
 		case 2:	
 			if ( ch->hit >= MAX_HIT(ch) )
@@ -2220,11 +2101,7 @@ void do_sacrifice( CHAR_DATA *ch, char *argument )
 			break;
 		default:
 			sprintf (buf1, "3 silver coins" );
-#ifdef NEW_MONEY
 			ch->money.silver += 3;
-#else
-			ch->gold += 6;
-#endif
 			break;
 	}	   
 
@@ -2871,7 +2748,6 @@ void do_steal( CHAR_DATA *ch, char *argument )
 	if (   !str_prefix( arg1, "coins" ) )
 		/*	|| !str_cmp   ( arg1, "gold"  ) )  */
 	{
-#ifdef NEW_MONEY
 		MONEY_DATA amount;
 
 		amount.gold = victim->money.gold * number_range( 1, 10 ) / 100;
@@ -2893,25 +2769,6 @@ void do_steal( CHAR_DATA *ch, char *argument )
 		send_to_char(AT_RED, buf, ch );
 		return;
 	}
-
-#else
-	int amount;
-
-	amount = victim->gold * number_range( 1, 10 ) / 100;
-	if ( amount <= 0 )
-	{
-		send_to_char(AT_BLOOD, "You couldn't get any gold.\n\r", ch );
-		return;
-	}
-
-	ch->gold     += amount;
-	victim->gold -= amount;
-	sprintf( buf, "Jackpot!  You got %d gold coins.\n\r", amount );
-	send_to_char(AT_RED, buf, ch );
-	return;
-}
-
-#endif
 
 if ( !( obj = get_obj_carry( victim, arg1 ) ) )
 {
@@ -3019,7 +2876,6 @@ CHAR_DATA *find_keeper( CHAR_DATA *ch )
 }
 
 
-#ifdef NEW_MONEY
 MONEY_DATA *get_cost( CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy )
 {
 	SHOP_DATA *pShop;
@@ -3077,48 +2933,6 @@ MONEY_DATA *get_cost( CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy )
 
 	return &new_cost;
 }
-#else
-int get_cost( CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy )
-{
-	SHOP_DATA *pShop;
-	int        cost;
-
-	if ( !obj || !( pShop = keeper->pIndexData->pShop ) )
-		return 0;
-
-	if ( fBuy )
-	{
-		cost = obj->cost * pShop->profit_buy  / 100;
-	}
-	else
-	{
-		OBJ_DATA *obj2;
-		int       itype;
-
-		cost = 0;
-		for ( itype = 0; itype < MAX_TRADE; itype++ )
-		{
-			if ( obj->item_type == pShop->buy_type[itype] )
-			{
-				cost = obj->cost * pShop->profit_sell / 100;
-				break;
-			}
-		}
-
-		for ( obj2 = keeper->carrying; obj2; obj2 = obj2->next_content )
-		{
-			if ( obj->pIndexData == obj2->pIndexData )
-				cost /= 2;
-		}
-	}
-
-	if ( obj->item_type == ITEM_STAFF || obj->item_type == ITEM_WAND )
-		cost = cost * obj->value[2] / obj->value[1];
-
-	return cost;
-}
-
-#endif
 
 void do_buy( CHAR_DATA *ch, char *argument )
 {
@@ -3126,9 +2940,7 @@ void do_buy( CHAR_DATA *ch, char *argument )
 	char arg1[MAX_STRING_LENGTH];
 	int noi = 1;
 	int in = 1;
-#ifdef NEW_MONEY
 	MONEY_DATA pet_cost;
-#endif
 	argument = one_argument( argument, arg );
 	argument = one_argument( argument, arg1 );
 
@@ -3184,7 +2996,6 @@ void do_buy( CHAR_DATA *ch, char *argument )
 			return;
 		}
 
-#ifdef NEW_MONEY
 		pet_cost.silver = pet_cost.copper = 0;	
 
 		pet_cost.gold = ( 10 * pet->level * pet->level );
@@ -3205,22 +3016,6 @@ void do_buy( CHAR_DATA *ch, char *argument )
 
 		spend_money( &ch->money, &pet_cost );
 
-#else
-
-		if ( ch->gold < 10 * pet->level * pet->level )
-		{
-			send_to_char(AT_CYAN, "You can't afford it.\n\r", ch );
-			return;
-		}
-
-		if ( ch->level < pet->level )
-		{
-			send_to_char(AT_CYAN, "You're not ready for this pet.\n\r", ch );
-			return;
-		}
-
-		ch->gold -= 10 * pet->level * pet->level;
-#endif
 		pet	  = create_mobile( pet->pIndexData );
 		if ( ch->level < LEVEL_HERO )
 			SET_BIT( ch->act,          PLR_BOUGHT_PET );
@@ -3250,7 +3045,6 @@ void do_buy( CHAR_DATA *ch, char *argument )
 	{
 		OBJ_DATA  *obj;
 		CHAR_DATA *keeper;
-#ifdef NEW_MONEY
 		MONEY_DATA *cost;
 		bool	   haggled = FALSE;
 		if ( !( keeper = find_keeper( ch ) ) )
@@ -3378,96 +3172,6 @@ void do_buy( CHAR_DATA *ch, char *argument )
 		add_money( &keeper->money, cost );
 		spend_money( &ch->money, cost );	
 
-#else
-		int        cost;
-		bool	   haggled = FALSE;
-		if ( !( keeper = find_keeper( ch ) ) )
-			return;
-
-		obj  = get_obj_carry( keeper, arg );
-		cost = get_cost( keeper, obj, TRUE ) * noi;
-		if ( cost <= 0 || !can_see_obj( ch, obj ) )
-		{
-			act(AT_CYAN, "$n tells you 'I don't sell that -- try 'list''.",
-					keeper, NULL, ch, TO_VICT );
-			ch->reply = keeper;
-			return;
-		}
-		if ( !IS_NPC( ch )
-				&& ch->pcdata->learned[gsn_haggle] > 0
-				&& number_percent( ) < 75 )
-		{
-			cost = cost * 0.85;
-			haggled = TRUE;
-		}
-
-		if ( !IS_SET( obj->extra_flags, ITEM_INVENTORY ) && noi > 1 )
-		{
-			send_to_char( AT_WHITE, "You can only buy one of those at a time.\n\r", ch );
-			return;
-		}
-
-		if ( noi < 1 )
-		{
-			send_to_char( AT_WHITE, "Buy how many?\n\r", ch );
-			return;
-		}
-
-		if ( ch->gold < cost )
-		{
-			if ( noi == 1 )
-				sprintf( log_buf, "$n tells you 'You can't afford to buy $p." );
-			else
-				sprintf( log_buf, "$n tells you 'You can't afford to buy %d $ps.",
-						noi );
-			act(AT_CYAN, log_buf, keeper, obj, ch, TO_VICT );
-			ch->reply = keeper;
-			return;
-		}
-
-		if ( obj->level > ch->level )
-		{
-			act(AT_CYAN, "$n tells you 'You can't use $p yet'.",
-					keeper, obj, ch, TO_VICT );
-			ch->reply = keeper;
-			return;
-		}
-
-		if ( ch->carry_number + ( get_obj_number( obj ) * noi ) > can_carry_n( ch ) )
-		{
-			send_to_char(AT_CYAN, "You can't carry that many items.\n\r", ch );
-			return;
-		}
-
-		if ( ch->carry_weight + ( get_obj_weight( obj ) * noi ) > can_carry_w( ch ) )
-		{
-			send_to_char(AT_CYAN, "You can't carry that much weight.\n\r", ch );
-			return;
-		}
-		if ( haggled )
-		{
-			sprintf( log_buf, "You haggle with $N and pay %d instead of %d.",
-					cost, (int)(cost / 0.85) );
-			act( AT_GREY, log_buf, ch, NULL, keeper, TO_CHAR );
-			act( AT_GREY, "$n haggles with $N.", ch , NULL, keeper, TO_ROOM );
-		}
-
-		if ( noi == 1 )
-		{
-			act(AT_WHITE, "You buy $p.", ch, obj, NULL, TO_CHAR );
-			act(AT_WHITE, "$n buys $p.", ch, obj, NULL, TO_ROOM );
-		}
-		else
-		{
-			sprintf( log_buf, "You buy %d $p%s.", noi, ( noi > 1 ) ? "s" : "" );
-			act(AT_WHITE, log_buf, ch, obj, NULL, TO_CHAR );
-			sprintf( log_buf, "$n buys %d $p%s.", noi, ( noi > 1 ) ? "s" : "" );
-			act(AT_WHITE, log_buf, ch, obj, NULL, TO_ROOM );
-		}
-
-		ch->gold     -= cost;
-		keeper->gold += cost;
-#endif
 		if ( IS_SET( obj->extra_flags, ITEM_INVENTORY ) )
 		{
 			for ( in = 1; in <= noi; in++ )
@@ -3547,13 +3251,8 @@ void do_list( CHAR_DATA *ch, char *argument )
 		OBJ_DATA  *obj;
 		CHAR_DATA *keeper;
 		char       arg [ MAX_INPUT_LENGTH ];
-#ifndef NEW_MONEY
-		int        cost = 0;
-#endif
 		bool       found;
-#ifdef NEW_MONEY
 		MONEY_DATA *amt;
-#endif
 		one_argument( argument, arg );
 
 		if ( !( keeper = find_keeper( ch ) ) )
@@ -3562,16 +3261,10 @@ void do_list( CHAR_DATA *ch, char *argument )
 		found = FALSE;
 		for ( obj = keeper->carrying; obj; obj = obj->next_content )
 		{
-#ifdef NEW_MONEY
 			amt = get_cost( keeper, obj, TRUE );
 
 			if ( obj->wear_loc != WEAR_NONE || !amt )
 				continue;
-#else
-			if ( obj->wear_loc != WEAR_NONE
-					|| ( cost = get_cost( keeper, obj, TRUE ) ) < 0 )
-				continue;
-#endif
 			if ( can_see_obj( ch, obj )
 					&& ( arg[0] == '\0' || is_name(ch, arg, obj->name ) ) )
 			{
@@ -3580,14 +3273,9 @@ void do_list( CHAR_DATA *ch, char *argument )
 					found = TRUE;
 					strcat( buf1, "[Lv Gold Silv Copp] Item\n\r" );
 				}
-#ifdef NEW_MONEY
 				sprintf( buf, "[%2d %4d %4d %4d] %s.\n\r",
 						obj->level, amt->gold, amt->silver, amt->copper,
 						capitalize( obj->short_descr ) );
-#else
-				sprintf( buf, "[%2d %5d] %s.\n\r",
-						obj->level, cost, capitalize( obj->short_descr ) );
-#endif
 				strcat( buf1, buf );
 			}
 		}
@@ -3614,11 +3302,7 @@ void do_sell( CHAR_DATA *ch, char *argument )
 	CHAR_DATA *keeper;
 	char       buf [ MAX_STRING_LENGTH ];
 	char       arg [ MAX_INPUT_LENGTH  ];
-#ifdef NEW_MONEY
 	MONEY_DATA *cost;
-#else
-	int        cost = 0;
-#endif
 
 	one_argument( argument, arg );
 
@@ -3652,7 +3336,6 @@ void do_sell( CHAR_DATA *ch, char *argument )
 		ch->reply = keeper;
 		return;
 	}
-#ifdef NEW_MONEY
 
 	cost = get_cost( keeper, obj, FALSE );
 
@@ -3717,33 +3400,6 @@ void do_sell( CHAR_DATA *ch, char *argument )
 	if ( keeper->money.copper < 0 )
 		keeper->money.copper = 0;
 
-#else	
-	if ( ( cost = get_cost( keeper, obj, FALSE ) ) <= 0
-			|| obj->level >= LEVEL_IMMORTAL )
-	{
-		act(AT_CYAN, "$n looks uninterested in $p.", keeper, obj, ch, TO_VICT );
-		return;
-	}
-
-	if ( IS_SET( obj->extra_flags, ITEM_POISONED ) )
-	{
-		act(AT_CYAN, "$n tells you 'I won't buy that!  It's poisoned!'",
-				keeper, NULL, ch, TO_VICT );
-		ch->reply = keeper;
-		return;
-	}
-	if ( !IS_NPC( ch )
-			&& ch->pcdata->learned[gsn_haggle] > 0 )
-		cost = obj->cost;
-	sprintf( buf, "You sell $p for %d gold piece%s.",
-			cost, cost == 1 ? "" : "s" );
-	act(AT_WHITE, buf, ch, obj, NULL, TO_CHAR );
-	act(AT_WHITE, "$n sells $p.", ch, obj, NULL, TO_ROOM );
-	ch->gold     += cost;
-	keeper->gold -= cost;
-	if ( keeper->gold < 0 )
-		keeper->gold = 0;
-#endif
 	oprog_sell_trigger( obj, ch, keeper );
 
 	if ( obj->item_type == ITEM_TRASH )
@@ -3767,11 +3423,7 @@ void do_value( CHAR_DATA *ch, char *argument )
 	CHAR_DATA *keeper;
 	char       buf [ MAX_STRING_LENGTH ];
 	char       arg [ MAX_INPUT_LENGTH  ];
-#ifdef NEW_MONEY
 	MONEY_DATA *cost;
-#else
-	int        cost;
-#endif
 
 	one_argument( argument, arg );
 
@@ -3805,7 +3457,6 @@ void do_value( CHAR_DATA *ch, char *argument )
 		ch->reply = keeper;
 		return;
 	}
-#ifdef NEW_MONEY
 	cost = get_cost( keeper, obj, FALSE );
 
 	if ( ( cost->gold + cost->silver + cost->copper ) <= 0 )
@@ -3813,13 +3464,7 @@ void do_value( CHAR_DATA *ch, char *argument )
 		act(AT_CYAN, "$n looks uninterested in $p.", keeper, obj, ch, TO_VICT );
 		return;
 	}
-#else
-	if ( ( cost = get_cost( keeper, obj, FALSE ) ) <= 0 )
-	{
-		act(AT_CYAN, "$n looks uninterested in $p.", keeper, obj, ch, TO_VICT );
-		return;
-	}
-#endif
+
 	if ( IS_SET( obj->extra_flags, ITEM_POISONED ) )
 	{
 		act(AT_CYAN, "$n tells you 'I won't buy that!  It's poisoned!'",
@@ -3827,11 +3472,7 @@ void do_value( CHAR_DATA *ch, char *argument )
 		ch->reply = keeper;
 		return;
 	}
-#ifdef NEW_MONEY
 	sprintf( buf, "$n tells you 'I'll buy $p for %s'", money_string( cost ) );
-#else
-	sprintf( buf, "$n tells you 'I'll give you %d gold coins for $p'.", cost );
-#endif
 	act(AT_WHITE, buf, keeper, obj, ch, TO_VICT );
 	ch->reply = keeper;
 
@@ -3906,13 +3547,9 @@ void do_poison_weapon( CHAR_DATA *ch, char *argument )
 	act(AT_GREEN, "$n pours the poison over $p, which glistens wickedly!",
 			ch, obj, NULL, TO_ROOM  );
 	SET_BIT( obj->extra_flags, ITEM_POISONED );
-#ifdef NEW_MONEY
 	obj->cost.gold   *= ch->level;
 	obj->cost.silver *= ch->level;
 	obj->cost.copper *= ch->level;
-#else
-	obj->cost *= ch->level;
-#endif
 
 	/* WHAT?  All of that, just for that one bit?  How lame. ;) */
 	update_skpell( ch, gsn_poison_weapon );
@@ -4191,14 +3828,10 @@ void do_deposit( CHAR_DATA *ch, char *argument )
 	char arg[MAX_STRING_LENGTH];
 	CLAN_DATA *pClan;
 	bool clan_bank = FALSE;
-#ifdef NEW_MONEY
 	char arg2 [ MAX_STRING_LENGTH ];
 	char arg3 [ MAX_STRING_LENGTH ];
 	char buf  [ MAX_STRING_LENGTH ];
 	MONEY_DATA amount;
-#else
-	int   money = 0;
-#endif
 
 	if (IS_NPC( ch ) )
 		return;
@@ -4211,7 +3844,6 @@ void do_deposit( CHAR_DATA *ch, char *argument )
 
 	pClan = get_clan_index( ch->clan );  
 	argument = one_argument( argument, arg );
-#ifdef NEW_MONEY
 	/* deposit gold, silver, copper <amount> or deposits all */
 
 	amount.gold = amount.silver = amount.copper = 0;
@@ -4304,45 +3936,18 @@ void do_deposit( CHAR_DATA *ch, char *argument )
 		return;
 
 	}
-#else
-	money = atoi( arg );
 
-	if ( ( !is_number( arg ) && ( str_cmp( arg, "all" ) ) ) || ( money > ch->gold ) 
-			|| ( money < 0 ) )
-	{
-		send_to_char( AT_WHITE, "Invalid ammount of money.\n\r", ch );
-		return;
-	}
-	else
-	{
-		if ( !str_cmp( arg, "all" ) )
-			money = ch->gold;
-		ch->pcdata->bankaccount += money;
-		ch->gold -= money;
-		sprintf( arg, "You deposit %d coin%s, bringing your total bank balance to %d.\n\r", 
-				money, money > 1 ? "s" : "", ch->pcdata->bankaccount );
-		send_to_char( AT_WHITE, arg, ch );
-		sprintf( arg, "&w$n deposits %d coin%s.", money,
-				money > 1 ? "s" : "" );
-		act( AT_WHITE, arg, ch, NULL, NULL, TO_ROOM );
-		return;
-	}
-#endif  
 	return;
 }            
 
 void do_withdraw( CHAR_DATA *ch, char *argument )
 {
-#ifdef NEW_MONEY
 	char arg2 [ MAX_STRING_LENGTH ];
 	char arg3 [ MAX_STRING_LENGTH ];
 	char buf  [ MAX_STRING_LENGTH ];
 	MONEY_DATA amount;
 	CLAN_DATA *pClan;
 	bool clan_bank = FALSE;
-#else
-	int money = 0;
-#endif
 	char arg[MAX_STRING_LENGTH];
 
 	if (IS_NPC( ch ) )
@@ -4356,7 +3961,6 @@ void do_withdraw( CHAR_DATA *ch, char *argument )
 
 	pClan = get_clan_index( ch->clan );  
 	argument = one_argument( argument, arg );
-#ifdef NEW_MONEY
 	/* Withdraw gold, silver, copper <amount> or withdraw all */
 
 	amount.gold = amount.silver = amount.copper = 0;
@@ -4461,32 +4065,6 @@ void do_withdraw( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-#else
-
-	money = atoi( arg );
-
-	if ( ( !is_number( arg ) && str_cmp( arg, "all" ) )
-			|| money > ch->pcdata->bankaccount
-			|| money < 0 )
-	{
-		send_to_char( AT_WHITE, "Invalid ammount of money.\n\r", ch );
-		return;
-	}
-	else
-	{
-		if ( !str_cmp( arg, "all" ) )
-			money = ch->pcdata->bankaccount;
-		ch->pcdata->bankaccount -= money;
-		ch-> gold += money;
-		sprintf( arg, "You withdraw %d coin%s from your account, leaving the balance at %d.\n\r",
-				money, money > 1 ? "s" : "", ch->pcdata->bankaccount );
-		send_to_char( AT_WHITE, arg, ch );
-		sprintf( arg, "&w$n withdraws %d coin%s.", money,
-				money > 1 ? "s" : "" );
-		act( AT_WHITE, arg, ch, NULL, NULL, TO_ROOM );
-		return;
-	}
-#endif
 	return;
 }
 
@@ -4495,11 +4073,7 @@ void do_repair ( CHAR_DATA *ch, char *argument )
 
 	char       arg[MAX_STRING_LENGTH];
 	OBJ_DATA  *pObj;
-#ifdef NEW_MONEY
 	MONEY_DATA amount;   
-#else
-	int        cost = 0;
-#endif
 
 	if (IS_NPC(ch))
 		return;
@@ -4509,7 +4083,6 @@ void do_repair ( CHAR_DATA *ch, char *argument )
 		return;
 	}
 	one_argument( argument, arg );
-#ifdef NEW_MONEY
 
 	if ( !str_cmp( arg, "all" ) )
 	{
@@ -4637,100 +4210,6 @@ void do_repair ( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-#else
-
-	if ( !str_cmp( arg, "all" ) )
-	{
-		char buf[MAX_STRING_LENGTH];
-		for ( pObj = ch->carrying; pObj; pObj = pObj->next_content )
-		{
-			if ( pObj->wear_loc == WEAR_NONE )
-				continue;
-			if ( pObj->cost >= pObj->pIndexData->cost )
-				continue;
-			cost = (pObj->pIndexData->cost - pObj->cost);
-			switch (pObj->item_type)
-			{
-				case ITEM_WEAPON:
-					cost = (cost * pObj->value[2]) / (!pObj->value[1] ? 1 :
-							pObj->value[1]);
-					break;
-				case ITEM_ARMOR:
-					cost = (cost * pObj->level) / (!pObj->value[0] ? 1 :
-							pObj->value[0]);
-					break;
-				default:
-					bug("Do_repair: Item not weapon or armor.",0);
-					break;
-			}
-
-			if ( cost <= 0 )
-				cost = 1;
-
-			if ( cost > ch->gold )
-			{
-				sprintf(buf, "$p will cost %d, you lack the funds.", cost );
-				act(AT_WHITE,buf,ch,pObj,NULL,TO_CHAR);
-				continue;
-			}
-			ch->gold -= cost;
-			pObj->cost = pObj->pIndexData->cost;
-			REMOVE_BIT(pObj->extra_flags, ITEM_PATCHED);
-			sprintf(buf, "You are charged %d for repairing $p.", cost );
-			act(AT_WHITE,buf,ch,pObj,NULL,TO_CHAR);
-		}
-		return;
-	}
-
-	if (!( pObj = get_obj_carry ( ch, arg ) ) )
-	{
-		send_to_char (AT_WHITE, "You do not see that here.\n\r", ch );
-		return;
-	}
-	if ( pObj->cost >= pObj->pIndexData->cost )
-	{
-		send_to_char(AT_WHITE, "That item is not damaged.\n\r", ch );
-		return;
-	}
-	cost = (pObj->pIndexData->cost - pObj->cost);
-	switch( pObj->item_type )
-	{
-		case ITEM_WEAPON:
-			cost = cost * pObj->value[1] / pObj->value[2];
-			break;
-		case ITEM_ARMOR:
-			cost = cost * pObj->level / pObj->value[0];
-			break;
-		default:
-			bug("Do_repair: Item not weapon or armor.", 0);
-			break;
-	}
-
-	if ( cost <= 0 )
-		cost = 1;
-
-	if ( ch->gold < cost )
-	{
-		char    buf[MAX_STRING_LENGTH];
-
-		sprintf(buf, "That item will cost %d, you lack the funds.\n\r", cost );
-		send_to_char( AT_WHITE, buf, ch );
-		return;
-	}
-	else
-	{
-		char     buf[MAX_STRING_LENGTH];
-
-		sprintf( buf, "You are charged %d for repairing %s.\n\r", cost, pObj->short_descr );
-		ch->gold -= cost;
-		send_to_char ( AT_WHITE, buf, ch );
-		pObj->cost = pObj->pIndexData->cost;
-		REMOVE_BIT(pObj->extra_flags, ITEM_PATCHED);
-		return;
-	}
-
-#endif
-
 	return;
 
 }
@@ -4750,8 +4229,6 @@ void do_account( CHAR_DATA *ch, char *argument )
 			send_to_char(AT_WHITE, "You are not in a bank!\n\r", ch );
 			return;
 		}
-
-#ifdef NEW_MONEY
 
 		/* Don't need to convert coins, just checking if char has any money */
 
@@ -4795,28 +4272,6 @@ void do_account( CHAR_DATA *ch, char *argument )
 		} 
 	}
 
-#else    
-
-	if ( ch->pcdata->bankaccount > 0 )
-	{
-		sprintf( arg, "You have %d coin%s in your account.\n\r",
-				ch->pcdata->bankaccount, 
-				ch->pcdata->bankaccount > 1 ? "s" : "" );
-		send_to_char(AT_WHITE, arg, ch );
-		return;
-	}
-	else
-	{
-		int len = 0;
-		len = strlen( ch->name );
-		send_to_char(AT_WHITE, "You have nothing in your account!\n\r", ch );
-		sprintf( arg, "&wFrom the shocked look on $n'%s face, you can tell that they have nothing in their account.",
-				ch->name[len] == 's' ? "" : "s" );
-		act(AT_WHITE, arg, ch, NULL, NULL, TO_ROOM );
-		return;
-	}
-}
-#endif
 return;
 }         
 
@@ -4927,9 +4382,7 @@ void do_join( CHAR_DATA *ch, char *argument )
 void do_store( CHAR_DATA *ch, char *argument )
 {
 	OBJ_DATA *obj;
-#ifdef NEW_MONEY
 	MONEY_DATA amt;
-#endif
 	int storage = 1000;
 
 
@@ -4966,25 +4419,18 @@ void do_store( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-#ifdef NEW_MONEY
 	if ( ( (ch->pcdata->bankaccount.gold*100) + (ch->pcdata->bankaccount.silver*10) +
 				(ch->pcdata->bankaccount.copper) ) < storage*100 )
-#else
-		if ( ch->pcdata->bankaccount < 1000 )
-#endif
 		{
 			send_to_char( AT_WHITE, 
 					"Storing costs 1000 gold coins, which you do not have in your bank account.\n\r",
 					ch );
 			return;
 		}
-#ifdef NEW_MONEY
+
 	amt.silver = amt.copper = 0;
 	amt.gold = 1000;
 	spend_money( &ch->pcdata->bankaccount, &amt );  
-#else  
-	ch->pcdata->bankaccount -= 1000;
-#endif
 	oprog_store_trigger( obj, ch );
 
 	obj_from_char( obj );
@@ -5036,10 +4482,8 @@ void do_patch( CHAR_DATA *ch, char *argument )
 	int ammount = 0;
 	char arg[MAX_STRING_LENGTH];
 
-#ifdef NEW_MONEY
 	MONEY_DATA amt;
 	amt.gold = amt.silver = amt.copper = 0;
-#endif
 
 	if ( IS_NPC( ch ) )
 		return;
@@ -5062,15 +4506,10 @@ void do_patch( CHAR_DATA *ch, char *argument )
 				continue;
 
 			/* If the item is undamged skip it */
-#ifdef NEW_MONEY
 			if ( ( (obj->cost.gold*100) + (obj->cost.silver*10) + (obj->cost.copper) ) >=
 					( (obj->pIndexData->cost.gold*100) + (obj->pIndexData->cost.silver*10) +
 					  (obj->pIndexData->cost.copper) ) )
 				continue;
-#else
-			if ( obj->cost >= obj->pIndexData->cost )
-				continue;
-#endif
 			/* If the item is not armor or a weapon skip it */
 			if ( obj->item_type != ITEM_WEAPON && obj->item_type != ITEM_ARMOR )
 			{
@@ -5087,17 +4526,12 @@ void do_patch( CHAR_DATA *ch, char *argument )
 
 			/* patch the item */
 			ammount = ch->pcdata->learned[gsn_patch] / 2;
-#ifdef NEW_MONEY
 			amt.gold   = (ammount * (obj->pIndexData->cost.gold   - obj->cost.gold)) / 100;
 			amt.silver = (ammount * (obj->pIndexData->cost.silver - obj->cost.silver)) / 100;
 			amt.copper = (ammount * (obj->pIndexData->cost.copper - obj->cost.copper)) / 100;
 			obj->cost.gold   += amt.gold;
 			obj->cost.silver += amt.silver;
 			obj->cost.copper += amt.copper;
-#else
-			ammount = (ammount * (obj->pIndexData->cost - obj->cost)) / 100;
-			obj->cost += ammount;
-#endif
 			SET_BIT(obj->extra_flags, ITEM_PATCHED);
 
 			act(AT_WHITE,"You do your best to repair $p.",ch,obj,NULL,TO_CHAR);
@@ -5123,31 +4557,21 @@ void do_patch( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-#ifdef NEW_MONEY
 	if ( ( (obj->cost.gold*100) + (obj->cost.silver*10) + (obj->cost.copper) ) >=
 			( (obj->pIndexData->cost.gold*100) + (obj->pIndexData->cost.silver*10) +
 			  (obj->pIndexData->cost.copper) ) )
 	{
-#else
-		if ( obj->cost >= obj->pIndexData->cost )
-		{
-#endif
 			send_to_char(C_DEFAULT, "It already looks like new.\n\r",ch);
 			return;
 		}
 
 		ammount = ch->pcdata->learned[gsn_patch] / 2;
-#ifdef NEW_MONEY
 		amt.gold   = (ammount * (obj->pIndexData->cost.gold   - obj->cost.gold)) / 100;
 		amt.silver = (ammount * (obj->pIndexData->cost.silver - obj->cost.silver)) / 100;
 		amt.copper = (ammount * (obj->pIndexData->cost.copper - obj->cost.copper)) / 100;
 		obj->cost.gold   += amt.gold;
 		obj->cost.silver += amt.silver;
 		obj->cost.copper += amt.copper;
-#else
-		ammount = (ammount * (obj->pIndexData->cost - obj->cost)) / 100;
-		obj->cost += ammount;
-#endif
 
 		SET_BIT(obj->extra_flags, ITEM_PATCHED);
 
@@ -5272,11 +4696,7 @@ void do_patch( CHAR_DATA *ch, char *argument )
 		pobj->value[0] = ch->level/2 - 1; 
 		pobj->timer = 60;
 		pobj->level = ch->level/2 - 1;
-#ifdef NEW_MONEY
 		pobj->cost.gold = ch->level * skill_table[sn].skill_level[prime_class(ch)];
-#else
-		pobj->cost = ch->level * skill_table[sn].skill_level[prime_class(ch)];
-#endif
 		sprintf( buf, "%s potion", skill_table[sn].name );
 		free_string( pobj->short_descr );
 		pobj->short_descr = str_dup (buf );
@@ -5408,11 +4828,7 @@ void do_patch( CHAR_DATA *ch, char *argument )
 		pobj->value[0] = ch->level/2 - 1; 
 		pobj->timer = 60;
 		pobj->level = ch->level/2 - 1;
-#ifdef NEW_MONEY
 		pobj->cost.gold = ch->level * skill_table[sn].skill_level[prime_class(ch)];
-#else
-		pobj->cost = ch->level * skill_table[sn].skill_level[prime_class(ch)];
-#endif
 		sprintf( buf, "scroll of %s", skill_table[sn].name );
 		free_string( pobj->short_descr );
 		pobj->short_descr = str_dup (buf );
@@ -5563,11 +4979,7 @@ void do_patch( CHAR_DATA *ch, char *argument )
 	{
 		OBJ_DATA  *obj;
 		CHAR_DATA *gch;
-#ifdef NEW_MONEY
 		MONEY_DATA amount;  
-#else
-		int price = 0;
-#endif
 
 		if ( ch->in_room->vnum != ROOM_VNUM_ARTIFACTOR )
 		{ 
@@ -5590,7 +5002,6 @@ void do_patch( CHAR_DATA *ch, char *argument )
 					ch);
 			return;
 		}
-#ifdef NEW_MONEY
 
 		amount.gold = amount.silver = amount.copper = 0;
 		if ( obj->level )
@@ -5607,24 +5018,6 @@ void do_patch( CHAR_DATA *ch, char *argument )
 			return;
 		}
 		spend_money( &ch->money, &amount );
-
-#else
-		if ( obj->level )
-			price = obj->level * 250000;
-		else
-			price = 250000;
-
-		if ( ch->gold < price )
-		{
-			send_to_char(AT_CYAN, 
-					"The artifactor says, 'You can't afford to make that indestructale.'\n\r", 
-					ch);
-			return;
-		}
-
-		ch->gold -= price;
-
-#endif
 
 		act(AT_WHITE,
 				"The artifactor takes $p from you and waves a glowing wand over it...",
@@ -5694,9 +5087,7 @@ void do_patch( CHAR_DATA *ch, char *argument )
 	void do_remake( CHAR_DATA *ch, char *argument )
 	{
 		OBJ_DATA *obj;
-#ifdef NEW_MONEY
 		MONEY_DATA amount;
-#endif
 
 		if ( ch->in_room->vnum != ROOM_VNUM_ARTIFACTOR )
 		{ 
@@ -5720,7 +5111,6 @@ void do_patch( CHAR_DATA *ch, char *argument )
 			return;
 		}
 
-#ifdef NEW_MONEY
 
 		amount.silver = amount.copper = 0;
 		amount.gold = 100000;
@@ -5734,20 +5124,6 @@ void do_patch( CHAR_DATA *ch, char *argument )
 			return;
 		}
 		spend_money( &ch->money, &amount );
-#else
-
-		if ( ch->gold < 7000000 )
-		{
-			send_to_char(AT_CYAN, 
-					"The artifactor says, 'You can't afford to remake that.'\n\r", 
-					ch);
-			return;
-		}
-
-		ch->gold -= 7000000;
-
-#endif
-
 		act(AT_WHITE,
 				"The artifactor waves a glowing rod over your $p.",
 				ch, obj, NULL, TO_CHAR );
@@ -5948,11 +5324,7 @@ void do_patch( CHAR_DATA *ch, char *argument )
 		}
 		flask->value[1] = skill_lookup( "cure poison" );
 		flask->value[0] = ch->level;
-#ifdef NEW_MONEY
 		flask->cost.gold = 1000;
-#else
-		flask->cost	  = 1000;
-#endif
 		free_string( flask->name );
 		flask->name	  = str_dup( "antidote" );
 		free_string( flask->short_descr );

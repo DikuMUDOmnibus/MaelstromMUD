@@ -888,11 +888,7 @@ void do_look( CHAR_DATA *ch, char *argument )
 	ROOM_INDEX_DATA *portroom;
 	int        door;
 	extern OBJ_DATA *auc_obj;
-#ifdef NEW_MONEY
 	extern MONEY_DATA auc_cost;
-#else
-	extern int auc_cost;
-#endif
 	if ( !IS_NPC( ch ) && !ch->desc ) 
 		return;
 
@@ -1156,12 +1152,8 @@ void do_look( CHAR_DATA *ch, char *argument )
 		sprintf( buf, "Type: %s   Level: %d\n\r",
 				item_type_name( auc_obj ), auc_obj->level );
 		send_to_char( AT_WHITE, buf, ch );
-#ifdef NEW_MONEY      
 		sprintf( buf, "Value: %s  Price: %s\n\r", money_string( &auc_obj->cost ),
 				money_string( &auc_cost ) );
-#else
-		sprintf( buf, "Value: %d   Price: %d\n\r", auc_obj->cost, auc_cost );
-#endif
 		send_to_char( AT_WHITE, buf, ch );
 		return;
 	}
@@ -1305,7 +1297,6 @@ void do_examine( CHAR_DATA *ch, char *argument )
 
 			case ITEM_WEAPON:
 			case ITEM_ARMOR:
-#ifdef NEW_MONEY
 
 				if ( (obj->pIndexData->cost.gold > 0)   ||
 						(obj->pIndexData->cost.silver > 0) ||
@@ -1323,10 +1314,6 @@ void do_examine( CHAR_DATA *ch, char *argument )
 				   (obj->pIndexData->cost.silver/SILVER_PER_GOLD) +
 				   (obj->pIndexData->cost.copper/COPPER_PER_GOLD) );
 				   */
-#else
-				if ( obj->pIndexData->cost > 0 )
-					brk = (obj->cost * 100) / obj->pIndexData->cost;
-#endif
 				else
 					brk = 101;
 				if ( brk ==  0 ) strcpy( msg, "is utterly destroyed!" );
@@ -1575,20 +1562,11 @@ void do_score( CHAR_DATA *ch, char *argument )
 			IS_NPC(ch) ? 20: ch->charisma );
 	send_to_char( AT_PINK, buf, ch );
 	send_to_char( AT_CYAN, "You have scored ", ch );
-#ifdef NEW_MONEY
 	sprintf( buf, "&W%d &cexperience points.\n\r", ch->exp );
 	send_to_char( AT_WHITE, buf, ch );
 	sprintf( buf, "&cYou have accumulated: &W%d &Ygold, &W%d &wsilver, &cand &W%d &Ocopper &ccoins.\n\r",
 			ch->money.gold, ch->money.silver, ch->money.copper );
 	send_to_char( AT_WHITE, buf, ch );
-#else
-	sprintf( buf, "%d ", ch->exp );
-	send_to_char( AT_WHITE, buf, ch );
-	send_to_char( AT_CYAN, "exp, and have accumulated ", ch );
-	sprintf( buf, "%d ", ch->gold );
-	send_to_char( AT_YELLOW, buf, ch );
-	send_to_char( AT_CYAN, "gold coins.\n\r", ch );
-#endif
 	sprintf( buf,
 			"Autoexit: %s.  Autoloot: %s.  Autosac: %s.  Autocoins: %s. Autosplit: %s.\n\r",
 			( !IS_NPC( ch ) && IS_SET( ch->act, PLR_AUTOEXIT ) ) ? "&Ryes&c"
@@ -4121,30 +4099,27 @@ void do_pagelen ( CHAR_DATA *ch, char *argument )
 
 	one_argument( argument, arg );
 
-	if ( arg[0] == '\0' )
-		lines = 20;
-	else
+	if ( arg[0] == '\0' ) {
+		lines = 60;
+	} else {
 		lines = atoi( arg );
+	}
 
-	if ( lines < 1 )
-	{
-		send_to_char(C_DEFAULT,
-				"Negative or Zero values for a page pause are not legal.\n\r",
-				ch );
+	if ( lines < 1 ) {
+		send_to_char(C_DEFAULT, "Negative or Zero values for a page pause are not legal.\n\r", ch );
 		return;
 	}
 
-	if ( lines > 60 )
-	{
-		send_to_char(C_DEFAULT,
-				"I don't know of a screen that is larger than 60 lines!\n\r",
-				ch );
-		lines = 60;
+	if ( lines > 150 ) {
+		send_to_char(C_DEFAULT, "I don't know of a screen that is larger than 150 lines!\n\r", ch );
+		lines = 150;
 	}
 
 	ch->pcdata->pagelen = lines;
+	
 	sprintf( buf, "Page pause set to %d lines.\n\r", lines );
 	send_to_char(C_DEFAULT, buf, ch );
+
 	return;
 }
 
@@ -5174,12 +5149,8 @@ void do_worth( CHAR_DATA *ch, char *argument )
 			get_curr_dex( ch ), get_curr_con( ch ), ch->charisma );
 	send_to_char( AT_RED, log_buf, ch );
 
-#ifdef NEW_MONEY
 	sprintf( log_buf, "You are carrying %d gold, %d silver, and %d copper coins.\n\r", ch->money.gold,
 			ch->money.silver, ch->money.copper );
-#else 
-	sprintf( log_buf, "You are currently carrying %d coins.\n\r", ch->gold );
-#endif
 
 	send_to_char( AT_RED, log_buf, ch );
 	return;
@@ -5368,7 +5339,6 @@ void do_afkmes( CHAR_DATA *ch, char *argument )
 	return;
 } 
 
-#ifdef NEW_MONEY
 
 /* Money functions, for new money format gold/silver/copper --Angi */
 
@@ -5630,7 +5600,6 @@ char *money_string( MONEY_DATA *money )
 
 	return buf; 
 }
-#endif     
 
 void do_immlist( CHAR_DATA *ch, char *argument )
 {

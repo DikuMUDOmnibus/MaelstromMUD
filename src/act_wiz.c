@@ -1627,15 +1627,10 @@ void do_ostat( CHAR_DATA *ch, char *argument )
 			1,           get_obj_number( obj ),
 			obj->weight, get_obj_weight( obj ) );
 	send_to_char(AT_RED, buf, ch);
-#ifdef NEW_MONEY
 	sprintf( buf, "Gold Cost: %d.  Silver Cost: %d.  Copper Cost: %d.\n\r",
 			obj->cost.gold, obj->cost.silver, obj->cost.copper );
 	send_to_char( AT_RED, buf, ch );
 	sprintf( buf, "Timer: %d.  Level: %d.\n\r", obj->timer, obj->level );
-#else
-	sprintf( buf, "Cost: %d.  Timer: %d.  Level: %d.\n\r",
-			obj->cost, obj->timer, obj->level );
-#endif
 	send_to_char(AT_RED, buf, ch);
 
 	sprintf( buf,
@@ -1875,7 +1870,6 @@ void do_mstat( CHAR_DATA *ch, char *argument )
 				victim->saving_throw );
 		send_to_char(AT_CYAN, buf, ch);
 	}
-#ifdef NEW_MONEY
 	sprintf( buf, "Gold&w: &R%d &cSilver&w: &R%d &cCopper&w: &R%d\n\r",
 			victim->money.gold, victim->money.silver, victim->money.copper );
 	send_to_char(AT_CYAN, buf, ch);
@@ -1886,7 +1880,6 @@ void do_mstat( CHAR_DATA *ch, char *argument )
 				victim->pcdata->bankaccount.copper );
 		send_to_char(AT_CYAN, buf, ch);
 	}
-#endif
 	sprintf( buf, "Hitroll&w: &R%d &cDamroll&w: &R%d &cPosition&w: &R%d &cWimpy&w:&R%d\n\r",
 			GET_HITROLL( victim ), GET_DAMROLL( victim ),
 			victim->position,      victim->wimpy );
@@ -3744,9 +3737,7 @@ void do_mset( CHAR_DATA *ch, char *argument )
 	int        value;
 	int        max;
 	bool       p = FALSE;
-#ifdef NEW_MONEY
 	char       arg4 [ MAX_STRING_LENGTH ];
-#endif
 	smash_tilde( argument );
 	argument = one_argument( argument, arg1 );
 	argument = one_argument( argument, arg2 );
@@ -3893,7 +3884,6 @@ void do_mset( CHAR_DATA *ch, char *argument )
 	{
 		if ( IS_NPC( victim ) )
 			return;
-#ifdef NEW_MONEY
 
 		if ( is_number( arg4 ) )
 		{
@@ -3918,9 +3908,6 @@ void do_mset( CHAR_DATA *ch, char *argument )
 					ch );
 			return;
 		}
-#else
-		victim->pcdata->bankaccount = value;
-#endif
 		send_to_char( AT_WHITE, "Ok.\n\r", ch );
 		return;
 	}
@@ -4482,7 +4469,6 @@ void do_mset( CHAR_DATA *ch, char *argument )
 		send_to_char(AT_WHITE, "Ok.\n\r", ch );
 		return;
 	}
-#ifdef NEW_MONEY
 	if ( !str_cmp( arg2, "gold" ) )
 	{
 		victim->money.gold = value;
@@ -4501,14 +4487,6 @@ void do_mset( CHAR_DATA *ch, char *argument )
 		send_to_char(AT_WHITE, "Ok.\n\r", ch );
 		return;
 	}
-#else
-	if ( !str_cmp( arg2, "gold" ) )
-	{
-		victim->gold = value;
-		send_to_char(AT_WHITE, "Ok.\n\r", ch );
-		return;
-	}
-#endif
 	if ( !str_cmp( arg2, "hp" ) )
 	{
 		if ( value < -10 || value > 30000 )
@@ -5206,7 +5184,6 @@ void do_oset( CHAR_DATA *ch, char *argument )
 
 	if ( !str_cmp( arg2, "cost" ) )
 	{
-#ifdef NEW_MONEY
 
 		if ( is_number( arg4 ) )
 		{
@@ -5231,9 +5208,6 @@ void do_oset( CHAR_DATA *ch, char *argument )
 					ch );
 			return;
 		}
-#else
-		obj->cost = value;
-#endif
 		send_to_char(AT_WHITE, "Ok.\n\r", ch );
 		return;
 	}

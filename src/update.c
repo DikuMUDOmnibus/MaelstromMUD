@@ -451,7 +451,6 @@ void mobile_update( void )
 			obj_best    = 0;
 			for ( obj = ch->in_room->contents; obj; obj = obj->next_content )
 			{
-#ifdef NEW_MONEY
 				if ( CAN_WEAR( obj, ITEM_TAKE ) && 
 						( ( (obj->cost.gold*C_PER_G) + (obj->cost.silver*S_PER_G) +
 							(obj->cost.copper) ) > max ) && can_see_obj(ch, obj) )
@@ -460,15 +459,6 @@ void mobile_update( void )
 					max		= ( (obj->cost.gold*C_PER_G) + (obj->cost.silver*S_PER_G) +
 							(obj->cost.copper) );
 				}
-#else
-				if ( CAN_WEAR( obj, ITEM_TAKE )
-						&& obj->cost > max
-						&& can_see_obj( ch, obj ) )
-				{
-					obj_best    = obj;
-					max         = obj->cost;
-				}
-#endif
 			}
 
 			if ( obj_best )
@@ -1943,11 +1933,7 @@ void arena_update()
 	send_to_char( C_DEFAULT, "Your challenge was not accepted.  Refunding "
 			"award money.\n\r", arena.cch );
 	/* Arena master takes 1/5.. *wink */
-#ifdef NEW_MONEY
 	arena.cch->money.gold += ((arena.award*4)/5);
-#else
-	arena.cch->gold += ((arena.award*4)/5);
-#endif
 	arena.cch = NULL;
 	arena.och = NULL;
 	arena.award = 0;
@@ -1960,11 +1946,7 @@ void auc_update()
 	extern OBJ_DATA *auc_obj;
 	extern CHAR_DATA *auc_held;
 	extern CHAR_DATA *auc_bid;
-#ifdef NEW_MONEY
 	extern MONEY_DATA auc_cost;
-#else
-	extern int auc_cost;
-#endif
 	char buf[MAX_STRING_LENGTH];
 
 	if ( !auc_obj )
@@ -1979,38 +1961,25 @@ void auc_update()
 	switch ( auc_count / (8 * PULSE_PER_SECOND) )
 	{
 		case 1:
-#ifdef NEW_MONEY
 			sprintf( buf, "%s for %s (going ONCE)", auc_obj->short_descr, money_string( &auc_cost ) );
-#else
-			sprintf( buf, "%s for %d gold coins (going ONCE).", auc_obj->short_descr, auc_cost );
-#endif
 			auc_channel( buf );
 			sprintf( buf, "%s auctioning %s.", auc_held->name, auc_obj->name );
 			log_string( buf, CHANNEL_GOD, -1 );
 			return;
 		case 2:
-#ifdef NEW_MONEY
 			sprintf( buf, "%s for %s (going TWICE)", auc_obj->short_descr, money_string( &auc_cost ) );
-#else
-			sprintf( buf, "%s for %d gold coins (going TWICE).", auc_obj->short_descr, auc_cost );
-#endif
 			auc_channel( buf );
 			sprintf( buf, "%s auctioning %s.", auc_held->name, auc_obj->name );
 			log_string( buf, CHANNEL_GOD, -1 );
 			return;
 		case 3:
-#ifdef NEW_MONEY
 			sprintf( buf, "%s for %s (going THRICE)", auc_obj->short_descr, money_string(&auc_cost) );
-#else
-			sprintf( buf, "%s for %d gold coins (going THRICE).", auc_obj->short_descr, auc_cost );
-#endif
 			auc_channel( buf );
 			sprintf( buf, "%s auctioning %s.", auc_held->name, auc_obj->name );
 			log_string( buf, CHANNEL_GOD, -1 );
 			return;
 	}
 
-#ifdef NEW_MONEY
 
 	if ( auc_bid && ( ( (auc_bid->money.gold*C_PER_G) + (auc_bid->money.silver*S_PER_G) +
 					(auc_bid->money.copper) ) > ( (auc_cost.gold*C_PER_G) + (auc_cost.silver*S_PER_G) +
@@ -2021,14 +1990,6 @@ void auc_update()
 		add_money( &auc_held->money, &auc_cost );
 		spend_money( &auc_bid->money, &auc_cost );
 
-#else
-		if ( auc_bid && auc_bid->gold >= auc_cost )
-		{
-			sprintf( buf, "%s for %d gold coins SOLD! to %s.", auc_obj->short_descr, auc_cost,
-					auc_bid->name );
-			auc_bid->gold -= auc_cost;
-			auc_held->gold += auc_cost;
-#endif
 			obj_to_char( auc_obj, auc_bid );
 			act( AT_DGREEN, "$p appears in your hands.", auc_bid, auc_obj, NULL, TO_CHAR );
 			act( AT_DGREEN, "$p appears in the hands of $n.", auc_bid, auc_obj, NULL,
@@ -2036,11 +1997,7 @@ void auc_update()
 		}
 		else if ( auc_bid )
 		{
-#ifdef NEW_MONEY
 			sprintf( buf, "Amount not carried for %s, ending auction.", auc_obj->short_descr );
-#else
-			sprintf( buf, "%d gold coins not carried for %s, ending auction.", auc_cost, auc_obj->short_descr );
-#endif     
 			obj_to_char( auc_obj, auc_held );
 			act( AT_DGREEN, "$p appears in your hands.", auc_held, auc_obj, NULL, TO_CHAR );
 			act( AT_DGREEN, "$p appears in the hands of $n.", auc_held, auc_obj, NULL, TO_ROOM );
@@ -2056,11 +2013,7 @@ void auc_update()
 		auc_channel( buf );
 
 		auc_count = -1;
-#ifdef NEW_MONEY
 		auc_cost.gold = auc_cost.silver = auc_cost.copper = 0;
-#else
-		auc_cost = 0;
-#endif
 		auc_obj = NULL;
 		auc_held = NULL;
 		auc_bid = NULL;

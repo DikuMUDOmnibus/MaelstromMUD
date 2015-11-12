@@ -857,20 +857,12 @@ bool mprog_do_ifchck( char *ifchck, CHAR_DATA *mob, CHAR_DATA *actor,
 	{
 		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
 		{
-#ifdef NEW_MONEY
 			case 'i': lhsvl = mob->money.gold;
-#else
-			case 'i': lhsvl = mob->gold;
-#endif
 					  rhsvl = atoi( val );
 					  return mprog_veval( lhsvl, opr, rhsvl );
 			case 'n': if ( actor )
 					  {
-#ifdef NEW_MONEY
 						  lhsvl = actor->money.gold;
-#else
-						  lhsvl = actor->gold;
-#endif
 						  rhsvl = atoi( val );
 						  return mprog_veval( lhsvl, opr, rhsvl );
 					  }
@@ -878,11 +870,7 @@ bool mprog_do_ifchck( char *ifchck, CHAR_DATA *mob, CHAR_DATA *actor,
 						  return -1;
 			case 't': if ( vict )
 					  {
-#ifdef NEW_MONEY
 						  lhsvl = vict->money.gold;
-#else
-						  lhsvl = vict->gold;
-#endif
 						  rhsvl = atoi( val );
 						  return mprog_veval( lhsvl, opr, rhsvl );
 					  }
@@ -890,11 +878,7 @@ bool mprog_do_ifchck( char *ifchck, CHAR_DATA *mob, CHAR_DATA *actor,
 						  return -1;
 			case 'r': if ( rndm )
 					  {
-#ifdef NEW_MONEY
 						  lhsvl = rndm->money.gold;
-#else
-						  lhsvl = rndm->gold;
-#endif
 						  rhsvl = atoi( val );
 						  return mprog_veval( lhsvl, opr, rhsvl );
 					  }
@@ -1040,11 +1024,7 @@ bool mprog_do_ifchck( char *ifchck, CHAR_DATA *mob, CHAR_DATA *actor,
 	{
 		switch ( arg[1] )  /* arg should be "$*" so just get the letter */
 		{
-#ifdef NEW_MONEY
 			case 'i': lhsvl = mob->money.gold;
-#else
-			case 'i': lhsvl = mob->gold;
-#endif
 					  rhsvl = atoi( val );
 					  return mprog_veval( lhsvl, opr, rhsvl );
 			case 'n': if ( actor )
@@ -1852,7 +1832,6 @@ void mprog_act_trigger( char *buf, CHAR_DATA *mob, CHAR_DATA *ch,
 
 }
 
-#ifdef NEW_MONEY
 
 void mprog_bribe_trigger( CHAR_DATA *mob, CHAR_DATA *ch, MONEY_DATA *amount )
 {
@@ -1880,40 +1859,6 @@ void mprog_bribe_trigger( CHAR_DATA *mob, CHAR_DATA *ch, MONEY_DATA *amount )
 	}
 	return;
 }
-
-#else
-
-void mprog_bribe_trigger( CHAR_DATA *mob, CHAR_DATA *ch, int amount )
-{
-
-	char        buf[ MAX_STRING_LENGTH ];
-	MPROG_DATA *mprg;
-	OBJ_DATA   *obj;
-
-	if ( IS_NPC( mob )
-			&& ( mob->pIndexData->progtypes & BRIBE_PROG ) )
-	{
-		obj = create_object( get_obj_index( OBJ_VNUM_MONEY_SOME ), 0 );
-		sprintf( buf, obj->short_descr, amount );
-		free_string( obj->short_descr );
-		obj->short_descr = str_dup( buf );
-		obj->value[0]    = amount;
-		obj_to_char( obj, mob );
-		mob->gold -= amount;
-
-		for ( mprg = mob->pIndexData->mobprogs; mprg != NULL; mprg = mprg->next )
-			if ( ( mprg->type & BRIBE_PROG )
-					&& ( amount >= atoi( mprg->arglist ) ) )
-			{
-				mprog_driver( mprg->comlist, mob, ch, obj, NULL );
-				break;
-			}
-	}
-
-	return;
-
-}
-#endif
 
 void mprog_death_trigger( CHAR_DATA *mob, CHAR_DATA *ch )
 {

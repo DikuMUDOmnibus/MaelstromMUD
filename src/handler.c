@@ -1791,7 +1791,6 @@ OBJ_DATA *get_obj_world( CHAR_DATA *ch, char *argument )
  * Create a 'money' obj.
  */
 
-#ifdef NEW_MONEY
 
 OBJ_DATA *create_money( MONEY_DATA *amount )
 {
@@ -1825,33 +1824,6 @@ OBJ_DATA *create_money( MONEY_DATA *amount )
 	return obj;  
 
 }
-
-#else
-
-OBJ_DATA *create_money( int amount )
-{
-	OBJ_DATA *obj;
-
-	if ( amount <= 0 )
-	{
-		bug( "Create_money: zero or negative money %d.", amount );
-		amount = 1;
-	}
-
-	if ( amount == 1 )
-	{
-		obj = create_object( get_obj_index( OBJ_VNUM_MONEY_ONE  ), 0 );
-	}
-	else
-	{
-		obj = create_object( get_obj_index( OBJ_VNUM_MONEY_SOME ), 0 );
-	}
-
-	obj->value[0]		= amount;
-	return obj;
-}
-
-#endif
 
 /*
  * Return # of objects which an object counts as.

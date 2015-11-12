@@ -218,13 +218,9 @@ void save_mobiles( FILE *fp, AREA_DATA *pArea )
 				fprintf( fp, "%dd%d+%d\n",	pMobIndex->damnodice, 
 						pMobIndex->damsizedice, 
 						pMobIndex->damplus );
-#ifdef NEW_MONEY
 				fprintf( fp, "%d ",		pMobIndex->money.gold );
 				fprintf( fp, "%d ", 		pMobIndex->money.silver );
 				fprintf( fp, "%d ",		pMobIndex->money.copper );
-#else
-				fprintf( fp, "%d ",		pMobIndex->gold );
-#endif
 				fprintf( fp, "0\n0 0 " );
 				fprintf( fp, "%d\n",  pMobIndex->sex );
 				fprintf( fp, "%ld %ld %ld\n",  pMobIndex->imm_flags,
@@ -436,12 +432,8 @@ void save_objects( FILE *fp, AREA_DATA *pArea )
 						break;
 				}
 				fprintf( fp, "%d ", pObjIndex->weight );
-#ifdef NEW_MONEY
 				fprintf( fp, "%d %d %d 0\n", pObjIndex->cost.gold,
 						pObjIndex->cost.silver, pObjIndex->cost.copper );
-#else
-				fprintf( fp, "%d 0\n", pObjIndex->cost );
-#endif
 				fprintf( fp, "%d ", pObjIndex->ac_type );
 				fprintf( fp, "%d\n", pObjIndex->ac_vnum );
 				fprintf( fp, "%s~\n", pObjIndex->ac_spell );
