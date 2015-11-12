@@ -64,7 +64,6 @@ void	trip		     args( ( CHAR_DATA *ch, CHAR_DATA *victim ) );
 void    item_damage             args( ( CHAR_DATA *ch, int dam ) );
 void    do_image		args( ( CHAR_DATA *ch, CHAR_DATA *victim ) );
 void	do_flip			args( ( CHAR_DATA *ch, char *argument ) );
-OBJ_DATA  *random_object args(( int level ));
 
 
 /*
@@ -1979,7 +1978,7 @@ void check_killer( CHAR_DATA *ch, CHAR_DATA *victim )
 	sprintf(buf,"$N is attempting to murder %s",victim->name);
 	wiznet(buf,ch,NULL,WIZ_FLAGS,0,0);
 	SET_BIT(ch->act, PLR_KILLER);
-	save_char_obj( ch, FALSE );
+	save_char_obj( ch );
 	return;
 }
 
@@ -2525,7 +2524,7 @@ void raw_kill( CHAR_DATA *ch, CHAR_DATA *victim )
 	victim->mana         = UMAX( 1, victim->mana );
 	victim->bp           = UMAX( 1, victim->bp   );
 	victim->move         = UMAX( 1, victim->move );
-	save_char_obj( victim, FALSE );
+	save_char_obj( victim );
 	return;
 }
 
@@ -2561,7 +2560,7 @@ void war_kill( CHAR_DATA *victim )
 	victim->mana         = UMAX( 1, victim->mana );
 	victim->bp           = UMAX( 1, victim->bp   );
 	victim->move         = UMAX( 1, victim->move );
-	save_char_obj( victim, FALSE );
+	save_char_obj( victim );
 	return;
 }
 

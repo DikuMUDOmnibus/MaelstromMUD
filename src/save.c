@@ -75,18 +75,20 @@ bool pstat( char *name ) {
  *   Would be cool to save NPC's too for quest purposes,
  *   some of the infrastructure is provided.
  */
-void save_char_obj( CHAR_DATA *ch, bool leftgame )
+void save_char_obj( CHAR_DATA *ch )
 {
 	FILE *fp;
 	CHAR_DATA *pet;
 	char  buf     [ MAX_STRING_LENGTH ];
 	char  strsave [ MAX_INPUT_LENGTH  ];
 
-	if ( IS_NPC( ch ) )
+	if ( IS_NPC( ch ) ) {
 		return;
+	}
 
-	if ( ch->desc && ch->desc->original )
+	if ( ch->desc && ch->desc->original ) {
 		ch = ch->desc->original;
+	}
 
 	if (!IS_NPC( ch ) );
 	update_playerlist( ch );
@@ -97,41 +99,37 @@ void save_char_obj( CHAR_DATA *ch, bool leftgame )
 	/* player files parsed directories by Yaz 4th Realm */
 	sprintf( strsave, "%s%c/%s", PLAYER_DIR, LOWER(ch->name[0]), capitalize( ch->name ) );
 
-	if ( !( fp = fopen( strsave, "w" ) ) )
-	{
+	if ( !( fp = fopen( strsave, "w" ) ) ) {
 		sprintf( buf, "Save_char_obj: fopen %s: ", ch->name );
 		bug( buf, 0 );
 		perror( strsave );
-	}
-	else
-	{
+	} else {
 		fwrite_char( ch, fp );
-		if ( ch->carrying )
+
+		if ( ch->carrying ) {
 			fwrite_obj( ch, ch->carrying, fp, 0, FALSE );
-		if ( !IS_NPC( ch ) && ch->pcdata->storage )
+		}
+
+		if ( !IS_NPC( ch ) && ch->pcdata->storage ) {
 			fwrite_obj( ch, ch->pcdata->storage, fp, 0, TRUE );
-		for ( pet = ch->in_room->people; pet; pet = pet->next_in_room )
-		{
-			if (IS_NPC( pet ) )
-				if ( IS_SET( pet->act, ACT_PET ) && ( pet->master == ch ) )
-				{
+		}
+
+		for ( pet = ch->in_room->people; pet; pet = pet->next_in_room ) {
+			if (IS_NPC( pet ) ) {
+				if ( IS_SET( pet->act, ACT_PET ) && ( pet->master == ch ) ) {
 					save_pet( ch, fp, pet );
 					break;
 				}
+			}
 		}
+
 		tail_chain();
 		fprintf( fp, "#END\n" );
 	}
+
 	fclose( fp );
 
-	if ( leftgame )
-	{
-		sprintf( buf, "gzip -1fq %s", strsave );
-		system( buf );
-	}
-
 	fpReserve = fopen( NULL_FILE, "r" );
-	/*    tail_chain();*/
 	return;
 }
 
@@ -468,7 +466,6 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name )
 	FILE      *fp;
 	static PC_DATA    pcdata_zero;
 	CHAR_DATA *ch;
-	char       buf     [ MAX_STRING_LENGTH ];
 	char       strsave [ MAX_INPUT_LENGTH ];
 	bool       found;
 
@@ -552,27 +549,18 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name )
 	found = FALSE;
 	fclose( fpReserve );
 
-	/* parsed player file directories by Yaz of 4th Realm */
-	/* decompress if .gz file exists - Thx Alander */
-	sprintf( strsave, "%s%c/%s.gz", PLAYER_DIR, LOWER(ch->name[0]), capitalize( name ) );
-	if ( ( fp = fopen( strsave, "r" ) ) )
-	{
-		fclose( fp );
-		sprintf( buf, "gzip -dfq %s", strsave );
-		system( buf );
-	}
-
-
 	sprintf( strsave, "%s%c/%s", PLAYER_DIR, LOWER(ch->name[0]), capitalize( name ) );
 
 	if ( ( fp = fopen( strsave, "r" ) ) )
 	{
 		int iNest;
 
-		for ( iNest = 0; iNest < MAX_NEST; iNest++ )
+		for ( iNest = 0; iNest < MAX_NEST; iNest++ ) {
 			rgObjNest[iNest] = NULL;
+		}
 
 		found = TRUE;
+
 		for ( ; ; )
 		{
 			char  letter;

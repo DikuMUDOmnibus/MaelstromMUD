@@ -1,9 +1,8 @@
 area/comlog*
-area/player.lst
+player/player.lst
 area/shutdown.txt
-area/notes.txt
+data/notes.dat
 area/bugs.txt
-area/clan.dat
 banned.lst
 *.o
 *.core

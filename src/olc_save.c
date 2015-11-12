@@ -243,7 +243,7 @@ void save_clans( )
 	FILE *fp; 
 	CLAN_DATA *pClan;
 
-	if ( ( fp = fopen( "clan.dat", "w" ) ) == NULL )
+	if ( ( fp = fopen( CLAN_FILE, "w" ) ) == NULL )
 	{
 		bug( "Save_clans: fopen", 0 );
 		perror( "area.lst" );
@@ -253,19 +253,12 @@ void save_clans( )
 		for( pClan = clan_first; pClan; pClan = pClan->next )
 		{
 			fprintf( fp, "#%d\n",      pClan->vnum );
-			fprintf( fp, "%d %d %d\n",
-					pClan->bankaccount.gold,
-					pClan->bankaccount.silver,
-					pClan->bankaccount.copper ); 
+			fprintf( fp, "%d %d %d\n", pClan->bankaccount.gold, pClan->bankaccount.silver, pClan->bankaccount.copper ); 
 			fprintf( fp, "%s~\n",      pClan->name );
 			fprintf( fp, "%s~\n",      pClan->diety );
 			fprintf( fp, "%s~\n",      pClan->description );
-			fprintf( fp, "%s~ %s~ %s~ %s~\n", 
-					pClan->champ, pClan->leader,
-					pClan->first, pClan->second );
-			fprintf( fp, "%d %d %d %d\n",
-					pClan->ischamp, pClan->isleader,
-					pClan->isfirst, pClan->issecond );
+			fprintf( fp, "%s~ %s~ %s~ %s~\n",  pClan->champ, pClan->leader, pClan->first, pClan->second );
+			fprintf( fp, "%d %d %d %d\n", pClan->ischamp, pClan->isleader, pClan->isfirst, pClan->issecond );
 			fprintf( fp, "%d\n",       pClan->recall );
 			fprintf( fp, "%d %d ",      pClan->pkills, pClan->mkills );
 			fprintf( fp, "%d\n",       pClan->members );
@@ -324,7 +317,7 @@ void save_social( )
 	if ( ( fp = fopen( SOCIAL_FILE, "w" ) ) == NULL )
 	{
 		bug( "Save_social: fopen", 0 );
-		perror( "social.dat" );
+		perror( SOCIAL_FILE );
 	}
 	else
 	{
@@ -611,7 +604,6 @@ void save_resets( FILE *fp, AREA_DATA *pArea )
 {
 	RESET_DATA *pReset;
 	MOB_INDEX_DATA *pLastMob = NULL;
-	OBJ_INDEX_DATA *pLastObj;
 	ROOM_INDEX_DATA *pRoomIndex;
 	char buf[MAX_STRING_LENGTH];
 	int vnum;
@@ -634,44 +626,33 @@ void save_resets( FILE *fp, AREA_DATA *pArea )
 
 						case 'M':
 							pLastMob = get_mob_index( pReset->arg1 );
-							fprintf( fp, "M 0 %d %d %d\n", 
-									pReset->arg1,
-									pReset->arg2,
-									pReset->arg3 );
+							fprintf( fp, "M 0 %d %d %d\n",  pReset->arg1, pReset->arg2, pReset->arg3 );
 							break;
 
 						case 'O':
-							pLastObj = get_obj_index( pReset->arg1 );
-							fprintf( fp, "O 0 %d 0 %d\n", 
-									pReset->arg1,
-									pReset->arg3 );
+							fprintf( fp, "O 0 %d 0 %d\n",  pReset->arg1, pReset->arg3 );
 							break;
 
 						case 'P':
-							pLastObj = get_obj_index( pReset->arg1 );
-							fprintf( fp, "P 0 %d 0 %d\n", 
-									pReset->arg1,
-									pReset->arg3  );
+							fprintf( fp, "P 0 %d 0 %d\n",  pReset->arg1, pReset->arg3  );
 							break;
 
 						case 'G':
 							fprintf( fp, "G 0 %d 0\n", pReset->arg1 );
+
 							if ( !pLastMob )
 							{
-								sprintf( buf,
-										"Save_resets: !NO_MOB! in [%s]", pArea->filename );
+								sprintf( buf, "Save_resets: !NO_MOB! in [%s]", pArea->filename );
 								bug( buf, 0 );
 							}
 							break;
 
 						case 'E':
-							fprintf( fp, "E 0 %d 0 %d\n",
-									pReset->arg1,
-									pReset->arg3 );
+							fprintf( fp, "E 0 %d 0 %d\n", pReset->arg1, pReset->arg3 );
+
 							if ( !pLastMob )
 							{
-								sprintf( buf,
-										"Save_resets: !NO_MOB! in [%s]", pArea->filename );
+								sprintf( buf, "Save_resets: !NO_MOB! in [%s]", pArea->filename );
 								bug( buf, 0 );
 							}
 							break;
@@ -680,9 +661,7 @@ void save_resets( FILE *fp, AREA_DATA *pArea )
 							break;
 
 						case 'R':
-							fprintf( fp, "R 0 %d %d\n", 
-									pReset->arg1,
-									pReset->arg2 );
+							fprintf( fp, "R 0 %d %d\n",  pReset->arg1, pReset->arg2 );
 							break;
 					}	/* End switch */
 				}	/* End for pReset */

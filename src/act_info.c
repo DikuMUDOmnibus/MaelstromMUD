@@ -628,7 +628,7 @@ void show_char_to_char_1( CHAR_DATA *victim, CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-	if ( ( argument[0] != '\0' ) && ( get_trust( ch ) > L_DIR ) )
+	if ( ( argument[0] != '\0' ) && ( get_trust( ch ) > L_DIR ) ) {
 		if ( !( obj = get_obj_here( victim, argument ) ) )
 		{    
 			sprintf( buf, "%s is not carrying that item.\n\r", victim->name );
@@ -683,6 +683,7 @@ void show_char_to_char_1( CHAR_DATA *victim, CHAR_DATA *ch, char *argument )
 			}
 			return;
 		}
+	}
 
 	if ( victim->description[0] != '\0' )
 	{
@@ -1459,11 +1460,11 @@ void do_exits( CHAR_DATA *ch, char *argument )
 void do_score( CHAR_DATA *ch, char *argument )
 {
 	char         buf  [ MAX_STRING_LENGTH ];
-	char         buf1 [ MAX_STRING_LENGTH ];
 
-	buf1[0] = '\0';
-	if (IS_NPC(ch))
+	if (IS_NPC(ch)) {
 		return;
+	}
+
 	if ( !str_cmp( argument, "msg" ) && get_trust( ch ) >= LEVEL_IMMORTAL )
 	{
 		send_to_char( AT_WHITE, "Your personalized messages are as follows:\n\r", ch );
@@ -1719,73 +1720,15 @@ void do_score( CHAR_DATA *ch, char *argument )
 	}
 	if ( get_trust( ch ) != ch->level )
 	{
-		sprintf( buf, "You have been granted the powers of a level &R%d&W.\n\r",
-				get_trust( ch ) );
+		sprintf( buf, "You have been granted the powers of a level &R%d&W.\n\r", get_trust( ch ) );
 		send_to_char( AT_WHITE, buf, ch );
 	}
 
-	if (!IS_NPC( ch ))
+	if (!IS_NPC( ch )) {
 		sprintf( buf, "&RAfk Message: &r%s &W%s.\n\r", ch->name, ch->pcdata->afkchar );
+	}
+
 	send_to_char( AT_WHITE, buf, ch );
-	/*    if ( ch->affected )
-		  {
-		  for ( paf = ch->affected; paf; paf = paf->next )
-		  {
-		  if ( paf->deleted )
-		  continue;
-
-		  if ( !printed )
-		  {
-		  send_to_char( AT_CYAN, "You are affected by:\n\r", ch );
-		  printed = TRUE;
-		  }
-
-		  sprintf( buf, "Spell: '%s'", skill_table[paf->type].name );
-		  send_to_char( AT_WHITE, buf, ch );
-		  if ( ch->level >= 20 )
-		  {
-		  sprintf( buf,
-		  " modifies %s by %d for %d hours",
-		  affect_loc_name( paf->location ),
-		  paf->modifier,
-		  paf->duration );
-		  send_to_char(AT_WHITE, buf, ch );
-		  }
-
-		  send_to_char( AT_WHITE, ".\n\r", ch );
-		  }
-		  }
-
-		  if ( ch->affected2 )
-		  {
-		  for ( paf = ch->affected2; paf; paf = paf->next )
-		  {
-		  if ( paf->deleted )
-		  continue;
-
-		  if ( !printed )
-		  {
-		  send_to_char( AT_CYAN, "You are affected by:\n\r", ch );
-		  printed = TRUE;
-		  }
-
-		  sprintf( buf, "Spell: '%s'", skill_table[paf->type].name );
-		  send_to_char( AT_WHITE, buf, ch );
-		  if ( ch->level >= 20 )
-		  {
-		  sprintf( buf,
-		  " modifies %s by %d for %d hours",
-		  affect_loc_name( paf->location ),
-		  paf->modifier,
-		  paf->duration );
-		  send_to_char(AT_WHITE, buf, ch );
-		  }
-
-		  send_to_char( AT_WHITE, ".\n\r", ch );
-		  }
-		  }*/
-
-
 	return;
 }
 
@@ -1793,18 +1736,18 @@ void do_affectedby( CHAR_DATA *ch, char *argument )
 {
 	AFFECT_DATA *paf;
 	char         buf  [ MAX_STRING_LENGTH ];
-	char         buf1 [ MAX_STRING_LENGTH ];
 	bool printed = FALSE;
 
-	buf1[0] = '\0';
-
-	if ( IS_NPC( ch ) )
+	if ( IS_NPC( ch ) ) {
 		return;
-	if ( !ch->affected && !ch->affected2 ) 
-	{ send_to_char( AT_CYAN, "You are not affected by anything\n\r", ch); } 
+	}
+
+	if ( !ch->affected && !ch->affected2 ) { 
+		send_to_char( AT_CYAN, "You are not affected by anything\n\r", ch);
+	}
+
 	if ( ch->affected )
 	{
-
 		for ( paf = ch->affected; paf; paf = paf->next )
 		{
 			if ( paf->deleted )
@@ -3404,7 +3347,7 @@ void do_password( CHAR_DATA *ch, char *argument )
 
 	free_string( ch->pcdata->pwd );
 	ch->pcdata->pwd = str_dup( pwdnew );
-	save_char_obj( ch, FALSE );
+	save_char_obj( ch );
 	send_to_char(C_DEFAULT, "Ok.\n\r", ch );
 	return;
 }
@@ -4553,7 +4496,6 @@ void do_setlev( CHAR_DATA *ch, char *argument )
 void do_smash ( CHAR_DATA *ch, char *argument )
 {
 	OBJ_DATA  *obj;
-	char       buf [MAX_STRING_LENGTH];
 	char       arg [MAX_INPUT_LENGTH];
 	CHAR_DATA *victim;
 	char      *name;
@@ -4568,36 +4510,50 @@ void do_smash ( CHAR_DATA *ch, char *argument )
 		send_to_char(AT_BLUE, "You failed.\n\r",ch);
 		return;
 	}
-	buf[0]='\0';
+
 	one_argument( argument, arg );
+
 	if ( !(obj = get_obj_carry( ch, arg ) ) )
 	{
 		send_to_char(AT_WHITE, "You do not have that doll.\n\r", ch );
 		return;
 	}
+
 	name = obj->name;
-	if ( !(victim = get_char_world(ch, name) ) 
-			|| victim->in_room->area != ch->in_room->area )
+
+	if ( !(victim = get_char_world(ch, name) ) || victim->in_room->area != ch->in_room->area )
 	{
 		send_to_char( AT_WHITE, "That person's life cannot be sensed.\n\r", ch );
 		return;
 	}
+
 	if ( ch->level - victim->level > 8 || victim->level - ch->level > 8 )
 	{
 		send_to_char(AT_BLUE, "The doll remains undamaged.\n\r",ch);
 		return;
 	}
+	
 	act(AT_RED, "You call down the Dark forces of Retribution on $N.", ch, NULL, victim, TO_CHAR);
 	act( AT_RED, "$n smashes $p.", ch, obj, NULL, TO_ROOM );
-	if ( !victim->wait )
+	
+	if ( !victim->wait ) {
 		act( AT_RED, "You feel a wave of nausia come over you.", victim, NULL, NULL, TO_CHAR );
+	}
+
 	extract_obj(obj);
+	
 	ch->ctimer = 5;
-	if ( victim->wait )
+	
+	if ( victim->wait ) {
 		return;
+	}
+
 	STUN_CHAR(victim, 10, STUN_TOTAL);
+	
 	victim->position = POS_STUNNED;
+	
 	update_pos( victim );
+	
 	return;
 }
 
@@ -5324,14 +5280,11 @@ void do_finger( CHAR_DATA *ch, char *argument )
 
 void do_email( CHAR_DATA *ch, char *argument )
 {
-	CHAR_DATA *rch;
-	char         buf  [ MAX_STRING_LENGTH ];
+	char buf  [ MAX_STRING_LENGTH ];
 
-	rch = get_char( ch );
-
-
-	if ( IS_NPC( ch ) )
+	if ( IS_NPC( ch ) ) {
 		return;
+	}
 
 	if (argument[0] == '\0')
 	{
@@ -5347,7 +5300,9 @@ void do_email( CHAR_DATA *ch, char *argument )
 
 		smash_tilde( argument );
 		free_string( ch->pcdata->email );
+
 		ch->pcdata->email = str_dup( argument );
+
 		sprintf(buf,"Email now:%s \n\r",argument);
 		send_to_char(AT_WHITE, buf, ch);
 	}
@@ -5356,14 +5311,11 @@ void do_email( CHAR_DATA *ch, char *argument )
 
 void do_plan( CHAR_DATA *ch, char *argument )
 {
-	CHAR_DATA *rch;
-	char         buf  [ MAX_STRING_LENGTH ];
+	char buf  [ MAX_STRING_LENGTH ];
 
-	rch = get_char( ch );
-
-
-	if ( IS_NPC( ch ) )
+	if ( IS_NPC( ch ) ) {
 		return;
+	}
 
 	if (argument[0] == '\0')
 	{
@@ -5374,12 +5326,15 @@ void do_plan( CHAR_DATA *ch, char *argument )
 
 	if ( !IS_NPC( ch ) )
 	{
-		if ( longstring( ch, argument ) )
+		if ( longstring( ch, argument ) ) {
 			return;
+		}
 
 		smash_tilde( argument );
 		free_string( ch->pcdata->plan );
+
 		ch->pcdata->plan = str_dup( argument );
+
 		sprintf(buf,"Plan now:%s \n\r",argument);
 		send_to_char(AT_WHITE, buf, ch);
 	}

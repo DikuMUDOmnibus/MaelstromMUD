@@ -923,7 +923,6 @@ void load_area( FILE *fp )
 	if ( !str_cmp( word, literal ) )    \
 {                                   \
 	field  = value;                 \
-	fMatch = TRUE;                  \
 	break;                          \
 }
 
@@ -932,7 +931,6 @@ void load_area( FILE *fp )
 {                                   \
 	free_string( field );           \
 	field = fread_string( fp );     \
-	fMatch = TRUE;                  \
 	break;                          \
 }
 
@@ -952,7 +950,6 @@ void new_load_area( FILE *fp )
 {
 	AREA_DATA *pArea;
 	char      *word;
-	bool      fMatch;
 
 	pArea               = alloc_perm( sizeof(*pArea) );
 	pArea->age          = 15;
@@ -971,16 +968,12 @@ void new_load_area( FILE *fp )
 	pArea->recall       = ROOM_VNUM_TEMPLE;
 	pArea->def_color 	= 6;  /* Angi - AT_CYAN */
 
-	for ( ; ; )
-	{
+	for ( ; ; ) {
 		word   = feof( fp ) ? "End" : fread_word( fp );
-		fMatch = FALSE;
 
-		switch ( UPPER(word[0]) )
-		{
+		switch ( UPPER(word[0]) ) {
 			case 'L':
-				if ( !str_cmp( word, "Levels" ) )
-				{
+				if ( !str_cmp( word, "Levels" ) ) {
 					pArea->llevel = fread_number( fp );
 					pArea->ulevel = fread_number( fp );
 				}
@@ -993,10 +986,10 @@ void new_load_area( FILE *fp )
 				SKEY( "Sounds", pArea->reset_sound );
 				break;
 			case 'V':
-				if ( !str_cmp( word, "VNUMs" ) )
-				{
+				if ( !str_cmp( word, "VNUMs" ) ) {
 					pArea->lvnum = fread_number( fp );
 					pArea->uvnum = fread_number( fp );
+
 					/* Set up the arena. */
 					if ( pArea->lvnum <= ROOM_ARENA_VNUM &&
 							pArea->uvnum >= ROOM_ARENA_VNUM )
@@ -1007,15 +1000,7 @@ void new_load_area( FILE *fp )
 				KEY( "Flags", pArea->area_flags, fread_number( fp ) );
 				break;
 			case 'E':
-				if ( !str_cmp( word, "End" ) )
-				{
-					fMatch = TRUE;
-					/*                 if ( area_first == NULL )
-									   area_first = pArea;
-									   if ( area_last  != NULL )
-									   area_last->next = pArea;
-									   area_last   = pArea;
-									   pArea->next = NULL;*/
+				if ( !str_cmp( word, "End" ) ) {
 					area_sort(pArea);
 					top_area++;
 					return;
@@ -1041,17 +1026,20 @@ void new_load_area( FILE *fp )
  */
 void assign_area_vnum( int vnum )
 {
-	if ( area_last->lvnum == 0 || area_last->uvnum == 0 )
+	if ( area_last->lvnum == 0 || area_last->uvnum == 0 ) {
 		area_last->lvnum = area_last->uvnum = vnum;
-	if ( vnum != URANGE( area_last->lvnum, vnum, area_last->uvnum ) )
-		if ( vnum < area_last->lvnum )
+	}
+
+	if ( vnum != URANGE( area_last->lvnum, vnum, area_last->uvnum ) ) {
+		if ( vnum < area_last->lvnum ) {
 			area_last->lvnum = vnum;
-		else
+		} else {
 			area_last->uvnum = vnum;
+		}
+	}
+
 	return;
 }
-
-
 
 /*
  * Snarf a help section.
@@ -3784,14 +3772,13 @@ void do_areas( CHAR_DATA *ch, char *argument )
 
 	buf1[0] = '\0';
 
-	sprintf( buf, "&W[  Levels ] Area Name\n\r", pArea->llevel, pArea->ulevel, pArea->name ); 
+	sprintf( buf, "&W[  Levels ] Area Name\n\r");
 	strcat( buf1, buf );
 
 	for ( pArea = area_first; pArea; pArea = pArea->next ) {
-		if (!IS_SET( pArea->area_flags, AREA_PROTOTYPE )
-			&& ( ilevel == 0 || ( pArea->llevel <= ilevel && pArea->ulevel >= ilevel ))){
-				sprintf( buf, "&W[%3d - %3d] &G%-56.56s\n\r", pArea->llevel, pArea->ulevel, pArea->name ); 
-				strcat( buf1, buf );
+		if (!IS_SET( pArea->area_flags, AREA_PROTOTYPE ) && ( ilevel == 0 || ( pArea->llevel <= ilevel && pArea->ulevel >= ilevel ))){
+			sprintf( buf, "&W[%3d - %3d] &G%-56.56s\n\r", pArea->llevel, pArea->ulevel, pArea->name ); 
+			strcat( buf1, buf );
 		} 
 	}
 

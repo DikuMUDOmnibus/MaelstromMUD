@@ -2590,7 +2590,7 @@ if ( auc_bid && auc_bid == ch && auc_obj )
 	auc_count = -1;
 }
 
-save_char_obj( ch, TRUE );
+save_char_obj( ch );
 save_finger( ch );
 for ( PeT = ch->in_room->people; PeT; PeT = PeT->next_in_room )
 {
@@ -2773,7 +2773,7 @@ void do_save( CHAR_DATA *ch, char *argument )
 	if ( IS_NPC( ch ) )
 		return;
 
-	save_char_obj( ch, FALSE );
+	save_char_obj( ch );
 	save_finger( ch );
 	send_to_char(AT_WHITE, "The gods smile upon you and save your soul.\n\r", ch );
 	return;

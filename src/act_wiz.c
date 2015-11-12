@@ -104,7 +104,7 @@ void do_changes( CHAR_DATA *ch, char *argument )
 
 }
 
-extern bool doubleexp() {
+bool doubleexp() {
 	return dxp;
 }
 
@@ -113,17 +113,16 @@ void do_doubleexp( CHAR_DATA *ch, char *argument ) {
 		dxp = FALSE;
 		send_to_all_char("&BYou sigh as you feel your learning rate return to normal.\n\r");
 		return;
-	}
-	else
+	} else {
 		if ( !str_cmp(argument, "on") ) {
 			dxp = TRUE;
 			send_to_all_char("&BYou feel yourself gaining experience much quicker.\n\r");
 			return;
-		}
-		else {
+		} else {
 			send_to_char( AT_WHITE, "Valid options are on or off\n\r", ch );
 			return;
 		}
+	}
 }
 
 void do_shieldify ( CHAR_DATA *ch, char *argument ) {
@@ -3024,7 +3023,7 @@ void do_freeze( CHAR_DATA *ch, char *argument )
 		send_to_char(AT_LBLUE, "You can't do ANYthing!\n\r", victim );
 	}
 
-	save_char_obj( victim, FALSE );
+	save_char_obj( victim );
 
 	return;
 }
@@ -5654,7 +5653,8 @@ void do_cloak( CHAR_DATA *ch, char *argument )
 		return;
 
 	argument = one_argument( argument, arg );
-	if ( arg && arg[0] != '\0' )
+
+	if ( arg[0] != '\0' )
 	{
 		if ( !is_number( arg ) )
 		{
@@ -5674,8 +5674,9 @@ void do_cloak( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-	if ( ch->cloaked < 2 )
+	if ( ch->cloaked < 2 ) {
 		ch->cloaked = ch->level;
+	}
 
 	if ( IS_SET(ch->act, PLR_CLOAKED) )
 	{
@@ -5703,7 +5704,8 @@ void do_invis( CHAR_DATA *ch, char *argument )
 		return; 
 
 	argument = one_argument( argument, arg ); 
-	if ( arg && arg[0] != '\0' )
+
+	if ( arg[0] != '\0' )
 	{
 		if ( !is_number( arg ) )
 		{
@@ -5722,8 +5724,9 @@ void do_invis( CHAR_DATA *ch, char *argument )
 		return; 
 	}
 
-	if ( ch->wizinvis < 2 )
+	if ( ch->wizinvis < 2 ) {
 		ch->wizinvis = ch->level; 
+	}
 
 	if ( IS_SET(ch->act, PLR_WIZINVIS) )
 	{
@@ -6906,11 +6909,8 @@ void do_newcorpse( CHAR_DATA *ch, char *argument )
 
 void do_wiznet( CHAR_DATA *ch, char *argument )
 {
-	CHAR_DATA *rch;
 	int flag;
 	char buf[MAX_STRING_LENGTH];
-
-	rch = get_char( ch );
 
 	if ( argument[0] == '\0' )
 	{
@@ -7271,35 +7271,30 @@ void do_clone(CHAR_DATA *ch, char *argument )
 }
 void do_whotype( CHAR_DATA *ch, char *argument )
 {
-	char		buf [ MAX_INPUT_LENGTH ];
-
-	if ( IS_NPC( ch ) || ch->level < LEVEL_IMMORTAL )
+	if ( IS_NPC( ch ) || ch->level < LEVEL_IMMORTAL ) {
 		return;
-	if ( argument[0] == '\0' )
-	{
+	}
+
+	if ( argument[0] == '\0' ) {
 		send_to_char( C_DEFAULT, "Change your whotype to what?\n\r", ch );
 		return;
 	}
-	if ( strlen_wo_col( argument ) > 11 )
-	{
-		send_to_char( C_DEFAULT, 
-				"Maximum whotype length is 11 excluding color codes.\n\r",
-				ch );
+
+	if ( strlen_wo_col( argument ) > 11 ) {
+		send_to_char( C_DEFAULT, "Maximum whotype length is 11 excluding color codes.\n\r", ch );
 		return;
 	}
+
 	smash_tilde( argument );
 
-	buf[0] = '\0';
-	if ( !str_cmp( "default", argument ) )
-	{
+	if ( !str_cmp( "default", argument ) ) {
 		free_string( ch->pcdata->whotype );
 		ch->pcdata->whotype = str_dup( "!!!!!!!!!!!!" );
-	}
-	else
-	{
+	} else {
 		free_string( ch->pcdata->whotype );
 		ch->pcdata->whotype = str_dup( argument );
 	}
+
 	send_to_char(C_DEFAULT, "Ok.\n\r", ch );
 	return;
 }
@@ -7564,7 +7559,7 @@ void do_rebuild (CHAR_DATA *ch, char *argument)
 	victim->move     = MAX_MOVE(victim);
 
 	/* save the character */
-	save_char_obj( victim, FALSE );
+	save_char_obj( victim );
 
 	/* completed message */
 	send_to_char( AT_WHITE, "Ok.\n\r", ch );

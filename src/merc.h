@@ -3147,22 +3147,22 @@ char *	crypt		args( ( const char *key, const char *salt ) );
  *   so players can go ahead and telnet to all the other descriptors.
  * Then we close it whenever we need to open a file (e.g. a save file).
  */
-#define PLAYER_DIR			"../player/"	/* Player files			*/
-#define NULL_FILE				"/dev/null"	/* To reserve one stream	*/
-#define AREA_LIST				"area.lst"	/* List of areas		*/
-#define BAN_LIST				"../banned.lst" /* List of banned sites & users */
-#define NOTE_FILE				"notes.txt"	/* For 'notes'			*/
-#define CLAN_FILE       "clan.dat"      /* For 'clans'                  */
-#define SOCIAL_FILE			"social.dat"	/* For 'socials'		*/
-#define RACE_FILE				"race.dat"		/* For 'races'		*/
-#define SHUTDOWN_FILE		"shutdown.txt"	/* For 'shutdown'		*/
-#define DOWN_TIME_FILE  "time.txt"      /* For automatic shutdown       */
-#define USERLIST_FILE   "users.txt"     /* Userlist -- using identd TRI */
-#define AUTH_LIST       "auth.txt"      /* List of who auth who         */
-#define PLAYERLIST_FILE "player.lst"    /* Player List 			*/
-#define NEWBIE_FILE     "newbie.dat"    /* Newbie help file		*/
-#define EXE_FILE				"../src/envy"	/* EXE file*/
-#define HOTREBOOT_FILE 	"hotreboot.dat"  /* temporary data file used 	*/
+#define PLAYER_DIR			"../player/"						/* Player files */
+#define NULL_FILE				"/dev/null"							/* To reserve one stream */
+#define AREA_LIST				"area.lst"							/* List of areas */
+#define SHUTDOWN_FILE		"shutdown.txt"					/* For 'shutdown' */
+#define DOWN_TIME_FILE  "time.txt"      				/* For automatic shutdown */
+#define USERLIST_FILE   "users.txt"     				/* Userlist */
+#define AUTH_LIST       "auth.txt"      				/* List of who auth who */
+#define BAN_LIST				"../banned.lst" 				/* List of banned sites & users */
+#define CLAN_FILE       "../data/clan.dat"    	/* For 'clans' */
+#define HOTREBOOT_FILE 	"../data/hotreboot.dat" /* temporary data file used */
+#define NEWBIE_FILE     "../data/newbie.dat"    /* Newbie help file */
+#define NOTE_FILE				"../data/notes.dat"			/* For 'notes' */
+#define RACE_FILE				"../data/race.dat"			/* For 'races' */
+#define SOCIAL_FILE			"../data/social.dat"		/* For 'socials' */
+#define PLAYERLIST_FILE "../player/player.lst"  /* Player List */
+#define EXE_FILE				"../src/envy"						/* EXE file */
 
 /*
  * Our function prototypes.
@@ -3200,10 +3200,12 @@ char       *money_string  args( ( MONEY_DATA *money ) );
 void	move_char	args( ( CHAR_DATA *ch, int door, bool Fall ) );
 
 /* act_obj.c */
+OBJ_DATA  *random_object args(( int level ));
 
 /* act_wiz.c */
 ROOM_INDEX_DATA *	find_location	args( ( CHAR_DATA *ch, char *arg ) );
 void wiznet             args( (char *string, CHAR_DATA *ch, OBJ_DATA *obj, long flag, long flag_skip, int min_level ) );
+bool doubleexp     			args ( ( ) );
 
 /* comm.c */
 void	close_socket	 args( ( DESCRIPTOR_DATA *dclose ) );
@@ -3385,7 +3387,6 @@ bool	is_number	args( ( char *arg ) );
 int	number_argument	args( ( char *argument, char *arg ) );
 char *	one_argument	args( ( char *argument, char *arg_first ) );
 bool    IS_SWITCHED     args( ( CHAR_DATA *ch ) );
-void	arena_master	args( ( CHAR_DATA *ch, char *argument, char *arg2 ) );
 
 /* magic.c */
 int slot_lookup     	args( ( int slot ) );
@@ -3398,7 +3399,7 @@ void do_acspell      	args( ( CHAR_DATA *ch, OBJ_DATA *pObj, char *argument ) );
 
 /* save.c */
 bool pstat           	args( ( char *name ) );
-void save_char_obj		args( ( CHAR_DATA *ch, bool leftgame ) );
+void save_char_obj		args( ( CHAR_DATA *ch ) );
 bool load_char_obj		args( ( DESCRIPTOR_DATA *d, char *name ) );
 void corpse_back     	args( ( CHAR_DATA *ch, OBJ_DATA *corpse ) );
 void read_finger			args( ( CHAR_DATA *ch, char *argument ) );

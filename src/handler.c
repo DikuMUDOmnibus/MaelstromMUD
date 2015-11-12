@@ -834,13 +834,13 @@ bool is_affected( CHAR_DATA *ch, int sn )
 void affect_join( CHAR_DATA *ch, AFFECT_DATA *paf )
 {
 	AFFECT_DATA *paf_old;
-	bool         found;
 
-	found = FALSE;
 	for ( paf_old = ch->affected; paf_old; paf_old = paf_old->next )
 	{
-		if ( paf_old->deleted )
+		if ( paf_old->deleted ) {
 			continue;
+		}
+
 		if ( paf_old->type == paf->type )
 		{
 			if ( paf_old->location == paf->location )
@@ -860,13 +860,13 @@ void affect_join( CHAR_DATA *ch, AFFECT_DATA *paf )
 void affect_join2( CHAR_DATA *ch, AFFECT_DATA *paf )
 {
 	AFFECT_DATA *paf_old;
-	bool         found;
 
-	found = FALSE;
 	for ( paf_old = ch->affected2; paf_old; paf_old = paf_old->next )
 	{
-		if ( paf_old->deleted )
+		if ( paf_old->deleted ) {
 			continue;
+		}
+
 		if ( paf_old->type == paf->type )
 		{
 			if ( paf_old->location == paf->location )
@@ -2666,21 +2666,28 @@ bool is_colcode( char code )
 		return TRUE;
 	return FALSE;
 }
+
 int xp_tolvl( CHAR_DATA *ch ) 
 {
-	int xp_tolvl, base_xp;
+	int xp_tolvl;
 	int level = ch->level + 1;
 	int classes = number_classes( ch );
 	int mod = ch->incarnations +1;
 
 	/*   if ( IS_NPC( ch ) || ch->level >= L_CHAMP3 )
 		 return ch->exp; */
-	if ( IS_NPC( ch ) || ch->level > (LEVEL_HERO -1) )
+	if ( IS_NPC( ch ) || ch->level > (LEVEL_HERO -1) ) {
 		return ch->exp+1;
-	if ( ch->level < LEVEL_HERO )
+	}
+
+	if ( ch->level < LEVEL_HERO ) {
 		xp_tolvl = classes == 1 ? level * 1000 : level * classes * 1500;  /* used to be 2000 - Angi */
-	if ( IS_SET( ch->act2, PLR_REMORT ))
+	}
+
+	if ( IS_SET( ch->act2, PLR_REMORT )) {
 		xp_tolvl = classes == 1 ? level * mod * 1000 : level * classes * mod * 1500;
+	}
+
 	return xp_tolvl;
 }
 

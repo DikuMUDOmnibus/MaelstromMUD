@@ -5,60 +5,77 @@
 
 bool can_use_skpell( CHAR_DATA *ch, int sn )
 {
-	int iClass = 0;
-	if ( IS_NPC( ch ) )
+	if ( IS_NPC( ch ) ) {
 		return TRUE;
-	if ( ch->pcdata->learned[sn] > 0 )
+	}
+
+	if ( ch->pcdata->learned[sn] > 0 ) {
 		return TRUE;
+	}
 
 	return FALSE;
 }
+
 bool can_practice_skpell( CHAR_DATA *ch, int sn )
 {
 	int iClass = 0;
-	if ( IS_NPC( ch ) )
+	if ( IS_NPC( ch ) ) {
 		return TRUE;
-	if ( ch->pcdata->learned[sn] > 0 )
-		return TRUE;
-	for ( iClass = 0; ch->class[iClass] != -1; iClass++ )
-	{
-		if ( ch->level >= skill_table[sn].skill_level[ch->class[iClass]] )
-			return TRUE;
 	}
+
+	if ( ch->pcdata->learned[sn] > 0 ) {
+		return TRUE;
+	}
+
+	for ( iClass = 0; ch->class[iClass] != -1; iClass++ ) {
+		if ( ch->level >= skill_table[sn].skill_level[ch->class[iClass]] ) {
+			return TRUE;
+		}
+	}
+
 	return FALSE;
 }
 
 bool has_spells( CHAR_DATA *ch )
 {
 	int iClass;
-	if ( IS_NPC( ch ) )
+
+	if ( IS_NPC( ch ) ) {
 		return FALSE;
-	for ( iClass = 0; ch->class[iClass] != -1; iClass++ )
-		if ( class_table[iClass].fMana )
+	}
+
+	for ( iClass = 0; ch->class[iClass] != -1; iClass++ ) {
+		if ( class_table[iClass].fMana ) {
 			return TRUE;
+		}
+	}
+	
 	return FALSE;
 }
+
 bool is_class( CHAR_DATA *ch, int class )
 {
 	int iClass; 
-	if ( IS_NPC( ch ) )
-		return FALSE;
 
-	/*  if( ch->class[0] == class )
-		return TRUE;  */
+	if ( IS_NPC( ch ) ) {
+		return FALSE;
+	}
 
 	for ( iClass = 0; ch->class[iClass] != -1; iClass++ )
 	{
-		if ( ch->class[iClass] == class )
+		if ( ch->class[iClass] == class ) {
 			return TRUE;
+		}
 	}
 
 	return FALSE;
 }
+
 int prime_class( CHAR_DATA *ch )
 {
 	return ch->class[0];
 }
+
 int number_classes( CHAR_DATA *ch )
 {
 	int iClass;

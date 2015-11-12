@@ -135,10 +135,13 @@ void advance_level( CHAR_DATA *ch )
 	   add_prac,	ch->practice );
 	   */
 	send_to_char(AT_WHITE, buf, ch );
+	
 	if (IS_SET(ch->act2, PLR_REMORT)) {
 		sprintf( buf, "You receive %d raise points.\n\r", raisepoints );
-		send_to_char( AT_BLUE, buf, ch ); }
-	save_char_obj( ch, FALSE );
+		send_to_char( AT_BLUE, buf, ch ); 
+	}
+
+	save_char_obj( ch );
 
 	return;
 }   
@@ -535,7 +538,6 @@ void weather_update( void )
 {
 	DESCRIPTOR_DATA *d;
 	char             buf [ MAX_STRING_LENGTH ];
-	char			 buf2 [MAX_STRING_LENGTH];
 	int              diff;
 	char *suf;
 	int   day;
@@ -799,9 +801,8 @@ void char_update( void )
 					if ( ch->fighting )
 						stop_fighting( ch, TRUE );
 					send_to_char(AT_GREEN, "You disappear into the void.\n\r", ch );
-					act(AT_GREEN, "$n disappears into the void.",
-							ch, NULL, NULL, TO_ROOM );
-					save_char_obj( ch, FALSE );
+					act(AT_GREEN, "$n disappears into the void.", ch, NULL, NULL, TO_ROOM );
+					save_char_obj( ch );
 					char_from_room( ch );
 					char_to_room( ch, get_room_index( ROOM_VNUM_LIMBO ) );
 				}
@@ -1237,7 +1238,7 @@ void char_update( void )
 			if ( ch == ch_save )
 			{
 				/*	        send_to_char( AT_ORANGE, "Autosaved.\n\r", ch ); */
-				save_char_obj( ch, FALSE );
+				save_char_obj( ch );
 			}
 			if ( ch == ch_quit )
 				do_quit( ch, "" );
@@ -1508,8 +1509,10 @@ void time_update( void )
 	char            *curr_time;
 	char             buf [ MAX_STRING_LENGTH ];
 
-	if ( down_time == "*" )
+	if ( strcmp(down_time, "*") == 0 ) {
 		return;
+	}
+
 	curr_time = ctime( &current_time );
 	if ( !str_infix( warning1, curr_time ) )
 	{

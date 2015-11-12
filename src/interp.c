@@ -787,15 +787,6 @@ void interpret( CHAR_DATA *ch, char *argument )
 		send_to_char( AT_YELLOW, "You are no longer AFK.\n\r", ch );
 	}
 
-	/* Here checks if ch is fighting in the arena **/
-
-	if ( ch == arena.fch || ch == arena.sch ) 
-		arena_master( ch, cmd_table[cmd].name, argument ); 
-
-	/** Do arena_master so we can look at arg and send info over channel then we come
-	  back and process command **/
-
-
 	(*cmd_table[cmd].do_fun) ( ch, argument );
 	tail_chain( );
 	return;
@@ -1333,30 +1324,4 @@ void do_pkill( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-}
-
-void arena_master( CHAR_DATA *ch, char *argument, char *arg2 )
-{
-	char	arg  [ MAX_STRING_LENGTH ];
-	/*    char	buf  [ MAX_STRING_LENGTH ];  */
-	bool	same_room = FALSE;
-
-	one_argument( arg2, arg );
-
-	/* Check if two people are still in arena fighting */
-	if ( !arena.fch || !arena.sch )
-		return;
-
-	/* Check if fch and sch are in same room */
-	if ( arena.fch->in_room == arena.sch->in_room )
-		same_room = TRUE;
-
-	/*    if ( !str_cmp( "cast", argument ) )
-		  {
-
-		  }
-
-		  arena_chann( buf2, 0, 0 ); */
-
-	return;
 }

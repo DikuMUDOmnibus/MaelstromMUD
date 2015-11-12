@@ -30,35 +30,28 @@
 /*
  * External functions.
  */
-void show_list_to_char( OBJ_DATA *list, CHAR_DATA *ch, bool fShort, 
-		bool fShowNothing );
-
+void show_list_to_char( OBJ_DATA *list, CHAR_DATA *ch, bool fShort, bool fShowNothing );
 
 /*
  * Local functions.
  */
-#define CD CHAR_DATA
-void	get		args( ( CHAR_DATA *ch, char *argument,
-			bool palming ) );
-bool	get_obj		args( ( CHAR_DATA *ch, OBJ_DATA *obj,
-			OBJ_DATA *container, bool palming ) );
+void	get		args( ( CHAR_DATA *ch, char *argument, bool palming ) );
+bool	get_obj		args( ( CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container, bool palming ) );
 bool	remove_obj	args( ( CHAR_DATA *ch, int iWear, bool fReplace ) );
-OBJ_DATA  *random_object args(( int level ));
 void obj_random_apply args(( OBJ_DATA *obj, int total, char *buf ));
-void	wear_obj	args( ( CHAR_DATA *ch, OBJ_DATA *obj,
-			bool fReplace ) );
-CD *	find_keeper	args( ( CHAR_DATA *ch ) );
+void	wear_obj	args( ( CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace ) );
+CHAR_DATA *	find_keeper	args( ( CHAR_DATA *ch ) );
+
 #ifdef NEW_MONEY
 MONEY_DATA *get_cost    args( ( CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy ) );
 #else
-int	get_cost	args( ( CHAR_DATA *keeper, OBJ_DATA *obj,
-			bool fBuy ) );
+int	get_cost	args( ( CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy ) );
 #endif
+
 void    do_acoload      args( ( CHAR_DATA *ch, OBJ_DATA *obj, int vnum ) );
 void    do_acmload      args( ( CHAR_DATA *ch, OBJ_DATA *obj, int vnum ) );
 void    do_actrans      args( ( CHAR_DATA *ch, OBJ_DATA *obj, int vnum ) );
 void    do_acmorph      args( ( CHAR_DATA *ch, OBJ_DATA *obj, int vnum ) );
-#undef	CD
 
 
 
@@ -2867,7 +2860,7 @@ void do_steal( CHAR_DATA *ch, char *argument )
 				{
 					SET_BIT( ch->act, PLR_THIEF );
 					send_to_char(AT_RED, "*** You are now a THIEF!! ***\n\r", ch );
-					save_char_obj( ch, FALSE );
+					save_char_obj( ch );
 				}
 			}
 		}
@@ -4068,16 +4061,13 @@ void do_actrans( CHAR_DATA *ch, OBJ_DATA *obj, int vnum )
 void do_invoke( CHAR_DATA *ch, char *argument )
 {
 	OBJ_DATA       *obj;
-	CHAR_DATA      *rch;
-	CHAR_DATA      *victim;
 	char            arg1 [ MAX_INPUT_LENGTH ];
 	char            arg2 [ MAX_INPUT_LENGTH ];
 	char            spellarg [ MAX_INPUT_LENGTH ];
 
-	if ( IS_NPC(ch) )
+	if ( IS_NPC(ch) ) {
 		return;
-
-	rch = get_char( ch );
+	}
 
 	argument = one_argument( argument, arg1 );
 	argument = one_argument( argument, arg2 );
@@ -4110,24 +4100,14 @@ void do_invoke( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-	if ( arg2[0] == '\0' )
-		victim = rch;
-	else
-		/*
-		   if ( !(victim = get_char_world( ch, arg2 ) ) )
-		   {
-		   send_to_char( AT_WHITE, "There is no such person in existance.\n\r", ch );
-		   return;
-		   }
-		   */
-		if ( gets_zapped( ch, obj ) )
-		{
-			act(AT_BLUE, "You are zapped by $p and drop it.", ch, obj, NULL, TO_CHAR );
-			act(AT_BLUE, "$n is zapped by $p and drops it.",  ch, obj, NULL, TO_ROOM );
-			obj_from_char( obj );
-			obj_to_room( obj, ch->in_room );
-			return;
-		}
+	if ( gets_zapped( ch, obj ) )
+	{
+		act(AT_BLUE, "You are zapped by $p and drop it.", ch, obj, NULL, TO_CHAR );
+		act(AT_BLUE, "$n is zapped by $p and drops it.",  ch, obj, NULL, TO_ROOM );
+		obj_from_char( obj );
+		obj_to_room( obj, ch->in_room );
+		return;
+	}
 
 	switch ( obj->ac_type )
 	{

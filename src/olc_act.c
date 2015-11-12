@@ -4235,7 +4235,6 @@ bool oedit_ed( CHAR_DATA *ch, char *argument )
 
 	if ( !str_cmp( command, "format" ) )
 	{
-		EXTRA_DESCR_DATA *ped = NULL;
 
 		if ( /*keyword*/ argument[0] == '\0' )
 		{
@@ -4245,9 +4244,9 @@ bool oedit_ed( CHAR_DATA *ch, char *argument )
 
 		for ( ed = pObj->extra_descr; ed; ed = ed->next )
 		{
-			if ( is_name( ch, /*keyword*/ argument, ed->keyword ) )
+			if ( is_name( ch, /*keyword*/ argument, ed->keyword ) ) {
 				break;
-			ped = ed;
+			}
 		}
 
 		if ( !ed )
@@ -4285,22 +4284,16 @@ bool cedit_show( CHAR_DATA *ch, char *argument )
 
 	EDIT_CLAN(ch, pClan);
 
-	sprintf( buf, "&PName:&Y        [%s&w]\n\r&PDeity:&Y       [%s]\n\r",
-			pClan->name, pClan->diety );
+	sprintf( buf, "&PName:&Y        [%s&w]\n\r&PDeity:&Y       [%s]\n\r", pClan->name, pClan->diety );
 	send_to_char(C_DEFAULT, buf, ch );
 
-	sprintf( buf, "&PClan:&Y        [%3d]\n\r",
-			pClan->vnum );
+	sprintf( buf, "&PClan:&Y        [%3d]\n\r", pClan->vnum );
 	send_to_char(C_DEFAULT, buf, ch );
-	sprintf( buf, "&PRecall:&Y      [%5d] %s\n\r", pClan->recall,
-			get_room_index( pClan->recall )
-			? get_room_index( pClan->recall )->name : "none" );
+	sprintf( buf, "&PRecall:&Y      [%5d] %s\n\r", pClan->recall, get_room_index( pClan->recall ) ? get_room_index( pClan->recall )->name : "none" );
 	send_to_char(C_DEFAULT, buf, ch );
-	sprintf( buf, "&PCivil Pkill:&Y [%3s]\n\r",
-			IS_SET(pClan->settings, CLAN_CIVIL_PKILL) ? "YES" : "NO" );
+	sprintf( buf, "&PCivil Pkill:&Y [%3s]\n\r", IS_SET(pClan->settings, CLAN_CIVIL_PKILL) ? "YES" : "NO" );
 	send_to_char(C_DEFAULT, buf, ch );
-	sprintf( buf, "&PPkill:&Y       [%3s]\n\r",
-			IS_SET(pClan->settings, CLAN_PKILL) ? "YES" : "NO" );
+	sprintf( buf, "&PPkill:&Y       [%3s]\n\r", IS_SET(pClan->settings, CLAN_PKILL) ? "YES" : "NO" );
 	send_to_char(C_DEFAULT, buf, ch );
 	sprintf( buf, "&PMembers:&Y     [%8d]\n\r", pClan->members );
 	send_to_char(C_DEFAULT, buf, ch );
@@ -4310,53 +4303,41 @@ bool cedit_show( CHAR_DATA *ch, char *argument )
 	send_to_char(C_DEFAULT, buf, ch );
 	sprintf( buf, "&PMkills:&Y      [%8d]\n\r", pClan->mkills  );
 	send_to_char(C_DEFAULT, buf, ch );
-	sprintf( buf, "&PLeader:&Y      [%10s]&Y%s&R%s\n\r",
-			pClan->leader,
-			IS_SET(pClan->settings, CLAN_LEADER_INDUCT) ? " Can induct." : "",
-			pClan->isleader ? "" : " Position open." );
+	sprintf( buf, "&PLeader:&Y      [%10s]&Y%s&R%s\n\r", pClan->leader, IS_SET(pClan->settings, CLAN_LEADER_INDUCT) ? " Can induct." : "", pClan->isleader ? "" : " Position open." );
 	send_to_char( C_DEFAULT, buf, ch );
-	sprintf( buf, "&PCouncil:&Y     [%10s]&Y%s&R%s\n\r",
-			pClan->first,
-			IS_SET(pClan->settings, CLAN_FIRST_INDUCT) ? " Can induct." : "",
-			pClan->isfirst ? "" : " Position open." );
+	sprintf( buf, "&PCouncil:&Y     [%10s]&Y%s&R%s\n\r", pClan->first, IS_SET(pClan->settings, CLAN_FIRST_INDUCT) ? " Can induct." : "", pClan->isfirst ? "" : " Position open." );
 	send_to_char( C_DEFAULT, buf, ch );
-	sprintf( buf, "&PCenturion:&Y   [%10s]&Y%s&R%s\n\r", 
-			pClan->second,
-			IS_SET(pClan->settings, CLAN_SECOND_INDUCT) ? " Can induct." : "",
-			pClan->issecond ? "" : " Position open." );
+	sprintf( buf, "&PCenturion:&Y   [%10s]&Y%s&R%s\n\r",  pClan->second, IS_SET(pClan->settings, CLAN_SECOND_INDUCT) ? " Can induct." : "", pClan->issecond ? "" : " Position open." );
 	send_to_char( C_DEFAULT, buf, ch );
-	sprintf( buf, "&PChampion:&Y    [%10s]&Y%s&R%s\n\r",
-			pClan->champ,
-			IS_SET(pClan->settings, CLAN_CHAMP_INDUCT) ? " Can induct." : "",
-			pClan->ischamp ? "" : " Position open." );
+	sprintf( buf, "&PChampion:&Y    [%10s]&Y%s&R%s\n\r", pClan->champ, IS_SET(pClan->settings, CLAN_CHAMP_INDUCT) ? " Can induct." : "", pClan->ischamp ? "" : " Position open." );
 	send_to_char( C_DEFAULT, buf, ch );  
-	/*    sprintf( buf,
-		  "Object:      [%5d], [%5d], [%5d]\n\r",
-		  pClan->obj_vnum_1, pClan->obj_vnum_2, pClan->obj_vnum_3  ); */
 	sprintf ( buf, "&PObjects:\n\r" );
 	send_to_char(C_DEFAULT, buf, ch);
+
 	if IS_SET(pClan->settings,CLAN_PKILL)
 	{
-		if ((pObjIndex = get_obj_index ( pClan->obj_vnum_1 )))
-			sprintf( buf, "&YLevel 50:&w  [%5d] %s\n\r",
-					pClan->obj_vnum_1, pObjIndex->short_descr );
-		else
-			sprintf( buf, "&YLevel 50:&w  [%5d] &RNo such object!!\n\r",
-					pClan->obj_vnum_1);
+		if ((pObjIndex = get_obj_index ( pClan->obj_vnum_1 ))) {
+			sprintf( buf, "&YLevel 50:&w  [%5d] %s\n\r", pClan->obj_vnum_1, pObjIndex->short_descr );
+		} else {
+			sprintf( buf, "&YLevel 50:&w  [%5d] &RNo such object!!\n\r", pClan->obj_vnum_1);
+		}
+
 		send_to_char(C_DEFAULT, buf, ch );
-		if ((pObjIndex = get_obj_index ( pClan->obj_vnum_2 )))
-			sprintf( buf, "&YLevel 75:&w  [%5d] %s\n\r",
-					pClan->obj_vnum_2, pObjIndex->short_descr );
-		else
-			sprintf( buf, "&YLevel 75:&w  [%5d] &RNo such object!!\n\r",
-					pClan->obj_vnum_1);
+
+		if ((pObjIndex = get_obj_index ( pClan->obj_vnum_2 ))) {
+			sprintf( buf, "&YLevel 75:&w  [%5d] %s\n\r", pClan->obj_vnum_2, pObjIndex->short_descr );
+		} else {
+			sprintf( buf, "&YLevel 75:&w  [%5d] &RNo such object!!\n\r", pClan->obj_vnum_1);
+		}
+
 		send_to_char(C_DEFAULT, buf, ch );
-		if ((pObjIndex = get_obj_index ( pClan->obj_vnum_3 )))
-			sprintf( buf, "&YLevel 100:&w [%5d] %s\n\r",
-					pClan->obj_vnum_3, pObjIndex->short_descr );
-		else
-			sprintf( buf, "&YLevel 100:&w [%5d] &RNo such object!!\n\r",
-					pClan->obj_vnum_1);
+
+		if ((pObjIndex = get_obj_index ( pClan->obj_vnum_3 ))) {
+			sprintf( buf, "&YLevel 100:&w [%5d] %s\n\r", pClan->obj_vnum_3, pObjIndex->short_descr );
+		} else {
+			sprintf( buf, "&YLevel 100:&w [%5d] &RNo such object!!\n\r", pClan->obj_vnum_1);
+		}
+
 		send_to_char(C_DEFAULT, buf, ch );
 	}
 	else

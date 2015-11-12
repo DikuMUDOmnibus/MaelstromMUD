@@ -53,6 +53,7 @@
 #include <netinet/in.h>
 #include <sys/socket.h>
 #include <arpa/telnet.h>
+#include <unistd.h>
 #include "merc.h"
 
 /*
@@ -75,10 +76,8 @@ int	main									args( ( int argc, char **argv ) );
 int	close									args( ( int fd ) );
 int	gettimeofday					args( ( struct timeval *tp, struct timezone *tzp ) );
 int	listen								args( ( int s, int backlog ) );
-int	read									args( ( int fd, char *buf, int nbyte ) );
 int	select								args( ( int width, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, struct timeval *timeout ) );
 int	socket								args( ( int domain, int type, int protocol ) );
-int	write									args( ( int fd, char *buf, int nbyte ) );
 int	init_socket						args( ( int port ) );
 
 bool check_ban						args( ( struct descriptor_data *dnew, bool loggedin ) );
@@ -234,19 +233,24 @@ int main( int argc, char **argv )
 	log_string( log_buf, CHANNEL_NONE, -1 );
 	{
 		FILE *fp;
-		char buf[MAX_INPUT_LENGTH];
+		char new_comlog[MAX_INPUT_LENGTH];
+		char old_comlog[MAX_INPUT_LENGTH];
 
-		sprintf(buf, "cp comlog%d.txt comlog%d.old", port, port );
-		system( buf );
-		sprintf(buf, "comlog%d.txt", port );
+		sprintf(new_comlog, "comlog%d.txt", port );
+		sprintf(old_comlog, "comlog%d.old", port );
+
+		unlink(old_comlog);
+		rename(new_comlog, old_comlog);
+
 		fclose(fpReserve);
-		if ( !(fp = fopen( buf, "w" ) ) )
-			perror( buf );
-		else
-		{
+
+		if ( !(fp = fopen( new_comlog, "w" ) ) ) {
+			perror( new_comlog );
+		} else {
 			fprintf( fp, "%s: %s\n", ctime( &current_time ), log_buf ); 
 			fclose(fp);
 		}
+
 		fpReserve = fopen(NULL_FILE, "r" );
 	}
 
@@ -392,8 +396,10 @@ void game_loop_unix( int control )
 		/*
 		 * New connection?
 		 */
-		if ( FD_ISSET( control, &in_set ) )
+		if ( FD_ISSET( control, &in_set ) ) {
 			new_descriptor( control );
+		}
+
 		/*	if ( port != 1045 )
 			imc_update(&in_set, &out_set, &exc_set); */
 		auth_update(&in_set, &out_set, &exc_set);
@@ -408,8 +414,11 @@ void game_loop_unix( int control )
 			{
 				FD_CLR( d->descriptor, &in_set  );
 				FD_CLR( d->descriptor, &out_set );
-				if ( d->character )
-					save_char_obj( d->character, FALSE);
+
+				if ( d->character ) {
+					save_char_obj( d->character);
+				}
+				
 				d->outtop	= 0;
 				close_socket( d );
 				continue;
@@ -431,7 +440,7 @@ void game_loop_unix( int control )
 				{
 					FD_CLR( d->descriptor, &out_set );
 					if ( d->character )
-						/*			save_char_obj( d->character, FALSE ); */
+						/*			save_char_obj( d->character ); */
 						d->outtop	= 0;
 					close_socket( d );
 					continue;
@@ -509,8 +518,10 @@ void game_loop_unix( int control )
 			{
 				if ( !process_output( d, TRUE ) )
 				{
-					if ( d->character )
-						save_char_obj( d->character, FALSE );
+					if ( d->character ) {
+						save_char_obj( d->character );
+					}
+
 					d->outtop	= 0;
 					close_socket( d );
 				}
@@ -595,7 +606,7 @@ void new_descriptor( int control )
 	struct hostent         *from;
 	char                    buf [ MAX_STRING_LENGTH ];
 	int                     desc;
-	int                     size;
+	socklen_t               size;
 
 	size = sizeof( sock );
 	if ( ( desc = accept( control, (struct sockaddr *) &sock, &size) ) < 0 )
@@ -608,8 +619,7 @@ void new_descriptor( int control )
 #define FNDELAY O_NDELAY
 #endif
 
-	if ( fcntl( desc, F_SETFL, FNDELAY ) == -1 )
-	{
+	if ( fcntl( desc, F_SETFL, FNDELAY ) == -1 ) {
 		perror( "New_descriptor: fcntl: FNDELAY" );
 		close(desc);
 		return;
@@ -618,12 +628,9 @@ void new_descriptor( int control )
 	/*
 	 * Cons a new descriptor.
 	 */
-	if ( !descriptor_free )
-	{
+	if ( !descriptor_free ) {
 		dnew		= alloc_perm( sizeof( *dnew ) );
-	}
-	else
-	{
+	} else {
 		dnew		= descriptor_free;
 		descriptor_free	= descriptor_free->next;
 	}
@@ -631,13 +638,11 @@ void new_descriptor( int control )
 	init_descriptor (dnew, desc);
 
 	size = sizeof(sock);
-	if ( getpeername( desc, (struct sockaddr *) &sock, &size ) < 0 )
-	{
+
+	if ( getpeername( desc, (struct sockaddr *) &sock, &size ) < 0 ) {
 		perror( "New_descriptor: getpeername" );
 		dnew->host = str_dup( "(unknown)" );
-	}
-	else
-	{
+	} else {
 		/*
 		 * Would be nice to use inet_ntoa here but it takes a struct arg,
 		 * which ain't very compatible between gcc and system libraries.
@@ -645,14 +650,13 @@ void new_descriptor( int control )
 		int addr;
 
 		addr = ntohl( sock.sin_addr.s_addr );
-		sprintf( buf, "%d.%d.%d.%d",
-				( addr >> 24 ) & 0xFF, ( addr >> 16 ) & 0xFF,
-				( addr >>  8 ) & 0xFF, ( addr       ) & 0xFF
-			   );
+
+		sprintf( buf, "%d.%d.%d.%d", ( addr >> 24 ) & 0xFF, ( addr >> 16 ) & 0xFF, ( addr >>  8 ) & 0xFF, ( addr ) & 0xFF);
 		sprintf( log_buf, "Sock.sinaddr:  %s", buf );
+
 		log_string( log_buf, CHANNEL_GOD, -1 );
-		from = gethostbyaddr( (char *) &sock.sin_addr,
-				sizeof(sock.sin_addr), AF_INET );
+		
+		from = gethostbyaddr( (char *) &sock.sin_addr, sizeof(sock.sin_addr), AF_INET );
 		dnew->host = str_dup( from ? from->h_name : buf );
 	}
 
@@ -1557,147 +1561,133 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			return;
 
 		case CON_GET_ANSI:
-			if ( argument[0] == '\0' )
-			{
-				close_socket( d );
-				return;
-			}
-			if (!str_prefix( argument, "yes" ) )
-			{
-				d->ansi = TRUE;
-				write_to_buffer( d, "ANSI set.\n\r", 0 );
-			}
-			else if (!str_prefix( argument, "no" ) )
-				write_to_buffer( d, "ANSI not set.\n\r", 0 );
-			else
-			{
-				write_to_buffer( d,
-						"If you don't know what ANSI is, choose NO.\n\r", 0 );
-				if ( d->repeat > 10 )
-				{
+			if ( argument[0] == '\0' || (str_prefix( argument, "yes" ) && str_prefix( argument, "no" )) ) {
+				write_to_buffer( d, "If you don't know what ANSI is, choose NO.\n\r", 0 );
 
+				if ( d->repeat > 10 ) {
 					close_socket( d ); /* this is cause of them jerks  */
 					return;
-				}
-				else
-				{
-					write_to_buffer( d, "Do you want ANSI?  (Yes/No): ", 0 );
+				} else {
+					write_to_buffer( d, "Do you wish to use ANSI?  (Yes/No): ", 0 );
 					return;
 				}
 			}
+
+			if (!str_prefix( argument, "yes" ) ) {
+				d->ansi = TRUE;
+				write_to_buffer( d, "ANSI set.\n\r", 0 );
+			} else if (!str_prefix( argument, "no" ) ) {
+				write_to_buffer( d, "ANSI not set.\n\r", 0 );
+			} else {
+				return;
+			}
+
 			d->connected = CON_GET_NAME;
+
 			{
 				extern char *help_greeting;
 
-				if ( help_greeting[0] == '.' )
+				if ( help_greeting[0] == '.' ) {
 					write_to_buffer( d, help_greeting + 1, 0 );
-				else
+				} else {
 					write_to_buffer( d, help_greeting, 0 );
+				}
 			}
+
 			break;
 
 		case CON_GET_NAME:
-			if ( argument[0] == '\0' )
-			{
-				close_socket( d );
+			if ( argument[0] == '\0' ) {
+				write_to_buffer( d, "What is your name?", 0 );
 				return;
 			}
 
 			argument[0] = UPPER( argument[0] );
+
 			log_string( argument, CHANNEL_NONE , -1 );
+
 			fOld = load_char_obj( d, argument );
+
 			ch   = d->character;
 
-			if ( !check_parse_name( argument ) )
-			{
-				if ( !fOld )
-				{
-					write_to_buffer( d,
-							"&cIllegal name, try another.\n\r&WName&w: ", 0 );
-					if ( d->character )
+			if ( !check_parse_name( argument ) ) {
+				if ( !fOld ) {
+					write_to_buffer( d, "&cIllegal name, try another.\n\r&WName&w: ", 0 );
+					
+					if ( d->character ) {
 						free_char( d->character );
+					}
+
 					d->character = NULL;
 					return;
-				}
-				else
-				{
+				} else {
 					sprintf( buf, "Illegal name:  %s", argument );
 					bug( buf, 0 );
 				}
 			}
 
-			if ( IS_SET( ch->act, PLR_DENY ) )
-			{
+			if ( IS_SET( ch->act, PLR_DENY ) ) {
 				sprintf( log_buf, "Denying access to %s@%s.", argument, d->host );
 				log_string( log_buf, CHANNEL_GOD , -1 );
 				write_to_buffer( d, "&cYou are denied access.\n\r", 0 );
 				close_socket( d );
+
 				return;
 			}
 
-			if ( check_reconnect( d, argument, FALSE ) )
-			{
+			if ( check_reconnect( d, argument, FALSE ) ) {
 				fOld = TRUE;
-			}
-			else
-			{
+			} else {
 				/* Must be immortal with wizbit in order to get in */
-				if ( wizlock && !IS_HERO( ch ) && !ch->wizbit )
-				{
+				if ( wizlock && !IS_HERO( ch ) && !ch->wizbit ) {
 					write_to_buffer( d, "&cThe game is open for Imms only right now. Come back later..\n\r", 0 );
 					close_socket( d );
 					return;
 				}
-				if ( ch->level <= numlock && !ch->wizbit && numlock != 0 )
-				{
-					write_to_buffer( d,
-							"&cThe game is locked to your level character.\n\r\n\r",
-							0 );
-					if ( ch->level == 0 )
-					{
-						write_to_buffer( d,
-								"New characters are now temporarily in email ",
-								0 );
+
+				if ( ch->level <= numlock && !ch->wizbit && numlock != 0 ) {
+					write_to_buffer( d, "&cThe game is locked to your level character.\n\r\n\r", 0 );
+					if ( ch->level == 0 ) {
+						write_to_buffer( d, "New characters are now temporarily in email ", 0 );
 						write_to_buffer( d, "registration mode.\n\r\n\r", 0 );
-						write_to_buffer( d,
-								"Please email storm@netway.com to ", 0 );
-						write_to_buffer( d, "register your character.\n\r\n\r",
-								0 );
-						write_to_buffer( d,
-								"One email address per character please.\n\r", 0 );
-						write_to_buffer( d, "Thank you, EnvyMud Staff.\n\r\n\r",
-								0 );
+						write_to_buffer( d, "Please email storm@netway.com to ", 0 );
+						write_to_buffer( d, "register your character.\n\r\n\r", 0 );
+						write_to_buffer( d, "One email address per character please.\n\r", 0 );
+						write_to_buffer( d, "Thank you, EnvyMud Staff.\n\r\n\r", 0 );
 					}
+
 					close_socket( d ) ;
 					return;
 				}
 			}
 
-			if ( fOld )
-			{
+			if ( fOld ) {
 				/* Old player */
 				write_to_buffer( d, "&WPassword&w: ", 0 );
 				write_to_buffer( d, echo_off_str, 0 );
+
 				d->connected = CON_GET_OLD_PASSWORD;
+
 				return;
-			}
-			else
-			{
+			} else {
 				/* New player */
-				if ( check_playing( d, ch->name ) )
+				if ( check_playing( d, ch->name ) ) {
 					return;
-				if ( check_newban( d, FALSE ) )
-				{
+				}
+
+				if ( check_newban( d, FALSE ) ) {
 					close_socket( d );
 					return;
 				}
-				sprintf( buf, 
-						"&cDid I get that right&w, &W%s &w(&WY&w/&WN&w)? ",
-						argument );
+
+				sprintf( buf, "&cDid I get that right&w, &W%s &w(&WY&w/&WN&w)? ", argument );
 				write_to_buffer( d, buf, 0 );
+
 				d->connected = CON_CONFIRM_NEW_NAME;
+
 				return;
 			}
+
 			break;
 
 		case CON_GET_OLD_PASSWORD:
@@ -3387,7 +3377,7 @@ void imc_setup( void )
 void imc_accept( void )
 {
 	struct sockaddr_in sock;
-	int size;
+	socklen_t size;
 	int desc;
 
 	size = sizeof(sock);
@@ -3612,13 +3602,14 @@ void do_hotreboot (CHAR_DATA *ch, char * argument)
 		else
 		{
 			fprintf (fp, "%d %s %s %s %d\n", d->descriptor, och->name, d->user, d->host, d->ansi);
-			if (och->level == 1)
-			{
+
+			if (och->level == 1) {
 				write_to_descriptor ( "Since you are level one, and level one characters do not save, you gain a free level!\n\r", 0, d);
 				advance_level (och);
 				och->level++; /* Advance_level doesn't do that */
 			}
-			save_char_obj (och, FALSE);
+
+			save_char_obj ( och );
 			write_to_descriptor (buf, 0, d);
 		}
 	}
@@ -3670,18 +3661,20 @@ void hotreboot_recover ( )
 
 	for (;;)
 	{
-		fscanf (fp, "%d %s %s %s %d\n", &desc, name, user, host, &ansi);
+		if ( !fscanf (fp, "%d %s %s %s %d\n", &desc, name, user, host, &ansi) ) {
+			/* do nothing */
+		}
 	
-		if (desc == -1)
+		if (desc == -1) {
 			break;
+		}
 
 		d = alloc_perm (sizeof(DESCRIPTOR_DATA));
 		init_descriptor (d,desc); /* set up various stuff */
 
 		/* Write something, and check if it goes error-free */		
-		if (!write_to_descriptor ( "\n\rRecovering from hotreboot.\n\r",0, d))
-		{
-			close (d); /* nope */
+		if (!write_to_descriptor ( "\n\rRecovering from hotreboot.\n\r",0, d)) {
+			close(d->descriptor); /* nope */
 			continue;
 		}
 

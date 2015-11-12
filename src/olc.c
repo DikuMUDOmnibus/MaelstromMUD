@@ -94,7 +94,7 @@ bool run_olc_editor( DESCRIPTOR_DATA *d )
 
 char *olc_ed_name( CHAR_DATA *ch )
 {
-	static char buf[10];
+	static char buf[11];
 
 	buf[0] = '\0';
 	switch (ch->desc->editor)
@@ -210,7 +210,8 @@ char *olc_ed_vnum( CHAR_DATA *ch )
 				EXIT_DATA *pExit;
 
 				pRoom = ch->in_room;
-				for ( dir = 0; dir < 6; dir++ )
+
+				for ( dir = 0; dir < 6; dir++ ) {
 					if ( (pExit = pRoom->exit[dir]) )
 					{
 						TRAP_DATA *pTrap;
@@ -221,10 +222,14 @@ char *olc_ed_vnum( CHAR_DATA *ch )
 						if ( pTrap )
 							break;
 					}
-				if ( dir < 6 )
-					sprintf( buf, capitalize( dir_name[dir] ) );
-				else
+				}
+
+				if ( dir < 6 ) {
+					sprintf( buf, "%s", capitalize( dir_name[dir] ) );
+				} else {
 					sprintf( buf, "Unknown" );
+				}
+
 				break;
 			}
 		default:
@@ -968,12 +973,9 @@ void redit( CHAR_DATA *ch, char *argument )
 
 void cedit( CHAR_DATA *ch, char *argument )
 {
-	CLAN_DATA *pClan;
 	char arg[MAX_STRING_LENGTH];
 	char command[MAX_INPUT_LENGTH];
 	int  cmd;
-
-	EDIT_CLAN(ch, pClan);
 
 	smash_tilde( argument );
 	strcpy( arg, argument );
@@ -2725,7 +2727,7 @@ void rename_object(CHAR_DATA *ch, char *argument)
 	if(!str_cmp(command, "done"))
 	{
 		edit_done( ch );
-		save_char_obj( ch, FALSE );
+		save_char_obj( ch );
 		return;
 	}
 
@@ -2798,7 +2800,7 @@ void forge_object(CHAR_DATA *ch, char *argument)
 	if(!str_cmp(command, "done"))
 	{
 		edit_done( ch );
-		save_char_obj( ch, FALSE );
+		save_char_obj( ch );
 		return;
 	}
 
@@ -2943,12 +2945,10 @@ void do_spedit(CHAR_DATA *ch, char *argument)
 
 void nedit( CHAR_DATA *ch, char *argument )
 {
-	NEWBIE_DATA *pNewbie;
 	char command [ MAX_INPUT_LENGTH ];
 	char arg [ MAX_INPUT_LENGTH ];
 	int cmd;
 
-	EDIT_NEWBIE( ch, pNewbie );
 	smash_tilde( argument );
 	strcpy( arg, argument );
 	argument = one_argument( argument, command );

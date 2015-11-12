@@ -43,14 +43,8 @@ void do_remort( CHAR_DATA *ch, char *argument )
 {
 	DESCRIPTOR_DATA *d;
 	char strsave[MAX_INPUT_LENGTH], player_name[MAX_INPUT_LENGTH];
-	OBJ_DATA   *obj, *obj_next;
-	RACE_DATA  *pRace;
 	char       buf[MAX_STRING_LENGTH];
-	int        iWear;
-	char player_pwd[MAX_STRING_LENGTH];
 	int player_incarnations;
-
-
 
 	if ( IS_NPC(ch) || ( d = ch->desc ) == NULL )
 		return;
@@ -107,7 +101,7 @@ void do_remort( CHAR_DATA *ch, char *argument )
 			 * set the PLR_REMORT bit and drop the player in at
 			 * CON_BEGIN_REMORT.
 			 */
-			unlink( strsave );
+			remove( strsave );
 			load_char_obj( d, player_name );
 			/* rebirth here */
 

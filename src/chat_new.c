@@ -326,7 +326,7 @@ void do_conference( CHAR_DATA *ch, char *argument )
 	if ( IS_SET( ch->act, PLR_QUEST ) )
 		REMOVE_BIT( ch->act, PLR_QUEST );
 	ch->hunting = NULL;
-	save_char_obj( ch, FALSE );
+	save_char_obj( ch );
 	start_chat_mode( ch->desc );
 }
 

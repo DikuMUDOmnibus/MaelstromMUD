@@ -195,7 +195,6 @@ int skill_lookup( const char *name )
  */
 void say_spell( CHAR_DATA *ch, int sn )
 {
-	CHAR_DATA  *rch;
 	char       *pName;
 	char        spell       [ MAX_STRING_LENGTH ];
 	char        room      [ MAX_STRING_LENGTH ];
@@ -507,21 +506,22 @@ void do_cast( CHAR_DATA *ch, char *argument )
 
 	/*    spec = skill_lookup( "astral walk" ); */
 
+	sn = skill_lookup( arg1 );
+
 	IS_DIVINE = FALSE;
 
 	target_name = one_argument( argument, arg1 );
 
-	if ( arg1[0] != '\0' )
-		if ( !str_prefix( arg1, "divine" ) && ch->level >= LEVEL_IMMORTAL )
-		{
+	if ( arg1[0] != '\0' ) {
+		if ( !str_prefix( arg1, "divine" ) && ch->level >= LEVEL_IMMORTAL ) {
 			IS_DIVINE = TRUE;
 			target_name = one_argument( target_name, arg1 );
 		}
+	}
 
 	one_argument( target_name, arg2 );
 
-	if ( arg1[0] == '\0' )
-	{
+	if ( arg1[0] == '\0' ) {
 		// if ( prime_class(ch) != CLASS_BARD )
 		send_to_char(AT_BLUE, "Cast which what where?\n\r", ch );
 		// else
@@ -529,33 +529,33 @@ void do_cast( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-	if ( IS_NPC( ch ) )
-		if ( IS_SET( ch->affected_by, AFF_CHARM ) )
+	if ( IS_NPC( ch ) ){
+		if ( IS_SET( ch->affected_by, AFF_CHARM ) ){
 			return;
+		}
+	}
 
-	if ( !IS_NPC( ch ) )
-		if ( ( sn = skill_lookup( arg1 ) ) < 0
-				|| !can_use_skpell( ch, sn ) )
-		{
+	if ( !IS_NPC( ch ) ) {
+		if ( sn < 0 || !can_use_skpell( ch, sn ) ) {
 			send_to_char(AT_BLUE, "You can't do that.\n\r", ch );
 			return;
 		}
+	} else {
+		if ( sn < 0 ) {
+			return;
+		}
+	}
 
-	if ( IS_AFFECTED( ch, AFF_MUTE ))
-	{
+	if ( IS_AFFECTED( ch, AFF_MUTE )) {
 		send_to_char(AT_WHITE, "You have been silenced.\n\r", ch);
 		return;
 	}
 
-	if ( IS_NPC( ch ) )
-		if ( ( sn = skill_lookup( arg1 ) ) < 0 )
-			return;
-
-	if ( ch->position < skill_table[sn].minimum_position )
-	{
+	if ( ch->position < skill_table[sn].minimum_position ) {
 		send_to_char(AT_BLUE, "You can't concentrate enough.\n\r", ch );
 		return;
 	}
+
 	/*
 	   if ( ch->level < LEVEL_IMMORTAL && ch->class == CLASS_VAMPIRE )
 	   if ( !IS_SET( ch->in_room->room_flags, ROOM_INDOORS ) )
@@ -573,8 +573,7 @@ void do_cast( CHAR_DATA *ch, char *argument )
 	   }
 	   }
 	   */
-	if ( IS_STUNNED( ch, STUN_MAGIC ) )
-	{
+	if ( IS_STUNNED( ch, STUN_MAGIC ) ) {
 		// if ( prime_class(ch) != CLASS_BARD )
 		send_to_char(AT_LBLUE, "You're too stunned to cast spells.\n\r", ch );
 		// else
@@ -582,16 +581,17 @@ void do_cast( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-	if ( !IS_NPC( ch ) && ( !( ch->level > LEVEL_MORTAL ) ) )
-	{
+	if ( !IS_NPC( ch ) && ( !( ch->level > LEVEL_MORTAL ) ) ) {
 		mana = SPELL_COST( ch, sn );
-		if ( ch->race == RACE_ELF || ch->race == RACE_ELDER )
+
+		if ( ch->race == RACE_ELF || ch->race == RACE_ELDER ) {
 			mana -= mana / 4;
-	}
-	else
+		}
+	} else {
 		mana = 0;
-	if ( skill_table[sn].spell_fun == spell_null )
-	{
+	}
+
+	if ( skill_table[sn].spell_fun == spell_null ) {
 		send_to_char( AT_BLUE, "You can't do that.\n\r", ch );
 		return;
 	} 
@@ -711,94 +711,84 @@ void do_cast( CHAR_DATA *ch, char *argument )
 			vo = (void *) obj;
 			break;
 	}
-	if ( !IS_NPC( ch ) )
+	if ( !IS_NPC( ch ) ) {
 		if ( !is_class( ch, CLASS_VAMPIRE ) && ch->mana < mana )
 		{
 			send_to_char(AT_BLUE, "You don't have enough mana.\n\r", ch );
 			return;
-		}
-		else
+		} else {
 			if ( ( ch->bp < mana ) && ( is_class( ch, CLASS_VAMPIRE ) ) )
 			{
 				send_to_char(AT_RED, "You are to starved to cast, you must feed.\n\r", ch );
 				return;
 			}
+		}
+	}
 
 
 	// if ( str_cmp( skill_table[sn].name, "ventriloquate" ) )
 	say_spell( ch, sn );
 
-	if ( IS_SET( ch->in_room->room_flags, ROOM_NO_MAGIC ) )
-	{
+	if ( IS_SET( ch->in_room->room_flags, ROOM_NO_MAGIC ) ) {
 		send_to_char( AT_BLUE, "You failed.\n\r", ch );
 		return;
-	}	   
-	if ( ( IS_SET( ch->in_room->room_flags, ROOM_NO_OFFENSIVE ) ) && ( skill_table[sn].target == TAR_CHAR_OFFENSIVE ) )
-	{
+	}	
+
+	if ( ( IS_SET( ch->in_room->room_flags, ROOM_NO_OFFENSIVE ) ) && ( skill_table[sn].target == TAR_CHAR_OFFENSIVE ) ) {
 		send_to_char( AT_BLUE, "You failed.\n\r", ch );
 		return;
-	}	   
+	}	
+
 	WAIT_STATE( ch, skill_table[sn].beats );
 
-	if ( !IS_NPC( ch ) )
-		if ( number_percent( ) > ch->pcdata->learned[sn] )
-		{
+	if ( !IS_NPC( ch ) ) {
+		if ( number_percent( ) > ch->pcdata->learned[sn] ) {
 			send_to_char(AT_BLUE, "You lost your concentration.\n\r", ch );
-			// MT( ch ) -= mana / 2;
+
 			if ( is_class( ch, CLASS_VAMPIRE ) ) {
 				ch->bp -= mana / 2;
 			} else {
 				ch->mana -= mana / 2;
 			}
-		}
-		else
-		{
-			// MT( ch ) -= mana;
+		} else {
 			if ( is_class( ch, CLASS_VAMPIRE ) ) {
 				ch->bp -= mana;
 			} else {
 				ch->mana -= mana;
 			}
-			if ( ( IS_AFFECTED2( ch, AFF_CONFUSED ) )
-					&& number_percent( ) < 10 )
-			{
+
+			if ( ( IS_AFFECTED2( ch, AFF_CONFUSED ) ) && number_percent( ) < 10 ) {
 				act(AT_YELLOW, "$n looks around confused at what's going on.", ch, NULL, NULL, TO_ROOM );
 				send_to_char( AT_YELLOW, "You become confused and botch the spell.\n\r", ch );
 				return;
-			} 
+			}
+
 			update_skpell( ch, sn );   
-			(*skill_table[sn].spell_fun) ( sn,
-					IS_DIVINE ?
-					URANGE( 1, ch->level, LEVEL_HERO )*3 :
-					URANGE( 1, ch->level, LEVEL_HERO ) ,
-					ch, vo );
+			(*skill_table[sn].spell_fun) ( sn, IS_DIVINE ? URANGE( 1, ch->level, LEVEL_HERO )*3 : URANGE( 1, ch->level, LEVEL_HERO ), ch, vo );
+		}
+	}
+
+	if ( IS_NPC( ch ) ) {
+		(*skill_table[sn].spell_fun) ( sn, IS_DIVINE ? URANGE( 1, ch->level, LEVEL_HERO )*3 : URANGE( 1, ch->level, LEVEL_HERO ) , ch, vo );
+	}
+
+	if ( vo ) {
+		if ( skill_table[sn].target == TAR_OBJ_INV ) {
+			oprog_cast_sn_trigger( obj, ch, sn, vo );
 		}
 
-	if ( IS_NPC( ch ) )
-		(*skill_table[sn].spell_fun) ( sn,
-				IS_DIVINE ?
-				URANGE( 1, ch->level, LEVEL_HERO )*3 :
-				URANGE( 1, ch->level, LEVEL_HERO ) ,
-				ch, vo );
-
-	if ( vo )
-	{
-		if ( skill_table[sn].target == TAR_OBJ_INV )
-			oprog_cast_sn_trigger( obj, ch, sn, vo );
 		rprog_cast_sn_trigger( ch->in_room, ch, sn, vo );
 	}
 
-	if ( skill_table[sn].target == TAR_CHAR_OFFENSIVE
-			&& victim->master != ch && victim != ch && IS_AWAKE( victim ) )
-	{
+	if ( skill_table[sn].target == TAR_CHAR_OFFENSIVE && victim->master != ch && victim != ch && IS_AWAKE( victim ) ) {
 		CHAR_DATA *vch;
 
-		for ( vch = ch->in_room->people; vch; vch = vch->next_in_room )
-		{
-			if ( vch->deleted )
+		for ( vch = ch->in_room->people; vch; vch = vch->next_in_room ) {
+			if ( vch->deleted ) {
 				continue;
-			if ( victim == vch && !victim->fighting )
-			{
+			}
+
+			if ( victim == vch && !victim->fighting ) {
 				multi_hit( victim, ch, TYPE_UNDEFINED );
 				break;
 			}
@@ -958,19 +948,19 @@ void spell_acid_blast( int sn, int level, CHAR_DATA *ch, void *vo )
 void spell_animate( int sn, int level, CHAR_DATA *ch, void *vo )
 {
 	OBJ_DATA      *obj = (OBJ_DATA *) vo;
-	OBJ_DATA      *obj_next;
 
-
-	if ( obj->item_type != ITEM_CORPSE_NPC )
-	{
+	if ( obj->item_type != ITEM_CORPSE_NPC ) {
 		send_to_char(AT_BLUE, "You cannot animate that.\n\r", ch );
 		return;
 	}
-	obj_next = obj->next;
-	if (obj->deleted)
+
+	if (obj->deleted) {
 		return;
+	}
+
 	magic_mob( ch, obj, obj->ac_vnum );
 	extract_obj(obj);
+
 	return;
 }
 

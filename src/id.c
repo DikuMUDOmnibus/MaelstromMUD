@@ -96,7 +96,7 @@ int close( int fd );
 bool start_auth( DESCRIPTOR_DATA *d )
 {
 	struct sockaddr_in sock;
-	int tlen;
+	socklen_t tlen;
 	struct auth_data *auth;
 	int desc;
 
@@ -110,14 +110,14 @@ bool start_auth( DESCRIPTOR_DATA *d )
 		return FALSE;
 		}
 		*/
-	if ( fcntl(desc, F_SETFL, O_NDELAY) == -1 )
-	{
+	if ( fcntl(desc, F_SETFL, O_NDELAY) == -1 ) {
 		perror("Nonblock");
 		close(desc);
 		free_string(d->user);
 		d->user = str_dup("(nonblock)");
 		return FALSE;
 	}
+
 	tlen = sizeof(sock);
 	getpeername(d->descriptor, (struct sockaddr *)&sock, &tlen);
 	sock.sin_port = htons(113);
@@ -143,16 +143,19 @@ bool start_auth( DESCRIPTOR_DATA *d )
 	   }
 	   */
 	/* cid's marker */
-	for ( auth = first_auth; auth; auth = auth->next )
-		if ( auth->d == d )
+	for ( auth = first_auth; auth; auth = auth->next ){
+		if ( auth->d == d ) {
 			break;
-	if ( !auth )
-	{
+		}
+	}
+
+	if ( !auth ) {
 		GET_FREE(auth, auth_free);
 		auth->d = d;
 		auth->atimes = 70;
 		LINK(auth, first_auth, last_auth, next, prev);
 	}
+
 	auth->auth_fd = desc;
 	auth->abuf[0] = '\0';
 	auth->auth_state = AUTH_UNSENT;
@@ -181,7 +184,8 @@ void send_auth( struct auth_data *auth )
 {
 	struct sockaddr_in us, them;
 	char authbuf[32];
-	int ulen, tlen, z;
+	socklen_t ulen, tlen;
+	int z;
 
 	tlen = ulen = sizeof(us);
 	/*  if ( --auth->atimes == 0 )

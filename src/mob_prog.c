@@ -39,24 +39,13 @@
  */
 
 char *	mprog_next_command	args( ( char* clist ) );
-bool	mprog_seval		args( ( char* lhs, char* opr, char* rhs ) );
-bool	mprog_veval		args( ( int lhs, char* opr, int rhs ) );
-bool	mprog_do_ifchck		args( ( char* ifchck, CHAR_DATA* mob,
-			CHAR_DATA* actor, OBJ_DATA* obj,
-			void* vo, CHAR_DATA* rndm ) );
-char *	mprog_process_if	args( ( char* ifchck, char* com_list, 
-			CHAR_DATA* mob, CHAR_DATA* actor,
-			OBJ_DATA* obj, void* vo,
-			CHAR_DATA* rndm ) );
-void	mprog_translate		args( ( char ch, char* t, CHAR_DATA* mob,
-			CHAR_DATA* actor, OBJ_DATA* obj,
-			void* vo, CHAR_DATA* rndm ) );
-void	mprog_process_cmnd	args( ( char* cmnd, CHAR_DATA* mob, 
-			CHAR_DATA* actor, OBJ_DATA* obj,
-			void* vo, CHAR_DATA* rndm ) );
-void	mprog_driver		args( ( char* com_list, CHAR_DATA* mob,
-			CHAR_DATA* actor, OBJ_DATA* obj,
-			void* vo ) );
+bool	mprog_seval						args( ( char* lhs, char* opr, char* rhs ) );
+bool	mprog_veval						args( ( int lhs, char* opr, int rhs ) );
+bool	mprog_do_ifchck				args( ( char* ifchck, CHAR_DATA* mob, CHAR_DATA* actor, OBJ_DATA* obj, void* vo, CHAR_DATA* rndm ) );
+char *	mprog_process_if		args( ( char* ifchck, char* com_list,  CHAR_DATA* mob, CHAR_DATA* actor, OBJ_DATA* obj, void* vo, CHAR_DATA* rndm ) );
+void	mprog_translate				args( ( char ch, char* t, CHAR_DATA* mob, CHAR_DATA* actor, OBJ_DATA* obj, void* vo, CHAR_DATA* rndm ) );
+void	mprog_process_cmnd		args( ( char* cmnd, CHAR_DATA* mob,  CHAR_DATA* actor, OBJ_DATA* obj, void* vo, CHAR_DATA* rndm ) );
+void	mprog_driver					args( ( char* com_list, CHAR_DATA* mob, CHAR_DATA* actor, OBJ_DATA* obj, void* vo ) );
 
 /***************************************************************************
  * Local function code and brief comments.
@@ -315,33 +304,41 @@ bool mprog_do_ifchck( char *ifchck, CHAR_DATA *mob, CHAR_DATA *actor,
 	{
 		switch ( arg[1] )
 		{
-			case 'n' : if (actor)
-						   if (!IS_NPC( actor ) )
-						   {
-							   lhsvl = actor->clan;
-							   rhsvl = atoi(val);
-							   return mprog_veval( lhsvl, opr,  rhsvl );
-						   }
-						   else return -1;
-			case 't' : if (vict)
-						   if (!IS_NPC( vict ) )
-						   {
-							   lhsvl = vict->clan;
-							   rhsvl = atoi(val);
-							   return mprog_veval( lhsvl, opr,  rhsvl );
-						   }
-						   else return -1;
-			case 'r': if (rndm)
-						  if (!IS_NPC( rndm ) )
-						  {
-							  lhsvl = rndm->clan;
-							  rhsvl = atoi(val);
-							  return mprog_veval( lhsvl, opr,  rhsvl );
-						  }
-						  else return -1;
+			case 'n' :
+					if (actor) {
+				   if (!IS_NPC( actor ) )
+				    {
+					    lhsvl = actor->clan;
+					    rhsvl = atoi(val);
+					    return mprog_veval( lhsvl, opr,  rhsvl );
+				    } else {
+				    	return -1;
+				    }
+				  }
+			case 't' : 
+					if (vict) {
+					  if (!IS_NPC( vict ) )
+					  {
+						  lhsvl = vict->clan;
+						  rhsvl = atoi(val);
+						  return mprog_veval( lhsvl, opr,  rhsvl );
+					  } else {
+					  	return -1;
+					  }
+				  }
+			case 'r': 
+					if (rndm) {
+					  if (!IS_NPC( rndm ) )
+					  {
+						  lhsvl = rndm->clan;
+						  rhsvl = atoi(val);
+						  return mprog_veval( lhsvl, opr,  rhsvl );
+					  } else {
+					  	return -1;
+					  }
+					}
 			default:
-					  sprintf(log_buf, "Mob: %d bad arg to ifchck 'isclan' (%s)", mob->pIndexData->vnum,
-							  arg );
+					  sprintf(log_buf, "Mob: %d bad arg to ifchck 'isclan' (%s)", mob->pIndexData->vnum, arg );
 					  bug( log_buf, 0 );
 					  return -1;
 		}	
@@ -1145,24 +1142,36 @@ bool mprog_do_ifchck( char *ifchck, CHAR_DATA *mob, CHAR_DATA *actor,
 	{
 		switch ( arg[1] )  /* arg should be "$*" so just get the letter */    
 		{
-			case 'n': if ( actor )
-						  if ( !IS_NPC( actor ) )
-							  if ( actor->pcdata->lname )
-								  return mprog_seval( actor->pcdata->lname, opr, val );
-							  else
-								  return -1;
-			case 't': if ( vict )
-						  if ( !IS_NPC( vict ) )
-							  if ( vict->pcdata->lname )
-								  return mprog_seval( vict->pcdata->lname, opr, val );
-							  else
-								  return -1;
-			case 'r': if ( rndm )
-						  if ( !IS_NPC( rndm ) )
-							  if ( rndm->pcdata->lname )
-								  return mprog_seval( rndm->pcdata->lname, opr, val );
-							  else
-								  return -1;
+			case 'n':
+					if ( actor ) {
+					  if ( !IS_NPC( actor ) ) {
+						  if ( actor->pcdata->lname ) {
+							  return mprog_seval( actor->pcdata->lname, opr, val );
+						  } else {
+							  return -1;
+						  }
+						}
+					}
+			case 't': 
+					if ( vict ) {
+					  if ( !IS_NPC( vict ) ) {
+						  if ( vict->pcdata->lname ) {
+							  return mprog_seval( vict->pcdata->lname, opr, val );
+						  } else {
+							  return -1;
+						  }
+						}
+					}
+			case 'r': 
+					if ( rndm ) {
+					  if ( !IS_NPC( rndm ) ) {
+						  if ( rndm->pcdata->lname ) {
+							  return mprog_seval( rndm->pcdata->lname, opr, val );
+						  } else {
+							  return -1;
+						  }
+						}
+					}
 			default:
 					  bug ( "Mob: %d bad argument to 'Lname'", mob->pIndexData->vnum );  
 					  return -1;
@@ -1172,8 +1181,7 @@ bool mprog_do_ifchck( char *ifchck, CHAR_DATA *mob, CHAR_DATA *actor,
 	/* Ok... all the ifchcks are done, so if we didnt find ours then something
 	 * odd happened.  So report the bug and abort the MOBprogram (return error)
 	 */
-	sprintf( log_buf, "Mob: %d unkown ifchck (%s)", mob->pIndexData->vnum,
-			buf );
+	sprintf( log_buf, "Mob: %d unkown ifchck (%s)", mob->pIndexData->vnum, buf );
 	bug( log_buf, 0 );
 	return -1;
 
@@ -1205,11 +1213,13 @@ char *mprog_process_if( char *ifchck, char *com_list, CHAR_DATA *mob,
 	null[0] = '\0';
 
 	/* check for trueness of the ifcheck */
-	if ( ( legal = mprog_do_ifchck( ifchck, mob, actor, obj, vo, rndm ) ) )
-		if ( legal == 1 )
+	if ( ( legal = mprog_do_ifchck( ifchck, mob, actor, obj, vo, rndm ) ) ) {
+		if ( legal == 1 ) {
 			flag = TRUE;
-		else
+		} else {
 			return null;
+		}
+	}
 
 	while( loopdone == FALSE ) /*scan over any existing or statements */
 	{
@@ -1225,11 +1235,13 @@ char *mprog_process_if( char *ifchck, char *com_list, CHAR_DATA *mob,
 		morebuf = one_argument( cmnd, buf );
 		if ( !str_cmp( buf, "or" ) )
 		{
-			if ( ( legal = mprog_do_ifchck( morebuf,mob,actor,obj,vo,rndm ) ) )
-				if ( legal == 1 )
+			if ( ( legal = mprog_do_ifchck( morebuf,mob,actor,obj,vo,rndm ) ) ) {
+				if ( legal == 1 ) {
 					flag = TRUE;
-				else
+				} else {
 					return null;
+				}
+			}
 		}
 		else
 			loopdone = TRUE;
@@ -1399,18 +1411,21 @@ void mprog_translate( char ch, char *t, CHAR_DATA *mob, CHAR_DATA *actor,
 			break;
 
 		case 'N':
-			if ( actor ) 
-				if ( can_see( mob, actor ) )
-					if ( IS_NPC( actor ) )
+			if ( actor ) {
+				if ( can_see( mob, actor ) ) {
+					if ( IS_NPC( actor ) ) {
 						strcpy( t, actor->short_descr );
-					else
+					} else
 					{
 						strcpy( t, actor->name );
 						/*		   strcat( t, " " );*/
 						strcat( t, actor->pcdata->title );
 					}
-				else
+				} else {
 					strcpy( t, "someone" );
+				}
+			}
+
 			break;
 
 		case 't':
@@ -1426,18 +1441,20 @@ void mprog_translate( char ch, char *t, CHAR_DATA *mob, CHAR_DATA *actor,
 			break;
 
 		case 'T':
-			if ( vict ) 
-				if ( can_see( mob, vict ) )
-					if ( IS_NPC( vict ) )
+			if ( vict ) {
+				if ( can_see( mob, vict ) ) {
+					if ( IS_NPC( vict ) ) {
 						strcpy( t, vict->short_descr );
-					else
-					{
+					} else {
 						strcpy( t, vict->name );
 						strcat( t, " " );
 						strcat( t, vict->pcdata->title );
 					}
-				else
+				} else {
 					strcpy( t, "someone" );
+				}
+			}
+
 			break;
 
 		case 'r':
@@ -1453,18 +1470,20 @@ void mprog_translate( char ch, char *t, CHAR_DATA *mob, CHAR_DATA *actor,
 			break;
 
 		case 'R':
-			if ( rndm ) 
-				if ( can_see( mob, rndm ) )
-					if ( IS_NPC( rndm ) )
+			if ( rndm ) {
+				if ( can_see( mob, rndm ) ) {
+					if ( IS_NPC( rndm ) ) {
 						strcpy(t,rndm->short_descr);
-					else
-					{
+					} else {
 						strcpy( t, rndm->name );
 						/*		 strcat( t, " " );*/
 						strcat( t, rndm->pcdata->title );
 					}
-				else
+				} else {
 					strcpy( t, "someone" );
+				}
+			}
+			
 			break;
 
 		case 'e':
