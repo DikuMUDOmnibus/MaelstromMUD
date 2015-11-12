@@ -3602,13 +3602,6 @@ void do_hotreboot (CHAR_DATA *ch, char * argument)
 		else
 		{
 			fprintf (fp, "%d %s %s %s %d\n", d->descriptor, och->name, d->user, d->host, d->ansi);
-
-			if (och->level == 1) {
-				write_to_descriptor ( "Since you are level one, and level one characters do not save, you gain a free level!\n\r", 0, d);
-				advance_level (och);
-				och->level++; /* Advance_level doesn't do that */
-			}
-
 			save_char_obj ( och );
 			write_to_descriptor (buf, 0, d);
 		}
