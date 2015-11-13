@@ -1800,6 +1800,8 @@ int          strength;
  * -- Altrag
  */
 
+#define TRAP_ERROR 							 0
+
 /*
  * The object triggers.. quite a few of em.. :)
  */

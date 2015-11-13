@@ -769,8 +769,7 @@ void mprog_read_programs( FILE *fp, MOB_INDEX_DATA *pMobIndex)
 
 }
 
-void load_traps( FILE *fp, OBJ_INDEX_DATA *pObj, ROOM_INDEX_DATA *pRoom,
-		EXIT_DATA *pExit )
+void load_traps( FILE *fp, OBJ_INDEX_DATA *pObj, ROOM_INDEX_DATA *pRoom, EXIT_DATA *pExit )
 {
 	TRAP_DATA *pTrap;
 	TRAP_DATA *pFirst;
@@ -822,49 +821,49 @@ void load_traps( FILE *fp, OBJ_INDEX_DATA *pObj, ROOM_INDEX_DATA *pRoom,
 
 	while( !done )
 	{
-		pTrap->type = flag_value( (pObj ? oprog_types : (pRoom ? rprog_types :
-						eprog_types)), fread_word( fp ) );
-		switch( pTrap->type )
-		{
-			case (pObj ? OBJ_TRAP_ERROR : (pRoom ? ROOM_TRAP_ERROR : EXIT_TRAP_ERROR)):
-			case NO_FLAG:
-										  bug( "Load_traps: No flag found.", 0 );
-										  exit( 1 );
-			default:
-										  pTrap->on_obj = pObj;
-										  pTrap->in_room = pRoom;
-										  pTrap->on_exit = pExit;
-										  *traptypes |= pTrap->type;
-										  pTrap->arglist = fread_string( fp );
-										  fread_to_eol( fp );
-										  pTrap->disarmable = fread_number( fp );
-										  fread_to_eol( fp );
-										  pTrap->comlist = fread_string( fp );
-										  fread_to_eol( fp );
-										  num_trap_progs++;
+		pTrap->type = flag_value( (pObj ? oprog_types : (pRoom ? rprog_types : eprog_types)), fread_word( fp ) );
 
-										  switch ( letter = fread_letter( fp ) )
-										  {
-											  case '>':
-												  pTrap->next = alloc_perm( sizeof( TRAP_DATA ));
-												  pTrap->next_here = pTrap->next;
-												  pTrap = pTrap->next;
-												  pTrap->next = NULL;
-												  pTrap->next_here = NULL;
-												  break;
-											  case '|':
-												  pTrap->next = NULL;
-												  pTrap->next_here = NULL;
-												  fread_to_eol( fp );
-												  done = TRUE;
-												  break;
-											  default:
-												  bug( "Load_traps:  bad TRAP", 0);
-												  break;
-										  }
-										  break;
+		switch( pTrap->type ) {
+			case TRAP_ERROR:
+			case NO_FLAG:
+			  bug( "Load_traps: No flag found.", 0 );
+			  exit( 1 );
+			default:
+			  pTrap->on_obj = pObj;
+			  pTrap->in_room = pRoom;
+			  pTrap->on_exit = pExit;
+			  *traptypes |= pTrap->type;
+			  pTrap->arglist = fread_string( fp );
+			  fread_to_eol( fp );
+			  pTrap->disarmable = fread_number( fp );
+			  fread_to_eol( fp );
+			  pTrap->comlist = fread_string( fp );
+			  fread_to_eol( fp );
+			  num_trap_progs++;
+
+			  switch ( letter = fread_letter( fp ) ) {
+				  case '>':
+					  pTrap->next = alloc_perm( sizeof( TRAP_DATA ));
+					  pTrap->next_here = pTrap->next;
+					  pTrap = pTrap->next;
+					  pTrap->next = NULL;
+					  pTrap->next_here = NULL;
+					  break;
+				  case '|':
+					  pTrap->next = NULL;
+					  pTrap->next_here = NULL;
+					  fread_to_eol( fp );
+					  done = TRUE;
+					  break;
+				  default:
+					  bug( "Load_traps:  bad TRAP", 0);
+					  break;
+			  }
+
+			  break;
 		}
 	}
+
 	return;
 }
 

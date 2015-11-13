@@ -6968,7 +6968,7 @@ void spell_turn_undead( int sn, int level, CHAR_DATA *ch, void *vo )
 		return;
 	}
 
-	chance = (level * (10 + IS_GOOD(ch) ? 15 : IS_EVIL(ch) ? 0 : 10) );
+	chance = (level * (10 + (IS_GOOD(ch) ? 15 : (IS_EVIL(ch) ? 0 : 10))) );
 	chance /= victim->level;
 	if (number_percent( ) < chance && !saves_spell( level, victim ))
 	{

@@ -1,4 +1,4 @@
-CC      = gcc
+CC      = clang
 C_FLAGS = -c -O -Wall -g3 -DNOCRYPT -fprofile-arcs -ftest-coverage
 L_FLAGS = -g -lgcov -coverage
 PKG_CFG = `pkg-config --cflags --libs jansson libcurl`
@@ -24,3 +24,5 @@ clean:
 
 .c.o: merc.h
 	$(CC) $(C_FLAGS) $(SYSTEM) $<
+
+check:

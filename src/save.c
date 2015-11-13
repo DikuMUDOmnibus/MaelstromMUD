@@ -90,7 +90,6 @@ void save_char_obj( CHAR_DATA *ch )
 		ch = ch->desc->original;
 	}
 
-	if (!IS_NPC( ch ) );
 	update_playerlist( ch );
 
 	ch->save_time = current_time;
