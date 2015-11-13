@@ -1,9 +1,17 @@
 language: cpp
 compiler:
   - gcc
+sudo: false
+addons:
+  apt:
+    packages:
+    - make
+    - autoconf
+    - build-essential
+    - libcurl4-openssl-dev
+    - libtool
+    - libjansson-dev
 before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq libjansson-dev libcurl4-openssl-dev libtool
   - pip install --user cpp-coveralls
   - cd src
 script:
