@@ -1,6 +1,6 @@
 CC      = gcc
-C_FLAGS = -c -O -Wall -g3 -DNOCRYPT
-L_FLAGS = -g
+C_FLAGS = -c -O -Wall -g3 -DNOCRYPT -fprofile-arcs -ftest-coverage
+L_FLAGS = -g -lgcov -coverage
 PKG_CFG = `pkg-config --cflags --libs jansson libcurl`
 SYSTEM  =
 
@@ -23,4 +23,4 @@ clean:
 	make
 
 .c.o: merc.h
-	$(CC) -c $(C_FLAGS) $(SYSTEM) $<
+	$(CC) $(C_FLAGS) $(SYSTEM) $<

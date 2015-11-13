@@ -6,6 +6,8 @@ area/bugs.txt
 banned.lst
 *.o
 *.core
+*.gcno
+*.gcov
 src/envy
 nohup.out
 .vagrant/*
