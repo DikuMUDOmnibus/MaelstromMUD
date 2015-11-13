@@ -3739,16 +3739,15 @@ bool oedit_long( CHAR_DATA *ch, char *argument )
 
 
 
-bool set_value( CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, char *argument, int value )
-{
-	if ( argument[0] == '\0' )
-	{
-		set_obj_values( ch, pObj, -1, '\0' );
+bool set_value( CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, char *argument, int value ) {
+	if ( argument[0] == '\0' ) {
+		set_obj_values( ch, pObj, -1, "" );
 		return FALSE;
 	}
 
-	if ( set_obj_values( ch, pObj, value, argument ) )
+	if ( set_obj_values( ch, pObj, value, argument ) ) {
 		return TRUE;
+	}
 
 	return FALSE;
 }
@@ -3845,53 +3844,53 @@ Name:		oedit_values
 Purpose:	Finds the object and sets its value.
 Called by:	The four valueX functions below.
  ****************************************************************************/
-bool oedit_values( CHAR_DATA *ch, char *argument, int value )
-{
+bool oedit_values( CHAR_DATA *ch, char *argument, int value ) {
 	OBJ_INDEX_DATA *pObj;
 
 	EDIT_OBJ(ch, pObj);
 
-	if ( set_value( ch, pObj, argument, value ) )
+	if ( set_value( ch, pObj, argument, value ) ) {
 		return TRUE;
+	}
 
 	return FALSE;
 }
 
 
-bool oedit_value0( CHAR_DATA *ch, char *argument )
-{
-	if ( oedit_values( ch, argument, 0 ) )
+bool oedit_value0( CHAR_DATA *ch, char *argument ) {
+	if ( oedit_values( ch, argument, 0 ) ) {
 		return TRUE;
-
-	return FALSE;
-}
-
-
-
-bool oedit_value1( CHAR_DATA *ch, char *argument )
-{
-	if ( oedit_values( ch, argument, 1 ) )
-		return TRUE;
+	}
 
 	return FALSE;
 }
 
 
 
-bool oedit_value2( CHAR_DATA *ch, char *argument )
-{
-	if ( oedit_values( ch, argument, 2 ) )
+bool oedit_value1( CHAR_DATA *ch, char *argument ) {
+	if ( oedit_values( ch, argument, 1 ) ) {
 		return TRUE;
+	}
 
 	return FALSE;
 }
 
 
 
-bool oedit_value3( CHAR_DATA *ch, char *argument )
-{
-	if ( oedit_values( ch, argument, 3 ) )
+bool oedit_value2( CHAR_DATA *ch, char *argument ) {
+	if ( oedit_values( ch, argument, 2 ) ) {
 		return TRUE;
+	}
+
+	return FALSE;
+}
+
+
+
+bool oedit_value3( CHAR_DATA *ch, char *argument ) {
+	if ( oedit_values( ch, argument, 3 ) ) {
+		return TRUE;
+	}
 
 	return FALSE;
 }

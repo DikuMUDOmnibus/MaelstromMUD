@@ -1256,10 +1256,10 @@ void do_countcommands( CHAR_DATA *ch, char *argument )
 			"GSkill table size:  %d\n\r"
 			"Skill table size:   %d\n\r",
 			/* -1 from each for blank index entry at end. */
-			sizeof(   cmd_table) / sizeof(   cmd_table[0]) - 1,
+			(int) (sizeof(   cmd_table) / sizeof(   cmd_table[0]) - 1),
 			top_social,
 			/*sizeof(social_table) / sizeof(social_table[0]) -1,*/
-			sizeof(gskill_table) / sizeof(gskill_table[0])    ,
+			(int) (sizeof(gskill_table) / sizeof(gskill_table[0])),
 			scnt); /* Someone wanna explain why theres an error with
 					  sizeof(skill_table)?? */
 	send_to_char(AT_PINK, buf, ch );

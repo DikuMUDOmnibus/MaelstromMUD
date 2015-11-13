@@ -2831,8 +2831,8 @@ void do_where( CHAR_DATA *ch, char *argument )
 void do_consider( CHAR_DATA *ch, char *argument )
 {
 	CHAR_DATA *victim;
-	char      *msg                      = '\0';
-	char      *buf                      = '\0';
+	char      *msg;
+	char      *buf;
 	char       arg [ MAX_INPUT_LENGTH ];
 	int        diff;
 	int        hpdiff;
@@ -2859,54 +2859,63 @@ void do_consider( CHAR_DATA *ch, char *argument )
 	}
 
 	diff = victim->level - ch->level;
-	if ( diff <= -50 ) msg = "$N almost died from your mere gaze!";
-	else if ( diff <= -25 ) msg = "$N is a complete wimp."; 
-	else if ( diff <= -15 ) msg = "You can kill $N naked and weaponless.";
-	else if ( diff <=  -5 ) msg = "$N is no match for you.";
-	else if ( diff <=  -2 ) msg = "$N looks like an easy kill.";
-	else if ( diff <=   1 ) msg = "The perfect match!";
-	else if ( diff <=   4 ) msg = "$N says 'Do you feel lucky, punk?'.";
-	else if ( diff <=   9 ) msg = "$N laughs at you mercilessly.";
-	else if ( diff <=  12 ) msg = "Oh boy, this is gonna be tough.";
-	else if ( diff <=  25 ) msg = "You got to be kidding!";
-	else                    msg = "&RDont try it, you WILL die!"; 
-	act(C_DEFAULT, msg, ch, NULL, victim, TO_CHAR );
+
+	if ( diff <= -50 ) {
+		msg = "$N almost died from your mere gaze!";
+	} else if ( diff <= -25 ) {
+		msg = "$N is a complete wimp."; 
+	} else if ( diff <= -15 ) {
+		msg = "You can kill $N naked and weaponless.";
+	} else if ( diff <=  -5 ) {
+		msg = "$N is no match for you.";
+	} else if ( diff <=  -2 ) {
+		msg = "$N looks like an easy kill.";
+	} else if ( diff <=   1 ) {
+		msg = "The perfect match!";
+	} else if ( diff <=   4 ) {
+		msg = "$N says 'Do you feel lucky, punk?'.";
+	} else if ( diff <=   9 ) {
+		msg = "$N laughs at you mercilessly.";
+	} else if ( diff <=  12 ) {
+		msg = "Oh boy, this is gonna be tough.";
+	} else if ( diff <=  25 ) {
+		msg = "You got to be kidding!";
+	} else {
+		msg = "&RDont try it, you WILL die!"; 
+	} act(C_DEFAULT, msg, ch, NULL, victim, TO_CHAR );
 
 	/* additions by king@tinuviel.cs.wcu.edu */
 	hpdiff = ( ch->hit - victim->hit );
 
-	if ( ( ( diff >= 0) && ( hpdiff <= 0 ) )
-			|| ( ( diff <= 0 ) && ( hpdiff >= 0 ) ) )
-	{
+	if ( ( ( diff >= 0) && ( hpdiff <= 0 ) ) || ( ( diff <= 0 ) && ( hpdiff >= 0 ) ) ) {
 		send_to_char(C_DEFAULT, "Also,", ch );
-	}
-	else
-	{
+	} else {
 		send_to_char(C_DEFAULT, "However,", ch );
 	}
 
-	if ( hpdiff >= 2501 )
-		buf = " $E is of very fragile constitution.";
-	if ( hpdiff <= 2500 )
-		buf = " you are currently much healthier than $E.";
-	if ( hpdiff <= 500 )
-		buf = " you are currently healthier than $E.";
-	if ( hpdiff <= 200 ) 
-		buf = " you are currently slightly healthier than $E.";
-	if ( hpdiff <= 50 )
-		buf = " you are a teensy bit healthier than $E.";
-	if ( hpdiff <= 0 )
-		buf = " $E is a teensy bit healthier than you.";
-	if ( hpdiff <= -50 )
-		buf = " $E is slightly healthier than you.";
-	if ( hpdiff <= -200 )
-		buf = " $E is healthier than you.";
-	if ( hpdiff <= -500 )
-		buf = " $E is much healthier than you.";
-	if ( hpdiff <= -2500 )
-		buf = " $E ridicules your hitpoints.";
-	if ( hpdiff <= -10000 ) 
+	if ( hpdiff <= -10000 ) {
 		buf = " $E is built like a TANK!.";
+	} else if ( hpdiff <= -2500 ) {
+		buf = " $E ridicules your hitpoints.";
+	} else if ( hpdiff <= -500 ) {
+		buf = " $E is much healthier than you.";
+	} else if ( hpdiff <= -200 ) {
+		buf = " $E is healthier than you.";
+	} else if ( hpdiff <= -50 ) {
+		buf = " $E is slightly healthier than you.";
+	} else if ( hpdiff <= 0 ) {
+		buf = " $E is a teensy bit healthier than you.";
+	} else if ( hpdiff <= 50 ) {
+		buf = " you are a teensy bit healthier than $E.";
+	} else if ( hpdiff <= 200 ) {
+		buf = " you are currently slightly healthier than $E.";
+	} else if ( hpdiff <= 500 ) {
+		buf = " you are currently healthier than $E.";
+	} else if ( hpdiff <= 2500 ) {
+		buf = " you are currently much healthier than $E.";
+	} else {
+		buf = " $E is of very fragile constitution.";
+	}
 
 	act(C_DEFAULT, buf, ch, NULL, victim, TO_CHAR );
 	return;
@@ -4658,14 +4667,14 @@ void do_guilds( CHAR_DATA *ch, char *argument )
 	char          buf    [ MAX_STRING_LENGTH ];
 	char          result [ MAX_STRING_LENGTH*2 ];
 	int cnt = 0;
-	sprintf( result, "&z[&R%12s&z] [&R%20s&z]\n\r", "Guild Name","Deities" );
+	sprintf( result, "&z[&R%12s&z] [&R%30s&z]\n\r", "Guild Name","Deities" );
 
 	for ( cnt = 0; guild_table[cnt].name[0] != '\0'; cnt++ )
 	{
 		sprintf( buf, "&z[&W%*s&z] [&W%*s&z]\n\r", 
-				12 + strlen(guild_table[cnt].name) - strlen_wo_col(guild_table[cnt].name), 
+				(int)(12 + strlen(guild_table[cnt].name) - strlen_wo_col(guild_table[cnt].name)),
 				guild_table[cnt].name,
-				20 + strlen(guild_table[cnt].deity) - strlen_wo_col(guild_table[cnt].deity),        
+				(int)(30 + strlen(guild_table[cnt].deity) - strlen_wo_col(guild_table[cnt].deity)),
 				guild_table[cnt].deity );
 		strcat( result, buf );
 	}
@@ -4716,9 +4725,9 @@ void do_clans( CHAR_DATA *ch, char *argument )
 		sprintf( buf, 
 				"&z[&W%3d&z] [&W%*s&z] [&W%*s&z] [&W%7d&z] [&r%6d&z] [&W%7d&z] [&R%6d&z]\n\r",
 				pClan->vnum,
-				18 + strlen(pClan->name) - strlen_wo_col(pClan->name),
+				(int)(18 + strlen(pClan->name) - strlen_wo_col(pClan->name)),
 				pClan->name,
-				12 + strlen(pClan->diety) - strlen_wo_col(pClan->diety),
+				(int)(12 + strlen(pClan->diety) - strlen_wo_col(pClan->diety)),
 				pClan->diety,
 				pClan->members,
 				pClan->pkills,

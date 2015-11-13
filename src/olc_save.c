@@ -35,22 +35,25 @@
 Name:		fix_string
 Purpose:	Returns a string without \r and ~.
  ****************************************************************************/
-char *fix_string( const char *str )
-{
+char *fix_string( const char *str ) {
 	static char strfix[MAX_STRING_LENGTH];
 	int i;
 	int o;
 
-	if ( str == NULL )
-		return '\0';
+	if ( str == NULL ) {
+		str = "";
+	}
 
-	for ( o = i = 0; str[i+o] != '\0'; i++ )
-	{
-		if (str[i+o] == '\r' || str[i+o] == '~')
+	for ( o = i = 0; str[i+o] != '\0'; i++ ) {
+		if (str[i+o] == '\r' || str[i+o] == '~') {
 			o++;
+		}
+
 		strfix[i] = str[i+o];
 	}
+
 	strfix[i] = '\0';
+
 	return strfix;
 }
 
