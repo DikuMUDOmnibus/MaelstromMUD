@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/zachflower/oasis-mud/badge.svg?branch=master&service=github)](https://coveralls.io/github/zachflower/oasis-mud?branch=master) [![Build Status](https://travis-ci.org/zachflower/oasis-mud.svg?branch=master)](https://travis-ci.org/zachflower/oasis-mud)
+
 # OASIS MUD
 
 OASIS is a work-in-progress MUD with the ultimate goal of building a modern DikuMUD variant inspired by the OASIS, as described in Earnest Cline's "Ready Player One."
