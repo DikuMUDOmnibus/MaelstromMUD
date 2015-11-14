@@ -12,8 +12,11 @@ addons:
     - libtool
     - libjansson-dev
     - libcunit1-dev
+    - llvm-3.0
 before_install:
+  - pip install --user cpp-coveralls
   - cd src
 script:
-  - make
   - make test ; sh test
+after_success:
+  - coveralls --exclude tests --gcov-options '\-lp'

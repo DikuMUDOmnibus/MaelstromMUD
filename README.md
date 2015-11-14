@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/zachflower/oasis-mud.svg?branch=master)](https://travis-ci.org/zachflower/oasis-mud)
+[![Build Status](https://travis-ci.org/zachflower/oasis-mud.svg?branch=master)](https://travis-ci.org/zachflower/oasis-mud) [![Coverage Status](https://coveralls.io/repos/zachflower/oasis-mud/badge.svg?branch=master&service=github)](https://coveralls.io/github/zachflower/oasis-mud?branch=master)
 
 # OASIS MUD
 

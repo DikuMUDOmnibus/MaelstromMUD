@@ -6,11 +6,10 @@
 #include <CUnit/TestDB.h>
 #include "../merc.h"
 
-#define MAX_TEST_SUITES 1024
-#define MAX_UNIT_TESTS  1024
-
 /* globals */
-CHAR_DATA *mock_supermob;
+CHAR_DATA       *mock_supermob;
+OBJ_DATA        *mock_dummy;
+ROOM_INDEX_DATA *mock_limbo;
 
 /* da main */
 int main ( void );

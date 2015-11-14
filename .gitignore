@@ -8,6 +8,7 @@ banned.lst
 *.core
 *.gcno
 *.gcov
+*.gcda
 src/envy
 src/tests/test.envy
 src/CUnitAutomated-*.xml
