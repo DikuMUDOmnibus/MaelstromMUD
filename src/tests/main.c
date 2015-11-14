@@ -2,6 +2,7 @@
 
 /* Unit Tests */
 CU_TestInfo test_act_info[] = {
+  { "check_blind", test_check_blind },
   { "add_money", test_add_money },
   { "sub_money", test_sub_money },
   { "spend_money", test_spend_money },
@@ -9,13 +10,21 @@ CU_TestInfo test_act_info[] = {
   CU_TEST_INFO_NULL,
 };
 
+CU_TestInfo test_act_wiz[] = {
+  { "do_doubleexp", test_do_doubleexp },
+  CU_TEST_INFO_NULL,
+};
+
 /* Test Suites */
 CU_SuiteInfo suites[] = {
-  { "act_info", NULL, NULL, test_act_info },
+  { "act_info", initialize_suite, NULL, test_act_info },
+  { "act_wiz", initialize_suite, NULL, test_act_wiz },
   CU_SUITE_INFO_NULL,
 };
 
 int main ( void ) {
+  boot_db();
+
   /* initialize the CUnit test registry */
   if ( CUE_SUCCESS != CU_initialize_registry() ) {
     return CU_get_error();
@@ -41,4 +50,9 @@ int main ( void ) {
   CU_cleanup_registry();
   
   return CU_get_error();
+}
+
+int initialize_suite(void) {
+  setup_mocks();
+  return 0;
 }

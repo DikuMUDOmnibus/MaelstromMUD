@@ -13,8 +13,7 @@ OBJS 					= act_comm.o act_info.o act_move.o act_obj.o act_wiz.o comm.o const.o 
 
 MAIN_OBJ  		= main.o
 
-TEST_OBJS 		= tests/test.act_info.o
-TEST_MAIN_OBJ = tests/test.main.o
+TEST_OBJS 		= tests/main.o tests/mocks.o tests/test.act_info.o tests/test.act_wiz.o
 
 envy: $(MAIN_OBJ) $(OBJS)
 	@echo "[1;35mBuilding the [1;32mOASIS[0;37m"
@@ -22,18 +21,18 @@ envy: $(MAIN_OBJ) $(OBJS)
 	$(CC) $(L_FLAGS) -o envy $(MAIN_OBJ) $(OBJS) $(PKG_CFG)
 	@echo "Done."
 
-test: $(TEST_MAIN_OBJ) $(OBJS) $(TEST_OBJS)
+test: $(OBJS) $(TEST_OBJS)
 	@echo "[1;35mBuilding the [1;32mTests[0;37m"
-	rm -rf test
-	$(CC) $(L_FLAGS) -o test $(OBJS) $(TEST_MAIN_OBJ) $(TEST_OBJS) $(PKG_CFG) -lcunit
+	rm -rf tests/test.envy
+	$(CC) $(L_FLAGS) -o tests/test.envy $(OBJS) $(TEST_OBJS) $(PKG_CFG) -lcunit
 	@echo "Done."
 
 clean:
 	rm -f *.o
-	rm -f tests/*.o
 	rm -f envy
-	rm -f test
 	make
+	rm -f tests/*.o
+	rm -f tests/test.envy
 	make test
 
 %.o: %.c

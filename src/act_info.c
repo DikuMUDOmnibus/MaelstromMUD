@@ -70,23 +70,18 @@ char *	const	where_name	[] =
 /*
  * Local functions.
  */
-char *	format_obj_to_char	args( ( OBJ_DATA *obj, CHAR_DATA *ch,
-			bool fShort ) );
-void	show_list_to_char	args( ( OBJ_DATA *list, CHAR_DATA *ch,
-			bool fShort, bool fShowNothing ) );
-void	show_char_to_char_0	args( ( CHAR_DATA *victim, CHAR_DATA *ch ) );
+char * format_obj_to_char args( ( OBJ_DATA *obj, CHAR_DATA *ch, bool fShort ) );
+void show_list_to_char args( ( OBJ_DATA *list, CHAR_DATA *ch, bool fShort, bool fShowNothing ) );
+void show_char_to_char_0 args( ( CHAR_DATA *victim, CHAR_DATA *ch ) );
 
 /* void	show_char_to_char_1	args( ( CHAR_DATA *victim, CHAR_DATA *ch )
    ); */
 
-void show_char_to_char_1     args( ( CHAR_DATA *victim, CHAR_DATA *ch, char *argument ) );
+void show_char_to_char_1 args( ( CHAR_DATA *victim, CHAR_DATA *ch, char *argument ) );
+void show_char_to_char args( ( CHAR_DATA *list, CHAR_DATA *ch ) );
+void do_scry_exits args( ( CHAR_DATA *ch, ROOM_INDEX_DATA  *scryer ) );
 
-void	show_char_to_char	args( ( CHAR_DATA *list, CHAR_DATA *ch ) );
-void    do_scry_exits           args( ( CHAR_DATA *ch, ROOM_INDEX_DATA  *scryer ) );
-
-
-char *format_obj_to_char( OBJ_DATA *obj, CHAR_DATA *ch, bool fShort )
-{
+char *format_obj_to_char( OBJ_DATA *obj, CHAR_DATA *ch, bool fShort ) {
 	static char buf [ MAX_STRING_LENGTH ];
 
 	buf[0] = '\0';
@@ -859,22 +854,17 @@ void show_char_to_char( CHAR_DATA *list, CHAR_DATA *ch )
 	return;
 } 
 
-
-bool check_blind( CHAR_DATA *ch )
-{
+bool check_blind( CHAR_DATA *ch ) {
 	if ( !IS_NPC( ch ) && IS_SET( ch->act, PLR_HOLYLIGHT ) )
 		return TRUE;
 
-	if ( IS_AFFECTED( ch, AFF_BLIND ) && ch->race != RACE_ILLITHID )
-	{
+	if ( IS_AFFECTED( ch, AFF_BLIND ) && ch->race != RACE_ILLITHID ) {
 		send_to_char(AT_WHITE, "You can't see a thing!\n\r", ch );
 		return FALSE;
 	}
 
 	return TRUE;
 }
-
-
 
 void do_look( CHAR_DATA *ch, char *argument )
 {

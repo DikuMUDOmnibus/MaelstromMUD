@@ -16,4 +16,4 @@ before_install:
   - cd src
 script:
   - make
-  - make test && ./test
+  - make test ; ./test

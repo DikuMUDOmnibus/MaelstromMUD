@@ -1,5 +1,15 @@
 #include "test.h"
 
+void test_check_blind(void) {
+  CU_ASSERT_TRUE(check_blind(mock_supermob));
+
+  SET_BIT(mock_supermob->affected_by, AFF_BLIND);
+
+  CU_ASSERT_FALSE(check_blind(mock_supermob));
+
+  reset_mocks();
+}
+
 void test_add_money(void) {
   MONEY_DATA a;
   MONEY_DATA b;

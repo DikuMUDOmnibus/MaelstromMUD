@@ -691,8 +691,8 @@ struct	kill_data
  * Well known mob virtual numbers.
  * Defined in #MOBILES.
  */
-#define MOB_VNUM_CITYGUARD	   127
-#define MOB_VNUM_DEMON1 	   4
+#define MOB_VNUM_CITYGUARD	   		 127
+#define MOB_VNUM_DEMON1 	   			 4
 #define MOB_VNUM_DEMON2            4
 #define MOB_VNUM_SUPERMOB          7
 #define MOB_VNUM_ULT               3160
@@ -3190,7 +3190,7 @@ void	send_to_char	 		args( ( int AType, const char *txt, CHAR_DATA *ch ) );
 void  set_char_color   	args( ( int AType, CHAR_DATA *ch ) );
 void  show_string      	args( ( DESCRIPTOR_DATA *d, char *input ) );
 void	act	         			args( ( int AType, const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, int type ) );
-int	  real_main 				args( ( int argc, char **argv ) );
+int	  game_main 				args( ( int argc, char **argv ) );
 
 /* db.c */
 void	boot_db		args( ( void ) );
@@ -3638,6 +3638,7 @@ char *	string_proper	args( ( char * argument ) );
 char *	all_capitalize	args( ( const char *str ) );	/* OLC 1.1b */
 char *  string_delline  args( ( CHAR_DATA *ch, char *argument, char *old ) );
 char * string_insline   args( ( CHAR_DATA *ch, char *argument, char *old ) );
+
 /* olc.c */
 bool	run_olc_editor	args( ( DESCRIPTOR_DATA *d ) );
 char	*olc_ed_name	args( ( CHAR_DATA *ch ) );
@@ -3677,8 +3678,7 @@ extern const struct flag_type   rprog_types[];
 extern const struct flag_type   eprog_types[];
 
 /* olc_act.c */
-extern int flag_value       args ( ( const struct flag_type *flag_table,
-			char *argument ) );
+extern int flag_value       args ( ( const struct flag_type *flag_table, char *argument ) );
 extern AFFECT_DATA  *new_affect   args ( ( void ) );    
 extern OBJ_INDEX_DATA    *new_obj_index          args ( ( void ) );
 extern void free_affect		  args ( ( AFFECT_DATA *pAf ) );
@@ -3690,8 +3690,7 @@ extern OBJ_DATA *new_obj_data	  args ( ( void ) );
 extern RESET_DATA *new_reset_data args ( ( void ) ) ;
 
 extern void check_nofloor         args ( ( CHAR_DATA *ch ) );
-extern char *flag_string     args ( ( const struct flag_type *flag_table,
-			int bits ) );
+extern char *flag_string     args ( ( const struct flag_type *flag_table, int bits ) );
 extern void save_clans            args ( ( ) );
 extern void save_social 	  args ( ( ) );
 extern void save_race	 	  args ( ( ) );
@@ -3702,7 +3701,7 @@ extern void save_helps		  args ( ( ) );
 extern void wind_update           args ( ( AREA_DATA *pArea ) );
 extern void send_to_area          args ( ( AREA_DATA *pArea, char *txt ) );
 extern ALIAS_DATA *new_alias      args ( ( ) );
-extern void        free_alias     args ( ( ALIAS_DATA *pAl ) );
+extern void free_alias     args ( ( ALIAS_DATA *pAl ) );
 
 extern void save_player_list	  args ( ( ) ); /*Decklarean */
 extern void save_newbie		  args ( ( ) ); /* Angi */

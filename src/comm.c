@@ -144,7 +144,7 @@ void imc_channel	args( ( const char *buf, int len ) );
 int imcport = -1;
 int imcdesc = -1;
 
-int real_main( int argc, char **argv )
+int game_main( int argc, char **argv )
 {
 	struct timeval now_time;
 	bool fHotReboot = FALSE;
@@ -2733,15 +2733,18 @@ void stop_idling( CHAR_DATA *ch )
 /*
  * Write to all characters.
  */
-void send_to_all_char( const char *text )
-{
+void send_to_all_char( const char *text ) {
 	DESCRIPTOR_DATA *d;
 
-	if ( !text )
+	if ( !text ) {
 		return;
-	for ( d = descriptor_list; d; d = d->next )
-		if ( d->connected == CON_PLAYING )
+	}
+
+	for ( d = descriptor_list; d; d = d->next ) {
+		if ( d->connected == CON_PLAYING ) {
 			send_to_char(AT_YELLOW, text, d->character );
+		}
+	}
 
 	return;
 }
@@ -2749,18 +2752,21 @@ void send_to_all_char( const char *text )
 /*
  * Write to one char.
  */
-void send_to_char(int AType, const char *txt, CHAR_DATA *ch )
-{
-	if ( !ch || !txt || !ch->desc )
+void send_to_char(int AType, const char *txt, CHAR_DATA *ch ) {
+	if ( !ch || !txt || !ch->desc ) {
 		return;
+	}
+
 	free_string( ch->desc->showstr_head );
-	if ( strstr( txt, "&X" ) )
+
+	if ( strstr( txt, "&X" ) ) {
 		set_str_color(AType, txt);
+	}
+
 	ch->desc->showstr_head  = str_dup(txt);
 	ch->desc->showstr_point = ch->desc->showstr_head;
 	set_char_color( AType, ch );
 	show_string( ch->desc, "" );
-
 }
 
 void set_char_color( int AType, CHAR_DATA *ch )

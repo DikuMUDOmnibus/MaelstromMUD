@@ -3,5 +3,5 @@
 #include "merc.h"
 
 int main(int argc, char **argv) {
-  return real_main(argc, argv);
+  return game_main(argc, argv);
 }
