@@ -1,6 +1,6 @@
 CC      = clang
-C_FLAGS = -c -O -Wall -g3 -DNOCRYPT -ftest-coverage
-L_FLAGS = -g -lgcov -coverage
+C_FLAGS = -c -O -Wall -g3 -DNOCRYPT
+L_FLAGS = -g
 PKG_CFG = `pkg-config --cflags --libs jansson libcurl`
 SYSTEM  =
 
