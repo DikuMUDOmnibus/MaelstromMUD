@@ -3181,15 +3181,16 @@ void wiznet             args( (char *string, CHAR_DATA *ch, OBJ_DATA *obj, long 
 bool doubleexp     			args ( ( ) );
 
 /* comm.c */
-void	close_socket	 args( ( DESCRIPTOR_DATA *dclose ) );
-void	write_to_buffer	 args( ( DESCRIPTOR_DATA *d, const char *txt, int length ) );
-void    send_to_all_char args( ( const char *text ) );
-void    send_to_al       args( ( int clr, int level, char *text ) );
+void	close_socket	 		args( ( DESCRIPTOR_DATA *dclose ) );
+void	write_to_buffer	 	args( ( DESCRIPTOR_DATA *d, const char *txt, int length ) );
+void  send_to_all_char 	args( ( const char *text ) );
+void  send_to_al       	args( ( int clr, int level, char *text ) );
 /* send to above level---^   TRI */
-void	send_to_char	 args( ( int AType, const char *txt, CHAR_DATA *ch ) );
-void    set_char_color   args( ( int AType, CHAR_DATA *ch ) );
-void    show_string      args( ( DESCRIPTOR_DATA *d, char *input ) );
-void	act	         args( ( int AType, const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, int type ) );
+void	send_to_char	 		args( ( int AType, const char *txt, CHAR_DATA *ch ) );
+void  set_char_color   	args( ( int AType, CHAR_DATA *ch ) );
+void  show_string      	args( ( DESCRIPTOR_DATA *d, char *input ) );
+void	act	         			args( ( int AType, const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, int type ) );
+int	  real_main 				args( ( int argc, char **argv ) );
 
 /* db.c */
 void	boot_db		args( ( void ) );

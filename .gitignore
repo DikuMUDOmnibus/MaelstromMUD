@@ -9,6 +9,8 @@ banned.lst
 *.gcno
 *.gcov
 src/envy
+src/test
+src/CUnitAutomated-*.xml
 nohup.out
 .vagrant/*
 /Makefile

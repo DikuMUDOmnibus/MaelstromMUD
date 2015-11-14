@@ -11,9 +11,9 @@ addons:
     - libcurl4-openssl-dev
     - libtool
     - libjansson-dev
+    - libcunit1-dev
 before_install:
-  - pip install --user cpp-coveralls
   - cd src
 script:
   - make
-  - make check
+  - make test && test

@@ -72,7 +72,6 @@ const	char	echo_off_str	[] = { IAC, WILL, TELOPT_ECHO, '\0' };
 const	char	echo_on_str		[] = { IAC, WONT, TELOPT_ECHO, '\0' };
 const	char 	go_ahead_str	[] = { IAC, GA, '\0' };
 
-int	main									args( ( int argc, char **argv ) );
 int	close									args( ( int fd ) );
 int	gettimeofday					args( ( struct timeval *tp, struct timezone *tzp ) );
 int	listen								args( ( int s, int backlog ) );
@@ -145,7 +144,7 @@ void imc_channel	args( ( const char *buf, int len ) );
 int imcport = -1;
 int imcdesc = -1;
 
-int main( int argc, char **argv )
+int real_main( int argc, char **argv )
 {
 	struct timeval now_time;
 	bool fHotReboot = FALSE;

@@ -5351,8 +5351,7 @@ void do_afkmes( CHAR_DATA *ch, char *argument )
 
 /* Money functions, for new money format gold/silver/copper --Angi */
 
-MONEY_DATA *add_money( MONEY_DATA *a,  MONEY_DATA *b )
-{
+MONEY_DATA *add_money( MONEY_DATA *a,  MONEY_DATA *b ) {
 	a->gold   += b->gold;
 	a->silver += b->silver;
 	a->copper += b->copper;
@@ -5360,16 +5359,15 @@ MONEY_DATA *add_money( MONEY_DATA *a,  MONEY_DATA *b )
 	return a;
 }
 
-MONEY_DATA *sub_money( MONEY_DATA *a, MONEY_DATA *b )
-{
+MONEY_DATA *sub_money( MONEY_DATA *a, MONEY_DATA *b ) {
 	a->gold   -= b->gold;
 	a->silver -= b->silver;
 	a->copper -= b->copper;
 
 	return a;
 }
-MONEY_DATA *spend_money( MONEY_DATA *a, MONEY_DATA *b )
-{
+
+MONEY_DATA *spend_money( MONEY_DATA *a, MONEY_DATA *b ) {
 
 	/* *a is how much money ch has, and *b is the cost of the item.
 	   Char can already afford, check done before, so just subtract. */
@@ -5380,118 +5378,84 @@ MONEY_DATA *spend_money( MONEY_DATA *a, MONEY_DATA *b )
 	tmp_silver = b->silver;
 	tmp_copper = b->copper;
 
-	if ( a->gold <= b->gold )
-	{
+	if ( a->gold <= b->gold ) {
 		b->gold -= a->gold;
 		a->gold = 0;
-	}
-	else
-	{
+	} else {
 		a->gold -= b->gold;
 		b->gold = 0;
 	}
 
-	if ( a->silver <= b->silver )
-	{
+	if ( a->silver <= b->silver ) {
 		b->silver -= a->silver;
 		a->silver = 0;
-	}
-	else
-	{
+	} else {
 		a->silver -= b->silver;
 		b->silver = 0;
 	}
 
-	if ( a->copper <= b->copper )
-	{
+	if ( a->copper <= b->copper ) {
 		b->copper -= a->copper;
 		a->copper = 0;
-	}
-	else
-	{
+	} else {
 		a->copper -= b->copper;
 		b->copper = 0;
 	}
 
-	if ( b->gold > 0 )
-	{
-		if ( a->silver * S_PER_G <= b->gold * C_PER_G )
-			/*    if ( ( a->silver / SILVER_PER_GOLD ) <= b->gold )*/
-		{
+	if ( b->gold > 0 ) {
+		if ( a->silver * S_PER_G <= b->gold * C_PER_G ) {
 			b->gold -= ( a->silver / SILVER_PER_GOLD );
 			a->silver %= SILVER_PER_GOLD;
-		}
-		else
-		{
+		} else {
 			a->silver -= ( b->gold * SILVER_PER_GOLD );
 			b->gold = 0;
 		}	
-		if ( b->gold > 0 )
-		{
-			if ( a->copper <= b->gold * C_PER_G )
-				/*      if ( ( a->copper / COPPER_PER_GOLD ) <= b->gold ) */
-			{
+
+		if ( b->gold > 0 ) {
+			if ( a->copper <= b->gold * C_PER_G ) {
 				b->gold -= ( a->copper / COPPER_PER_GOLD );
 				a->copper %= COPPER_PER_GOLD;
-			}
-			else
-			{
+			} else {
 				a->copper -= ( b->gold * COPPER_PER_GOLD );
 				b->gold =0;
 			}
 		}
 	}
-	/* if b->gold != 0 now, then bug( etc.. ) */
 
-	if ( b->silver > 0 )
-	{
-		if ( ( a->gold * SILVER_PER_GOLD ) <= b->silver )
-		{
+	if ( b->silver > 0 ) {
+		if ( ( a->gold * SILVER_PER_GOLD ) <= b->silver ) {
 			b->silver -= ( a->gold * SILVER_PER_GOLD );
 			a->gold = 0;
-		}
-		else
-		{
+		} else {
 			a->gold -= ( b->silver / SILVER_PER_GOLD ); 
 			b->silver %= SILVER_PER_GOLD;
 		}
-		if ( b->silver > 0 )
-		{
-			if ( a->copper <= b->silver * S_PER_G )
-				/*      if ( ( a->copper / COPPER_PER_SILVER ) <= b->silver ) */
-			{
+
+		if ( b->silver > 0 ) {
+			if ( a->copper <= b->silver * S_PER_G ) {
 				b->silver -= ( a->copper / COPPER_PER_SILVER );
 				a->copper %= COPPER_PER_SILVER;
-			}
-			else
-			{
+			} else {
 				a->copper -= ( b->silver * COPPER_PER_SILVER );
 				b->silver =0;
 			}
 		}
 	}
 
-	if ( b->copper > 0 )
-	{
-		if ( ( a->silver * COPPER_PER_SILVER ) <= b->copper )
-		{
+	if ( b->copper > 0 ) {
+		if ( ( a->silver * COPPER_PER_SILVER ) <= b->copper ) {
 			b->copper -= ( a->silver * COPPER_PER_SILVER );
 			a->silver = 0;
-		}
-		else
-		{
+		} else {
 			a->silver -= ( b->copper / COPPER_PER_SILVER );
 			b->copper %= COPPER_PER_SILVER;
 		}
-		if ( b->copper > 0 )
-		{
-			if ( ( a->gold * COPPER_PER_GOLD ) <= b->copper )
-			{
+
+		if ( b->copper > 0 ) {
+			if ( ( a->gold * COPPER_PER_GOLD ) <= b->copper ) {
 				b->copper -= ( a->gold * COPPER_PER_GOLD );
 				a->gold = 0;
-			}
-			else
-			{
+			} else {
 				a->gold -= ( b->copper / COPPER_PER_GOLD );
 				b->copper %= COPPER_PER_GOLD;
 			}
@@ -5552,8 +5516,7 @@ MONEY_DATA *take_money( CHAR_DATA *ch, int amt, char *type, char *verb )
 	return &new_money;
 }
 
-char *money_string( MONEY_DATA *money )
-{
+char *money_string( MONEY_DATA *money ) {
 	static  char buf  [ MAX_STRING_LENGTH ];
 	char *bptr = buf;
 	bool gold;
@@ -5564,46 +5527,38 @@ char *money_string( MONEY_DATA *money )
 	silver = ( money->silver > 0 );
 	copper = ( money->copper > 0 );
 
-	if ( gold )
-	{
+	if ( gold ) {
 		bptr += sprintf( bptr, "%d gold", money->gold );
-		if ( silver != copper )
-		{
+
+		if ( silver != copper ) {
 			strcpy( bptr, " and " );
 			bptr += 5;
-		}
-		else if ( silver || copper )
-		{
+		} else if ( silver || copper ) {
 			strcpy ( bptr, ", " );
 			bptr += 2;
-		}
-		else
-		{
+		} else {
 			strcpy( bptr, " coins." );
 			bptr += 7;
 		}
 	}
 
-	if ( silver )
-	{
+	if ( silver ) {
 		bptr += sprintf( bptr, "%d silver", money->silver );
-		if ( copper )
-		{
+
+		if ( copper ) {
 			strcpy( bptr, " and " );
 			bptr += 5;
-		}
-		else
-		{
+		} else {
 			strcpy( bptr, " coins." );
 			bptr += 7;
 		}
 	}
 
-	if ( copper )
+	if ( copper ) {
 		bptr += sprintf( bptr, "%d copper coins.", money->copper );
+	}
 
-	if ( !gold && !silver && !copper )
-	{
+	if ( !gold && !silver && !copper ) {
 		bptr += sprintf( bptr, "0 coins." );
 	}
 
