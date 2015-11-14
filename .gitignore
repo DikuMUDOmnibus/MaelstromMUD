@@ -9,7 +9,7 @@ banned.lst
 *.gcno
 *.gcov
 src/envy
-src/test
+src/tests/test.envy
 src/CUnitAutomated-*.xml
 nohup.out
 .vagrant/*
