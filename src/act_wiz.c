@@ -2042,7 +2042,6 @@ void do_ofind( CHAR_DATA *ch, char *argument )
 	nMatch  = 0;
 	if ( arg[0] == '*' )
 	{
-		extern int flag_lookup args( ( const char *name, const struct flag_type *flag_table ) );
 		int type = flag_lookup( (arg+1), type_flags );
 		int sub_type = 0;
 		char buf2 [MAX_STRING_LENGTH] = {0};

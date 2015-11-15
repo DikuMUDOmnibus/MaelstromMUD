@@ -3650,7 +3650,12 @@ void 	purge_area	args( ( AREA_DATA * pArea ) ); /* Angi */
 char *	spec_string	args( ( SPEC_FUN *fun ) );	/* OLC */
 
 /* bit.c */
-extern const struct flag_type 	area_flags[];
+bool is_stat args( ( const struct flag_type *flag_table ) );
+int flag_lookup args( ( const char *name, const struct flag_type *flag_table ) );
+int flag_value args( ( const struct flag_type *flag_table, char *argument ) );
+char *flag_string args ( ( const struct flag_type *flag_table, int bits ) );
+
+extern const struct flag_type area_flags[];
 extern const struct flag_type	sex_flags[];
 extern const struct flag_type	exit_flags[];
 extern const struct flag_type	door_resets[];
@@ -3658,27 +3663,25 @@ extern const struct flag_type	room_flags[];
 extern const struct flag_type	sector_flags[];
 extern const struct flag_type	type_flags[];
 extern const struct flag_type	extra_flags[];
-/* FOR NEW FLAGS */
 extern const struct flag_type	anti_race_flags[];
 extern const struct flag_type	anti_class_flags[];
 extern const struct flag_type	wear_flags[];
 extern const struct flag_type	act_flags[];
 extern const struct flag_type	affect_flags[];
-extern const struct flag_type   affect2_flags[];
+extern const struct flag_type affect2_flags[];
 extern const struct flag_type	apply_flags[];
 extern const struct flag_type	wear_loc_strings[];
 extern const struct flag_type	wear_loc_flags[];
 extern const struct flag_type	weapon_flags[];
 extern const struct flag_type	container_flags[];
 extern const struct flag_type	liquid_flags[];
-extern const struct flag_type   immune_flags[];
-extern const struct flag_type   mprog_types[];
-extern const struct flag_type   oprog_types[];
-extern const struct flag_type   rprog_types[];
-extern const struct flag_type   eprog_types[];
+extern const struct flag_type immune_flags[];
+extern const struct flag_type mprog_types[];
+extern const struct flag_type oprog_types[];
+extern const struct flag_type rprog_types[];
+extern const struct flag_type eprog_types[];
 
 /* olc_act.c */
-extern int flag_value       args ( ( const struct flag_type *flag_table, char *argument ) );
 extern AFFECT_DATA  *new_affect   args ( ( void ) );    
 extern OBJ_INDEX_DATA    *new_obj_index          args ( ( void ) );
 extern void free_affect		  args ( ( AFFECT_DATA *pAf ) );
@@ -3690,7 +3693,6 @@ extern OBJ_DATA *new_obj_data	  args ( ( void ) );
 extern RESET_DATA *new_reset_data args ( ( void ) ) ;
 
 extern void check_nofloor         args ( ( CHAR_DATA *ch ) );
-extern char *flag_string     args ( ( const struct flag_type *flag_table, int bits ) );
 extern void save_clans            args ( ( ) );
 extern void save_social 	  args ( ( ) );
 extern void save_race	 	  args ( ( ) );

@@ -28,3 +28,9 @@ void test_money_string(void);
 
 /* test.act_wiz.c */
 void test_do_doubleexp(void);
+
+/* test.bit.c */
+void test_is_stat(void);
+void test_flag_lookup(void);
+void test_flag_value(void);
+void test_flag_string(void);

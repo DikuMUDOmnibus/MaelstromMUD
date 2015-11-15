@@ -109,14 +109,9 @@ struct	editor_cmd_type
 /*
  * Utils.
  */
-AREA_DATA *get_vnum_area	args ( ( int vnum ) );
-AREA_DATA *get_area_data	args ( ( int vnum ) );
-int flag_value			args ( ( const struct flag_type *flag_table,
-			char *argument) );
-char *flag_string		args ( ( const struct flag_type *flag_table,
-			int bits ) );
-void add_reset			args ( ( ROOM_INDEX_DATA *room, 
-			RESET_DATA *pReset, int index ) );
+AREA_DATA *get_vnum_area args ( ( int vnum ) );
+AREA_DATA *get_area_data args ( ( int vnum ) );
+void add_reset args ( ( ROOM_INDEX_DATA *room, RESET_DATA *pReset, int index ) );
 
 
 

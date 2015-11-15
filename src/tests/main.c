@@ -15,10 +15,19 @@ CU_TestInfo test_act_wiz[] = {
   CU_TEST_INFO_NULL,
 };
 
+CU_TestInfo test_bit[] = {
+  { "is_stat", test_is_stat },
+  { "flag_lookup", test_flag_lookup },
+  { "flag_value", test_flag_value },
+  { "flag_string", test_flag_string },
+  CU_TEST_INFO_NULL,
+};
+
 /* Test Suites */
 CU_SuiteInfo suites[] = {
   { "act_info", initialize_suite, NULL, test_act_info },
   { "act_wiz", initialize_suite, NULL, test_act_wiz },
+  { "bit", initialize_suite, NULL, test_bit },
   CU_SUITE_INFO_NULL,
 };
 
