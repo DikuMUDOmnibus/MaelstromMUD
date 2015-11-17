@@ -1,6 +1,6 @@
 #include "test.h"
 
-void test_do_doubleexp(void) {
+TEST(do_doubleexp) {
   do_doubleexp(mock_supermob, "on");
   CU_ASSERT_TRUE(doubleexp());
 

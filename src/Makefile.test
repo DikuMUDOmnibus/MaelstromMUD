@@ -3,7 +3,7 @@ include Makefile
 TEST_C_FLAGS  = $(C_FLAGS) -fprofile-arcs -ftest-coverage
 TEST_L_FLAGS  = $(L_FLAGS) -lgcov -coverage
 TEST_OBJS 		= $(OBJS) tests/main.o tests/mocks.o tests/test.act_info.o \
-								tests/test.act_wiz.o tests/test.bit.o
+								tests/test.act_wiz.o tests/test.bit.o tests/test.mem.o
 
 default: $(TEST_OBJS)
 	@echo "[1;35mBuilding the [1;32mTests[0;37m"

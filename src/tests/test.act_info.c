@@ -1,6 +1,6 @@
 #include "test.h"
 
-void test_check_blind(void) {
+TEST(check_blind) {
   CU_ASSERT_TRUE(check_blind(mock_supermob));
 
   SET_BIT(mock_supermob->affected_by, AFF_BLIND);
@@ -10,7 +10,7 @@ void test_check_blind(void) {
   reset_mocks();
 }
 
-void test_add_money(void) {
+TEST(add_money) {
   MONEY_DATA a;
   MONEY_DATA b;
 
@@ -29,7 +29,7 @@ void test_add_money(void) {
   CU_ASSERT_EQUAL(a.copper, 62);
 }
 
-void test_sub_money(void) {
+TEST(sub_money) {
   MONEY_DATA a;
   MONEY_DATA b;
 
@@ -48,7 +48,7 @@ void test_sub_money(void) {
   CU_ASSERT_EQUAL(a.copper, 16);
 }
 
-void test_spend_money(void) {
+TEST(spend_money) {
   MONEY_DATA a;
   MONEY_DATA b;
 
@@ -67,7 +67,7 @@ void test_spend_money(void) {
   CU_ASSERT_EQUAL(a.copper, 0);
 }
 
-void test_money_string(void) {
+TEST(money_string) {
   MONEY_DATA a;
   char *str;
 

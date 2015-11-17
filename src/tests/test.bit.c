@@ -1,6 +1,6 @@
 #include "test.h"
 
-void test_is_stat(void) {
+TEST(is_stat) {
   const struct flag_type mock_flags[] = {
     { "none", 0, FALSE },
   };
@@ -15,7 +15,7 @@ void test_is_stat(void) {
   CU_ASSERT_FALSE(is_stat(mock_flags));
 }
 
-void test_flag_lookup(void) {
+TEST(flag_lookup) {
   /* existent settable flag */
   CU_ASSERT_EQUAL(flag_lookup("locked", exit_flags), EX_LOCKED);
 
@@ -26,7 +26,7 @@ void test_flag_lookup(void) {
   CU_ASSERT_EQUAL(flag_lookup("potato", exit_flags), NO_FLAG);
 }
 
-void test_flag_value(void) {
+TEST(flag_value) {
   /* existent settable flag */
   CU_ASSERT_EQUAL(flag_value(exit_flags, "locked"), EX_LOCKED);
 
@@ -41,15 +41,15 @@ void test_flag_value(void) {
 
   /* nonexistent flag */
   CU_ASSERT_EQUAL(flag_value(exit_flags, "potato"), NO_FLAG);
-  
+
   /* existent settable and nonexistent flags */
   CU_ASSERT_EQUAL(flag_value(exit_flags, "closed potato"), EX_CLOSED);
-  
+
   /* existent settable, unsettable, and nonexistent flags */
   CU_ASSERT_EQUAL(flag_value(exit_flags, "closed bashed potato"), EX_CLOSED);
 }
 
-void test_flag_string(void) {
+TEST(flag_string) {
   /* existent settable bit */
   CU_ASSERT_STRING_EQUAL(flag_string( exit_flags, EX_LOCKED ), "locked");
 
