@@ -309,15 +309,15 @@ void free_social_index( SOCIAL_DATA *pSocial )
 	free_string(pSocial->others_no_arg);
 	free_string(pSocial->char_found);
 	free_string(pSocial->others_found);
-	free_string(pSocial->vict_found);    
+	free_string(pSocial->vict_found);
 	free_string(pSocial->char_auto);
-	free_string(pSocial->others_auto);    
+	free_string(pSocial->others_auto);
 	top_social--;
 
 	free_mem( pSocial, sizeof( *pSocial ) );
 
 	return;
-}  
+}
 
 SOCIAL_DATA *new_social_index ( void )
 {
@@ -372,7 +372,7 @@ CLAN_DATA *new_clan_index( void )
 	pClan->next             =   NULL;
 	pClan->bankaccount.gold   = 0;
 	pClan->bankaccount.silver = 0;
-	pClan->bankaccount.copper = 0; 
+	pClan->bankaccount.copper = 0;
 	pClan->name             =   &str_empty[0];
 	pClan->diety            =   &str_empty[0];
 	pClan->description	    =   &str_empty[0];
@@ -822,10 +822,8 @@ void free_race_data( RACE_DATA *pRace )
 	top_race--;
 
 	free_string( pRace->race_name );
-	free_string( pRace->race_full ); 
+	free_string( pRace->race_full );
 
 	free_mem( pRace, sizeof( *pRace ) );
 
 }
-
-
