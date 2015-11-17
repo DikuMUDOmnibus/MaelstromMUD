@@ -92,7 +92,7 @@ typedef struct  war_data					WAR_DATA;
 //typedef struct  userl_data			  USERL_DATA;
 
 
-typedef struct money_data	 	MONEY_DATA; 
+typedef struct money_data	 	MONEY_DATA;
 
 #define S_PER_G				10
 #define C_PER_S				10
@@ -294,8 +294,8 @@ struct	weather_data
 };
 
 
-/* 
- * WIZnet flags 
+/*
+ * WIZnet flags
  */
 #define WIZ_ON			      1
 #define WIZ_TICKS		      2
@@ -304,11 +304,11 @@ struct	weather_data
 #define WIZ_LINKS		     16
 #define WIZ_DEATHS		     32
 #define WIZ_RESETS		     64
-#define WIZ_MOBDEATHS		    128 
+#define WIZ_MOBDEATHS		    128
 #define WIZ_FLAGS		    256
 #define WIZ_PENALTIES		    512
 #define WIZ_SACCING		   1024
-#define WIZ_LEVELS		   2048 
+#define WIZ_LEVELS		   2048
 #define WIZ_SECURE		   4096
 #define WIZ_SWITCHES		   8192
 #define WIZ_SNOOPS		  16384
@@ -381,7 +381,7 @@ struct	descriptor_data
 	char **             pString;	/* OLC */
 	int			editor;		/* OLC */
 	int                 editin;         /* Altrag, again for nesting */
-	bool		ansi;  
+	bool		ansi;
 };
 
 
@@ -676,7 +676,7 @@ struct	kill_data
 #define Z			33554432
 #define aa		67108864 	/* doubled due to conflicts */
 #define bb		134217728
-#define cc		268435456    
+#define cc		268435456
 #define dd		536870912
 #define ee		1073741824
 
@@ -758,10 +758,10 @@ struct	kill_data
  * Used in #MOBILES.
  */
 #define AFF_BLIND		BV00
-#define AFF_INVISIBLE		BV01	      
+#define AFF_INVISIBLE		BV01
 #define AFF_DETECT_EVIL		BV02
 #define AFF_DETECT_INVIS	BV03
-#define AFF_DETECT_MAGIC	BV04    
+#define AFF_DETECT_MAGIC	BV04
 #define AFF_DETECT_HIDDEN	BV05
 #define AFF_HASTE		BV06
 #define AFF_SANCTUARY		BV07
@@ -933,7 +933,7 @@ struct	kill_data
 #define WEAPON_MACE		4
 #define WEAPON_AXE		5
 #define WEAPON_FLAIL		6
-#define WEAPON_WHIP		7	
+#define WEAPON_WHIP		7
 #define WEAPON_POLEARM		8
 
 /* weapon types */
@@ -1142,10 +1142,10 @@ struct	kill_data
 #define ITEM_WEAR_HEAD		     16
 #define ITEM_WEAR_LEGS		     32
 #define ITEM_WEAR_FEET		     64
-#define ITEM_WEAR_HANDS		    128 
+#define ITEM_WEAR_HANDS		    128
 #define ITEM_WEAR_ARMS		    256
 #define ITEM_WEAR_SHIELD	    512
-#define ITEM_WEAR_ABOUT		   1024 
+#define ITEM_WEAR_ABOUT		   1024
 #define ITEM_WEAR_WAIST		   2048
 #define ITEM_WEAR_WRIST		   4096
 #define ITEM_WIELD		   8192
@@ -1283,7 +1283,7 @@ struct	kill_data
 #define ROOM_NO_ASTRAL_OUT       262144
 #define ROOM_TELEPORT_AREA       524288
 #define ROOM_TELEPORT_WORLD     1048576
-#define ROOM_NO_OFFENSIVE       2097152 
+#define ROOM_NO_OFFENSIVE       2097152
 #define ROOM_NO_FLEE            4194304
 #define ROOM_SILENT             8388608
 #define ROOM_BANK		16777216
@@ -1419,7 +1419,7 @@ struct	kill_data
  */
 #define PLR_IS_NPC		BV00		/* Don't EVER set.	*/
 #define PLR_BOUGHT_PET		BV01
-#define PLR_AFK			BV02    
+#define PLR_AFK			BV02
 #define PLR_AUTOEXIT		BV03
 #define PLR_AUTOLOOT		BV04
 #define PLR_AUTOSAC             BV05
@@ -1491,10 +1491,10 @@ struct	kill_data
  * Log Channels
  * Added by Altrag.
  */
-#define CHANNEL_LOG		   2048 
-#define CHANNEL_BUILD		   4096 
-#define CHANNEL_GOD                8192 
-#define CHANNEL_GUARDIAN          16384  
+#define CHANNEL_LOG		   2048
+#define CHANNEL_BUILD		   4096
+#define CHANNEL_GOD                8192
+#define CHANNEL_GUARDIAN          16384
 #define CHANNEL_GUILD		  32768
 #define CHANNEL_CODER             65536
 #define CHANNEL_INFO		 131072
@@ -1625,7 +1625,7 @@ struct	char_data
 	time_t              last_note;
 	int 		timer;
 	int 		wait;
-	int                 race_wait; 
+	int                 race_wait;
 	int 		hit;
 	/*    int 		max_hit; */
 	int			perm_hit;
@@ -1642,7 +1642,7 @@ struct	char_data
 	/*    int                 max_bp;*/
 	int			perm_bp;
 	int		 	mod_bp;
-	int			charisma; 
+	int			charisma;
 	MONEY_DATA		money;
 	int			exp;
 	int			act;
@@ -1726,7 +1726,7 @@ struct	pc_data
 	PC_DATA *		next;
 	ALIAS_DATA *        alias_list;
 	char *		pwd;
-	char *              afkchar; 
+	char *              afkchar;
 	char *		bamfin;
 	char *		bamfout;
 	char *		bamfusee;
@@ -2000,7 +2000,7 @@ struct	exit_data
 /*
  * Reset commands:
  *   '*': comment
- *   'M': read a mobile 
+ *   'M': read a mobile
  *   'O': read an object
  *   'P': put object in object
  *   'G': give object to mobile
@@ -2073,10 +2073,10 @@ struct  new_clan_data
 	int                 obj_vnum_2;
 	int                 obj_vnum_3;
 	int                 settings;
-}; 
+};
 
-/* 
- * ROOM AFFECT type 
+/*
+ * ROOM AFFECT type
  */
 struct	room_affect_data
 {
@@ -2208,7 +2208,7 @@ extern  int	gsn_steal;
 extern  int	gsn_disarm;
 extern  int     gsn_poison_weapon;
 
-extern  int     gsn_bash;  
+extern  int     gsn_bash;
 extern	int	gsn_enhanced_damage;
 extern  int     gsn_enhanced_two;
 extern  int     gsn_enhanced_hit;
@@ -2218,7 +2218,7 @@ extern  int	gsn_high_kick;
 extern  int	gsn_spin_kick;
 extern  int	gsn_jump_kick;
 extern  int     gsn_circle;
-extern  int     gsn_throw;  
+extern  int     gsn_throw;
 extern  int     gsn_feed;
 extern	int	gsn_parry;
 extern	int	gsn_rescue;
@@ -2536,7 +2536,7 @@ DECLARE_DO_FUN(	do_advance	);
 DECLARE_DO_FUN( do_affectedby   );
 DECLARE_DO_FUN(	do_raffect	);
 DECLARE_DO_FUN( do_afk		);
-DECLARE_DO_FUN( do_afkmes       ); 
+DECLARE_DO_FUN( do_afkmes       );
 DECLARE_DO_FUN(	do_allow	);
 DECLARE_DO_FUN( do_ansi         );
 DECLARE_DO_FUN(	do_answer	);
@@ -2669,7 +2669,7 @@ DECLARE_DO_FUN(	do_list		);
 DECLARE_DO_FUN(	do_lock		);
 DECLARE_DO_FUN(	do_log		);
 DECLARE_DO_FUN(	do_look		);
-DECLARE_DO_FUN( do_lowrecall ); 
+DECLARE_DO_FUN( do_lowrecall );
 DECLARE_DO_FUN(	do_memory	);
 DECLARE_DO_FUN( do_mental_drain );
 DECLARE_DO_FUN(	do_mfind	);
@@ -3101,10 +3101,10 @@ char *	crypt		args( ( const char *key, const char *salt ) );
 
 /*
  * The crypt(3) function is not available on some operating systems.
- * 
+ *
  * In particular, the U.S. Government prohibits its export from the
  * United States to foreign countries.
- * 
+ *
  * Turn on NOCRYPT to keep passwords in plain text.
  */
 #if	defined( NOCRYPT )
@@ -3639,6 +3639,37 @@ char *	all_capitalize	args( ( const char *str ) );	/* OLC 1.1b */
 char *  string_delline  args( ( CHAR_DATA *ch, char *argument, char *old ) );
 char * string_insline   args( ( CHAR_DATA *ch, char *argument, char *old ) );
 
+/* mem.c */
+RESET_DATA				*new_reset_data		args ( ( void ) );
+void							free_reset_data		args ( ( RESET_DATA *pReset ) );
+AREA_DATA					*new_area					args ( ( void ) );
+void							free_area					args ( ( AREA_DATA *pArea ) );
+EXIT_DATA					*new_exit					args ( ( void ) );
+void							free_exit					args ( ( EXIT_DATA *pExit ) );
+EXTRA_DESCR_DATA 	*new_extra_descr	args ( ( void ) );
+void							free_extra_descr	args ( ( EXTRA_DESCR_DATA *pExtra ) );
+ROOM_INDEX_DATA 	*new_room_index		args ( ( void ) );
+void							free_room_index		args ( ( ROOM_INDEX_DATA *pRoom ) );
+AFFECT_DATA				*new_affect				args ( ( void ) );
+void							free_affect				args ( ( AFFECT_DATA* pAf ) );
+SHOP_DATA					*new_shop					args ( ( void ) );
+void							free_shop					args ( ( SHOP_DATA *pShop ) );
+OBJ_INDEX_DATA		*new_obj_index		args ( ( void ) );
+void							free_obj_index		args ( ( OBJ_INDEX_DATA *pObj ) );
+MOB_INDEX_DATA		*new_mob_index		args ( ( void ) );
+void							free_mob_index		args ( ( MOB_INDEX_DATA *pMob ) );
+CLAN_DATA       	*new_clan_index   args ( ( void ) );
+void            	free_clan_index   args ( ( CLAN_DATA *pClan ) );
+MPROG_DATA      	*new_mprog_data   args ( ( void ) );
+void            	free_mprog_data   args ( ( MPROG_DATA *pMProg ) );
+TRAP_DATA       	*new_trap_data    args ( ( void ) );
+void            	free_trap_data    args ( ( TRAP_DATA *pTrap ) );
+SOCIAL_DATA				*new_social_index	args ( ( void ) );
+void							free_social_index	args ( ( SOCIAL_DATA *pSocial ) );
+NEWBIE_DATA				*new_newbie_index	args ( ( void ) );
+RACE_DATA					*new_race_data		args ( ( void ) );
+void							free_race_data		args ( ( RACE_DATA *pRace ) );
+
 /* olc.c */
 bool	run_olc_editor	args( ( DESCRIPTOR_DATA *d ) );
 char	*olc_ed_name	args( ( CHAR_DATA *ch ) );
@@ -3682,7 +3713,7 @@ extern const struct flag_type rprog_types[];
 extern const struct flag_type eprog_types[];
 
 /* olc_act.c */
-extern AFFECT_DATA  *new_affect   args ( ( void ) );    
+extern AFFECT_DATA  *new_affect   args ( ( void ) );
 extern OBJ_INDEX_DATA    *new_obj_index          args ( ( void ) );
 extern void free_affect		  args ( ( AFFECT_DATA *pAf ) );
 extern EXTRA_DESCR_DATA *new_extra_descr args( ( void ) );

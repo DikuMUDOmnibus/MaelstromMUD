@@ -70,14 +70,14 @@ void    cedit           args( ( CHAR_DATA *ch, char *argument ) );
 void    mpedit          args( ( CHAR_DATA *ch, char *argument ) );
 void    hedit           args( ( CHAR_DATA *ch, char *argument ) );
 void    tedit           args( ( CHAR_DATA *ch, char *argument ) );
-void 	sedit		args( ( CHAR_DATA *ch, char *argument ) );
-void   	rename_object	args( ( CHAR_DATA *ch, char *argument ) );
-void	forge_obj	args( ( CHAR_DATA *ch, OBJ_DATA *to_forge ) );
-void	forge_object	args( ( CHAR_DATA *ch, char *argument ) );
-void    mreset		args( ( CHAR_DATA *ch, char *argument ) );
-void	spedit		args( ( CHAR_DATA *ch, char *argument ) );
-void    nedit		args( ( CHAR_DATA *ch, char *argument ) ); 
-void  race_edit		args( ( CHAR_DATA *ch, char *argument ) ); 
+void 		sedit						args( ( CHAR_DATA *ch, char *argument ) );
+void   	rename_object		args( ( CHAR_DATA *ch, char *argument ) );
+void		forge_obj				args( ( CHAR_DATA *ch, OBJ_DATA *to_forge ) );
+void		forge_object		args( ( CHAR_DATA *ch, char *argument ) );
+void    mreset					args( ( CHAR_DATA *ch, char *argument ) );
+void		spedit					args( ( CHAR_DATA *ch, char *argument ) );
+void    nedit						args( ( CHAR_DATA *ch, char *argument ) );
+void  	race_edit				args( ( CHAR_DATA *ch, char *argument ) );
 
 /*
  * OLC Constants
@@ -131,7 +131,7 @@ extern const struct olc_cmd_type	rename_obj_table[];
 extern const struct olc_cmd_type	forge_obj_table[];
 extern const struct olc_cmd_type	mreset_table[];
 extern const struct olc_cmd_type	spedit_table[];
-extern const struct olc_cmd_type	nedit_table[]; 
+extern const struct olc_cmd_type	nedit_table[];
 extern const struct olc_cmd_type	race_edit_table[];
 
 /*
@@ -166,7 +166,7 @@ DECLARE_OLC_FUN( aedit_llevel		);
 DECLARE_OLC_FUN( aedit_ulevel		);
 DECLARE_OLC_FUN( aedit_noquest		);
 DECLARE_OLC_FUN( aedit_mudschool	);
-DECLARE_OLC_FUN( aedit_color		); 
+DECLARE_OLC_FUN( aedit_color		);
 
 /*
  * Clan Editor Prototypes
@@ -398,46 +398,5 @@ DECLARE_OLC_FUN( race_edit_delete		);
 #define RENAME_OBJ(Ch, Obj)  ( Obj = (OBJ_DATA *)Ch->desc->pEdit )
 #define FORGE_OBJ(Ch, Obj)	( Obj = (OBJ_DATA*)Ch->desc->pEdit )
 #define EDIT_SPELL( Ch, Spell)  ( Spell = (SKILL_TYPE *)Ch->desc->pEdit )
-#define EDIT_NEWBIE( Ch, Newbie ) ( Newbie = (NEWBIE_DATA *)Ch->desc->pEdit ) 
+#define EDIT_NEWBIE( Ch, Newbie ) ( Newbie = (NEWBIE_DATA *)Ch->desc->pEdit )
 #define EDIT_RACE(Ch, pRace) ( pRace = (RACE_DATA *)Ch->desc->pEdit )
-
-/*
- * Prototypes
- */
-/* mem.c - memory prototypes. */
-#define ED	EXTRA_DESCR_DATA
-RESET_DATA	*new_reset_data		args ( ( void ) );
-void		free_reset_data		args ( ( RESET_DATA *pReset ) );
-AREA_DATA	*new_area		args ( ( void ) );
-void		free_area		args ( ( AREA_DATA *pArea ) );
-EXIT_DATA	*new_exit		args ( ( void ) );
-void		free_exit		args ( ( EXIT_DATA *pExit ) );
-ED 		*new_extra_descr	args ( ( void ) );
-void		free_extra_descr	args ( ( ED *pExtra ) );
-ROOM_INDEX_DATA *new_room_index		args ( ( void ) );
-void		free_room_index		args ( ( ROOM_INDEX_DATA *pRoom ) );
-AFFECT_DATA	*new_affect		args ( ( void ) );
-void		free_affect		args ( ( AFFECT_DATA* pAf ) );
-SHOP_DATA	*new_shop		args ( ( void ) );
-void		free_shop		args ( ( SHOP_DATA *pShop ) );
-OBJ_INDEX_DATA	*new_obj_index		args ( ( void ) );
-void		free_obj_index		args ( ( OBJ_INDEX_DATA *pObj ) );
-MOB_INDEX_DATA	*new_mob_index		args ( ( void ) );
-void		free_mob_index		args ( ( MOB_INDEX_DATA *pMob ) );
-CLAN_DATA       *new_clan_index         args ( ( void ) );
-void            free_clan_index         args ( ( CLAN_DATA *pClan ) );
-/* -- Altrag */
-MPROG_DATA      *new_mprog_data         args ( ( void ) );
-void            free_mprog_data         args ( ( MPROG_DATA *pMProg ) );
-TRAP_DATA       *new_trap_data          args ( ( void ) );
-void            free_trap_data          args ( ( TRAP_DATA *pTrap ) );
-/* Decklarean */
-SOCIAL_DATA	*new_social_index	args ( ( void ) );
-void		free_social_index	args ( ( SOCIAL_DATA *pSocial ) );
-/* Angi */
-NEWBIE_DATA	*new_newbie_index	args ( ( void ) );
-/* Decklarean */
-RACE_DATA	*new_race_data	args ( ( void ) );
-void		free_race_data	args ( ( RACE_DATA *pRace ) );
-
-#undef	ED
