@@ -1,113 +1,122 @@
 #include "test.h"
 
-TEST(new_reset_data) {
+DO_TEST(new_reset_data) {
+  RESET_DATA *testReset = new_reset_data();
+
+  CU_ASSERT_EQUAL(sizeof(*testReset), 20);
+}
+
+DO_TEST(free_reset_data) {
+  // RESET_DATA *testReset = new_reset_data();
+}
+
+DO_TEST(new_area) {
+  // AREA_DATA *testArea = new_area();
+  //
+  // CU_ASSERT_EQUAL(sizeof(*testReset)), 20);
+}
+
+DO_TEST(free_area) {
+  // AREA_DATA *testArea = new_area();
+}
+
+DO_TEST(new_exit) {
+  // EXIT_DATA *testExit = new_exit();
+}
+
+DO_TEST(free_exit) {
+  // EXIT_DATA *testExit = new_exit();
+}
+
+DO_TEST(free_trap_data) {
 
 }
 
-TEST(free_reset_data) {
+DO_TEST(new_extra_descr) {
 
 }
 
-TEST(new_area) {
+DO_TEST(free_extra_descr) {
 
 }
 
-TEST(free_area) {
+DO_TEST(new_social_index) {
 
 }
 
-TEST(new_exit) {
+DO_TEST(free_social_index) {
 
 }
 
-TEST(free_trap_data) {
+DO_TEST(new_room_index) {
 
 }
 
-TEST(free_exit) {
+DO_TEST(free_room_index) {
 
 }
 
-TEST(new_extra_descr) {
+DO_TEST(new_newbie_index) {
 
 }
 
-TEST(free_extra_descr) {
+DO_TEST(new_clan_index) {
 
 }
 
-TEST(free_social_index) {
+DO_TEST(new_affect) {
 
 }
 
-TEST(new_room_index) {
+DO_TEST(free_affect) {
 
 }
 
-TEST(new_social_index) {
+DO_TEST(new_alias) {
 
 }
 
-TEST(new_newbie_index) {
+DO_TEST(free_alias) {
 
 }
 
-TEST(new_clan_index) {
+DO_TEST(new_shop) {
 
 }
 
-TEST(free_room_index) {
+DO_TEST(free_shop) {
 
 }
 
-TEST(new_affect) {
+DO_TEST(free_obj_index) {
 
 }
 
-TEST(new_alias) {
+DO_TEST(new_mob_index) {
 
 }
 
-TEST(free_alias) {
+DO_TEST(free_mob_index) {
 
 }
 
-TEST(free_affect) {
+DO_TEST(new_mprog_data) {
 
 }
 
-TEST(new_shop) {
+DO_TEST(free_mprog_data) {
 
 }
 
-TEST(free_shop) {
+DO_TEST(new_race_data) {
 
 }
 
-TEST(free_obj_index) {
+DO_TEST(free_race_data) {
 
 }
 
-TEST(new_mob_index) {
-
-}
-
-TEST(free_mprog_data) {
-
-}
-
-TEST(free_mob_index) {
-
-}
-
-TEST(new_mprog_data) {
-
-}
-
-TEST(new_race_data) {
-
-}
-
-TEST(free_race_data) {
-
-}
+DO_TEST_SUITE(mem) = {
+  TEST(new_reset_data),
+  CU_TEST_INFO_NULL,
+};

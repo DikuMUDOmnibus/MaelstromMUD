@@ -1,33 +1,11 @@
 #include "test.h"
 
-/* Unit Tests */
-CU_TestInfo test_act_info[] = {
-  { "check_blind", test_check_blind },
-  { "add_money", test_add_money },
-  { "sub_money", test_sub_money },
-  { "spend_money", test_spend_money },
-  { "money_string", test_money_string },
-  CU_TEST_INFO_NULL,
-};
-
-CU_TestInfo test_act_wiz[] = {
-  { "do_doubleexp", test_do_doubleexp },
-  CU_TEST_INFO_NULL,
-};
-
-CU_TestInfo test_bit[] = {
-  { "is_stat", test_is_stat },
-  { "flag_lookup", test_flag_lookup },
-  { "flag_value", test_flag_value },
-  { "flag_string", test_flag_string },
-  CU_TEST_INFO_NULL,
-};
-
 /* Test Suites */
 CU_SuiteInfo suites[] = {
-  { "act_info", initialize_suite, NULL, test_act_info },
-  { "act_wiz", initialize_suite, NULL, test_act_wiz },
-  { "bit", initialize_suite, NULL, test_bit },
+  TEST_SUITE(act_info),
+  TEST_SUITE(act_wiz),
+  TEST_SUITE(bit),
+  TEST_SUITE(mem),
   CU_SUITE_INFO_NULL,
 };
 
@@ -50,14 +28,14 @@ int main ( void ) {
   CU_basic_run_tests();
 
   printf("\n");
-  
+
   CU_basic_show_failures(CU_get_failure_list());
 
   printf("\n");
-  
+
   /* Clean up registry and return */
   CU_cleanup_registry();
-  
+
   return CU_get_error();
 }
 

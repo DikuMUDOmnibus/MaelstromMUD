@@ -1,6 +1,6 @@
 #include "test.h"
 
-TEST(check_blind) {
+DO_TEST(check_blind) {
   CU_ASSERT_TRUE(check_blind(mock_supermob));
 
   SET_BIT(mock_supermob->affected_by, AFF_BLIND);
@@ -10,7 +10,7 @@ TEST(check_blind) {
   reset_mocks();
 }
 
-TEST(add_money) {
+DO_TEST(add_money) {
   MONEY_DATA a;
   MONEY_DATA b;
 
@@ -29,7 +29,7 @@ TEST(add_money) {
   CU_ASSERT_EQUAL(a.copper, 62);
 }
 
-TEST(sub_money) {
+DO_TEST(sub_money) {
   MONEY_DATA a;
   MONEY_DATA b;
 
@@ -48,7 +48,7 @@ TEST(sub_money) {
   CU_ASSERT_EQUAL(a.copper, 16);
 }
 
-TEST(spend_money) {
+DO_TEST(spend_money) {
   MONEY_DATA a;
   MONEY_DATA b;
 
@@ -67,7 +67,7 @@ TEST(spend_money) {
   CU_ASSERT_EQUAL(a.copper, 0);
 }
 
-TEST(money_string) {
+DO_TEST(money_string) {
   MONEY_DATA a;
   char *str;
 
@@ -135,3 +135,12 @@ TEST(money_string) {
 
   CU_ASSERT_STRING_EQUAL(str, "0 coins.");
 }
+
+DO_TEST_SUITE(act_info) = {
+  TEST(check_blind),
+  TEST(add_money),
+  TEST(sub_money),
+  TEST(spend_money),
+  TEST(money_string),
+  CU_TEST_INFO_NULL,
+};
