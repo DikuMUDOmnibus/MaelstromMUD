@@ -47,8 +47,6 @@ extern          int                     top_room;
 
 HELP_DATA		*	help_last;
 
-
-
 /*****************************************************************************
 Name:		new_reset_data
 Purpose:	Creates and clears a reset structure.
@@ -77,8 +75,6 @@ RESET_DATA *new_reset_data( void )
 	return pReset;
 }
 
-
-
 /*****************************************************************************
 Name:		free_reset_data
 Purpose:	Clears and deletes a reset structure.
@@ -91,8 +87,6 @@ void free_reset_data( RESET_DATA *pReset )
 	free_mem( pReset, sizeof( *pReset ) );
 	return;
 }
-
-
 
 /*****************************************************************************
 Name:		new_area
@@ -138,27 +132,6 @@ AREA_DATA *new_area( void )
 
 	return pArea;
 }
-
-
-
-/*****************************************************************************
-Name:		free_area
-Purpose:	Clears and deletes an area structure.
- ****************************************************************************/
-void free_area( AREA_DATA *pArea )
-{
-	top_area--;
-	free_string( pArea->name );
-	free_string( pArea->filename );
-	free_string( pArea->builders );
-	free_string( pArea->reset_sound );
-	/*    pArea->next		=   area_free->next;
-		  area_free		=   pArea;*/
-	free_mem( pArea, sizeof( *pArea ) );
-	return;
-}
-
-
 
 EXIT_DATA *new_exit( void )
 {
@@ -221,8 +194,6 @@ void free_exit( EXIT_DATA *pExit )
 	return;
 }
 
-
-
 EXTRA_DESCR_DATA *new_extra_descr( void )
 {
 	EXTRA_DESCR_DATA *pExtra;
@@ -246,8 +217,6 @@ EXTRA_DESCR_DATA *new_extra_descr( void )
 	return pExtra;
 }
 
-
-
 void free_extra_descr( EXTRA_DESCR_DATA *pExtra )
 {
 	free_string( pExtra->keyword );
@@ -259,8 +228,6 @@ void free_extra_descr( EXTRA_DESCR_DATA *pExtra )
 	free_mem( pExtra, sizeof( *pExtra ) );
 	return;
 }
-
-
 
 ROOM_INDEX_DATA *new_room_index( void )
 {
@@ -398,8 +365,6 @@ CLAN_DATA *new_clan_index( void )
 	return pClan;
 }
 
-
-
 void free_room_index( ROOM_INDEX_DATA *pRoom )
 {
 	int door;
@@ -445,8 +410,6 @@ void free_room_index( ROOM_INDEX_DATA *pRoom )
 	return;
 }
 
-
-
 AFFECT_DATA *new_affect( void )
 {
 	AFFECT_DATA *pAf;
@@ -474,21 +437,6 @@ AFFECT_DATA *new_affect( void )
 	return pAf;
 }
 
-
-ALIAS_DATA *new_alias( void )
-{
-	ALIAS_DATA *pAl;
-
-	pAl = alloc_perm( sizeof( *pAl ) );
-
-	pAl->next = NULL;
-	pAl->old = &str_empty[0]; /*str_dup( "" );*/
-	pAl->new = &str_empty[0]; /*str_dup( "" );*/
-
-	return pAl;
-}
-
-
 void free_alias( ALIAS_DATA *pAl )
 {
 	free_string( pAl->old );
@@ -499,7 +447,6 @@ void free_alias( ALIAS_DATA *pAl )
 	return;
 }
 
-
 void free_affect( AFFECT_DATA* pAf )
 {
 	/*    pAf->next           = affect_free;
@@ -508,8 +455,6 @@ void free_affect( AFFECT_DATA* pAf )
 	free_mem( pAf, sizeof( *pAf ) );
 	return;
 }
-
-
 
 SHOP_DATA *new_shop( void )
 {
@@ -540,8 +485,6 @@ SHOP_DATA *new_shop( void )
 
 	return pShop;
 }
-
-
 
 void free_shop( SHOP_DATA *pShop )
 {
@@ -632,8 +575,6 @@ OBJ_INDEX_DATA *new_obj_index( void )
 	return pObj;
 }
 
-
-
 void free_obj_index( OBJ_INDEX_DATA *pObj )
 {
 	EXTRA_DESCR_DATA *pExtra;
@@ -673,8 +614,6 @@ void free_obj_index( OBJ_INDEX_DATA *pObj )
 	free_mem( pObj, sizeof( *pObj ) );
 	return;
 }
-
-
 
 MOB_INDEX_DATA *new_mob_index( void )
 {
@@ -740,7 +679,6 @@ void free_mprog_data( MPROG_DATA *pMProg )
 	free_mem( pMProg, sizeof( *pMProg ) );
 }
 
-
 void free_mob_index( MOB_INDEX_DATA *pMob )
 {
 	MPROG_DATA	     *pMProg;
@@ -795,7 +733,6 @@ MPROG_DATA *new_mprog_data( void )
 	pMProg->comlist  = &str_empty[0]; /*str_dup( "" );*/
 	return pMProg;
 }
-
 
 RACE_DATA *new_race_data( )
 {

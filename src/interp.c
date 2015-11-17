@@ -142,7 +142,7 @@ struct	cmd_type	cmd_table	[ ] =
 	{ "equipment",	do_equipment,	POS_DEAD,	 0,  LOG_NORMAL	},
 	{ "examine",	do_examine,	POS_RESTING,	 0,  LOG_NORMAL	},
 	// saving finger data is busted, disabling for now -- Ristowe
-	// { "finger",         do_finger,      POS_DEAD,        0,  LOG_ALWAYS }, 
+	// { "finger",         do_finger,      POS_DEAD,        0,  LOG_ALWAYS },
 	{ "forge",		do_forge,	POS_STANDING,   30,  LOG_ALWAYS },
 	{ "help",		do_help,	POS_DEAD,	 0,  LOG_NORMAL	},
 	{ "idea",		do_idea,	POS_DEAD,	 0,  LOG_NORMAL	},
@@ -221,7 +221,7 @@ struct	cmd_type	cmd_table	[ ] =
 	{ "emote",		do_emote,	POS_RESTING,	 0,  LOG_NORMAL	},
 	{ "gtell",		do_gtell,	POS_DEAD,	 0,  LOG_NORMAL	},
 	{ "music",		do_music,	POS_SLEEPING,	 0,  LOG_NORMAL },
-	{ "note",		do_note,	POS_SLEEPING,	 0,  LOG_NORMAL	}, 
+	{ "note",		do_note,	POS_SLEEPING,	 0,  LOG_NORMAL	},
 	// { "pose",		do_pose,	POS_RESTING,	 0,  LOG_NORMAL	},
 	{ "quest",          do_quest,       POS_RESTING,     0,  LOG_NORMAL },
 	{ "question",	do_question,	POS_SLEEPING,	 0,  LOG_NORMAL },
@@ -310,7 +310,7 @@ struct	cmd_type	cmd_table	[ ] =
 	{ "murder",		do_murder,	POS_FIGHTING,	 5,  LOG_ALWAYS	},
 	{ "nerve",		do_nerve,	POS_FIGHTING,	 0,  LOG_NORMAL },
 	{ "rescue",		do_rescue,	POS_FIGHTING,	 0,  LOG_NORMAL	},
-	{ "throw",	        do_throw,	POS_STANDING,    0,  LOG_NORMAL }, 
+	{ "throw",	        do_throw,	POS_STANDING,    0,  LOG_NORMAL },
 	{ "trip",		do_trip,	POS_FIGHTING,	 0,  LOG_NORMAL },
 	{ "triple",		do_triple,  POS_STANDING,	0,	LOG_NORMAL },
 	{ "drain life",	do_drain_life,	POS_FIGHTING,	 0,  LOG_NORMAL	},
@@ -332,7 +332,7 @@ struct	cmd_type	cmd_table	[ ] =
 	{ "account",        do_account,     POS_RESTING,     0,  LOG_NORMAL },
 	{ "adrenaline rush",do_rush,	POS_RESTING,	 0,  LOG_NORMAL },
 	{ "afk",		do_afk,		POS_DEAD,	 0,  LOG_NORMAL },
-	{ "afkmes",         do_afkmes,      POS_DEAD,        0,  LOG_NORMAL }, 
+	{ "afkmes",         do_afkmes,      POS_DEAD,        0,  LOG_NORMAL },
 	{ "bash door",      do_bash,        POS_STANDING,    0,  LOG_NORMAL },
 	{ "chameleon power",do_chameleon,   POS_STANDING,    0,  LOG_NORMAL },
 	{ "follow",		do_follow,	POS_RESTING,	 0,  LOG_NORMAL	},
@@ -522,7 +522,7 @@ struct	cmd_type	cmd_table	[ ] =
 	{ "spedit",		do_spedit,	POS_DEAD, L_IMP,  LOG_ALWAYS },
 	{ "rename_obj",	do_rename_obj,	POS_DEAD, L_APP,  LOG_ALWAYS },
 	{ "race_edit",	do_race_edit,	POS_DEAD, L_IMP,  LOG_ALWAYS },
-	{ "nedit",		do_nedit,	POS_DEAD, L_CON,  LOG_BUILD  }, 
+	{ "nedit",		do_nedit,	POS_DEAD, L_CON,  LOG_BUILD  },
 	/*
 	 * End of list.
 	 */
@@ -677,7 +677,7 @@ void interpret( CHAR_DATA *ch, char *argument )
 							  !str_cmp( cmd_table[cmd].name, "west"  ) ||
 							  !str_cmp( cmd_table[cmd].name, "up"    ) ||
 							  !str_cmp( cmd_table[cmd].name, "down"  )    ) )
-					{ 
+					{
 						/* check and see if they are chameleon and remove it if they
 						   are trying to move*/
 						if ( is_affected(ch, gsn_chameleon) )
@@ -685,7 +685,7 @@ void interpret( CHAR_DATA *ch, char *argument )
 							send_to_char(AT_BLUE, "You return to your normal coloration.\n\r", ch );
 							affect_strip ( ch, gsn_chameleon );
 						}
-						/* If they aren't hidding remove the hide bit */	
+						/* If they aren't hidding remove the hide bit */
 						if ( !is_affected(ch, gsn_hide ) )
 							REMOVE_BIT( ch->affected_by, AFF_HIDE );
 					}
@@ -932,7 +932,7 @@ bool check_social( CHAR_DATA *ch, char *command, char *argument )
 	{
 		if ( !( victim = get_char_world( ch, arg ) ) )
 			send_to_char(AT_WHITE, "They aren't here.\n\r",                    ch );
-		else {  
+		else {
 			if ((ch->in_room->vnum == ROOM_VNUM_HELL) &&
 					(ch->level < LEVEL_IMMORTAL))
 			{
@@ -1090,18 +1090,13 @@ void do_clear( CHAR_DATA *ch, char *argument )
 	ALIAS_DATA *pA1;
 	ALIAS_DATA *pA1_next;
 
-	if( !ch->pcdata->alias_list )
-	{
+	if( !ch->pcdata->alias_list ) {
 		send_to_char( AT_WHITE, "You have no alias' to clear.\n\r", ch );
 		return;
 	}
 
-	for ( pA1 = ch->pcdata->alias_list; pA1; pA1 = pA1_next )
-	{
+	for ( pA1 = ch->pcdata->alias_list; pA1; pA1 = pA1_next ) {
 		pA1_next = pA1->next;
-		/*free_string(pA1->old);
-		  free_string(pA1->new);
-		  free_mem(pA1, sizeof( *pA1 ));*/
 		free_alias(pA1);
 	}
 	send_to_char( AT_WHITE, "All aliases have been erased.\n\r", ch );
@@ -1121,18 +1116,15 @@ void do_alias( CHAR_DATA *ch, char *argument )
 	argument = one_argument( argument, arg );
 	strcpy( arg1, argument );
 
-	if ( arg[0] == '\0' )
-	{
-		if ( !ch->pcdata->alias_list )
-		{
+	if ( arg[0] == '\0' ) {
+		if ( !ch->pcdata->alias_list ) {
 			send_to_char( AT_WHITE, "You have no alias' set.\n\r", ch );
 			return;
 		}
 
 		send_to_char( AT_WHITE, "Your currently set alias' are:\n\r", ch );
 
-		for ( al = ch->pcdata->alias_list; al; al = al->next )
-		{
+		for ( al = ch->pcdata->alias_list; al; al = al->next ) {
 			sprintf( log_buf, "  %-10s   &B%s&w\n\r", al->old, al->new );
 			send_to_char( AT_RED, log_buf, ch );
 		}
@@ -1140,74 +1132,64 @@ void do_alias( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-	if ( arg1[0] == '\0' && ( !( ch->pcdata->alias_list ) ) )
-	{
+	if ( arg1[0] == '\0' && ( !( ch->pcdata->alias_list ) ) ) {
 		send_to_char( AT_WHITE, "You have no command alias' to remove!\n\r", ch );
 		return;
 	}
 
-	if ( arg1[0] != '\0' )
-	{
-		for ( oAl = ch->pcdata->alias_list; oAl; oAl = oAl->next )
-		{
-			if ( is_name( NULL, arg1, oAl->old ) || !str_prefix( arg, arg1 ) )
-			{
+	if ( arg1[0] != '\0' ) {
+		for ( oAl = ch->pcdata->alias_list; oAl; oAl = oAl->next ) {
+			if ( is_name( NULL, arg1, oAl->old ) || !str_prefix( arg, arg1 ) ) {
 				send_to_char( AT_WHITE, "You cannot alias other alias' into your [new] string.\n\r", ch );
 				return;
 			}
 		}
-	}        
+	}
 
-	for ( al = ch->pcdata->alias_list; al; al = al->next )
-		if ( !str_cmp( al->old, arg ) )
+	for ( al = ch->pcdata->alias_list; al; al = al->next ) {
+		if ( !str_cmp( al->old, arg ) ) {
 			break;
-	if ( arg1[0] == '\0' )
-	{
-		if ( !al )
-		{
+		}
+	}
+
+	if ( arg1[0] == '\0' ) {
+		if ( !al ) {
 			send_to_char( C_DEFAULT, "Alias does not exist.\n\r", ch );
 			return;
 		}
-		if ( al == ch->pcdata->alias_list )
+
+		if ( al == ch->pcdata->alias_list ) {
 			ch->pcdata->alias_list = al->next;
-		else
-		{
-			for ( oAl = ch->pcdata->alias_list; oAl; oAl = oAl->next )
-				if ( oAl->next == al )
+		} else {
+			for ( oAl = ch->pcdata->alias_list; oAl; oAl = oAl->next ){
+				if ( oAl->next == al ) {
 					break;
-			if ( !oAl )
-			{
+				}
+			}
+
+			if ( !oAl ) {
 				sprintf( log_buf, "Do_alias: bad alias - ch (%s) - [%s]", ch->name, arg );
 				bug( log_buf, 0 );
 				send_to_char(C_DEFAULT, "Alias does not exist.\n\r", ch );
 				return;
 			}
+
 			oAl->next = al->next;
 		}
-		/*free_string( al->old );
-		  free_string( al->new );
-		  free_mem( al, sizeof( *al ) );*/
+
 		free_alias( al );
 		act( AT_WHITE, "Alias '$t' cleared.\n\r", ch, arg, NULL, TO_CHAR );
 		return;
 	}
 
-	if ( al )
-	{
+	if ( al ) {
 		free_string( al->new );
 		al->new = str_dup( arg1 );
 		sprintf( log_buf, "Alias '%s' remade.\n\r", arg );
-		send_to_char( AT_WHITE, log_buf, ch );  
+		send_to_char( AT_WHITE, log_buf, ch );
 		return;
 	}
 
-	/*
-	   al = alloc_perm( sizeof( *al ) );
-	   al->old = str_dup( arg );
-	   al->new = str_dup( arg1 );
-	   al->next = ch->pcdata->alias_list;
-	   ch->pcdata->alias_list = al;
-	   */
 	add_alias( ch, al, arg, arg1 );
 	sprintf( log_buf, "Alias '%s' added.\n\r", arg );
 	send_to_char( AT_WHITE, log_buf, ch );
@@ -1232,7 +1214,7 @@ void do_countcommands( CHAR_DATA *ch, char *argument )
 	int iclass;
 
 	for ( iclass = 0; iclass < MAX_CLASS; iclass++ )
-	{ 
+	{
 		skill[iclass] = 0;
 		spell[iclass] = 0;
 	}
@@ -1308,9 +1290,9 @@ void do_pkill( CHAR_DATA *ch, char *argument )
 			send_to_char( AT_WHITE, "You have already chosen the path of pkilling.\n\r", ch );
 			return;
 		}
-		send_to_char( AT_RED, 
+		send_to_char( AT_RED,
 				"You are now a PKILLER! Beware, the path you have chosen is not one of the weak minded.\n\r", ch);
-		act( AT_RED, 
+		act( AT_RED,
 				"$n has made a lifelong decision, to join forces with Pkillers throughout the Storm!",
 				ch , NULL, NULL, TO_ROOM );
 		SET_BIT( ch->act, PLR_PKILLER );

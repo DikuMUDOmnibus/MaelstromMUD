@@ -54,12 +54,6 @@ DO_TEST(new_affect) {
   CU_ASSERT_EQUAL(sizeof(*testAffect), 32);
 }
 
-DO_TEST(new_alias) {
-  ALIAS_DATA *testAlias;
-
-  CU_ASSERT_EQUAL(sizeof(*testAlias), 12);
-}
-
 DO_TEST(new_shop) {
   SHOP_DATA *testShop;
 
@@ -94,7 +88,6 @@ DO_TEST_SUITE(mem) = {
   TEST(new_newbie_index),
   TEST(new_clan_index),
   TEST(new_affect),
-  TEST(new_alias),
   TEST(new_shop),
   TEST(new_mob_index),
   TEST(new_mprog_data),

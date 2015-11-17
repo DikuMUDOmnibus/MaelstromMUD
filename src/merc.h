@@ -3643,7 +3643,6 @@ char * string_insline   args( ( CHAR_DATA *ch, char *argument, char *old ) );
 RESET_DATA				*new_reset_data		args ( ( void ) );
 void							free_reset_data		args ( ( RESET_DATA *pReset ) );
 AREA_DATA					*new_area					args ( ( void ) );
-void							free_area					args ( ( AREA_DATA *pArea ) );
 EXIT_DATA					*new_exit					args ( ( void ) );
 void							free_exit					args ( ( EXIT_DATA *pExit ) );
 EXTRA_DESCR_DATA 	*new_extra_descr	args ( ( void ) );
@@ -3733,7 +3732,6 @@ extern RACE_DATA *get_race_data	args ( ( int vnum ) );
 extern void save_helps		  args ( ( ) );
 extern void wind_update           args ( ( AREA_DATA *pArea ) );
 extern void send_to_area          args ( ( AREA_DATA *pArea, char *txt ) );
-extern ALIAS_DATA *new_alias      args ( ( ) );
 extern void free_alias     args ( ( ALIAS_DATA *pAl ) );
 
 extern void save_player_list	  args ( ( ) ); /*Decklarean */
