@@ -38,12 +38,6 @@ extern bool   can_use_cmd args( ( int cmd, CHAR_DATA *ch, int trust) );
 extern void   delete_playerlist   args ( ( char *name ) );
 
 void do_todo( CHAR_DATA *ch, char *argument ) {
-	report_issue(argument, NULL, GITHUB_LABEL_TODO);
-	send_to_char(AT_WHITE, "Ok.  Thanks.\n\r", ch);
-	return;
-}
-
-void do_todos( CHAR_DATA *ch, char *argument ) {
 	parse_issues(ch, argument, GITHUB_LABEL_TODO);
 	return;
 }
@@ -77,7 +71,7 @@ void parse_issues( CHAR_DATA *ch, char *argument, const char *label ) {
 	argument = one_argument(argument, arg);
 
 	/* show all issues */
-	if (arg[0] == '\0') {
+	if ( arg[0] == '\0' ) {
 		issues = get_issues( label );
 
 		if(!issues) {
@@ -122,10 +116,8 @@ void parse_issues( CHAR_DATA *ch, char *argument, const char *label ) {
 
 		send_to_char(C_DEFAULT, buf1, ch);
 		return;
-	}
-
-	/* close issue */
-	if ( !str_cmp( arg,"close" ) ) {
+	} else if ( !str_cmp( arg, "close" ) ) {
+		/* close issue */
 		char arg[ MAX_INPUT_LENGTH ];
 
 		one_argument( argument, arg );
@@ -142,6 +134,19 @@ void parse_issues( CHAR_DATA *ch, char *argument, const char *label ) {
 
 		close_issue(atoi(arg));
 		send_to_char(AT_WHITE, "Issue closed.\n\r", ch);
+	} else if ( !str_cmp( arg, "add" ) ) {
+		/* add an issue */
+		char arg[ MAX_INPUT_LENGTH ];
+
+		one_argument( argument, arg );
+
+		if ( arg[0] == '\0' ) {
+			send_to_char(AT_WHITE, "Todo what?\n\r", ch);
+			return;
+		}
+
+		report_issue(argument, NULL, label);
+		send_to_char(AT_WHITE, "Ok.  Thanks.\n\r", ch);
 	}
 
 	return;

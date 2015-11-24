@@ -470,7 +470,6 @@ struct	cmd_type	cmd_table	[ ] =
 	{ "sstime",         do_sstime,      POS_DEAD,  L_CON,  LOG_ALWAYS },
 	{ "tempban",	do_tempban,     POS_DEAD,  L_GOD,  LOG_ALWAYS },
 	{ "todo",           do_todo,        POS_DEAD,  L_DIR,  LOG_ALWAYS },
-	{ "todos",          do_todos,       POS_DEAD,  L_DIR,  LOG_ALWAYS },
 	{ "transfer",       do_transfer,    POS_DEAD,  L_JUN,  LOG_ALWAYS },
 	{ "transmes",       do_trmes,       POS_DEAD,  L_JUN,  LOG_NORMAL },
 	{ "trust",          do_trust,       POS_DEAD,  L_IMP,  LOG_ALWAYS },
