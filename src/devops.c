@@ -30,7 +30,7 @@
 #include <curl/curl.h>
 #include "merc.h"
 
-void curl_json_post args( ( const char* url, const char* payload ) );
+void curl_json_push args( ( const char* url, const char* payload, const char* method ) );
 
 /**
  * Write analytics data to Keen.io
@@ -42,7 +42,7 @@ void curl_json_post args( ( const char* url, const char* payload ) );
  * Example:
  *  json_t *obj = json_object();
  *  json_object_set_new(obj, "key", json_string( "value" ));
- *  
+ *
  * @param obj           JSON object
  * @param collection    Keen.io Collection
  */
@@ -54,7 +54,7 @@ void write_analytics( json_t* obj, const char* collection ) {
     sprintf(url, "https://api.keen.io/3.0/projects/%s/events/%s?api_key=%s", KEENIO_PROJECT_ID, collection, KEENIO_API_KEY);
     payload = json_dumps( obj, 0 );
 
-    curl_json_post(url, payload);
+    curl_json_push(url, payload, "POST");
 
     free(payload);
   }
@@ -67,7 +67,7 @@ void write_analytics( json_t* obj, const char* collection ) {
  *
  * Required environment variables:
  *  PAGERDUTY_API_KEY
- *  
+ *
  * @param description Description of the incident
  */
 void trigger_incident( const char* description ) {
@@ -80,7 +80,7 @@ void trigger_incident( const char* description ) {
     json_object_set_new(obj, "description", json_string( description ));
 
     payload = json_dumps(obj, 0);
-    curl_json_post("https://events.pagerduty.com/generic/2010-04-15/create_event.json", payload);
+    curl_json_push("https://events.pagerduty.com/generic/2010-04-15/create_event.json", payload, "POST");
 
     free(payload);
   }
@@ -110,7 +110,7 @@ void report_issue( const char* title, const char* description, const char* label
     sprintf(url, "https://api.github.com/repos/%s/issues?access_token=%s", GITHUB_REPO_NAME, GITHUB_ACCESS_TOKEN);
     payload = json_dumps(obj, 0);
 
-    curl_json_post(url, payload);
+    curl_json_push(url, payload, "POST");
 
     free(payload);
   }
@@ -118,14 +118,53 @@ void report_issue( const char* title, const char* description, const char* label
   return;
 }
 
+void close_issue( int number ) {
+  char *payload;
+  char url[MAX_STRING_LENGTH];
+  json_t *obj = json_object();
+
+  if ( GITHUB_ACCESS_TOKEN != NULL && GITHUB_REPO_NAME != NULL ) {
+    json_object_set_new(obj, "state", json_string( "closed" ));
+
+    payload = json_dumps(obj, 0);
+    sprintf(url, "https://api.github.com/repos/%s/issues/%d?access_token=%s", GITHUB_REPO_NAME, number, GITHUB_ACCESS_TOKEN);
+    curl_json_push(url, payload, "PATCH");
+
+    free(payload);
+  }
+
+  return;
+}
+
+json_t * get_issues( const char* label ) {
+  char url[MAX_STRING_LENGTH];
+  const char * response;
+  json_error_t error;
+
+  json_t * issues = json_array();
+
+  if ( GITHUB_ACCESS_TOKEN != NULL && GITHUB_REPO_NAME != NULL ) {
+    sprintf(url, "https://api.github.com/repos/%s/issues?access_token=%s&labels=%s", GITHUB_REPO_NAME, GITHUB_ACCESS_TOKEN, label);
+    response = curl_get(url);
+    issues = json_loads(response, 0, &error);
+
+  	if(!issues) {
+  		sprintf(log_buf, "get_issues(): JSON error on line %d: %s\n\r", error.line, error.text);
+  		bug(log_buf, 0);
+  	}
+  }
+
+  return issues;
+}
+
 /**
  * Helper method to make API JSON POST requests
  * a little easier to manage
- * 
+ *
  * @param url     The URL
  * @param payload The Payload
  */
-void curl_json_post(const char* url, const char* payload) {
+void curl_json_push(const char* url, const char* payload, const char* method) {
   pid_t pid;
 
   curl_global_init(CURL_GLOBAL_ALL);
@@ -144,7 +183,7 @@ void curl_json_post(const char* url, const char* payload) {
 
       curl_easy_setopt(curl, CURLOPT_URL, url);
       curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
-      curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, "POST");
+      curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, method);
       curl_easy_setopt(curl, CURLOPT_POSTFIELDS, payload);
 
       res = curl_easy_perform( curl );
@@ -153,10 +192,10 @@ void curl_json_post(const char* url, const char* payload) {
         sprintf(log_buf, "curl_easy_perform() failed: %s\n", curl_easy_strerror(res));
         bug(log_buf, 0);
       }
+
+      curl_easy_cleanup(curl);
+      curl_slist_free_all(headers);
     }
-    
-    curl_easy_cleanup(curl);
-    curl_slist_free_all(headers);
 
     _exit(0);
   } else if (pid > 0 ) {
@@ -164,4 +203,83 @@ void curl_json_post(const char* url, const char* payload) {
   }
 
   return;
+}
+
+/**
+ * Helper method to make API JSON GET requests
+ * a little easier to manage
+ *
+ * @param url     The URL
+ */
+char * curl_get(const char* url) {
+  curl_global_init(CURL_GLOBAL_ALL);
+
+  CURL *curl;
+  struct curl_slist *headers = NULL;
+  struct curl_data data;
+
+  data.size = 0;
+
+   /* reasonable size initial buffer */
+  data.data = malloc(4096);
+
+  if(NULL == data.data) {
+      sprintf(log_buf, "Failed to allocate memory.\n");
+      bug(log_buf, 0);
+      return NULL;
+  }
+
+  data.data[0] = '\0';
+
+  if ( (curl = curl_easy_init()) ) {
+    CURLcode res;
+
+    headers = curl_slist_append(headers, "User-Agent: OASIS MUD");
+
+    curl_easy_setopt(curl, CURLOPT_URL, url);
+    curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, curl_callback);
+    curl_easy_setopt(curl, CURLOPT_WRITEDATA, &data);
+    curl_easy_setopt(curl, CURLOPT_TIMEOUT, 2L);
+
+    res = curl_easy_perform( curl );
+
+    if(res != CURLE_OK) {
+      sprintf(log_buf, "curl_easy_perform() failed: %s\n", curl_easy_strerror(res));
+      bug(log_buf, 0);
+    }
+
+    curl_easy_cleanup(curl);
+    curl_slist_free_all(headers);
+  }
+
+  curl_global_cleanup();
+
+  return data.data;
+}
+
+size_t curl_callback(void *ptr, size_t size, size_t nmemb, struct curl_data *data) {
+  size_t index = data->size;
+  size_t n = (size * nmemb);
+  char* tmp;
+
+  data->size += (size * nmemb);
+  tmp = realloc(data->data, data->size + 1); /* +1 for '\0' */
+
+  if(tmp) {
+      data->data = tmp;
+  } else {
+      if(data->data) {
+          free(data->data);
+      }
+
+      sprintf(log_buf, "Failed to allocate memory.\n");
+      bug(log_buf, 0);
+      return 0;
+  }
+
+  memcpy((data->data + index), ptr, n);
+  data->data[data->size] = '\0';
+
+  return size * nmemb;
 }
