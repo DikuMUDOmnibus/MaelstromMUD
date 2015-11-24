@@ -2565,6 +2565,7 @@ DECLARE_DO_FUN( do_bodybag      );
 DECLARE_DO_FUN(	do_brandish	);
 DECLARE_DO_FUN( do_brief        );
 DECLARE_DO_FUN(	do_bug		);
+DECLARE_DO_FUN(	do_bugs		);
 DECLARE_DO_FUN(	do_buy		);
 DECLARE_DO_FUN( do_challenge	);
 DECLARE_DO_FUN( do_chameleon    );
@@ -2733,7 +2734,6 @@ DECLARE_DO_FUN(	do_recite	);
 DECLARE_DO_FUN( do_remake	);
 DECLARE_DO_FUN( do_remote       );
 DECLARE_DO_FUN(	do_remove	);
-DECLARE_DO_FUN(	do_rent		);
 DECLARE_DO_FUN( do_repair       );
 DECLARE_DO_FUN(	do_reply	);
 DECLARE_DO_FUN(	do_report	);
@@ -2792,6 +2792,7 @@ DECLARE_DO_FUN( do_trip		);
 DECLARE_DO_FUN(	do_time		);
 DECLARE_DO_FUN(	do_title	);
 DECLARE_DO_FUN( do_todo         );
+DECLARE_DO_FUN( do_todos        );
 DECLARE_DO_FUN( do_track        );
 DECLARE_DO_FUN(	do_train	);
 DECLARE_DO_FUN(	do_transfer	);
@@ -3242,9 +3243,13 @@ void	parse_ban       args( ( char *argument, BAN_DATA *banned ) );
 void    arena_chann	args( ( const char *str, int param1, int param2 ) );
 
 /* devops.c */
-void write_analytics    args( ( json_t* obj, const char *collection ) );
-void trigger_incident   args( ( const char* description ) );
-void report_issue				args( ( const char* title, const char* description, const char* label ) );
+void 			write_analytics   args( ( json_t* obj, const char *collection ) );
+void 			trigger_incident  args( ( const char* description ) );
+void 			report_issue			args( ( const char* title, const char* description, const char* label ) );
+void 			close_issue				args( ( int number ) );
+json_t *	get_issues				args( ( const char* label ) );
+size_t 		curl_callback			args( (void *ptr, size_t size, size_t nmemb, struct curl_data *data) );
+char *  	curl_get					args( (const char* url) );
 
 /* fight.c */
 void	violence_update	args( ( void ) );
