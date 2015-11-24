@@ -2792,7 +2792,6 @@ DECLARE_DO_FUN( do_trip		);
 DECLARE_DO_FUN(	do_time		);
 DECLARE_DO_FUN(	do_title	);
 DECLARE_DO_FUN( do_todo         );
-DECLARE_DO_FUN( do_todos        );
 DECLARE_DO_FUN( do_track        );
 DECLARE_DO_FUN(	do_train	);
 DECLARE_DO_FUN(	do_transfer	);
