@@ -1826,7 +1826,7 @@ massive golden eyes dragon~
 &BGiant disembodied &Ygolden eyes&B probably belonging to a dead dragon lie here.~
 ~
 27 805306432 0 0 131073 100
-105~ -1~ 0~ identify~
+105~ -1~ 0~  ~
 3 300 0 0 0
 0 0
 reserved~
@@ -2040,7 +2040,7 @@ the Hollow Eye Sockets~
 The hollow eye sockets of the Dragolich...~
 ~
 27 536871009 0 0 131073 90
-100~ -1~ -1~ identify~
+100~ -1~ -1~  ~
 1 0 0 0 0
 0 0
 identify~

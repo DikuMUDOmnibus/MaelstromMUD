@@ -121,7 +121,7 @@ int			gsn_second_attack;
 int			gsn_third_attack;
 int                     gsn_fourth_attack;
 int                     gsn_fifth_attack;
-int                     gsn_sixth_attack; 
+int                     gsn_sixth_attack;
 int                     gsn_seventh_attack;
 int                     gsn_eighth_attack;
 int                     gsn_gouge;
@@ -180,7 +180,7 @@ int			gsn_shriek;
 int			gsn_spit;
 int			gsn_ward_safe;
 int			gsn_ward_heal;
-int			gsn_throw;   
+int			gsn_throw;
 int                     gsn_shadow_walk;
 /*
  * Psionicist gsn's.
@@ -240,7 +240,7 @@ int			top_mob_prog;
 /*int			top_vnum_mob; */	/* OLC */
 /*int			top_vnum_obj; */  /* OLC */
 int 		 	mprog_name_to_type	args ( ( char* name ) );
-MPROG_DATA *		mprog_file_read 	args ( ( char* f, MPROG_DATA* mprg, 
+MPROG_DATA *		mprog_file_read 	args ( ( char* f, MPROG_DATA* mprg,
 			MOB_INDEX_DATA *pMobIndex ) );
 void			load_mobprogs           args ( ( FILE* fp ) );
 void   			mprog_read_programs     args ( ( FILE* fp,
@@ -424,7 +424,7 @@ void boot_db( void )
 			strcpy( strArea, fread_word( fpList ) );
 
 			if ( debug )
-			{ 
+			{
 				sprintf(buf, "loading area %s", strArea);
 				bug(buf, 0);
 			}
@@ -446,7 +446,7 @@ void boot_db( void )
 							   {
 							   fclose(fpArea);
 							   sprintf( buf, "unzip %s", strArea" );
-							   system ( buf );		
+							   system ( buf );
 							   }
 							   else
 							   {*/
@@ -472,13 +472,13 @@ void boot_db( void )
 					break;
 				else if ( !str_cmp( word, "AREA"     ) )
 					load_area    ( fpArea );
-				else if ( !str_cmp( word, "HELPS"    ) ) 
+				else if ( !str_cmp( word, "HELPS"    ) )
 					load_helps   ( fpArea );
 				else if ( !str_cmp( word, "RECALL"   ) )
 					load_recall  ( fpArea );
 				else if ( !str_cmp( word, "MOBILES"  ) )
 					load_mobiles ( fpArea );
-				else if ( !str_cmp( word, "MOBPROGS" ) ) 
+				else if ( !str_cmp( word, "MOBPROGS" ) )
 					load_mobprogs( fpArea );
 				else if ( !str_cmp( word, "OBJECTS"  ) )
 					load_objects ( fpArea );
@@ -520,12 +520,12 @@ void boot_db( void )
 	 */
 	{
 		fix_exits( );
-		load_banlist( ); 
-		load_clans( ); 
-		load_socials( ); 
-		load_newbie( ); 
-		load_player_list( ); 
-		load_race( ); 
+		load_banlist( );
+		load_clans( );
+		load_socials( );
+		load_newbie( );
+		load_player_list( );
+		load_race( );
 		load_notes( );
 		load_down_time( );
 
@@ -655,10 +655,10 @@ void load_mobprogs( FILE *fp )
 				break;
 			case 'S':
 			case 's':
-				fread_to_eol( fp ); 
+				fread_to_eol( fp );
 				return;
 			case '*':
-				fread_to_eol( fp ); 
+				fread_to_eol( fp );
 				break;
 			case 'M':
 			case 'm':
@@ -688,7 +688,7 @@ void load_mobprogs( FILE *fp )
 
 	return;
 
-} 
+}
 
 /* This procedure is responsible for reading any in_file MOBprograms.
 */
@@ -1047,23 +1047,29 @@ void load_helps( FILE *fp )
 {
 	HELP_DATA *pHelp;
 
-	for ( ; ; )
-	{
+	for ( ; ; ) {
 		pHelp		= alloc_perm( sizeof( *pHelp ) );
 		/*	pHelp->area	= area_last ? area_last : NULL;	 not used Deck*/ /* OLC 1.1b */
 		pHelp->level	= fread_number( fp );
 		pHelp->keyword	= fread_string( fp );
-		if ( pHelp->keyword[0] == '$' )
+
+		if ( pHelp->keyword[0] == '$' ) {
 			break;
+		}
+
 		pHelp->text	= fread_string( fp );
 
-		if ( !str_cmp( pHelp->keyword, "greeting" ) )
+		if ( !str_cmp( pHelp->keyword, "greeting" ) ) {
 			help_greeting = pHelp->text;
+		}
 
-		if ( !help_first )
+		if ( !help_first ) {
 			help_first = pHelp;
-		if (  help_last  )
+		}
+
+		if (  help_last  ) {
 			help_last->next = pHelp;
+		}
 
 		help_last	= pHelp;
 		pHelp->next	= NULL;
@@ -1286,7 +1292,7 @@ void load_objects( FILE *fp )
 		}
 		fBootDb = TRUE;
 
-		pObjIndex=/*new_obj_index();*/alloc_perm(sizeof(*pObjIndex )); 
+		pObjIndex=/*new_obj_index();*/alloc_perm(sizeof(*pObjIndex ));
 		pObjIndex->vnum			= vnum;
 		pObjIndex->area			= area_last;		/* OLC */
 		pObjIndex->name			= fread_string( fp );
@@ -1316,7 +1322,7 @@ void load_objects( FILE *fp )
 		pObjIndex->ac_vnum              = fread_number( fp );
 		pObjIndex->ac_spell             = fread_string( fp );
 		pObjIndex->ac_charge[0]         = fread_number( fp );
-		pObjIndex->ac_charge[1]         = fread_number( fp ); 
+		pObjIndex->ac_charge[1]         = fread_number( fp );
 		pObjIndex->join                 = fread_number( fp );
 		pObjIndex->sep_one              = fread_number( fp );
 		pObjIndex->sep_two              = fread_number( fp );
@@ -1423,7 +1429,7 @@ void load_objects( FILE *fp )
 		iHash			= vnum % MAX_KEY_HASH;
 		pObjIndex->next		= obj_index_hash[iHash];
 		obj_index_hash[iHash]	= pObjIndex;
-		top_obj_index++; 
+		top_obj_index++;
 		/*top_vnum_obj = top_vnum_obj < vnum ? vnum : top_vnum_obj;*/  /* OLC */
 		assign_area_vnum( vnum );				   /* OLC */
 	}
@@ -1998,7 +2004,7 @@ void load_clans( void )
 
 	if ( !( fp = fopen( CLAN_FILE, "r" ) ) )
 		return;
-	fpArea = fp; 
+	fpArea = fp;
 	strcpy(strArea, CLAN_FILE);
 	for ( ; ; )
 	{
@@ -2062,7 +2068,7 @@ void load_clans( void )
 		clan_sort(pClanIndex);
 		top_clan++;
 	}
-	fclose ( fp );   
+	fclose ( fp );
 
 	return;
 }
@@ -2082,18 +2088,18 @@ void social_sort( SOCIAL_DATA *pSocial )
 		pSocial->next = social_first->next;
 		social_first = pSocial;
 		return;
-	} 
+	}
 
 	for ( fSocial = social_first; fSocial; fSocial = fSocial->next )
 	{
 		if (    ( strncmp( pSocial->name, fSocial->name, 256 ) < 0 ) )
 		{
 			if ( fSocial != social_last )
-			{ 
+			{
 				pSocial->next = fSocial->next;
 				fSocial->next = pSocial;
 				return;
-			} 
+			}
 		}
 	}
 
@@ -2383,7 +2389,7 @@ void area_update( void )
 				if ( !IS_NPC( pch )
 						&& IS_AWAKE( pch )
 						&& pch->in_room
-						&& pch->in_room->area == pArea 
+						&& pch->in_room->area == pArea
 				   )
 				{
 					if ( pArea->reset_sound == NULL )
@@ -2467,17 +2473,17 @@ void reset_room( ROOM_INDEX_DATA *pRoom )
 		switch ( pReset->command )
 		{
 			default:
-				sprintf(log_buf, "Reset_room: bad command %c in room %d.", 
+				sprintf(log_buf, "Reset_room: bad command %c in room %d.",
 						pReset->command, pRoom->vnum );
-				bug( log_buf, 0 ); 
+				bug( log_buf, 0 );
 				break;
 
 			case 'M':
 				if ( !( pMobIndex = get_mob_index( pReset->arg1 ) ) )
 				{
-					sprintf(log_buf,  "Reset_room: 'M': bad vnum %d in room %d.", 
+					sprintf(log_buf,  "Reset_room: 'M': bad vnum %d in room %d.",
 							pReset->arg1, pRoom->vnum );
-					bug( log_buf, 0 ); 
+					bug( log_buf, 0 );
 					continue;
 				}
 
@@ -2524,21 +2530,21 @@ void reset_room( ROOM_INDEX_DATA *pRoom )
 			case 'O':
 				if ( !( pObjIndex = get_obj_index( pReset->arg1 ) ) )
 				{
-					sprintf( log_buf, "Reset_room: 'O': bad vnum %d in room %d.", 
+					sprintf( log_buf, "Reset_room: 'O': bad vnum %d in room %d.",
 							pReset->arg1, pRoom->vnum );
-					bug( log_buf, 0 ); 
+					bug( log_buf, 0 );
 					continue;
 				}
 
 				if ( !( pRoomIndex = get_room_index( pReset->arg3 ) ) )
 				{
-					sprintf( log_buf, "Reset_room: 'O': bad vnum %d in room %d.", 
+					sprintf( log_buf, "Reset_room: 'O': bad vnum %d in room %d.",
 							pReset->arg3, pRoom->vnum );
-					bug( log_buf, 0 ); 
+					bug( log_buf, 0 );
 					continue;
 				}
 
-				if ( pRoom->area->nplayer > 0 
+				if ( pRoom->area->nplayer > 0
 						||   count_obj_list( pObjIndex, pRoom->contents ) > 0 )
 					break;
 
@@ -2550,17 +2556,17 @@ void reset_room( ROOM_INDEX_DATA *pRoom )
 			case 'P':
 				if ( !( pObjIndex = get_obj_index( pReset->arg1 ) ) )
 				{
-					sprintf( log_buf, "Reset_room: 'P': bad vnum %d in room %d.", 
+					sprintf( log_buf, "Reset_room: 'P': bad vnum %d in room %d.",
 							pReset->arg1, pRoom->vnum );
-					bug( log_buf, 0 ); 
+					bug( log_buf, 0 );
 					continue;
 				}
 
 				if ( !( pObjToIndex = get_obj_index( pReset->arg3 ) ) )
 				{
-					sprintf( log_buf, "Reset_room: 'P': bad vnum %d in room %d.", 
-							pReset->arg3, pRoom->vnum );		
-					bug( log_buf, 0 ); 
+					sprintf( log_buf, "Reset_room: 'P': bad vnum %d in room %d.",
+							pReset->arg3, pRoom->vnum );
+					bug( log_buf, 0 );
 					continue;
 				}
 
@@ -2589,10 +2595,10 @@ void reset_room( ROOM_INDEX_DATA *pRoom )
 			case 'E':
 				if ( !( pObjIndex = get_obj_index( pReset->arg1 ) ) )
 				{
-					sprintf( log_buf, "Reset_room: 'E' or 'G': bad vnum %d in room %d.", 
+					sprintf( log_buf, "Reset_room: 'E' or 'G': bad vnum %d in room %d.",
 							pReset->arg1, pRoom->vnum );
 					bug( log_buf, 0 );
-					continue; 
+					continue;
 				}
 
 				if ( !last )
@@ -2602,7 +2608,7 @@ void reset_room( ROOM_INDEX_DATA *pRoom )
 				{
 					sprintf( log_buf, "Reset_room: 'E' or 'G': null mob for vnum %d in room %d.",
 							pReset->arg1, pRoom->vnum );
-					bug( log_buf, 0 ); 
+					bug( log_buf, 0 );
 					last = FALSE;
 					break;
 				}
@@ -2649,9 +2655,9 @@ void reset_room( ROOM_INDEX_DATA *pRoom )
 				/* OLC 1.1b */
 				if ( !( pRoomIndex = get_room_index( pReset->arg1 ) ) )
 				{
-					sprintf( log_buf, "Reset_room: 'R': bad vnum %d in room %d.", 
+					sprintf( log_buf, "Reset_room: 'R': bad vnum %d in room %d.",
 							pReset->arg1, pRoom->vnum );
-					bug( log_buf, 0 ); 
+					bug( log_buf, 0 );
 					continue;
 				}
 
@@ -2773,8 +2779,8 @@ void clone_mobile(CHAR_DATA *parent, CHAR_DATA *clone)
 	if ( parent == NULL || clone == NULL || !IS_NPC(parent))
 		return;
 
-	mobs_in_game++;    
-	/* start fixing values */ 
+	mobs_in_game++;
+	/* start fixing values */
 	clone->name 	= str_dup(parent->name);
 	clone->short_descr	= str_dup(parent->short_descr);
 	clone->long_descr	= str_dup(parent->long_descr);
@@ -2809,7 +2815,7 @@ void clone_mobile(CHAR_DATA *parent, CHAR_DATA *clone)
 	clone->damroll	= parent->damroll;
 	clone->wimpy	= parent->wimpy;
 	clone->spec_fun	= parent->spec_fun;
-	clone->armor	= parent->armor;    
+	clone->armor	= parent->armor;
 
 	/* now add the affects */
 	for (paf = parent->affected; paf != NULL; paf = paf->next)
@@ -2971,7 +2977,7 @@ void clone_object(OBJ_DATA *parent, OBJ_DATA *clone)
 				clone->extra_descr->keyword = str_dup(parent->extra_descr->keyword);
 				clone->extra_descr->description = str_dup(parent->extra_descr->description);
 				clone->extra_descr = clone->extra_descr->next;
-			}      
+			}
 		}
 	}
 
@@ -3100,7 +3106,7 @@ void free_char( CHAR_DATA *ch )
 		free_string( ch->pcdata->slayusee  	);
 		free_string( ch->pcdata->slayroom  	);
 		free_string( ch->pcdata->slayvict  	);
-		free_string( ch->pcdata->afkchar        );      
+		free_string( ch->pcdata->afkchar        );
 		free_string( ch->pcdata->title		);
 		free_string( ch->pcdata->empowerments	);
 		free_string( ch->pcdata->detractments 	);
@@ -3119,7 +3125,7 @@ void free_char( CHAR_DATA *ch )
 		{
 			pAl_next = pAl->next;
 			/*free_string(pAl->old);
-			  free_string(pAl->new); 
+			  free_string(pAl->new);
 			  free_mem(pAl, sizeof( *pAl )); */
 			free_alias( pAl );
 		}
@@ -3660,7 +3666,7 @@ void free_mem( void *pMem, int sMem )
  *   pointers into it may be copied safely.
  */
 void *alloc_perm( int sMem )
-{ 
+{
 	return new_mem(sMem, 1 );
 }
 
@@ -3679,7 +3685,7 @@ char *str_dup( const char *str )
 		return (char *) str;
 
 	str_new = alloc_mem( strlen(str) + 1 );
-	/*  str_new =(char*)malloc( strlen(str) + 1 ); */ 
+	/*  str_new =(char*)malloc( strlen(str) + 1 ); */
 	/* this is a hack so that we can track memory right
 	   all the memroy stuff needs to be switched back to an
 	   envy 1.0 most likely have to ask Altrag
@@ -3743,13 +3749,13 @@ void do_areas( CHAR_DATA *ch, char *argument )
 
 	for ( pArea = area_first; pArea; pArea = pArea->next ) {
 		if (!IS_SET( pArea->area_flags, AREA_PROTOTYPE ) && ( ilevel == 0 || ( pArea->llevel <= ilevel && pArea->ulevel >= ilevel ))){
-			sprintf( buf, "&W[%3d - %3d] &G%-56.56s\n\r", pArea->llevel, pArea->ulevel, pArea->name ); 
+			sprintf( buf, "&W[%3d - %3d] &G%-56.56s\n\r", pArea->llevel, pArea->ulevel, pArea->name );
 			strcat( buf1, buf );
-		} 
+		}
 	}
 
 	send_to_char( C_DEFAULT, buf1 , ch );
-}                
+}
 
 void do_memory( CHAR_DATA *ch, char *argument )
 {
@@ -3780,7 +3786,7 @@ void do_memory( CHAR_DATA *ch, char *argument )
 		sprintf( buf, "%3d%% of max used.\n\r", (sAllocPerm*10) / (1024*1024));
 		send_to_char(C_DEFAULT, buf, ch );
 
-		sprintf( buf, "MemAllocated: %d MemFreed: %d Memory being used: %d\n\r", 
+		sprintf( buf, "MemAllocated: %d MemFreed: %d Memory being used: %d\n\r",
 				MemAllocated, MemFreed, MemAllocated-MemFreed );
 		send_to_char(C_DEFAULT, buf, ch );
 		sprintf( buf, "%3d%% of %d.\n\r",
@@ -4394,7 +4400,7 @@ void wind_update( AREA_DATA *pArea )
 		}
 		}
 		else
-		{ 
+		{
 		if ( nws - change < 0 )
 		nws = 0;
 		else
@@ -4450,7 +4456,7 @@ if ( ( nwd == pArea->winddir )  && ( nws != pArea->windstr ) )
 	return;
 }*/
 return;
-}  
+}
 
 /*
    void do_aload( CHAR_DATA *ch, char *argument )
@@ -4665,24 +4671,24 @@ void load_player_list( void )
 				pPlayerList->name      	= fread_string( fp );
 			else if ( !str_cmp( name, "Lvl" ) )
 				pPlayerList->level 	= fread_number( fp );
-			else if ( !str_cmp( name, "Clan" ) )       
+			else if ( !str_cmp( name, "Clan" ) )
 				pPlayerList->clan_name 	= fread_string( fp );
-			else if ( !str_cmp( name, "CRank" ) ) 		
+			else if ( !str_cmp( name, "CRank" ) )
 				pPlayerList->clan_rank 	= fread_number( fp );
-			else if ( !str_cmp( name, "Guild" ) )		
+			else if ( !str_cmp( name, "Guild" ) )
 				pPlayerList->guild_name 	= fread_string( fp );
-			else if ( !str_cmp( name, "GRank" ) )		
+			else if ( !str_cmp( name, "GRank" ) )
 				pPlayerList->guild_rank 	= fread_number( fp );
 		}
 
 		/* check if the player still exits */
 		sprintf( buf, "%s%c/%s.gz", PLAYER_DIR, LOWER(pPlayerList->name[0]),
 				capitalize( pPlayerList->name ) );
-		if ( stat( buf, &statis ) ) 
+		if ( stat( buf, &statis ) )
 		{
 			sprintf( buf, "%s%c/%s", PLAYER_DIR, LOWER(pPlayerList->name[0]),
 					capitalize( pPlayerList->name ) );
-			if ( stat( buf, &statis ) ) 
+			if ( stat( buf, &statis ) )
 				continue;
 		}
 
@@ -4692,7 +4698,7 @@ void load_player_list( void )
 			playerlist = pPlayerList;
 		}
 		else
-		{        
+		{
 			pPlayerList->next = playerlist;
 			playerlist = pPlayerList;
 		}
@@ -4706,10 +4712,10 @@ void save_player_list( )
 	PLAYERLIST_DATA *pPlayer;
 
 
-	if ( ( fp = fopen( PLAYERLIST_FILE, "w" ) ) == NULL ) 
+	if ( ( fp = fopen( PLAYERLIST_FILE, "w" ) ) == NULL )
 	{
-		bug( "Save_Playerlist: fopen", 0 ); 
-		perror( "playerlist.lst" ); 
+		bug( "Save_Playerlist: fopen", 0 );
+		perror( "playerlist.lst" );
 	}
 
 	for ( pPlayer = playerlist;  pPlayer; pPlayer = pPlayer->next )
@@ -4721,12 +4727,12 @@ void save_player_list( )
 		if (pPlayer->clan_rank)
 			fprintf( fp, "CRank       %d\n" ,   pPlayer->clan_rank    );
 		if (pPlayer->guild_name)
-			fprintf( fp, "Guild       %s~\n",   pPlayer->guild_name	);   
+			fprintf( fp, "Guild       %s~\n",   pPlayer->guild_name	);
 		if (pPlayer->guild_rank)
 			fprintf( fp, "GRank       %d\n" ,   pPlayer->guild_rank   );
-		fprintf( fp, "END\n" ); 
+		fprintf( fp, "END\n" );
 	}
-	fprintf( fp, "#END\n" ); 
+	fprintf( fp, "#END\n" );
 	fclose( fp );
 }
 
@@ -4751,7 +4757,7 @@ void delete_playerlist( char * name )
 		if (!str_cmp( name, pPlayerList->name ) )
 		{
 			pPrevPlayerList->next = pPlayerList->next;
-			free_mem( pPlayerList, sizeof( *pPlayerList ) ); 
+			free_mem( pPlayerList, sizeof( *pPlayerList ) );
 			return;
 		}
 	}
@@ -4815,7 +4821,7 @@ void add_playerlist(CHAR_DATA *ch)
 	pPlayer->level	= ch->level;
 	if ( ch->clan )
 		pPlayer->clan_name      = str_dup((get_clan_index(ch->clan))->name );
-	else 
+	else
 		pPlayer->clan_name      = NULL; /*&str_empty[0]; */
 	pPlayer->clan_rank = ch->clev;
 	if ( ch->guild )
@@ -4832,7 +4838,7 @@ void add_playerlist(CHAR_DATA *ch)
 		playerlist = pPlayer;
 	}
 	else
-	{        
+	{
 		pPlayer->next = playerlist;
 		playerlist = pPlayer;
 	}
@@ -4982,21 +4988,21 @@ void load_race( void )
 			}
 			else if ( !str_cmp( name, "End" ) )
 				break;
-			else if ( !str_cmp( name, "VNum" ) )       
+			else if ( !str_cmp( name, "VNum" ) )
 				pRace->vnum       = fread_number( fp );
 			else if ( !str_cmp( name, "Race_Full" ) )
 				pRace->race_full  = fread_string( fp );
 			else if ( !str_cmp( name, "Race_Name" ) )
 				pRace->race_name  = fread_string( fp );
-			else if ( !str_cmp( name, "MStr" ) )       
+			else if ( !str_cmp( name, "MStr" ) )
 				pRace->mstr       = fread_number( fp );
-			else if ( !str_cmp( name, "MInt" ) )       
+			else if ( !str_cmp( name, "MInt" ) )
 				pRace->mint       = fread_number( fp );
-			else if ( !str_cmp( name, "MWis" ) )       
+			else if ( !str_cmp( name, "MWis" ) )
 				pRace->mwis       = fread_number( fp );
-			else if ( !str_cmp( name, "MDex" ) )       
+			else if ( !str_cmp( name, "MDex" ) )
 				pRace->mdex       = fread_number( fp );
-			else if ( !str_cmp( name, "MCon" ) )       
+			else if ( !str_cmp( name, "MCon" ) )
 				pRace->mcon       = fread_number( fp );
 		}
 		race_sort( pRace );
@@ -5024,5 +5030,3 @@ RACE_DATA *get_race_data( int vnum )
 
 	return NULL;
 }
-
-

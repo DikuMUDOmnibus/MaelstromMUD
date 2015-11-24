@@ -1163,7 +1163,7 @@ jungle eyes~
 &GWild eyes of the jungle lies here.~
 ~
 27 872415296 514 6176 131073 102
-105~ -1~ 0~ identify~
+105~ -1~ 0~  ~
 3 35000 998 50 0
 0 0
 identify~
@@ -1697,7 +1697,7 @@ Vacan Stare~
 &p A pare glowing lenses.~
 ~
 27 1024 2056 0 131073 95
-100~ -1~ 0~ identify~
+100~ -1~ 0~  ~
 1 0 0 0 0
 0 0
 reserved~

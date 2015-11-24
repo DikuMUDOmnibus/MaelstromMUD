@@ -246,7 +246,7 @@ int game_main( int argc, char **argv )
 		if ( !(fp = fopen( new_comlog, "w" ) ) ) {
 			perror( new_comlog );
 		} else {
-			fprintf( fp, "%s: %s\n", ctime( &current_time ), log_buf ); 
+			fprintf( fp, "%s: %s\n", ctime( &current_time ), log_buf );
 			fclose(fp);
 		}
 
@@ -275,7 +275,7 @@ int init_socket( int port )
 {
 	static struct sockaddr_in sa_zero;
 	struct sockaddr_in sa;
-	int         x        = 1; 
+	int         x        = 1;
 	int         fd;
 
 	if ( ( fd = socket( AF_INET, SOCK_STREAM, 0 ) ) < 0 )
@@ -408,7 +408,7 @@ void game_loop_unix( int control )
 		 */
 		for ( d = descriptor_list; d; d = d_next )
 		{
-			d_next = d->next;   
+			d_next = d->next;
 			if ( FD_ISSET( d->descriptor, &exc_set ) )
 			{
 				FD_CLR( d->descriptor, &in_set  );
@@ -417,7 +417,7 @@ void game_loop_unix( int control )
 				if ( d->character ) {
 					save_char_obj( d->character);
 				}
-				
+
 				d->outtop	= 0;
 				close_socket( d );
 				continue;
@@ -475,7 +475,7 @@ void game_loop_unix( int control )
 						sprintf( buf, "comlog%d.txt", port );
 						sprintf( buf2, "%s: %s: %s\n", ctime( &current_time ),
 								d->character ? d->character->name : "(Unknown)",
-								d->incomm ); 
+								d->incomm );
 						fclose(fpReserve);
 						if ( (fp = fopen( buf, "a" ) ) )
 						{
@@ -489,7 +489,7 @@ void game_loop_unix( int control )
 						if ( d->connected == CON_PLAYING )
 						{
 							if ( !run_olc_editor( d ) )
-								interpret( d->character, d->incomm ); 
+								interpret( d->character, d->incomm );
 						}
 						else if ( d->connected == CON_CHATTING )
 						{
@@ -593,8 +593,8 @@ void init_descriptor (DESCRIPTOR_DATA *dnew, int desc)
 	dnew->editor				= 0;			/* OLC */
 	dnew->outsize				= 1;
 	dnew->outbuf				= alloc_mem( dnew->outsize );
-	dnew->ansi          = FALSE; 
-	dnew->user          = str_dup( "(unknown)" ); 
+	dnew->ansi          = FALSE;
+	dnew->user          = str_dup( "(unknown)" );
 }
 
 void new_descriptor( int control )
@@ -654,7 +654,7 @@ void new_descriptor( int control )
 		sprintf( log_buf, "Sock.sinaddr:  %s", buf );
 
 		log_string( log_buf, CHANNEL_GOD, -1 );
-		
+
 		from = gethostbyaddr( (char *) &sock.sin_addr, sizeof(sock.sin_addr), AF_INET );
 		dnew->host = str_dup( from ? from->h_name : buf );
 	}
@@ -727,9 +727,9 @@ void close_socket( DESCRIPTOR_DATA *dclose )
 				char_from_room( ch );
 				char_to_room( ch, get_room_index( 768 ) );
 			}
-			if (    !IS_SET( ch->act, PLR_WIZINVIS ) 
+			if (    !IS_SET( ch->act, PLR_WIZINVIS )
 					&& !IS_SET( ch->act, PLR_CLOAKED ) )
-				info( "The link between %s and the storm has been torn.", 
+				info( "The link between %s and the storm has been torn.",
 						(int)(ch->name), 0 );
 			/*	  {
 				  CHAR_DATA *PeT;
@@ -739,11 +739,11 @@ void close_socket( DESCRIPTOR_DATA *dclose )
 				  if ( IS_SET( PeT->act, ACT_PET ) && PeT->master == ch )
 				  {
 
-				  REMOVE_BIT( PeT->act, ACT_PET );  
+				  REMOVE_BIT( PeT->act, ACT_PET );
 				  break;
 
 				  }
-				  } 
+				  }
 				  }*/
 			ch->desc = NULL;
 		}
@@ -1035,7 +1035,7 @@ bool process_output( DESCRIPTOR_DATA *d, bool fPrompt )
 				}
 				else if ( (victim = ch->hunting) && IS_NPC(victim) )
 				{
-					hunt_victim( ch ); 
+					hunt_victim( ch );
 				}
 
 				ch = d->original ? d->original : d->character;
@@ -1149,7 +1149,7 @@ void bust_a_prompt( DESCRIPTOR_DATA *d )
 				   */
 				i = buf2; break;
 			case 'v' :
-				sprintf( buf2, "%d", ch->move                              ); 
+				sprintf( buf2, "%d", ch->move                              );
 				i = buf2; break;
 			case 'V' :
 				sprintf( buf2, "%d", MAX_MOVE(ch));
@@ -1203,10 +1203,10 @@ void bust_a_prompt( DESCRIPTOR_DATA *d )
 					{
 						extern int sAllocPerm;
 
-						sprintf( buf2, "%d", (sAllocPerm * 10) / (1024 * 1024) ); 
+						sprintf( buf2, "%d", (sAllocPerm * 10) / (1024 * 1024) );
 					}
 					else
-						sprintf( buf2, " " ); 
+						sprintf( buf2, " " );
 					i = buf2; break;
 				}
 			case 'l' :
@@ -1220,11 +1220,11 @@ void bust_a_prompt( DESCRIPTOR_DATA *d )
 					sprintf( buf2, "Cloaked" );
 				else
 					sprintf( buf2, "Visible" );
-				i = buf2;break;                              
-		} 
+				i = buf2;break;
+		}
 		++str;
 		while( ( *point = *i ) != '\0' )
-			++point, ++i;      
+			++point, ++i;
 	}
 	/*log_string("first",0);
 	  while( ( *point = *i ) != '\0' )
@@ -1279,23 +1279,23 @@ void bust_a_color_prompt( DESCRIPTOR_DATA *d )
 				if ( !is_class( ch, CLASS_VAMPIRE ) )
 				{
 					sprintf( buf2, "%dm ", ch->mana                              );
-					send_to_char(AT_LBLUE, buf2, ch); 
+					send_to_char(AT_LBLUE, buf2, ch);
 				}
 				else
 				{
 					sprintf( buf2, "%dbp ", ch->bp                              );
-					send_to_char(AT_RED, buf2, ch); 
+					send_to_char(AT_RED, buf2, ch);
 				}
 				i = buf2;
 				buf2[0] = '\0';break;
 			case 'v' :
-				sprintf( buf2, "%dmv ", ch->move                              ); 
-				send_to_char(AT_GREEN, buf2, ch); 
+				sprintf( buf2, "%dmv ", ch->move                              );
+				send_to_char(AT_GREEN, buf2, ch);
 				i = buf2;
 				buf2[0] = '\0';break;
 			case 'x' :
 				sprintf( buf2, "%dxp ", ch->exp                               );
-				send_to_char(AT_WHITE, buf2, ch); 
+				send_to_char(AT_WHITE, buf2, ch);
 				i = buf2;
 				buf2[0] = '\0';break;
 			case 'g' :
@@ -1304,8 +1304,8 @@ void bust_a_color_prompt( DESCRIPTOR_DATA *d )
 #else
 				sprintf( buf2, "%dgp ", ch->gold                              );
 #endif
-				send_to_char(AT_YELLOW, buf2, ch); 
-				i = buf2; 
+				send_to_char(AT_YELLOW, buf2, ch);
+				i = buf2;
 				buf2[0] = '\0';break;
 			case 'a' :
 				if( ch->level < 5 )
@@ -1313,15 +1313,15 @@ void bust_a_color_prompt( DESCRIPTOR_DATA *d )
 				else
 					sprintf( buf2, "%s ", IS_GOOD( ch ) ? "good"
 							: IS_EVIL( ch ) ? "evil" : "neutral" );
-				send_to_char(AT_GREY, buf2, ch); 
-				i = buf2; 
+				send_to_char(AT_GREY, buf2, ch);
+				i = buf2;
 				buf2[0] = '\0';break;
 			case 'r' :
 				if( ch->in_room )
 					sprintf( buf2, "%s ", ch->in_room->name                  );
 				else
 					sprintf( buf2, " "                                      );
-				send_to_char(AT_RED, buf2, ch); 
+				send_to_char(AT_RED, buf2, ch);
 				i = buf2;
 				buf2[0] = '\0';break;
 			case 'R' :
@@ -1329,8 +1329,8 @@ void bust_a_color_prompt( DESCRIPTOR_DATA *d )
 					sprintf( buf2, "%d ", ch->in_room->vnum                  );
 				else
 					sprintf( buf2, " "                                      );
-				send_to_char(AT_WHITE, buf2, ch); 
-				i = buf2; 
+				send_to_char(AT_WHITE, buf2, ch);
+				i = buf2;
 				buf2[0] = '\0';break;
 			case 'c' :		/* OLC */
 				send_to_char( AT_GREEN, olc_ed_name( ch ), ch );
@@ -1341,7 +1341,7 @@ void bust_a_color_prompt( DESCRIPTOR_DATA *d )
 					sprintf( buf2, "%s ", ch->in_room->area->name            );
 				else
 					sprintf( buf2, " "                                      );
-				send_to_char(AT_RED, buf2, ch); 
+				send_to_char(AT_RED, buf2, ch);
 				i = buf2;
 				buf2[0] = '\0';break;
 			case 'l' :
@@ -1363,7 +1363,7 @@ void bust_a_color_prompt( DESCRIPTOR_DATA *d )
 		}
 		++str;
 		while( ( *point = *i ) != '\0' )
-			++point, ++i;      
+			++point, ++i;
 		*point = '\0';
 	}
 	send_to_char(C_DEFAULT, "> ", ch);
@@ -1408,7 +1408,7 @@ void write_to_buffer( DESCRIPTOR_DATA *d, const char *txt, int length )
 	/*
 	 * Copy.
 	 */
-	strncpy( d->outbuf + d->outtop, txt, length );	
+	strncpy( d->outbuf + d->outtop, txt, length );
 	d->outtop += length;
 	/* Modded below... nothing critical, just a check */
 	d->outbuf[d->outtop]='\0';
@@ -1514,7 +1514,7 @@ bool write_to_descriptor( char *txt, int length, DESCRIPTOR_DATA *d )
 			free_mem(ntxt, nl);
 			return FALSE;
 		}
-	} 
+	}
 
 	free_mem(ntxt, nl);
 	return TRUE;
@@ -1584,13 +1584,15 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 				} else {
 					write_to_buffer( d, help_greeting, 0 );
 				}
+
+				write_to_buffer( d, "&WWhat is your name? ", 0 );
 			}
 
 			break;
 
 		case CON_GET_NAME:
 			if ( argument[0] == '\0' ) {
-				write_to_buffer( d, "What is your name?", 0 );
+				write_to_buffer( d, "&WWhat is your name? ", 0 );
 				return;
 			}
 
@@ -1605,7 +1607,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			if ( !check_parse_name( argument ) ) {
 				if ( !fOld ) {
 					write_to_buffer( d, "&cIllegal name, try another.\n\r&WName&w: ", 0 );
-					
+
 					if ( d->character ) {
 						free_char( d->character );
 					}
@@ -1702,7 +1704,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 
 			if ( ch->level != L_IMP )
 			{
-				sprintf( log_buf, "%s!%s@%s has connected.", 
+				sprintf( log_buf, "%s!%s@%s has connected.",
 						ch->name, d->user, d->host );
 				wiznet(log_buf,NULL,NULL,WIZ_SITES,0,get_trust(ch));
 			}
@@ -1716,7 +1718,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			switch ( *argument )
 			{
 				case 'y': case 'Y':
-					sprintf( buf, 
+					sprintf( buf,
 							"&cNew character&w.\n\r&cGive me a &Wpassword&c for %s&w: %s",
 							ch->name, echo_off_str );
 					write_to_buffer( d, buf, 0 );
@@ -1770,7 +1772,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 
 			if ( strcmp( crypt( argument, ch->pcdata->pwd ), ch->pcdata->pwd ) )
 			{
-				write_to_buffer( d, 
+				write_to_buffer( d,
 						"&cPasswords don't match&w.\n\r&cRetype &Wpassword&w: ",
 						0 );
 				d->connected = CON_GET_NEW_PASSWORD;
@@ -1789,17 +1791,17 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 				case 'f': case 'F': ch->sex = SEX_FEMALE;  break;
 				case 'n': case 'N': ch->sex = SEX_NEUTRAL; break;
 				default:
-									write_to_buffer( d, 
+									write_to_buffer( d,
 											"&cThat's not a sex&w.\n\r&WWhat IS your sex&w? ", 0 );
 									return;
 			}
 			buf2[0] = '\0';
-			strcpy( buf2, 
+			strcpy( buf2,
 					"\n\r                  &z-= &RSelect a race from the list below &z=-\n\r\n\r" );
 			for ( iClass = 0; iClass < MAX_RACE; iClass++ )
 			{
-				sprintf( buf, "&z[&W%-12s&z]%s", 
-						(get_race_data(iClass))->race_full, 
+				sprintf( buf, "&z[&W%-12s&z]%s",
+						(get_race_data(iClass))->race_full,
 						(( iClass+1) % 5) == 0 ? "\n\r" : "" );
 				strcat( buf2, buf );
 			}
@@ -1849,7 +1851,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 						ch->pcdata->mod_con = pRace->mcon;
 					}
 					buf2[0]='\0';
-					strcpy( buf2, 
+					strcpy( buf2,
 							"\n\r                 &z-= &RSelect a class from the list below &z=-"
 							"\n\r           &cYou may type &RBACK &cto return to previous selection.\n\r\n\r"
 						  );
@@ -1859,7 +1861,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 						if ( class_table[iClass].races[ch->race] )
 						{
 							iCount++;
-							sprintf( buf, "&z[&W%-12s&z]%s", 
+							sprintf( buf, "&z[&W%-12s&z]%s",
 									class_table[iClass].who_long,
 									iCount % 5 == 0 ? "\n\r" : "" );
 							strcat( buf2, buf );
@@ -1872,12 +1874,12 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					d->connected = CON_GET_NEW_CLASS;
 					break;
 				case 'n': case 'N':
-					strcpy( buf2, 
+					strcpy( buf2,
 							"\n\r                  &z-= &RSelect a race from the list below &z=-\n\r\n\r" );
 					for ( iClass = 0; iClass < MAX_RACE; iClass++ )
 					{
-						sprintf( buf, "&z[&W%-12s&z]%s", 
-								(get_race_data(iClass))->race_full, 
+						sprintf( buf, "&z[&W%-12s&z]%s",
+								(get_race_data(iClass))->race_full,
 								(( iClass+1) % 5) == 0 ? "\n\r" : "" );
 						strcat( buf2, buf );
 					}
@@ -1889,7 +1891,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					break;
 
 				default:
-					write_to_buffer( d, 
+					write_to_buffer( d,
 							"&cPlease type &WYes &cor &WNo&w: ", 0 );
 					break;
 			}
@@ -1898,12 +1900,12 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 		case CON_GET_NEW_CLASS:
 			if ( !str_cmp( argument, "back" ) )
 			{
-				strcpy( buf2, 
+				strcpy( buf2,
 						"\n\r                  &z-= &RSelect a race from the list below &z=-\n\r\n\r" );
 				for ( iClass = 0; iClass < MAX_RACE; iClass++ )
 				{
-					sprintf( buf, "&z[&W%-12s&z]%s", 
-							(get_race_data(iClass))->race_full, 
+					sprintf( buf, "&z[&W%-12s&z]%s",
+							(get_race_data(iClass))->race_full,
 							(( iClass+1) % 5) == 0 ? "\n\r" : "" );
 					strcat( buf2, buf );
 				}
@@ -1950,7 +1952,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 							case APPLY_WIS: ch->pcdata->perm_wis = 16; break;
 							case APPLY_DEX: ch->pcdata->perm_dex = 16; break;
 							case APPLY_CON: ch->pcdata->perm_con = 16; break;
-						} 
+						}
 					}
 					argument[0] = '\0';
 					do_help( ch, "MULTICLASS" );
@@ -1960,7 +1962,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					break;
 
 				case 'n': case 'N':
-					strcpy( buf2, 
+					strcpy( buf2,
 							"\n\r                 &z-= &RSelect a class from the list below &z=-"
 							"\n\r           &cYou may type &RBACK &cto return to previous selection.\n\r\n\r"
 						  );
@@ -1970,7 +1972,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 						if ( class_table[iClass].races[ch->race] )
 						{
 							iCount++;
-							sprintf( buf, "&z[&W%-12s&z]%s", 
+							sprintf( buf, "&z[&W%-12s&z]%s",
 									class_table[iClass].who_long,
 									iCount % 5 == 0 ? "\n\r" : "" );
 							strcat( buf2, buf );
@@ -1987,19 +1989,19 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			switch ( *argument )
 			{
 				case 'y': case 'Y':
-					strcpy( buf2, 
+					strcpy( buf2,
 							"\n\r                 &z-= &RSelect a class from the list below &z=-"
 							"\n\r           &cYou may type &RBACK &cto return to previous selection.\n\r\n\r"
 						  );
 					iCount = 0;
 					for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
 					{
-						if ( class_table[iClass].races[ch->race] 
+						if ( class_table[iClass].races[ch->race]
 								&& prime_class( ch ) != iClass
 								&& class_table[prime_class(ch)].multi[iClass] )
 						{
 							iCount++;
-							sprintf( buf, "&z[&W%-12s&z]%s", 
+							sprintf( buf, "&z[&W%-12s&z]%s",
 									class_table[iClass].who_long,
 									iCount % 5 == 0 ? "\n\r" : "" );
 							strcat( buf2, buf );
@@ -2027,7 +2029,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 		case CON_GET_2ND_CLASS:
 			if ( !str_cmp( argument, "back" ) )
 			{
-				strcpy( buf2, 
+				strcpy( buf2,
 						"\n\r                 &z-= &RSelect a class from the list below &z=-"
 						"\n\r           &cYou may type &RBACK &cto return to previous selection.\n\r\n\r"
 					  );
@@ -2037,7 +2039,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					if ( class_table[iClass].races[ch->race] )
 					{
 						iCount++;
-						sprintf( buf, "&z[&W%-12s&z]%s", 
+						sprintf( buf, "&z[&W%-12s&z]%s",
 								class_table[iClass].who_long,
 								iCount % 5 == 0 ? "\n\r" : "" );
 						strcat( buf2, buf );
@@ -2093,19 +2095,19 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					break;
 
 				case 'n': case 'N':
-					strcpy( buf2, 
+					strcpy( buf2,
 							"\n\r                 &z-= &RSelect a class from the list below &z=-"
 							"\n\r           &cYou may type &RBACK &cto return to previous selection.\n\r\n\r"
 						  );
 					iCount = 0;
 					for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
 					{
-						if ( class_table[iClass].races[ch->race] 
-								&& prime_class( ch ) != iClass		
+						if ( class_table[iClass].races[ch->race]
+								&& prime_class( ch ) != iClass
 								&& class_table[prime_class(ch)].multi[iClass] )
 						{
 							iCount++;
-							sprintf( buf, "&z[&W%-12s&z]%s", 
+							sprintf( buf, "&z[&W%-12s&z]%s",
 									class_table[iClass].who_long,
 									iCount % 5 == 0 ? "\n\r" : "" );
 							strcat( buf2, buf );
@@ -2123,21 +2125,21 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			switch ( *argument )
 			{
 				case 'y': case 'Y':
-					strcpy( buf2, 
+					strcpy( buf2,
 							"\n\r                 &z-= &RSelect a class from the list below &z=-"
 							"\n\r           &cYou may type &RBACK &cto return to previous selection.\n\r\n\r"
 						  );
 					iCount = 0;
 					for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
 					{
-						if ( class_table[iClass].races[ch->race] 
+						if ( class_table[iClass].races[ch->race]
 								&& prime_class( ch ) != iClass
 								&& ch->class[1] != iClass
 								&& class_table[prime_class(ch)].multi[iClass]
 								&& class_table[ch->class[1]].multi[iClass] )
 						{
 							iCount++;
-							sprintf( buf, "&z[&W%-12s&z]%s", 
+							sprintf( buf, "&z[&W%-12s&z]%s",
 									class_table[iClass].who_long,
 									iCount % 5 == 0 ? "\n\r" : "" );
 							strcat( buf2, buf );
@@ -2165,19 +2167,19 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 		case CON_GET_3RD_CLASS:
 			if ( !str_cmp( argument, "back" ) )
 			{
-				strcpy( buf2, 
+				strcpy( buf2,
 						"\n\r                 &z-= &RSelect a class from the list below &z=-"
 						"\n\r           &cYou may type &RBACK &cto return to previous selection.\n\r\n\r"
 					  );
 				iCount = 0;
 				for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
 				{
-					if ( class_table[iClass].races[ch->race] 
+					if ( class_table[iClass].races[ch->race]
 							&& prime_class( ch ) != iClass
 							&& class_table[prime_class(ch)].multi[iClass] )
 					{
 						iCount++;
-						sprintf( buf, "&z[&W%-12s&z]%s", 
+						sprintf( buf, "&z[&W%-12s&z]%s",
 								class_table[iClass].who_long,
 								iCount % 5 == 0 ? "\n\r" : "" );
 						strcat( buf2, buf );
@@ -2194,7 +2196,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			{
 				if ( !str_prefix( argument, class_table[iClass].who_long )
 						&& class_table[iClass].races[ch->race]
-						&& prime_class( ch ) != iClass 
+						&& prime_class( ch ) != iClass
 						&& ch->class[1] != iClass
 						&& class_table[prime_class(ch)].multi[iClass]
 						&& class_table[ch->class[1]].multi[iClass] )
@@ -2229,21 +2231,21 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					break;
 
 				case 'n': case 'N':
-					strcpy( buf2, 
+					strcpy( buf2,
 							"\n\r                 &z-= &RSelect a class from the list below &z=-"
 							"\n\r           &cYou may type &RBACK &cto return to previous selection.\n\r\n\r"
 						  );
 					iCount = 0;
 					for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
 					{
-						if ( class_table[iClass].races[ch->race] 
+						if ( class_table[iClass].races[ch->race]
 								&& prime_class( ch ) != iClass
 								&& ch->class[1] != iClass
 								&& class_table[prime_class(ch)].multi[iClass]
 								&& class_table[ch->class[1]].multi[iClass] )
 						{
 							iCount++;
-							sprintf( buf, "&z[&W%-12s&z]%s", 
+							sprintf( buf, "&z[&W%-12s&z]%s",
 									class_table[iClass].who_long,
 									iCount % 5 == 0 ? "\n\r" : "" );
 							strcat( buf2, buf );
@@ -2327,12 +2329,12 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			/* END */
 		case CON_BEGIN_REMORT:
 			buf2[0] = '\0';
-			strcpy( buf2, 
+			strcpy( buf2,
 					"\n\r                  &z-= &RSelect a race from the list below &z=-\n\r\n\r" );
 			for ( iClass = 0; iClass < MAX_RACE; iClass++ )
 			{
-				sprintf( buf, "&z[&W%-12s&z]%s", 
-						(get_race_data(iClass))->race_full, 
+				sprintf( buf, "&z[&W%-12s&z]%s",
+						(get_race_data(iClass))->race_full,
 						(( iClass+1) % 5) == 0 ? "\n\r" : "" );
 				strcat( buf2, buf );
 			}
@@ -2403,7 +2405,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 						( ch->race == RACE_HALFLING ) )
 					ch->charisma = number_range( 25, 30 );
 
-				sprintf( buf, "the %s %s", 
+				sprintf( buf, "the %s %s",
 						pRace->race_full,
 						class_table[prime_class(ch)].who_long );
 				set_title( ch, buf );
@@ -2517,7 +2519,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 						notes++;
 
 				if ( notes == 1 )
-					send_to_char(AT_WHITE, 
+					send_to_char(AT_WHITE,
 							"\n\rYou have one new note waiting.\n\r", ch );
 				else
 					if ( notes > 1 )
@@ -2626,7 +2628,7 @@ bool check_reconnect( DESCRIPTOR_DATA *d, char *name, bool fConn )
 				act(AT_GREEN, "$n has reconnected.", ch, NULL, NULL, TO_ROOM );
 				sprintf( log_buf, "%s!%s@%s reconnected.", ch->name, d->user, d->host );
 				wiznet( log_buf,ch,NULL,WIZ_LINKS,0,0);
-				if ( !IS_SET( ch->act, PLR_WIZINVIS ) 
+				if ( !IS_SET( ch->act, PLR_WIZINVIS )
 						&& !IS_SET( ch->act, PLR_CLOAKED ) )
 					info( "%s has re-established a link to the storm.",
 							(int)(ch->name), 0 );
@@ -2691,7 +2693,7 @@ bool check_playing( DESCRIPTOR_DATA *d, char *name )
 						d->character->name);
 				log_string(log_buf, CHANNEL_LOG, d->character->level);
 				wiznet(log_buf, NULL, NULL, WIZ_LINKS, 0, 0);
-				if ( !IS_SET( d->character->act, PLR_WIZINVIS ) 
+				if ( !IS_SET( d->character->act, PLR_WIZINVIS )
 						&& !IS_SET( d->character->act, PLR_CLOAKED) )
 					info(log_buf, 0, 0);
 				d->connected = CON_PLAYING;
@@ -3035,7 +3037,7 @@ void act(int AType, const char *format, CHAR_DATA *ch, const void *arg1,
 		*point++ = '\r';
 		*point++ = '\0';
 
-		buf[0]   = UPPER( buf[0] ); 
+		buf[0]   = UPPER( buf[0] );
 		if (to->desc && to->desc->ansi)
 		{
 			if (AType>15)
@@ -3080,7 +3082,7 @@ void do_authorize(CHAR_DATA *ch, char *argument)
 		else if (!auth_off && !str_cmp(arg1, "off"))
 		{
 			if(ch->level > L_DIR) /* Level 112+ */
-			{      
+			{
 				auth_off = TRUE;
 				send_to_char(AT_YELLOW, "Authorization is now OFF.\n\r", ch );
 			}
@@ -3177,7 +3179,7 @@ void send_to_area( AREA_DATA *pArea, char *txt )
 			continue;
 		if ( d->character )
 		{
-			if ( !( d->character->in_room ) || ( d->character->deleted ) 
+			if ( !( d->character->in_room ) || ( d->character->deleted )
 					|| !IS_OUTSIDE( d->character ) || !IS_AWAKE( d->character ) )
 				continue;
 			if ( d->character->in_room->area == pArea )
@@ -3197,13 +3199,13 @@ bool check_ban( DESCRIPTOR_DATA *dnew, bool loggedin )
 		if ( pban->type == 'N' )
 			continue;
 		/*
-		   sprintf( buf, "pban->user: %s, pban->site: %s\n\rdnew->user: %s, dnew->site: %s\n\r", 
+		   sprintf( buf, "pban->user: %s, pban->site: %s\n\rdnew->user: %s, dnew->site: %s\n\r",
 		   !pban->user ? "NULL" : pban->user, pban->name, dnew->user, dnew->host );
 		   write_to_descriptor( buf, 0, dnew );
 		   */
 		if ( ( !str_suffix( pban->name, dnew->host ) && !pban->user )
 
-				|| ( pban->user && !str_cmp( pban->user, dnew->user ) 
+				|| ( pban->user && !str_cmp( pban->user, dnew->user )
 					&& !str_suffix( pban->name, dnew->host ) )
 		   )
 		{
@@ -3213,7 +3215,7 @@ bool check_ban( DESCRIPTOR_DATA *dnew, bool loggedin )
 					write_to_descriptor(
 							"You have been banned from Eye of the Storm.\n\r", 0, dnew );
 				}
-			if ( !str_suffix( pban->name, dnew->host ) && 
+			if ( !str_suffix( pban->name, dnew->host ) &&
 					!pban->user )
 			{
 				write_to_descriptor(
@@ -3256,7 +3258,7 @@ bool check_newban( DESCRIPTOR_DATA *dnew, bool loggedin )
 		if ( pban->type != 'N' )
 			continue;
 		if ( ( !str_suffix( pban->name, dnew->host ) && !pban->user )
-				|| ( pban->user && !str_cmp( pban->user, dnew->user ) 
+				|| ( pban->user && !str_cmp( pban->user, dnew->user )
 					&& !str_suffix( pban->name, dnew->host ) ) )
 		{
 			if ( pban->user && !str_cmp( pban->user, dnew->user ) )
@@ -3265,7 +3267,7 @@ bool check_newban( DESCRIPTOR_DATA *dnew, bool loggedin )
 					write_to_descriptor(
 							"You have been banned from making new characters on Eye of the Storm.\n\r", 0, dnew );
 				}
-			if ( !str_suffix( pban->name, dnew->host ) && 
+			if ( !str_suffix( pban->name, dnew->host ) &&
 					!pban->user )
 			{
 				write_to_descriptor(
@@ -3570,7 +3572,7 @@ void do_hotreboot (CHAR_DATA *ch, char * argument)
 		return;
 	}
 
-	do_asave (NULL, ""); /* autosave changed areas */	
+	do_asave (NULL, ""); /* autosave changed areas */
 	save_player_list();
 	sprintf (buf, "\n\rHot Reboot by %s.\n\r", ch->name);
 
@@ -3583,7 +3585,7 @@ void do_hotreboot (CHAR_DATA *ch, char * argument)
 		if (    !d->character								/* drop those logging on */
 				||  (d->connected != CON_PLAYING			/* check if they're playing */
 						&&  d->connected != CON_CHATTING)   /* check if they're in the chat room */
-		   ) 
+		   )
 		{
 			write_to_descriptor ( "\n\rSorry, we are rebooting.  Try again in a minute.\n\r", 0, d );
 			close_socket (d); /* throw'em out */
@@ -3646,7 +3648,7 @@ void hotreboot_recover ( )
 		if ( !fscanf (fp, "%d %s %s %s %d\n", &desc, name, user, host, &ansi) ) {
 			/* do nothing */
 		}
-	
+
 		if (desc == -1) {
 			break;
 		}
@@ -3654,7 +3656,7 @@ void hotreboot_recover ( )
 		d = alloc_perm (sizeof(DESCRIPTOR_DATA));
 		init_descriptor (d,desc); /* set up various stuff */
 
-		/* Write something, and check if it goes error-free */		
+		/* Write something, and check if it goes error-free */
 		if (!write_to_descriptor ( "\n\rRecovering from hotreboot.\n\r",0, d)) {
 			close(d->descriptor); /* nope */
 			continue;
@@ -3674,7 +3676,7 @@ void hotreboot_recover ( )
 		if (!fOld) /* Player file not found?! */
 		{
 			write_to_descriptor ("\n\rUnable to find your character.  Sorry.\n\r", 0, d);
-			close_socket (d);			
+			close_socket (d);
 		}
 		else /* ok! */
 		{

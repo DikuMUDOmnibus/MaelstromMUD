@@ -4339,16 +4339,21 @@ the target of the action.
      &B[&wINFO&B]&w: &Wchannel what mob killed a person.
 ~
 -1 GREETING~
-&z                      &zEntropy &wof the &zSoul
 
-&w
-            Original DikuMUD by Hans Staerfeldt, Katja Nyboe,
-            Tom Madsen, Michael Seifert, and Sebastian Hammer.
-            Based on MERC 2.1 code by Hatchet, Furey, and Kahn
-            And based on ENVY code by Michael Quan, David Love,
-            Guilherme Arnold, Mitchell Tse.
-&W
-What is your name?~
+&gConnected to OASIS MUD, based on Diku, Merc, and Envy.
+
+================================================================================
+               .d88888b.        d8888  .d8888b. 8888888 .d8888b.               
+              d88P" "Y88b      d88888 d88P  Y88b  888  d88P  Y88b              
+              888     888     d88P888 Y88b.       888  Y88b.                   
+              888     888    d88P 888  "Y888b.    888   "Y888b.                
+              888     888   d88P  888     "Y88b.  888      "Y88b.              
+              888     888  d88P   888       "888  888        "888              
+              Y88b. .d88P d8888888888 Y88b  d88P  888  Y88b  d88P              
+               "Y88888P" d88P     888  "Y8888P" 8888888 "Y8888P"               
+================================================================================
+ 
+~
 0 ANIMATE DEAD~
 Syntax: cast 'animate dead' corpse
  
