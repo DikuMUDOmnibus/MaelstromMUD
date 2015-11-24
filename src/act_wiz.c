@@ -138,9 +138,9 @@ void parse_issues( CHAR_DATA *ch, char *argument, const char *label ) {
 		/* add an issue */
 		char arg[ MAX_INPUT_LENGTH ];
 
-		argument = one_argument( argument, arg );
+		one_argument( argument, arg );
 
-		if ( argument[0] == '\0' ) {
+		if ( arg[0] == '\0' ) {
 			send_to_char(AT_WHITE, "Todo what?\n\r", ch);
 			return;
 		}
