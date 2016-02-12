@@ -980,7 +980,7 @@ void do_drink( CHAR_DATA *ch, char *argument )
 		{
 			if ( obj->item_type == ITEM_FOUNTAIN ) 
 				break;
-			if ( obj->item_type == ITEM_BLOOD    )
+			if ( obj->item_type == ITEM_LIQUID    )
 				break;
 		}
 
@@ -1011,10 +1011,6 @@ void do_drink( CHAR_DATA *ch, char *argument )
 			send_to_char(AT_BLUE, "You can't drink from that.\n\r", ch );
 			break;
 
-		case ITEM_BLOOD:
-			send_to_char( AT_WHITE, "It is not in your nature to do such things.\n\r", ch );
-			break;
-
 		case ITEM_FOUNTAIN:
 			if ( !IS_NPC( ch ) )
 				ch->pcdata->condition[COND_THIRST] = 58;  /*  48  */
@@ -1023,45 +1019,50 @@ void do_drink( CHAR_DATA *ch, char *argument )
 			act(AT_LBLUE, "$n drinks from the $p.", ch, obj, NULL, TO_ROOM );
 			break;
 
+		case ITEM_LIQUID:
 		case ITEM_DRINK_CON:
-			if ( obj->value[1] <= 0 )
-			{
-				send_to_char(AT_BLUE, "It is already empty.\n\r", ch );
-				return;
+			if ( obj->value[1] <= 0 ) {
+				if (obj->item_type == ITEM_DRINK_CON) {
+					send_to_char(AT_BLUE, "It is already empty.\n\r", ch );
+					return;
+				} else if (obj->item_type == ITEM_LIQUID) {
+					send_to_char(AT_BLUE, "There doesn't seem to be any left.\n\r", ch );
+					return;
+				}
 			}
 
-			if ( ( liquid = obj->value[2] ) >= LIQ_MAX )
-			{
+			if ( ( liquid = obj->value[2] ) >= LIQ_MAX ) {
 				bug( "Do_drink: bad liquid number %d.", liquid );
 				liquid = obj->value[2] = 0;
 			}
 
-			act(AT_LBLUE, "You drink $T from $p.",
-					ch, obj, liq_table[liquid].liq_name, TO_CHAR );
-			act(AT_LBLUE, "$n drinks $T from $p.",
-					ch, obj, liq_table[liquid].liq_name, TO_ROOM );
+			act(AT_LBLUE, "You drink $T from $p.", ch, obj, liq_table[liquid].liq_name, TO_CHAR );
+			act(AT_LBLUE, "$n drinks $T from $p.", ch, obj, liq_table[liquid].liq_name, TO_ROOM );
 
 			amount = number_range( 3, 8 );
 			amount = UMIN( amount, obj->value[1] );
 
-			gain_condition( ch, COND_DRUNK,
-					liq_table[liquid].liq_affect[COND_DRUNK  ] );
-			gain_condition( ch, COND_FULL,
-					amount * liq_table[liquid].liq_affect[COND_FULL   ] );
-			gain_condition( ch, COND_THIRST,
-					amount * liq_table[liquid].liq_affect[COND_THIRST ] );
-			if ( !IS_NPC( ch ) && ch->pcdata->condition[COND_DRUNK ] > 100 )
+			gain_condition( ch, COND_DRUNK, liq_table[liquid].liq_affect[COND_DRUNK  ] );
+			gain_condition( ch, COND_FULL, amount * liq_table[liquid].liq_affect[COND_FULL   ] );
+			gain_condition( ch, COND_THIRST, amount * liq_table[liquid].liq_affect[COND_THIRST ] );
+
+			if ( !IS_NPC( ch ) && ch->pcdata->condition[COND_DRUNK ] > 100 ) {
 				ch->pcdata->condition[COND_DRUNK ] = 100;
+			}
 
-			if ( !IS_NPC( ch ) && ch->pcdata->condition[COND_DRUNK ] > 10 )
+			if ( !IS_NPC( ch ) && ch->pcdata->condition[COND_DRUNK ] > 10 ) {
 				send_to_char(AT_ORANGE, "You feel drunk.\n\r", ch );
-			if ( !IS_NPC( ch ) && ch->pcdata->condition[COND_FULL  ] > MAX_FULL )
-				send_to_char(AT_BLUE, "You are full.\n\r", ch );
-			if ( !IS_NPC( ch ) && ch->pcdata->condition[COND_THIRST] > MAX_THIRST )
-				send_to_char(AT_BLUE, "You do not feel thirsty.\n\r", ch );
+			}
 
-			if ( obj->value[3] != 0 )
-			{
+			if ( !IS_NPC( ch ) && ch->pcdata->condition[COND_FULL  ] > MAX_FULL ) {
+				send_to_char(AT_BLUE, "You are full.\n\r", ch );
+			}
+
+			if ( !IS_NPC( ch ) && ch->pcdata->condition[COND_THIRST] > MAX_THIRST ) {
+				send_to_char(AT_BLUE, "You do not feel thirsty.\n\r", ch );
+			}
+
+			if ( obj->value[3] != 0 ) {
 				/* The shit was poisoned ! */
 				AFFECT_DATA af;
 
@@ -1076,9 +1077,15 @@ void do_drink( CHAR_DATA *ch, char *argument )
 			}
 
 			obj->value[1] -= amount;
-			if ( obj->value[1] <= 0 )
-			{
-				send_to_char(AT_BLUE, "The empty container vanishes.\n\r", ch );
+
+			if ( obj->value[1] <= 0 ) {
+				if (obj->item_type == ITEM_DRINK_CON) {
+					send_to_char(AT_BLUE, "The empty container vanishes.\n\r", ch );
+				} else if (obj->item_type == ITEM_LIQUID) {
+					act(AT_LBLUE, "You drink the last of the $T.", ch, obj, liq_table[liquid].liq_name, TO_CHAR );
+					act(AT_LBLUE, "$n drinks the last of the $T.", ch, obj, liq_table[liquid].liq_name, TO_ROOM );
+				}
+
 				extract_obj( obj );
 			}
 			break;

@@ -2083,32 +2083,32 @@ char *item_type_name( OBJ_DATA *obj )
 
 	switch ( obj->item_type )
 	{
-		case ITEM_LIGHT:		return "light";
-		case ITEM_SCROLL:		return "scroll";
-		case ITEM_WAND:		return "wand";
-		case ITEM_STAFF:		return "staff";
-		case ITEM_WEAPON:		return "weapon";
+		case ITEM_LIGHT:			return "light";
+		case ITEM_SCROLL:			return "scroll";
+		case ITEM_WAND:				return "wand";
+		case ITEM_STAFF:			return "staff";
+		case ITEM_WEAPON:			return "weapon";
 		case ITEM_TREASURE:		return "treasure";
-		case ITEM_ARMOR:		return "armor";
-		case ITEM_POTION:		return "potion";
+		case ITEM_ARMOR:			return "armor";
+		case ITEM_POTION:			return "potion";
 		case ITEM_NOTEBOARD:	return "noteboard";
 		case ITEM_FURNITURE:	return "furniture";
-		case ITEM_TRASH:		return "trash";
+		case ITEM_TRASH:			return "trash";
 		case ITEM_CONTAINER:	return "container";
 		case ITEM_DRINK_CON:	return "drink container";
-		case ITEM_BLOOD:            return "blood";
-		case ITEM_KEY:		return "key";
-		case ITEM_FOOD:		return "food";
-		case ITEM_MONEY:		return "money";
-		case ITEM_BOAT:		return "boat";
+		case ITEM_LIQUID: 		return "liquid";
+		case ITEM_KEY:				return "key";
+		case ITEM_FOOD:				return "food";
+		case ITEM_MONEY:			return "money";
+		case ITEM_BOAT:				return "boat";
 		case ITEM_CORPSE_NPC:	return "npc corpse";
 		case ITEM_CORPSE_PC:	return "pc corpse";
 		case ITEM_FOUNTAIN:		return "fountain";
-		case ITEM_PILL:		return "pill";
-		case ITEM_LENSE:            return "contacts";
-		case ITEM_PORTAL:           return "portal";
-		case ITEM_VODOO:            return "voodo doll";
-		case ITEM_BERRY:            return "goodberry";
+		case ITEM_PILL:				return "pill";
+		case ITEM_LENSE:			return "contacts";
+		case ITEM_PORTAL:			return "portal";
+		case ITEM_VODOO:			return "voodo doll";
+		case ITEM_BERRY:			return "goodberry";
 	}
 
 	for ( in_obj = obj; in_obj->in_obj; in_obj = in_obj->in_obj )

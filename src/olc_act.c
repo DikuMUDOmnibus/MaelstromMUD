@@ -2945,6 +2945,7 @@ void show_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *obj )
 			send_to_char(C_DEFAULT, buf, ch );
 			break;
 
+		case ITEM_LIQUID:
 		case ITEM_DRINK_CON:
 			sprintf( buf,
 					"&z[&Wv0&z] &cLiquid Total&w: &z[&R%d&z]\n\r"
@@ -2955,15 +2956,6 @@ void show_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *obj )
 					obj->value[1],
 					flag_string( liquid_flags, obj->value[2] ),
 					obj->value[3] != 0 ? "Yes" : "No" );
-			send_to_char(C_DEFAULT, buf, ch );
-			break;
-
-		case ITEM_BLOOD:
-			sprintf( buf,
-					"&z[&Wv0&z] &cBlood Total&w: &z[&R%d&z]\n\r"
-					"&z[&Wv1&z] &cBlood Left&w:  &z[&R%d&z]\n\r", 
-					obj->value[0],
-					obj->value[1] );
 			send_to_char(C_DEFAULT, buf, ch );
 			break;
 
@@ -3342,6 +3334,7 @@ bool set_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *a
 			}
 			break;
 
+		case ITEM_LIQUID:
 		case ITEM_DRINK_CON:
 			switch ( value_num )
 			{
@@ -3363,23 +3356,6 @@ bool set_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *a
 				case 3:
 					send_to_char(C_DEFAULT, "POISON VALUE TOGGLED.\n\r\n\r", ch );
 					pObj->value[3] = ( pObj->value[3] == 0 ) ? 1 : 0;
-					break;
-			}
-			break;
-
-		case ITEM_BLOOD:
-			switch ( value_num )
-			{
-				default:
-					do_help( ch, "ITEM_DRINK" );
-					return FALSE;
-				case 0:
-					send_to_char(C_DEFAULT, "MAXIMUM AMOUT OF BLOOD SET.\n\r\n\r", ch );
-					pObj->value[0] = atoi( argument );
-					break;
-				case 1:
-					send_to_char(C_DEFAULT, "CURRENT AMOUNT OF BLOOD SET.\n\r\n\r", ch );
-					pObj->value[1] = atoi( argument );
 					break;
 			}
 			break;
@@ -6506,7 +6482,7 @@ bool forge_show(CHAR_DATA *ch, char *argument)
 	AFFECT_DATA *paf;
 	AFFECT_DATA *paf_next = NULL;
 	int cnt, max_stat, max_dam, max_hit, max_hp, max_ac, max_mana;
-	int max_saves, max_saveb, max_ad, max_bp;
+	int max_saves, max_saveb, max_ad;
 	FORGE_OBJ( ch, pObj );
 	max_stat = ( pObj->level > 100 ) ? 3 : 2;
 	if ( pObj->item_type == ITEM_WEAPON )
@@ -6516,7 +6492,6 @@ bool forge_show(CHAR_DATA *ch, char *argument)
 			? pObj->level / 3 : pObj->level / 8;
 	max_hit = max_dam * 2 / 3;
 	max_hp = max_mana = pObj->level;
-	max_bp = max_mana / 3;
 	max_saves = max_saveb = 0 - UMAX( 1, pObj->level / 7 );
 	max_ad = pObj->level * 0.4;
 	max_ac = 0 - ( pObj->level * 3 / 4);
@@ -6540,8 +6515,6 @@ bool forge_show(CHAR_DATA *ch, char *argument)
 	send_to_char( AT_DGREY, buf, ch );
 	sprintf( buf, "[&WHit Points&w: &R+%d&z] [&WMana&w:        &R+%d&z] [&WArmor Class&w:  &R%d&z]",
 			max_hp, max_mana, max_ac );
-	send_to_char( AT_DGREY, buf, ch );
-	sprintf( buf, "\n\r[&WBlood&w:       &R+%d&z] ", max_bp );
 	send_to_char( AT_DGREY, buf, ch ); 
 	if ( pObj->level >= 40 )
 	{
@@ -6597,7 +6570,7 @@ bool forge_addaffect( CHAR_DATA *ch, char *argument )
 	char mod[MAX_STRING_LENGTH];
 	char buf[MAX_INPUT_LENGTH];
 	int cnt, max_stat, max_dam, max_hit, max_hp, max_ac, max_mana;
-	int max_saves, max_saveb, max_ad, stat_cnt, max_statn, max_bp;
+	int max_saves, max_saveb, max_ad, stat_cnt, max_statn;
 	int cost = 0;
 	int Mod = 0;
 	bool legal = FALSE;
@@ -6611,7 +6584,6 @@ bool forge_addaffect( CHAR_DATA *ch, char *argument )
 			? pObj->level / 3 : pObj->level / 8;
 	max_hit = max_dam * 2 / 3;
 	max_hp = max_mana = pObj->level;
-	max_bp = max_mana / 3;
 	max_saves = max_saveb = 0 - UMAX( 1, pObj->level / 7 );
 	max_ad = pObj->level * 0.4;
 	max_ac = 0 - ( pObj->level * 3 / 4 );
@@ -6726,19 +6698,6 @@ bool forge_addaffect( CHAR_DATA *ch, char *argument )
 			return FALSE;
 		}
 		cost = Mod * 1000;
-		legal = TRUE;
-	}
-	if ( !str_prefix( loc, "blood" ) || !str_cmp( loc, "bp" ) )
-	{
-		strcpy( loc, "blood" );
-		if ( (Mod=atoi( mod )) > max_bp )
-		{
-			sprintf( buf, "You may not add more than %d %ss.\n\r", 
-					max_bp, loc );
-			send_to_char( AT_GREY, buf, ch );
-			return FALSE;
-		}
-		cost = Mod * 3000;
 		legal = TRUE;
 	}
 	if ( !str_prefix( loc, "armorclass" ) || !str_cmp( loc, "ac" ) )

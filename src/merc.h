@@ -1056,7 +1056,7 @@ struct	kill_data
 #define ITEM_FOUNTAIN		     25
 #define ITEM_PILL		     26
 #define ITEM_LENSE                   27
-#define ITEM_BLOOD                   28
+#define ITEM_LIQUID                   28
 #define ITEM_PORTAL                  29
 #define ITEM_VODOO		     30
 #define ITEM_BERRY                   31
@@ -1637,7 +1637,6 @@ struct	char_data
 	/*    int 		max_move; */
 	int			perm_move;
 	int			mod_move;
-	/*    int                 max_bp;*/
 	int			charisma;
 	MONEY_DATA		money;
 	int			exp;
@@ -1883,6 +1882,7 @@ struct trap_data
  * Liquids.
  */
 #define LIQ_WATER        0
+#define LIQ_BLOOD        13
 #define LIQ_MAX		16
 
 struct	liq_type

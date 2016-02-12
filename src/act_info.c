@@ -217,16 +217,13 @@ void show_list_to_char( OBJ_DATA *list, CHAR_DATA *ch, bool fShort, bool fShowNo
 					case ITEM_FOUNTAIN:
 					case ITEM_DRINK_CON:
 					case ITEM_POTION:
+					case ITEM_LIQUID:     
 						sprintf( buf, "(%2d) ", prgnShow[iShow] );
 						send_to_char(AT_BLUE, buf, ch );
 						break;
 					case ITEM_MONEY:
 						sprintf( buf, "(%2d) ", prgnShow[iShow] );
 						send_to_char(AT_YELLOW, buf, ch );
-						break;
-					case ITEM_BLOOD:     
-						sprintf( buf, "(%2d) ", prgnShow[iShow] );
-						send_to_char(AT_RED, buf, ch );
 						break;
 				}   
 			}
@@ -252,16 +249,13 @@ void show_list_to_char( OBJ_DATA *list, CHAR_DATA *ch, bool fShort, bool fShowNo
 				break;
 			case ITEM_FOUNTAIN:
 			case ITEM_DRINK_CON:
+			case ITEM_LIQUID:     
 			case ITEM_POTION:
 				send_to_char(AT_BLUE, prgpstrShow[iShow], ch );
 				send_to_char(C_DEFAULT, "\n\r", ch );
 				break;
 			case ITEM_MONEY:
 				send_to_char(AT_YELLOW, prgpstrShow[iShow], ch );
-				send_to_char(C_DEFAULT, "\n\r", ch );
-				break;
-			case ITEM_BLOOD:     
-				send_to_char(AT_RED, prgpstrShow[iShow], ch );
 				send_to_char(C_DEFAULT, "\n\r", ch );
 				break;
 		}   

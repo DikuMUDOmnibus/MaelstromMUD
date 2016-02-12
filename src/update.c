@@ -1274,13 +1274,12 @@ void obj_update( void )
 
 			switch ( obj->item_type )
 			{
-				default:              message = "$p vanishes.";         break;
-				case ITEM_FOUNTAIN:   message = "$p dries up.";         break;
+				default:              message = "$p vanishes."; break;
+				case ITEM_FOUNTAIN:   message = "$p dries up."; break;
 				case ITEM_CORPSE_NPC: message = "$p decays into dust."; break;
-				case ITEM_CORPSE_PC:  message = "$p decays into dust."; 
-									  pccorpse = TRUE; break;
-				case ITEM_FOOD:       message = "$p decomposes.";       break;
-				case ITEM_BLOOD:      message = "$p soaks into the ground."; break;
+				case ITEM_CORPSE_PC:  message = "$p decays into dust."; pccorpse = TRUE; break;
+				case ITEM_FOOD:       message = "$p decomposes."; break;
+				case ITEM_LIQUID:     message = "$p soaks into the ground."; break;
 				case ITEM_PORTAL:     message = "$p shimmers and is gone."; break;
 				case ITEM_VODOO:      message = "$p slowly fades out of existance."; break;
 				case ITEM_BERRY:      message = "$p rots away."; break;

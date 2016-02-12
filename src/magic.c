@@ -118,15 +118,16 @@ int blood_count( OBJ_DATA *list, int amount )
 	int         count;
 	OBJ_DATA   *obj_next;
 
-
 	count = 0;
-	for ( obj = list; obj; obj = obj_next )
-	{
+
+	for ( obj = list; obj; obj = obj_next ) {
 		obj_next = obj->next_content;
-		if ( obj->deleted )
+
+		if ( obj->deleted ) {
 			continue;
-		if ( ( obj->item_type == ITEM_BLOOD ) && ( count != amount ) )
-		{
+		}
+
+		if ( ( obj->item_type == ITEM_LIQUID ) && (obj->value[2] == LIQ_BLOOD) && ( count != amount ) ) {
 			count++;
 			extract_obj( obj );
 		}

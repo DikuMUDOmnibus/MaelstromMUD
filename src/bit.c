@@ -311,7 +311,7 @@ const struct flag_type type_flags[] =
 	{	"trash",		ITEM_TRASH,		TRUE	},
 	{	"container",		ITEM_CONTAINER,		TRUE	},
 	{	"drink-container",	ITEM_DRINK_CON,		TRUE	},
-	{   "blood",                ITEM_BLOOD,             TRUE    },
+	{ "liquid",                ITEM_LIQUID,             TRUE    },
 	{	"key",			ITEM_KEY,		TRUE	},
 	{	"food",			ITEM_FOOD,		TRUE	},
 	{	"money",		ITEM_MONEY,		TRUE	},
