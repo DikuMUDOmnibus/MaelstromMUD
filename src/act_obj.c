@@ -1012,40 +1012,7 @@ void do_gorge( CHAR_DATA *ch, char *argument )
 			break;
 
 		case ITEM_BLOOD:
-			if ( !is_class( ch, CLASS_VAMPIRE ) )
-			{
-				send_to_char(AT_WHITE, "It is not in your nature to do such things.\n\r", ch);
-				return;
-			}
-			if ( ( ch->bp + 1 ) > MAX_BP(ch) )
-			{
-				send_to_char(AT_RED, "Your hunger for blood has been abated.\n\r", ch);
-				return;
-			}
-			if ( (obj->item_type == ITEM_BLOOD) && (obj->value[0] == -1) )
-			{
-				ch->bp = MAX_BP(ch);
-				send_to_char(AT_RED, "You gorge from the fountain of blood,", ch);
-				send_to_char(AT_RED, " abating your thirst.\n\r", ch);
-				act(AT_RED, "$n gorges from a fountain of blood.", ch, obj, NULL, TO_ROOM);
-				break;
-			}
-			if ( ( ch->bp + obj->value[1] ) > MAX_BP(ch) )
-			{
-				obj->value[1] = (obj->value[1] - (MAX_BP(ch) - ch->bp));
-				ch->bp = MAX_BP(ch);
-			}
-			else {
-				ch->bp += obj->value[1];
-				obj->value[1] = 0;
-			}
-			send_to_char(AT_RED, "You gorge the entire blood puddle.\n\r", ch );
-			act(AT_RED, "$n gorges a blood puddle.", ch, obj, NULL, TO_ROOM);
-			if ( obj->value[0] != -1 )
-			{/* obj->value[1] -= 5;*/
-				if ( obj->value[1] == 0 )
-					extract_obj( obj );
-			}      
+			send_to_char(AT_WHITE, "It is not in your nature to do such things.\n\r", ch);
 			break;
 	}
 
@@ -1100,28 +1067,9 @@ void do_drink( CHAR_DATA *ch, char *argument )
 			break;
 
 		case ITEM_BLOOD:
-			if ( !is_class( ch, CLASS_VAMPIRE ) )
-			{
-				send_to_char( AT_WHITE, "It is not in your nature to do such things.\n\r", ch );
-				return;
-			}
-			if ( ( ch->bp + 1 ) > MAX_BP(ch))
-			{
-				send_to_char( AT_RED, "Your hunger for blood has been abated.\n\r", ch );
-				return;
-			}
-			ch->bp += 1;
-			send_to_char(AT_RED, "You lap up the blood like a cur.\n\r", ch );
-			act(AT_RED, "$n drinks from $p.", ch, obj, NULL, TO_ROOM);
-			if (obj->value[0] != -1)
-				obj->value[1] -= 1;
-			if ( ( obj->value[1] <= 0 ) && ( obj->value[0] != -1 ) )
-			{
-				act(AT_RED, "$n laps up the last of the blood.", ch, NULL, NULL, TO_ROOM );
-				send_to_char(AT_RED, "You lap up the last of the blood.\n\r", ch );
-				extract_obj( obj );
-			}
+			send_to_char( AT_WHITE, "It is not in your nature to do such things.\n\r", ch );
 			break;
+
 		case ITEM_FOUNTAIN:
 			if ( !IS_NPC( ch ) )
 				ch->pcdata->condition[COND_THIRST] = 58;  /*  48  */
@@ -2070,26 +2018,17 @@ void do_sacrifice( CHAR_DATA *ch, char *argument )
 			ch->hit += award;
 			break;
 		case 3:	
-			if ( !is_class( ch, CLASS_VAMPIRE ) )
-			{
-				if ( ch->mana >= MAX_MANA(ch))
-					diff = 0;
-				else
-					diff = 6;
-				award = number_range ( 0 , diff );
-				sprintf( buf1, "%d mana", award );
-				ch->mana += award;
-			}
+			if ( ch->mana >= MAX_MANA(ch))
+				diff = 0;
 			else
-			{
-				if ( ch->bp >= MAX_BP(ch))
-					diff = 0;
-				else
-					diff = 3;
-				award = number_range( 0, diff );
-				ch->bp += award;
-			}
+				diff = 6;
+
+			award = number_range ( 0 , diff );
+			sprintf( buf1, "%d mana", award );
+			ch->mana += award;
+
 			break;
+
 		case 4:	
 			if ( ch->move >= MAX_MOVE(ch) )
 				diff = 0;
@@ -4655,7 +4594,7 @@ void do_alchemy ( CHAR_DATA *ch, char *argument )
 		send_to_char(AT_BLUE, "You can't do that.\n\r", ch );
 		return;
 	}
-	mana = SPELL_COST( ch, sn );
+	mana = MANA_COST( ch, sn );
 	mana *= 2;
 	if ( ch->mana < mana )
 	{
@@ -4789,7 +4728,7 @@ void do_scribe( CHAR_DATA *ch, char *argument )
 		send_to_char(AT_BLUE, "You can't do that.\n\r", ch );
 		return;
 	}
-	mana = SPELL_COST( ch, sn );
+	mana = MANA_COST( ch, sn );
 	mana *= 2;
 	if ( ch->mana < mana )
 	{

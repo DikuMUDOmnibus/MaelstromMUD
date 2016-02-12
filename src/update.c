@@ -99,23 +99,16 @@ void advance_level( CHAR_DATA *ch )
 		ch->raisepts	+= raisepoints;
 
 	ch->perm_hit 	+= add_hp;
-	if ( !is_class( ch, CLASS_VAMPIRE ) )
-		ch->perm_mana	+= add_mana;
-	else
-	{
-		add_mana -= add_mana / 2;
-		ch->perm_bp	+= add_mana;
-	}
+	ch->perm_mana	+= add_mana;
 	ch->perm_move	+= add_move;
 	ch->practice	+= add_prac;
 
 	if ( !IS_NPC( ch ) )
 		REMOVE_BIT( ch->act, PLR_BOUGHT_PET );
 	sprintf( buf, 
-			"Your gain is: %d/%d hp, %d/%d %s, %d/%d mv %d/%d prac.\n\r",
+			"Your gain is: %d/%d hp, %d/%d m, %d/%d mv %d/%d prac.\n\r",
 			add_hp,		MAX_HIT( ch ),
-			add_mana,	MT_MAX( ch ),
-			is_class( ch, CLASS_VAMPIRE ) ? "bp" : "m",
+			add_mana,	MAX_MANA( ch ),
 			add_move,	MAX_MOVE( ch ),
 			add_prac,	ch->practice );
 	/*
@@ -169,7 +162,6 @@ void gain_exp( CHAR_DATA *ch, int gain )
 		advance_level( ch );
 		ch->hit  = MAX_HIT(ch);
 		ch->mana = MAX_MANA(ch);
-		ch->bp   = MAX_BP(ch);
 		ch->move = MAX_MOVE(ch);
 		send_to_char(AT_BLUE, "You have been restored.\n\r", ch );
 	}
@@ -233,8 +225,7 @@ int hit_gain( CHAR_DATA *ch )
 		if ( ch->pcdata->condition[COND_FULL  ] == 0 )
 			gain /= 2;
 
-		if ( ch->pcdata->condition[COND_THIRST] == 0 
-				&& !is_class( ch, CLASS_VAMPIRE ) )
+		if ( ch->pcdata->condition[COND_THIRST] == 0 )
 			gain /= 2;  
 
 	}
@@ -287,7 +278,7 @@ int mana_gain( CHAR_DATA *ch )
 		if ( ch->pcdata->condition[COND_FULL] == 0 )
 			gain /= 2;
 
-		if ( ch->pcdata->condition[COND_THIRST] == 0 && !is_class( ch, CLASS_VAMPIRE ) )
+		if ( ch->pcdata->condition[COND_THIRST] == 0 )
 			gain /= 2;
 
 		if ( ch->race == RACE_ELF || ch->race == RACE_ELDER )
@@ -323,8 +314,7 @@ int move_gain( CHAR_DATA *ch )
 		if ( ch->pcdata->condition[COND_FULL] == 0 )
 			gain /= 2;
 
-		if ( ch->pcdata->condition[COND_THIRST] == 0 
-				&& !is_class( ch, CLASS_VAMPIRE ) )
+		if ( ch->pcdata->condition[COND_THIRST] == 0 )
 			gain /= 2;
 	}
 
@@ -368,10 +358,7 @@ void gain_condition( CHAR_DATA *ch, int iCond, int value )
 				break;
 
 			case COND_THIRST:
-				if ( !is_class( ch, CLASS_VAMPIRE ) ) {
-					send_to_char(AT_BLUE, "You are thirsty.\n\r",   ch );
-				}
-
+				send_to_char(AT_BLUE, "You are thirsty.\n\r",   ch );
 				break;
 
 			case COND_DRUNK:
@@ -872,15 +859,10 @@ void char_update( void )
 				break;
 			pd_next = pd->next;
 			raf = pd->raf;
-			if ( MT( ch ) < pd->cost )
+			if ( ch->mana < pd->cost )
 				raffect_remove( raf->room, ch, raf );
 			else
-				// MT( ch ) -= pd->cost;
-				if ( is_class( ch, CLASS_VAMPIRE ) ) {
-					ch->bp -= pd->cost;
-				} else {
-					ch->mana -= pd->cost;
-				}
+				ch->mana -= pd->cost;
 		}
 		if ( ch->gspell && --ch->gspell->timer <= 0 )
 		{

@@ -196,26 +196,16 @@ void group_cast( int sn, int level, CHAR_DATA *ch, char *argument )
     return;
   }
 
-  mana = SPELL_COST(ch,sn);
+  mana = MANA_COST(ch,sn);
 
   if ( number_percent( ) > ch->pcdata->learned[sn] )
   {
     send_to_char(AT_BLUE, "You lost your concentration.\n\r",ch);
-    // MT( ch ) -= mana / 2;
-	if ( is_class( ch, CLASS_VAMPIRE ) ) {
-		ch->bp -= mana / 2;
-	} else {
 		ch->mana -= mana / 2;
-	}  
     return;
   }
 
-  // MT( ch ) -= mana;
-	if ( is_class( ch, CLASS_VAMPIRE ) ) {
-		ch->bp -= mana;
-	} else {
-		ch->mana -= mana;
-	}  
+	ch->mana -= mana;
   update_skpell( ch, sn );
 
   switch ( skill_table[sn].target )

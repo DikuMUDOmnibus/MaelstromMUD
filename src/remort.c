@@ -120,8 +120,6 @@ void do_remort( CHAR_DATA *ch, char *argument )
 			d->character->mod_hit  = 0;
 			d->character->perm_mana = 100;
 			d->character->mod_mana = 0;
-			d->character->perm_bp   = 20;
-			d->character->mod_bp = 0;
 			d->character->perm_move = 100;
 			d->character->mod_move = 0;
 			d->character->level = 1;   
@@ -143,7 +141,6 @@ void do_remort( CHAR_DATA *ch, char *argument )
 			/* restore */
 			d->character->hit      = MAX_HIT(d->character);
 			d->character->mana     = MAX_MANA(d->character);
-			d->character->bp       = MAX_BP(d->character);
 			d->character->move     = MAX_MOVE(d->character);
 
 			if( !IS_SET( d->character->act2, PLR_REMORT ) )

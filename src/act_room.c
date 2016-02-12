@@ -45,7 +45,7 @@ void raffect_to_room( ROOM_INDEX_DATA *room,
 	pd->raf	 = raf_new;
 	pd->next	 = ch->powered;
 	pd->type	 = raf_new->type;
-	pd->cost	 = SPELL_COST( ch, pd->type );
+	pd->cost	 = MANA_COST( ch, pd->type );
 
 	if ( ch->race == RACE_ELDER || ch->race == RACE_ELF )
 		pd->cost *= .75;
@@ -94,7 +94,7 @@ void raffect_remove( ROOM_INDEX_DATA *room,
 				ch->powered = pd->next;
 			else
 				ppd->next = pd->next;
-			if ( MT( ch ) < pd->cost )
+			if ( ch->mana < pd->cost )
 			{
 				sprintf( buf, "%s %s.\n\r", skill_table[raf->type].msg_off,
 						raf->room->name );

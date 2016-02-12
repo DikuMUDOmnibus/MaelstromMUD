@@ -1900,17 +1900,16 @@ void do_mstat( CHAR_DATA *ch, char *argument )
 			get_curr_con( victim ),
 			IS_NPC( victim ) ? 0 : victim->pcdata->mod_con );
 	send_to_char(AT_CYAN, buf, ch);
-	sprintf( buf, "Hp&w: &R%d&w/&R%d &c%s&w: &R%d&w/&R%d &cMove&w: &R%d&w/&R%d &cPractices&w: &R%d\n\r",
+	sprintf( buf, "Hp&w: &R%d&w/&R%d &cMana&w: &R%d&w/&R%d &cMove&w: &R%d&w/&R%d &cPractices&w: &R%d\n\r",
 			victim->hit,         MAX_HIT(victim),
-			is_class( victim, CLASS_VAMPIRE ) ? "Blood" : "Mana",
-			MT( victim ),        MT_MAX(victim),
+			victim->mana,        MAX_MANA(victim),
 			victim->move,        MAX_MOVE(victim),
 			victim->practice );
 	send_to_char( AT_CYAN, buf, ch );
 
 	sprintf( buf,
-			"Mod Hp&w: &R%d &cMod Blood&w: &R%d &cMod Mana&w: &R%d &cMod Move&w: &R%d\n\r",
-			victim->mod_hit, victim->mod_bp,
+			"Mod Hp&w: &R%d &cMod Mana&w: &R%d &cMod Move&w: &R%d\n\r",
+			victim->mod_hit,
 			victim->mod_mana, victim->mod_move );
 	send_to_char(AT_CYAN, buf, ch);
 	if ( !IS_NPC( victim ) )
@@ -2794,14 +2793,12 @@ void do_advance( CHAR_DATA *ch, char *argument )
 			victim->exp      = classes == 1 ? 1000 : classes * 2000;
 			victim->perm_hit = 10;
 			victim->perm_mana = 100;
-			victim->perm_bp   = 20;
 			victim->perm_move = 100;
 			for ( sn = 0; skill_table[sn].name[0] != '\0'; sn++ )
 				victim->pcdata->learned[sn] = 0;
 			victim->practice = 0;
 			victim->hit      = MAX_HIT(victim);
 			victim->mana     = MAX_MANA(victim);
-			victim->bp       = MAX_BP(victim);
 			victim->move     = MAX_MOVE(victim);
 			advance_level( victim );
 		}
@@ -2926,7 +2923,6 @@ void do_restore( CHAR_DATA *ch, char *argument )
 
 			victim->hit  = MAX_HIT(victim);
 			victim->mana = MAX_MANA(victim);
-			victim->bp   = MAX_BP(victim);
 			victim->move = MAX_MOVE(victim);
 			if ( IS_AFFECTED( victim, AFF_BLIND ) )
 			{
@@ -2974,7 +2970,6 @@ void do_restore( CHAR_DATA *ch, char *argument )
 
 		victim->hit  = MAX_HIT(victim);
 		victim->mana = MAX_MANA(victim);
-		victim->bp   = MAX_BP(victim);
 		victim->move = MAX_MOVE(victim);
 		if ( IS_AFFECTED( victim, AFF_BLIND ) )
 		{
@@ -4578,24 +4573,6 @@ void do_mset( CHAR_DATA *ch, char *argument )
 	if ( !str_cmp( arg2, "mmana" ) )
 	{
 		victim->mod_mana = value;
-		send_to_char(AT_WHITE, "Ok.\n\r", ch );
-		return;
-	}
-
-	if ( !str_cmp( arg2, "blood" ) )
-	{
-		if ( value < 0 || value > 30000 )
-		{
-			send_to_char(AT_WHITE, "Blood range is 0 to 30,000 mana points.\n\r", ch );
-			return;
-		}
-		victim->perm_bp = value;
-		send_to_char(AT_WHITE, "Ok.\n\r", ch );
-		return;
-	}
-	if ( !str_cmp( arg2, "mblood" ) )
-	{
-		victim->mod_bp = value;
 		send_to_char(AT_WHITE, "Ok.\n\r", ch );
 		return;
 	}
@@ -7521,8 +7498,6 @@ void do_rebuild (CHAR_DATA *ch, char *argument)
 	victim->mod_hit  = 0;
 	victim->perm_mana = 100;
 	victim->mod_mana = 0;
-	victim->perm_bp   = 20;
-	victim->mod_bp = 0;
 	victim->perm_move = 100;
 	victim->mod_move = 0;
 	victim->practice = 21;
@@ -7581,7 +7556,6 @@ void do_rebuild (CHAR_DATA *ch, char *argument)
 	/* restore */
 	victim->hit      = MAX_HIT(victim);
 	victim->mana     = MAX_MANA(victim);
-	victim->bp       = MAX_BP(victim);
 	victim->move     = MAX_MOVE(victim);
 
 	/* save the character */

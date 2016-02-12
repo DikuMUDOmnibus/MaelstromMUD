@@ -508,7 +508,7 @@ struct playerlist_data
 #define CLASS_RANGER         6
 #define CLASS_PALADIN        7
 // #define CLASS_BARD           8
-#define CLASS_VAMPIRE        8
+// #define CLASS_VAMPIRE        8
 #define CLASS_NECROMANCER    9
 #define CLASS_WEREWOLF      10
 #define CLASS_MONK	    		11
@@ -1187,7 +1187,6 @@ struct	kill_data
 #define APPLY_SAVING_PETRI	     22
 #define APPLY_SAVING_BREATH	     23
 #define APPLY_SAVING_SPELL	     24
-#define APPLY_BP                     25
 #define APPLY_ANTI_DIS               26
 
 /* X */
@@ -1638,10 +1637,7 @@ struct	char_data
 	/*    int 		max_move; */
 	int			perm_move;
 	int			mod_move;
-	int                 bp;
 	/*    int                 max_bp;*/
-	int			perm_bp;
-	int		 	mod_bp;
 	int			charisma;
 	MONEY_DATA		money;
 	int			exp;
@@ -2365,20 +2361,12 @@ int	mmlvl_mana	args( ( CHAR_DATA *ch, int sn ) );
 			skill_table[sn].min_mana,                                    \
 			100 / ( 2 + ch->level -                                      \
 				mmlvl_mana( ch, sn ) ) ) )
-#define SPELL_COST( ch, sn )	( is_class( ch, CLASS_VAMPIRE )              \
-		? MANA_COST( ch, sn ) / 4 		                             \
-		: MANA_COST( ch, sn ) )
-#define MT( ch )		( is_class( ch, CLASS_VAMPIRE ) ? ch->bp : ch->mana )
-#define MT_MAX( ch )		( is_class( ch, CLASS_VAMPIRE )                  \
-		? MAX_BP(ch)                                                 \
-		: MAX_MANA(ch) )
 #define IS_SWITCHED( ch )       ( ch->pcdata->switched )
 
 #define UNDEAD_TYPE( ch )	( IS_NPC( ch ) ? ACT_UNDEAD : PLR_UNDEAD )
 
 #define MAX_HIT( ch ) 		( (ch)->perm_hit + (ch)->mod_hit )
 #define MAX_MANA( ch ) 		( (ch)->perm_mana + (ch)->mod_mana )
-#define MAX_BP( ch ) 		( (ch)->perm_bp + (ch)->mod_bp )
 #define MAX_MOVE( ch ) 		( (ch)->perm_move + (ch)->mod_move )
 
 #define CAN_FLY( ch )		( (ch->race == RACE_PIXIE) || (ch->race == RACE_ELDER) || \

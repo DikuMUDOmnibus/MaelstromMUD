@@ -177,10 +177,9 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
 			? ch->was_in_room->vnum
 			: ch->in_room->vnum );
 
-	fprintf( fp, "HpMnMvBp    %d %d %d %d %d %d %d %d %d %d %d %d\n",
+	fprintf( fp, "HpMnMv    %d %d %d %d %d %d %d %d %d\n",
 			ch->hit, ch->perm_hit, ch->mod_hit, ch->mana, ch->perm_mana,
-			ch->mod_mana, ch->move, ch->perm_move, ch->mod_move, ch->bp,
-			ch->perm_bp, ch->mod_bp );
+			ch->mod_mana, ch->move, ch->perm_move, ch->mod_move );
 	fprintf( fp, "Charisma    %d\n",    ch->charisma		);
 	fprintf( fp, "Gold	      %d\n",	ch->money.gold		);
 	fprintf( fp, "Silver      %d\n",  	ch->money.silver	);
@@ -826,7 +825,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp )
 			case 'H':
 				KEY( "Hit", 	ch->hitroll,		fread_number( fp ) );
 
-				if ( !str_cmp( word, "HpMnMvBp" ) )
+				if ( !str_cmp( word, "HpMnMv" ) )
 				{
 					ch->hit		= fread_number( fp );
 					ch->perm_hit	= fread_number( fp );
@@ -837,9 +836,6 @@ void fread_char( CHAR_DATA *ch, FILE *fp )
 					ch->move	= fread_number( fp );
 					ch->perm_move	= fread_number( fp );
 					ch->mod_move	= fread_number( fp );
-					ch->bp          = fread_number( fp );
-					ch->perm_bp     = fread_number( fp );
-					ch->mod_bp      = fread_number( fp );
 					fMatch = TRUE;
 					break;
 				}

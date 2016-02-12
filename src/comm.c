@@ -1131,7 +1131,7 @@ void bust_a_prompt( DESCRIPTOR_DATA *d )
 				sprintf( buf2, "%d", MAX_HIT(ch) );
 				i = buf2; break;
 			case 'm' :
-				sprintf( buf2, "%d", MT( ch ) );
+				sprintf( buf2, "%d", ch->mana) );
 				/*
 				   if ( !is_class( ch, CLASS_VAMPIRE ) )
 				   sprintf( buf2, "%d", ch->mana );
@@ -1140,7 +1140,7 @@ void bust_a_prompt( DESCRIPTOR_DATA *d )
 				   */
 				i = buf2; break;
 			case 'M' :
-				sprintf( buf2, "%d", MT_MAX( ch ) );
+				sprintf( buf2, "%d", MAX_MANA( ch ) );
 				/*
 				   if ( !is_class( ch, CLASS_VAMPIRE ) )
 				   sprintf( buf2, "%d", MAX_MANA(ch));
@@ -2379,7 +2379,6 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					: number_classes( ch ) * 1500;
 				ch->hit     = MAX_HIT(ch);
 				ch->mana    = MAX_MOVE(ch);
-				ch->bp      = MAX_BP(ch);
 				ch->move    = MAX_MOVE(ch);
 				/* charisma */
 				if ( ( ch->race == RACE_GHOUL ) ||
@@ -2409,10 +2408,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 						pRace->race_full,
 						class_table[prime_class(ch)].who_long );
 				set_title( ch, buf );
-				if ( !is_class( ch, CLASS_VAMPIRE ) )
-					ch->prompt = str_dup( "<&Y%hhp &C%mm &G%vmv&w> " );
-				else
-					ch->prompt = str_dup( "<&Y%hhp &R%mbp &G%vmv&w> " );
+				ch->prompt = str_dup( "<&Y%hhp &C%mm &G%vmv&w> " );
 				if ( ch->start_align == 'E' )
 					char_to_room( ch, get_room_index( ROOM_VNUM_RW_SCHOOL ) );
 				else

@@ -347,7 +347,6 @@ void affect_modify( CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd )
 		case APPLY_HEIGHT:						break;
 		case APPLY_WEIGHT:						break;
 		case APPLY_MANA:          ch->mod_mana              += mod; break;
-		case APPLY_BP:            ch->mod_bp                += mod; break;
 		case APPLY_ANTI_DIS:      ch->antidisarm            += mod; break;
 		case APPLY_HIT:           ch->mod_hit               += mod; break;
 		case APPLY_MOVE:          ch->mod_move              += mod; break;
@@ -631,7 +630,6 @@ void affect_modify2( CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd )
 		case APPLY_HEIGHT:						break;
 		case APPLY_WEIGHT:						break;
 		case APPLY_MANA:          ch->mod_mana              += mod; break;
-		case APPLY_BP:            ch->mod_bp                += mod; break;
 		case APPLY_ANTI_DIS:      ch->antidisarm            += mod; break;
 		case APPLY_HIT:           ch->mod_hit               += mod; break;
 		case APPLY_MOVE:          ch->mod_move              += mod; break;
@@ -2150,7 +2148,6 @@ char *affect_loc_name( int location )
 		case APPLY_HEIGHT:          return "height";
 		case APPLY_WEIGHT:          return "weight";
 		case APPLY_MANA:		return "mana";
-		case APPLY_BP:              return "blood";
 		case APPLY_ANTI_DIS:        return "anti-disarm";
 		case APPLY_HIT:		return "hp";
 		case APPLY_MOVE:		return "moves";

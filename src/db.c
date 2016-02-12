@@ -3024,9 +3024,6 @@ void clear_char( CHAR_DATA *ch )
 	ch->mana			= 100;
 	ch->perm_mana		= 100;
 	ch->mod_mana		= 0;
-	ch->bp                      = 20;
-	ch->perm_bp                 = 20;
-	ch->mod_bp			= 0;
 	ch->move			= 100;
 	ch->perm_move		= 100;
 	ch->mod_move		= 0;

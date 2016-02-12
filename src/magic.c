@@ -582,7 +582,7 @@ void do_cast( CHAR_DATA *ch, char *argument )
 	}
 
 	if ( !IS_NPC( ch ) && ( !( ch->level > LEVEL_MORTAL ) ) ) {
-		mana = SPELL_COST( ch, sn );
+		mana = MANA_COST( ch, sn );
 
 		if ( ch->race == RACE_ELF || ch->race == RACE_ELDER ) {
 			mana -= mana / 4;
@@ -712,17 +712,8 @@ void do_cast( CHAR_DATA *ch, char *argument )
 			break;
 	}
 	if ( !IS_NPC( ch ) ) {
-		if ( !is_class( ch, CLASS_VAMPIRE ) && ch->mana < mana )
-		{
-			send_to_char(AT_BLUE, "You don't have enough mana.\n\r", ch );
-			return;
-		} else {
-			if ( ( ch->bp < mana ) && ( is_class( ch, CLASS_VAMPIRE ) ) )
-			{
-				send_to_char(AT_RED, "You are to starved to cast, you must feed.\n\r", ch );
-				return;
-			}
-		}
+		send_to_char(AT_BLUE, "You don't have enough mana.\n\r", ch );
+		return;
 	}
 
 
@@ -745,17 +736,9 @@ void do_cast( CHAR_DATA *ch, char *argument )
 		if ( number_percent( ) > ch->pcdata->learned[sn] ) {
 			send_to_char(AT_BLUE, "You lost your concentration.\n\r", ch );
 
-			if ( is_class( ch, CLASS_VAMPIRE ) ) {
-				ch->bp -= mana / 2;
-			} else {
-				ch->mana -= mana / 2;
-			}
+			ch->mana -= mana / 2;
 		} else {
-			if ( is_class( ch, CLASS_VAMPIRE ) ) {
-				ch->bp -= mana;
-			} else {
-				ch->mana -= mana;
-			}
+			ch->mana -= mana;
 
 			if ( ( IS_AFFECTED2( ch, AFF_CONFUSED ) ) && number_percent( ) < 10 ) {
 				act(AT_YELLOW, "$n looks around confused at what's going on.", ch, NULL, NULL, TO_ROOM );
@@ -3809,10 +3792,7 @@ void spell_mind_probe( int sn, int level, CHAR_DATA *ch, void *vo )
 	sprintf ( buf, " %d/%d(%d)", victim->hit,victim->perm_hit,MAX_HIT(victim) );
 	send_to_char( AT_YELLOW, buf, ch );
 	send_to_char( AT_CYAN, " hit, ", ch );
-	sprintf( buf, "%s%d/%d %s", 
-			is_class( victim, CLASS_VAMPIRE ) ? "&R" : "&C",
-			MT( ch ), MT_MAX( ch ), 
-			is_class( victim, CLASS_VAMPIRE ) ? " blood, " : "mana, " );
+	sprintf( buf, "&C%d/%d mana, ", ch->mana, MAX_MANA( ch ));
 	/*
 	   if ( !is_class( victim, CLASS_VAMPIRE ) )
 	   {
@@ -5146,9 +5126,6 @@ void spell_disrupt( int sn, int level, CHAR_DATA *ch, void *vo )
 				val = ((level * 2) / 5) + 1;
 				negchar = TRUE;
 				break;
-			case APPLY_BP:
-				val = ((level * 3) / 10) + 1;
-				break;
 		}
 	}
 
@@ -5169,19 +5146,6 @@ void spell_disrupt( int sn, int level, CHAR_DATA *ch, void *vo )
 		else
 			vch = ch;
 	}
-	if ( af.location == APPLY_MANA && is_class( vch, CLASS_VAMPIRE ) )
-	{
-		af.modifier /= 4;
-		af.location = APPLY_BP;
-	}
-	if ( af.location == APPLY_BP && !is_class( vch, CLASS_VAMPIRE ) )
-	{
-		if ( af.modifier > 0 )
-			af.modifier = number_range( 1, (level * 3) / 2 );
-		else
-			af.modifier = number_range( -((level * 3) / 2), -1 );
-		af.location = APPLY_MANA;
-	}
 	if ( !is_affected( vch, sn ) && (vch != victim ||
 				!saves_spell( level,  victim )) &&
 			number_bits( 8 ) == 0 )
@@ -5201,9 +5165,6 @@ void spell_disrupt( int sn, int level, CHAR_DATA *ch, void *vo )
 			{
 				case APPLY_MANA:
 					vch->mana = URANGE( 0, vch->mana, MAX_MANA(vch));
-					break;
-				case APPLY_BP:
-					vch->bp = URANGE( 0, vch->bp, MAX_BP(vch));
 					break;
 			}
 		}
@@ -5821,22 +5782,14 @@ void spell_summon_swarm(int sn, int level, CHAR_DATA *ch, void *vo)
 	ch->summon_timer = 10;
 	char_to_room(mob, ch->in_room);
 	act(AT_BLUE, "You summon $N.", ch, NULL, mob, TO_CHAR);
-	mana = is_class( ch, CLASS_VAMPIRE ) ? level / 2 : level * 2;
-	if ( MT( ch ) < mana )
+	mana = level * 2;
+	if ( ch->mana < mana )
 	{
-		sprintf( buf, "%sYou don't have enough %s to bind $N!",
-				(is_class( ch, CLASS_VAMPIRE )) ? "&r" : "&R",
-				(is_class( ch, CLASS_VAMPIRE )) ? "blood" : "mana" );
-		act(AT_WHITE, buf, ch, NULL, mob, TO_CHAR );
+		act(AT_WHITE, "&RYou don't have enough mana to bind $N!", ch, NULL, mob, TO_CHAR );
 		extract_char( mob, TRUE );
 		return;
 	}    
-	// MT( ch ) -= mana;
-	if ( is_class( ch, CLASS_VAMPIRE ) ) {
-		ch->bp -= mana;
-	} else {
-		ch->mana -= mana;
-	}
+	ch->mana -= mana;
 	act(AT_GREEN, "$n summons $N.", ch, NULL, mob, TO_ROOM);
 
 	mob->master = ch;
@@ -5888,22 +5841,14 @@ void spell_summon_pack(int sn, int level, CHAR_DATA *ch, void *vo)
 	ch->summon_timer = 15;
 	char_to_room(mob, ch->in_room);
 	act(AT_GREEN, "You summon $N.", ch, NULL, mob, TO_CHAR);
-	mana = is_class( ch, CLASS_VAMPIRE ) ? level / 2 : level * 2;
-	if ( MT( ch ) < mana )
+	mana = level * 2;
+	if ( ch->mana < mana )
 	{
-		sprintf( buf, "%sYou don't have enough %s to bind $N!",
-				is_class( ch, CLASS_VAMPIRE ) ? "&r" : "&R",
-				is_class( ch, CLASS_VAMPIRE ) ? "blood" : "mana" );
-		act(AT_WHITE, buf, ch, NULL, mob, TO_CHAR );
+		act(AT_WHITE, "&RYou don't have enough mana to bind $N!", ch, NULL, mob, TO_CHAR );
 		extract_char( mob, TRUE );
 		return;
 	}    
-	// MT( ch ) -= mana;
-	if ( is_class( ch, CLASS_VAMPIRE ) ) {
-		ch->bp -= mana;
-	} else {
-		ch->mana -= mana;
-	}  
+	ch->mana -= mana;
 	act(AT_GREEN, "$N comes to $n aid.", ch, NULL, mob, TO_ROOM);
 
 	mob->master = ch;
@@ -5952,22 +5897,14 @@ void spell_summon_demon(int sn, int level, CHAR_DATA *ch, void *vo)
 	ch->summon_timer = 16;
 	char_to_room(mob, ch->in_room);
 	act(AT_RED, "You summon $N from the abyss.", ch, NULL, mob, TO_CHAR);
-	mana = is_class( ch, CLASS_VAMPIRE ) ? level / 2 : level * 2;
-	if ( MT( ch ) < mana )
+	mana = level * 2;
+	if ( ch->mana < mana )
 	{
-		sprintf( buf, "%sYou don't have enough %s to bind $N!",
-				is_class( ch, CLASS_VAMPIRE ) ? "&r" : "&R",
-				is_class( ch, CLASS_VAMPIRE ) ? "blood" : "mana" );
-		act(AT_WHITE, buf, ch, NULL, mob, TO_CHAR );
+		act(AT_WHITE, "&RYou don't have enough mana to bind $N!", ch, NULL, mob, TO_CHAR );
 		extract_char( mob, TRUE );
 		return;
 	}    
-	// MT( ch ) -= mana;
-	if ( is_class( ch, CLASS_VAMPIRE ) ) {
-		ch->bp -= mana;
-	} else {
-		ch->mana -= mana;
-	}  
+	ch->mana -= mana;
 	act(AT_RED, "$n summons $N from the abyss.", ch, NULL, mob, TO_ROOM);
 
 	mob->master = ch;
@@ -6016,22 +5953,14 @@ void spell_summon_angel(int sn, int level, CHAR_DATA *ch, void *vo)
 	ch->summon_timer = 16;
 	char_to_room(mob, ch->in_room);
 	act(AT_WHITE, "You summon $N from heaven.", ch, NULL, mob, TO_CHAR);
-	mana = is_class( ch, CLASS_VAMPIRE ) ? level / 2 : level * 2;
-	if ( MT( ch ) < mana )
+	mana = level * 2;
+	if ( ch->mana < mana )
 	{
-		sprintf( buf, "%sYou don't have enough %s to bind $N!",
-				is_class( ch, CLASS_VAMPIRE ) ? "&r" : "&R",
-				is_class( ch, CLASS_VAMPIRE ) ? "blood" : "mana" );
-		act(AT_WHITE, buf, ch, NULL, mob, TO_CHAR );
+		act(AT_WHITE, "&RYou don't have enough mana to bind $N!", ch, NULL, mob, TO_CHAR );
 		extract_char( mob, TRUE );
 		return;
 	}    
-	// MT( ch ) -= mana;
-	if ( is_class( ch, CLASS_VAMPIRE ) ) {
-		ch->bp -= mana;
-	} else {
-		ch->mana -= mana;
-	}  
+	ch->mana -= mana;
 	act(AT_WHITE, "$n calls forth $N from Heaven.", ch, NULL, mob, TO_ROOM);
 
 	mob->master = ch;
@@ -6080,22 +6009,14 @@ void spell_summon_shadow(int sn, int level, CHAR_DATA *ch, void *vo)
 	ch->summon_timer = 16;
 	char_to_room(mob, ch->in_room);
 	act(AT_GREY, "You summon $N from the shadow plane.", ch, NULL, mob, TO_CHAR);
-	mana = is_class( ch, CLASS_VAMPIRE ) ? level / 2 : level * 2;
-	if ( MT( ch ) < mana )
+	mana = level * 2;
+	if ( ch->mana < mana )
 	{
-		sprintf( buf, "%sYou don't have enough %s to bind $N!",
-				is_class( ch, CLASS_VAMPIRE ) ? "&r" : "&R",
-				is_class( ch, CLASS_VAMPIRE ) ? "blood" : "mana" );
-		act(AT_WHITE, buf, ch, NULL, mob, TO_CHAR );
+		act(AT_WHITE, "&RYou don't have enough mana to bind $N!", ch, NULL, mob, TO_CHAR );
 		extract_char( mob, TRUE );
 		return;
 	}    
-	// MT( ch ) -= mana;
-	if ( is_class( ch, CLASS_VAMPIRE ) ) {
-		ch->bp -= mana;
-	} else {
-		ch->mana -= mana;
-	}  
+	ch->mana -= mana;
 	act(AT_GREY, "$n calls forth $N from the shadow plane.", ch, NULL, mob, TO_ROOM);
 
 	mob->master = ch;
@@ -6145,22 +6066,14 @@ void spell_summon_trent(int sn, int level, CHAR_DATA *ch, void *vo)
 	ch->summon_timer = 16;
 	char_to_room(mob, ch->in_room);
 	act(AT_ORANGE, "You summon $N from the plane of nature.", ch, NULL, mob, TO_CHAR);
-	mana = is_class( ch, CLASS_VAMPIRE ) ? level / 2 : level * 2;
-	if ( MT( ch ) < mana )
+	mana = level * 2;
+	if ( ch->mana < mana )
 	{
-		sprintf( buf, "%sYou don't have enough %s to bind $N!",
-				is_class( ch, CLASS_VAMPIRE ) ? "&r" : "&R",
-				is_class( ch, CLASS_VAMPIRE ) ? "blood" : "mana" );
-		act(AT_WHITE, buf, ch, NULL, mob, TO_CHAR );
+		act(AT_WHITE, "&RYou don't have enough mana to bind $N!", ch, NULL, mob, TO_CHAR );
 		extract_char( mob, TRUE );
 		return;
 	}    
-	// MT( ch ) -= mana;
-	if ( is_class( ch, CLASS_VAMPIRE ) ) {
-		ch->bp -= mana;
-	} else {
-		ch->mana -= mana;
-	}  
+	ch->mana -= mana;
 	act(AT_ORANGE, "$n calls forth $N from the plane of nature.", ch, NULL, mob, TO_ROOM);
 
 	mob->master = ch;
@@ -6229,22 +6142,14 @@ void spell_summon_beast(int sn, int level, CHAR_DATA *ch, void *vo)
 	ch->summon_timer = 16;
 	char_to_room(mob, ch->in_room);
 	act(AT_GREEN, "You call $N from the forests.", ch, NULL, mob, TO_CHAR);
-	mana = is_class( ch, CLASS_VAMPIRE ) ? level / 2 : level * 2;
-	if ( MT( ch ) < mana )
+	mana = level * 2;
+	if ( ch->mana < mana )
 	{
-		sprintf( buf, "%sYou don't have enough %s to bind $N!",
-				is_class( ch, CLASS_VAMPIRE ) ? "&r" : "&R",
-				is_class( ch, CLASS_VAMPIRE ) ? "blood" : "mana" );
-		act(AT_WHITE, buf, ch, NULL, mob, TO_CHAR );
+		act(AT_WHITE, "&RYou don't have enough mana to bind $N!", ch, NULL, mob, TO_CHAR );
 		extract_char( mob, TRUE );
 		return;
 	}    
-	// MT( ch ) -= mana;
-	if ( is_class( ch, CLASS_VAMPIRE ) ) {
-		ch->bp -= mana;
-	} else {
-		ch->mana -= mana;
-	}  
+	ch->mana -= mana;
 	act(AT_GREEN, "$n calls forth $N from the forests.", ch, NULL, mob, TO_ROOM);
 
 	mob->master = ch;
@@ -7180,13 +7085,8 @@ void spell_healing_hands( int sn, int level, CHAR_DATA *ch, void *vo )
 		int mana;
 
 		/* Refund mana lost by casting.  Make it seem like a new target type. */
-		mana = SPELL_COST( ch, sn );
-		//MT( ch ) -= mana;
-		if ( is_class( ch, CLASS_VAMPIRE ) ) {
-			ch->bp -= mana;
-		} else {
-			ch->mana -= mana;
-		}  
+		mana = MANA_COST( ch, sn );
+		ch->mana -= mana;
 		send_to_char(AT_BLUE, "You cannot cast this spell on yourself.\n\r", ch );
 		return;
 	}

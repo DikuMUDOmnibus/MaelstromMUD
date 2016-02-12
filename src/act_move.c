@@ -1262,22 +1262,14 @@ void do_train( CHAR_DATA *ch, char *argument )
 		pOutput     = "hit points";
 	}
 
-	else if ( !is_class( ch, CLASS_VAMPIRE )
-			&& !str_cmp( arg, "mana" ) )
+	else if ( !str_cmp( arg, "mana" ) )
 	{
 		cost    = 1;
 		bone_flag   = 1;
 		pAbility    = &ch->perm_mana;
 		pOutput     = "mana points";
 	}
-	else if ( is_class( ch, CLASS_VAMPIRE ) 
-			&& !str_cmp( arg, "bp" ) )
-	{
-		cost	    = 3;
-		bone_flag   = 1;
-		pAbility    = &ch->perm_bp;
-		pOutput     = "blood points";
-	}
+
 	else if ( !str_cmp( arg, "move" ) )
 	{
 		cost    = 1;
@@ -1297,10 +1289,8 @@ void do_train( CHAR_DATA *ch, char *argument )
 		if ( ch->pcdata->perm_dex < 18 ) strcat( buf, " dex" );
 		if ( ch->pcdata->perm_con < 18 ) strcat( buf, " con" );
 
-		if ( !is_class( ch, CLASS_VAMPIRE ) )
-			strcat( buf, " hp mana move" );
-		else
-			strcat( buf, " hp bp move" );
+		strcat( buf, " hp mana move" );
+
 		if ( buf[strlen( buf )-1] != ':' )
 		{
 			strcat( buf, ".\n\r" );
@@ -1425,20 +1415,13 @@ void do_raise( CHAR_DATA *ch, char *argument )
 		pOutput     = "hit points";
 	}
 
-	else if ( !is_class( ch, CLASS_VAMPIRE )
-			&& !str_cmp( arg, "mana" ) )
+	else if ( !str_cmp( arg, "mana" ) )
 	{
 		bone_flag   = 1;
 		pAbility    = &ch->perm_mana;
 		pOutput     = "mana points";
 	}
-	else if ( is_class( ch, CLASS_VAMPIRE )
-			&& !str_cmp( arg, "bp" ) )
-	{
-		bone_flag   = 1;
-		pAbility    = &ch->perm_bp;
-		pOutput     = "blood points";
-	}
+
 	else if ( !str_cmp( arg, "move" ) )
 	{
 		bone_flag   = 2;
@@ -1457,10 +1440,8 @@ void do_raise( CHAR_DATA *ch, char *argument )
 		if ( ch->pcdata->perm_dex < 18 ) strcat( buf, " dex" );
 		if ( ch->pcdata->perm_con < 18 ) strcat( buf, " con" );
 
-		if ( !is_class( ch, CLASS_VAMPIRE ) )
-			strcat( buf, " hp mana move" );
-		else
-			strcat( buf, " hp bp move" );
+		strcat( buf, " hp mana move" );
+
 		if ( buf[strlen( buf )-1] != ':' )
 		{
 			strcat( buf, ".\n\r" );

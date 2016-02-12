@@ -520,7 +520,6 @@ const struct flag_type apply_flags[] =
 	{	"height",		APPLY_HEIGHT,		TRUE	},
 	{	"weight",		APPLY_WEIGHT,		TRUE	},
 	{	"mana",			APPLY_MANA,		TRUE	},
-	{   "blood",                APPLY_BP,               TRUE    },
 	{   "anti-disarm",          APPLY_ANTI_DIS,         TRUE    },
 	{	"hp",			APPLY_HIT,		TRUE	},
 	{	"move",			APPLY_MOVE,		TRUE	},

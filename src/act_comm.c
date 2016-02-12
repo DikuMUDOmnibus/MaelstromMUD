@@ -2846,14 +2846,13 @@ void do_group( CHAR_DATA *ch, char *argument )
 			if ( is_same_group( gch, ch ) )
 			{
 				sprintf( buf,
-						"[&R%2d %s&G] %-12s &Y%4d/%4d &Ghp &C%4d/%4d %s &P%4d/%4d &Gmv &R%5d &Gxp\n\r",
+						"[&R%2d %s&G] %-12s &Y%4d/%4d &Ghp &C%4d/%4d &Gmana &P%4d/%4d &Gmv &R%5d &Gxp\n\r",
 						gch->level,
 						IS_NPC( gch ) ? "Mob"
 						: class_table[prime_class(gch)].who_name,
 						capitalize( PERS( gch, ch ) ),
 						gch->hit,   MAX_HIT( gch ),
-						MT( gch ),  MT_MAX(gch),
-						is_class( gch, CLASS_VAMPIRE ) ? "&Rblood" : "&Gmana",
+						gch->mana,  MAX_MANA(gch),
 						gch->move,  MAX_MOVE(gch),
 						gch->exp );
 				/*
@@ -3142,11 +3141,6 @@ void do_pray( CHAR_DATA *ch, char *argument )
 
 		af.location = APPLY_MANA;
 		af.modifier = number_range( ch->level / 2, ch->level );
-		if ( is_class( ch, CLASS_VAMPIRE ) )
-		{
-			af.location = APPLY_BP;
-			af.modifier /= 4;
-		}
 		affect_to_char( ch, &af );
 
 		af.location = APPLY_INT;

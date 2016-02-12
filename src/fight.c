@@ -2485,7 +2485,6 @@ void raw_kill( CHAR_DATA *ch, CHAR_DATA *victim )
 	victim->position     = POS_RESTING;
 	victim->hit	         = UMAX( 1, victim->hit  );
 	victim->mana         = UMAX( 1, victim->mana );
-	victim->bp           = UMAX( 1, victim->bp   );
 	victim->move         = UMAX( 1, victim->move );
 	save_char_obj( victim );
 	return;
@@ -2521,7 +2520,6 @@ void war_kill( CHAR_DATA *victim )
 	victim->position     = POS_RESTING;
 	victim->hit	         = UMAX( 1, victim->hit  );
 	victim->mana         = UMAX( 1, victim->mana );
-	victim->bp           = UMAX( 1, victim->bp   );
 	victim->move         = UMAX( 1, victim->move );
 	save_char_obj( victim );
 	return;
@@ -4316,67 +4314,7 @@ void do_feed( CHAR_DATA *ch, char *argument )
 	CHAR_DATA *victim;
 	char       arg [ MAX_INPUT_LENGTH ];
 
-	if ( !is_class( ch, CLASS_VAMPIRE ) )
-	{
-		send_to_char( AT_WHITE, "You may not feed on the living.\n\r", ch );
-		return;
-	}
-
-	if ( !IS_NPC( ch )
-			&& !can_use_skpell( ch, gsn_feed ) )
-	{
-		send_to_char(AT_RED,
-				"You are yet to young to feast on the blood of the living.\n\r", ch );
-		return;
-	}
-	if ( !ch->fighting )
-	{
-		send_to_char(AT_WHITE, "You aren't fighting anyone.\n\r", ch );
-		return;
-	}
-	/*
-	   if ( ch->level < L_APP && ch->class == CLASS_VAMPIRE )
-	   if ( !IS_SET( ch->in_room->room_flags, ROOM_INDOORS ) )
-	   {
-	   if ( time_info.hour > 6 && time_info.hour < 18 )
-	   {
-	   send_to_char(AT_RED, "You may not feed during the cursed day.\n\r", ch );
-	   return;
-	   }
-	   }
-	   */
-	if ( !check_blind( ch ) )
-		return;
-
-	one_argument( argument, arg );
-
-	victim = ch->fighting;
-
-	if ( arg[0] != '\0' )
-		if ( !( victim = get_char_room( ch, arg ) ) )
-		{
-			send_to_char(AT_WHITE, "They aren't here.\n\r", ch );
-			return;
-		}
-
-	WAIT_STATE( ch, skill_table[gsn_feed].beats );
-	if ( IS_NPC( ch ) || number_percent( ) < ch->pcdata->learned[gsn_feed] )
-	{
-		int        amnt;
-
-		update_skpell( ch, gsn_feed );
-		amnt = number_range( 5, 20 );
-
-		if ( ( ch->bp + amnt ) > MAX_BP(ch))
-			ch->bp = MAX_BP(ch);
-		else
-			ch->bp += amnt;
-
-		damage( ch, victim, number_range( 1, ch->level ), gsn_feed );
-	}
-	else
-		damage( ch, victim, 0, gsn_feed );
-
+	send_to_char( AT_WHITE, "You may not feed on the living.\n\r", ch );
 	return;
 }
 
@@ -5107,13 +5045,13 @@ void do_multiburst( CHAR_DATA *ch, char *argument )
 	}
 	if ( legal1 )
 	{
-		mana += SPELL_COST( ch, sn1 );
-		mana += SPELL_COST( ch, sn1 ) * 0.2;
+		mana += MANA_COST( ch, sn1 );
+		mana += MANA_COST( ch, sn1 ) * 0.2;
 	}
 	if ( legal2 )
 	{
-		mana += SPELL_COST( ch, sn2 );
-		mana += SPELL_COST( ch, sn2 ) * 0.2;
+		mana += MANA_COST( ch, sn2 );
+		mana += MANA_COST( ch, sn2 ) * 0.2;
 	}
 	mana += mana * 0.1;
 	if ( ch->mana < mana && ch->level < LEVEL_IMMORTAL )
@@ -5140,12 +5078,7 @@ void do_multiburst( CHAR_DATA *ch, char *argument )
 					ch, victim );
 	}
 	if ( ch->level < LEVEL_IMMORTAL ) {
-		// MT( ch ) -= mana;
-		if ( is_class( ch, CLASS_VAMPIRE ) ) {
-			ch->bp -= mana;
-		} else {
-			ch->mana -= mana;
-		}
+		ch->mana -= mana;
 	}
 
 	return;

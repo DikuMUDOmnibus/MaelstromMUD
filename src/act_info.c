@@ -1512,18 +1512,9 @@ void do_score( CHAR_DATA *ch, char *argument )
 	sprintf ( buf, " %d/%d", ch->hit, MAX_HIT(ch) );
 	send_to_char( AT_WHITE, buf, ch );
 	send_to_char( AT_CYAN, " HP, ", ch );
-	if ( !is_class( ch, CLASS_VAMPIRE ) )
-	{
-		sprintf ( buf, "%d/%d", ch->mana, MAX_MANA(ch) );
-		send_to_char( AT_BLUE, buf, ch );
-		send_to_char( AT_CYAN, " mana, ", ch );
-	}
-	else
-	{
-		sprintf ( buf, "%d/%d", ch->bp, MAX_BP(ch) );
-		send_to_char( AT_RED, buf, ch );
-		send_to_char( AT_CYAN, " blood, ", ch );
-	}
+	sprintf ( buf, "%d/%d", ch->mana, MAX_MANA(ch) );
+	send_to_char( AT_BLUE, buf, ch );
+	send_to_char( AT_CYAN, " mana, ", ch );
 	sprintf ( buf, "%d/%d", ch->move, MAX_MOVE(ch));
 	send_to_char( AT_GREEN, buf, ch );
 	send_to_char( AT_CYAN, " movement, ", ch );
@@ -3013,37 +3004,21 @@ void do_report( CHAR_DATA *ch, char *argument )
 {
 	char buf [ MAX_INPUT_LENGTH ];
 
-	if ( !is_class( ch, CLASS_VAMPIRE ) )
-		sprintf( buf,
-				"You report: %d/%d hp %d/%d mana %d/%d mv %d xp.\n\r",
-				ch->hit,  MAX_HIT(ch),
-				ch->mana, MAX_MANA(ch),
-				ch->move, MAX_MOVE(ch),
-				ch->exp );
-	else
-		sprintf( buf,
-				"You report: %d/%d hp %d/%d bp %d/%d mv %d xp.\n\r",
-				ch->hit,  MAX_HIT(ch),
-				ch->bp, MAX_BP(ch),
-				ch->move, MAX_MOVE(ch),
-				ch->exp );
+	sprintf( buf,
+			"You report: %d/%d hp %d/%d mana %d/%d mv %d xp.\n\r",
+			ch->hit,  MAX_HIT(ch),
+			ch->mana, MAX_MANA(ch),
+			ch->move, MAX_MOVE(ch),
+			ch->exp );
 
 	send_to_char(AT_RED, buf, ch );
 
-	if ( !is_class( ch, CLASS_VAMPIRE ) )
-		sprintf( buf,
-				"$n reports: %d/%d hp %d/%d mana %d/%d mv %d xp.",
-				ch->hit,  MAX_HIT(ch),
-				ch->mana, MAX_MANA(ch),
-				ch->move, MAX_MOVE(ch),
-				ch->exp );
-	else
-		sprintf( buf,
-				"$n reports: %d/%d hp %d/%d bp %d/%d mv %d xp.",
-				ch->hit,  MAX_HIT(ch),
-				ch->bp,   MAX_BP(ch),
-				ch->move, MAX_MOVE(ch),
-				ch->exp );
+	sprintf( buf,
+			"$n reports: %d/%d hp %d/%d mana %d/%d mv %d xp.",
+			ch->hit,  MAX_HIT(ch),
+			ch->mana, MAX_MANA(ch),
+			ch->move, MAX_MOVE(ch),
+			ch->exp );
 
 	act(AT_RED, buf, ch, NULL, NULL, TO_ROOM );
 
@@ -3813,8 +3788,8 @@ void do_spells ( CHAR_DATA *ch, char *argument )
 		sprintf( buf, "%18s %3dpts ",
 				skill_table[sn].name,
 				( ch->race == RACE_ELF || ch->race == RACE_ELDER )
-				? (int)(SPELL_COST( ch, sn ) * .75) 
-				: SPELL_COST( ch, sn ) );
+				? (int)(MANA_COST( ch, sn ) * .75) 
+				: MANA_COST( ch, sn ) );
 		send_to_char( AT_BLUE, buf, ch );
 		if ( ++col % 3 == 0 )
 			send_to_char( AT_BLUE, "\n\r", ch );

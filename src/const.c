@@ -2647,7 +2647,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 	/*
 	   {
 	   "Name",
-	   {MAG,CLE,THI,WAR,PSY,DRU,RAN,PAL,VAM,
+	   {MAG,CLE,THI,WAR,PSY,DRU,RAN,PAL,PRO,
 	   NEC,WWF,MNK,PRO,PRO,PRO}
 	   function,		target type,		position,
 	   gsn,			min mana,	wait,
