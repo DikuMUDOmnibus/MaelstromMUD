@@ -5038,8 +5038,6 @@ void do_oset( CHAR_DATA *ch, char *argument )
 	{
 		if (!str_cmp( arg3, "mage" ) || !str_cmp( arg3, "mag" ) )
 			value = ITEM_ANTI_MAGE;
-		if (!str_cmp( arg3, "cleric" ) || !str_cmp( arg3, "cle" ) )
-			value = ITEM_ANTI_CLERIC;
 		if (!str_cmp( arg3, "thief" ) || !str_cmp( arg3, "thi" ) )
 			value = ITEM_ANTI_THIEF;
 		if (!str_cmp( arg3, "warrior" ) || !str_cmp( arg3, "war" ) )
@@ -5052,8 +5050,6 @@ void do_oset( CHAR_DATA *ch, char *argument )
 			value = ITEM_ANTI_RANGER;
 		if (!str_cmp( arg3, "paladin" ) || !str_cmp( arg3, "pal" ) )
 			value = ITEM_ANTI_PALADIN;
-		if (!str_cmp( arg3, "necromancer" ) || !str_cmp( arg3, "nec" ) )
-			value = ITEM_ANTI_MONK;
 		if ( value == 0 || !str_cmp( arg3, "none" ) )
 		{
 			obj->anti_class_flags = 0;

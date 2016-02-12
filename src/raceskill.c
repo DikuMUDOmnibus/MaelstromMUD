@@ -49,7 +49,6 @@ void do_headbutt( CHAR_DATA *ch, char *argument )
 	switch ( prime_class(ch) )
 	{
 		case CLASS_MAGE:
-		case CLASS_CLERIC:      timer = 240;  break;
 		case CLASS_THIEF:       timer = 180;  break;
 		case CLASS_WARRIOR:     timer = 120;  break;
 		case CLASS_PSIONICIST:

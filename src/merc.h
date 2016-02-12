@@ -126,7 +126,7 @@ typedef void SPELL_FUN                  args( ( int sn, int level, CHAR_DATA *ch
  */
 #define MAX_SKILL		   344
 #define MAX_GSPELL                 2
-#define MAX_CLASS		   9
+#define MAX_CLASS		   7
 #define MAX_RACE                   16
 #define MAX_CLAN                   21 /*max 20 clans + 1 for clan 0*/
 #define MAX_LEVEL		   113
@@ -500,14 +500,12 @@ struct playerlist_data
 };
 
 #define CLASS_MAGE           0
-#define CLASS_CLERIC         1
 #define CLASS_THIEF          2
 #define CLASS_WARRIOR        3
 #define CLASS_PSIONICIST     4
 #define CLASS_DRUID          5
 #define CLASS_RANGER         6
 #define CLASS_PALADIN        7
-#define CLASS_MONK	    		11
 
 #define RACE_HUMAN           0
 #define RACE_ELF             1
@@ -1096,14 +1094,12 @@ struct	kill_data
 
 /* ANTI_CLASS flags, FOR NEW FLAGS */
 #define ITEM_ANTI_MAGE			1
-#define ITEM_ANTI_CLERIC         	2
 #define ITEM_ANTI_THIEF          	4
 #define ITEM_ANTI_WARRIOR        	8
 #define ITEM_ANTI_PSI                  16
 #define ITEM_ANTI_DRUID                32
 #define ITEM_ANTI_RANGER               64
 #define ITEM_ANTI_PALADIN             128
-#define ITEM_ANTI_MONK		     4096
 /* ANTI_RACE flags, FOR NEW FLAGS */
 
 #define ITEM_ANTI_HUMAN			1

@@ -202,9 +202,7 @@ void multi_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	if ( ch->fighting != victim || dt == gsn_backstab )
 		return;
 
-	if ( !IS_NPC( ch )
-			&& ( ( is_class( ch, CLASS_MONK ) && ch->pcdata->learned[gsn_blackbelt] > 0 )
-				|| ch->pcdata->learned[gsn_dual] > 0 ) )
+	if ( !IS_NPC( ch ) && ch->pcdata->learned[gsn_dual] > 0 ) )
 	{
 		one_dual( ch, victim, dt );
 		one_triple( ch, victim, dt );
@@ -224,14 +222,8 @@ void multi_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 		if ( ch->fighting != victim )
 			return;
 	}
-	chance = IS_NPC( ch ) ? ch->level - 5
-		: ch->pcdata->learned[gsn_second_attack]/2;
-	if ( is_class( ch, CLASS_MONK ) && !get_eq_char( ch, WEAR_WIELD_2 ) )
-		chance2 = IS_NPC( ch ) ? ch->level / 2 - 5
-			: ch->pcdata->learned[gsn_blackbelt] / 2;
-	else
-		chance2 = IS_NPC( ch ) ? ch->level/2 - 5
-			: ch->pcdata->learned[gsn_dual]/2;
+	chance = IS_NPC( ch ) ? ch->level - 5 : ch->pcdata->learned[gsn_second_attack]/2;
+	chance2 = IS_NPC( ch ) ? ch->level/2 - 5 : ch->pcdata->learned[gsn_dual]/2;
 	if ( number_percent( ) < chance )
 	{
 		one_hit( ch, victim, dt );
@@ -247,14 +239,8 @@ void multi_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 		}
 	}
 
-	chance = IS_NPC( ch ) ? ch->level
-		: ch->pcdata->learned[gsn_third_attack]/4;
-	if ( is_class( ch, CLASS_MONK ) && !get_eq_char( ch, WEAR_WIELD_2 ) )
-		chance2 = IS_NPC( ch ) ? ch->level / 2 
-			: ch->pcdata->learned[gsn_blackbelt] / 4;
-	else
-		chance2 = IS_NPC( ch ) ? ch->level/2
-			:ch->pcdata->learned[gsn_dual]/4;
+	chance = IS_NPC( ch ) ? ch->level : ch->pcdata->learned[gsn_third_attack]/4;
+	chance2 = IS_NPC( ch ) ? ch->level/2 :ch->pcdata->learned[gsn_dual]/4;
 	if ( number_percent( ) < chance )
 	{
 		one_hit( ch, victim, dt );
@@ -280,14 +266,8 @@ void multi_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 			return;
 	}
 
-	chance = IS_NPC( ch ) ? ch->level/2
-		: ch->pcdata->learned[gsn_fifth_attack]/8;
-	if ( is_class( ch, CLASS_MONK ) && !get_eq_char( ch, WEAR_WIELD_2 ) )
-		chance2 = IS_NPC( ch ) ? ch->level / 6
-			: ch->pcdata->learned[gsn_blackbelt] / 8;
-	else
-		chance2 = IS_NPC( ch ) ? ch->level/6
-			: ch->pcdata->learned[gsn_dual]/8;
+	chance = IS_NPC( ch ) ? ch->level/2 : ch->pcdata->learned[gsn_fifth_attack]/8;
+	chance2 = IS_NPC( ch ) ? ch->level/6 : ch->pcdata->learned[gsn_dual]/8;
 	if ( number_percent( ) < chance && ch->wait == 0 )
 	{
 		one_hit( ch, victim, dt );
@@ -313,14 +293,8 @@ void multi_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 			return;
 	}
 
-	chance = IS_NPC( ch ) ? ch->level/4
-		: ch->pcdata->learned[gsn_seventh_attack]/32;
-	if ( is_class( ch, CLASS_MONK ) && !get_eq_char( ch, WEAR_WIELD_2 ) )
-		chance2 = IS_NPC( ch ) ? ch->level / 4
-			: ch->pcdata->learned[gsn_blackbelt] / 22;
-	else
-		chance2 = IS_NPC( ch ) ? ch->level/4
-			: ch->pcdata->learned[gsn_dual]/32;
+	chance = IS_NPC( ch ) ? ch->level/4 : ch->pcdata->learned[gsn_seventh_attack]/32;
+	chance2 = IS_NPC( ch ) ? ch->level/4 : ch->pcdata->learned[gsn_dual]/32;
 	if ( number_percent( ) < chance && ch->wait == 0 )
 	{
 		one_hit( ch, victim, dt );
@@ -398,10 +372,10 @@ void one_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	if ( dt == TYPE_UNDEFINED )
 	{
 		dt = TYPE_HIT;
-		if ( wield && wield->item_type == ITEM_WEAPON )
+
+		if ( wield && wield->item_type == ITEM_WEAPON ) {
 			dt += wield->value[3];
-		else if ( is_class( ch, CLASS_MONK ) && !wield )
-			dt += 14;
+		}
 	}
 
 	/*
@@ -535,13 +509,12 @@ void one_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	}
 	else
 	{
-		if ( wield )
+		if ( wield ) {
 			dam = number_range( wield->value[1], wield->value[2] );
-		else if ( is_class( ch, CLASS_MONK ) && !wield )
-			dam = UMAX( number_fuzzy( ch->level / 2 + ch->level / 15 ),
-					number_fuzzy( 5 ) );
-		else
+		} else {
 			dam = number_range( 1, 4 );
+		}
+
 		if ( wield && dam > 1000 && !IS_IMMORTAL(ch) )
 		{
 			sprintf( buf, "One_hit dam range > 1000 from %d to %d",
@@ -625,19 +598,17 @@ void one_dual( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	 * Can't beat a dead char!
 	 * Guard against weird room-leavings.
 	 */
-	if ( !(get_eq_char( ch, WEAR_WIELD_2 ))
-			&& !is_class( ch, CLASS_MONK ) )
+	if ( !(get_eq_char( ch, WEAR_WIELD_2 )) {
 		return;
-	if ( is_class( ch, CLASS_MONK )
-			&& ( get_eq_char( ch, WEAR_SHIELD )
-				|| get_eq_char( ch, WEAR_HOLD ) ) )
-		return;
-	if ( victim->position == POS_DEAD || ch->in_room != victim->in_room )
-		return;
+	}
 
-	if ( IS_STUNNED( ch, STUN_NON_MAGIC ) ||
-			IS_STUNNED( ch, STUN_TOTAL ) )
+	if ( victim->position == POS_DEAD || ch->in_room != victim->in_room ) {
 		return;
+	}
+
+	if ( IS_STUNNED( ch, STUN_NON_MAGIC ) || IS_STUNNED( ch, STUN_TOTAL ) ) {
+		return;
+	}
 
 	/*
 	 * Figure out the type of damage message.
@@ -646,10 +617,9 @@ void one_dual( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	if ( dt == TYPE_UNDEFINED )
 	{
 		dt = TYPE_HIT;
-		if ( wield && wield->item_type == ITEM_WEAPON )
+		if ( wield && wield->item_type == ITEM_WEAPON ) {
 			dt += wield->value[3];
-		else if ( is_class( ch, CLASS_MONK ) && !wield )
-			dt += 15;
+		}
 	}
 
 	/*
@@ -721,13 +691,12 @@ void one_dual( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	}
 	else
 	{
-		if ( wield )
+		if ( wield ) {
 			dam = number_range( wield->value[1], wield->value[2] );
-		else if ( is_class( ch, CLASS_MONK ) && !wield )
-			dam = UMAX( number_fuzzy( ch->level / 2 + ch->level / 15 ),
-					number_fuzzy( 5 ) );
-		else
+		} else {
 			dam = number_range( 1, 4 );
+		}
+
 		if ( wield && dam > 1000 )
 		{
 			sprintf( buf, "One_hit dam range > 1000 from %d to %d",
@@ -740,53 +709,53 @@ void one_dual( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	 * Bonuses.
 	 */
 	dam += GET_DAMROLL( ch );
-	if ( wield && IS_SET( wield->extra_flags, ITEM_POISONED ) )
+	if ( wield && IS_SET( wield->extra_flags, ITEM_POISONED ) ) {
 		dam += dam / 4;
-	if (
-			(wield && IS_SET( wield->extra_flags, ITEM_FLAME ) )
-			||	(!wield && is_affected( ch, gsn_flamehand ) )
-	   )
+	}
+
+	if ( (wield && IS_SET( wield->extra_flags, ITEM_FLAME ) ) ||	(!wield && is_affected( ch, gsn_flamehand ) ) ) {
 		dam += dam / 8;
-	if ( 
-			(wield && IS_SET( wield->extra_flags, ITEM_CHAOS ) )
-			||	(!wield && is_affected( ch, gsn_chaoshand ) )
-	   )
+	}
+
+	if ( (wield && IS_SET( wield->extra_flags, ITEM_CHAOS ) ) ||	(!wield && is_affected( ch, gsn_chaoshand ) ) ) {
 		dam += dam / 8;
-	if ( 
-			(wield && IS_SET( wield->extra_flags, ITEM_ICY   ) )
-			||	(!wield && is_affected( ch, gsn_frosthand ) )
-	   )
+	}
+
+	if ( (wield && IS_SET( wield->extra_flags, ITEM_ICY   ) ) ||	(!wield && is_affected( ch, gsn_frosthand ) ) ) {
 		dam += dam / 4;
-	if ( is_class( ch, CLASS_MONK ) && !wield )
-		update_skpell( ch, gsn_blackbelt );
-	if ( !IS_NPC( ch ) && ch->pcdata->learned[gsn_enhanced_damage] > 0 )
-	{
+	}
+
+	if ( !IS_NPC( ch ) && ch->pcdata->learned[gsn_enhanced_damage] > 0 ) {
 		dam += dam * ch->pcdata->learned[gsn_enhanced_damage] / 150;
 		update_skpell( ch, gsn_enhanced_damage );
 	}
-	if ( !IS_NPC( ch ) && ch->pcdata->learned[gsn_enhanced_claw] > 0
-			&& !wield )
-	{
+
+	if ( !IS_NPC( ch ) && ch->pcdata->learned[gsn_enhanced_claw] > 0 && !wield ) {
 		dam += dam * ch->pcdata->learned[gsn_enhanced_claw] / 150;
 		update_skpell( ch, gsn_enhanced_claw );
 	}
-	if ( !IS_NPC( ch ) && ch->pcdata->learned[gsn_enhanced_two] > 0 )
-	{
+
+	if ( !IS_NPC( ch ) && ch->pcdata->learned[gsn_enhanced_two] > 0 ) {
 		dam += dam * ch->pcdata->learned[gsn_enhanced_two] / 150;
 		update_skpell( ch, gsn_enhanced_two );
 	}
-	if ( !IS_NPC( ch ) && ch->pcdata->learned[gsn_enhanced_three] > 0 )
-	{
+
+	if ( !IS_NPC( ch ) && ch->pcdata->learned[gsn_enhanced_three] > 0 ) {
 		dam += dam * ch->pcdata->learned[gsn_enhanced_three] / 150;
 		update_skpell( ch, gsn_enhanced_three );
 	}
-	if ( !IS_AWAKE( victim ) )
-		dam *= 2;
-	if ( dt == gsn_backstab )
-		dam *= 2 + UMIN( ( ch->level / 8) , 4 );
 
-	if ( dam <= 0 )
+	if ( !IS_AWAKE( victim ) ) {
+		dam *= 2;
+	}
+
+	if ( dt == gsn_backstab ) {
+		dam *= 2 + UMIN( ( ch->level / 8) , 4 );
+	}
+
+	if ( dam <= 0 ) {
 		dam = 1;
+	}
 
 	damage( ch, victim, dam, dt );
 	tail_chain( );
