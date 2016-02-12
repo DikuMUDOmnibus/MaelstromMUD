@@ -56,8 +56,6 @@ void do_headbutt( CHAR_DATA *ch, char *argument )
 		case CLASS_DRUID:       timer = 240;  break;
 		case CLASS_RANGER:
 		case CLASS_PALADIN:
-		// case CLASS_BARD:
-		case CLASS_NECROMANCER: timer = 240;  break;
 	}
 	mod = ch->level / 5;
 	mod = UMAX( 1, mod );

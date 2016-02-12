@@ -1257,21 +1257,6 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt )
 	if ( victim->position == POS_DEAD || ch->in_room != victim->in_room )
 		return;
 
-	if (  IS_SET( ch->act, UNDEAD_TYPE( ch ) )
-			&& !saves_spell(ch->level, victim )
-			&& !is_class( victim, CLASS_NECROMANCER )
-			&& victim->race != RACE_GHOUL )
-	{
-		AFFECT_DATA af;
-
-		af.type      = gsn_poison;
-		af.duration  = 2;
-		af.location  = APPLY_CON;
-		af.modifier  = -1;
-		af.bitvector = AFF_POISON;
-		affect_join( victim, &af );
-	}
-
 	update_pos( victim );	
 
 	switch( victim->position )

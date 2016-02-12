@@ -2303,8 +2303,6 @@ char *anticlass_bit_name( int anticlass )
 	if ( anticlass & ITEM_ANTI_DRUID   ) strcat( buf, " anti-druid"   );
 	if ( anticlass & ITEM_ANTI_PALADIN ) strcat( buf, " anti-paladin" );
 	if ( anticlass & ITEM_ANTI_RANGER  ) strcat( buf, " anti-ranger"  );
-	// if ( anticlass & ITEM_ANTI_BARD    ) strcat( buf, " anti-bard"    );
-	if ( anticlass & ITEM_ANTI_NECRO   ) strcat( buf, " anti-necromancer");
 	if ( anticlass & ITEM_ANTI_MONK    ) strcat( buf, " anti-monk" );
 	return ( buf[0] != '\0' ) ? buf+1 : "none";
 }

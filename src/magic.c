@@ -523,10 +523,7 @@ void do_cast( CHAR_DATA *ch, char *argument )
 	one_argument( target_name, arg2 );
 
 	if ( arg1[0] == '\0' ) {
-		// if ( prime_class(ch) != CLASS_BARD )
 		send_to_char(AT_BLUE, "Cast which what where?\n\r", ch );
-		// else
-		// 	send_to_char(AT_BLUE, "Sing what song?\n\r", ch );
 		return;
 	}
 
@@ -558,10 +555,7 @@ void do_cast( CHAR_DATA *ch, char *argument )
 	}
 
 	if ( IS_STUNNED( ch, STUN_MAGIC ) ) {
-		// if ( prime_class(ch) != CLASS_BARD )
 		send_to_char(AT_LBLUE, "You're too stunned to cast spells.\n\r", ch );
-		// else
-		// 	send_to_char(AT_LBLUE, "You're too stunned to sing songs.\n\r", ch );
 		return;
 	}
 
@@ -615,10 +609,7 @@ void do_cast( CHAR_DATA *ch, char *argument )
 			{
 				if ( !( victim = ch->fighting ) )
 				{
-					// if ( prime_class(ch) != CLASS_BARD )
 					send_to_char(AT_BLUE, "Cast the spell on whom?\n\r", ch );
-					// else
-					// 	send_to_char(AT_BLUE, "Sing the song to whom?\n\r", ch );
 					return;
 				}
 			}
@@ -670,10 +661,7 @@ void do_cast( CHAR_DATA *ch, char *argument )
 		case TAR_CHAR_SELF:
 			if ( arg2[0] != '\0' && !is_name( ch, arg2, ch->name ) )
 			{
-				// if ( prime_class(ch) != CLASS_BARD )
 				send_to_char(AT_BLUE, "You cannot cast this spell on another.\n\r", ch );
-				// else
-				// 	send_to_char(AT_BLUE, "You cannot sing this song for others.\n\r", ch );
 				return;
 			}
 
@@ -701,7 +689,6 @@ void do_cast( CHAR_DATA *ch, char *argument )
 	}
 
 
-	// if ( str_cmp( skill_table[sn].name, "ventriloquate" ) )
 	say_spell( ch, sn );
 
 	if ( IS_SET( ch->in_room->room_flags, ROOM_NO_MAGIC ) ) {
@@ -2403,12 +2390,10 @@ void spell_holysword( int sn, int level, CHAR_DATA *ch, void *vo )
 	}
 	SET_BIT( obj->anti_class_flags, ITEM_ANTI_WARRIOR );
 	SET_BIT( obj->anti_class_flags, ITEM_ANTI_MAGE );
-	// SET_BIT( obj->anti_class_flags, ITEM_ANTI_BARD );
 	SET_BIT( obj->anti_class_flags, ITEM_ANTI_RANGER );
 	SET_BIT( obj->anti_class_flags, ITEM_ANTI_DRUID );
 	SET_BIT( obj->anti_class_flags, ITEM_ANTI_PSI ); 
 	SET_BIT( obj->anti_class_flags, ITEM_ANTI_THIEF );
-	SET_BIT( obj->anti_class_flags, ITEM_ANTI_NECRO );
 	SET_BIT( obj->anti_class_flags, ITEM_ANTI_MONK );
 	send_to_char(AT_BLUE, "Ok.\n\r", ch );
 	return;
@@ -7642,18 +7627,6 @@ void spell_purify( int sn, int level, CHAR_DATA *ch, void *vo )
 		if ( IS_ANTI_CLASS( obj, ITEM_ANTI_PALADIN ) )
 		{
 			REMOVE_BIT( obj->anti_class_flags, ITEM_ANTI_PALADIN );
-			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
-			yesno = TRUE;
-		}
-		// if ( IS_ANTI_CLASS( obj, ITEM_ANTI_BARD ) )
-		// {
-		// 	REMOVE_BIT( obj->anti_class_flags, ITEM_ANTI_BARD );
-		// 	act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
-		// 	yesno = TRUE;
-		// }
-		if ( IS_ANTI_CLASS( obj, ITEM_ANTI_NECRO ) )
-		{
-			REMOVE_BIT( obj->anti_class_flags, ITEM_ANTI_NECRO );
 			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
 			yesno = TRUE;
 		}
