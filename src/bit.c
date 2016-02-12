@@ -357,11 +357,8 @@ const struct flag_type extra_flags[] =
 const struct flag_type anti_class_flags[] =
 {
 	{   "anti-mage",            ITEM_ANTI_MAGE,         TRUE    },
-	{   "anti-paladin",         ITEM_ANTI_PALADIN,      TRUE    },
 	{   "anti-thief",           ITEM_ANTI_THIEF,        TRUE    },
 	{   "anti-warrior",         ITEM_ANTI_WARRIOR,      TRUE    },
-	{   "anti-druid",           ITEM_ANTI_DRUID,        TRUE    },
-	{   "anti-ranger",          ITEM_ANTI_RANGER,       TRUE    },
 	{	"",			0,			0	}
 };
 const struct flag_type anti_race_flags[] =

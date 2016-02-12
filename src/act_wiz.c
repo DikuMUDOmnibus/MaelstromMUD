@@ -5042,12 +5042,6 @@ void do_oset( CHAR_DATA *ch, char *argument )
 			value = ITEM_ANTI_THIEF;
 		if (!str_cmp( arg3, "warrior" ) || !str_cmp( arg3, "war" ) )
 			value = ITEM_ANTI_WARRIOR;
-		if (!str_cmp( arg3, "druid" ) || !str_cmp( arg3, "dru" ) )
-			value = ITEM_ANTI_DRUID;
-		if (!str_cmp( arg3, "ranger" ) || !str_cmp( arg3, "ran" ) )
-			value = ITEM_ANTI_RANGER;
-		if (!str_cmp( arg3, "paladin" ) || !str_cmp( arg3, "pal" ) )
-			value = ITEM_ANTI_PALADIN;
 		if ( value == 0 || !str_cmp( arg3, "none" ) )
 		{
 			obj->anti_class_flags = 0;
