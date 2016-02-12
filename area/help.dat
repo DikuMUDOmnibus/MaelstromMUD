@@ -2180,7 +2180,7 @@ Syntax: cast 'cure blindness' <character>
 This spell cures blindness in one so unfortunate.
 ~
 0 'CURE LIGHT' 'CURE SERIOUS' 'CURE CRITICAL' 'HEAL'
-'PSYCHIC HEALING' 'COMPLETE HEALING'~
+'PSYCHIC HEALING' 'COMPLETE HEALING'~
 Syntax: cast 'cure light'       <character>
 Syntax: cast 'cure serious'     <character>
 Syntax: cast 'cure critical'    <character>
@@ -2453,7 +2453,7 @@ You can practice THIRD ATTACK before you have mastered SECOND ATTACK,
 although it isn't efficient to do so.
 ~
 51 'GENERAL PURPOSE' 'GENERAL PURPOSE AMMO' 'HIGH EXPLOSIVE'
-   'HIGH EXPLOSIVE AMMO'~
+   'HIGH EXPLOSIVE AMMO'~
 Syntax: cast 'general purpose' <target>
 Syntax: cast 'high explosive'  <target>
 
@@ -2476,15 +2476,15 @@ presence of their GUILDMASTER.
 TRAINERs can provide extensive training sessions which enable players
 to TRAIN their base statistics.
 ~
--1 WAR WARRIOR~
-The WARRIOR class is the most basic fighting class available.  Their
+-1 FIG FIGHTER~
+The FIGHTER class is the most basic fighting class available.  Their
 battle training along with high strength and high hit points make them
-very formidable in hand to hand combat.  WARRIORs train in the art of
+very formidable in hand to hand combat.  FIGHTERs train in the art of
 multiple attacks.  Some master the art of a SECOND ATTACK and if experienced
 enough, master a THIRD ATTACK.  Along with this training in multiple
-attacks, a WARRIOR is trained in making each hit count.  ENHANCED DAMAGE
-is available to only the learned.  Toward the defense side of the WARRIOR,
-skills of PARRY, RESCUE and BASH DOOR allow the WARRIOR to ward off attacks,
+attacks, a FIGHTER is trained in making each hit count.  ENHANCED DAMAGE
+is available to only the learned.  Toward the defense side of the FIGHTER,
+skills of PARRY, RESCUE and BASH DOOR allow the FIGHTER to ward off attacks,
 rush to the aid of fellow comrades, and open doors rather barbarically.
 ~
 -1 CLE CLERIC~
@@ -2494,23 +2494,20 @@ protection divinities.  CLERICs being of a defensive nature fare poorly
 in the art of mortal combat.  They much prefer to be civil servants to
 society or doctors to their comrades in arms.
 ~
--1 MAG MAGE MAGIC MAGIC-USER 'MAGIC USER'~
-The MAGE class is a 'spellcasting' class devoted primarily toward control
-over the elements.  The universe contains an unmeasured power the MAGE taps
-into to influence the world.  MAGE spells are devoted to the invoking,
-hermetic, and combative nature.  MAGEs fare a little better than their
-CLERIC counterparts in hand-to-hand combat though they much prefer to
-stand back and roast their enemies with a FIREBALL.
+-1 CAS CASTER MAGIC MAGIC-USER 'MAGIC USER'~
+The CASTER class is a 'spellcasting' class devoted primarily toward control
+over the elements.  The universe contains an unmeasured power the CASTER taps
+into to influence the world. 
 ~
--1 THI THIEF~
-The THIEF class can be characterized as a WARRIOR who dropped out of school
+-1 ROG ROGUE~
+The ROGUE class can be characterized as a WARRIOR who dropped out of school
 to pursue more "profitable" means of living.  These wirey persons have
 physical endurance slightly less than that of a WARRIOR but are much more
-agile.  Whereas a WARRIOR uses well placed weapon slashes, a THIEF seeks to
-DISARM his opponent.  THIEVES also excel in the art of stealth.
-An unwary opponent might not detect a THIEF until a BACKSTAB is attempted.
+agile.  Whereas a WARRIOR uses well placed weapon slashes, a ROGUE seeks to
+DISARM his opponent.  ROGUES also excel in the art of stealth.
+An unwary opponent might not detect a ROGUE until a BACKSTAB is attempted.
 To achieve success in this, the skills SNEAK and HIDE are learned.  With
-a THIEF's PICK LOCK and POISON WEAPON skill, a THIEF also makes the perfect
+a ROGUE's PICK LOCK and POISON WEAPON skill, a ROGUE also makes the perfect
 assassin for political powerhouses.
 ~
 -1 PSI PSIONISIST~
@@ -2619,7 +2616,7 @@ objects on their victim, and extremely skilled psionicists can even
 DISINTEGRATE their victims, killing them instantly.
 ~
 0 'THOUGHT SHIELD' 'MENTAL BARRIER' 'DISPLACEMENT' 'FLESH ARMOR'
-  'INTELLECT FORTRESS' 'INERTIAL BARRIER'~
+  'INTELLECT FORTRESS' 'INERTIAL BARRIER'~
 Syntax: cast 'thought shield'
 Syntax: cast 'mental barrier'
 Syntax: cast 'displacement'
