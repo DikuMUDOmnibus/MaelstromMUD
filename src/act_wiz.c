@@ -5042,8 +5042,6 @@ void do_oset( CHAR_DATA *ch, char *argument )
 			value = ITEM_ANTI_THIEF;
 		if (!str_cmp( arg3, "warrior" ) || !str_cmp( arg3, "war" ) )
 			value = ITEM_ANTI_WARRIOR;
-		if (!str_cmp( arg3, "psionisist" ) || !str_cmp( arg3, "psi" ) )
-			value = ITEM_ANTI_PSI;
 		if (!str_cmp( arg3, "druid" ) || !str_cmp( arg3, "dru" ) )
 			value = ITEM_ANTI_DRUID;
 		if (!str_cmp( arg3, "ranger" ) || !str_cmp( arg3, "ran" ) )

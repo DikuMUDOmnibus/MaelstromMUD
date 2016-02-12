@@ -360,7 +360,6 @@ const struct flag_type anti_class_flags[] =
 	{   "anti-paladin",         ITEM_ANTI_PALADIN,      TRUE    },
 	{   "anti-thief",           ITEM_ANTI_THIEF,        TRUE    },
 	{   "anti-warrior",         ITEM_ANTI_WARRIOR,      TRUE    },
-	{   "anti-psi",             ITEM_ANTI_PSI,          TRUE    },
 	{   "anti-druid",           ITEM_ANTI_DRUID,        TRUE    },
 	{   "anti-ranger",          ITEM_ANTI_RANGER,       TRUE    },
 	{	"",			0,			0	}

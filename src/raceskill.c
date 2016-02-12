@@ -51,7 +51,6 @@ void do_headbutt( CHAR_DATA *ch, char *argument )
 		case CLASS_MAGE:
 		case CLASS_THIEF:       timer = 180;  break;
 		case CLASS_WARRIOR:     timer = 120;  break;
-		case CLASS_PSIONICIST:
 		case CLASS_DRUID:       timer = 240;  break;
 		case CLASS_RANGER:
 		case CLASS_PALADIN:
