@@ -2537,8 +2537,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 	{
 		"song of evil sight",
-		{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP,
-			L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },   
+		{ L_APP, L_APP, L_APP },
 		spell_detect_evil,  TAR_CHAR_SELF,          POS_STANDING,
 		NULL,                       5,      12,
 		"",                 "The red in your vision disappears.", 
@@ -3053,8 +3052,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 
 	{
 		"ethereal mist", 
-		{ L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, L_APP, 39,
-			L_APP, L_APP, L_APP, L_APP, L_APP, L_APP },   
+		{ L_APP, L_APP, L_APP },
 		spell_pass_door,    TAR_CHAR_SELF,          POS_STANDING,
 		NULL,                       20,     12,
 		"",                 
@@ -3204,6 +3202,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 	},
 
 	{
+		"scrolls",
 		{ L_APP, L_APP, L_APP },
 		spell_null,           TAR_IGNORE,   POS_STANDING,
 		&gsn_scrolls,    0, 0,
@@ -3211,6 +3210,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 	},
 
 	{
+		"wands",
 		{ L_APP, L_APP, L_APP },
 		spell_null,           TAR_IGNORE,   POS_STANDING,
 		&gsn_wands,    0, 0,
@@ -3218,6 +3218,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 	},
 
 	{
+		"staves",
 		{ L_APP, L_APP, L_APP },
 		spell_null,           TAR_IGNORE,   POS_STANDING,
 		&gsn_staves,    0, 0,
@@ -3307,8 +3308,7 @@ const	struct	skill_type	skill_table	[ MAX_SKILL ]	=
 		 */
 	{
 		"",
-		{999,999,999,999,999,999,999,999,999,
-			999,999,999,999,999,999},
+		{999,999,999},
 		spell_null,     0, 0,
 		NULL, 0, 0,
 		"", "", "", SLOT(0)

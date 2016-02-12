@@ -202,7 +202,7 @@ void multi_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	if ( ch->fighting != victim || dt == gsn_backstab )
 		return;
 
-	if ( !IS_NPC( ch ) && ch->pcdata->learned[gsn_dual] > 0 ) )
+	if ( !IS_NPC( ch ) && ch->pcdata->learned[gsn_dual] > 0 ) 
 	{
 		one_dual( ch, victim, dt );
 		one_triple( ch, victim, dt );
@@ -598,7 +598,7 @@ void one_dual( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	 * Can't beat a dead char!
 	 * Guard against weird room-leavings.
 	 */
-	if ( !(get_eq_char( ch, WEAR_WIELD_2 )) {
+	if ( !get_eq_char( ch, WEAR_WIELD_2 ) ) {
 		return;
 	}
 

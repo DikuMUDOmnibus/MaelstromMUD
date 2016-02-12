@@ -2518,7 +2518,6 @@ void do_equipment( CHAR_DATA *ch, char *argument )
 	OBJ_DATA *obj;
 	int       iWear;
 	bool      found;
-	char      buf[ MAX_INPUT_LENGTH ];
 	send_to_char(AT_WHITE, "You are using:\n\r", ch );
 	found = FALSE;
 	for ( iWear = 0; iWear < MAX_WEAR; iWear++ )

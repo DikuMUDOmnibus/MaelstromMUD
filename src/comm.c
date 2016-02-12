@@ -1936,20 +1936,18 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			switch ( *argument )
 			{
 				case 'y': case 'Y':
-					/*      ch->class[2] = -1;
-							write_to_buffer( d, "&cPress &W'y' &cto enter a description or &WEnter &cto continue&w: ", 0 );
-							do_help( ch, "motd" );
-							d->connected = CON_READ_MOTD;
-							*/
-					/* For Third Class comment above and uncomment below */
+					if (IS_SET(ch->act2, PLR_REMORT )) {
+						ch->exp = xp_tolvl(ch)/2;
+					}
 
-					argument[0] = '\0';
-					sprintf( buf, "&WDo you wish a 3rd class&w? " );
-					write_to_buffer( d, buf, 0 );
-					d->connected = CON_WANT_MULTI_2;
+					ch->class[2] = -1;
+
+					write_to_buffer( d, "&cPress &W'y' &cto enter a description or &WEnter &cto continue&w: ", 0 );
+					do_help(ch, "motd");
+					
+					d->connected = CON_READ_MOTD;
 
 					break;
-
 				case 'n': case 'N':
 					strcpy( buf2,
 							"\n\r                 &z-= &RSelect a class from the list below &z=-"
@@ -1974,149 +1972,6 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					strcat( buf2, "\n\r&R2ND CLASS &w-> " );
 					write_to_buffer( d, buf2, 0 );
 					d->connected = CON_GET_2ND_CLASS;
-			}
-			break;
-
-		case CON_WANT_MULTI_2:
-			switch ( *argument )
-			{
-				case 'y': case 'Y':
-					strcpy( buf2,
-							"\n\r                 &z-= &RSelect a class from the list below &z=-"
-							"\n\r           &cYou may type &RBACK &cto return to previous selection.\n\r\n\r"
-						  );
-					iCount = 0;
-					for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
-					{
-						if ( class_table[iClass].races[ch->race]
-								&& prime_class( ch ) != iClass
-								&& ch->class[1] != iClass
-								&& class_table[prime_class(ch)].multi[iClass]
-								&& class_table[ch->class[1]].multi[iClass] )
-						{
-							iCount++;
-							sprintf( buf, "&z[&W%-12s&z]%s",
-									class_table[iClass].who_long,
-									iCount % 5 == 0 ? "\n\r" : "" );
-							strcat( buf2, buf );
-						}
-					}
-					if ( iCount % 5 != 0 )
-						strcat( buf2, "\n\r" );
-					strcat( buf2, "\n\r&R3RD CLASS &w-> " );
-					write_to_buffer( d, buf2, 0 );
-					d->connected = CON_GET_3RD_CLASS;
-					break;
-				case 'n': case 'N':
-					if (IS_SET(ch->act2, PLR_REMORT ))
-						ch->exp = xp_tolvl(ch)/2;
-					ch->class[2] = -1;
-					write_to_buffer( d, "&cPress &W'y' &cto enter a description or &WEnter &cto continue&w: ", 0 );
-					do_help(ch, "motd");
-					d->connected = CON_READ_MOTD;
-					break;
-				default:
-					write_to_buffer( d, "&cPlease type &WYes &cor &WNo&w: ", 0 );
-					break;
-			}
-			break;
-		case CON_GET_3RD_CLASS:
-			if ( !str_cmp( argument, "back" ) )
-			{
-				strcpy( buf2,
-						"\n\r                 &z-= &RSelect a class from the list below &z=-"
-						"\n\r           &cYou may type &RBACK &cto return to previous selection.\n\r\n\r"
-					  );
-				iCount = 0;
-				for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
-				{
-					if ( class_table[iClass].races[ch->race]
-							&& prime_class( ch ) != iClass
-							&& class_table[prime_class(ch)].multi[iClass] )
-					{
-						iCount++;
-						sprintf( buf, "&z[&W%-12s&z]%s",
-								class_table[iClass].who_long,
-								iCount % 5 == 0 ? "\n\r" : "" );
-						strcat( buf2, buf );
-					}
-				}
-				if ( iCount % 5 != 0 )
-					strcat( buf2, "\n\r" );
-				strcat( buf2, "\n\r&R2ND CLASS &w-> " );
-				write_to_buffer( d, buf2, 0 );
-				d->connected = CON_GET_2ND_CLASS;
-				return;
-			}
-			for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
-			{
-				if ( !str_prefix( argument, class_table[iClass].who_long )
-						&& class_table[iClass].races[ch->race]
-						&& prime_class( ch ) != iClass
-						&& ch->class[1] != iClass
-						&& class_table[prime_class(ch)].multi[iClass]
-						&& class_table[ch->class[1]].multi[iClass] )
-				{
-					ch->class[2] = iClass;
-					break;
-				}
-			}
-
-			if ( iClass == MAX_CLASS )
-			{
-				write_to_buffer( d,
-						"&cThat's not a class&w.\n\r&WWhat IS your class&w? ", 0 );
-				return;
-			}
-
-			do_help( ch, (char *)class_table[iClass].who_long );
-			write_to_buffer( d, "&WIs this the class you desire&w? ", 0 );
-			d->connected = CON_CONFIRM_3RD_CLASS;
-			break;
-
-		case CON_CONFIRM_3RD_CLASS:
-			switch ( *argument )
-			{
-				case 'y': case 'Y':
-					if (IS_SET(ch->act2, PLR_REMORT ))
-						ch->exp = xp_tolvl(ch)/2;
-					ch->class[3] = -1;
-					write_to_buffer( d, "&cPress &W'y' &cto enter a description or &WEnter &cto continue&w: ", 0 );
-					do_help( ch, "motd");
-					d->connected = CON_READ_MOTD;
-					break;
-
-				case 'n': case 'N':
-					strcpy( buf2,
-							"\n\r                 &z-= &RSelect a class from the list below &z=-"
-							"\n\r           &cYou may type &RBACK &cto return to previous selection.\n\r\n\r"
-						  );
-					iCount = 0;
-					for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
-					{
-						if ( class_table[iClass].races[ch->race]
-								&& prime_class( ch ) != iClass
-								&& ch->class[1] != iClass
-								&& class_table[prime_class(ch)].multi[iClass]
-								&& class_table[ch->class[1]].multi[iClass] )
-						{
-							iCount++;
-							sprintf( buf, "&z[&W%-12s&z]%s",
-									class_table[iClass].who_long,
-									iCount % 5 == 0 ? "\n\r" : "" );
-							strcat( buf2, buf );
-						}
-					}
-					if ( iCount % 5 != 0 )
-						strcat( buf2, "\n\r" );
-					strcat( buf2, "\n\r&R3RD CLASS &w-> " );
-					write_to_buffer( d, buf2, 0 );
-					d->connected = CON_GET_3RD_CLASS;
-					break;
-
-				default:
-					write_to_buffer( d, "&cPlease type &WYes &cor &WNo&w: ", 0 );
-					break;
 			}
 			break;
 
