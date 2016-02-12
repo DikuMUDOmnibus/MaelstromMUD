@@ -1,3 +1,9 @@
+## 0.0.4 (2016-02-12)
+
+Features:
+
+  - Werewolf and vampire classes removed (might reimplement as curses)
+
 ## 0.0.3 (2015-11-12)
 
 Features:
