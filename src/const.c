@@ -97,7 +97,7 @@ const	struct	class_type	class_table	[MAX_CLASS]	=
 	},
 
 	{
-		"Thi",  "Thief", APPLY_DEX,  OBJ_VNUM_SCHOOL_DAGGER,
+		"Rog",  "Rogue", APPLY_DEX,  OBJ_VNUM_SCHOOL_DAGGER,
 		3028,  85,  18,  -14,  8,  13, FALSE,
 		{ TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE,
 			FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, TRUE },

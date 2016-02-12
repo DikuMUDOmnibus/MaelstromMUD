@@ -500,7 +500,7 @@ struct playerlist_data
 };
 
 #define CLASS_CASTER         0
-#define CLASS_THIEF          1
+#define CLASS_ROGUE          1
 #define CLASS_WARRIOR        2
 
 #define RACE_HUMAN           0
@@ -1089,7 +1089,7 @@ struct	kill_data
 
 /* ANTI_CLASS flags, FOR NEW FLAGS */
 #define ITEM_ANTI_CASTER					1
-#define ITEM_ANTI_THIEF          	4
+#define ITEM_ANTI_ROGUE          	4
 #define ITEM_ANTI_WARRIOR        	8
 /* ANTI_RACE flags, FOR NEW FLAGS */
 

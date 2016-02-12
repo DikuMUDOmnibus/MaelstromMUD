@@ -5124,12 +5124,14 @@ void do_finger( CHAR_DATA *ch, char *argument )
 	race = (get_race_data(victim->race))->race_name;
 	sprintf( buf, "&CClass: &W%-10s     &CRace: &W%s\n\r", class,race );
 	send_to_char( AT_WHITE, buf, ch );
-	sprintf( buf, "&CThief: &W%s\n\r", IS_SET( victim->act, PLR_THIEF ) ? "Yes"
-			: "No" );
-	if ( is_class( victim, CLASS_THIEF ) )
+
+	sprintf( buf, "&CThief: &W%s\n\r", IS_SET( victim->act, PLR_THIEF ) ? "Yes" : "No" );
+	
+	if ( is_class( victim, CLASS_ROGUE ) ) {
 		send_to_char( AT_WHITE, buf, ch );
-	sprintf( buf, "&CTitle: &W%s\n\r", 
-			victim->pcdata->title );
+	}
+
+	sprintf( buf, "&CTitle: &W%s\n\r", victim->pcdata->title );
 	send_to_char( AT_WHITE, buf, ch );
 
 	sprintf( buf, "&CEmail: &W%s\n\r", victim->pcdata->email );

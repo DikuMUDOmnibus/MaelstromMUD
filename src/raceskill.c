@@ -48,8 +48,8 @@ void do_headbutt( CHAR_DATA *ch, char *argument )
 
 	switch ( prime_class(ch) )
 	{
-		case CLASS_CASTER:
-		case CLASS_THIEF:       timer = 180;  break;
+		case CLASS_CASTER:			timer = 180;  break;
+		case CLASS_ROGUE:       timer = 180;  break;
 		case CLASS_WARRIOR:     timer = 120;  break;
 	}
 	mod = ch->level / 5;

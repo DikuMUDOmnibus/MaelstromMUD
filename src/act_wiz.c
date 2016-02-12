@@ -5038,8 +5038,8 @@ void do_oset( CHAR_DATA *ch, char *argument )
 	{
 		if (!str_cmp( arg3, "caster" ) || !str_cmp( arg3, "cas" ) )
 			value = ITEM_ANTI_CASTER;
-		if (!str_cmp( arg3, "thief" ) || !str_cmp( arg3, "thi" ) )
-			value = ITEM_ANTI_THIEF;
+		if (!str_cmp( arg3, "rogue" ) || !str_cmp( arg3, "rog" ) )
+			value = ITEM_ANTI_ROGUE;
 		if (!str_cmp( arg3, "warrior" ) || !str_cmp( arg3, "war" ) )
 			value = ITEM_ANTI_WARRIOR;
 		if ( value == 0 || !str_cmp( arg3, "none" ) )
