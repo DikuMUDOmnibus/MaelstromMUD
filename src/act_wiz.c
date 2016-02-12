@@ -5036,8 +5036,8 @@ void do_oset( CHAR_DATA *ch, char *argument )
 	/* FOR NEW FLAGS */
 	if ( !str_cmp( arg2, "anticlass" ) )
 	{
-		if (!str_cmp( arg3, "mage" ) || !str_cmp( arg3, "mag" ) )
-			value = ITEM_ANTI_MAGE;
+		if (!str_cmp( arg3, "caster" ) || !str_cmp( arg3, "cas" ) )
+			value = ITEM_ANTI_CASTER;
 		if (!str_cmp( arg3, "thief" ) || !str_cmp( arg3, "thi" ) )
 			value = ITEM_ANTI_THIEF;
 		if (!str_cmp( arg3, "warrior" ) || !str_cmp( arg3, "war" ) )

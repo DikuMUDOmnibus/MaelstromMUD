@@ -2295,7 +2295,7 @@ char *anticlass_bit_name( int anticlass )
 {
 	static char buf [ 512 ];
 	buf[0] = '\0';
-	if ( anticlass & ITEM_ANTI_MAGE    ) strcat( buf, " anti-mage"    );
+	if ( anticlass & ITEM_ANTI_CASTER  ) strcat( buf, " anti-caster"  );
 	if ( anticlass & ITEM_ANTI_THIEF   ) strcat( buf, " anti-thief"   );
 	if ( anticlass & ITEM_ANTI_WARRIOR ) strcat( buf, " anti-warrior" );
 	return ( buf[0] != '\0' ) ? buf+1 : "none";
