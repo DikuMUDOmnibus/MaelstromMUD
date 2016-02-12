@@ -204,7 +204,6 @@ void multi_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 
 	if ( !IS_NPC( ch )
 			&& ( ( is_class( ch, CLASS_MONK ) && ch->pcdata->learned[gsn_blackbelt] > 0 )
-				|| ( is_class( ch, CLASS_WEREWOLF ) && ch->pcdata->learned[gsn_dualclaw] > 0 )
 				|| ch->pcdata->learned[gsn_dual] > 0 ) )
 	{
 		one_dual( ch, victim, dt );
@@ -227,10 +226,7 @@ void multi_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	}
 	chance = IS_NPC( ch ) ? ch->level - 5
 		: ch->pcdata->learned[gsn_second_attack]/2;
-	if ( is_class( ch, CLASS_WEREWOLF ) )
-		chance2 = IS_NPC( ch ) ? ch->level / 2 - 5
-			: ch->pcdata->learned[gsn_dualclaw] / 2;
-	else if ( is_class( ch, CLASS_MONK ) && !get_eq_char( ch, WEAR_WIELD_2 ) )
+	if ( is_class( ch, CLASS_MONK ) && !get_eq_char( ch, WEAR_WIELD_2 ) )
 		chance2 = IS_NPC( ch ) ? ch->level / 2 - 5
 			: ch->pcdata->learned[gsn_blackbelt] / 2;
 	else
@@ -253,10 +249,7 @@ void multi_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 
 	chance = IS_NPC( ch ) ? ch->level
 		: ch->pcdata->learned[gsn_third_attack]/4;
-	if ( is_class( ch, CLASS_WEREWOLF ) )
-		chance2 = IS_NPC( ch ) ? ch->level / 2
-			: ch->pcdata->learned[gsn_dualclaw] / 4;
-	else if ( is_class( ch, CLASS_MONK ) && !get_eq_char( ch, WEAR_WIELD_2 ) )
+	if ( is_class( ch, CLASS_MONK ) && !get_eq_char( ch, WEAR_WIELD_2 ) )
 		chance2 = IS_NPC( ch ) ? ch->level / 2 
 			: ch->pcdata->learned[gsn_blackbelt] / 4;
 	else
@@ -289,10 +282,7 @@ void multi_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 
 	chance = IS_NPC( ch ) ? ch->level/2
 		: ch->pcdata->learned[gsn_fifth_attack]/8;
-	if ( is_class( ch, CLASS_WEREWOLF ) )
-		chance2 = IS_NPC( ch ) ? ch->level / 6
-			: ch->pcdata->learned[gsn_dualclaw] / 8;
-	else if ( is_class( ch, CLASS_MONK ) && !get_eq_char( ch, WEAR_WIELD_2 ) )
+	if ( is_class( ch, CLASS_MONK ) && !get_eq_char( ch, WEAR_WIELD_2 ) )
 		chance2 = IS_NPC( ch ) ? ch->level / 6
 			: ch->pcdata->learned[gsn_blackbelt] / 8;
 	else
@@ -325,10 +315,7 @@ void multi_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 
 	chance = IS_NPC( ch ) ? ch->level/4
 		: ch->pcdata->learned[gsn_seventh_attack]/32;
-	if ( is_class( ch, CLASS_WEREWOLF ) )
-		chance2 = IS_NPC( ch ) ? ch->level / 4
-			: ch->pcdata->learned[gsn_dualclaw] / 32;
-	else if ( is_class( ch, CLASS_MONK ) && !get_eq_char( ch, WEAR_WIELD_2 ) )
+	if ( is_class( ch, CLASS_MONK ) && !get_eq_char( ch, WEAR_WIELD_2 ) )
 		chance2 = IS_NPC( ch ) ? ch->level / 4
 			: ch->pcdata->learned[gsn_blackbelt] / 22;
 	else
@@ -413,8 +400,6 @@ void one_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 		dt = TYPE_HIT;
 		if ( wield && wield->item_type == ITEM_WEAPON )
 			dt += wield->value[3];
-		else if ( is_class( ch, CLASS_WEREWOLF ) && !wield )
-			dt += 5;
 		else if ( is_class( ch, CLASS_MONK ) && !wield )
 			dt += 14;
 	}
@@ -552,9 +537,7 @@ void one_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	{
 		if ( wield )
 			dam = number_range( wield->value[1], wield->value[2] );
-		else if ( (is_class( ch, CLASS_WEREWOLF )
-					|| is_class( ch, CLASS_MONK ))
-				&& !wield )
+		else if ( is_class( ch, CLASS_MONK ) && !wield )
 			dam = UMAX( number_fuzzy( ch->level / 2 + ch->level / 15 ),
 					number_fuzzy( 5 ) );
 		else
@@ -589,8 +572,6 @@ void one_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 			(wield && IS_SET( wield->extra_flags, ITEM_ICY   ) )
 			||	(!wield && is_affected( ch, gsn_frosthand ) )
 	   )
-		dam += dam / 8;
-	if ( is_class( ch, CLASS_WEREWOLF ) && !wield )
 		dam += dam / 8;
 	if ( !IS_NPC( ch ) && ch->pcdata->learned[gsn_enhanced_damage] > 0 )
 	{
@@ -645,20 +626,11 @@ void one_dual( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	 * Guard against weird room-leavings.
 	 */
 	if ( !(get_eq_char( ch, WEAR_WIELD_2 ))
-			&& !is_class( ch, CLASS_WEREWOLF )
 			&& !is_class( ch, CLASS_MONK ) )
-		return;
-	if ( is_class( ch, CLASS_WEREWOLF )
-			&& ( get_eq_char( ch, WEAR_SHIELD )
-				|| get_eq_char( ch, WEAR_HOLD ) ) )
 		return;
 	if ( is_class( ch, CLASS_MONK )
 			&& ( get_eq_char( ch, WEAR_SHIELD )
 				|| get_eq_char( ch, WEAR_HOLD ) ) )
-		return;
-	if ( ( is_class( ch, CLASS_MONK ) && ch->pcdata->learned[gsn_blackbelt] == 0 )
-			&& ( is_class( ch, CLASS_WEREWOLF ) && ch->pcdata->learned[gsn_dualclaw] == 0 )
-			&& !get_eq_char( ch, WEAR_WIELD_2 ) )
 		return;
 	if ( victim->position == POS_DEAD || ch->in_room != victim->in_room )
 		return;
@@ -676,8 +648,6 @@ void one_dual( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 		dt = TYPE_HIT;
 		if ( wield && wield->item_type == ITEM_WEAPON )
 			dt += wield->value[3];
-		else if ( is_class( ch, CLASS_WEREWOLF ) && !wield )
-			dt += 5;
 		else if ( is_class( ch, CLASS_MONK ) && !wield )
 			dt += 15;
 	}
@@ -753,9 +723,7 @@ void one_dual( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	{
 		if ( wield )
 			dam = number_range( wield->value[1], wield->value[2] );
-		else if ( (is_class( ch, CLASS_WEREWOLF ) 
-					|| is_class( ch, CLASS_MONK ))
-				&& !wield )
+		else if ( is_class( ch, CLASS_MONK ) && !wield )
 			dam = UMAX( number_fuzzy( ch->level / 2 + ch->level / 15 ),
 					number_fuzzy( 5 ) );
 		else
@@ -789,11 +757,6 @@ void one_dual( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 			||	(!wield && is_affected( ch, gsn_frosthand ) )
 	   )
 		dam += dam / 4;
-	if ( is_class( ch, CLASS_WEREWOLF ) && !wield )
-	{
-		dam += dam / 4;
-		update_skpell( ch, gsn_dualclaw );
-	}
 	if ( is_class( ch, CLASS_MONK ) && !wield )
 		update_skpell( ch, gsn_blackbelt );
 	if ( !IS_NPC( ch ) && ch->pcdata->learned[gsn_enhanced_damage] > 0 )
@@ -1137,11 +1100,7 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt )
 				return;
 		}
 		if ( !IS_NPC( ch )
-				&& ( dt == 1014 || dt == 1015                   /* FIST & CLAW   */
-					|| ( dt == 1005                 /* DAMAGE - Hann */
-						&& is_class( ch, CLASS_WEREWOLF )
-						&& is_class( ch, CLASS_MONK )
-						&& is_bare_hand( ch ) ) )
+				&& ( dt == 1014 || dt == 1015 )
 				&& ch->pcdata->learned[gsn_anatomyknow] > 0
 				&& number_percent( ) <= ch->pcdata->learned[gsn_anatomyknow] / 9 )
 		{
@@ -1243,8 +1202,7 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt )
 
 	if ( dam > 0 && dt > TYPE_HIT
 			&& ( ( is_wielding_poisoned( ch )
-					&& !saves_spell( ch->level, victim ) )
-				|| ( is_class( ch, CLASS_WEREWOLF ) && is_bare_hand( ch ) ) )
+					&& !saves_spell( ch->level, victim ) ) )
 			&& victim->race != RACE_GHOUL )
 	{
 		AFFECT_DATA af;
@@ -1263,12 +1221,7 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt )
 	if ( victim->position == POS_DEAD || ch->in_room != victim->in_room )
 		return;
 
-	if ( dam > 0 && ( dt == 1014 
-				|| dt == 1015 
-				|| ( dt == 1005 
-					&& is_class( ch, CLASS_WEREWOLF )
-					&& is_class( ch, CLASS_MONK )
-					&& is_bare_hand( ch ) ) )
+	if ( dam > 0 && ( dt == 1014 || dt == 1015  )
 			&& is_affected( ch, gsn_flamehand )
 			&& number_percent( ) < 33 )
 		spell_burning_hands( skill_lookup("burning hands"),
@@ -1282,12 +1235,7 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt )
 		spell_icestorm ( skill_lookup("icestorm"), 30, ch, victim );  
 	if ( victim->position == POS_DEAD || ch->in_room != victim->in_room )
 		return;
-	if ( dam > 0 && ( dt == 1014 
-				|| dt == 1015 
-				|| ( dt == 1005 
-					&& is_class( ch, CLASS_WEREWOLF )
-					&& is_class( ch, CLASS_MONK ) 
-					&& is_bare_hand( ch ) ) )
+	if ( dam > 0 && ( dt == 1014 || dt == 1015 )
 			&& is_affected( ch, gsn_frosthand )
 			&& number_percent( ) < 20 )
 		spell_chill_touch( skill_lookup("chill touch"), ch->level * 3,
@@ -1301,12 +1249,7 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt )
 		spell_energy_drain ( skill_lookup("energy drain"), 45, ch, victim );
 	if ( victim->position == POS_DEAD || ch->in_room != victim->in_room )
 		return;
-	if ( dam > 0 && ( dt == 1014 
-				|| dt == 1015 
-				|| ( dt == 1005 
-					&& is_class( ch, CLASS_WEREWOLF )
-					&& is_class( ch, CLASS_MONK ) 
-					&& is_bare_hand( ch ) ) )
+	if ( dam > 0 && ( dt == 1014 || dt == 1015  )
 			&& is_affected( ch, gsn_chaoshand )
 			&& number_percent( ) < 10 )
 		spell_energy_drain( skill_lookup("energy drain"), 
@@ -4262,8 +4205,7 @@ void do_disarm( CHAR_DATA *ch, char *argument )
 	}
 
 	if ( ( !get_eq_char( ch, WEAR_WIELD ) ) 
-			&& ( !get_eq_char( ch, WEAR_WIELD_2 ) ) 
-			&& !is_class( ch, CLASS_WEREWOLF ) )
+			&& ( !get_eq_char( ch, WEAR_WIELD_2 ) ) )
 	{
 		send_to_char(C_DEFAULT, "You must wield a weapon to disarm.\n\r", ch );
 		return;

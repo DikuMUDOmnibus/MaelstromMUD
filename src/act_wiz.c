@@ -5056,8 +5056,6 @@ void do_oset( CHAR_DATA *ch, char *argument )
 		// 	value = ITEM_ANTI_BARD;
 		if (!str_cmp( arg3, "necromancer" ) || !str_cmp( arg3, "nec" ) )
 			value = ITEM_ANTI_NECRO;
-		if (!str_cmp( arg3, "werewolf" ) || !str_cmp( arg3, "wwf" ) )
-			value = ITEM_ANTI_WWF;
 		if (!str_cmp( arg3, "monk" ) || !str_cmp( arg3, "mnk" ) )
 			value = ITEM_ANTI_MONK;
 		if ( value == 0 || !str_cmp( arg3, "none" ) )

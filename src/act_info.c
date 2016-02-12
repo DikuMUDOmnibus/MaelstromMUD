@@ -733,25 +733,7 @@ void show_char_to_char_1( CHAR_DATA *victim, CHAR_DATA *ch, char *argument )
 			send_to_char(AT_CYAN, "\n\r", ch );
 		}
 		else if ( !IS_NPC( victim )
-				&& is_class( victim, CLASS_WEREWOLF )
-				&& ( ( iWear == WEAR_WIELD && !get_eq_char( victim, iWear ) )
-					|| ( iWear == WEAR_WIELD_2 && !get_eq_char( victim, iWear )
-						&& !get_eq_char( victim, WEAR_HOLD )
-						&& !get_eq_char( victim, WEAR_SHIELD )
-						&& victim->pcdata->learned[gsn_dualclaw] > 0 ) ) )
-		{
-			send_to_char(AT_BLUE, where_name[iWear], ch );
-			sprintf( buf, "%s%s%s&ca Claw",
-					is_affected( victim, gsn_flamehand ) ? "&r(Burning) " : "",
-					is_affected( victim, gsn_chaoshand ) ? "&Y(Chaotic) " : "",
-					is_affected( victim, gsn_frosthand ) ? "&B(Frosty) " : "" );
-			send_to_char(AT_CYAN, buf, ch );
-			send_to_char(AT_CYAN, "\n\r", ch );
-			found = TRUE;
-		}
-		else if ( !IS_NPC( victim )
 				&& is_class( victim, CLASS_MONK )
-				&& !is_class( victim, CLASS_WEREWOLF ) 
 				&& ( ( iWear == WEAR_WIELD && !get_eq_char( victim, iWear ) )
 					|| ( iWear == WEAR_WIELD_2 && !get_eq_char( victim, iWear )
 						&& !get_eq_char( victim, WEAR_HOLD )
@@ -2561,23 +2543,7 @@ void do_equipment( CHAR_DATA *ch, char *argument )
 	{
 		if ( !( obj = get_eq_char( ch, iWear ) ) )
 		{
-			if ( is_class( ch, CLASS_WEREWOLF )
-					&& ( ( iWear == WEAR_WIELD && !get_eq_char( ch, iWear ) )
-						|| ( iWear == WEAR_WIELD_2 && !get_eq_char( ch, iWear )
-							&& !get_eq_char( ch, WEAR_HOLD )
-							&& !get_eq_char( ch, WEAR_SHIELD ) 
-							&& ch->pcdata->learned[gsn_dualclaw] > 0 ) ) )
-			{
-				send_to_char(AT_BLUE, where_name[iWear], ch );
-				sprintf( buf, "%s%s%s&ca Claw",
-						is_affected( ch, gsn_flamehand ) ? "&r(Burning) " : "",
-						is_affected( ch, gsn_chaoshand ) ? "&Y(Chaotic) " : "",
-						is_affected( ch, gsn_frosthand ) ? "&B(Frosty) " : "" );
-				send_to_char(AT_CYAN, buf, ch );
-				send_to_char(AT_CYAN, "\n\r", ch );
-				found = TRUE;
-			}
-			else if ( is_class( ch, CLASS_MONK )
+			if ( is_class( ch, CLASS_MONK )
 					&& ( ( iWear == WEAR_WIELD && !get_eq_char( ch, iWear ) )
 						|| ( iWear == WEAR_WIELD_2 && !get_eq_char( ch, iWear )
 							&& !get_eq_char( ch, WEAR_HOLD )
