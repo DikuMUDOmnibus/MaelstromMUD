@@ -5765,7 +5765,6 @@ void spell_summon_swarm(int sn, int level, CHAR_DATA *ch, void *vo)
 	CHAR_DATA *mob;
 	CHAR_DATA *fch;
 	AFFECT_DATA af;
-	char buf [ MAX_STRING_LENGTH ];
 	int mana;
 	if(ch->summon_timer > 0)
 	{
@@ -5823,7 +5822,6 @@ void spell_summon_pack(int sn, int level, CHAR_DATA *ch, void *vo)
 	CHAR_DATA *mob;
 	CHAR_DATA *fch;
 	AFFECT_DATA af;
-	char buf [ MAX_STRING_LENGTH ];
 	int mana;
 
 	if(ch->summon_timer > 0)
@@ -5880,7 +5878,6 @@ void spell_summon_demon(int sn, int level, CHAR_DATA *ch, void *vo)
 	CHAR_DATA *mob;
 	CHAR_DATA *fch;
 	AFFECT_DATA af;
-	char buf [ MAX_STRING_LENGTH ];
 	int mana;
 	if(ch->summon_timer > 0)
 	{
@@ -5936,7 +5933,6 @@ void spell_summon_angel(int sn, int level, CHAR_DATA *ch, void *vo)
 	CHAR_DATA *mob;
 	CHAR_DATA *fch;
 	AFFECT_DATA af;
-	char buf[ MAX_STRING_LENGTH ];
 	int mana;
 	if(ch->summon_timer > 0)
 	{
@@ -5992,7 +5988,6 @@ void spell_summon_shadow(int sn, int level, CHAR_DATA *ch, void *vo)
 	CHAR_DATA *mob;
 	CHAR_DATA *fch;
 	AFFECT_DATA af;
-	char buf[MAX_STRING_LENGTH];
 	int mana;
 	if(ch->summon_timer > 0)
 	{
@@ -6049,7 +6044,6 @@ void spell_summon_trent(int sn, int level, CHAR_DATA *ch, void *vo)
 	CHAR_DATA *mob;
 	CHAR_DATA *fch;
 	AFFECT_DATA af;
-	char buf[MAX_STRING_LENGTH];
 	int mana;
 	if(ch->summon_timer > 0)
 	{

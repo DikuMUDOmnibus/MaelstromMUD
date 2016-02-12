@@ -3044,7 +3044,7 @@ bool set_ac_vnum ( CHAR_DATA *ch, char *argument )
 		case 1:
 				 if ( !get_obj_index( value ) )
 				 {
-					 sprintf( buf, "No ojbect with vnum %d exists.\n\r", value );
+					 sprintf( buf, "No object with vnum %d exists.\n\r", value );
 					 send_to_char( AT_GREY, buf, ch );
 					 return FALSE;
 				 }

@@ -619,16 +619,37 @@ reserved~
 0 0
 0 0 0
 E
-points~
-Date  |  Qst Pts |     Name       |  Level Won  |  Qst #  |  Race  |  Class
-======+==========+================+=============+=========+========+========
-July  |          |                |             |         |        |
-18    |     2    |  Usul          |     18      |    1    |  DEM   |  BRD
-19    |     1    |  Jaldis        |     21      |    2    |  DWA   |  DRU
-19    |     1    |  Lemmings      |     20      |    2    |  OGR   |  RGR
-20    |     3    |  Magius        |     38      |    3    |  ELF   |  MAG
-25    |     2    |  Davian        |     42      |    4    |  DRW   |  VAM
-26    |     2    |  Galad         |     51      |    5    |  ELD   |  RNG
+questor~
+Hello Adventurers,
+ 
+This is Lucid, the Deity of the Quest, I am the editor-in-chief of
+the Questor.  Hopefully you are enjoying yourself in the Storm.
+ 
+Periodically I shall run quests for you to play, each quest is
+awarded with a Prize, and some points.  Points are calculated by how
+many other legitamate adventurers competed against you and the
+difficulty of the quest itself.
+ 
+To see the list of quests won, type LOOK POINTS,
+and to see the standings of winners, type LOOK LEADERBOARD,
+and to see the quest warnings, type LOOK WARNING.
+ 
+        **************************************************
+        ***   This is has been updated July 26, 1995   ***
+        **************************************************
+ 
+Give a hoot, Don't pollute......sac it!
+~
+E
+leaderboard~
+Qst Pts         Name
+============+=================
+     3      |    Magius
+     2      |    Usul
+     2      |    Davian
+     2      |    Galad
+     1      |    Jaldis
+     1      |    Lemmings
 ~
 E
 warning~
@@ -653,37 +674,16 @@ And please remember, this is just a game!
 Have Fun!  :)
 ~
 E
-leaderboard~
-Qst Pts         Name
-============+=================
-     3      |    Magius
-     2      |    Usul
-     2      |    Davian
-     2      |    Galad
-     1      |    Jaldis
-     1      |    Lemmings
-~
-E
-questor~
-Hello Adventurers,
- 
-This is Lucid, the Deity of the Quest, I am the editor-in-chief of
-the Questor.  Hopefully you are enjoying yourself in the Storm.
- 
-Periodically I shall run quests for you to play, each quest is
-awarded with a Prize, and some points.  Points are calculated by how
-many other legitamate adventurers competed against you and the
-difficulty of the quest itself.
- 
-To see the list of quests won, type LOOK POINTS,
-and to see the standings of winners, type LOOK LEADERBOARD,
-and to see the quest warnings, type LOOK WARNING.
- 
-        **************************************************
-        ***   This is has been updated July 26, 1995   ***
-        **************************************************
- 
-Give a hoot, Don't pollute......sac it!
+points~
+Date  |  Qst Pts |     Name       |  Level Won  |  Qst #  |  Race  |  Class
+======+==========+================+=============+=========+========+========
+July  |          |                |             |         |        |
+18    |     2    |  Usul          |     18      |    1    |  DEM   |  BRD
+19    |     1    |  Jaldis        |     21      |    2    |  DWA   |  DRU
+19    |     1    |  Lemmings      |     20      |    2    |  OGR   |  RGR
+20    |     3    |  Magius        |     38      |    3    |  ELF   |  MAG
+25    |     2    |  Davian        |     42      |    4    |  DRW   |  VAM
+26    |     2    |  Galad         |     51      |    5    |  ELD   |  RNG
 ~
 #35
 medallion ruby~
@@ -746,13 +746,13 @@ reserved~
 0 0
 0 0 0
 A
-112 -1
-A
-110 -1
+19 5000
 A
 18 5000
 A
-19 5000
+110 -1
+A
+112 -1
 >wear_prog 100~
 0
 if name ($n) != Thalador
@@ -816,13 +816,13 @@ chaos field~
 -1 -1
 0 0 0
 A
-105 -1
-A
-18 100
+17 -300
 A
 19 100
 A
-17 -300
+18 100
+A
+105 -1
 #71
 blade gauntlets kjodo~
 &WBlade-Gauntlets &Rof &BKjodo~
@@ -836,9 +836,9 @@ reserved~
 0 0
 0 0 0
 A
-19 400
-A
 18 300
+A
+19 400
 #0
 
 
