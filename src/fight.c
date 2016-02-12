@@ -447,16 +447,6 @@ void one_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	}
 
 	victim_ac = UMAX( -15, GET_AC( victim ) / 10 );
-	/*
-	   if ( victim->level < L_APP && victim->class == CLASS_VAMPIRE )
-	   if ( !IS_SET( victim->in_room->room_flags, ROOM_INDOORS ) )
-	   {
-	   if ( time_info.hour > 6 && time_info.hour < 18 )
-	   {
-	   victim_ac += victim->level * 2;
-	   }
-	   }
-	   */    
 	if ( !can_see( ch, victim ) )
 		victim_ac -= 4;
 
@@ -708,16 +698,6 @@ void one_dual( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	thac0     = interpolate( ch->level, thac0_00, thac0_97 )
 		- GET_HITROLL( ch );
 	victim_ac = UMAX( -15, GET_AC( victim ) / 10 );
-	/*
-	   if ( victim->level < L_APP && victim->class == CLASS_VAMPIRE )
-	   if ( !IS_SET( victim->in_room->room_flags, ROOM_INDOORS ) )
-	   {
-	   if ( time_info.hour > 6 && time_info.hour < 18 )
-	   {
-	   victim_ac += victim->level * 2;
-	   }
-	   }
-	   */
 	if ( !can_see( ch, victim ) )
 		victim_ac -= 4;
 
@@ -1127,47 +1107,6 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt )
 		 */
 		if ( ch->race == RACE_OGRE )
 			dam -= dam / 20;
-		/*
-		   if ( ch->level < L_APP && ch->class == CLASS_VAMPIRE )
-		   if ( !IS_SET( ch->in_room->room_flags, ROOM_INDOORS ) )
-		   {
-		   if ( time_info.hour > 6 && time_info.hour < 18 )
-		   {
-		   send_to_char( AT_RED, 
-		   "The sunlight has weakened your attack.\n\r", ch );
-		   dam -= dam / 2;
-		   }
-		   }
-
-		   if ( victim->level < L_APP && victim->class == CLASS_VAMPIRE )
-		   if ( !IS_SET( victim->in_room->room_flags, ROOM_INDOORS ) )
-		   {
-		   if ( time_info.hour > 6 && time_info.hour < 18 )
-		   {
-		   send_to_char( AT_RED, 
-		   "The sunlight has weakened your defence.\n\r", victim );
-		   dam += dam / 2;
-		   }
-		   }
-
-		   if ( ch->class == CLASS_VAMPIRE )
-		   if ( !IS_SET( ch->in_room->room_flags, ROOM_INDOORS ) )
-		   {
-		   if ( time_info.hour > 23 || time_info.hour < 1 )
-		   {
-		   dam *= 2;
-		   }
-		   }
-
-		   if ( victim->class == CLASS_VAMPIRE )
-		   if ( !IS_SET( victim->in_room->room_flags, ROOM_INDOORS ) )
-		   {
-		   if ( time_info.hour > 23 || time_info.hour < 1 )
-		   {
-		   dam /= 2;
-		   }
-		   }
-		   */
 		/*
 		 * Check for disarm, trip, parry, and dodge.
 		 */

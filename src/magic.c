@@ -557,23 +557,6 @@ void do_cast( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-	/*
-	   if ( ch->level < LEVEL_IMMORTAL && ch->class == CLASS_VAMPIRE )
-	   if ( !IS_SET( ch->in_room->room_flags, ROOM_INDOORS ) )
-	   {
-	   if ( time_info.hour > 6 && time_info.hour < 18 )
-	   {
-	   int      chance;
-
-	   chance = 15;
-	   if (number_percent ( )< chance)
-	   {
-	   send_to_char(AT_RED, "The sun blocks your magic!\n\r", ch );
-	   return;
-	   }
-	   }
-	   }
-	   */
 	if ( IS_STUNNED( ch, STUN_MAGIC ) ) {
 		// if ( prime_class(ch) != CLASS_BARD )
 		send_to_char(AT_LBLUE, "You're too stunned to cast spells.\n\r", ch );
@@ -2422,7 +2405,6 @@ void spell_holysword( int sn, int level, CHAR_DATA *ch, void *vo )
 	SET_BIT( obj->anti_class_flags, ITEM_ANTI_MAGE );
 	// SET_BIT( obj->anti_class_flags, ITEM_ANTI_BARD );
 	SET_BIT( obj->anti_class_flags, ITEM_ANTI_RANGER );
-	SET_BIT( obj->anti_class_flags, ITEM_ANTI_VAMP ); 
 	SET_BIT( obj->anti_class_flags, ITEM_ANTI_DRUID );
 	SET_BIT( obj->anti_class_flags, ITEM_ANTI_PSI ); 
 	SET_BIT( obj->anti_class_flags, ITEM_ANTI_THIEF );
@@ -3794,20 +3776,6 @@ void spell_mind_probe( int sn, int level, CHAR_DATA *ch, void *vo )
 	send_to_char( AT_YELLOW, buf, ch );
 	send_to_char( AT_CYAN, " hit, ", ch );
 	sprintf( buf, "&C%d/%d mana, ", ch->mana, MAX_MANA( ch ));
-	/*
-	   if ( !is_class( victim, CLASS_VAMPIRE ) )
-	   {
-	   sprintf ( buf, "%d/%d(%d)",victim->mana,victim->perm_mana,MAX_MANA(victim));
-	   send_to_char( AT_LBLUE, buf, ch );
-	   send_to_char( AT_CYAN, " mana, ", ch );
-	   }
-	   else
-	   {
-	   sprintf ( buf, "%d/%d(%d)", victim->bp,victim->perm_bp, MAX_BP(victim));
-	   send_to_char( AT_RED, buf, ch );
-	   send_to_char( AT_CYAN, " blood, ", ch );
-	   }
-	   */
 	sprintf ( buf, "%d/%d(%d)", victim->move, victim->perm_move, MAX_MOVE(victim));
 	send_to_char( AT_GREEN, buf, ch );
 	send_to_char( AT_CYAN, " movement, ", ch );
@@ -7684,12 +7652,6 @@ void spell_purify( int sn, int level, CHAR_DATA *ch, void *vo )
 		// 	act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
 		// 	yesno = TRUE;
 		// }
-		if ( IS_ANTI_CLASS( obj, ITEM_ANTI_VAMP ) )
-		{
-			REMOVE_BIT( obj->anti_class_flags, ITEM_ANTI_VAMP );
-			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
-			yesno = TRUE;
-		}
 		if ( IS_ANTI_CLASS( obj, ITEM_ANTI_NECRO ) )
 		{
 			REMOVE_BIT( obj->anti_class_flags, ITEM_ANTI_NECRO );

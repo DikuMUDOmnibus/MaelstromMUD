@@ -2855,30 +2855,6 @@ void do_group( CHAR_DATA *ch, char *argument )
 						gch->mana,  MAX_MANA(gch),
 						gch->move,  MAX_MOVE(gch),
 						gch->exp );
-				/*
-				   if ( !is_class( gch, CLASS_VAMPIRE ) )
-				   sprintf( buf,
-				   "[&R%2d %s&G] %-12s &Y%4d/%4d &Ghp &C%4d/%4d &Gmana &P%4d/%4d &Gmv &R%5d &Gxp\n\r",
-				   gch->level,
-				   IS_NPC( gch ) ? "Mob"
-				   : class_table[prime_class(gch)].who_name,
-				   capitalize( PERS( gch, ch ) ),
-				   gch->hit,   MAX_HIT( gch ),
-				   gch->mana,  MAX_MANA(gch),
-				   gch->move,  MAX_MOVE(gch),
-				   gch->exp );
-				   else 
-				   sprintf( buf,
-				   "[&R%2d %s&G] %-12s &Y%4d/%4d &Ghp &R%4d/%4d &Gbp &P%4d/%4d &Gmv &R%5d &Gxp\n\r",
-				   gch->level,
-				   IS_NPC( gch ) ? "Mob"
-				   : class_table[prime_class(gch)].who_name,
-				   capitalize( PERS( gch, ch ) ),
-				   gch->hit,   MAX_HIT( gch ),
-				   gch->bp,    MAX_BP( gch ),
-				   gch->move,  MAX_MOVE(gch),
-				   gch->exp );
-				   */
 				if ( gch->gspell && gch->gspell->timer > 0 )
 					send_to_char(AT_YELLOW, buf, ch );
 				else

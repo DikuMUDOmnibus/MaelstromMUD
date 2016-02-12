@@ -508,7 +508,6 @@ struct playerlist_data
 #define CLASS_RANGER         6
 #define CLASS_PALADIN        7
 // #define CLASS_BARD           8
-// #define CLASS_VAMPIRE        8
 #define CLASS_NECROMANCER    9
 #define CLASS_WEREWOLF      10
 #define CLASS_MONK	    		11
@@ -1108,7 +1107,6 @@ struct	kill_data
 #define ITEM_ANTI_RANGER               64
 #define ITEM_ANTI_PALADIN             128
 // #define ITEM_ANTI_BARD                256
-#define ITEM_ANTI_VAMP                512
 #define ITEM_ANTI_NECRO		     1024
 #define ITEM_ANTI_WWF		     2048
 #define ITEM_ANTI_MONK		     4096

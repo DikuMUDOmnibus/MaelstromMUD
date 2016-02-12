@@ -365,7 +365,6 @@ const struct flag_type anti_class_flags[] =
 	{   "anti-druid",           ITEM_ANTI_DRUID,        TRUE    },
 	{   "anti-ranger",          ITEM_ANTI_RANGER,       TRUE    },
 	// {   "anti-bard",            ITEM_ANTI_BARD,         TRUE    },
-	{   "anti-vamp",            ITEM_ANTI_VAMP,         TRUE    },
 	{   "anti-necro",           ITEM_ANTI_NECRO,        TRUE    },
 	{   "anti-werewolf",        ITEM_ANTI_WWF,     	TRUE    },
 	{   "anti-monk",		ITEM_ANTI_MONK,		TRUE	},

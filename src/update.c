@@ -111,22 +111,6 @@ void advance_level( CHAR_DATA *ch )
 			add_mana,	MAX_MANA( ch ),
 			add_move,	MAX_MOVE( ch ),
 			add_prac,	ch->practice );
-	/*
-	   if ( !is_class( ch, CLASS_VAMPIRE ) )
-	   sprintf( buf,
-	   "Your gain is: %d/%d hp, %d/%d m, %d/%d mv %d/%d prac.\n\r",
-	   add_hp,	ch->perm_hit,
-	   add_mana,	ch->perm_mana,
-	   add_move,	ch->perm_move,
-	   add_prac,	ch->practice );
-	   else
-	   sprintf( buf,
-	   "Your gain is: %d/%d hp, %d/%d bp, %d/%d mv %d/%d prac.\n\r",
-	   add_hp,	ch->perm_hit,
-	   add_mana,	ch->perm_bp,
-	   add_move,	ch->perm_move,
-	   add_prac,	ch->practice );
-	   */
 	send_to_char(AT_WHITE, buf, ch );
 	
 	if (IS_SET(ch->act2, PLR_REMORT)) {
@@ -195,17 +179,6 @@ int hit_gain( CHAR_DATA *ch )
 	else
 	{
 		gain = UMIN( 5, ch->level );
-		/*
-		   if ( ch->level < LEVEL_IMMORTAL && ch->class == CLASS_VAMPIRE )
-		   if ( !IS_SET( ch->in_room->room_flags, ROOM_INDOORS ) )
-		   {
-		   if ( time_info.hour > 6 && time_info.hour < 18 )
-		   {
-		   send_to_char(AT_RED, "The harsh rays of the sun prevent you from healing.\n\r", ch );
-		   return 0;
-		   }
-		   }
-		   */
 
 		switch ( ch->position )
 		{
@@ -229,16 +202,6 @@ int hit_gain( CHAR_DATA *ch )
 			gain /= 2;  
 
 	}
-	/*
-	   if ( ch->class == CLASS_VAMPIRE )
-	   if ( !IS_SET( ch->in_room->room_flags, ROOM_INDOORS ) )
-	   {
-	   if ( time_info.hour > 23 || time_info.hour < 1 )
-	   {
-	   gain *= 4;
-	   }
-	   }
-	   */
 	if ( (IS_AFFECTED( ch, AFF_POISON ) || IS_AFFECTED2( ch, AFF_PLAGUE))
 			&& gain > 0 ) 
 		gain /= 10;

@@ -1132,21 +1132,9 @@ void bust_a_prompt( DESCRIPTOR_DATA *d )
 				i = buf2; break;
 			case 'm' :
 				sprintf( buf2, "%d", ch->mana);
-				/*
-				   if ( !is_class( ch, CLASS_VAMPIRE ) )
-				   sprintf( buf2, "%d", ch->mana );
-				   else
-				   sprintf( buf2, "%d", ch->bp   );
-				   */
 				i = buf2; break;
 			case 'M' :
 				sprintf( buf2, "%d", MAX_MANA( ch ) );
-				/*
-				   if ( !is_class( ch, CLASS_VAMPIRE ) )
-				   sprintf( buf2, "%d", MAX_MANA(ch));
-				   else
-				   sprintf( buf2, "%d", MAX_BP(ch)  );
-				   */
 				i = buf2; break;
 			case 'v' :
 				sprintf( buf2, "%d", ch->move                              );
@@ -1238,138 +1226,6 @@ void bust_a_prompt( DESCRIPTOR_DATA *d )
 	return;
 }
 
-#if 0
-void bust_a_color_prompt( DESCRIPTOR_DATA *d )
-{
-	CHAR_DATA *ch;
-	const char      *str;
-	const char      *i;
-	char      *point;
-	char       buf  [ MAX_STRING_LENGTH ];
-	char       buf2 [ MAX_STRING_LENGTH ];
-
-	ch = d->character;
-	if( !ch->prompt || ch->prompt[0] == '\0' )
-	{
-		send_to_char(C_DEFAULT, "\n\r\n\r", ch );
-		return;
-	}
-
-	point = buf;
-	str = d->original ? d->original->prompt : d->character->prompt;
-	send_to_char(C_DEFAULT, "< ", ch);
-	while( *str != '\0' )
-	{
-		if( *str != '%' )
-		{
-			*point++ = *str++;
-			continue;
-		}
-		++str;
-		switch( *str )
-		{
-			default :
-				i = " "; break;
-			case 'h' :
-				sprintf( buf2, "%dhp ", ch->hit                               );
-				send_to_char(AT_YELLOW, buf2, ch);
-				i = buf2;
-				buf2[0] = '\0'; break;
-			case 'm' :
-				if ( !is_class( ch, CLASS_VAMPIRE ) )
-				{
-					sprintf( buf2, "%dm ", ch->mana                              );
-					send_to_char(AT_LBLUE, buf2, ch);
-				}
-				else
-				{
-					sprintf( buf2, "%dbp ", ch->bp                              );
-					send_to_char(AT_RED, buf2, ch);
-				}
-				i = buf2;
-				buf2[0] = '\0';break;
-			case 'v' :
-				sprintf( buf2, "%dmv ", ch->move                              );
-				send_to_char(AT_GREEN, buf2, ch);
-				i = buf2;
-				buf2[0] = '\0';break;
-			case 'x' :
-				sprintf( buf2, "%dxp ", ch->exp                               );
-				send_to_char(AT_WHITE, buf2, ch);
-				i = buf2;
-				buf2[0] = '\0';break;
-			case 'g' :
-#ifdef NEW_MONEY
-				sprintf( buf2, "%dgp ", ch->money.gold		          );
-#else
-				sprintf( buf2, "%dgp ", ch->gold                              );
-#endif
-				send_to_char(AT_YELLOW, buf2, ch);
-				i = buf2;
-				buf2[0] = '\0';break;
-			case 'a' :
-				if( ch->level < 5 )
-					sprintf( buf2, "%d ", ch->alignment                      );
-				else
-					sprintf( buf2, "%s ", IS_GOOD( ch ) ? "good"
-							: IS_EVIL( ch ) ? "evil" : "neutral" );
-				send_to_char(AT_GREY, buf2, ch);
-				i = buf2;
-				buf2[0] = '\0';break;
-			case 'r' :
-				if( ch->in_room )
-					sprintf( buf2, "%s ", ch->in_room->name                  );
-				else
-					sprintf( buf2, " "                                      );
-				send_to_char(AT_RED, buf2, ch);
-				i = buf2;
-				buf2[0] = '\0';break;
-			case 'R' :
-				if( IS_IMMORTAL( ch ) && ch->in_room )
-					sprintf( buf2, "%d ", ch->in_room->vnum                  );
-				else
-					sprintf( buf2, " "                                      );
-				send_to_char(AT_WHITE, buf2, ch);
-				i = buf2;
-				buf2[0] = '\0';break;
-			case 'c' :		/* OLC */
-				send_to_char( AT_GREEN, olc_ed_name( ch ), ch );
-				i = olc_ed_name( ch );
-				break;
-			case 'z' :
-				if( IS_IMMORTAL( ch ) && ch->in_room )
-					sprintf( buf2, "%s ", ch->in_room->area->name            );
-				else
-					sprintf( buf2, " "                                      );
-				send_to_char(AT_RED, buf2, ch);
-				i = buf2;
-				buf2[0] = '\0';break;
-			case 'l' :
-				if ( ( IS_SET( ch->act, PLR_WIZINVIS ) ) || ( IS_AFFECTED( ch, AFF_INVISIBLE ) ) )
-					sprintf( buf2, "Invisible " );
-				else
-					sprintf( buf2, "Visible " );
-				send_to_char(AT_BLUE, buf2, ch );
-				i = buf2;
-				buf2[0] = '\0';break;
-			case 'd' :
-				if ( IS_SET( ch->act, PLR_CLOAKED ) )
-					sprintf( buf2, "Cloaked " );
-				else
-					sprintf( buf2, "Visible " );
-				send_to_char(AT_BLUE, buf2, ch );
-				i = buf2;
-				buf2[0] = '\0';break;
-		}
-		++str;
-		while( ( *point = *i ) != '\0' )
-			++point, ++i;
-		*point = '\0';
-	}
-	send_to_char(C_DEFAULT, "> ", ch);
-	return;
-}
-#endif
 /*
  * Append onto an output buffer.
  */
