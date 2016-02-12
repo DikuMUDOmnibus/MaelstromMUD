@@ -298,7 +298,6 @@ struct	cmd_type	cmd_table	[ ] =
 	{ "high kick",	do_high_kick,	POS_FIGHTING,	 0,  LOG_NORMAL	},
 	{ "jump kick",	do_jump_kick,	POS_FIGHTING,	 0,  LOG_NORMAL	},
 	{ "spin kick",	do_spin_kick,	POS_FIGHTING,	 0,  LOG_NORMAL	},
-	{ "feed",           do_feed,        POS_FIGHTING,    0,  LOG_NORMAL },
 	{ "flying kick",	do_flyingkick,	POS_FIGHTING,	 0,  LOG_NORMAL },
 	{ "punch",          do_punch,       POS_FIGHTING,    0,  LOG_NORMAL },
 	{ "jab punch",      do_jab_punch,   POS_FIGHTING,    0,  LOG_NORMAL },
@@ -496,7 +495,6 @@ struct	cmd_type	cmd_table	[ ] =
 	/*
 	 * Here because they interefeared with something
 	 */
-	{ "gorge",          do_gorge,       POS_STANDING,    0,  LOG_NORMAL },
 	{ "gouge",          do_gouge,      POS_FIGHTING, 0,      LOG_NORMAL },
 	{ "circle",         do_circle,     POS_FIGHTING, 0,      LOG_NORMAL },
 	{ "rake",           do_rake,       POS_FIGHTING, 0,      LOG_NORMAL },

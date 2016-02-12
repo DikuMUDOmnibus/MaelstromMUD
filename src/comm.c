@@ -1131,7 +1131,7 @@ void bust_a_prompt( DESCRIPTOR_DATA *d )
 				sprintf( buf2, "%d", MAX_HIT(ch) );
 				i = buf2; break;
 			case 'm' :
-				sprintf( buf2, "%d", ch->mana) );
+				sprintf( buf2, "%d", ch->mana);
 				/*
 				   if ( !is_class( ch, CLASS_VAMPIRE ) )
 				   sprintf( buf2, "%d", ch->mana );

@@ -965,61 +965,6 @@ void do_fill( CHAR_DATA *ch, char *argument )
 	return;
 }
 
-
-
-void do_gorge( CHAR_DATA *ch, char *argument )
-{
-	OBJ_DATA *obj;
-	char      arg [ MAX_INPUT_LENGTH ];
-	/*    int       amount;
-		  int       liquid;
-		  */
-	one_argument( argument, arg );
-
-	if ( arg[0] == '\0' )
-	{
-		for ( obj = ch->in_room->contents; obj; obj = obj->next_content )
-		{
-			if ( obj->item_type == ITEM_BLOOD )
-				break;
-		}
-
-		if ( !obj )
-		{
-			send_to_char(AT_BLUE, "Gorge what?\n\r", ch );
-			return;
-		}
-	}
-	else
-	{
-		if ( !( obj = get_obj_here( ch, arg ) ) )
-		{
-			send_to_char(AT_BLUE, "You can't find it.\n\r", ch );
-			return;
-		}
-	}
-
-	if ( !IS_NPC( ch ) && ch->pcdata->condition[COND_DRUNK] >= 90 )
-	{
-		send_to_char(AT_BLUE, "You fail to reach your mouth.  *Hic*\n\r", ch);
-		return;
-	}
-
-	switch ( obj->item_type )
-	{
-		default:
-			send_to_char(AT_BLUE, "You can't gorge that.\n\r", ch );
-			break;
-
-		case ITEM_BLOOD:
-			send_to_char(AT_WHITE, "It is not in your nature to do such things.\n\r", ch);
-			break;
-	}
-
-	return;
-
-}
-
 void do_drink( CHAR_DATA *ch, char *argument )
 {
 	OBJ_DATA *obj;

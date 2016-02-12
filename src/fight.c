@@ -4308,18 +4308,6 @@ void do_flury( CHAR_DATA *ch, char *argument )
 	return;
 }
 
-
-void do_feed( CHAR_DATA *ch, char *argument )
-{
-	CHAR_DATA *victim;
-	char       arg [ MAX_INPUT_LENGTH ];
-
-	send_to_char( AT_WHITE, "You may not feed on the living.\n\r", ch );
-	return;
-}
-
-
-
 void do_disarm( CHAR_DATA *ch, char *argument )
 {
 	OBJ_DATA  *obj;
