@@ -2,7 +2,11 @@
 
 Features:
 
-  - Werewolf and vampire classes removed (might reimplement as curses)
+  - Removed all classes
+  - Disabled all spells and skills until proper balancing can be done
+  - Replace "Mages" with "Casters"
+  - Replace "Thieves" with "Rogues"
+  - Replace "Warriors" with "Figers"
 
 ## 0.0.3 (2015-11-12)
 
