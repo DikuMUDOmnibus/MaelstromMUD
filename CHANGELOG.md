@@ -7,6 +7,7 @@ Features:
   - Replace "Mages" with "Casters"
   - Replace "Thieves" with "Rogues"
   - Replace "Warriors" with "Figers"
+  - Remove triple classing
 
 ## 0.0.3 (2015-11-12)
 
