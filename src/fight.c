@@ -1149,14 +1149,21 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt )
 	 * Hurt the victim.
 	 * Inform the victim of his new state.
 	 */
-	if ( !IS_NPC(ch) && prime_class( ch ) == CLASS_WARRIOR )
+	if ( !IS_NPC(ch) && prime_class( ch ) == CLASS_FIGHTER ) {
 		dam += dam/2;
-	if ( ( !IS_NPC(ch) ) && (ch->race == RACE_OGRE ) )
+	}
+
+	if ( ( !IS_NPC(ch) ) && (ch->race == RACE_OGRE ) ) {
 		dam += dam/10;
-	if (!IS_NPC(ch) && !IS_NPC(victim))
+	}
+
+	if (!IS_NPC(ch) && !IS_NPC(victim)) {
 		dam /= number_range(2, 4);
-	if ( dam > 25 && number_range( 0, 100 ) <= 15 )
+	}
+
+	if ( dam > 25 && number_range( 0, 100 ) <= 15 ) {
 		item_damage(victim, dam);
+	}
 
 	victim->hit -= dam;
 	if ( ( ( !IS_NPC( victim )                  /* so imms only die by */

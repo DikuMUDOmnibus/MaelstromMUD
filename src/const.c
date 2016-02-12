@@ -107,7 +107,7 @@ const	struct	class_type	class_table	[MAX_CLASS]	=
 	},
 
 	{
-		"War",  "Warrior", APPLY_STR,  OBJ_VNUM_SCHOOL_SWORD,
+		"Fig",  "Fighter", APPLY_STR,  OBJ_VNUM_SCHOOL_SWORD,
 		3022,  85,  18,  -30,  11, 20, FALSE,
 		{ TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE, TRUE, TRUE,
 			TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE },

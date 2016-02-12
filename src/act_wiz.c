@@ -5040,8 +5040,8 @@ void do_oset( CHAR_DATA *ch, char *argument )
 			value = ITEM_ANTI_CASTER;
 		if (!str_cmp( arg3, "rogue" ) || !str_cmp( arg3, "rog" ) )
 			value = ITEM_ANTI_ROGUE;
-		if (!str_cmp( arg3, "warrior" ) || !str_cmp( arg3, "war" ) )
-			value = ITEM_ANTI_WARRIOR;
+		if (!str_cmp( arg3, "fighter" ) || !str_cmp( arg3, "fig" ) )
+			value = ITEM_ANTI_FIGHTER;
 		if ( value == 0 || !str_cmp( arg3, "none" ) )
 		{
 			obj->anti_class_flags = 0;

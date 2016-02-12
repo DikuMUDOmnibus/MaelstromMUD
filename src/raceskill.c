@@ -50,7 +50,7 @@ void do_headbutt( CHAR_DATA *ch, char *argument )
 	{
 		case CLASS_CASTER:			timer = 180;  break;
 		case CLASS_ROGUE:       timer = 180;  break;
-		case CLASS_WARRIOR:     timer = 120;  break;
+		case CLASS_FIGHTER:     timer = 120;  break;
 	}
 	mod = ch->level / 5;
 	mod = UMAX( 1, mod );

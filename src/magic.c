@@ -2390,7 +2390,7 @@ void spell_holysword( int sn, int level, CHAR_DATA *ch, void *vo )
 	}
 	SET_BIT( obj->anti_class_flags, ITEM_ANTI_CASTER );
 	SET_BIT( obj->anti_class_flags, ITEM_ANTI_ROGUE );
-	SET_BIT( obj->anti_class_flags, ITEM_ANTI_WARRIOR );
+	SET_BIT( obj->anti_class_flags, ITEM_ANTI_FIGHTER );
 	send_to_char(AT_BLUE, "Ok.\n\r", ch );
 	return;
 }
@@ -7590,9 +7590,9 @@ void spell_purify( int sn, int level, CHAR_DATA *ch, void *vo )
 			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
 			yesno = TRUE;
 		}
-		if ( IS_ANTI_CLASS( obj, ITEM_ANTI_WARRIOR ) )
+		if ( IS_ANTI_CLASS( obj, ITEM_ANTI_FIGHTER ) )
 		{
-			REMOVE_BIT( obj->anti_class_flags, ITEM_ANTI_WARRIOR );
+			REMOVE_BIT( obj->anti_class_flags, ITEM_ANTI_FIGHTER );
 			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
 			yesno = TRUE;
 		}
