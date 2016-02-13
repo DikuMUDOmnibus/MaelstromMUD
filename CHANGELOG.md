@@ -8,7 +8,7 @@ Features:
   - Replace "Thieves" with "Rogues"
   - Replace "Warriors" with "Figers"
   - Remove triple classing
-  - Removed all but 5 classes (Human, Elf, Dwarf, Halfling, and Drow)
+  - Removed all but 4 races (Human, Elf, Dwarf, Halfling)
   - Converted Pixies to Gnomes
   - Removed race editor stuff
 
