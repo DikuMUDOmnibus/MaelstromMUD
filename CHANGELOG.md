@@ -8,6 +8,8 @@ Features:
   - Replace "Thieves" with "Rogues"
   - Replace "Warriors" with "Figers"
   - Remove triple classing
+  - Removed all but 5 classes (Human, Elf, Dwarf, Halfling, and Drow)
+  - Converted Pixies to Gnomes
 
 ## 0.0.3 (2015-11-12)
 

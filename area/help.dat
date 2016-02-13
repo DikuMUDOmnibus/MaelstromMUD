@@ -2180,7 +2180,7 @@ Syntax: cast 'cure blindness' <character>
 This spell cures blindness in one so unfortunate.
 ~
 0 'CURE LIGHT' 'CURE SERIOUS' 'CURE CRITICAL' 'HEAL'
-'PSYCHIC HEALING' 'COMPLETE HEALING'~
+'PSYCHIC HEALING' 'COMPLETE HEALING'~
 Syntax: cast 'cure light'       <character>
 Syntax: cast 'cure serious'     <character>
 Syntax: cast 'cure critical'    <character>
@@ -2453,7 +2453,7 @@ You can practice THIRD ATTACK before you have mastered SECOND ATTACK,
 although it isn't efficient to do so.
 ~
 51 'GENERAL PURPOSE' 'GENERAL PURPOSE AMMO' 'HIGH EXPLOSIVE'
-   'HIGH EXPLOSIVE AMMO'~
+   'HIGH EXPLOSIVE AMMO'~
 Syntax: cast 'general purpose' <target>
 Syntax: cast 'high explosive'  <target>
 
@@ -2616,7 +2616,7 @@ objects on their victim, and extremely skilled psionicists can even
 DISINTEGRATE their victims, killing them instantly.
 ~
 0 'THOUGHT SHIELD' 'MENTAL BARRIER' 'DISPLACEMENT' 'FLESH ARMOR'
-  'INTELLECT FORTRESS' 'INERTIAL BARRIER'~
+  'INTELLECT FORTRESS' 'INERTIAL BARRIER'~
 Syntax: cast 'thought shield'
 Syntax: cast 'mental barrier'
 Syntax: cast 'displacement'
@@ -3185,16 +3185,19 @@ of the other races throughout the lands.
 &CCon: &w+2, &CInt: &w-2
 &z_____________________________________________________________________________
 ~
--1 PIXIE PIX~
+-1 GNOME GNO~
 &z_____________________________________________________________________________
-&wBeing very dextrous, pixies are great thieves.  They seem to lose out in
-matches of physical strength, though.
+&wGnomes have an intricate society based on their love of all kinds of arts, 
+pranks, and their long lives. Their society is based on art; all gnomes must 
+take up some form of art whether music, painting, cooking, building, or any 
+other form that is considered creative by the time they come of age.
+&W
+Gnomes are naturally friendly, highly social and fun loving people. They are 
+respected by Elves for their communion with nature and knowledge of arcane 
+magic, admired by Halflings for their humor, and sought out by Dwarves for
+their gemcutting skills.
 &W
 &WSize&w: SMALL
-&WRacial Abilities&w:
-&z*&w Pixies naturally have the 'fly' spell on at all times.
-&z*&w Pixies do not use movement points.
-&z*&w Can't be tripped due to their flying abilities.
 &WStat Modifications&w:
 Dex: +2, Str: -2
 &z_____________________________________________________________________________
