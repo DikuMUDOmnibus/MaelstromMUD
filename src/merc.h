@@ -126,8 +126,8 @@ typedef void SPELL_FUN                  args( ( int sn, int level, CHAR_DATA *ch
  */
 #define MAX_SKILL		   344
 #define MAX_GSPELL                 2
-#define MAX_CLASS		   3
-#define MAX_RACE                   16
+#define MAX_CLASS		   						 3
+#define MAX_RACE                   6
 #define MAX_CLAN                   21 /*max 20 clans + 1 for clan 0*/
 #define MAX_LEVEL		   113
 #define STUN_MAX                   5
@@ -506,19 +506,9 @@ struct playerlist_data
 #define RACE_HUMAN           0
 #define RACE_ELF             1
 #define RACE_DWARF           2
-#define RACE_PIXIE           3
+#define RACE_GNOME           3
 #define RACE_HALFLING        4
 #define RACE_DROW            5
-#define RACE_ELDER           6
-#define RACE_OGRE            7
-#define RACE_LIZARDMAN       8
-#define RACE_DEMON           9
-#define RACE_GHOUL          10
-#define RACE_ILLITHID       11
-#define RACE_MINOTAUR       12
-#define RACE_TROLL	    		13
-#define RACE_SHADOW         14
-#define RACE_TABAXI	    		15
 
 /*
  * Per-class stuff.
@@ -1096,19 +1086,9 @@ struct	kill_data
 #define ITEM_ANTI_HUMAN			1
 #define ITEM_ANTI_ELF			2
 #define ITEM_ANTI_DWARF			4
-#define ITEM_ANTI_PIXIE			8
+#define ITEM_ANTI_GNOME			8
 #define ITEM_ANTI_HALFLING	       16
 #define ITEM_ANTI_DROW		       32
-#define ITEM_ANTI_ELDER		       64
-#define ITEM_ANTI_OGRE		      128
-#define ITEM_ANTI_LIZARDMAN	      256
-#define ITEM_ANTI_DEMON		      512
-#define ITEM_ANTI_GHOUL		     1024
-#define ITEM_ANTI_ILLITHID	     2048
-#define ITEM_ANTI_MINOTAUR	     4096
-#define ITEM_ANTI_TROLL              8192
-#define ITEM_ANTI_SHADOW            16384
-#define ITEM_ANTI_TABAXI	    32768
 
 /*
  * Wear flags.
@@ -2348,8 +2328,7 @@ int	mmlvl_mana	args( ( CHAR_DATA *ch, int sn ) );
 #define MAX_MANA( ch ) 		( (ch)->perm_mana + (ch)->mod_mana )
 #define MAX_MOVE( ch ) 		( (ch)->perm_move + (ch)->mod_move )
 
-#define CAN_FLY( ch )		( (ch->race == RACE_PIXIE) || (ch->race == RACE_ELDER) || \
-		(IS_AFFECTED( ch, AFF_FLYING )) )
+#define CAN_FLY( ch )		( IS_AFFECTED( ch, AFF_FLYING ) )
 /*
  * Object macros.
  */
@@ -2824,11 +2803,9 @@ DECLARE_DO_FUN(	do_rake		);
 /*
  * Racial Skills Start Here -- Hannibal
  */
-DECLARE_DO_FUN( do_headbutt 	);  /* Minotaur */
 DECLARE_DO_FUN( do_globedarkness);  /* Drow */
 DECLARE_DO_FUN( do_drowfire	);  /* Drow */
 DECLARE_DO_FUN( do_forge	);  /* Dwarf */
-DECLARE_DO_FUN( do_spit		);  /* Liz. */
 /* Monk skills -- Hannibal */
 DECLARE_DO_FUN( do_flamehand	);
 DECLARE_DO_FUN( do_frosthand	);

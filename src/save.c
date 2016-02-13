@@ -185,11 +185,8 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
 	fprintf( fp, "Silver      %d\n",  	ch->money.silver	);
 	fprintf( fp, "Copper      %d\n",	ch->money.copper	);
 	fprintf( fp, "GRank       %d\n",	ch->guild_rank		);
-	fprintf( fp, "Guild       %s~\n",
-			(ch->guild != NULL) ? ch->guild->name : "\0"		);
+	fprintf( fp, "Guild       %s~\n", (ch->guild != NULL) ? ch->guild->name : "\0"		);
 	fprintf( fp, "Exp         %d\n",	ch->exp			);
-	if ( ch->race == RACE_GHOUL && !IS_SET( ch->act, PLR_UNDEAD ) )
-		SET_BIT( ch->act, PLR_UNDEAD );
 	fprintf( fp, "Act         %d\n",    ch->act				);
 	fprintf( fp, "Act2        %d\n",    ch->act2			);
 	fprintf( fp, "AffdBy      %ld\n",	ch->affected_by		);

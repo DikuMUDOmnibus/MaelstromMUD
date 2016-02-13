@@ -105,16 +105,14 @@ void move_char( CHAR_DATA *ch, int door, bool Fall )
 
 	if ( IS_SET( pexit->exit_info, EX_CLOSED ) )
 	{
-		if ( !IS_AFFECTED( ch, AFF_PASS_DOOR ) && ch->race != RACE_SHADOW )
+		if ( !IS_AFFECTED( ch, AFF_PASS_DOOR ) )
 		{
-			act(AT_GREY, "The &W$d&w is closed.",
-					ch, NULL, pexit->keyword, TO_CHAR );
+			act(AT_GREY, "The &W$d&w is closed.", ch, NULL, pexit->keyword, TO_CHAR );
 			return;
 		}
 		if ( IS_SET( pexit->exit_info, EX_PASSPROOF ) )
 		{
-			act(AT_GREY, "You are unable to pass through the &W$d&w.",
-					ch, NULL, pexit->keyword, TO_CHAR );
+			act(AT_GREY, "You are unable to pass through the &W$d&w.", ch, NULL, pexit->keyword, TO_CHAR );
 			return;
 		}
 	}
@@ -155,9 +153,7 @@ void move_char( CHAR_DATA *ch, int door, bool Fall )
 		if ( ( in_room->sector_type == SECT_AIR
 					|| to_room->sector_type == SECT_AIR ) && ( !Fall ) )
 		{
-			if ( ( !IS_AFFECTED( ch, AFF_FLYING ) )
-					&& ( ch->race != RACE_PIXIE )
-					&& ( ch->race != RACE_ELDER ) ) 
+			if ( !IS_AFFECTED( ch, AFF_FLYING ) ) 
 			{
 				send_to_char(AT_GREY, "You can't fly.\n\r", ch );
 				return;
@@ -178,10 +174,9 @@ void move_char( CHAR_DATA *ch, int door, bool Fall )
 			/*
 			 * Suggestion for flying above water by Sludge
 			 */
-			if ( ( IS_AFFECTED( ch, AFF_FLYING ) ) 
-					|| ( ch->race == RACE_PIXIE )
-					|| ( ch->race == RACE_ELDER ) )
+			if ( IS_AFFECTED( ch, AFF_FLYING ) ) {
 				found = TRUE;
+			}
 
 			for ( obj = ch->carrying; obj; obj = obj->next_content )
 			{
@@ -209,11 +204,10 @@ void move_char( CHAR_DATA *ch, int door, bool Fall )
 		}
 
 		WAIT_STATE( ch, 1 );
-		if ( (!IS_AFFECTED( ch, AFF_FLYING ) )
-				&& ( ch->race != RACE_PIXIE     )
-				&& ( ch->race != RACE_LIZARDMAN ) 
-				&& ( ch->race != RACE_ELDER     ) )
+
+		if ( !IS_AFFECTED( ch, AFF_FLYING ) ) {
 			ch->move -= move;
+		}
 	}
 
 	if ( !IS_AFFECTED( ch, AFF_SNEAK )
@@ -251,9 +245,7 @@ void move_char( CHAR_DATA *ch, int door, bool Fall )
 		}
 		if ( !Fall )
 		{
-			if ( ( !IS_AFFECTED( ch, AFF_FLYING ) )
-					&& ( ch->race != RACE_PIXIE )
-					&& ( ch->race != RACE_ELDER ) )
+			if ( ( !IS_AFFECTED( ch, AFF_FLYING ) ) )
 				act(AT_GREY, "&B$n&w leaves $T.", ch, NULL, dir_name[door], TO_ROOM );
 			else
 				act(AT_GREY, "&B$n&w flies $T.", ch, NULL, dir_name[door], TO_ROOM );
@@ -299,8 +291,7 @@ void move_char( CHAR_DATA *ch, int door, bool Fall )
 
 	if ( IS_SET( to_room->room_flags, ROOM_NOFLOOR ) &&
 			!IS_AFFECTED( ch, AFF_FLYING ) && ( ( pexit = to_room->exit[5] ) != NULL )
-			&& ( ( to_room = pexit->to_room ) != NULL ) 
-			&& ( ch->race != RACE_PIXIE ) && ( ch->race != RACE_ELDER ) ) 
+			&& ( ( to_room = pexit->to_room ) != NULL ) ) 
 	{
 		act( AT_WHITE, "$n falls down to the room below.\n\r", ch,
 				NULL, NULL, TO_ROOM );
@@ -2030,8 +2021,7 @@ void check_nofloor( CHAR_DATA *ch )
 
 	if ( IS_SET( ch->in_room->room_flags, ROOM_NOFLOOR ) 
 			&& ( ( pexit = ch->in_room->exit[5] ) != NULL )
-			&& ( ( to_room = pexit->to_room )  != NULL )
-			&& ( ch->race != RACE_PIXIE ) && ( ch->race != RACE_ELDER ) )
+			&& ( ( to_room = pexit->to_room )  != NULL ) )
 		/*      && ( !IS_AFFECTED( ch, AFF_FLYING ) ) )  */
 	{
 		act( AT_RED, "You fall through where the floor should have been!", ch,

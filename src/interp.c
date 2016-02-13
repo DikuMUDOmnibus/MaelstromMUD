@@ -316,7 +316,6 @@ struct	cmd_type	cmd_table	[ ] =
 	{ "mental drain",   do_mental_drain,POS_FIGHTING,    0,  LOG_NORMAL },
 	{ "shriek",		do_shriek,	POS_FIGHTING,	 0,  LOG_NORMAL },
 	{ "snatch",		do_snatch,	POS_FIGHTING,	 0,  LOG_NORMAL },
-	{ "spit",		do_spit,	POS_FIGHTING,	 0,  LOG_NORMAL },
 	{ "stun",           do_stun,        POS_FIGHTING,    0,  LOG_NORMAL },
 	{ "berserk",        do_berserk,     POS_FIGHTING,    0,  LOG_NORMAL },
 	{ "soulstrike",     do_soulstrike,  POS_FIGHTING,    0,  LOG_NORMAL },
@@ -498,7 +497,6 @@ struct	cmd_type	cmd_table	[ ] =
 	{ "gouge",          do_gouge,      POS_FIGHTING, 0,      LOG_NORMAL },
 	{ "circle",         do_circle,     POS_FIGHTING, 0,      LOG_NORMAL },
 	{ "rake",           do_rake,       POS_FIGHTING, 0,      LOG_NORMAL },
-	{ "headbutt",	do_headbutt,	POS_FIGHTING,	 0,  LOG_NORMAL },
 	// { "transport",      do_transport,  POS_RESTING,      0,  LOG_NORMAL },
 	// { "immlist",	do_immlist,	POS_DEAD, 	 0,  LOG_NORMAL },
 

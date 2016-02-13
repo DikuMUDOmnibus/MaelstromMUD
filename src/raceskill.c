@@ -15,68 +15,6 @@
 extern void    set_fighting     args( ( CHAR_DATA *ch, CHAR_DATA *victim ) );
 extern void    forge_obj	args( ( CHAR_DATA *ch, OBJ_DATA *to_forge ) );
 
-void do_headbutt( CHAR_DATA *ch, char *argument )
-{
-	CHAR_DATA *victim;
-	char arg [ MAX_INPUT_LENGTH ];
-	int timer = 24;
-	int mod;
-	int dmg;
-	if ( ch->race != RACE_MINOTAUR )
-	{
-		send_to_char( AT_GREY, "Wham!  Ouch!  You sure are no minotaur\n\r", ch );
-		return;
-	}
-	if ( ch->race_wait > 0 )
-		return;
-	if ( !ch->fighting )
-	{
-		send_to_char(C_DEFAULT, "You aren't fighting anyone.\n\r", ch );
-		return;
-	}
-
-	one_argument( argument, arg );
-
-	victim = ch->fighting;
-
-	if ( arg[0] != '\0' )
-		if ( !( victim = get_char_room( ch, arg ) ) )
-		{
-			send_to_char(C_DEFAULT, "They aren't here.\n\r", ch );
-			return;
-		}
-
-	switch ( prime_class(ch) )
-	{
-		case CLASS_CASTER:			timer = 180;  break;
-		case CLASS_ROGUE:       timer = 180;  break;
-		case CLASS_FIGHTER:     timer = 120;  break;
-	}
-	mod = ch->level / 5;
-	mod = UMAX( 1, mod );
-	timer = timer / mod;
-	timer = ( timer < 24 ) ? 24 : timer;
-	ch->race_wait = timer;
-	act( AT_YELLOW, "You slam your head into $N's!", ch, NULL, victim, TO_CHAR );
-	act( AT_YELLOW, "$n slams his head into yours!", ch, NULL, victim, TO_VICT );
-	act( AT_YELLOW, "$n slams his head into $N's!", ch, NULL, victim, TO_NOTVICT );
-	dmg = number_range( ch->level, ch->level * 5 );
-	damage( ch, victim, dmg, gsn_headbutt );
-	STUN_CHAR( ch, 2, STUN_MAGIC );
-	if ( victim->position == POS_DEAD || ch->in_room != victim->in_room )
-		return;
-	if ( number_percent() < 15 && victim->position != POS_STUNNED )
-	{
-		act( AT_WHITE, "$N reels from the blow...", ch, NULL, victim, TO_CHAR );
-		act( AT_WHITE, "$N reels from the blow...", ch, NULL, victim, TO_NOTVICT );
-		act( AT_WHITE, "You real from the blow and feel disoriented.", 
-				ch, NULL, victim, TO_VICT );
-		STUN_CHAR( victim, 2, STUN_TOTAL );
-		victim->position = POS_STUNNED;
-	}
-	return;
-}
-
 void do_drowfire( CHAR_DATA *ch, char *argument )
 {
 	AFFECT_DATA af;
@@ -227,12 +165,8 @@ void do_forge( CHAR_DATA *ch, char *argument )
 	char buf[ MAX_INPUT_LENGTH ];
 	OBJ_DATA *obj, *hammer;
 	int wear, lvl;
-	long group1 = ITEM_ANTI_HUMAN + ITEM_ANTI_DROW + ITEM_ANTI_ELF + ITEM_ANTI_ELDER;
-	long group2 = ITEM_ANTI_OGRE + ITEM_ANTI_TROLL + ITEM_ANTI_DEMON + ITEM_ANTI_MINOTAUR;
-	long group3 = ITEM_ANTI_DWARF + ITEM_ANTI_HALFLING + ITEM_ANTI_SHADOW;
-	long group4 = ITEM_ANTI_ILLITHID + ITEM_ANTI_GHOUL;
-	long group5 = ITEM_ANTI_PIXIE;
-	long group6 = ITEM_ANTI_LIZARDMAN;
+	long group1 = ITEM_ANTI_HUMAN + ITEM_ANTI_DROW + ITEM_ANTI_ELF;
+	long group2 = ITEM_ANTI_DWARF + ITEM_ANTI_HALFLING;
 	long antirace = 0;
 	wear = 0;
 	if ( ch->race != RACE_DWARF )
@@ -300,27 +234,10 @@ void do_forge( CHAR_DATA *ch, char *argument )
 		wear = ITEM_WEAR_ANKLE;
 	if ( !str_prefix( arg, "weapon" ) )
 		wear = ITEM_WIELD;
-	if ( !str_prefix( arg2, "elf" )
-			|| !str_prefix( arg2, "drow" )
-			|| !str_prefix( arg2, "elder" )
-			|| !str_prefix( arg2, "human" ) )
-		antirace = group2 + group3 + group4 + group5 + group6;
-	if ( !str_prefix( arg2, "ogre" )
-			|| !str_prefix( arg2, "demon" )
-			|| !str_prefix( arg2, "troll" )
-			|| !str_prefix( arg2, "minotaur" ) )
-		antirace = group1 + group3 + group4 + group5 + group6;
-	if ( !str_prefix( arg2, "dwarf" )
-			|| !str_prefix( arg2, "halfling" )
-			|| !str_prefix( arg2, "shadow" ) )
-		antirace = group1 + group2 + group4 + group5 + group6;
-	if ( !str_prefix( arg2, "illithid" )
-			|| !str_prefix( arg2, "ghoul" ) )
-		antirace = group1 + group2 + group3 + group5 + group6;
-	if ( !str_prefix( arg2, "pixie" ) )
-		antirace = group1 + group2 + group3 + group4 + group6;
-	if ( !str_prefix( arg2, "lizardman" ) )
-		antirace = group1 + group2 + group3 + group4 + group5;
+	if ( !str_prefix( arg2, "elf" ) || !str_prefix( arg2, "drow" ) || !str_prefix( arg2, "elder" ) || !str_prefix( arg2, "human" ) )
+		antirace = group2;
+	if ( !str_prefix( arg2, "dwarf" ) || !str_prefix( arg2, "halfling" ) )
+		antirace = group1;
 	if ( is_number( argument ) )
 		lvl = atoi( argument );	
 	else
@@ -361,91 +278,5 @@ void do_forge( CHAR_DATA *ch, char *argument )
 		}
 		else
 			do_forge( ch, "" );
-		return;
-	}
-	void do_spit( CHAR_DATA *ch, char *argument )
-	{
-		AFFECT_DATA af;
-		CHAR_DATA *victim;
-		char arg[ MAX_INPUT_LENGTH ];
-		int dam;
-		if ( ch->race != RACE_LIZARDMAN )
-		{
-			send_to_char( AT_GREY, "Huh?\n\r", ch );
-			return;
-		}
-		if ( ch->race_wait > 0 )
-			return;
-		if ( !ch->fighting )
-		{
-			send_to_char(C_DEFAULT, "You aren't fighting anyone.\n\r", ch );
-			return;
-		}
-		one_argument( argument, arg );
-
-		victim = ch->fighting;
-
-		if ( arg[0] != '\0' )
-			if ( !( victim = get_char_room( ch, arg ) ) )
-			{
-				send_to_char(C_DEFAULT, "They aren't here.\n\r", ch );
-				return;
-			}
-		dam = ch->level + number_range( ch->level, ch->level * 4 );
-		damage( ch, victim, dam, gsn_spit );
-		ch->race_wait = 36;
-
-		if ( !victim || victim->position == POS_DEAD || !victim->in_room
-				|| victim->in_room != ch->in_room ) 
-			return;
-
-		if ( number_percent( ) < 25 ) 
-		{
-			int location = number_range( 0, 1 );
-			switch( location )
-			{
-				case 0:
-					if ( victim->race != RACE_ILLITHID )
-					{
-						act( AT_DGREEN, "You spit right in $S eyes!", ch, NULL, victim, TO_CHAR );
-						act( AT_DGREEN, "$n spit into $N's eyes!", ch, NULL, victim, TO_NOTVICT );
-						act( AT_DGREEN, "$n spit into your eyes!", ch, NULL, victim, TO_VICT );
-						if ( !IS_AFFECTED( victim, AFF_BLIND ) )
-						{
-							send_to_char( AT_WHITE, "You are blinded!", victim );
-							act( AT_WHITE, "$n is blinded!", victim, NULL, NULL, TO_ROOM );
-							af.type	 = gsn_spit;
-							af.level	 = ch->level;
-							af.duration	 = 0;
-							af.location	 = APPLY_HITROLL;
-							af.modifier	 = -10;
-							af.bitvector = AFF_BLIND;
-							affect_to_char( victim, &af );
-							af.location  = APPLY_AC;
-							af.modifier	 = 50;
-							affect_to_char( victim, &af );
-						}
-					}
-					break;
-				case 1:
-					act( AT_DGREEN, "You spit right in $S mouth!", ch, NULL, victim, TO_CHAR );
-					act( AT_DGREEN, "$n spit into $N's mouth!  Gross!", ch, NULL, victim, TO_NOTVICT );
-					act( AT_DGREEN, "$n spit into your mouth!", ch, NULL, victim, TO_VICT );
-					send_to_char( AT_WHITE, "The acidic spit burns your mouth and throat.\n\r", victim );
-					STUN_CHAR( victim, 2, STUN_MAGIC );
-					break;
-
-			}
-		}
-		if ( !saves_spell( ch->level, victim ) && victim->race != RACE_GHOUL )
-		{
-			af.type 	 = gsn_poison;
-			af.level	 = ch->level;
-			af.duration	 = 2;
-			af.location	 = APPLY_STR;
-			af.modifier	 = -3;
-			af.bitvector = 0;
-			affect_join( victim, &af );
-		}
 		return;
 	}

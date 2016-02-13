@@ -88,8 +88,7 @@ const	struct	class_type	class_table	[MAX_CLASS]	=
 	{
 		"Cas", "Caster",  APPLY_INT,  OBJ_VNUM_SCHOOL_DAGGER,
 		3018,  95,  18,  -6,   6,  8, TRUE,
-		{ TRUE, TRUE, FALSE, TRUE, FALSE, TRUE, TRUE, FALSE, FALSE,
-			FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE },
+		{ TRUE, TRUE, TRUE, TRUE, TRUE },
 		{ TRUE, TRUE, TRUE },
 		/* Can class wield this type of weapon? */
 		{ TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
@@ -99,8 +98,7 @@ const	struct	class_type	class_table	[MAX_CLASS]	=
 	{
 		"Rog",  "Rogue", APPLY_DEX,  OBJ_VNUM_SCHOOL_DAGGER,
 		3028,  85,  18,  -14,  8,  13, FALSE,
-		{ TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE,
-			FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, TRUE },
+		{ TRUE, TRUE, TRUE, TRUE, TRUE },
 		{ TRUE, TRUE, TRUE },
 		{ TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
 			TRUE, TRUE, TRUE, TRUE, TRUE }  
@@ -109,8 +107,7 @@ const	struct	class_type	class_table	[MAX_CLASS]	=
 	{
 		"Fig",  "Fighter", APPLY_STR,  OBJ_VNUM_SCHOOL_SWORD,
 		3022,  85,  18,  -30,  11, 20, FALSE,
-		{ TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE, TRUE, TRUE,
-			TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE },
+		{ TRUE, TRUE, TRUE, TRUE, TRUE },
 		{ TRUE, TRUE, TRUE },
 		{ TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
 			TRUE, TRUE, TRUE, TRUE, TRUE }  

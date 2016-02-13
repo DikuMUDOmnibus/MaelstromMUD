@@ -32,7 +32,6 @@
  * Local functions.
  */
 bool	check_dodge	     args( ( CHAR_DATA *ch, CHAR_DATA *victim ) );
-bool    check_sidestep       args( ( CHAR_DATA *ch, CHAR_DATA *victim ) );  
 void	check_killer	     args( ( CHAR_DATA *ch, CHAR_DATA *victim ) );
 bool	check_parry	     args( ( CHAR_DATA *ch, CHAR_DATA *victim ) );
 void	dam_message	     args( ( CHAR_DATA *ch, CHAR_DATA *victim, int dam,
@@ -1034,11 +1033,7 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt )
 			REMOVE_BIT( ch->affected_by2, AFF_PHASED );
 			act(AT_GREY, "$n returns from an alternate plane.", ch, NULL, NULL, TO_ROOM );
 		}
-		/*
-		 * Damage modifiers.
-		 */
-		if ( ch->race == RACE_OGRE )
-			dam -= dam / 20;
+
 		/*
 		 * Check for disarm, trip, parry, and dodge.
 		 */
@@ -1064,8 +1059,6 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt )
 			if ( check_parry( ch, victim ) && dam > 0 )
 				return;
 			if ( check_dodge( ch, victim ) && dam > 0 )
-				return;
-			if ( check_sidestep( ch, victim ) && dam > 0 )
 				return;
 		}
 		if ( !IS_NPC( ch )
@@ -1153,10 +1146,6 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt )
 		dam += dam/2;
 	}
 
-	if ( ( !IS_NPC(ch) ) && (ch->race == RACE_OGRE ) ) {
-		dam += dam/10;
-	}
-
 	if (!IS_NPC(ch) && !IS_NPC(victim)) {
 		dam /= number_range(2, 4);
 	}
@@ -1178,8 +1167,7 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt )
 
 	if ( dam > 0 && dt > TYPE_HIT
 			&& ( ( is_wielding_poisoned( ch )
-					&& !saves_spell( ch->level, victim ) ) )
-			&& victim->race != RACE_GHOUL )
+					&& !saves_spell( ch->level, victim ) ) ) )
 	{
 		AFFECT_DATA af;
 
@@ -1946,32 +1934,6 @@ bool check_dodge( CHAR_DATA *ch, CHAR_DATA *victim )
 	return TRUE;
 }
 
-bool check_sidestep( CHAR_DATA *ch, CHAR_DATA *victim )
-{
-	int chance;
-
-	if ( !IS_AWAKE( victim ) )
-		return FALSE;
-
-	if ( IS_NPC( victim ) )
-		/* Tuan was here.  :) */
-		return FALSE;
-
-	if ( victim->race != RACE_SHADOW )
-		return FALSE;
-
-	chance = 50;
-
-	if ( number_percent( ) >= chance + victim->level - ch->level )
-		return FALSE;         
-
-	if ( IS_SET( ch->act, PLR_COMBAT ) )
-		act(AT_GREEN, "$N sidesteps your attack.", ch, NULL, victim, TO_CHAR    );
-	if ( IS_SET( victim->act, PLR_COMBAT ) )
-		act(AT_GREEN, "You sidestep $n's attack.", ch, NULL, victim, TO_VICT    );
-	return TRUE;
-}
-
 /*
  * Set position of a victim.
  */
@@ -2730,10 +2692,9 @@ void disarm( CHAR_DATA *ch, CHAR_DATA *victim )
  */
 void trip( CHAR_DATA *ch, CHAR_DATA *victim )
 {
-	if ( ( IS_AFFECTED( victim, AFF_FLYING ) )
-			|| (victim->race == RACE_PIXIE )
-			|| (victim->race == RACE_ELDER ) )
+	if ( ( IS_AFFECTED( victim, AFF_FLYING ) ) ) {
 		return;
+	}
 
 	if ( !IS_STUNNED( victim, STUN_COMMAND ) && !IS_STUNNED(ch, STUN_TO_STUN) )
 	{
@@ -4650,21 +4611,13 @@ void do_mental_drain(CHAR_DATA *ch, char *argument)
 
 	if(is_safe(ch, victim))
 		return;
-	if ( ch->race == RACE_ILLITHID )
-		WAIT_STATE(ch, skill_table[gsn_mental_drain].beats/3);
-	else
-		WAIT_STATE(ch, skill_table[gsn_mental_drain].beats);
+	WAIT_STATE(ch, skill_table[gsn_mental_drain].beats);
 	/* 3xlevel + 1d100*/
 	if(IS_NPC(ch) || number_percent() < ch->pcdata->learned[gsn_mental_drain])
 	{
 		dam = number_range(ch->level / 5, ch->level);
 		/*    drain = 2 * ch->level + number_range(ch->level / 4, ch->level * 2);*/
 		dmana = drain = ch->level + number_range(ch->level / 4, ch->level);
-		if ( ch->race == RACE_ILLITHID )
-		{
-			dam *= 1.5;
-			dmana = drain *= 2.5;
-		}
 		damage(ch, victim, dam, gsn_mental_drain);
 		update_skpell(ch, gsn_mental_drain);
 		/*    ch->hit = UMIN(ch->hit + dam/4, MAX_HIT(ch));*/

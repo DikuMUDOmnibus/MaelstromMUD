@@ -363,22 +363,12 @@ const struct flag_type anti_class_flags[] =
 };
 const struct flag_type anti_race_flags[] =
 {
-	{   "anti-human",		ITEM_ANTI_HUMAN,	TRUE	},
+	{ "anti-human",		ITEM_ANTI_HUMAN,	TRUE	},
 	{	"anti-elf",		ITEM_ANTI_ELF,		TRUE	},
 	{	"anti-dwarf",		ITEM_ANTI_DWARF,	TRUE	},
-	{	"anti-pixie",		ITEM_ANTI_PIXIE,	TRUE	},
+	{	"anti-gnome",		ITEM_ANTI_GNOME,	TRUE	},
 	{	"anti-halfling",	ITEM_ANTI_HALFLING,	TRUE	},
 	{	"anti-drow",		ITEM_ANTI_DROW,		TRUE	},
-	{	"anti-elder",		ITEM_ANTI_ELDER,	TRUE	},
-	{	"anti-ogre",		ITEM_ANTI_OGRE,		TRUE	},
-	{	"anti-lizardman",	ITEM_ANTI_LIZARDMAN,	TRUE	},
-	{	"anti-demon",		ITEM_ANTI_DEMON,	TRUE	},
-	{	"anti-ghoul",		ITEM_ANTI_GHOUL,	TRUE	},
-	{	"anti-illithid",	ITEM_ANTI_ILLITHID,	TRUE	},
-	{	"anti-minotaur",	ITEM_ANTI_MINOTAUR,	TRUE	},
-	{   "anti-troll",           ITEM_ANTI_TROLL,        TRUE    },
-	{   "anti-shadow",          ITEM_ANTI_SHADOW,       TRUE    },
-	{   "anti-tabaxi",		ITEM_ANTI_TABAXI,	TRUE	},
 	{	"",			0,			0	}
 };
 

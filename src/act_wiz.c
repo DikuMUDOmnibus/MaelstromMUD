@@ -4430,38 +4430,6 @@ void do_mset( CHAR_DATA *ch, char *argument )
 				break;
 			}
 		}
-		/*
-		   if ( !str_cmp( arg3, "human" ) || !str_cmp( arg3, "hum" ) )
-		   value = RACE_HUMAN;
-		   if ( !str_cmp( arg3, "elf" ) )
-		   value = RACE_ELF;
-		   if ( !str_cmp( arg3, "dwarf" ) || !str_cmp( arg3, "dwa" ) )
-		   value = RACE_DWARF;
-		   if ( !str_cmp( arg3, "pixie" ) || !str_cmp( arg3, "pix" ) )
-		   value = RACE_PIXIE;
-		   if ( !str_cmp( arg3, "halfling" ) || !str_cmp( arg3, "hal" ) )
-		   value = RACE_HALFLING;
-		   if ( !str_cmp( arg3, "drow" ) )
-		   value = RACE_DROW;
-		   if ( !str_cmp( arg3, "elder" ) || !str_cmp( arg3, "eld" ) )
-		   value = RACE_ELDER;
-		   if ( !str_cmp( arg3, "ogre" ) || !str_cmp( arg3, "ogr" ) )
-		   value = RACE_OGRE;
-		   if ( !str_cmp( arg3, "lizardman" ) || !str_cmp( arg3, "liz" ) )
-		   value = RACE_LIZARDMAN;
-		   if ( !str_cmp( arg3, "demon" ) || !str_cmp( arg3, "dem" ) )
-		   value = RACE_DEMON;
-		   if ( !str_cmp( arg3, "ghoul" ) || !str_cmp( arg3, "ghl" ) )
-		   value = RACE_GHOUL;
-		   if ( !str_cmp( arg3, "illithid" ) || !str_cmp( arg3, "ill" ) )
-		   value = RACE_ILLITHID;
-		   if ( !str_cmp( arg3, "minotaur" ) || !str_cmp( arg3, "min" ) )
-		   value = RACE_MINOTAUR;
-		   if ( !str_cmp( arg3, "troll" ) || !str_cmp( arg3, "tro" ) )
-		   value = RACE_TROLL;
-		   if ( !str_cmp( arg3, "shadow" ) || !str_cmp( arg3, "shd" ) )
-		   value = RACE_SHADOW;
-		   */
 		if ( value < 0 || value >= MAX_RACE )
 		{
 			char buf [ MAX_STRING_LENGTH ];
@@ -4483,12 +4451,8 @@ void do_mset( CHAR_DATA *ch, char *argument )
 		victim->pcdata->mod_wis -= pRace->mwis;
 		victim->pcdata->mod_dex -= pRace->mdex;
 		victim->pcdata->mod_con -= pRace->mcon;
-		if ( victim->race == RACE_GHOUL )
-			REMOVE_BIT( victim->act, PLR_UNDEAD );
 
 		victim->race = value;
-		if ( victim->race == RACE_GHOUL )
-			SET_BIT( victim->act, PLR_UNDEAD );
 		pRace = get_race_data(victim->race);
 		victim->pcdata->mod_str += pRace->mstr;
 		victim->pcdata->mod_int += pRace->mint;
@@ -5071,32 +5035,12 @@ void do_oset( CHAR_DATA *ch, char *argument )
 			value = ITEM_ANTI_ELF;
 		if (!str_cmp( arg3, "dwarf" ) || !str_cmp( arg3, "dwa" ) )
 			value = ITEM_ANTI_DWARF;
-		if (!str_cmp( arg3, "pixie" ) || !str_cmp( arg3, "pix" ) )
-			value = ITEM_ANTI_PIXIE;
+		if (!str_cmp( arg3, "gnome" ) || !str_cmp( arg3, "gno" ) )
+			value = ITEM_ANTI_GNOME;
 		if (!str_cmp( arg3, "halfling" ) || !str_cmp( arg3, "hlf" ) )
 			value = ITEM_ANTI_HALFLING;
 		if (!str_cmp( arg3, "drow" ) || !str_cmp( arg3, "drw" ) )
 			value = ITEM_ANTI_DROW;
-		if (!str_cmp( arg3, "elder" ) || !str_cmp( arg3, "eld" ) )
-			value = ITEM_ANTI_ELDER;
-		if (!str_cmp( arg3, "ogre" ) || !str_cmp( arg3, "ogr" ) )
-			value = ITEM_ANTI_OGRE;
-		if (!str_cmp( arg3, "lizardman" ) || !str_cmp( arg3, "liz" ) )
-			value = ITEM_ANTI_LIZARDMAN;
-		if (!str_cmp( arg3, "demon" ) || !str_cmp( arg3, "dem" ) )
-			value = ITEM_ANTI_DEMON;
-		if (!str_cmp( arg3, "ghoul" ) || !str_cmp( arg3, "ghl" ) )
-			value = ITEM_ANTI_GHOUL;
-		if (!str_cmp( arg3, "illithid" ) || !str_cmp( arg3, "ill" ) )
-			value = ITEM_ANTI_ILLITHID;
-		if (!str_cmp( arg3, "minotaur" ) || !str_cmp( arg3, "min" ) )
-			value = ITEM_ANTI_MINOTAUR;
-		if (!str_cmp( arg3, "troll" ) || !str_cmp( arg3, "tro" ) )
-			value = ITEM_ANTI_TROLL;
-		if (!str_cmp( arg3, "shadow" ) || !str_cmp( arg3, "shd" ) )
-			value = ITEM_ANTI_SHADOW;
-		if (!str_cmp( arg3, "tabaxi" ) || !str_cmp( arg3, "tbx" ) )
-			value = ITEM_ANTI_TABAXI;
 
 		if ( value == 0 || !str_cmp( arg3, "none" ) )
 		{

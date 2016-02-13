@@ -206,9 +206,6 @@ int hit_gain( CHAR_DATA *ch )
 			&& gain > 0 ) 
 		gain /= 10;
 
-	/* Trolls gain twice as much hp per tick */
-	if ( ch->race == RACE_TROLL )
-		gain *= 5;
 	/* Ward of Healing */
 	if ( is_raffected( ch->in_room, gsn_ward_heal ) )
 	{
@@ -244,7 +241,7 @@ int mana_gain( CHAR_DATA *ch )
 		if ( ch->pcdata->condition[COND_THIRST] == 0 )
 			gain /= 2;
 
-		if ( ch->race == RACE_ELF || ch->race == RACE_ELDER )
+		if ( ch->race == RACE_ELF )
 			gain *= 2;
 	}
 

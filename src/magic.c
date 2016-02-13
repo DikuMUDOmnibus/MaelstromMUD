@@ -562,7 +562,7 @@ void do_cast( CHAR_DATA *ch, char *argument )
 	if ( !IS_NPC( ch ) && ( !( ch->level > LEVEL_MORTAL ) ) ) {
 		mana = MANA_COST( ch, sn );
 
-		if ( ch->race == RACE_ELF || ch->race == RACE_ELDER ) {
+		if ( ch->race == RACE_ELF ) {
 			mana -= mana / 4;
 		}
 	} else {
@@ -3377,8 +3377,9 @@ void spell_poison( int sn, int level, CHAR_DATA *ch, void *vo )
 	CHAR_DATA  *victim = (CHAR_DATA *) vo;
 	AFFECT_DATA af;
 
-	if ( saves_spell( level, victim ) || victim->race == RACE_GHOUL )
+	if ( saves_spell( level, victim ) ) {
 		return;
+	}
 
 	af.type      = sn;
 	af.level	 = level;
@@ -4968,8 +4969,6 @@ void spell_detonate ( int sn, int level, CHAR_DATA *ch, void *vo )
 {
 	CHAR_DATA *victim       = (CHAR_DATA *) vo;
 	int        dam;
-	if ( ch->race == RACE_ILLITHID )
-		ch->wait /= 2;
 	dam	     = dice( level, 13 );
 	dam = sc_dam( ch, dam );
 	if ( saves_spell( level, victim ) )
@@ -5567,8 +5566,11 @@ void spell_psionic_blast ( int sn, int level, CHAR_DATA *ch, void *vo )
 	level    = UMAX( 0, level );
 	dam	     = number_range( dam_each[level] / 2, dam_each[level] );
 	dam = sc_dam( ch, dam );
-	if ( saves_spell( level, victim ) && ch->race != RACE_ILLITHID )
+	
+	if ( saves_spell( level, victim ) ) {
 		dam /= 2;
+	}
+
 	damage( ch, victim, dam, sn );
 	return;
 }
@@ -7614,9 +7616,9 @@ void spell_purify( int sn, int level, CHAR_DATA *ch, void *vo )
 			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
 			yesno = TRUE;
 		}
-		if ( IS_ANTI_RACE( obj, ITEM_ANTI_PIXIE ) )
+		if ( IS_ANTI_RACE( obj, ITEM_ANTI_GNOME ) )
 		{
-			REMOVE_BIT( obj->anti_race_flags, ITEM_ANTI_PIXIE );
+			REMOVE_BIT( obj->anti_race_flags, ITEM_ANTI_GNOME );
 			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
 			yesno = TRUE;
 		}
@@ -7629,66 +7631,6 @@ void spell_purify( int sn, int level, CHAR_DATA *ch, void *vo )
 		if ( IS_ANTI_RACE( obj, ITEM_ANTI_DROW ) )
 		{
 			REMOVE_BIT( obj->anti_race_flags, ITEM_ANTI_DROW );
-			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
-			yesno = TRUE;
-		}
-		if ( IS_ANTI_RACE( obj, ITEM_ANTI_ELDER ) )
-		{
-			REMOVE_BIT( obj->anti_race_flags, ITEM_ANTI_ELDER );
-			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
-			yesno = TRUE;
-		}
-		if ( IS_ANTI_RACE( obj, ITEM_ANTI_OGRE ) )
-		{
-			REMOVE_BIT( obj->anti_race_flags, ITEM_ANTI_OGRE );
-			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
-			yesno = TRUE;
-		}
-		if ( IS_ANTI_RACE( obj, ITEM_ANTI_LIZARDMAN ) )
-		{
-			REMOVE_BIT( obj->anti_race_flags, ITEM_ANTI_LIZARDMAN );
-			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
-			yesno = TRUE;
-		}
-		if ( IS_ANTI_RACE( obj, ITEM_ANTI_DEMON ) )
-		{
-			REMOVE_BIT( obj->anti_race_flags, ITEM_ANTI_DEMON );
-			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
-			yesno = TRUE;
-		}
-		if ( IS_ANTI_RACE( obj, ITEM_ANTI_GHOUL ) )
-		{
-			REMOVE_BIT( obj->anti_race_flags, ITEM_ANTI_GHOUL );
-			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
-			yesno = TRUE;
-		}
-		if ( IS_ANTI_RACE( obj, ITEM_ANTI_ILLITHID ) )
-		{
-			REMOVE_BIT( obj->anti_race_flags, ITEM_ANTI_ILLITHID );
-			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
-			yesno = TRUE;
-		}
-		if ( IS_ANTI_RACE( obj, ITEM_ANTI_MINOTAUR ) )
-		{
-			REMOVE_BIT( obj->anti_race_flags, ITEM_ANTI_MINOTAUR );
-			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
-			yesno = TRUE;
-		}
-		if ( IS_ANTI_RACE( obj, ITEM_ANTI_TROLL ) )
-		{
-			REMOVE_BIT( obj->anti_race_flags, ITEM_ANTI_TROLL );
-			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
-			yesno = TRUE;
-		}
-		if ( IS_ANTI_RACE( obj, ITEM_ANTI_SHADOW ) )
-		{
-			REMOVE_BIT( obj->anti_race_flags, ITEM_ANTI_SHADOW );
-			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
-			yesno = TRUE;
-		}
-		if ( IS_ANTI_RACE( obj, ITEM_ANTI_TABAXI ) )
-		{
-			REMOVE_BIT( obj->anti_race_flags, ITEM_ANTI_TABAXI );
 			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
 			yesno = TRUE;
 		}

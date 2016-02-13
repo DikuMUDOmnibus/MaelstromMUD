@@ -2092,26 +2092,12 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 				ch->mana    = MAX_MOVE(ch);
 				ch->move    = MAX_MOVE(ch);
 				/* charisma */
-				if ( ( ch->race == RACE_GHOUL ) ||
-						( ch->race == RACE_OGRE )  ||
-						( ch->race == RACE_DEMON ) ||
-						// ( ch->race == RACE_KREEN ) ||
-						( ch->race == RACE_TROLL ) )
-					ch->charisma = number_range( 10, 14 );
-				if ( ( ch->race == RACE_SHADOW )    ||
-						( ch->race == RACE_MINOTAUR )  ||
-						( ch->race == RACE_LIZARDMAN ) ||
-						( ch->race == RACE_ILLITHID ) )
-					ch->charisma = number_range( 15, 19 );
 				if ( ( ch->race == RACE_HUMAN ) ||
 						( ch->race == RACE_DROW )  ||
-						( ch->race == RACE_DWARF ) ||
-						( ch->race == RACE_ELDER ) )
+						( ch->race == RACE_DWARF ) )
 					ch->charisma = number_range( 20, 24 );
-				if ( ( ch->race == RACE_PIXIE )  ||
+				if ( ( ch->race == RACE_GNOME )  ||
 						( ch->race == RACE_ELF )    ||
-						( ch->race == RACE_TABAXI ) ||
-						// ( ch->race == RACE_ANGEL ) ||
 						( ch->race == RACE_HALFLING ) )
 					ch->charisma = number_range( 25, 30 );
 

@@ -1124,19 +1124,18 @@ void do_eat( CHAR_DATA *ch, char *argument )
 			send_to_char(AT_ORANGE, "That's not edible.\n\r", ch );
 			return;
 		}
-		if ( ( obj->item_type == ITEM_CORPSE_NPC && ch->race != RACE_GHOUL )
-				|| ( obj->item_type == ITEM_FOOD && ch->race == RACE_GHOUL ) )
-		{
-			send_to_char(AT_ORANGE, 
-					"Your stomach turns at the thought of eating that.\n\r", ch );
+
+		if ( obj->item_type == ITEM_CORPSE_NPC ) {
+			send_to_char(AT_ORANGE, "Your stomach turns at the thought of eating that.\n\r", ch );
 			return;
 		}
-		if ( !IS_NPC( ch ) && ch->pcdata->condition[COND_FULL] > MAX_FULL )
-		{   
+
+		if ( !IS_NPC( ch ) && ch->pcdata->condition[COND_FULL] > MAX_FULL ) {   
 			send_to_char(AT_ORANGE, "You are too full to eat more.\n\r", ch );
 			return;
 		}
 	}
+
 	act(AT_ORANGE, "You eat $p.", ch, obj, NULL, TO_CHAR );
 	act(AT_ORANGE, "$n eats $p.", ch, obj, NULL, TO_ROOM );
 
@@ -1191,17 +1190,6 @@ void do_eat( CHAR_DATA *ch, char *argument )
 				act( AT_ORANGE, "$p is too high level for you.", ch, obj, NULL,
 						TO_CHAR );
 				return;
-			}
-			break;
-		case ITEM_CORPSE_NPC:
-			if ( !IS_NPC( ch ) && ch->race == RACE_GHOUL )
-			{
-				int condition = 30;
-				gain_condition( ch, COND_FULL, condition );
-				if ( ch->pcdata->condition[COND_FULL] > MAX_FULL )
-					send_to_char(AT_ORANGE, "You are full.\n\r", ch );
-				else if ( condition == 0 && ch->pcdata->condition[COND_FULL] > 0 )
-					send_to_char(AT_ORANGE, "You are no longer hungry.\n\r", ch );
 			}
 			break;
 	}

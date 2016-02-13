@@ -1969,8 +1969,7 @@ bool can_see( CHAR_DATA *ch, CHAR_DATA *victim )
 		return FALSE;
 
 	if ( IS_AFFECTED( ch, AFF_BLIND ) 
-			&& !IS_AFFECTED2( ch, AFF_TRUESIGHT )
-			&& ch->race != RACE_ILLITHID )
+			&& !IS_AFFECTED2( ch, AFF_TRUESIGHT ) )
 		return FALSE;
 
 	if ( room_is_dark( ch->in_room ) 
@@ -1978,8 +1977,7 @@ bool can_see( CHAR_DATA *ch, CHAR_DATA *victim )
 			&& !IS_AFFECTED2( ch, AFF_TRUESIGHT )
 			&& ( ch->race != RACE_ELF   )
 			&& ( ch->race != RACE_DWARF )
-			&& ( ch->race != RACE_DROW  )
-			&& ( ch->race != RACE_DEMON ) )
+			&& ( ch->race != RACE_DROW  ) )
 		return FALSE;
 
 	if ( victim->position == POS_DEAD )
@@ -1995,7 +1993,6 @@ bool can_see( CHAR_DATA *ch, CHAR_DATA *victim )
 	if ( IS_AFFECTED( victim, AFF_INVISIBLE )
 			&& !IS_AFFECTED( ch, AFF_DETECT_INVIS )
 			&& !IS_AFFECTED2( ch, AFF_TRUESIGHT )
-			&& ( ch->race != RACE_DEMON )
 			&& ( !is_class( ch, CLASS_ROGUE )
 				&& ch->level < 30 ) )
 		return FALSE;
@@ -2004,8 +2001,7 @@ bool can_see( CHAR_DATA *ch, CHAR_DATA *victim )
 			&& !IS_AFFECTED( ch, AFF_DETECT_HIDDEN )
 			&& !IS_AFFECTED2( ch, AFF_TRUESIGHT )
 			&& !victim->fighting
-			&& ch->race != RACE_DWARF
-			&& ch->race != RACE_DEMON )
+			&& ch->race != RACE_DWARF )
 		return FALSE;
 
 	return TRUE;
@@ -2025,8 +2021,7 @@ bool can_see_obj( CHAR_DATA *ch, OBJ_DATA *obj )
 		return TRUE;
 
 	if ( IS_AFFECTED( ch, AFF_BLIND ) 
-			&& !IS_AFFECTED2( ch, AFF_TRUESIGHT ) 
-			&& ch->race != RACE_ILLITHID )
+			&& !IS_AFFECTED2( ch, AFF_TRUESIGHT ) )
 		return FALSE;
 	if ( is_raffected( ch->in_room, gsn_globedark ) 
 			&& ch->race != RACE_DROW )
@@ -2042,14 +2037,12 @@ bool can_see_obj( CHAR_DATA *ch, OBJ_DATA *obj )
 			&& !IS_AFFECTED2( ch, AFF_TRUESIGHT )
 			&& ( ch->race != RACE_ELF )
 			&& ( ch->race != RACE_DWARF )
-			&& ( ch->race != RACE_DROW )
-			&& ( ch->race != RACE_DEMON ) )
+			&& ( ch->race != RACE_DROW ) )
 		return FALSE;
 
 	if ( IS_SET( obj->extra_flags, ITEM_INVIS )
 			&& !IS_AFFECTED( ch, AFF_DETECT_INVIS )
-			&& !IS_AFFECTED2( ch, AFF_TRUESIGHT )
-			&& ( ch->race != RACE_DEMON ) )
+			&& !IS_AFFECTED2( ch, AFF_TRUESIGHT ) )
 		return FALSE;
 
 	return TRUE;
@@ -2308,18 +2301,9 @@ char *antirace_bit_name( int antirace )
 	if ( antirace & ITEM_ANTI_HUMAN     ) strcat( buf, " anti-human"    );
 	if ( antirace & ITEM_ANTI_ELF       ) strcat( buf, " anti-elf"      );
 	if ( antirace & ITEM_ANTI_DWARF     ) strcat( buf, " anti-dwarf"    );
-	if ( antirace & ITEM_ANTI_PIXIE     ) strcat( buf, " anti-pixie"    );
+	if ( antirace & ITEM_ANTI_GNOME     ) strcat( buf, " anti-gnome"    );
 	if ( antirace & ITEM_ANTI_HALFLING  ) strcat( buf, " anti-halfling" );
 	if ( antirace & ITEM_ANTI_DROW      ) strcat( buf, " anti-drow"     );
-	if ( antirace & ITEM_ANTI_ELDER     ) strcat( buf, " anti-elder"    );
-	if ( antirace & ITEM_ANTI_OGRE      ) strcat( buf, " anti-ogre"     );
-	if ( antirace & ITEM_ANTI_LIZARDMAN ) strcat( buf, " anti-lizardman");
-	if ( antirace & ITEM_ANTI_DEMON     ) strcat( buf, " anti-demon"    );
-	if ( antirace & ITEM_ANTI_GHOUL     ) strcat( buf, " anti-ghoul"    );
-	if ( antirace & ITEM_ANTI_ILLITHID  ) strcat( buf, " anti-illithid" );
-	if ( antirace & ITEM_ANTI_MINOTAUR  ) strcat( buf, " anti-minotaur" );
-	if ( antirace & ITEM_ANTI_TROLL     ) strcat( buf, " anti-troll"    );
-	if ( antirace & ITEM_ANTI_SHADOW    ) strcat( buf, " anti-shadow"   );
 	return ( buf[0] != '\0' ) ? buf+1 : "none";
 }
 

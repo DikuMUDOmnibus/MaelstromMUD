@@ -816,7 +816,7 @@ bool check_blind( CHAR_DATA *ch ) {
 	if ( !IS_NPC( ch ) && IS_SET( ch->act, PLR_HOLYLIGHT ) )
 		return TRUE;
 
-	if ( IS_AFFECTED( ch, AFF_BLIND ) && ch->race != RACE_ILLITHID ) {
+	if ( IS_AFFECTED( ch, AFF_BLIND ) ) {
 		send_to_char(AT_WHITE, "You can't see a thing!\n\r", ch );
 		return FALSE;
 	}
@@ -866,9 +866,7 @@ void do_look( CHAR_DATA *ch, char *argument )
 			&& room_is_dark( ch->in_room ) 
 			&& ( ch->race != RACE_ELF   )
 			&& ( ch->race != RACE_DWARF )
-			&& ( ch->race != RACE_DROW  )
-			&& ( ch->race != RACE_DEMON ) 
-			&& ( ch->race != RACE_TABAXI ) )
+			&& ( ch->race != RACE_DROW  ) )
 	{
 		send_to_char(AT_DGREY, "It is pitch black ... \n\r", ch );
 		show_char_to_char( ch->in_room->people, ch );
@@ -3712,7 +3710,7 @@ void do_spells ( CHAR_DATA *ch, char *argument )
 			continue;
 		sprintf( buf, "%18s %3dpts ",
 				skill_table[sn].name,
-				( ch->race == RACE_ELF || ch->race == RACE_ELDER )
+				ch->race == RACE_ELF
 				? (int)(MANA_COST( ch, sn ) * .75) 
 				: MANA_COST( ch, sn ) );
 		send_to_char( AT_BLUE, buf, ch );

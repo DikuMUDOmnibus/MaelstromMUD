@@ -47,7 +47,7 @@ void raffect_to_room( ROOM_INDEX_DATA *room,
 	pd->type	 = raf_new->type;
 	pd->cost	 = MANA_COST( ch, pd->type );
 
-	if ( ch->race == RACE_ELDER || ch->race == RACE_ELF )
+	if ( ch->race == RACE_ELF )
 		pd->cost *= .75;
 
 	ch->powered	 = pd;
