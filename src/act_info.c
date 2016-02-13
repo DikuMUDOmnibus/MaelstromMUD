@@ -851,9 +851,7 @@ void do_look( CHAR_DATA *ch, char *argument )
 		send_to_char(AT_CYAN, "You can't see anything, you're sleeping!\n\r", ch );
 		return;
 	}
-	if ( is_raffected( ch->in_room, gsn_globedark )
-			&& !IS_SET( ch->act, PLR_HOLYLIGHT )
-			&& ch->race != RACE_DROW )
+	if ( is_raffected( ch->in_room, gsn_globedark ) && !IS_SET( ch->act, PLR_HOLYLIGHT ) )
 	{
 		send_to_char(AT_DGREY, "It's completely and utterly black!\n\r", ch );
 		return;
@@ -865,8 +863,7 @@ void do_look( CHAR_DATA *ch, char *argument )
 			&& !IS_SET( ch->act, PLR_HOLYLIGHT )
 			&& room_is_dark( ch->in_room ) 
 			&& ( ch->race != RACE_ELF   )
-			&& ( ch->race != RACE_DWARF )
-			&& ( ch->race != RACE_DROW  ) )
+			&& ( ch->race != RACE_DWARF ) )
 	{
 		send_to_char(AT_DGREY, "It is pitch black ... \n\r", ch );
 		show_char_to_char( ch->in_room->people, ch );

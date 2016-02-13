@@ -7628,12 +7628,6 @@ void spell_purify( int sn, int level, CHAR_DATA *ch, void *vo )
 			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
 			yesno = TRUE;
 		}
-		if ( IS_ANTI_RACE( obj, ITEM_ANTI_DROW ) )
-		{
-			REMOVE_BIT( obj->anti_race_flags, ITEM_ANTI_DROW );
-			act(AT_WHITE, "$p glows white.", victim, obj, NULL, TO_CHAR );
-			yesno = TRUE;
-		}
 	}
 
 	if ( ch != victim && yesno )

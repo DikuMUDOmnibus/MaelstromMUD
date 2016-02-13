@@ -2090,7 +2090,6 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 				ch->move    = MAX_MOVE(ch);
 				/* charisma */
 				if ( ( ch->race == RACE_HUMAN ) ||
-						( ch->race == RACE_DROW )  ||
 						( ch->race == RACE_DWARF ) )
 					ch->charisma = number_range( 20, 24 );
 				if ( ( ch->race == RACE_GNOME )  ||

@@ -1964,8 +1964,7 @@ bool can_see( CHAR_DATA *ch, CHAR_DATA *victim )
 
 	if ( !IS_NPC( ch ) && IS_SET( ch->act, PLR_HOLYLIGHT ) )
 		return TRUE;
-	if ( is_raffected( ch->in_room, gsn_globedark )
-			&& ch->race != RACE_DROW )
+	if ( is_raffected( ch->in_room, gsn_globedark ) )
 		return FALSE;
 
 	if ( IS_AFFECTED( ch, AFF_BLIND ) 
@@ -1976,8 +1975,7 @@ bool can_see( CHAR_DATA *ch, CHAR_DATA *victim )
 			&& !IS_AFFECTED( ch, AFF_INFRARED )
 			&& !IS_AFFECTED2( ch, AFF_TRUESIGHT )
 			&& ( ch->race != RACE_ELF   )
-			&& ( ch->race != RACE_DWARF )
-			&& ( ch->race != RACE_DROW  ) )
+			&& ( ch->race != RACE_DWARF ) )
 		return FALSE;
 
 	if ( victim->position == POS_DEAD )
@@ -2023,8 +2021,7 @@ bool can_see_obj( CHAR_DATA *ch, OBJ_DATA *obj )
 	if ( IS_AFFECTED( ch, AFF_BLIND ) 
 			&& !IS_AFFECTED2( ch, AFF_TRUESIGHT ) )
 		return FALSE;
-	if ( is_raffected( ch->in_room, gsn_globedark ) 
-			&& ch->race != RACE_DROW )
+	if ( is_raffected( ch->in_room, gsn_globedark )  )
 		return FALSE;
 	if ( !IS_NPC( ch ) && IS_AFFECTED2( ch, AFF_TRUESIGHT ) )
 		return TRUE;
@@ -2036,8 +2033,7 @@ bool can_see_obj( CHAR_DATA *ch, OBJ_DATA *obj )
 			&& !IS_AFFECTED( ch, AFF_INFRARED )
 			&& !IS_AFFECTED2( ch, AFF_TRUESIGHT )
 			&& ( ch->race != RACE_ELF )
-			&& ( ch->race != RACE_DWARF )
-			&& ( ch->race != RACE_DROW ) )
+			&& ( ch->race != RACE_DWARF ) )
 		return FALSE;
 
 	if ( IS_SET( obj->extra_flags, ITEM_INVIS )
@@ -2303,7 +2299,6 @@ char *antirace_bit_name( int antirace )
 	if ( antirace & ITEM_ANTI_DWARF     ) strcat( buf, " anti-dwarf"    );
 	if ( antirace & ITEM_ANTI_GNOME     ) strcat( buf, " anti-gnome"    );
 	if ( antirace & ITEM_ANTI_HALFLING  ) strcat( buf, " anti-halfling" );
-	if ( antirace & ITEM_ANTI_DROW      ) strcat( buf, " anti-drow"     );
 	return ( buf[0] != '\0' ) ? buf+1 : "none";
 }
 

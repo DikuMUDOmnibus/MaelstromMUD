@@ -447,17 +447,17 @@ inertial barrier~
 10 10
 0 0 0
 A
-19 10
-A
-18 10
-A
-13 100
-A
-17 -100
+23 -10
 A
 24 -25
 A
-23 -10
+17 -100
+A
+13 100
+A
+18 10
+A
+19 10
 #2308
 Sword Might~
 sword of Might~
@@ -471,9 +471,9 @@ reserved~
 0 0
 0 0 0
 A
-2 2
-A
 19 30
+A
+2 2
 #2309
 loin cloth~
 a loin cloth~

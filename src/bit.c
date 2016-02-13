@@ -368,7 +368,6 @@ const struct flag_type anti_race_flags[] =
 	{	"anti-dwarf",		ITEM_ANTI_DWARF,	TRUE	},
 	{	"anti-gnome",		ITEM_ANTI_GNOME,	TRUE	},
 	{	"anti-halfling",	ITEM_ANTI_HALFLING,	TRUE	},
-	{	"anti-drow",		ITEM_ANTI_DROW,		TRUE	},
 	{	"",			0,			0	}
 };
 

@@ -5036,8 +5036,6 @@ void do_oset( CHAR_DATA *ch, char *argument )
 			value = ITEM_ANTI_GNOME;
 		if (!str_cmp( arg3, "halfling" ) || !str_cmp( arg3, "hlf" ) )
 			value = ITEM_ANTI_HALFLING;
-		if (!str_cmp( arg3, "drow" ) || !str_cmp( arg3, "drw" ) )
-			value = ITEM_ANTI_DROW;
 
 		if ( value == 0 || !str_cmp( arg3, "none" ) )
 		{

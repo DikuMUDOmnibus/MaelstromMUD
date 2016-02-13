@@ -507,7 +507,6 @@ struct playerlist_data
 #define RACE_DWARF           2
 #define RACE_GNOME           3
 #define RACE_HALFLING        4
-#define RACE_DROW            5
 
 /*
  * Per-class stuff.
@@ -1085,7 +1084,6 @@ struct	kill_data
 #define ITEM_ANTI_DWARF			4
 #define ITEM_ANTI_GNOME			8
 #define ITEM_ANTI_HALFLING	       16
-#define ITEM_ANTI_DROW		       32
 
 /*
  * Wear flags.
@@ -2797,8 +2795,6 @@ DECLARE_DO_FUN(	do_rake		);
 /*
  * Racial Skills Start Here -- Hannibal
  */
-DECLARE_DO_FUN( do_globedarkness);  /* Drow */
-DECLARE_DO_FUN( do_drowfire	);  /* Drow */
 DECLARE_DO_FUN( do_forge	);  /* Dwarf */
 /* Monk skills -- Hannibal */
 DECLARE_DO_FUN( do_flamehand	);

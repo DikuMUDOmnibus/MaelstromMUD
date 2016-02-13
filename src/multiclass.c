@@ -147,8 +147,7 @@ bool gets_zapped( CHAR_DATA *ch, OBJ_DATA *obj )
 				|| ( IS_ANTI_RACE( obj, ITEM_ANTI_ELF       ) && ch->race == RACE_ELF )
 				|| ( IS_ANTI_RACE( obj, ITEM_ANTI_DWARF     ) && ch->race == RACE_DWARF )
 				|| ( IS_ANTI_RACE( obj, ITEM_ANTI_GNOME     ) && ch->race == RACE_GNOME )
-				|| ( IS_ANTI_RACE( obj, ITEM_ANTI_HALFLING  ) && ch->race == RACE_HALFLING )
-				|| ( IS_ANTI_RACE( obj, ITEM_ANTI_DROW      ) && ch->race == RACE_DROW ) )
+				|| ( IS_ANTI_RACE( obj, ITEM_ANTI_HALFLING  ) && ch->race == RACE_HALFLING ) )
 				return TRUE;
 	return FALSE;
 }
