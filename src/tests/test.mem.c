@@ -72,12 +72,6 @@ DO_TEST(new_mprog_data) {
   CU_ASSERT_EQUAL(sizeof(*testMobProg), 16);
 }
 
-DO_TEST(new_race_data) {
-  RACE_DATA *testRace;
-
-  CU_ASSERT_EQUAL(sizeof(*testRace), 36);
-}
-
 DO_TEST_SUITE(mem) = {
   TEST(new_reset_data),
   TEST(new_area),
@@ -91,6 +85,5 @@ DO_TEST_SUITE(mem) = {
   TEST(new_shop),
   TEST(new_mob_index),
   TEST(new_mprog_data),
-  TEST(new_race_data),
   CU_TEST_INFO_NULL,
 };

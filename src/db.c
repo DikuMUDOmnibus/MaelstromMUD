@@ -44,8 +44,6 @@ HELP_DATA *		help_last;
 SOCIAL_DATA *		social_first;
 SOCIAL_DATA *		social_last;
 
-RACE_DATA *		first_race;
-
 SHOP_DATA *		shop_first;
 SHOP_DATA *		shop_last;
 
@@ -255,7 +253,6 @@ void                    clan_sort               args ( ( CLAN_DATA *pClan ) );
 void add_playerlist    args ( (CHAR_DATA *ch) );
 void update_playerlist args ( ( CHAR_DATA *ch ) );
 void load_player_list  args ( ( ) );
-void load_race 		args ( ( ) );
 /*
  * Memory management.
  * Increase MAX_STRING from 1500000 if you have too.
@@ -525,7 +522,6 @@ void boot_db( void )
 		load_socials( );
 		load_newbie( );
 		load_player_list( );
-		load_race( );
 		load_notes( );
 		load_down_time( );
 
@@ -4917,113 +4913,4 @@ void load_newbie( void )
 	fclose ( fp );
 
 	return;
-}
-
-
-
-/* Decklarean */
-
-void race_sort( RACE_DATA *pRace )
-{
-	RACE_DATA *fRace;
-
-	if ( !first_race )
-	{
-		first_race = pRace;
-		return;
-	}
-	for ( fRace = first_race; fRace; fRace = fRace->next )
-	{
-		if (    pRace->vnum == fRace->vnum
-				|| (    pRace->vnum > fRace->vnum
-					&& (    !fRace->next
-						|| pRace->vnum < fRace->next->vnum
-					   )
-				   )
-		   )
-		{
-			pRace->next = fRace->next;
-			fRace->next = pRace;
-			return;
-		}
-	}
-	pRace->next = first_race;
-	first_race = pRace;
-	return;
-}
-
-
-void load_race( void )
-{
-	FILE      *fp;
-	RACE_DATA *pRace;
-
-	/* Check if we have a race list. */
-	if ( !( fp = fopen( RACE_FILE, "r" ) ) )
-		return;
-
-	fpArea = fp;
-	strcpy(strArea, RACE_FILE);
-
-	/* Load the race list */
-	for ( ; ; )
-	{
-		char*  name;
-
-		pRace = new_race_data( );
-
-		/* Load a character */
-		for ( ; ; )
-		{
-			name   = fread_word( fp );
-
-			/* Check if we are at the end of the race list */
-			if ( !str_cmp( name, "#END"    ) )
-			{
-				fclose( fp );
-				return;
-			}
-			else if ( !str_cmp( name, "End" ) )
-				break;
-			else if ( !str_cmp( name, "VNum" ) )
-				pRace->vnum       = fread_number( fp );
-			else if ( !str_cmp( name, "Race_Full" ) )
-				pRace->race_full  = fread_string( fp );
-			else if ( !str_cmp( name, "Race_Name" ) )
-				pRace->race_name  = fread_string( fp );
-			else if ( !str_cmp( name, "MStr" ) )
-				pRace->mstr       = fread_number( fp );
-			else if ( !str_cmp( name, "MInt" ) )
-				pRace->mint       = fread_number( fp );
-			else if ( !str_cmp( name, "MWis" ) )
-				pRace->mwis       = fread_number( fp );
-			else if ( !str_cmp( name, "MDex" ) )
-				pRace->mdex       = fread_number( fp );
-			else if ( !str_cmp( name, "MCon" ) )
-				pRace->mcon       = fread_number( fp );
-		}
-		race_sort( pRace );
-	}
-	fclose(fp);
-}
-
-
-RACE_DATA *get_race_data( int vnum )
-{
-	RACE_DATA *pRace;
-
-	for ( pRace  = first_race;
-			pRace;
-			pRace  = pRace->next )
-	{
-		if ( pRace->vnum == vnum )
-			return pRace;
-	}
-
-	if ( fBootDb )
-	{
-		bug( "Get_race_data: bad race %d.", vnum );
-	}
-
-	return NULL;
 }

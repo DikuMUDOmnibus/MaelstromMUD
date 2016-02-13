@@ -272,42 +272,6 @@ void save_clans( )
 	return;
 }
 
-void save_race( )
-{
-	FILE      *fp;
-	RACE_DATA *pRace;
-
-
-	if ( ( fp = fopen( RACE_FILE, "w" ) ) == NULL ) 
-	{
-		bug( "Save_Race: fopen", 0 ); 
-		perror( "Race.dat" ); 
-	}
-
-	for ( pRace = first_race;  pRace; pRace = pRace->next )
-	{
-		fprintf( fp, "VNum       %d\n", pRace->vnum     );
-		fprintf( fp, "Race_Full  %s~\n", pRace->race_full);
-		if (pRace->race_name)
-			fprintf( fp, "Race_Name  %s~\n", pRace->race_name);
-		if (pRace->mstr)
-			fprintf( fp, "MStr       %d\n", pRace->mstr     );
-		if (pRace->mint)
-			fprintf( fp, "MInt       %d\n", pRace->mint     );
-		if (pRace->mwis)
-			fprintf( fp, "MWis       %d\n", pRace->mwis     );
-		if (pRace->mdex)
-			fprintf( fp, "MDex       %d\n", pRace->mdex     );
-		if (pRace->mcon)
-			fprintf( fp, "MCon       %d\n", pRace->mcon     );
-
-		fprintf( fp, "END\n" ); 
-	}
-	fprintf( fp, "#END\n" ); 
-	fclose( fp );
-}
-
-
 void save_social( )
 {
 	FILE *fp;
@@ -1096,7 +1060,6 @@ void do_asave( CHAR_DATA *ch, char *argument )
 		send_to_char(C_DEFAULT, "You saved the world.\n\r", ch );
 		save_clans( );
 		save_social( );
-		save_race( );
 		save_helps( );
 		save_newbie( ); 
 		save_player_list( );
@@ -1119,11 +1082,6 @@ void do_asave( CHAR_DATA *ch, char *argument )
 	if ( !str_cmp( "socials", arg1 ) )
 	{
 		save_social( );
-		return;
-	}
-	if ( !str_cmp( "race", arg1 ) )
-	{
-		save_race( );
 		return;
 	}
 

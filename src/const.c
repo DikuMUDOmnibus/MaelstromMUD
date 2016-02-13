@@ -75,12 +75,22 @@ const   struct  quest_data      quest_table     []              =
 	{     "",                     "",         0,           0,       0      }
 };
 
+const   struct  race_type       race_table      [MAX_RACE]      =
+{
+/*  {  "Sml", "Full Name", mstr, mint, mwis, mdex, mcon }, */
+    {  "Hum", "Human", 		  0,  0, 0,  0,  0 },
+    {  "Elf", "Elf", 				0,  1,  0, 0, -1 },
+    {  "Dwa", "Dwarf", 			0, -2,  0, 0,  2 },
+    {  "Gno", "Gnome", 		 -2,  0,  0, 2,  0 },
+    {  "Hlf", "Halfling", 	0,  0, -2, 2,  0 },
+    {  "Drw", "Drow", 		 -1,  0,  0, 1,  0 }
+};
+
 const	struct	class_type	class_table	[MAX_CLASS]	=
 {
 	/*  {   "Who", "Long", PRIME_STAT, START_WEAPON,
 		GUILD, PRAC_%, tach0_0, tach0_97, HP_MIN, HP_MAX, GETS_MANA,
-		{ HUM, ELF, DWA, PIX, HLF, DRW, ELD, OGR, LIZ, 
-		DEM, GHL, ILL, MIN, TRO, SHD, TBX },
+		{ HUM, ELF, DWA, PIX, HLF, DRW },
 		{ MAG, THI, WAR }
 		{ hit, slice, stab, slash, whip, claw, blast, pound, crush,
 		grep, bite, pierce, suction, chop }

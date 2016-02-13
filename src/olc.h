@@ -57,7 +57,6 @@ typedef	bool OLC_FUN		args( ( CHAR_DATA *ch, char *argument ) );
 #define ED_MRESET 14
 #define ED_SPEDIT 15
 #define ED_NEWBIE 16
-#define RACE_EDIT 17
 
 /*
  * Interpreter Prototypes
@@ -77,7 +76,6 @@ void		forge_object		args( ( CHAR_DATA *ch, char *argument ) );
 void    mreset					args( ( CHAR_DATA *ch, char *argument ) );
 void		spedit					args( ( CHAR_DATA *ch, char *argument ) );
 void    nedit						args( ( CHAR_DATA *ch, char *argument ) );
-void  	race_edit				args( ( CHAR_DATA *ch, char *argument ) );
 
 /*
  * OLC Constants
@@ -132,7 +130,6 @@ extern const struct olc_cmd_type	forge_obj_table[];
 extern const struct olc_cmd_type	mreset_table[];
 extern const struct olc_cmd_type	spedit_table[];
 extern const struct olc_cmd_type	nedit_table[];
-extern const struct olc_cmd_type	race_edit_table[];
 
 /*
  * General Functions
@@ -361,20 +358,6 @@ DECLARE_OLC_FUN( nedit_answer1		);
 DECLARE_OLC_FUN( nedit_answer2		);
 DECLARE_OLC_FUN( nedit_show		);
 
-/* Social editor prototype  -Decklarean */
-
-DECLARE_OLC_FUN( race_edit_name		);
-DECLARE_OLC_FUN( race_edit_full		);
-DECLARE_OLC_FUN( race_edit_mcon		);
-DECLARE_OLC_FUN( race_edit_mstr		);
-DECLARE_OLC_FUN( race_edit_mdex		);
-DECLARE_OLC_FUN( race_edit_mint		);
-DECLARE_OLC_FUN( race_edit_mwis		);
-DECLARE_OLC_FUN( race_edit_show		);
-DECLARE_OLC_FUN( race_edit_delete		);
-
-
-
 /*
  * Macros
  */
@@ -399,4 +382,3 @@ DECLARE_OLC_FUN( race_edit_delete		);
 #define FORGE_OBJ(Ch, Obj)	( Obj = (OBJ_DATA*)Ch->desc->pEdit )
 #define EDIT_SPELL( Ch, Spell)  ( Spell = (SKILL_TYPE *)Ch->desc->pEdit )
 #define EDIT_NEWBIE( Ch, Newbie ) ( Newbie = (NEWBIE_DATA *)Ch->desc->pEdit )
-#define EDIT_RACE(Ch, pRace) ( pRace = (RACE_DATA *)Ch->desc->pEdit )

@@ -1446,8 +1446,7 @@ void do_score( CHAR_DATA *ch, char *argument )
 	send_to_char( AT_CYAN, buf, ch );
 	send_to_char( AT_WHITE, "==================================================================\n\r",
 			ch );
-	sprintf( buf, "&cYou are a &W%s&c &r%s&c.\n\r",
-			(get_race_data(ch->race))->race_full, class_long( ch ) );
+	sprintf( buf, "&cYou are a &W%s&c &r%s&c.\n\r", race_table[ch->race].race_full, class_long( ch ) );
 	send_to_char( AT_CYAN, buf, ch );
 	if ( ch->clan )
 	{
@@ -1988,8 +1987,8 @@ void do_who( CHAR_DATA *ch, char *argument )
 						fRaceRestrict = TRUE;
 						for ( iRace = 0; iRace < MAX_RACE; iRace++ )
 						{
-							if ( ( !str_cmp( arg, (get_race_data(iRace))->race_name ) && !lng )
-									|| ( !str_cmp( arg1, (get_race_data(iRace))->race_full ) ) )
+							if ( ( !str_cmp( arg, race_table[iRace].race_name ) && !lng )
+									|| ( !str_cmp( arg1, race_table[iRace].race_full ) ) )
 							{
 								rgfRace[iRace] = TRUE;
 								break;
@@ -2143,7 +2142,7 @@ void do_who( CHAR_DATA *ch, char *argument )
 		/*
 		 * Figure out what to print for race.
 		 */
-		race = (get_race_data(wch->race))->race_name;
+		race = race_table[wch->race].race_name;
 		/* Clan Stuff */
 		if (wch->clan != 0)
 		{
@@ -2352,155 +2351,6 @@ void do_who( CHAR_DATA *ch, char *argument )
 		send_to_char( AT_GREEN, "There is no class/race/clan/person by that name in the game.\n\r", ch );
 	return;
 }
-
-/* Outdated by my changes to normal who ( besides, i'm too lazy to type
-   whoi or whois :)   -  TRI
-   Contributed by Kaneda 
-   void do_whois( CHAR_DATA *ch, char *argument )
-   {
-   DESCRIPTOR_DATA *d;
-   char             buf  [ MAX_STRING_LENGTH  ];
-   char             name [ MAX_INPUT_LENGTH   ];
-   bool             found;
-   argument = one_argument( argument, name );
-   found = FALSE;
-   if( name[0] == '\0' )
-   {
-   send_to_char(AT_DGREEN, "Usage:  whois <name>\n\r", ch );
-   return;
-   }
-
-   name[0] = UPPER( name[0] );
-
-   buf[0] = '\0';
-   for( d = descriptor_list ; d ; d = d->next )
-   {
-   CHAR_DATA       *wch;
-   char      const *class;
-   char      const *race;
-   char             clan[MAX_STRING_LENGTH];
-   CLAN_DATA       *pClan;
-
-   wch = ( d->original ) ? d->original : d->character; 
-
-   if( d->connected != CON_PLAYING || !can_see( ch, wch ) )
-   continue;
-
-   if( str_prefix( name, wch->name ) )
-   continue;
-
-   found = TRUE;
-   class = class_table[ wch->class ].who_name;
-   if( wch->level >= LEVEL_HERO )
-   switch( wch->level )
-   {
-   case L_IMP: class = "STORM LORD"; break;
-   case L_CON: class = " COUNCIL  "; break;
-   case L_DIR: class = " GUARDIAN "; break;
-   case L_SEN: class = " CREATOR  "; break;
-   case L_GOD: 
-   if ( wch->sex == 2 )
-   class = " GODDESS  ";
-   else
-   class = "   GOD    ";
-   break;
-   case L_DEM: class = "  DEITY   ";break;
-   case L_JUN: class = "  SAINT   "; break;
-   case L_APP: class = "  AVATAR  "; break;
-   case LEVEL_HERO: class = " CHAMPION "; break;
-   }
-   race = (get_race_data(wch->race))->race_name;    
-   Clan Stuff 
-   if (wch->clan != 0)
-   {
-   pClan = get_clan_index(wch->clan);
-   if IS_SET(pClan->settings, CLAN_PKILL)
-   switch ( wch->clev )
-   {
-   default:
-   sprintf( clan, "-<%s>-", pClan->name ); break;
-   case 0:
-   sprintf( clan, "-<%s>-", pClan->name ); break;
-   case 1:
-   sprintf( clan, "-<Centurion of %s>-", pClan->name ); break;
-   case 2:
-sprintf( clan, "-<Council of %s>-", pClan->name ); break;
-case 3:
-sprintf( clan, "-<Leader of %s>-", pClan->name ); break;
-case 4:
-sprintf( clan, "-<Champion of %s>-", pClan->name ); break;
-case 5:
-sprintf( clan, "-<Deity of %s>-", pClan->name ); break;
-}
-	else
-switch ( wch->clev )
-{
-	default:
-		sprintf( clan, "(%s)", pClan->name ); break;
-	case 0:
-		sprintf( clan, "(%s)", pClan->name ); break;
-	case 1:
-		sprintf( clan, "(Centurion of %s)", pClan->name ); break;
-	case 2:
-		sprintf( clan, "(Council of %s)", pClan->name ); break;
-	case 3:
-		sprintf( clan, "(Leader of %s)", pClan->name ); break;
-	case 4:
-		sprintf( clan, "(Champion of %s)", pClan->name ); break;
-	case 5:
-		sprintf( clan, "(Deity of %s)", pClan->name ); break;
-}
-}
-*
-* Format it up.
-	*
-if ( wch->level < LEVEL_HERO )
-	sprintf( buf + strlen( buf ), "[%2d %s %s] ",
-			wch->level, race, class );
-else
-sprintf( buf + strlen( buf ), "[%s] ", class);
-send_to_char( AT_WHITE, buf, ch );
-
-if(wch->guild != NULL)
-{
-	buf[0] = '\0';
-	sprintf(buf+strlen(buf), "[%s", wch->guild->name);
-	send_to_char(wch->guild->color, buf, ch);
-	buf[0] = '\0';
-	switch(wch->guild_rank)
-	{
-		case 0: sprintf(buf+strlen(buf), "] ");		break;
-		case 1: sprintf(buf+strlen(buf), " Lord] ");	break;
-		case 2: sprintf(buf+strlen(buf), " High Lord] ");	break;
-		case 3: sprintf(buf+strlen(buf), " Overlord] ");	break;
-				cast 4: sprintf(buf+strlen(buf), " Diety] ");       break;
-		default: sprintf(buf+strlen(buf), "Bug] ");		break;
-	}
-	send_to_char(wch->guild->color, buf, ch);
-}
-buf[0] = '\0';
-if ( wch->pcdata->lname )
-	sprintf( buf + strlen( buf ), "%s%s%s%s. ",
-			wch->name, ( wch->pcdata->lname[0] != '\0' ) ? " " : "", 
-			wch->pcdata->lname, wch->pcdata->title );
-else
-sprintf( buf + strlen( buf ), "%s%s. ", 
-		wch->name, wch->pcdata->title );
-send_to_char(AT_GREEN, buf, ch);
-buf[0] = '\0';
-if (wch->clan != 0)
-	sprintf( buf + strlen( buf ), "%s\n\r",  clan );
-	else sprintf( buf, "\n\r" );
-	send_to_char( AT_RED, buf, ch );
-	buf[0] = '\0';
-	}
-
-if ( !found )
-	send_to_char(AT_DGREEN, "No one matches the given criteria.\n\r", ch );
-	return;
-	}
-*/
-
 
 void do_inventory( CHAR_DATA *ch, char *argument )
 {
@@ -4572,29 +4422,6 @@ void do_guilds( CHAR_DATA *ch, char *argument )
 
 }
 
-void do_racelist( CHAR_DATA *ch, char *argument )
-{
-
-	RACE_DATA *pRace;
-	char buf[MAX_STRING_LENGTH];
-
-
-	for ( pRace  = first_race;
-			pRace;
-			pRace  = pRace->next )
-	{
-		sprintf( buf,
-				"&z[&W%2d&z][&W%20s&z][&W%3s&z][&W%2d&z][&W%2d&z][&W%2d&z][&W%2d&z][&W%2d&z]\n\r",
-				pRace->vnum, pRace->race_full, pRace->race_name,
-				pRace->mstr, pRace->mint, pRace->mwis, pRace->mdex,
-				pRace->mcon );
-		send_to_char( C_DEFAULT, buf, ch );
-
-	}
-
-}
-
-
 void do_clans( CHAR_DATA *ch, char *argument )
 {
 	CLAN_DATA    *pClan;
@@ -5118,7 +4945,7 @@ void do_finger( CHAR_DATA *ch, char *argument )
 	send_to_char( AT_WHITE, buf, ch );              
 
 	class = class_short( victim );
-	race = (get_race_data(victim->race))->race_name;
+	race = race_table[victim->race].race_name;
 	sprintf( buf, "&CClass: &W%-10s     &CRace: &W%s\n\r", class,race );
 	send_to_char( AT_WHITE, buf, ch );
 

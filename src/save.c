@@ -1654,7 +1654,7 @@ void fwrite_finger( CHAR_DATA *ch, FILE *fp )
 	fprintf( fp, "&CSex: &W%s\n",	  ch->sex == SEX_MALE ? "male" :
 			ch->sex == SEX_FEMALE ? "female" : "neutral" );
 	fprintf( fp, "&CClass: &W%-15s",	class_short( ch ) );
-	fprintf( fp, "&CRace: &W%s\n",	(get_race_data(ch->race))->race_name );
+	fprintf( fp, "&CRace: &W%s\n",	race_table[ch->race].race_name );
 
 	if ( is_class( ch, CLASS_ROGUE ) ) {
 		fprintf( fp, "&CThief: &W%s\n", ( IS_SET( ch->act, PLR_THIEF ) ) ? "Yes" : "No" ); 

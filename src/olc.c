@@ -81,9 +81,6 @@ bool run_olc_editor( DESCRIPTOR_DATA *d )
 		case ED_SPEDIT:
 			spedit( d->character, d->incomm );
 			break;
-		case RACE_EDIT:
-			race_edit( d->character, d->incomm );
-			break;
 		default:
 			return FALSE;
 	}
@@ -146,9 +143,6 @@ char *olc_ed_name( CHAR_DATA *ch )
 			break; 
 		case ED_SPEDIT:
 			sprintf( buf, "SPEdit" );
-			break;
-		case RACE_EDIT:
-			sprintf( buf, "Race_Edit" );
 			break;
 		default:
 			sprintf( buf, " " );
@@ -326,9 +320,6 @@ bool show_commands( CHAR_DATA *ch, char *argument )
 		case ED_NEWBIE:
 			show_olc_cmds( ch, nedit_table );
 			break; 
-		case RACE_EDIT:
-			show_olc_cmds( ch, race_edit_table );
-			break;
 	}
 
 	return FALSE;
@@ -608,24 +599,6 @@ const struct olc_cmd_type spedit_table[] =
 
 	{   "",             0,                      }
 };
-
-const struct olc_cmd_type race_edit_table[] =
-{
-	/*  {   command         function                }, */
-
-	{   "commands",     show_commands           },
-	{   "name",         race_edit_name	      },
-	{   "full",        	race_edit_full       	},
-	{   "mstr",         race_edit_mstr		},
-	{   "mint",   	race_edit_mint		},
-	{   "mwis",         race_edit_mwis      	},
-	{   "mdex",         race_edit_mdex		},
-	{   "mcon",       	race_edit_mcon		},
-	{   "delet",      	edit_delet		},
-	{   "delete",      	race_edit_delete		},
-	{   "",             0,                      }
-};
-
 
 const struct olc_cmd_type sedit_table[] =
 {
@@ -3032,127 +3005,3 @@ void do_nedit( CHAR_DATA *ch, char *argument )
 	return;
 
 }
-
-/*
- *  Race editor by Decklarean
- */
-
-
-void race_edit(CHAR_DATA *ch, char *argument)
-{
-	char command[MAX_INPUT_LENGTH];
-	char arg[MAX_STRING_LENGTH];
-	int cmd;
-
-	smash_tilde(argument);
-	strcpy(arg, argument);
-	argument = one_argument(argument, command);
-
-	if(command[0] == '\0')
-	{
-		race_edit_show(ch, argument);
-		return;
-	}
-
-	if(!str_cmp(command, "credit"))
-	{
-		send_to_char( AT_YELLOW, "Made by Decklarean, 1997.\n\r", ch );
-		return;
-	}
-
-	if(!str_cmp(command, "done"))
-	{
-		save_race( );
-		edit_done( ch );
-		return;
-	}
-
-	/* Call editor function */
-	for(cmd = 0;*race_edit_table[cmd].name;cmd++)
-	{
-		if(!str_prefix(command, race_edit_table[cmd].name))
-		{
-			(*race_edit_table[cmd].olc_fun) (ch, argument);
-			return;
-		}
-	}
-
-	/* Default to Standard Interpreter. */
-	interpret(ch, arg);
-	return;
-}
-
-/* get a race out of the race list */
-
-RACE_DATA *get_race(char *argument)
-{
-	RACE_DATA *pRace;
-	for(pRace = first_race;pRace;pRace = pRace->next)
-	{
-		if(is_name(NULL, argument, pRace->race_name) ||
-				is_name(NULL, argument, pRace->race_full) )
-		{
-			return pRace;
-		}
-	}
-	return NULL;
-}
-
-void do_race_edit(CHAR_DATA *ch, char *argument)
-{
-	RACE_DATA *pRace;
-	char command[MAX_INPUT_LENGTH];
-	char arg[MAX_STRING_LENGTH];
-	int iRace;
-
-	strcpy( arg, argument );
-	argument = one_argument(argument, command);
-
-	if(command[0] == 'c' && !str_prefix(command, "create"))
-	{
-		if(argument[0] == '\0' || strlen( argument ) > 20)
-		{
-			send_to_char(C_DEFAULT, "Race_Edit:  Syntax: race_edit create <race name>\n\r", ch);
-			send_to_char(C_DEFAULT, "                    (Race name can't be longer than 20 characters.)\n\r", ch);
-			return; 
-		}
-
-		if(get_race(argument) != NULL)
-		{
-			send_to_char(C_DEFAULT, "Race_Edit:  Race entry already exists.\n\r", ch);
-			return;
-		}
-
-		pRace = new_race_data( );
-
-		/* set race full name */
-		pRace->race_full = str_dup(argument);
-		/* set race vnum */
-		for ( iRace = 0; iRace < top_race; iRace++ )
-			if ( !(get_race_data(iRace)))
-			{
-				pRace->vnum = iRace;
-				break;
-			}
-
-
-		/* add race to race list */
-		race_sort( pRace );
-	}
-	else
-	{
-		if((pRace = get_race(arg)) == NULL)
-		{
-			send_to_char(C_DEFAULT, "Race entry not found.\n\r", ch);
-			return;
-		}
-	}
-	ch->desc->pEdit = (void *) pRace;
-	ch->desc->editor = RACE_EDIT;
-	ch->desc->inEdit = NULL;
-	ch->desc->editin = 0;
-	race_edit_show(ch, "");
-	return;
-}
-
-

@@ -3711,7 +3711,7 @@ void spell_mind_probe( int sn, int level, CHAR_DATA *ch, void *vo )
 			(get_age( victim ) - 17) * 4 );
 	send_to_char( AT_CYAN, buf, ch );
 	sprintf( buf, "You are a &Y%s&c and have chosen the vocation of a &Y%s&c.\n\r",
-			(get_race_data(victim->race))->race_full, class_short( victim ) );
+			race_table[victim->race].race_full, class_short( victim ) );
 	send_to_char( AT_CYAN, buf, ch );
 	if ( victim->clan )
 	{

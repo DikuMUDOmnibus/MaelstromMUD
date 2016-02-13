@@ -100,6 +100,7 @@ char *class_long( CHAR_DATA *ch )
 	}
 	return buf+1;
 }
+
 char *class_short( CHAR_DATA *ch )
 {
 	static char buf [ 512 ];
@@ -114,6 +115,7 @@ char *class_short( CHAR_DATA *ch )
 	}
 	return buf+1;
 }
+
 char *class_numbers( CHAR_DATA *ch, bool pSave )
 {
 	static char buf[ 512 ];

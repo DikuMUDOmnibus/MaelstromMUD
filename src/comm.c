@@ -1383,12 +1383,12 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 {
 	CHAR_DATA *ch;
 	NOTE_DATA *pnote;
-	RACE_DATA *pRace;
 	char      *pwdnew;
 	char      *p;
 	char       buf [ MAX_STRING_LENGTH ];
 	char       buf2[ MAX_STRING_LENGTH ];
 	int        iClass;
+	int        iRace;
 	int	       iCount;
 	int        notes;
 	bool       fOld;
@@ -1654,14 +1654,14 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			buf2[0] = '\0';
 			strcpy( buf2,
 					"\n\r                  &z-= &RSelect a race from the list below &z=-\n\r\n\r" );
-			for ( iClass = 0; iClass < MAX_RACE; iClass++ )
+			for ( iRace = 0; iRace < MAX_RACE; iRace++ )
 			{
 				sprintf( buf, "&z[&W%-12s&z]%s",
-						(get_race_data(iClass))->race_full,
-						(( iClass+1) % 5) == 0 ? "\n\r" : "" );
+						race_table[iRace].race_full,
+						(( iRace+1) % 5) == 0 ? "\n\r" : "" );
 				strcat( buf2, buf );
 			}
-			if ( iClass % 5 != 0 )
+			if ( iRace % 5 != 0 )
 				strcat( buf2, "\n\r" );
 			strcat( buf2, "\n\r&RRACE &w-> " );
 			write_to_buffer( d, buf2, 0 );
@@ -1669,24 +1669,24 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			d->connected = CON_GET_NEW_RACE;
 			break;
 		case CON_GET_NEW_RACE:
-			for ( iClass = 0; iClass < MAX_RACE; iClass++ )
+			for ( iRace = 0; iRace < MAX_RACE; iRace++ )
 			{
-				if ( ( !str_prefix( argument, (get_race_data(iClass))->race_name ) )
-						|| ( !str_cmp( argument, (get_race_data(iClass))->race_full ) ) )
+				if ( ( !str_prefix( argument, race_table[iRace].race_name ) )
+						|| ( !str_cmp( argument, race_table[iRace].race_full ) ) )
 				{
-					ch->race = iClass;
+					ch->race = iRace;
 					break;
 				}
 			}
 
-			if ( iClass == MAX_RACE )
+			if ( iRace == MAX_RACE )
 			{
 				write_to_buffer( d,
 						"&cThat's not a race&w.\n\r&WWhat IS your race&w? ", 0 );
 				return;
 			}
-			sprintf( buf, "%s %s", (get_race_data(iClass))->race_full,
-					(get_race_data(iClass))->race_name );
+			sprintf( buf, "%s %s", race_table[iRace].race_full,
+					race_table[iRace].race_name );
 			do_help( ch, buf );
 			write_to_buffer( d, "&WIs this the race you desire&w? ", 0 );
 			d->connected = CON_CONFIRM_RACE;
@@ -1699,12 +1699,11 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					/* booger */
 					if (IS_SET(ch->act2, PLR_REMORT ))
 					{
-						pRace = get_race_data(d->character->race);
-						ch->pcdata->mod_str = pRace->mstr;
-						ch->pcdata->mod_int = pRace->mint;
-						ch->pcdata->mod_wis = pRace->mwis;
-						ch->pcdata->mod_dex = pRace->mdex;
-						ch->pcdata->mod_con = pRace->mcon;
+						ch->pcdata->mod_str = race_table[d->character->race].mstr;
+						ch->pcdata->mod_int = race_table[d->character->race].mint;
+						ch->pcdata->mod_wis = race_table[d->character->race].mwis;
+						ch->pcdata->mod_dex = race_table[d->character->race].mdex;
+						ch->pcdata->mod_con = race_table[d->character->race].mcon;
 					}
 					buf2[0]='\0';
 					strcpy( buf2,
@@ -1732,14 +1731,14 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 				case 'n': case 'N':
 					strcpy( buf2,
 							"\n\r                  &z-= &RSelect a race from the list below &z=-\n\r\n\r" );
-					for ( iClass = 0; iClass < MAX_RACE; iClass++ )
+					for ( iRace = 0; iRace < MAX_RACE; iRace++ )
 					{
 						sprintf( buf, "&z[&W%-12s&z]%s",
-								(get_race_data(iClass))->race_full,
-								(( iClass+1) % 5) == 0 ? "\n\r" : "" );
+								race_table[iRace].race_full,
+								(( iRace+1) % 5) == 0 ? "\n\r" : "" );
 						strcat( buf2, buf );
 					}
-					if ( iClass % 5 != 0 )
+					if ( iRace % 5 != 0 )
 						strcat( buf2, "\n\r" );
 					strcat( buf2, "\n\r&RRACE &w-> " );
 					write_to_buffer( d, buf2, 0 );
@@ -1758,14 +1757,14 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			{
 				strcpy( buf2,
 						"\n\r                  &z-= &RSelect a race from the list below &z=-\n\r\n\r" );
-				for ( iClass = 0; iClass < MAX_RACE; iClass++ )
+				for ( iRace = 0; iRace < MAX_RACE; iRace++ )
 				{
 					sprintf( buf, "&z[&W%-12s&z]%s",
-							(get_race_data(iClass))->race_full,
-							(( iClass+1) % 5) == 0 ? "\n\r" : "" );
+							race_table[iRace].race_full,
+							(( iRace+1) % 5) == 0 ? "\n\r" : "" );
 					strcat( buf2, buf );
 				}
-				if ( iClass % 5 != 0 )
+				if ( iRace % 5 != 0 )
 					strcat( buf2, "\n\r" );
 				strcat( buf2, "\n\r&RRACE &w-> " );
 				write_to_buffer( d, buf2, 0 );
@@ -1999,7 +1998,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 						IS_EVIL( ch ) ? "evil" : "neutral",
 						ch->sex == SEX_MALE    ? "male"   :
 						ch->sex == SEX_FEMALE  ? "female" : "neuter",
-						(get_race_data(ch->race))->race_full,
+						race_table[ch->race].race_full,
 						class_short( ch ) );
 				log_string(log_buf, CHANNEL_LOG, -1 );
 				wiznet(log_buf, ch, NULL, WIZ_GENERAL, 0, 0 );
@@ -2021,7 +2020,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					IS_EVIL( ch ) ? "evil" : "neutral",
 					ch->sex == SEX_MALE    ? "male"   :
 					ch->sex == SEX_FEMALE  ? "female" : "neuter",
-					(get_race_data(ch->race))->race_full,
+					race_table[ch->race].race_full,
 					class_short( ch ) );
 			log_string(log_buf, CHANNEL_LOG, -1 );
 			wiznet( log_buf, ch, NULL, WIZ_GENERAL, 0, 0);
@@ -2042,14 +2041,14 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			buf2[0] = '\0';
 			strcpy( buf2,
 					"\n\r                  &z-= &RSelect a race from the list below &z=-\n\r\n\r" );
-			for ( iClass = 0; iClass < MAX_RACE; iClass++ )
+			for ( iRace = 0; iRace < MAX_RACE; iRace++ )
 			{
 				sprintf( buf, "&z[&W%-12s&z]%s",
-						(get_race_data(iClass))->race_full,
-						(( iClass+1) % 5) == 0 ? "\n\r" : "" );
+						race_table[iRace].race_full,
+						(( iRace+1) % 5) == 0 ? "\n\r" : "" );
 				strcat( buf2, buf );
 			}
-			if ( iClass % 5 != 0 )
+			if ( iRace % 5 != 0 )
 				strcat( buf2, "\n\r" );
 			strcat( buf2, "\n\r&RRACE &w-> " );
 			write_to_buffer( d, buf2, 0 );
@@ -2068,7 +2067,6 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 
 			if ( ch->level == 0 )
 			{
-				RACE_DATA *pRace;
 				switch ( class_table[prime_class( ch )].attr_prime )
 				{
 					case APPLY_STR: ch->pcdata->perm_str = 16; break;
@@ -2078,12 +2076,11 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					case APPLY_CON: ch->pcdata->perm_con = 16; break;
 				}
 
-				pRace = get_race_data(ch->race);
-				ch->pcdata->mod_str += pRace->mstr;
-				ch->pcdata->mod_int += pRace->mint;
-				ch->pcdata->mod_wis += pRace->mwis;
-				ch->pcdata->mod_dex += pRace->mdex;
-				ch->pcdata->mod_con += pRace->mcon;
+				ch->pcdata->mod_str += race_table[ch->race].mstr;
+				ch->pcdata->mod_int += race_table[ch->race].mint;
+				ch->pcdata->mod_wis += race_table[ch->race].mwis;
+				ch->pcdata->mod_dex += race_table[ch->race].mdex;
+				ch->pcdata->mod_con += race_table[ch->race].mcon;
 				SET_BIT( ch->act, PLR_AUTOEXIT + PLR_AUTOCOINS );
 				ch->level   = 1;
 				ch->exp = number_classes( ch ) == 1 ? 1000
@@ -2102,7 +2099,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					ch->charisma = number_range( 25, 30 );
 
 				sprintf( buf, "the %s %s",
-						pRace->race_full,
+						race_table[ch->race].race_full,
 						class_table[prime_class(ch)].who_long );
 				set_title( ch, buf );
 				ch->prompt = str_dup( "<&Y%hhp &C%mm &G%vmv&w> " );
@@ -2814,7 +2811,7 @@ void do_authorize(CHAR_DATA *ch, char *argument)
 						IS_EVIL( d->character ) ? "evil" : "neutral",
 						d->character->sex == SEX_MALE    ? "male"   :
 						d->character->sex == SEX_FEMALE  ? "female" : "neuter",
-						(get_race_data(d->character->race))->race_full,
+						race_table[d->character->race].race_full,
 						class_short( d->character ) );
 				send_to_char(C_DEFAULT, buf, ch);
 			}

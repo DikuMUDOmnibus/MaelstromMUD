@@ -444,7 +444,6 @@ struct	cmd_type	cmd_table	[ ] =
 	{ "purge",          do_purge,       POS_DEAD,  L_DEM,  LOG_NORMAL },
 	{ "qecho",          do_qecho,       POS_DEAD,  L_GOD,  LOG_ALWAYS },
 	{ "qset",           do_qset,        POS_DEAD,  L_GOD,  LOG_ALWAYS },
-	{ "racelist",	do_racelist,	POS_DEAD,  L_APP,  LOG_NORMAL },
 	{ "rebuild",        do_rebuild,	    POS_DEAD,  L_DIR,  LOG_ALWAYS },
 	{ "reboo",          do_reboo,       POS_DEAD,  L_DIR,  LOG_NORMAL },
 	{ "reboot",         do_reboot,      POS_DEAD,  L_DIR,  LOG_ALWAYS },
@@ -517,7 +516,6 @@ struct	cmd_type	cmd_table	[ ] =
 	{ "sedit",		do_sedit,	POS_DEAD, L_CON,  LOG_BUILD  },
 	{ "spedit",		do_spedit,	POS_DEAD, L_IMP,  LOG_ALWAYS },
 	{ "rename_obj",	do_rename_obj,	POS_DEAD, L_APP,  LOG_ALWAYS },
-	{ "race_edit",	do_race_edit,	POS_DEAD, L_IMP,  LOG_ALWAYS },
 	{ "nedit",		do_nedit,	POS_DEAD, L_CON,  LOG_BUILD  },
 	/*
 	 * End of list.

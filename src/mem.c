@@ -733,34 +733,3 @@ MPROG_DATA *new_mprog_data( void )
 	pMProg->comlist  = &str_empty[0]; /*str_dup( "" );*/
 	return pMProg;
 }
-
-RACE_DATA *new_race_data( )
-{
-	RACE_DATA *pRace;
-
-	top_race++;
-
-	pRace             = alloc_perm( sizeof( RACE_DATA ));
-	pRace->vnum       = 0;
-	pRace->race_full  = NULL;
-	pRace->race_name  = NULL;
-	pRace->mstr       = 0;
-	pRace->mint       = 0;
-	pRace->mwis       = 0;
-	pRace->mdex       = 0;
-	pRace->mcon       = 0;
-
-	return pRace;
-}
-
-void free_race_data( RACE_DATA *pRace )
-{
-
-	top_race--;
-
-	free_string( pRace->race_name );
-	free_string( pRace->race_full );
-
-	free_mem( pRace, sizeof( *pRace ) );
-
-}

@@ -84,9 +84,9 @@ int get_curr_str( CHAR_DATA *ch )
 		return 13;
 
 	if ( class_table[prime_class(ch)].attr_prime == APPLY_STR )
-		max = 25 + (get_race_data(ch->race))->mstr;
+		max = 25 + race_table[ch->race].mstr;
 	else
-		max = 22 + (get_race_data(ch->race))->mstr;
+		max = 22 + race_table[ch->race].mstr;
 
 	return URANGE( 3, ch->pcdata->perm_str + ch->pcdata->mod_str, max );
 }
@@ -104,9 +104,9 @@ int get_curr_int( CHAR_DATA *ch )
 		return 13;
 
 	if ( class_table[prime_class(ch)].attr_prime == APPLY_INT )
-		max = 25 + (get_race_data(ch->race))->mint;
+		max = 25 + race_table[ch->race].mint;
 	else
-		max = 22 + (get_race_data(ch->race))->mint;
+		max = 22 + race_table[ch->race].mint;
 
 	return URANGE( 3, ch->pcdata->perm_int + ch->pcdata->mod_int, max );
 }
@@ -124,9 +124,9 @@ int get_curr_wis( CHAR_DATA *ch )
 		return 13;
 
 	if ( class_table[prime_class(ch)].attr_prime == APPLY_WIS )
-		max = 25 + (get_race_data(ch->race))->mwis;
+		max = 25 + race_table[ch->race].mwis;
 	else
-		max = 22 + (get_race_data(ch->race))->mwis;
+		max = 22 + race_table[ch->race].mwis;
 
 	return URANGE( 3, ch->pcdata->perm_wis + ch->pcdata->mod_wis, max );
 }
@@ -144,9 +144,9 @@ int get_curr_dex( CHAR_DATA *ch )
 		return 13;
 
 	if ( class_table[prime_class(ch)].attr_prime == APPLY_DEX )
-		max = 25 + (get_race_data(ch->race))->mdex;
+		max = 25 + race_table[ch->race].mdex;
 	else
-		max = 22 + (get_race_data(ch->race))->mdex;
+		max = 22 + race_table[ch->race].mdex;
 
 	return URANGE( 3, ch->pcdata->perm_dex + ch->pcdata->mod_dex, max );
 }
@@ -164,9 +164,9 @@ int get_curr_con( CHAR_DATA *ch )
 		return 13;
 
 	if ( class_table[prime_class(ch)].attr_prime == APPLY_CON )
-		max = 25 + (get_race_data(ch->race))->mcon;
+		max = 25 + race_table[ch->race].mcon;
 	else
-		max = 22 + (get_race_data(ch->race))->mcon;
+		max = 22 + race_table[ch->race].mcon;
 
 	return URANGE( 3, ch->pcdata->perm_con + ch->pcdata->mod_con, max );
 }

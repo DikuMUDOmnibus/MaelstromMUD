@@ -4397,7 +4397,7 @@ void do_mset( CHAR_DATA *ch, char *argument )
 		if ( value != -1 && !class_table[value].races[victim->race] )
 		{
 			sprintf( buf, "Player's race (%s) does not allow class %s.\n\r",
-					(get_race_data(victim->race))->race_full,
+					race_table[victim->race].race_full,
 					class_table[value].who_long );
 			send_to_char( AT_WHITE, buf, ch );
 			return;
@@ -4420,11 +4420,10 @@ void do_mset( CHAR_DATA *ch, char *argument )
 	if ( !str_cmp( arg2, "race" ) )
 	{
 		int iRace;
-		RACE_DATA *pRace;
 		for ( iRace = 0; iRace < MAX_RACE; iRace++ )
 		{
-			if ( !str_cmp( arg3, (get_race_data(iRace))->race_full )
-					|| !str_cmp( arg3, (get_race_data(iRace))->race_name ) )
+			if ( !str_cmp( arg3, race_table[iRace].race_full )
+					|| !str_cmp( arg3, race_table[iRace].race_name ) )
 			{
 				value = iRace;
 				break;
@@ -4439,26 +4438,24 @@ void do_mset( CHAR_DATA *ch, char *argument )
 			for ( iRace = 0; iRace < MAX_RACE; iRace++ )
 			{
 				sprintf( buf, " %2d = %s\n\r", iRace,
-						(get_race_data(iRace))->race_full );
+						race_table[iRace].race_full );
 				send_to_char( AT_WHITE, buf, ch );
 			}
 			return;
 		}
 
-		pRace = get_race_data(victim->race);
-		victim->pcdata->mod_str -= pRace->mstr;
-		victim->pcdata->mod_int -= pRace->mint;
-		victim->pcdata->mod_wis -= pRace->mwis;
-		victim->pcdata->mod_dex -= pRace->mdex;
-		victim->pcdata->mod_con -= pRace->mcon;
+		victim->pcdata->mod_str -= race_table[victim->race].mstr;
+		victim->pcdata->mod_int -= race_table[victim->race].mint;
+		victim->pcdata->mod_wis -= race_table[victim->race].mwis;
+		victim->pcdata->mod_dex -= race_table[victim->race].mdex;
+		victim->pcdata->mod_con -= race_table[victim->race].mcon;
 
 		victim->race = value;
-		pRace = get_race_data(victim->race);
-		victim->pcdata->mod_str += pRace->mstr;
-		victim->pcdata->mod_int += pRace->mint;
-		victim->pcdata->mod_wis += pRace->mwis;
-		victim->pcdata->mod_dex += pRace->mdex;
-		victim->pcdata->mod_con += pRace->mcon;
+		victim->pcdata->mod_str += race_table[victim->race].mstr;
+		victim->pcdata->mod_int += race_table[victim->race].mint;
+		victim->pcdata->mod_wis += race_table[victim->race].mwis;
+		victim->pcdata->mod_dex += race_table[victim->race].mdex;
+		victim->pcdata->mod_con += race_table[victim->race].mcon;
 		send_to_char(AT_WHITE, "Ok.\n\r", ch );
 		return;
 	}
@@ -7371,7 +7368,6 @@ void do_rebuild (CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *victim;
 	OBJ_DATA  *obj;
-	RACE_DATA *pRace;
 	char       arg1 [ MAX_INPUT_LENGTH ];
 	char       arg2 [ MAX_INPUT_LENGTH ];
 	int	       sn;
@@ -7455,12 +7451,11 @@ void do_rebuild (CHAR_DATA *ch, char *argument)
 	}
 
 	/* reset stats to level 1*/
-	pRace = get_race_data(victim->race);
-	victim->pcdata->mod_str = pRace->mstr;
-	victim->pcdata->mod_int = pRace->mint;
-	victim->pcdata->mod_wis = pRace->mwis;
-	victim->pcdata->mod_dex = pRace->mdex;
-	victim->pcdata->mod_con = pRace->mcon;
+	victim->pcdata->mod_str = race_table[victim->race].mstr;
+	victim->pcdata->mod_int = race_table[victim->race].mint;
+	victim->pcdata->mod_wis = race_table[victim->race].mwis;
+	victim->pcdata->mod_dex = race_table[victim->race].mdex;
+	victim->pcdata->mod_con = race_table[victim->race].mcon;
 
 	victim->pcdata->perm_str = 13;
 	victim->pcdata->perm_int = 13;

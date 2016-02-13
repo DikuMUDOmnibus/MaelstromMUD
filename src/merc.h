@@ -56,7 +56,6 @@ typedef struct	ban_data					BAN_DATA;
 typedef struct  gskill_data     	GSPELL_DATA;
 typedef struct	char_data					CHAR_DATA;
 typedef struct  social_data				SOCIAL_DATA;
-typedef struct  race_data					RACE_DATA;
 typedef struct	descriptor_data		DESCRIPTOR_DATA;
 typedef struct	exit_data					EXIT_DATA;
 typedef struct	extra_descr_data	EXTRA_DESCR_DATA;
@@ -533,17 +532,15 @@ struct	class_type
 	bool	objtype[ 14 ];			/* Which classes can wield what types of weapons */
 };
 
-struct  race_data
+struct  race_type
 {
-	RACE_DATA * next;
-	int		vnum;
-	char *     	race_name;
-	char *     	race_full;
-	int		mstr;
-	int		mint;
-	int		mwis;
-	int		mdex;
-	int		mcon;
+    char  race_name[ 4 ];
+    char  race_full[ 20 ];
+    int		mstr;
+    int		mint;
+    int		mwis;
+    int		mdex;
+    int		mcon;
 };
 
 /*
@@ -2377,6 +2374,7 @@ extern	const	struct	dex_app_type	dex_app		[ 31 ];
 extern	const	struct	con_app_type	con_app		[ 31 ];
 
 extern	const	struct	class_type	class_table	[ MAX_CLASS   ];
+extern	const	struct	race_type	race_table	[ MAX_RACE    ];
 extern  const   struct  wiznet_type     wiznet_table    [ ];
 extern  const   struct  guild_data      guild_table     [ ];
 extern  const   struct  quest_data      quest_table     [ ];
@@ -2401,8 +2399,6 @@ extern		PLAYERLIST_DATA	  *	playerlist; /* Decklarean */
 
 extern		SOCIAL_DATA	  *	social_first; /* Decklarean */
 extern		SOCIAL_DATA	  *	social_last;
-
-extern		RACE_DATA	  *     first_race; /* Decklarean */
 
 extern		HELP_DATA	  *	help_first;
 extern		HELP_DATA	  *	help_last;
@@ -2667,8 +2663,6 @@ DECLARE_DO_FUN(	do_quaff	);
 DECLARE_DO_FUN(	do_question	);
 DECLARE_DO_FUN(	do_qui		);
 DECLARE_DO_FUN(	do_quit		);
-DECLARE_DO_FUN(	do_race_edit	);
-DECLARE_DO_FUN( do_racelist	);
 DECLARE_DO_FUN(	do_reboo	);
 DECLARE_DO_FUN(	do_reboot	);
 DECLARE_DO_FUN( do_rebuild	);
@@ -3076,7 +3070,6 @@ char *	crypt		args( ( const char *key, const char *salt ) );
 #define HOTREBOOT_FILE 	"../data/hotreboot.dat" /* temporary data file used */
 #define NEWBIE_FILE     "../data/newbie.dat"    /* Newbie help file */
 #define NOTE_FILE				"../data/notes.dat"			/* For 'notes' */
-#define RACE_FILE				"../data/race.dat"			/* For 'races' */
 #define SOCIAL_FILE			"../data/social.dat"		/* For 'socials' */
 #define PLAYERLIST_FILE "../player/player.lst"  /* Player List */
 #define EXE_FILE				"../src/envy"						/* EXE file */
@@ -3512,7 +3505,6 @@ DECLARE_DO_FUN( do_hedit        );	/* XOR 3.14159265359r^2 */
 DECLARE_DO_FUN( do_sedit				);	/* Decklarean */
 DECLARE_DO_FUN( do_spedit				);	/* Decklarean */
 DECLARE_DO_FUN( do_rename_obj		);	/* Decklarean */
-DECLARE_DO_FUN( do_race_edit		);	/* Decklarean */
 DECLARE_DO_FUN( do_mreset				);	/* Decklarean */
 DECLARE_DO_FUN( do_nedit				);	/* Angi */
 DECLARE_DO_FUN( do_asave				);
@@ -3612,8 +3604,6 @@ void            	free_trap_data    args ( ( TRAP_DATA *pTrap ) );
 SOCIAL_DATA				*new_social_index	args ( ( void ) );
 void							free_social_index	args ( ( SOCIAL_DATA *pSocial ) );
 NEWBIE_DATA				*new_newbie_index	args ( ( void ) );
-RACE_DATA					*new_race_data		args ( ( void ) );
-void							free_race_data		args ( ( RACE_DATA *pRace ) );
 
 /* olc.c */
 bool	run_olc_editor	args( ( DESCRIPTOR_DATA *d ) );
@@ -3671,10 +3661,6 @@ extern RESET_DATA *new_reset_data args ( ( void ) ) ;
 extern void check_nofloor         args ( ( CHAR_DATA *ch ) );
 extern void save_clans            args ( ( ) );
 extern void save_social 	  args ( ( ) );
-extern void save_race	 	  args ( ( ) );
-extern RACE_DATA *new_race_data	  args ( ( void ) );
-extern void race_sort		  args ( ( RACE_DATA *pArea ) );
-extern RACE_DATA *get_race_data	args ( ( int vnum ) );
 extern void save_helps		  args ( ( ) );
 extern void wind_update           args ( ( AREA_DATA *pArea ) );
 extern void send_to_area          args ( ( AREA_DATA *pArea, char *txt ) );
