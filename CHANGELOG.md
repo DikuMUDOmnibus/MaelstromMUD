@@ -10,6 +10,7 @@ Features:
   - Remove triple classing
   - Removed all but 5 classes (Human, Elf, Dwarf, Halfling, and Drow)
   - Converted Pixies to Gnomes
+  - Removed race editor stuff
 
 ## 0.0.3 (2015-11-12)
 
