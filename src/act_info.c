@@ -61,8 +61,7 @@ char *	const	where_name	[] =
 	"<worn on ear>       ",
 	"<worn on ear>       ",
 	"<worn around ankle> ",
-	"<worn around ankle> ",
-	"<triple wielded>    "
+	"<worn around ankle> "
 };
 
 

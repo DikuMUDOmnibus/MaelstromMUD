@@ -1327,8 +1327,7 @@ struct	kill_data
 #define WEAR_EAR_L		     24
 #define WEAR_ANKLE_L                 25
 #define WEAR_ANKLE_R                 26
-#define WEAR_WIELD_3			27
-#define MAX_WEAR		     28
+#define MAX_WEAR		     27
 
 
 
@@ -2820,7 +2819,6 @@ DECLARE_DO_FUN( do_remort	);
 DECLARE_DO_FUN( do_raise	);
 DECLARE_DO_FUN( do_lure		);
 DECLARE_DO_FUN( do_flip		);
-DECLARE_DO_FUN( do_triple	);
 
 /*
  * Spell functions.

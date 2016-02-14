@@ -310,7 +310,6 @@ struct	cmd_type	cmd_table	[ ] =
 	{ "rescue",		do_rescue,	POS_FIGHTING,	 0,  LOG_NORMAL	},
 	{ "throw",	        do_throw,	POS_STANDING,    0,  LOG_NORMAL },
 	{ "trip",		do_trip,	POS_FIGHTING,	 0,  LOG_NORMAL },
-	{ "triple",		do_triple,  POS_STANDING,	0,	LOG_NORMAL },
 	{ "drain life",	do_drain_life,	POS_FIGHTING,	 0,  LOG_NORMAL	},
 	{ "mental drain",   do_mental_drain,POS_FIGHTING,    0,  LOG_NORMAL },
 	{ "shriek",		do_shriek,	POS_FIGHTING,	 0,  LOG_NORMAL },
