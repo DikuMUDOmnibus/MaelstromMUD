@@ -444,26 +444,26 @@ reserved~
 0 0
 0 0 0
 A
-13 95
-A
-2 -2
-A
-17 -95
+23 -5
 A
 24 -5
 A
-23 -5
+17 -95
+A
+2 -2
+A
+13 95
 E
-armor~
-The armor is made of a mirror-like rock.  You wonder how one can move is such an armor.
+stone~
+&. The armor is made of a mirror-like rock.  You wonder how one can move is such an armor.
 ~
 E
 armour~
 &. The armor is made of a mirror-like rock.  You wonder how one can move is such an armor.
 ~
 E
-stone~
-&. The armor is made of a mirror-like rock.  You wonder how one can move is such an armor.
+armor~
+The armor is made of a mirror-like rock.  You wonder how one can move is such an armor.
 ~
 >buy_prog 100~
 0
@@ -495,15 +495,13 @@ reserved~
 0 0
 0 0 0
 A
-1 2
-A
-12 40
-A
-25 40
+24 -5
 A
 17 -5
 A
-24 -5
+12 40
+A
+1 2
 >get_prog 100~
 0
 cheer $n
@@ -554,11 +552,9 @@ reserved~
 0 0
 0 0 0
 A
-25 30
+18 144
 A
 12 30
-A
-18 144
 >get_prog 100~
 0
 woo $n
@@ -581,13 +577,13 @@ reserved~
 0 0
 0 0 0
 A
-13 20
-A
-24 -5
+17 -100
 A
 23 -5
 A
-17 -100
+24 -5
+A
+13 20
 >get_prog 100~
 0
 ooo
@@ -610,13 +606,13 @@ reserved~
 0 0
 0 0 0
 A
-17 -10
-A
-12 99
+2 1
 A
 13 99
 A
-2 1
+12 99
+A
+17 -10
 E
 ring~
 &. The ring looks as though it was carved from a simple rock and has a strange symbol that seems to be drawing energy towards it.
@@ -643,15 +639,15 @@ dispel magic~
 5 5
 0 0 0
 A
-12 50
-A
-18 170
-A
-19 200
+26 10
 A
 17 -5
 A
-26 10
+19 200
+A
+18 170
+A
+12 50
 >get_prog 100~
 0
 strut
@@ -674,13 +670,11 @@ reserved~
 0 0
 0 0 0
 A
-13 35
-A
-25 40
+17 -20
 A
 12 40
 A
-17 -20
+13 35
 E
 anklets~
 &. Some old and skillfully crafted anklets seem to be drawing energy from all around you.
@@ -707,13 +701,13 @@ reserved~
 0 0
 0 0 0
 A
-12 75
-A
-23 -5
+17 -20
 A
 24 -5
 A
-17 -20
+23 -5
+A
+12 75
 E
 crown~
 &. This strange crown has a faint white glow.
@@ -776,15 +770,15 @@ reserved~
 0 0
 0 30512 30503
 A
-17 -100
-A
-24 -5
-A
-23 -5
+12 100
 A
 13 100
 A
-12 100
+23 -5
+A
+24 -5
+A
+17 -100
 E
 visor~
 Joining the two objects formed an ancient visor used by Lord Aslond to fight the evil forces whom dared enter his realm.
@@ -814,15 +808,15 @@ reserved~
 0 0
 0 0 0
 A
-26 10
-A
-18 100
-A
-19 100
+23 -5
 A
 24 -5
 A
-23 -5
+19 100
+A
+18 100
+A
+26 10
 >get_prog 100~
 0
 eh
@@ -861,13 +855,13 @@ reserved~
 0 0
 0 0 0
 A
-17 -40
-A
-24 -5
+13 20
 A
 23 -5
 A
-13 20
+24 -5
+A
+17 -40
 >get_prog 100~
 0
 dive
@@ -890,11 +884,11 @@ reserved~
 0 0
 0 0 0
 A
-12 50
+17 -90
 A
 110 -1
 A
-17 -90
+12 50
 >get_prog 100~
 0
 bleah
@@ -917,11 +911,11 @@ reserved~
 0 0
 0 0 0
 A
-12 50
+13 80
 A
 17 -40
 A
-13 80
+12 50
 >get_prog 100~
 0
 ponder
@@ -944,15 +938,15 @@ reserved~
 0 0
 0 0 0
 A
-13 95
-A
-17 -95
-A
-19 5
+24 -5
 A
 23 -5
 A
-24 -5
+19 5
+A
+17 -95
+A
+13 95
 E
 ancient~
 You see Lyron's Ancient Gauntlets, some say it's been responsible for the death of 100 warriors who tried to claim it.

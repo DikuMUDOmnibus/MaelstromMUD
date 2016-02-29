@@ -790,19 +790,19 @@ reserved~
 0 0
 0 0 0
 A
-23 -20
-A
-24 -20
-A
-1 2
-A
-14 -100
-A
-17 -100
+2 -1
 A
 13 100
 A
-2 -1
+17 -100
+A
+14 -100
+A
+1 2
+A
+24 -20
+A
+23 -20
 #10102
 Charm~
 a Dragon Charm~
@@ -816,13 +816,13 @@ detect evil~
 -1 -1
 0 0 0
 A
-17 -50
-A
-13 50
+23 -10
 A
 24 -10
 A
-23 -10
+13 50
+A
+17 -50
 #10103
 skull mask~
 the Skull Mask~
@@ -836,17 +836,15 @@ reserved~
 0 0
 0 0 0
 A
-23 -10
-A
-24 -10
-A
-17 -100
+12 50
 A
 13 50
 A
-12 50
+17 -100
 A
-25 10
+24 -10
+A
+23 -10
 #10104
 claws~
 the Rear Claws~
@@ -860,13 +858,13 @@ reserved~
 0 0
 0 0 0
 A
-14 50
-A
-17 -60
+2 -1
 A
 13 50
 A
-2 -1
+17 -60
+A
+14 50
 #10105
 claw taloned talon dragon~
 &cthe long-taloned claw of a dragon&w~
@@ -880,11 +878,11 @@ reserved~
 0 0
 0 0 0
 A
-18 80
+13 100
 A
 19 120
 A
-13 100
+18 80
 #10106
 ring cursed~
 a Cursed Ring~
@@ -898,11 +896,11 @@ curse~
 10 10
 0 0 0
 A
-24 10
+12 200
 A
 17 300
 A
-12 200
+24 10
 #10107
 balmung~
 the Balmung~
@@ -916,13 +914,13 @@ reserved~
 0 0
 0 0 0
 A
-1 3
-A
-18 179
+26 -15
 A
 19 210
 A
-26 -15
+18 179
+A
+1 3
 #10108
 Plates~
 the Scaly Arm Plates~
@@ -936,15 +934,15 @@ reserved~
 0 0
 0 0 0
 A
-23 -10
-A
-24 -10
-A
-17 -100
+13 100
 A
 2 2
 A
-13 100
+17 -100
+A
+24 -10
+A
+23 -10
 #10109
 cloak~
 a Leathery Cloak~
@@ -958,11 +956,11 @@ reserved~
 0 0
 0 0 0
 A
-13 100
+17 -50
 A
 12 100
 A
-17 -50
+13 100
 #10110
 skin~
 a Snake Skin~
@@ -976,15 +974,13 @@ reserved~
 0 0
 0 0 0
 A
-13 75
-A
-2 2
+23 -5
 A
 17 -50
 A
-25 33
+2 2
 A
-23 -5
+13 75
 #10111
 club bone~
 a Club of Bone~
@@ -998,15 +994,13 @@ reserved~
 0 0
 0 0 0
 A
-14 -100
-A
-12 -40
-A
-25 -20
+18 140
 A
 19 180
 A
-18 140
+12 -40
+A
+14 -100
 #10112
 Leggings~
 a Pair of Bone Leggings~
@@ -1020,13 +1014,13 @@ reserved~
 0 0
 0 0 0
 A
-23 -5
-A
-13 50
+14 -100
 A
 17 -80
 A
-14 -100
+13 50
+A
+23 -5
 #10113
 Diamond~
 a Diamond~
@@ -1088,9 +1082,9 @@ psychic healing~
 30 30
 0 0 0
 A
-13 25
-A
 5 2
+A
+13 25
 #10118
 Shades~
 a Pair of Dark Shades~
@@ -1104,11 +1098,11 @@ reserved~
 0 0
 0 0 0
 A
-13 25
+103 -1
 A
 24 -5
 A
-103 -1
+13 25
 #10119
 Gem~
 a Gem of Levitation~
@@ -1122,13 +1116,13 @@ fly~
 35 35
 0 0 0
 A
-13 50
-A
-12 25
+24 -3
 A
 17 -30
 A
-24 -3
+12 25
+A
+13 50
 #10120
 Gem~
 a Gem of Concentration~
@@ -1142,13 +1136,13 @@ adrenaline control~
 35 35
 0 0 0
 A
-12 70
-A
-13 50
+17 -30
 A
 3 2
 A
-17 -30
+13 50
+A
+12 70
 #10121
 vial dragon blood~
 a vial of Dragon &RBlood~
@@ -1174,11 +1168,11 @@ teleport~
 1 1
 0 0 0
 A
-13 10
+3 1
 A
 4 1
 A
-3 1
+13 10
 #10126
 flask amber~
 an Amber Flask~
@@ -1204,9 +1198,9 @@ reserved~
 0 0
 0 0 0
 A
-17 -25
-A
 13 25
+A
+17 -25
 #10128
 whip~
 a Leather Whip~
@@ -1220,11 +1214,11 @@ ego whip~
 15 15
 0 0 0
 A
-3 2
+18 64
 A
 19 19
 A
-18 64
+3 2
 #10129
 Scroll Protection~
 a Scroll of Protection~
@@ -1250,13 +1244,13 @@ reserved~
 0 0
 0 0 0
 A
-24 -5
-A
-23 -5
+18 63
 A
 19 81
 A
-18 63
+23 -5
+A
+24 -5
 #10131
 vial copper potion~
 a Copper Vial~
@@ -1354,13 +1348,13 @@ reserved~
 0 0
 0 0 0
 A
-12 50
-A
-13 50
+4 2
 A
 17 -30
 A
-4 2
+13 50
+A
+12 50
 #10139
 Grail Lightning~
 the Grail of Lightning~
@@ -1398,13 +1392,13 @@ fire breath~
 15 15
 0 0 0
 A
-19 5
-A
-18 5
+13 50
 A
 23 -5
 A
-13 50
+18 5
+A
+19 5
 #10142
 Acid Ring~
 an Acid Ring~
@@ -1418,13 +1412,13 @@ acid breath~
 15 15
 0 0 0
 A
-19 5
-A
-18 5
+13 50
 A
 23 -5
 A
-13 50
+18 5
+A
+19 5
 #10143
 Grail Protection~
 the Grail of Protection~
@@ -1450,9 +1444,9 @@ gas breath~
 20 20
 0 0 0
 A
-13 75
-A
 12 75
+A
+13 75
 #10145
 Sphere Lightning~
 the Sphere of Lightning~
@@ -1466,9 +1460,9 @@ lightning breath~
 20 20
 0 0 0
 A
-13 75
-A
 12 75
+A
+13 75
 #10146
 Sphere Astral~
 the Astral Sphere~
@@ -1482,11 +1476,11 @@ astral walk~
 15 15
 0 0 0
 A
-17 -50
+13 100
 A
 14 100
 A
-13 100
+17 -50
 #10147
 Charm Death~
 the Charm of Death~
@@ -1500,15 +1494,13 @@ death field~
 10 10
 0 0 0
 A
-18 8
-A
-19 8
-A
-25 25
+12 -50
 A
 17 -25
 A
-12 -50
+19 8
+A
+18 8
 #10148
 Charm Frost~
 &wthe &WCharm &wof &CFrost&w~
@@ -1522,13 +1514,13 @@ iceshield~
 8 8
 0 0 0
 A
-17 -25
-A
-13 25
+18 7
 A
 19 7
 A
-18 7
+13 25
+A
+17 -25
 #10149
 Gauntlets~
 the Gauntlets of Blessing~
@@ -1542,15 +1534,15 @@ bless~
 -1 -1
 0 0 0
 A
-13 50
-A
-19 10
-A
-18 8
+3 1
 A
 17 -25
 A
-3 1
+18 8
+A
+19 10
+A
+13 50
 #10150
 Gauntlets~
 the Gauntlets of Strength~
@@ -1564,15 +1556,15 @@ giant strength~
 -1 -1
 0 0 0
 A
-17 -25
-A
-13 50
-A
-19 10
+5 1
 A
 18 9
 A
-5 1
+19 10
+A
+13 50
+A
+17 -25
 #10151
 parchment enhancement~
 parchment of Enhancement~
@@ -1634,17 +1626,17 @@ reserved~
 0 0
 0 0 0
 A
-1 1
-A
-2 -2
-A
-14 -50
-A
-13 25
+18 70
 A
 19 104
 A
-18 70
+13 25
+A
+14 -50
+A
+2 -2
+A
+1 1
 #10156
 scalearmor armor~
 a Scalearmor~
@@ -1658,15 +1650,15 @@ reserved~
 0 0
 0 0 0
 A
-14 -50
-A
-2 -2
-A
-17 -50
+5 2
 A
 23 -10
 A
-5 2
+17 -50
+A
+2 -2
+A
+14 -50
 #10157
 claws gauntlets~
 a Pair of Claws~
@@ -1680,13 +1672,13 @@ curse~
 10 10
 0 0 0
 A
-17 -40
-A
-13 20
+2 1
 A
 26 -5
 A
-2 1
+13 20
+A
+17 -40
 #10158
 humming potion~
 a Humming Potion~
@@ -1741,11 +1733,11 @@ reserved~
 0 0
 0 0 0
 A
-13 10
+24 -10
 A
 19 2
 A
-24 -10
+13 10
 #10162
 ice-encased dragonscale massive scale~
 &ca massive &Bic&be&C-&ce&wn&cc&Ca&bs&Bed &cdragonscale&w~
@@ -1759,15 +1751,15 @@ reserved~
 0 0
 0 0 0
 A
-2 -2
-A
-13 100
-A
-17 -125
+24 -60
 A
 12 55
 A
-24 -60
+17 -125
+A
+13 100
+A
+2 -2
 #10163
 massive scales dragon~
 &cthe massive scales of a dragon&w~
@@ -1781,19 +1773,19 @@ reserved~
 0 0
 0 0 0
 A
-14 -150
-A
-2 -3
-A
-24 -40
-A
-23 -45
-A
-12 105
+13 100
 A
 17 -115
 A
-13 100
+12 105
+A
+23 -45
+A
+24 -40
+A
+2 -3
+A
+14 -150
 #10164
 massive spread wings dragon~
 &cthe massive spread wings of a dragon&w~
@@ -1807,19 +1799,19 @@ reserved~
 0 0
 0 0 0
 A
-12 125
-A
-2 2
-A
-23 -20
-A
-24 -20
-A
-13 100
+110 -1
 A
 14 200
 A
-110 -1
+13 100
+A
+24 -20
+A
+23 -20
+A
+2 2
+A
+12 125
 #10165
 massive golden eyes dragon~
 &cmassive &Ygolden eyes&c of a dragon&w~
@@ -1833,15 +1825,15 @@ reserved~
 0 0
 0 0 0
 A
-17 -85
-A
-13 100
-A
-24 -25
+124 -1
 A
 117 -1
 A
-124 -1
+24 -25
+A
+13 100
+A
+17 -85
 #10183
 Key Golden~
 a Golden Scaly Key~
@@ -2047,19 +2039,19 @@ identify~
 -1 -1
 0 0 0
 A
-4 1
-A
-3 1
-A
-18 8
-A
-19 8
-A
-13 50
+17 -25
 A
 12 -25
 A
-17 -25
+13 50
+A
+19 8
+A
+18 8
+A
+3 1
+A
+4 1
 #10200
 key shadows~
 a key to shadows~
