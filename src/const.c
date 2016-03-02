@@ -80,34 +80,34 @@ const struct race_type race_table[MAX_RACE] = {
     {
       "Sml", "Full Name", 
       mstr, mint, mwis, mdex, mcon, mcha,
-      size
+      age, size
     }, 
   */
 
   {  
     "Hum", "Human",
     0, 0, 0, 0, 0, 0,
-    SIZE_MEDIUM
+    15, SIZE_MEDIUM
   },
   {  
     "Elf", "Elf",
     0, 2, 0, 2, -2, 0,
-    SIZE_MEDIUM
+    110, SIZE_MEDIUM
   },
   {  
     "Dwa", "Dwarf",
     0, 0, 2, 0, 2, -2,
-    SIZE_MEDIUM
+    40, SIZE_MEDIUM
   },
   {  
     "Gno", "Gnome",
     -2, 0, 0, 0, 2, 2,
-    SIZE_SMALL
+    40, SIZE_SMALL
   },
   {  
     "Hlf", "Halfling",
     -2, 0, 0, 2, 0, 2,
-    SIZE_SMALL
+    20, SIZE_SMALL
   }
 };
 

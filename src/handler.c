@@ -66,7 +66,13 @@ int get_trust( CHAR_DATA *ch )
  */
 int get_age( CHAR_DATA *ch )
 {
-	return 17 + ( ch->played + (int) ( current_time - ch->logon ) ) / 14400;
+	int base_age = 17;
+
+	if ( !IS_NPC(ch) ) {
+		base_age = race_table[ch->race].age;
+	}
+
+	return base_age + ( ch->played + (int) ( current_time - ch->logon ) ) / 14400;
 
 	/* 14400 assumes 30 second hours, 24 hours a day, 20 day - Kahn */
 }

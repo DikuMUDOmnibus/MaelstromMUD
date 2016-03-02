@@ -546,6 +546,7 @@ struct  race_type {
   int   mdex;               // Dexterity
   int   mcon;               // Constitution
   int   mcha;               // Charisma
+  int   age;                // Age at adulthood
   int   size;               // Size
 };
 
