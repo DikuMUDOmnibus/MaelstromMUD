@@ -144,30 +144,30 @@ const struct  class_type  class_table [MAX_CLASS] =
 /* 
  * Wiznet table and prototype for future flag setting
  */
-const   struct wiznet_type      wiznet_table    []              =
-{
-  {    "on",           WIZ_ON,        LEVEL_HERO },
-  {    "prefix",  WIZ_PREFIX,   LEVEL_HERO },
-  {    "ticks",        WIZ_TICKS,     LEVEL_IMMORTAL },
-  {    "general",      WIZ_GENERAL,     LEVEL_HERO },
-  {    "logins",       WIZ_LOGINS,    LEVEL_HERO },
-  {    "sites",        WIZ_SITES,     LEVEL_IMMORTAL },
-  {    "links",        WIZ_LINKS,     LEVEL_IMMORTAL },
-  { "newbies",  WIZ_NEWBIE,   LEVEL_HERO },
-  { "spam",   WIZ_SPAM,     LEVEL_IMMORTAL },
-  {    "deaths",       WIZ_DEATHS,    LEVEL_HERO },
-  {    "resets",       WIZ_RESETS,    LEVEL_IMMORTAL },
-  {    "mobdeaths",    WIZ_MOBDEATHS,  LEVEL_IMMORTAL },
-  {    "flags", WIZ_FLAGS,  LEVEL_IMMORTAL },
+const struct wiznet_type wiznet_table[] = {
+  { "on",         WIZ_ON,         LEVEL_HERO },
+  { "prefix",     WIZ_PREFIX,     LEVEL_HERO },
+  { "ticks",      WIZ_TICKS,      LEVEL_IMMORTAL },
+  { "general",    WIZ_GENERAL,    LEVEL_HERO },
+  { "logins",     WIZ_LOGINS,     LEVEL_HERO },
+  { "sites",      WIZ_SITES,      LEVEL_IMMORTAL },
+  { "links",      WIZ_LINKS,      LEVEL_IMMORTAL },
+  { "newbies",    WIZ_NEWBIE,     LEVEL_HERO },
+  { "spam",       WIZ_SPAM,       LEVEL_IMMORTAL },
+  { "deaths",     WIZ_DEATHS,     LEVEL_HERO },
+  { "resets",     WIZ_RESETS,     LEVEL_IMMORTAL },
+  { "mobdeaths",  WIZ_MOBDEATHS,  LEVEL_IMMORTAL },
+  { "flags",      WIZ_FLAGS,      LEVEL_IMMORTAL },
   { "penalties",  WIZ_PENALTIES,  L_GOD },
-  { "saccing",  WIZ_SACCING,  L_CON },
-  { "levels", WIZ_LEVELS, LEVEL_HERO },
-  { "load",   WIZ_LOAD, L_CON },
-  { "restore",  WIZ_RESTORE,  L_CON },
-  { "snoops", WIZ_SNOOPS, L_CON },
-  { "switches", WIZ_SWITCHES, L_SEN },
-  { "secure", WIZ_SECURE, L_CON },
-  { "oldlog", WIZ_OLDLOG, L_DIR },
+  { "saccing",    WIZ_SACCING,    L_CON },
+  { "levels",     WIZ_LEVELS,     LEVEL_HERO },
+  { "load",       WIZ_LOAD,       L_CON },
+  { "restore",    WIZ_RESTORE,    L_CON },
+  { "snoops",     WIZ_SNOOPS,     L_CON },
+  { "switches",   WIZ_SWITCHES,   L_SEN },
+  { "secure",     WIZ_SECURE,     L_CON },
+  { "oldlog",     WIZ_OLDLOG,     L_DIR },
+
   { NULL,   0,    0  }
 };
 
