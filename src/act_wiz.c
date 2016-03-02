@@ -1875,15 +1875,15 @@ void do_mstat( CHAR_DATA *ch, char *argument )
 
 	if ( !IS_NPC( victim ) )
 	{
-		sprintf( buf, "Charisma&w: &R%d   &cPage Lines&w: &R%d\n\r",
-				victim->charisma, victim->pcdata->pagelen );
+		sprintf( buf, "&cPage Lines&w: &R%d\n\r", victim->pcdata->pagelen );
 		send_to_char(AT_CYAN, buf, ch);
 	}
 	sprintf( buf, "&cStr&w: &R%2d&w/&R%2d&w(&R%2d&w) "
 			"&cInt&w: &R%2d&w/&R%2d&w(&R%2d&w) "
 			"&cWis&w: &R%2d&w/&R%2d&w(&R%2d&w) "
 			"&cDex&w: &R%2d&w/&R%2d&w(&R%2d&w) "
-			"&cCon&w: &R%2d&w/&R%2d&w(&R%2d&w)\n\r",
+			"&cCon&w: &R%2d&w/&R%2d&w(&R%2d&w) "
+			"&cCha&w: &R%2d&w/&R%2d&w(&R%2d&w)\n\r",
 			IS_NPC( victim ) ? 13 : victim->pcdata->perm_str,
 			get_curr_str( victim ),
 			IS_NPC( victim ) ? 0 : victim->pcdata->mod_str,
@@ -1898,7 +1898,10 @@ void do_mstat( CHAR_DATA *ch, char *argument )
 			IS_NPC( victim ) ? 0 : victim->pcdata->mod_dex,
 			IS_NPC( victim ) ? 13 : victim->pcdata->perm_con,
 			get_curr_con( victim ),
-			IS_NPC( victim ) ? 0 : victim->pcdata->mod_con );
+			IS_NPC( victim ) ? 0 : victim->pcdata->mod_con,
+			IS_NPC( victim ) ? 13 : victim->pcdata->perm_cha,
+			get_curr_cha( victim ),
+			IS_NPC( victim ) ? 0 : victim->pcdata->mod_cha );
 	send_to_char(AT_CYAN, buf, ch);
 	sprintf( buf, "Hp&w: &R%d&w/&R%d &cMana&w: &R%d&w/&R%d &cMove&w: &R%d&w/&R%d &cPractices&w: &R%d\n\r",
 			victim->hit,         MAX_HIT(victim),
@@ -3807,7 +3810,7 @@ void do_mset( CHAR_DATA *ch, char *argument )
 		send_to_char(AT_WHITE, "  copper hp mana blood move practice align\n\r", ch );
 		send_to_char(AT_WHITE, "  mhp mmana mblood mmove\n\r", 			 ch );
 		send_to_char(AT_WHITE, "  thirst drunk full security affected_by2\n\r",	 ch );
-		send_to_char(AT_WHITE, "  affected_by act mstr mint mwis\n\r",  	 ch );
+		send_to_char(AT_WHITE, "  affected_by act mstr mint mwis mcha\n\r",  	 ch );
 		send_to_char(AT_WHITE, "  mdex mcon bank carryn carryw save race\n\r",   ch );
 		send_to_char(AT_WHITE, "  lname sex salign\n\r",			 ch );
 		send_to_char(AT_WHITE, "&pString being one of:\n\r",			 ch );
@@ -4027,6 +4030,17 @@ void do_mset( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
+	if ( !str_cmp( arg2, "mcha" ) ) {
+		if (IS_NPC( victim ) ) {
+			send_to_char( AT_WHITE, "Not on NPC's\n\r", ch );
+			return;
+		}
+
+		send_to_char( AT_WHITE, "Ok.\n\r", ch );
+		victim->pcdata->mod_cha = value;
+		return;
+	}
+
 	if ( !str_cmp( arg2, "str" ) )
 	{
 		if ( IS_NPC( victim ) )
@@ -4148,6 +4162,29 @@ void do_mset( CHAR_DATA *ch, char *argument )
 		}
 
 		victim->pcdata->perm_con = value;
+		send_to_char(AT_WHITE, "Ok.\n\r", ch );
+		return;
+	}
+
+	if ( !str_cmp( arg2, "cha" ) ) {
+		if ( IS_NPC( victim ) ) {
+			send_to_char(AT_WHITE, "Not on NPC's.\n\r", ch );
+			return;
+		}
+
+		if ( class_table[prime_class(victim)].attr_prime == APPLY_CHA ) {
+			max = 25;
+		} else {
+			max = 18;
+		}
+
+		if ( value < 3 || value > max ) {
+			sprintf( buf, "Charisma range is 3 to %d.\n\r", max );
+			send_to_char(AT_WHITE, buf, ch );
+			return;
+		}
+
+		victim->pcdata->perm_cha = value;
 		send_to_char(AT_WHITE, "Ok.\n\r", ch );
 		return;
 	}
@@ -4449,6 +4486,7 @@ void do_mset( CHAR_DATA *ch, char *argument )
 		victim->pcdata->mod_wis -= race_table[victim->race].mwis;
 		victim->pcdata->mod_dex -= race_table[victim->race].mdex;
 		victim->pcdata->mod_con -= race_table[victim->race].mcon;
+		victim->pcdata->mod_cha -= race_table[victim->race].mcha;
 
 		victim->race = value;
 		victim->pcdata->mod_str += race_table[victim->race].mstr;
@@ -4456,6 +4494,7 @@ void do_mset( CHAR_DATA *ch, char *argument )
 		victim->pcdata->mod_wis += race_table[victim->race].mwis;
 		victim->pcdata->mod_dex += race_table[victim->race].mdex;
 		victim->pcdata->mod_con += race_table[victim->race].mcon;
+		victim->pcdata->mod_cha += race_table[victim->race].mcha;
 		send_to_char(AT_WHITE, "Ok.\n\r", ch );
 		return;
 	}
@@ -7430,12 +7469,14 @@ void do_rebuild (CHAR_DATA *ch, char *argument)
 	victim->pcdata->mod_wis = 25;
 	victim->pcdata->mod_dex = 25;
 	victim->pcdata->mod_con = 25;
+	victim->pcdata->mod_cha = 25;
 
 	victim->pcdata->perm_str = 18;
 	victim->pcdata->perm_int = 18;
 	victim->pcdata->perm_wis = 18;
 	victim->pcdata->perm_dex = 18;
 	victim->pcdata->perm_con = 18;
+	victim->pcdata->perm_cha = 18;
 
 	level = victim->level;
 	victim->level = 1;
@@ -7454,12 +7495,14 @@ void do_rebuild (CHAR_DATA *ch, char *argument)
 	victim->pcdata->mod_wis = race_table[victim->race].mwis;
 	victim->pcdata->mod_dex = race_table[victim->race].mdex;
 	victim->pcdata->mod_con = race_table[victim->race].mcon;
+	victim->pcdata->mod_cha = race_table[victim->race].mcha;
 
 	victim->pcdata->perm_str = 13;
 	victim->pcdata->perm_int = 13;
 	victim->pcdata->perm_wis = 13;
 	victim->pcdata->perm_dex = 13;
 	victim->pcdata->perm_con = 13;
+	victim->pcdata->perm_cha = 13;
 
 	switch ( class_table[prime_class(victim)].attr_prime )
 	{
@@ -7468,6 +7511,7 @@ void do_rebuild (CHAR_DATA *ch, char *argument)
 		case APPLY_WIS: victim->pcdata->perm_wis = 16; break;
 		case APPLY_DEX: victim->pcdata->perm_dex = 16; break;
 		case APPLY_CON: victim->pcdata->perm_con = 16; break;
+		case APPLY_CHA: victim->pcdata->perm_cha = 16; break;
 	}
 
 	/* restore */

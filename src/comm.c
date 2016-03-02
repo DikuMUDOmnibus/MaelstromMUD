@@ -1704,6 +1704,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 						ch->pcdata->mod_wis = race_table[d->character->race].mwis;
 						ch->pcdata->mod_dex = race_table[d->character->race].mdex;
 						ch->pcdata->mod_con = race_table[d->character->race].mcon;
+						ch->pcdata->mod_cha = race_table[d->character->race].mcha;
 					}
 					buf2[0]='\0';
 					strcpy( buf2,
@@ -1807,6 +1808,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 							case APPLY_WIS: ch->pcdata->perm_wis = 16; break;
 							case APPLY_DEX: ch->pcdata->perm_dex = 16; break;
 							case APPLY_CON: ch->pcdata->perm_con = 16; break;
+							case APPLY_CHA: ch->pcdata->perm_cha = 16; break;
 						}
 					}
 					argument[0] = '\0';
@@ -2074,6 +2076,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					case APPLY_WIS: ch->pcdata->perm_wis = 16; break;
 					case APPLY_DEX: ch->pcdata->perm_dex = 16; break;
 					case APPLY_CON: ch->pcdata->perm_con = 16; break;
+					case APPLY_CHA: ch->pcdata->perm_cha = 16; break;
 				}
 
 				ch->pcdata->mod_str += race_table[ch->race].mstr;
@@ -2081,6 +2084,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 				ch->pcdata->mod_wis += race_table[ch->race].mwis;
 				ch->pcdata->mod_dex += race_table[ch->race].mdex;
 				ch->pcdata->mod_con += race_table[ch->race].mcon;
+				ch->pcdata->mod_cha += race_table[ch->race].mcha;
 				SET_BIT( ch->act, PLR_AUTOEXIT + PLR_AUTOCOINS );
 				ch->level   = 1;
 				ch->exp = number_classes( ch ) == 1 ? 1000
@@ -2088,14 +2092,6 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 				ch->hit     = MAX_HIT(ch);
 				ch->mana    = MAX_MOVE(ch);
 				ch->move    = MAX_MOVE(ch);
-				/* charisma */
-				if ( ( ch->race == RACE_HUMAN ) ||
-						( ch->race == RACE_DWARF ) )
-					ch->charisma = number_range( 20, 24 );
-				if ( ( ch->race == RACE_GNOME )  ||
-						( ch->race == RACE_ELF )    ||
-						( ch->race == RACE_HALFLING ) )
-					ch->charisma = number_range( 25, 30 );
 
 				sprintf( buf, "the %s %s",
 						race_table[ch->race].race_full,

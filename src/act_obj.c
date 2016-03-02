@@ -2868,25 +2868,25 @@ void do_buy( CHAR_DATA *ch, char *argument )
 			update_skpell( ch, gsn_haggle );
 		}         
 
-		if ( ch->charisma > 24 )
+		if ( get_curr_cha( ch ) > 24 )
 		{
 			cost->copper *= 0.80;
 			cost->silver *= 0.80;
 			cost->gold   *= 0.80;
 		}
-		else if ( ch->charisma > 19 && ch->charisma < 25 ) 
+		else if ( get_curr_cha( ch ) > 19 && get_curr_cha( ch ) < 25 ) 
 		{
 			cost->copper *= 0.85;
 			cost->silver *= 0.85;
 			cost->gold   *= 0.85;
 		}
-		else if ( ch->charisma < 15 )
+		else if ( get_curr_cha( ch ) < 15 )
 		{
 			cost->copper += (cost->copper * 0.20);
 			cost->silver += (cost->silver * 0.20);
 			cost->gold   += (cost->gold   * 0.20);
 		}
-		else if ( ch->charisma < 20 )
+		else if ( get_curr_cha( ch ) < 20 )
 		{
 			cost->copper += (cost->copper * 0.15);
 			cost->silver += (cost->silver * 0.15);
@@ -3151,25 +3151,25 @@ void do_sell( CHAR_DATA *ch, char *argument )
 		update_skpell( ch, gsn_haggle );
 	}
 
-	if ( ch->charisma > 24 )
+	if ( get_curr_cha( ch ) > 24 )
 	{
 		cost->gold   += ( cost->gold * 0.05 );
 		cost->silver += ( cost->silver * 0.05 );
 		cost->copper += ( cost->copper * 0.05 );
 	}   
-	if ( ch->charisma > 19 && ch->charisma < 24 )
+	if ( get_curr_cha( ch ) > 19 && get_curr_cha( ch ) < 24 )
 	{
 		cost->gold   += ( cost->gold * 0.02 );
 		cost->silver += ( cost->silver * 0.02 );
 		cost->copper += ( cost->copper * 0.02 );
 	}
-	if ( ch->charisma < 15 )
+	if ( get_curr_cha( ch ) < 15 )
 	{
 		cost->gold   -= ( cost->gold * 0.20 );
 		cost->silver -= ( cost->silver * 0.20 );
 		cost->copper -= ( cost->copper * 0.20 );
 	}
-	if ( ch->charisma < 20 )
+	if ( get_curr_cha( ch ) < 20 )
 	{
 		cost->gold   -= ( cost->gold * 0.15 );
 		cost->silver -= ( cost->silver * 0.15 );

@@ -171,7 +171,24 @@ int get_curr_con( CHAR_DATA *ch )
 	return URANGE( 3, ch->pcdata->perm_con + ch->pcdata->mod_con, max );
 }
 
+/*
+ * Retrieve character's current charisma.
+ */
+int get_curr_cha( CHAR_DATA *ch ) {
+	int max;
 
+	if ( IS_NPC( ch ) ) {
+		return 13;
+	}
+
+	if ( class_table[prime_class(ch)].attr_prime == APPLY_CHA ) {
+		max = 25 + race_table[ch->race].mcha;
+	} else {
+		max = 22 + race_table[ch->race].mcha;
+	}
+
+	return URANGE( 3, ch->pcdata->perm_cha + ch->pcdata->mod_cha, max );
+}
 
 /*
  * Retrieve a character's carry capacity.
@@ -340,6 +357,12 @@ void affect_modify( CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd )
 		case APPLY_CON:
 												if ( !IS_NPC( ch ) )
 													ch->pcdata->mod_con += mod;                         break;
+		case APPLY_CHA:
+			if ( !IS_NPC( ch ) ) {
+				ch->pcdata->mod_cha += mod;
+			}
+
+			break;
 		case APPLY_SEX:           ch->sex                   += mod; break;
 		case APPLY_CLASS:						break;
 		case APPLY_LEVEL:						break;
@@ -623,6 +646,12 @@ void affect_modify2( CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd )
 		case APPLY_CON:
 												if ( !IS_NPC( ch ) )
 													ch->pcdata->mod_con += mod;                         break;
+		case APPLY_CHA:
+			if ( !IS_NPC( ch ) ) {
+				ch->pcdata->mod_cha += mod;
+			}
+
+			break;
 		case APPLY_SEX:           ch->sex                   += mod; break;
 		case APPLY_CLASS:						break;
 		case APPLY_LEVEL:						break;
@@ -2130,6 +2159,7 @@ char *affect_loc_name( int location )
 		case APPLY_INT:		return "intelligence";
 		case APPLY_WIS:		return "wisdom";
 		case APPLY_CON:		return "constitution";
+		case APPLY_CHA:		return "charisma";
 		case APPLY_SEX:		return "sex";
 		case APPLY_CLASS:		return "class";
 		case APPLY_LEVEL:		return "level";

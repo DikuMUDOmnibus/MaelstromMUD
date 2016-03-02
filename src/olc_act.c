@@ -6661,6 +6661,19 @@ bool forge_addaffect( CHAR_DATA *ch, char *argument )
 		cost = Mod * 5000;
 		legal = TRUE;
 	}
+	if ( !str_prefix( loc, "charisma" ) )
+	{
+		strcpy( loc, "charisma" );
+		if ( (Mod=atoi( mod )) > max_stat )
+		{
+			sprintf( buf, "You may not add more than %d to %s.\n\r", 
+					max_stat, loc );
+			send_to_char( AT_GREY, buf, ch );
+			return FALSE;
+		}
+		cost = Mod * 5000;
+		legal = TRUE;
+	}
 	if ( !str_prefix( loc, "damroll" ) )
 	{
 		strcpy( loc, "damroll" );
@@ -6792,14 +6805,16 @@ bool forge_addaffect( CHAR_DATA *ch, char *argument )
 				|| pAf->location == APPLY_DEX
 				|| pAf->location == APPLY_INT
 				|| pAf->location == APPLY_WIS
-				|| pAf->location == APPLY_CON )
+				|| pAf->location == APPLY_CON
+				|| pAf->location == APPLY_CHA )
 			stat_cnt++;
 		if ( stat_cnt >= max_statn
 				&& (   !str_cmp( loc, "strength" )
 					|| !str_cmp( loc, "dexterity" )
 					|| !str_cmp( loc, "intelligence" )
 					|| !str_cmp( loc, "wisdom" )
-					|| !str_cmp( loc, "constitution" ) ) )
+					|| !str_cmp( loc, "constitution" )
+					|| !str_cmp( loc, "charisma" ) ) )
 		{
 			send_to_char( AT_GREY, "You have already added the maximum number of stats possible for your experience.\n\r", ch );
 			return FALSE;

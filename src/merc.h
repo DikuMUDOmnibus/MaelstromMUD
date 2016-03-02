@@ -540,6 +540,7 @@ struct  race_type
     int		mwis;
     int		mdex;
     int		mcon;
+    int		mcha;
 };
 
 /*
@@ -1116,32 +1117,33 @@ struct	kill_data
  * Apply types (for affects).
  * Used in #OBJECTS.
  */
-#define APPLY_NONE		      0
-#define APPLY_STR		      1
-#define APPLY_DEX		      2
-#define APPLY_INT		      3
-#define APPLY_WIS		      4
-#define APPLY_CON		      5
-#define APPLY_SEX		      6
-#define APPLY_CLASS		      7
-#define APPLY_LEVEL		      8
-#define APPLY_AGE		      9
-#define APPLY_HEIGHT		     10
-#define APPLY_WEIGHT		     11
-#define APPLY_MANA		     12
-#define APPLY_HIT		     13
-#define APPLY_MOVE		     14
-#define APPLY_GOLD		     15
-#define APPLY_EXP		     16
-#define APPLY_AC		     17
-#define APPLY_HITROLL		     18
-#define APPLY_DAMROLL		     19
-#define APPLY_SAVING_PARA	     20
-#define APPLY_SAVING_ROD	     21
-#define APPLY_SAVING_PETRI	     22
-#define APPLY_SAVING_BREATH	     23
-#define APPLY_SAVING_SPELL	     24
-#define APPLY_ANTI_DIS               26
+#define APPLY_NONE		      	 0
+#define APPLY_STR		      		 1
+#define APPLY_DEX		      		 2
+#define APPLY_INT		      		 3
+#define APPLY_WIS		      		 4
+#define APPLY_CON		      		 5
+#define APPLY_SEX		      		 6
+#define APPLY_CLASS		      	 7
+#define APPLY_LEVEL		      	 8
+#define APPLY_AGE		      		 9
+#define APPLY_HEIGHT		    	10
+#define APPLY_WEIGHT		    	11
+#define APPLY_MANA		     		12
+#define APPLY_HIT		     			13
+#define APPLY_MOVE		     		14
+#define APPLY_GOLD		     		15
+#define APPLY_EXP		     			16
+#define APPLY_AC		     			17
+#define APPLY_HITROLL		    	18
+#define APPLY_DAMROLL		    	19
+#define APPLY_SAVING_PARA	  	20
+#define APPLY_SAVING_ROD	  	21
+#define APPLY_SAVING_PETRI		22
+#define APPLY_SAVING_BREATH		23
+#define APPLY_SAVING_SPELL		24
+#define APPLY_ANTI_DIS      	26
+#define APPLY_CHA 						27
 
 /* X */
 #define PERM_SPELL_BEGIN	100
@@ -1590,7 +1592,6 @@ struct	char_data
 	/*    int 		max_move; */
 	int			perm_move;
 	int			mod_move;
-	int			charisma;
 	MONEY_DATA		money;
 	int			exp;
 	int			act;
@@ -1694,11 +1695,13 @@ struct	pc_data
 	int 		perm_wis;
 	int 		perm_dex;
 	int 		perm_con;
+	int 		perm_cha;
 	int 		mod_str;
 	int 		mod_int;
 	int 		mod_wis;
 	int 		mod_dex;
 	int 		mod_con;
+	int 		mod_cha;
 	int 		condition	[ 3 ];
 	int                 pagelen;
 	int 		learned		[ MAX_SKILL ];
@@ -3198,6 +3201,7 @@ int	get_curr_int	args( ( CHAR_DATA *ch ) );
 int	get_curr_wis	args( ( CHAR_DATA *ch ) );
 int	get_curr_dex	args( ( CHAR_DATA *ch ) );
 int	get_curr_con	args( ( CHAR_DATA *ch ) );
+int	get_curr_cha	args( ( CHAR_DATA *ch ) );
 int	can_carry_n	args( ( CHAR_DATA *ch ) );
 int	can_carry_w	args( ( CHAR_DATA *ch ) );
 int	xp_tolvl	args( ( CHAR_DATA *ch ) );

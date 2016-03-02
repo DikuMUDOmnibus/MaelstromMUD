@@ -1488,10 +1488,10 @@ void do_score( CHAR_DATA *ch, char *argument )
 			IS_NPC(ch) ? 13: ch->pcdata->perm_wis, IS_NPC(ch) ? 13: get_curr_wis( ch ));
 	send_to_char( AT_PINK, buf, ch );
 	sprintf( buf,
-			"&BDex: &W%d&p(&r%d&p)&B  Con: &W%d&p(&r%d&p)&B  Cha: &W%d\n\r",
+			"&BDex: &W%d&p(&r%d&p)&B  Con: &W%d&p(&r%d&p)&B  Cha: &W%d&p(&r%d&p)&W\n\r",
 			IS_NPC(ch) ? 13: ch->pcdata->perm_dex, IS_NPC(ch) ? 13: get_curr_dex( ch ),
 			IS_NPC(ch) ? 13: ch->pcdata->perm_con, IS_NPC(ch) ? 13: get_curr_con( ch ),
-			IS_NPC(ch) ? 20: ch->charisma );
+			IS_NPC(ch) ? 13: ch->pcdata->perm_cha, IS_NPC(ch) ? 13: get_curr_cha( ch ));
 	send_to_char( AT_PINK, buf, ch );
 	send_to_char( AT_CYAN, "You have scored ", ch );
 	sprintf( buf, "&W%d &cexperience points.\n\r", ch->exp );
@@ -4866,7 +4866,7 @@ void do_worth( CHAR_DATA *ch, char *argument )
 	}
 	sprintf( log_buf, "Your current stats are:\n\r  Str: %d.  Wis: %d.  Int: %d.  Dex: %d.  Con: %d.  Cha: %d.\n\r",
 			get_curr_str( ch ), get_curr_wis( ch ), get_curr_int( ch ),
-			get_curr_dex( ch ), get_curr_con( ch ), ch->charisma );
+			get_curr_dex( ch ), get_curr_con( ch ), get_curr_cha( ch ) );
 	send_to_char( AT_RED, log_buf, ch );
 
 	sprintf( log_buf, "You are carrying %d gold, %d silver, and %d copper coins.\n\r", ch->money.gold,

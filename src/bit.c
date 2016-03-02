@@ -492,6 +492,7 @@ const struct flag_type apply_flags[] =
 	{	"intelligence",		APPLY_INT,		TRUE	},
 	{	"wisdom",		APPLY_WIS,		TRUE	},
 	{	"constitution",		APPLY_CON,		TRUE	},
+	{	"charisma",		APPLY_CHA,		TRUE	},
 	{	"sex",			APPLY_SEX,		TRUE	},
 	{	"class",		APPLY_CLASS,		TRUE	},
 	{	"level",		APPLY_LEVEL,		TRUE	},

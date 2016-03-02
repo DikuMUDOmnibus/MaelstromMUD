@@ -77,12 +77,12 @@ const   struct  quest_data      quest_table     []              =
 
 const   struct  race_type       race_table      [MAX_RACE]      =
 {
-/*  {  "Sml", "Full Name", mstr, mint, mwis, mdex, mcon }, */
-    {  "Hum", "Human", 		  0,  0, 0,  0,  0 },
-    {  "Elf", "Elf", 				0,  1,  0, 0, -1 },
-    {  "Dwa", "Dwarf", 			0, -2,  0, 0,  2 },
-    {  "Gno", "Gnome", 		 -2,  0,  0, 2,  0 },
-    {  "Hlf", "Halfling", 	0,  0, -2, 2,  0 }
+/*  {  "Sml", "Full Name", mstr, mint, mwis, mdex, mcon, mcha }, */
+    {  "Hum", "Human", 		  0,  0, 0,  0,  0, 0 },
+    {  "Elf", "Elf", 				0,  1,  0, 0, -1, 0 },
+    {  "Dwa", "Dwarf", 			0, -2,  0, 0,  2, 0 },
+    {  "Gno", "Gnome", 		 -2,  0,  0, 2,  0, 0 },
+    {  "Hlf", "Halfling", 	0,  0, -2, 2,  0, 0 }
 };
 
 const	struct	class_type	class_table	[MAX_CLASS]	=
