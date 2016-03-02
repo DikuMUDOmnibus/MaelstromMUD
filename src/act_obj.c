@@ -1512,17 +1512,6 @@ void wear_obj( CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace )
 			return;
 		}
 		weapon_type = obj->value[3];
-		if((strcmp(flag_string(weapon_flags,weapon_type),"none")))
-		{
-			if ( !(class_table[prime_class(ch)].objtype[weapon_type]) )
-			{
-				sprintf(buf, "%s's cannot use weapons that %s.\n\r", 
-						class_table[prime_class(ch)].who_long,
-						flag_string(weapon_flags,weapon_type) );
-				send_to_char(AT_YELLOW, buf, ch );
-				return;
-			}
-		}
 		act(AT_BLUE, "You wield $p.", ch, obj, NULL, TO_CHAR );
 		act(AT_BLUE, "$n wields $p.", ch, obj, NULL, TO_ROOM );
 		equip_char( ch, obj, WEAR_WIELD );
@@ -1676,17 +1665,6 @@ void do_dual( CHAR_DATA *ch, char *argument )
 		/* Won't put update_skpell here since it is in fight.c */
 
 		weapon_type = obj->value[3];
-		if((strcmp(flag_string(weapon_flags,weapon_type),"none")))
-		{
-			if ( !(class_table[prime_class(ch)].objtype[weapon_type]) )
-			{
-				sprintf(buf, "%s's cannot use weapons that %s.\n\r", 
-						class_table[prime_class(ch)].who_long, 
-						flag_string(weapon_flags,weapon_type) );
-				send_to_char(AT_YELLOW, buf, ch );
-				return;
-			}
-		}
 		act(AT_BLUE, "You dual wield $p.", ch, obj, NULL, TO_CHAR );
 		act(AT_BLUE, "$n dual wields $p.", ch, obj, NULL, TO_ROOM );
 		equip_char( ch, obj, WEAR_WIELD_2 );

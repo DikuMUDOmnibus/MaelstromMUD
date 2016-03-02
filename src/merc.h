@@ -123,13 +123,16 @@ typedef void SPELL_FUN                  args( ( int sn, int level, CHAR_DATA *ch
  * Increase the max'es if you add more of something.
  * Adjust the pulse numbers to suit yourself.
  */
-#define MAX_SKILL		   344
+#define MAX_SKILL		   						 344
 #define MAX_GSPELL                 2
 #define MAX_CLASS		   						 3
 #define MAX_RACE                   5
 #define MAX_CLAN                   21 /*max 20 clans + 1 for clan 0*/
-#define MAX_LEVEL		   113
+#define MAX_LEVEL		   						 113
+#define MAX_SIZE 									 8
+
 #define STUN_MAX                   5
+
 #define L_IMP                      MAX_LEVEL
 #define L_CON                     ( L_IMP - 1 )
 #define L_DIR		          ( L_CON - 1 )
@@ -157,16 +160,6 @@ typedef void SPELL_FUN                  args( ( int sn, int level, CHAR_DATA *ch
 /* Save the database - OLC 1.1b */
 #define PULSE_DB_DUMP		  (1800* PULSE_PER_SECOND ) /* 30 minutes  */
 
-/* Not used -Deck
-#define SIZE_TINY                 0
-#define SIZE_SMALL                1
-#define SIZE_MEDIUM               2
-#define SIZE_LARGE                3
-#define SIZE_GIANT                4
-#define SIZE_HUGE                 5
-#define SIZE_GARGANTUAN           6
-#define SIZE_TITANIC              7
-*/
 
 /*
  *  User list structure
@@ -498,15 +491,34 @@ struct playerlist_data
 	unsigned char guild_rank;
 };
 
+/**
+ * Classes
+ */
 #define CLASS_CASTER         0
 #define CLASS_ROGUE          1
 #define CLASS_FIGHTER        2
 
+/**
+ * Races
+ */
 #define RACE_HUMAN           0
 #define RACE_ELF             1
 #define RACE_DWARF           2
 #define RACE_GNOME           3
 #define RACE_HALFLING        4
+
+
+/**
+ * Sizes
+ */
+#define SIZE_TINY                 0
+#define SIZE_SMALL                1
+#define SIZE_MEDIUM               2
+#define SIZE_LARGE                3
+#define SIZE_GIANT                4
+#define SIZE_HUGE                 5
+#define SIZE_GARGANTUAN           6
+#define SIZE_TITANIC              7
 
 /*
  * Per-class stuff.
@@ -526,9 +538,6 @@ struct	class_type
 	int  	hp_min;							/* Min hp gained on leveling	*/
 	int		hp_max;							/* Max hp gained on leveling	*/
 	bool	fMana;							/* Class gains mana on level	*/
-	bool	races[ MAX_RACE ];	/* Can a race be a class?	*/
-	bool	multi[ MAX_CLASS ];	/* Which classes can multiclass */
-	bool	objtype[ 14 ];			/* Which classes can wield what types of weapons */
 };
 
 struct  race_type
@@ -541,6 +550,7 @@ struct  race_type
     int		mdex;
     int		mcon;
     int		mcha;
+    int  	size;
 };
 
 /*

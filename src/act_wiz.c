@@ -4431,14 +4431,6 @@ void do_mset( CHAR_DATA *ch, char *argument )
 			send_to_char( AT_WHITE, " -1 = Turns off class.\n\r", ch );
 			return;
 		}
-		if ( value != -1 && !class_table[value].races[victim->race] )
-		{
-			sprintf( buf, "Player's race (%s) does not allow class %s.\n\r",
-					race_table[victim->race].race_full,
-					class_table[value].who_long );
-			send_to_char( AT_WHITE, buf, ch );
-			return;
-		}
 		if ( value != -1 && is_class( victim, value ) )
 		{
 			sprintf ( buf, "$N is already %s %s.",

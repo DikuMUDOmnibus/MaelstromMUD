@@ -75,51 +75,60 @@ const   struct  quest_data      quest_table     []              =
   {     "",                     "",         0,           0,       0      }
 };
 
-const   struct  race_type       race_table      [MAX_RACE]      =
-{
-/*  {  "Sml", "Full Name", mstr, mint, mwis, mdex, mcon, mcha }, */
-    {  "Hum", "Human",      0,  0, 0,  0,  0, 0 },
-    {  "Elf", "Elf",        0,  1,  0, 0, -1, 0 },
-    {  "Dwa", "Dwarf",      0, -2,  0, 0,  2, 0 },
-    {  "Gno", "Gnome",     -2,  0,  0, 2,  0, 0 },
-    {  "Hlf", "Halfling",   0,  0, -2, 2,  0, 0 }
+const struct race_type race_table[MAX_RACE] = {
+  /* 
+    {
+      "Sml", "Full Name", 
+      mstr, mint, mwis, mdex, mcon, mcha,
+      size, hitdice
+    }, 
+  */
+
+  {  
+    "Hum", "Human",
+    0, 0, 0, 0, 0, 0,
+    SIZE_MEDIUM
+  },
+  {  
+    "Elf", "Elf",
+    0, 2, 0, 2, -2, 0,
+    SIZE_MEDIUM
+  },
+  {  
+    "Dwa", "Dwarf",
+    0, 0, 2, 0, 2, -2,
+    SIZE_MEDIUM
+  },
+  {  
+    "Gno", "Gnome",
+    -2, 0, 0, 0, 2, 2,
+    SIZE_SMALL
+  },
+  {  
+    "Hlf", "Halfling",
+    -2, 0, 0, 2, 0, 2,
+    SIZE_SMALL
+  }
 };
 
 const struct  class_type  class_table [MAX_CLASS] =
 {
   /*  {   "Who", "Long", PRIME_STAT, START_WEAPON,
     GUILD, PRAC_%, tach0_0, tach0_97, HP_MIN, HP_MAX, GETS_MANA,
-    { HUM, ELF, DWA, PIX, HLF },
-    { MAG, THI, WAR }
-    { hit, slice, stab, slash, whip, claw, blast, pound, crush,
-    grep, bite, pierce, suction, chop }
     } */
   {
     "Cas", "Caster",  APPLY_INT,  OBJ_VNUM_SCHOOL_DAGGER,
-    3018,  95,  18,  -6,   6,  8, TRUE,
-    { TRUE, TRUE, TRUE, TRUE, TRUE },
-    { TRUE, TRUE, TRUE },
-    /* Can class wield this type of weapon? */
-    { TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
-      TRUE, TRUE, TRUE, TRUE, TRUE }  
+    3018,  95,  18,  -6,   6,  8, TRUE
   },
 
   {
     "Rog",  "Rogue", APPLY_DEX,  OBJ_VNUM_SCHOOL_DAGGER,
-    3028,  85,  18,  -14,  8,  13, FALSE,
-    { TRUE, TRUE, TRUE, TRUE, TRUE },
-    { TRUE, TRUE, TRUE },
-    { TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
-      TRUE, TRUE, TRUE, TRUE, TRUE }  
+    3028,  85,  18,  -14,  8,  13, FALSE
   },
 
   {
     "Fig",  "Fighter", APPLY_STR,  OBJ_VNUM_SCHOOL_SWORD,
-    3022,  85,  18,  -30,  11, 20, FALSE,
-    { TRUE, TRUE, TRUE, TRUE, TRUE },
-    { TRUE, TRUE, TRUE },
-    { TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE,
-      TRUE, TRUE, TRUE, TRUE, TRUE }  
+    3022,  85,  18,  -30,  11, 20, FALSE
   },
 };
 

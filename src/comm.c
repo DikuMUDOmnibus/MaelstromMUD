@@ -1714,14 +1714,9 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					iCount = 0;
 					for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
 					{
-						if ( class_table[iClass].races[ch->race] )
-						{
 							iCount++;
-							sprintf( buf, "&z[&W%-12s&z]%s",
-									class_table[iClass].who_long,
-									iCount % 5 == 0 ? "\n\r" : "" );
+							sprintf( buf, "&z[&W%-12s&z]%s", class_table[iClass].who_long, iCount % 5 == 0 ? "\n\r" : "" );
 							strcat( buf2, buf );
-						}
 					}
 					if ( iCount % 5 != 0 )
 						strcat( buf2, "\n\r" );
@@ -1774,8 +1769,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			}
 			for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
 			{
-				if ( !str_prefix( argument, class_table[iClass].who_long )
-						&& class_table[iClass].races[ch->race] )
+				if ( !str_prefix( argument, class_table[iClass].who_long ) )
 				{
 					ch->class[0] = iClass;
 					break;
@@ -1826,14 +1820,9 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					iCount = 0;
 					for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
 					{
-						if ( class_table[iClass].races[ch->race] )
-						{
 							iCount++;
-							sprintf( buf, "&z[&W%-12s&z]%s",
-									class_table[iClass].who_long,
-									iCount % 5 == 0 ? "\n\r" : "" );
+							sprintf( buf, "&z[&W%-12s&z]%s", class_table[iClass].who_long, iCount % 5 == 0 ? "\n\r" : "" );
 							strcat( buf2, buf );
-						}
 					}
 					if ( iCount % 5 != 0 )
 						strcat( buf2, "\n\r" );
@@ -1853,9 +1842,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					iCount = 0;
 					for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
 					{
-						if ( class_table[iClass].races[ch->race]
-								&& prime_class( ch ) != iClass
-								&& class_table[prime_class(ch)].multi[iClass] )
+						if ( prime_class( ch ) != iClass )
 						{
 							iCount++;
 							sprintf( buf, "&z[&W%-12s&z]%s",
@@ -1893,14 +1880,9 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 				iCount = 0;
 				for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
 				{
-					if ( class_table[iClass].races[ch->race] )
-					{
 						iCount++;
-						sprintf( buf, "&z[&W%-12s&z]%s",
-								class_table[iClass].who_long,
-								iCount % 5 == 0 ? "\n\r" : "" );
+						sprintf( buf, "&z[&W%-12s&z]%s", class_table[iClass].who_long, iCount % 5 == 0 ? "\n\r" : "" );
 						strcat( buf2, buf );
-					}
 				}
 				if ( iCount % 5 != 0 )
 					strcat( buf2, "\n\r" );
@@ -1911,10 +1893,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			}
 			for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
 			{
-				if ( !str_prefix( argument, class_table[iClass].who_long )
-						&& class_table[iClass].races[ch->race]
-						&& prime_class( ch ) != iClass
-						&& class_table[prime_class(ch)].multi[iClass] )
+				if ( !str_prefix( argument, class_table[iClass].who_long ) && prime_class( ch ) != iClass )
 				{
 					ch->class[1] = iClass;
 					break;
@@ -1957,9 +1936,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					iCount = 0;
 					for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
 					{
-						if ( class_table[iClass].races[ch->race]
-								&& prime_class( ch ) != iClass
-								&& class_table[prime_class(ch)].multi[iClass] )
+						if ( prime_class( ch ) != iClass )
 						{
 							iCount++;
 							sprintf( buf, "&z[&W%-12s&z]%s",
