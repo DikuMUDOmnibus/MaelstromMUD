@@ -527,14 +527,13 @@ struct playerlist_data
 
 struct	class_type
 {
-	char 	who_name[ 4 ];			/* Three-letter name for 'who'	*/
-	char	who_long[ 15 ]; 		/* Long name of Class           */
-	int 	attr_prime;					/* Prime attribute		*/
-	int 	skill_adept;				/* Maximum skill level		*/
-	int 	thac0_00;						/* Thac0 for level  0		*/
-	int 	thac0_97;						/* Thac0 for level 47		*/
-	int 	hitdice;						/* Hit Dice */
-	bool	spellcaster;				/* Class gains mana on level	*/
+	char 	who_name[ 4 ];			/* Three-letter name for 'who'															*/
+	char	who_long[ 15 ]; 		/* Long name of Class           														*/
+	int 	attr_prime;					/* Prime attribute																					*/
+	int 	skill_adept;				/* Maximum skill level																			*/
+	float mbab;								/* Base Attack Bonus Modifier (thac0 = 20 - (level * mbab))	*/
+	int 	hitdice;						/* Hit Dice 																								*/
+	bool	spellcaster;				/* Class is a spellcaster																		*/
 };
 
 struct  race_type
@@ -2280,31 +2279,30 @@ extern int		gsn_unholystrength;
 /*
  * Character macros.
  */
-#define IS_CODER( ch )          ( IS_SET( ( ch )->affected_by2, CODER ) )
-#define IS_NPC( ch )		( IS_SET( ( ch )->act, ACT_IS_NPC ) )
-#define IS_IMMORTAL( ch )	( get_trust( ch ) >= LEVEL_IMMORTAL )
-#define IS_HERO( ch )		( get_trust( ch ) >= LEVEL_HERO     )
-#define IS_QUESTOR( ch )        ( IS_SET( ( ch )->act, PLR_QUESTOR ) )
+#define IS_CODER( ch )          ( IS_SET( ch->affected_by2, CODER ) )
+#define IS_NPC( ch )						( IS_SET( ch->act, ACT_IS_NPC ) )
+#define IS_QUESTOR( ch )        ( IS_SET( ch->act, PLR_QUESTOR ) )
 
-#define IS_AFFECTED( ch, sn )	( IS_SET( ( ch )->affected_by, ( sn ) ) )
-#define IS_AFFECTED2(ch, sn)	( IS_SET( ( ch )->affected_by2, (sn)))
-#define IS_SIMM(ch, sn)		(IS_SET((ch)->imm_flags, (sn)))
-#define IS_SRES(ch, sn)		(IS_SET((ch)->res_flags, (sn)))
-#define IS_SVUL(ch, sn)		(IS_SET((ch)->vul_flags, (sn)))
+#define IS_IMMORTAL( ch )				( get_trust( ch ) >= LEVEL_IMMORTAL )
+#define IS_HERO( ch )						( get_trust( ch ) >= LEVEL_HERO     )
 
-#define IS_GOOD( ch )		( ch->alignment >=  350 )
-#define IS_EVIL( ch )		( ch->alignment <= -350 )
-#define IS_NEUTRAL( ch )	( !IS_GOOD( ch ) && !IS_EVIL( ch ) )
+#define IS_AFFECTED( ch, sn )		( IS_SET(ch->affected_by, ( sn ) ) )
+#define IS_AFFECTED2(ch, sn)		( IS_SET(ch->affected_by2, ( sn ) ) )
+#define IS_SIMM(ch, sn)					( IS_SET(ch->imm_flags, (sn)) )
+#define IS_SRES(ch, sn)					( IS_SET(ch->res_flags, (sn)) )
+#define IS_SVUL(ch, sn)					( IS_SET(ch->vul_flags, (sn)) )
 
-#define IS_AWAKE( ch )		( ch->position > POS_SLEEPING )
-#define GET_AC( ch )		( ( ch )->armor				                     \
-		+ ( IS_AWAKE( ch )			                             \
-			? dex_app[get_curr_dex( ch )].defensive                  \
-			: 0 ) )
-#define GET_HITROLL( ch )      	( ( ch )->hitroll                            \
-		+ str_app[get_curr_str( ch )].tohit )
-#define GET_DAMROLL( ch )      	( ( ch )->damroll                            \
-		+ str_app[get_curr_str( ch )].todam )
+#define IS_GOOD( ch )						( ch->alignment >=  350 )
+#define IS_EVIL( ch )						( ch->alignment <= -350 )
+#define IS_NEUTRAL( ch )				( !IS_GOOD( ch ) && !IS_EVIL( ch ) )
+
+#define IS_AWAKE( ch )					( ch->position > POS_SLEEPING )
+
+#define GET_AC( ch )						( ch->armor + ( IS_AWAKE( ch ) ? dex_app[get_curr_dex( ch )].defensive : 0 ) )
+#define GET_HITROLL( ch ) 			( ch->hitroll + str_app[get_curr_str( ch )].tohit)
+#define GET_DAMROLL( ch )				( ch->damroll + str_app[get_curr_str( ch )].todam)
+#define GET_BAB( ch )						( (int)(ch->level * ( IS_NPC( ch ) ? 1 : class_table[prime_class( ch )].mbab) ) )
+#define GET_THAC0( ch ) 				( 20 - GET_BAB( ch ) - GET_HITROLL( ch ) )
 
 #define IS_OUTSIDE( ch )       	( !IS_SET(				                     \
 			( ch )->in_room->room_flags,       	                     \

@@ -1801,8 +1801,7 @@ void do_mstat( CHAR_DATA *ch, char *argument )
 	if (!IS_NPC( victim ) )
 	{
 		CLAN_DATA *pClan = get_clan_index( victim->clan );
-		sprintf(buf, "&cClan&w: &R%d &w= &W%s.\n\r",
-				victim->clan, pClan->name );
+		sprintf(buf, "&cClan&w: &R%d &w= &W%s.\n\r", victim->clan, pClan->name );
 		send_to_char(C_DEFAULT, buf, ch);
 	}
 	if ( IS_NPC( victim ) )
@@ -1869,6 +1868,8 @@ void do_mstat( CHAR_DATA *ch, char *argument )
 	sprintf( buf, "&cAlign&w: &R%d ", victim->alignment );
 	send_to_char( AT_CYAN, buf, ch );
 	sprintf( buf, "&cAC&w: &R%d ", GET_AC( victim ) );
+	send_to_char( AT_CYAN, buf, ch );
+	sprintf( buf, "&cTHAC0&w: &R%d ", GET_THAC0( victim ) );
 	send_to_char( AT_CYAN, buf, ch );
 	sprintf( buf, "&cExp&w: &R%d\n\r", victim->exp );
 	send_to_char( AT_CYAN, buf, ch);
@@ -3740,35 +3741,28 @@ void do_cset( CHAR_DATA *ch, char *argument )
 
 	argument = one_argument( argument, arg3 );
 
-	for ( pClan = clan_first->next; pClan; pClan = pClan->next )
-	{
-		if ( !str_cmp( arg3, strip_color( pClan->name ) ) )
-		{
+	for ( pClan = clan_first->next; pClan; pClan = pClan->next ) {
+		if ( !str_cmp( arg3, strip_color( pClan->name ) ) ) {
 			value = pClan->vnum;
 			break;
 		}
 	}
 
-	if (    !str_cmp( arg2, "clan" )
-			&& (    is_name(NULL, "cset", ch->pcdata->empowerments)
-				|| ch->level == L_IMP                          ) )
-	{
-		if IS_NPC( victim )
-		{
+	if ( !str_cmp( arg2, "clan" ) && (    is_name(NULL, "cset", ch->pcdata->empowerments) || ch->level == L_IMP ) ) {
+		if IS_NPC( victim ) {
 			send_to_char(AT_WHITE, "Not on NPC's.\n\r", ch );
 			return;
 		}
-		if ( !get_clan_index(value) )
-		{
+
+		if ( !get_clan_index(value) ) {
 			send_to_char(AT_WHITE, "Invalid clan.\n\r", ch );
 			return;
 		}
+
 		victim->clan = value;
 		send_to_char(AT_WHITE, "Ok.\n\r", ch );
 		return;
-	}
-	else if ( !str_cmp( arg2, "clan" ) )
-	{
+	} else if ( !str_cmp( arg2, "clan" ) ) {
 		send_to_char(AT_WHITE, "You are not empowered to set one's clan.\n\r", ch);
 		return;
 	}

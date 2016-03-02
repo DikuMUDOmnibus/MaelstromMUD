@@ -115,23 +115,24 @@ const struct  class_type  class_table [MAX_CLASS] =
 {
   /* 
     { 
-      "Who", "Long", PRIME_STAT,
-      PRAC_%, tach0_0, tach0_97, hitdice, spellcaster
+      "Who", "Long", attr_prime,
+      skill_adept, mbab, hitdice, spellcaster
     } 
   */
+
   {
     "Cas", "Caster",  APPLY_INT,
-    95,  18,  -6,   6, TRUE
+    95, 0.5, 6, TRUE
   },
 
   {
     "Rog",  "Rogue", APPLY_DEX,
-    85,  18,  -14,  8, FALSE
+    85, 0.75, 8, FALSE
   },
 
   {
     "Fig",  "Fighter", APPLY_STR,
-    85,  18,  -30,  10, FALSE
+    85, 1, 10, FALSE
   },
 };
 

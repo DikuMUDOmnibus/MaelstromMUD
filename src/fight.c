@@ -335,8 +335,6 @@ void one_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	char      buf [ MAX_STRING_LENGTH ];
 	int       victim_ac;
 	int       thac0;
-	int       thac0_00;
-	int       thac0_97;
 	int       dam;
 	int       diceroll;
 
@@ -367,23 +365,7 @@ void one_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	/*
 	 * Calculate to-hit-armor-class-0 versus armor.
 	 */
-	if ( IS_NPC( ch ) )
-	{
-		thac0_00 =  18;
-		thac0_97 = -24;
-	}
-	else
-	{
-		thac0_00 = class_table[prime_class(ch)].thac0_00;
-		thac0_97 = class_table[prime_class(ch)].thac0_97;
-	}
-
-	if (!IS_NPC(ch))
-		thac0     = interpolate( ch->level, thac0_00, thac0_97 )
-			- GET_HITROLL( ch );
-	else
-		thac0     = interpolate(ch->level, thac0_00, thac0_97 )
-			- (ch->level + ch->level/2);
+	thac0 = GET_THAC0( ch );		
 
 	if ( ( !IS_NPC( ch ) ) && ( ch->pcdata->learned[gsn_enhanced_hit] > 0 ) ) 
 	{
@@ -575,8 +557,6 @@ void one_dual( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	char      buf [ MAX_STRING_LENGTH ];
 	int       victim_ac;
 	int       thac0;
-	int       thac0_00;
-	int       thac0_97;
 	int       dam;
 	int       diceroll;
 
@@ -611,21 +591,13 @@ void one_dual( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	/*
 	 * Calculate to-hit-armor-class-0 versus armor.
 	 */
-	if ( IS_NPC( ch ) )
-	{
-		thac0_00 =  20;
-		thac0_97 = -20;
-	}
-	else
-	{
-		thac0_00 = class_table[prime_class(ch)].thac0_00;
-		thac0_97 = class_table[prime_class(ch)].thac0_97;
-	}
-	thac0     = interpolate( ch->level, thac0_00, thac0_97 )
-		- GET_HITROLL( ch );
+	thac0 = GET_THAC0( ch );		
+
 	victim_ac = UMAX( -15, GET_AC( victim ) / 10 );
-	if ( !can_see( ch, victim ) )
+
+	if ( !can_see( ch, victim ) ) {
 		victim_ac -= 4;
+	}
 
 	/*
 	 * The moment of excitement!
