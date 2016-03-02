@@ -2018,17 +2018,16 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			/* END */
 		case CON_BEGIN_REMORT:
 			buf2[0] = '\0';
-			strcpy( buf2,
-					"\n\r                  &z-= &RSelect a race from the list below &z=-\n\r\n\r" );
-			for ( iRace = 0; iRace < MAX_RACE; iRace++ )
-			{
-				sprintf( buf, "&z[&W%-12s&z]%s",
-						race_table[iRace].race_full,
-						(( iRace+1) % 5) == 0 ? "\n\r" : "" );
+			strcpy( buf2, "\n\r                  &z-= &RSelect a race from the list below &z=-\n\r\n\r" );
+			for ( iRace = 0; iRace < MAX_RACE; iRace++ ) {
+				sprintf( buf, "&z[&W%-12s&z]%s", race_table[iRace].race_full, (( iRace+1) % 5) == 0 ? "\n\r" : "" );
 				strcat( buf2, buf );
 			}
-			if ( iRace % 5 != 0 )
+
+			if ( iRace % 5 != 0 ) {
 				strcat( buf2, "\n\r" );
+			}
+
 			strcat( buf2, "\n\r&RRACE &w-> " );
 			write_to_buffer( d, buf2, 0 );
 			wiznet("Remort reconnected!  $N sighted.",ch,NULL,WIZ_NEWBIE,0,0);
@@ -2044,10 +2043,8 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 				  "  May your visit here be tempest tossed.\n\r",
 				  ch ); */
 
-			if ( ch->level == 0 )
-			{
-				switch ( class_table[prime_class( ch )].attr_prime )
-				{
+			if ( ch->level == 0 ) {
+				switch ( class_table[prime_class( ch )].attr_prime ) {
 					case APPLY_STR: ch->pcdata->perm_str = 16; break;
 					case APPLY_INT: ch->pcdata->perm_int = 16; break;
 					case APPLY_WIS: ch->pcdata->perm_wis = 16; break;
@@ -2062,44 +2059,38 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 				ch->pcdata->mod_dex += race_table[ch->race].mdex;
 				ch->pcdata->mod_con += race_table[ch->race].mcon;
 				ch->pcdata->mod_cha += race_table[ch->race].mcha;
+
 				SET_BIT( ch->act, PLR_AUTOEXIT + PLR_AUTOCOINS );
+
 				ch->level   = 1;
-				ch->exp = number_classes( ch ) == 1 ? 1000
-					: number_classes( ch ) * 1500;
+				ch->exp 		= number_classes( ch ) == 1 ? 1000 : number_classes( ch ) * 1500;
 				ch->hit     = MAX_HIT(ch);
-				ch->mana    = MAX_MOVE(ch);
+				ch->mana    = MAX_MANA(ch);
 				ch->move    = MAX_MOVE(ch);
 
-				sprintf( buf, "the %s %s",
-						race_table[ch->race].race_full,
-						class_table[prime_class(ch)].who_long );
+				sprintf( buf, "the %s %s", race_table[ch->race].race_full, class_table[prime_class(ch)].who_long );
 				set_title( ch, buf );
+
 				ch->prompt = str_dup( "<&Y%hhp &C%mm &G%vmv&w> " );
-				if ( ch->start_align == 'E' )
+
+				if ( ch->start_align == 'E' ) {
 					char_to_room( ch, get_room_index( ROOM_VNUM_RW_SCHOOL ) );
-				else
+				} else {
 					char_to_room( ch, get_room_index( ROOM_VNUM_SCHOOL ) );
-			}
-			else if ( ch->in_room )
-			{
+				}
+			} else if ( ch->in_room ) {
 				char_to_room( ch, ch->in_room );
-			}
-			else if ( IS_IMMORTAL( ch ) )
-			{
+			} else if ( IS_IMMORTAL( ch ) ) {
 				char_to_room( ch, get_room_index( ROOM_VNUM_CHAT ) );
-			}
-			else
-			{
+			} else {
 				char_to_room( ch, get_room_index( ROOM_VNUM_TEMPLE ) );
 			}
 
-			if ( !IS_SET( ch->act, PLR_WIZINVIS )
-					&& !IS_AFFECTED( ch, AFF_INVISIBLE ) )
-				act(AT_GREEN, "$n has returned to the storm.",
-						ch, NULL, NULL, TO_ROOM );
-			else
-			{
+			if ( !IS_SET( ch->act, PLR_WIZINVIS ) && !IS_AFFECTED( ch, AFF_INVISIBLE ) ) {
+				act(AT_GREEN, "$n has returned to the storm.", ch, NULL, NULL, TO_ROOM );
+			} else {
 				CHAR_DATA *gch;
+
 				for ( gch = ch->in_room->people; gch; gch = gch->next_in_room )
 				{
 					if ( ch != gch )

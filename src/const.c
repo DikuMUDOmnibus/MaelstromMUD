@@ -80,7 +80,7 @@ const struct race_type race_table[MAX_RACE] = {
     {
       "Sml", "Full Name", 
       mstr, mint, mwis, mdex, mcon, mcha,
-      size, hitdice
+      size
     }, 
   */
 
@@ -113,22 +113,25 @@ const struct race_type race_table[MAX_RACE] = {
 
 const struct  class_type  class_table [MAX_CLASS] =
 {
-  /*  {   "Who", "Long", PRIME_STAT, START_WEAPON,
-    GUILD, PRAC_%, tach0_0, tach0_97, HP_MIN, HP_MAX, GETS_MANA,
-    } */
+  /* 
+    { 
+      "Who", "Long", PRIME_STAT,
+      PRAC_%, tach0_0, tach0_97, hitdice, spellcaster
+    } 
+  */
   {
-    "Cas", "Caster",  APPLY_INT,  OBJ_VNUM_SCHOOL_DAGGER,
-    3018,  95,  18,  -6,   6,  8, TRUE
+    "Cas", "Caster",  APPLY_INT,
+    95,  18,  -6,   6, TRUE
   },
 
   {
-    "Rog",  "Rogue", APPLY_DEX,  OBJ_VNUM_SCHOOL_DAGGER,
-    3028,  85,  18,  -14,  8,  13, FALSE
+    "Rog",  "Rogue", APPLY_DEX,
+    85,  18,  -14,  8, FALSE
   },
 
   {
-    "Fig",  "Fighter", APPLY_STR,  OBJ_VNUM_SCHOOL_SWORD,
-    3022,  85,  18,  -30,  11, 20, FALSE
+    "Fig",  "Fighter", APPLY_STR,
+    85,  18,  -30,  10, FALSE
   },
 };
 

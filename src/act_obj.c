@@ -1604,7 +1604,6 @@ void do_dual( CHAR_DATA *ch, char *argument )
 {
 	OBJ_DATA *obj;
 	char      arg [ MAX_INPUT_LENGTH ];
-	char      buf [ MAX_STRING_LENGTH ];
 	bool      fReplace;
 	int       weapon_type = 0;
 

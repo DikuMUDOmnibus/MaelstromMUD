@@ -530,14 +530,11 @@ struct	class_type
 	char 	who_name[ 4 ];			/* Three-letter name for 'who'	*/
 	char	who_long[ 15 ]; 		/* Long name of Class           */
 	int 	attr_prime;					/* Prime attribute		*/
-	int 	weapon;							/* First weapon			*/
-	int 	guild;							/* Vnum of guild room		*/
 	int 	skill_adept;				/* Maximum skill level		*/
 	int 	thac0_00;						/* Thac0 for level  0		*/
 	int 	thac0_97;						/* Thac0 for level 47		*/
-	int  	hp_min;							/* Min hp gained on leveling	*/
-	int		hp_max;							/* Max hp gained on leveling	*/
-	bool	fMana;							/* Class gains mana on level	*/
+	int 	hitdice;						/* Hit Dice */
+	bool	spellcaster;				/* Class gains mana on level	*/
 };
 
 struct  race_type

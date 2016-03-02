@@ -2997,38 +2997,40 @@ void clone_object(OBJ_DATA *parent, OBJ_DATA *clone)
 /*
  * Clear a new character.
  */
-void clear_char( CHAR_DATA *ch )
-{
+void clear_char( CHAR_DATA *ch ) {
 	static CHAR_DATA ch_zero;
 	int iclass;
 
-	*ch				= ch_zero;
-	ch->name			= &str_empty[0];
+	*ch								= ch_zero;
+	ch->name					= &str_empty[0];
 	ch->short_descr		= &str_empty[0];
 	ch->long_descr		= &str_empty[0];
 	ch->description		= &str_empty[0];
-	ch->prompt                  = &str_empty[0];
-	ch->last_note               = 0;
-	ch->logon			= current_time;
-	ch->armor			= 100;
-	ch->position		= POS_STANDING;
-	ch->level                   = 0;
-	ch->practice		= 21;
-	ch->hit			= 20;
-	ch->perm_hit		= 20;
-	ch->mod_hit			= 0;
-	ch->mana			= 100;
-	ch->perm_mana		= 100;
-	ch->mod_mana		= 0;
-	ch->move			= 100;
-	ch->perm_move		= 100;
-	ch->mod_move		= 0;
-	ch->leader                  = NULL;
-	ch->master                  = NULL;
-	ch->deleted                 = FALSE;
+	ch->prompt       	= &str_empty[0];
+	ch->last_note    	= 0;
+	ch->logon					= current_time;
+	ch->armor					= 100;
+	ch->position			= POS_STANDING;
+	ch->level					= 0;
+	ch->practice			= 21;
+	ch->hit						= 20;
+	ch->perm_hit			= 20;
+	ch->mod_hit				= 0;
+	ch->mana					= 100;
+	ch->perm_mana			= 100;
+	ch->mod_mana			= 0;
+	ch->move					= 100;
+	ch->perm_move			= 100;
+	ch->mod_move			= 0;
+	ch->leader        = NULL;
+	ch->master        = NULL;
+	ch->deleted       = FALSE;
 	ch->start_align		= 'N';
-	for ( iclass = 0; iclass < MAX_CLASS; iclass++ )
+
+	for ( iclass = 0; iclass < MAX_CLASS; iclass++ ) {
 		ch->class[iclass] = -1;
+	}
+
 	return;
 }
 

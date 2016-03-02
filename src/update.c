@@ -81,14 +81,9 @@ void advance_level( CHAR_DATA *ch )
 	int  raisepoints;
 
 	raisepoints = number_range( 2, 4 );
-	add_hp      = con_app[get_curr_con( ch )].hitp + number_range(
-			class_table[prime_class(ch)].hp_min,
-			class_table[prime_class(ch)].hp_max );
-	add_mana    = has_spells( ch )
-		? number_range(2, ( 2 * get_curr_int( ch ) + get_curr_wis( ch ) ) / 6 )
-		: 0;
-	add_move    =
-		number_range( 5, ( get_curr_con( ch ) + get_curr_dex( ch ) ) / 4 );
+	add_hp      = con_app[get_curr_con( ch )].hitp + dice(1, class_table[prime_class(ch)].hitdice);
+	add_mana    = has_spells( ch ) ? number_range(2, ( 2 * get_curr_int( ch ) + get_curr_wis( ch ) ) / 6 ) : 0;
+	add_move    = number_range( 5, ( get_curr_con( ch ) + get_curr_dex( ch ) ) / 4 );
 	add_prac    = wis_app[get_curr_wis( ch )].practice;
 
 	add_hp               = UMAX(  1, add_hp   );
@@ -103,14 +98,17 @@ void advance_level( CHAR_DATA *ch )
 	ch->perm_move	+= add_move;
 	ch->practice	+= add_prac;
 
-	if ( !IS_NPC( ch ) )
+	if ( !IS_NPC( ch ) ) {
 		REMOVE_BIT( ch->act, PLR_BOUGHT_PET );
+	}
+
 	sprintf( buf, 
 			"Your gain is: %d/%d hp, %d/%d m, %d/%d mv %d/%d prac.\n\r",
 			add_hp,		MAX_HIT( ch ),
 			add_mana,	MAX_MANA( ch ),
 			add_move,	MAX_MOVE( ch ),
 			add_prac,	ch->practice );
+
 	send_to_char(AT_WHITE, buf, ch );
 	
 	if (IS_SET(ch->act2, PLR_REMORT)) {
