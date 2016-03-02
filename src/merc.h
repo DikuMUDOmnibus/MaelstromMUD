@@ -129,7 +129,7 @@ typedef void SPELL_FUN                  args( ( int sn, int level, CHAR_DATA *ch
 #define MAX_RACE                   5
 #define MAX_CLAN                   21 /*max 20 clans + 1 for clan 0*/
 #define MAX_LEVEL                  113
-#define MAX_SIZE                   8
+#define MAX_SIZE                   9
 
 #define STUN_MAX                   5
 
@@ -510,17 +510,18 @@ struct playerlist_data
 /**
  * Sizes
  */
-#define SIZE_TINY                 0
-#define SIZE_SMALL                1
-#define SIZE_MEDIUM               2
-#define SIZE_LARGE                3
-#define SIZE_GIANT                4
-#define SIZE_HUGE                 5
-#define SIZE_GARGANTUAN           6
-#define SIZE_TITANIC              7
+#define SIZE_FINE                 0
+#define SIZE_DIMUNITIVE           1
+#define SIZE_TINY                 2
+#define SIZE_SMALL                3
+#define SIZE_MEDIUM               4
+#define SIZE_LARGE                5
+#define SIZE_HUGE                 6
+#define SIZE_GARGANTUAN           7
+#define SIZE_COLOSSAL             8
 
 /*
- * Per-class stuff.
+ * Class Structure
  */
 
 struct  class_type {
@@ -534,20 +535,31 @@ struct  class_type {
 };
 
 /*
- * Per-race stuff.
+ * Race Structure
  */
 
 struct  race_type {
   char  race_name[ 4 ];     // Three-letter name for 'who'
   char  race_full[ 20 ];    // Long name of Race
-  int   mstr;               // Strength
-  int   mint;               // Intelligence
-  int   mwis;               // Wisdom
-  int   mdex;               // Dexterity
-  int   mcon;               // Constitution
-  int   mcha;               // Charisma
+  int   mstr;               // Strength modifier
+  int   mint;               // Intelligence modifier
+  int   mwis;               // Wisdom modifier
+  int   mdex;               // Dexterity modifier
+  int   mcon;               // Constitution modifier
+  int   mcha;               // Charisma modifier
   int   age;                // Age at adulthood
   int   size;               // Size
+};
+
+
+/**
+ * Size Structure
+ */
+struct size_type {
+  char   size_full[ 20 ];     // Size name
+  int    mac;                 // AC modifier
+  int    mstealth;            // Stealth modifier
+  float  mcarry;              // Carrying capacity modifier
 };
 
 /*
@@ -2379,11 +2391,14 @@ extern  const struct  wis_app_type  wis_app   [ 31 ];
 extern  const struct  dex_app_type  dex_app   [ 31 ];
 extern  const struct  con_app_type  con_app   [ 31 ];
 
-extern  const struct  class_type  class_table [ MAX_CLASS   ];
-extern  const struct  race_type race_table  [ MAX_RACE    ];
-extern  const   struct  wiznet_type     wiznet_table    [ ];
-extern  const   struct  guild_data      guild_table     [ ];
-extern  const   struct  quest_data      quest_table     [ ];
+extern  const struct  class_type    class_table [ MAX_CLASS   ];
+extern  const struct  race_type     race_table  [ MAX_RACE    ];
+extern  const struct  size_type     size_table  [ MAX_SIZE    ];
+
+extern  const struct  wiznet_type   wiznet_table  [ ];
+extern  const struct  guild_data    guild_table   [ ];
+extern  const struct  quest_data    quest_table   [ ];
+
 extern  struct  cmd_type  cmd_table [ ];
 extern  const struct  liq_type  liq_table [ LIQ_MAX     ];
 extern  const struct  skill_type  skill_table [ MAX_SKILL ];

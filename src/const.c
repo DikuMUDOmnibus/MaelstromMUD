@@ -76,14 +76,11 @@ const   struct  quest_data      quest_table     []              =
 };
 
 const struct race_type race_table[MAX_RACE] = {
-  /* 
-    {
-      "Sml", "Full Name", 
-      mstr, mint, mwis, mdex, mcon, mcha,
-      age, size
-    }, 
-  */
-
+//{
+//  "Sml", "Full Name", 
+//  mstr, mint, mwis, mdex, mcon, mcha,
+//  age, size
+//}, 
   {  
     "Hum", "Human",
     0, 0, 0, 0, 0, 0,
@@ -111,29 +108,24 @@ const struct race_type race_table[MAX_RACE] = {
   }
 };
 
-const struct  class_type  class_table [MAX_CLASS] =
-{
-  /* 
-    { 
-      "Who", "Long", attr_prime,
-      skill_adept, mbab, hitdice, spellcaster
-    } 
-  */
+const struct class_type class_table [MAX_CLASS] = {
+//{ "Who",     "Long", attr_prime, skill_adept,  mbab, hitdice, spellcaster }
+  { "Cas",   "Caster",  APPLY_INT,          95,   0.5,       6,        TRUE },
+  { "Rog",    "Rogue",  APPLY_DEX,          85,  0.75,       8,       FALSE },
+  { "Fig",  "Fighter",  APPLY_STR,          85,     1,      10,       FALSE },
+};
 
-  {
-    "Cas", "Caster",  APPLY_INT,
-    95, 0.5, 6, TRUE
-  },
-
-  {
-    "Rog",  "Rogue", APPLY_DEX,
-    85, 0.75, 8, FALSE
-  },
-
-  {
-    "Fig",  "Fighter", APPLY_STR,
-    85, 1, 10, FALSE
-  },
+const struct size_type size_table [MAX_SIZE] = {
+//{        "Size", mac, mstealth,  mcarry }
+  {        "Fine",  -8,       16,   0.125 },
+  {  "Diminutive",  -4,       12,    0.25 },
+  {        "Tiny",  -2,        8,     0.5 },
+  {       "Small",  -1,        4,    0.75 },
+  {      "Medium",   0,        0,       0 },
+  {       "Large",   1,       -4,       2 },
+  {        "Huge",   2,       -8,       4 },
+  {  "Gargantuan",   4,      -12,       8 },
+  {    "Colossal",   8,      -16,      16 }
 };
 
 /*

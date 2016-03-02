@@ -3034,8 +3034,6 @@ void clear_char( CHAR_DATA *ch ) {
 	return;
 }
 
-
-
 /*
  * Free a character.
  */
