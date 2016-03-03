@@ -194,8 +194,8 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
 	fprintf( fp, "ResBits     %ld\n",	ch->res_flags		);
 	fprintf( fp, "VulBits     %ld\n",	ch->vul_flags		);
 	/* Bug fix from Alander */
-	fprintf( fp, "Pos         %d\n",
-			ch->position == POS_FIGHTING ? POS_STANDING : ch->position );
+	fprintf( fp, "Pos         %d\n", ch->position == POS_FIGHTING ? POS_STANDING : ch->position );
+	fprintf( fp, "Size        %d\n", ch->size );
 
 	fprintf( fp, "Prac        %d\n",	ch->practice		);
 	fprintf( fp, "SavThr      %d\n",	ch->saving_throw	);
@@ -906,6 +906,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp )
 				KEY( "SAlign",	ch->start_align,	fread_letter( fp ) );
 				KEY( "Sx",		ch->sex,		fread_number( fp ) );
 				KEY( "Silver",	ch->money.silver,	fread_number( fp ) );
+				KEY( "Size", ch->size, fread_number( fp ) );
 				KEY( "Slyuc",	ch->pcdata->slayusee,	fread_string( fp ) );
 				KEY( "Slyrm",	ch->pcdata->slayroom,	fread_string( fp ) );
 				KEY( "Slyvict",	ch->pcdata->slayvict,	fread_string( fp ) );

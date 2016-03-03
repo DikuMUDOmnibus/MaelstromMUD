@@ -2805,6 +2805,7 @@ void clone_mobile(CHAR_DATA *parent, CHAR_DATA *clone)
 	clone->act		= parent->act;
 	clone->affected_by	= parent->affected_by;
 	clone->position	= parent->position;
+	clone->size	= parent->size;
 	clone->practice	= parent->practice;
 	clone->alignment	= parent->alignment;
 	clone->hitroll	= parent->hitroll;
@@ -2814,9 +2815,9 @@ void clone_mobile(CHAR_DATA *parent, CHAR_DATA *clone)
 	clone->armor	= parent->armor;
 
 	/* now add the affects */
-	for (paf = parent->affected; paf != NULL; paf = paf->next)
+	for (paf = parent->affected; paf != NULL; paf = paf->next) {
 		affect_to_char(clone,paf);
-
+	}
 }
 
 
@@ -3011,6 +3012,7 @@ void clear_char( CHAR_DATA *ch ) {
 	ch->logon					= current_time;
 	ch->armor					= 100;
 	ch->position			= POS_STANDING;
+	ch->size 					= SIZE_MEDIUM;
 	ch->level					= 0;
 	ch->practice			= 21;
 	ch->hit						= 20;

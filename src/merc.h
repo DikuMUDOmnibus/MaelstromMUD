@@ -1621,6 +1621,7 @@ struct  char_data
   long    res_flags;
   long    vul_flags;
   int     position;
+  int     size;
   int     practice;
   int     carry_weight;
   int     carry_number;
@@ -2275,19 +2276,13 @@ extern int    gsn_unholystrength;
  */
 #define UMIN( a, b )    ( ( a ) < ( b ) ? ( a ) : ( b ) )
 #define UMAX( a, b )    ( ( a ) > ( b ) ? ( a ) : ( b ) )
-#define URANGE( a, b, c ) ( ( b ) < ( a ) ? ( a )       \
-    : ( ( b ) > ( c ) ? ( c )   \
-      : ( b ) ) )
-#define LOWER( c )    ( ( c ) >= 'A' && ( c ) <= 'Z'          \
-    ? ( c ) + 'a' - 'A' : ( c ) )
-#define UPPER( c )    ( ( c ) >= 'a' && ( c ) <= 'z'          \
-    ? ( c ) + 'A' - 'a' : ( c ) )
+#define URANGE( a, b, c ) ( ( b ) < ( a ) ? ( a ) : ( ( b ) > ( c ) ? ( c ) : ( b ) ) )
+#define LOWER( c )    ( ( c ) >= 'A' && ( c ) <= 'Z' ? ( c ) + 'a' - 'A' : ( c ) )
+#define UPPER( c )    ( ( c ) >= 'a' && ( c ) <= 'z' ? ( c ) + 'A' - 'a' : ( c ) )
 #define IS_SET( flag, bit ) ( ( flag ) &   ( bit ) )
 #define SET_BIT( var, bit ) ( ( var )  |=  ( bit ) )
 #define REMOVE_BIT( var, bit )  ( ( var )  &= ~( bit ) )
 #define TOGGLE_BIT( var, bit )  ( ( var )  ^=  ( bit ) )
-
-
 
 /*
  * Character macros.
@@ -2316,25 +2311,19 @@ extern int    gsn_unholystrength;
 #define GET_DAMROLL( ch )       ( ch->damroll + str_app[get_curr_str( ch )].todam)
 #define GET_BAB( ch )           ( (int)(ch->level * ( IS_NPC( ch ) ? 1 : class_table[prime_class( ch )].mbab) ) )
 #define GET_THAC0( ch )         ( 20 - GET_BAB( ch ) - GET_HITROLL( ch ) )
+#define GET_MOD( stat )         ( (int)((stat / 2) - 5) )
 
-#define IS_OUTSIDE( ch )        ( !IS_SET(                             \
-      ( ch )->in_room->room_flags,                             \
-      ROOM_INDOORS ) )
+#define IS_OUTSIDE( ch )        ( !IS_SET( ( ch )->in_room->room_flags, ROOM_INDOORS ) )
 
-#define WAIT_STATE( ch, pulse ) ( ( ch )->wait = UMAX( ( ch )->wait,         \
-      ( pulse ) ) )
+#define WAIT_STATE( ch, pulse ) ( ( ch )->wait = UMAX( ( ch )->wait, ( pulse ) ) )
 
-
-#define STUN_CHAR( ch, pulse, type ) ( (ch)->stunned[(type)] =               \
-    UMAX( (ch)->stunned[(type)],                          \
-      (pulse) ) )
+#define STUN_CHAR( ch, pulse, type ) ( (ch)->stunned[(type)] = UMAX( (ch)->stunned[(type)], (pulse) ) )
 
 #define IS_STUNNED( ch, type ) ( (ch)->stunned[(type)] > 0 )
+
 int mmlvl_mana  args( ( CHAR_DATA *ch, int sn ) );
-#define MANA_COST( ch, sn )     ( IS_NPC( ch ) ? 0 : UMAX (                  \
-      skill_table[sn].min_mana,                                    \
-      100 / ( 2 + ch->level -                                      \
-        mmlvl_mana( ch, sn ) ) ) )
+
+#define MANA_COST( ch, sn )     ( IS_NPC( ch ) ? 0 : UMAX ( skill_table[sn].min_mana, 100 / ( 2 + ch->level - mmlvl_mana( ch, sn ) ) ) )
 #define IS_SWITCHED( ch )       ( ch->pcdata->switched )
 
 #define UNDEAD_TYPE( ch ) ( IS_NPC( ch ) ? ACT_UNDEAD : PLR_UNDEAD )

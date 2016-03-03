@@ -77,8 +77,6 @@ int get_age( CHAR_DATA *ch )
 	/* 14400 assumes 30 second hours, 24 hours a day, 20 day - Kahn */
 }
 
-
-
 /*
  * Retrieve character's current strength.
  */
