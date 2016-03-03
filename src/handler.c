@@ -66,12 +66,16 @@ int get_trust( CHAR_DATA *ch )
  */
 int get_age( CHAR_DATA *ch )
 {
-	return 17 + ( ch->played + (int) ( current_time - ch->logon ) ) / 14400;
+	int base_age = 17;
+
+	if ( !IS_NPC(ch) ) {
+		base_age = race_table[ch->race].age;
+	}
+
+	return base_age + ( ch->played + (int) ( current_time - ch->logon ) ) / 14400;
 
 	/* 14400 assumes 30 second hours, 24 hours a day, 20 day - Kahn */
 }
-
-
 
 /*
  * Retrieve character's current strength.
@@ -171,18 +175,36 @@ int get_curr_con( CHAR_DATA *ch )
 	return URANGE( 3, ch->pcdata->perm_con + ch->pcdata->mod_con, max );
 }
 
+/*
+ * Retrieve character's current charisma.
+ */
+int get_curr_cha( CHAR_DATA *ch ) {
+	int max;
 
+	if ( IS_NPC( ch ) ) {
+		return 13;
+	}
+
+	if ( class_table[prime_class(ch)].attr_prime == APPLY_CHA ) {
+		max = 25 + race_table[ch->race].mcha;
+	} else {
+		max = 22 + race_table[ch->race].mcha;
+	}
+
+	return URANGE( 3, ch->pcdata->perm_cha + ch->pcdata->mod_cha, max );
+}
 
 /*
  * Retrieve a character's carry capacity.
  */
-int can_carry_n( CHAR_DATA *ch )
-{
-	if ( !IS_NPC( ch ) && ch->level >= LEVEL_IMMORTAL )
+int can_carry_n( CHAR_DATA *ch ) {
+	if ( !IS_NPC( ch ) && ch->level >= LEVEL_IMMORTAL ) {
 		return 1000;
+	}
 
-	if ( IS_NPC( ch ) && IS_SET( ch->act, ACT_PET ) )
+	if ( IS_NPC( ch ) && IS_SET( ch->act, ACT_PET ) ) {
 		return 0;
+	}
 
 	return MAX_WEAR + 2 * get_curr_dex( ch ) + get_curr_str( ch ) * 2;
 }
@@ -192,27 +214,28 @@ int can_carry_n( CHAR_DATA *ch )
 /*
  * Retrieve a character's carry capacity.
  */
-int can_carry_w( CHAR_DATA *ch )
-{
+int can_carry_w( CHAR_DATA *ch ) {
 	int max_weight = 0;
+	int modified_weight = 0;
+	int coins_weight = 0;
 
-	if ( !IS_NPC( ch ) && ch->level >= LEVEL_IMMORTAL )
+	if ( !IS_NPC( ch ) && ch->level >= LEVEL_IMMORTAL ) {
 		return 1000000;
+	}
 
-	if ( IS_NPC( ch ) && IS_SET( ch->act, ACT_PET ) )
+	if ( IS_NPC( ch ) && IS_SET( ch->act, ACT_PET ) ) {
 		return 0;
+	}
 
-	/* Angi: Make max carry weight less than the weight of your coins. */
+	coins_weight = ch->money.gold/1000 + ch->money.silver/1000 + ch->money.copper/1000;
+	modified_weight = (int)(str_app[get_curr_str( ch )].carry * size_table[ch->size].mcarry);
+	max_weight = modified_weight - coins_weight;
 
-	max_weight = ( ( str_app[get_curr_str( ch )].carry ) -
-			( ch->money.gold/1000 + ch->money.silver/1000 + ch->money.copper/1000 ) );
-	if ( max_weight < 0 )
+	if ( max_weight < 0 ) {
 		max_weight = 0;
+	}
 
 	return max_weight;
-
-	/*    return str_app[get_curr_str( ch )].carry; */
-
 }
 
 
@@ -340,6 +363,12 @@ void affect_modify( CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd )
 		case APPLY_CON:
 												if ( !IS_NPC( ch ) )
 													ch->pcdata->mod_con += mod;                         break;
+		case APPLY_CHA:
+			if ( !IS_NPC( ch ) ) {
+				ch->pcdata->mod_cha += mod;
+			}
+
+			break;
 		case APPLY_SEX:           ch->sex                   += mod; break;
 		case APPLY_CLASS:						break;
 		case APPLY_LEVEL:						break;
@@ -602,7 +631,7 @@ void affect_modify2( CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd )
 	switch ( paf->location )
 	{
 		default:
-			sprintf( buf, "Affect_modify: unknown location %d on %s.",
+			sprintf( buf, "Affect_modifys: unknown location %d on %s.",
 					paf->location, ch->name );
 			bug ( buf, 0 );
 			return;
@@ -623,6 +652,12 @@ void affect_modify2( CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd )
 		case APPLY_CON:
 												if ( !IS_NPC( ch ) )
 													ch->pcdata->mod_con += mod;                         break;
+		case APPLY_CHA:
+			if ( !IS_NPC( ch ) ) {
+				ch->pcdata->mod_cha += mod;
+			}
+
+			break;
 		case APPLY_SEX:           ch->sex                   += mod; break;
 		case APPLY_CLASS:						break;
 		case APPLY_LEVEL:						break;
@@ -2130,6 +2165,7 @@ char *affect_loc_name( int location )
 		case APPLY_INT:		return "intelligence";
 		case APPLY_WIS:		return "wisdom";
 		case APPLY_CON:		return "constitution";
+		case APPLY_CHA:		return "charisma";
 		case APPLY_SEX:		return "sex";
 		case APPLY_CLASS:		return "class";
 		case APPLY_LEVEL:		return "level";

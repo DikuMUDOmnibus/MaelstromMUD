@@ -1704,6 +1704,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 						ch->pcdata->mod_wis = race_table[d->character->race].mwis;
 						ch->pcdata->mod_dex = race_table[d->character->race].mdex;
 						ch->pcdata->mod_con = race_table[d->character->race].mcon;
+						ch->pcdata->mod_cha = race_table[d->character->race].mcha;
 					}
 					buf2[0]='\0';
 					strcpy( buf2,
@@ -1713,14 +1714,9 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					iCount = 0;
 					for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
 					{
-						if ( class_table[iClass].races[ch->race] )
-						{
 							iCount++;
-							sprintf( buf, "&z[&W%-12s&z]%s",
-									class_table[iClass].who_long,
-									iCount % 5 == 0 ? "\n\r" : "" );
+							sprintf( buf, "&z[&W%-12s&z]%s", class_table[iClass].who_long, iCount % 5 == 0 ? "\n\r" : "" );
 							strcat( buf2, buf );
-						}
 					}
 					if ( iCount % 5 != 0 )
 						strcat( buf2, "\n\r" );
@@ -1773,8 +1769,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			}
 			for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
 			{
-				if ( !str_prefix( argument, class_table[iClass].who_long )
-						&& class_table[iClass].races[ch->race] )
+				if ( !str_prefix( argument, class_table[iClass].who_long ) )
 				{
 					ch->class[0] = iClass;
 					break;
@@ -1807,6 +1802,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 							case APPLY_WIS: ch->pcdata->perm_wis = 16; break;
 							case APPLY_DEX: ch->pcdata->perm_dex = 16; break;
 							case APPLY_CON: ch->pcdata->perm_con = 16; break;
+							case APPLY_CHA: ch->pcdata->perm_cha = 16; break;
 						}
 					}
 					argument[0] = '\0';
@@ -1824,14 +1820,9 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					iCount = 0;
 					for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
 					{
-						if ( class_table[iClass].races[ch->race] )
-						{
 							iCount++;
-							sprintf( buf, "&z[&W%-12s&z]%s",
-									class_table[iClass].who_long,
-									iCount % 5 == 0 ? "\n\r" : "" );
+							sprintf( buf, "&z[&W%-12s&z]%s", class_table[iClass].who_long, iCount % 5 == 0 ? "\n\r" : "" );
 							strcat( buf2, buf );
-						}
 					}
 					if ( iCount % 5 != 0 )
 						strcat( buf2, "\n\r" );
@@ -1851,9 +1842,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					iCount = 0;
 					for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
 					{
-						if ( class_table[iClass].races[ch->race]
-								&& prime_class( ch ) != iClass
-								&& class_table[prime_class(ch)].multi[iClass] )
+						if ( prime_class( ch ) != iClass )
 						{
 							iCount++;
 							sprintf( buf, "&z[&W%-12s&z]%s",
@@ -1891,14 +1880,9 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 				iCount = 0;
 				for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
 				{
-					if ( class_table[iClass].races[ch->race] )
-					{
 						iCount++;
-						sprintf( buf, "&z[&W%-12s&z]%s",
-								class_table[iClass].who_long,
-								iCount % 5 == 0 ? "\n\r" : "" );
+						sprintf( buf, "&z[&W%-12s&z]%s", class_table[iClass].who_long, iCount % 5 == 0 ? "\n\r" : "" );
 						strcat( buf2, buf );
-					}
 				}
 				if ( iCount % 5 != 0 )
 					strcat( buf2, "\n\r" );
@@ -1909,10 +1893,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			}
 			for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
 			{
-				if ( !str_prefix( argument, class_table[iClass].who_long )
-						&& class_table[iClass].races[ch->race]
-						&& prime_class( ch ) != iClass
-						&& class_table[prime_class(ch)].multi[iClass] )
+				if ( !str_prefix( argument, class_table[iClass].who_long ) && prime_class( ch ) != iClass )
 				{
 					ch->class[1] = iClass;
 					break;
@@ -1955,9 +1936,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					iCount = 0;
 					for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
 					{
-						if ( class_table[iClass].races[ch->race]
-								&& prime_class( ch ) != iClass
-								&& class_table[prime_class(ch)].multi[iClass] )
+						if ( prime_class( ch ) != iClass )
 						{
 							iCount++;
 							sprintf( buf, "&z[&W%-12s&z]%s",
@@ -2039,17 +2018,16 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			/* END */
 		case CON_BEGIN_REMORT:
 			buf2[0] = '\0';
-			strcpy( buf2,
-					"\n\r                  &z-= &RSelect a race from the list below &z=-\n\r\n\r" );
-			for ( iRace = 0; iRace < MAX_RACE; iRace++ )
-			{
-				sprintf( buf, "&z[&W%-12s&z]%s",
-						race_table[iRace].race_full,
-						(( iRace+1) % 5) == 0 ? "\n\r" : "" );
+			strcpy( buf2, "\n\r                  &z-= &RSelect a race from the list below &z=-\n\r\n\r" );
+			for ( iRace = 0; iRace < MAX_RACE; iRace++ ) {
+				sprintf( buf, "&z[&W%-12s&z]%s", race_table[iRace].race_full, (( iRace+1) % 5) == 0 ? "\n\r" : "" );
 				strcat( buf2, buf );
 			}
-			if ( iRace % 5 != 0 )
+
+			if ( iRace % 5 != 0 ) {
 				strcat( buf2, "\n\r" );
+			}
+
 			strcat( buf2, "\n\r&RRACE &w-> " );
 			write_to_buffer( d, buf2, 0 );
 			wiznet("Remort reconnected!  $N sighted.",ch,NULL,WIZ_NEWBIE,0,0);
@@ -2065,15 +2043,14 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 				  "  May your visit here be tempest tossed.\n\r",
 				  ch ); */
 
-			if ( ch->level == 0 )
-			{
-				switch ( class_table[prime_class( ch )].attr_prime )
-				{
+			if ( ch->level == 0 ) {
+				switch ( class_table[prime_class( ch )].attr_prime ) {
 					case APPLY_STR: ch->pcdata->perm_str = 16; break;
 					case APPLY_INT: ch->pcdata->perm_int = 16; break;
 					case APPLY_WIS: ch->pcdata->perm_wis = 16; break;
 					case APPLY_DEX: ch->pcdata->perm_dex = 16; break;
 					case APPLY_CON: ch->pcdata->perm_con = 16; break;
+					case APPLY_CHA: ch->pcdata->perm_cha = 16; break;
 				}
 
 				ch->pcdata->mod_str += race_table[ch->race].mstr;
@@ -2081,52 +2058,45 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 				ch->pcdata->mod_wis += race_table[ch->race].mwis;
 				ch->pcdata->mod_dex += race_table[ch->race].mdex;
 				ch->pcdata->mod_con += race_table[ch->race].mcon;
-				SET_BIT( ch->act, PLR_AUTOEXIT + PLR_AUTOCOINS );
-				ch->level   = 1;
-				ch->exp = number_classes( ch ) == 1 ? 1000
-					: number_classes( ch ) * 1500;
-				ch->hit     = MAX_HIT(ch);
-				ch->mana    = MAX_MOVE(ch);
-				ch->move    = MAX_MOVE(ch);
-				/* charisma */
-				if ( ( ch->race == RACE_HUMAN ) ||
-						( ch->race == RACE_DWARF ) )
-					ch->charisma = number_range( 20, 24 );
-				if ( ( ch->race == RACE_GNOME )  ||
-						( ch->race == RACE_ELF )    ||
-						( ch->race == RACE_HALFLING ) )
-					ch->charisma = number_range( 25, 30 );
+				ch->pcdata->mod_cha += race_table[ch->race].mcha;
 
-				sprintf( buf, "the %s %s",
-						race_table[ch->race].race_full,
-						class_table[prime_class(ch)].who_long );
+				SET_BIT( ch->act, PLR_AUTOEXIT + PLR_AUTOCOINS );
+
+				ch->level    	 = 1;
+				ch->exp 		 	 = number_classes( ch ) == 1 ? 1000 : number_classes( ch ) * 1500;
+				ch->size 		 	 = race_table[ch->race].size;
+
+				ch->perm_hit   = class_table[prime_class(ch)].hitdice + GET_MOD(get_curr_con(ch));
+
+				ch->hit      	 = MAX_HIT(ch);
+				ch->mana     	 = MAX_MANA(ch);
+				ch->move     	 = MAX_MOVE(ch);
+
+				ch->money.gold = dice(class_table[prime_class(ch)].d6gold, 6) * 10;
+
+				sprintf( buf, "the %s %s", race_table[ch->race].race_full, class_table[prime_class(ch)].who_long );
 				set_title( ch, buf );
+
 				ch->prompt = str_dup( "<&Y%hhp &C%mm &G%vmv&w> " );
-				if ( ch->start_align == 'E' )
+
+				if ( ch->start_align == 'E' ) {
 					char_to_room( ch, get_room_index( ROOM_VNUM_RW_SCHOOL ) );
-				else
+				} else {
 					char_to_room( ch, get_room_index( ROOM_VNUM_SCHOOL ) );
-			}
-			else if ( ch->in_room )
-			{
+				}
+			} else if ( ch->in_room ) {
 				char_to_room( ch, ch->in_room );
-			}
-			else if ( IS_IMMORTAL( ch ) )
-			{
+			} else if ( IS_IMMORTAL( ch ) ) {
 				char_to_room( ch, get_room_index( ROOM_VNUM_CHAT ) );
-			}
-			else
-			{
+			} else {
 				char_to_room( ch, get_room_index( ROOM_VNUM_TEMPLE ) );
 			}
 
-			if ( !IS_SET( ch->act, PLR_WIZINVIS )
-					&& !IS_AFFECTED( ch, AFF_INVISIBLE ) )
-				act(AT_GREEN, "$n has returned to the storm.",
-						ch, NULL, NULL, TO_ROOM );
-			else
-			{
+			if ( !IS_SET( ch->act, PLR_WIZINVIS ) && !IS_AFFECTED( ch, AFF_INVISIBLE ) ) {
+				act(AT_GREEN, "$n has returned to the storm.", ch, NULL, NULL, TO_ROOM );
+			} else {
 				CHAR_DATA *gch;
+
 				for ( gch = ch->in_room->people; gch; gch = gch->next_in_room )
 				{
 					if ( ch != gch )

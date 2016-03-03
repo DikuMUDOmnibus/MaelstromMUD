@@ -3771,12 +3771,13 @@ void spell_mind_probe( int sn, int level, CHAR_DATA *ch, void *vo )
 	send_to_char( AT_CYAN, buf, ch );
 
 	sprintf( buf,
-			"Str: %d&p(&P%d&p)&P  Int: %d&p(&P%d&p)&P  Wis: %d&p(&P%d&p)&P  Dex: %d&p(&P%d&p)&P  Con: %d&p(&P%d&p)&P.\n\r",
+			"Str: %d&p(&P%d&p)&P  Int: %d&p(&P%d&p)&P  Wis: %d&p(&P%d&p)&P\n\rDex: %d&p(&P%d&p)&P  Con: %d&p(&P%d&p)&P   Cha: %d&p(&P%d&p)&P\n\r",
 			IS_NPC(victim) ? 13: victim->pcdata->perm_str, IS_NPC(victim) ? 13: get_curr_str( victim ),
 			IS_NPC(victim) ? 13: victim->pcdata->perm_int, IS_NPC(victim) ? 13: get_curr_int( victim ),
 			IS_NPC(victim) ? 13: victim->pcdata->perm_wis, IS_NPC(victim) ? 13: get_curr_wis( victim ),
 			IS_NPC(victim) ? 13: victim->pcdata->perm_dex, IS_NPC(victim) ? 13: get_curr_dex( victim ),
-			IS_NPC(victim) ? 13: victim->pcdata->perm_con, IS_NPC(victim) ? 13: get_curr_con( victim ) );
+			IS_NPC(victim) ? 13: victim->pcdata->perm_con, IS_NPC(victim) ? 13: get_curr_con( victim ),
+			IS_NPC(victim) ? 13: victim->pcdata->perm_cha, IS_NPC(victim) ? 13: get_curr_cha( victim ) );
 	send_to_char( AT_PINK, buf, ch );
 
 	send_to_char( AT_CYAN, "You have scored ", ch );
@@ -5053,6 +5054,7 @@ void spell_disrupt( int sn, int level, CHAR_DATA *ch, void *vo )
 			case APPLY_INT:
 			case APPLY_WIS:
 			case APPLY_CON:
+			case APPLY_CHA:
 				val = (level / 34) + 1;
 				break;
 			case APPLY_MANA:

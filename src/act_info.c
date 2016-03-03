@@ -1440,6 +1440,7 @@ void do_score( CHAR_DATA *ch, char *argument )
 			get_age( ch ),
 			(get_age( ch ) - 17) * 4 );
 	send_to_char( AT_CYAN, buf, ch );
+
 	send_to_char( AT_WHITE, "==================================================================\n\r",
 			ch );
 	sprintf( buf, "&cYou are a &W%s&c &r%s&c.\n\r", race_table[ch->race].race_full, class_long( ch ) );
@@ -1460,7 +1461,7 @@ void do_score( CHAR_DATA *ch, char *argument )
 		}
 	}
 
-	sprintf ( buf, " %d/%d", ch->hit, MAX_HIT(ch) );
+	sprintf ( buf, "%d/%d", ch->hit, MAX_HIT(ch) );
 	send_to_char( AT_WHITE, buf, ch );
 	send_to_char( AT_CYAN, " HP, ", ch );
 	sprintf ( buf, "%d/%d", ch->mana, MAX_MANA(ch) );
@@ -1478,6 +1479,8 @@ void do_score( CHAR_DATA *ch, char *argument )
 			ch->carry_number, can_carry_n( ch ),
 			ch->carry_weight, can_carry_w( ch ) );
 	send_to_char( AT_BLUE, buf, ch );
+	sprintf( buf, "Size: %s\n\r", size_table[ch->size].name );
+	send_to_char( AT_CYAN, buf, ch );
 	send_to_char( AT_WHITE, "==================================================================\n\r",
 			ch );
 	send_to_char( AT_WHITE, "&rAttributes:\n\r", ch );
@@ -1488,10 +1491,10 @@ void do_score( CHAR_DATA *ch, char *argument )
 			IS_NPC(ch) ? 13: ch->pcdata->perm_wis, IS_NPC(ch) ? 13: get_curr_wis( ch ));
 	send_to_char( AT_PINK, buf, ch );
 	sprintf( buf,
-			"&BDex: &W%d&p(&r%d&p)&B  Con: &W%d&p(&r%d&p)&B  Cha: &W%d\n\r",
+			"&BDex: &W%d&p(&r%d&p)&B  Con: &W%d&p(&r%d&p)&B  Cha: &W%d&p(&r%d&p)&W\n\r",
 			IS_NPC(ch) ? 13: ch->pcdata->perm_dex, IS_NPC(ch) ? 13: get_curr_dex( ch ),
 			IS_NPC(ch) ? 13: ch->pcdata->perm_con, IS_NPC(ch) ? 13: get_curr_con( ch ),
-			IS_NPC(ch) ? 20: ch->charisma );
+			IS_NPC(ch) ? 13: ch->pcdata->perm_cha, IS_NPC(ch) ? 13: get_curr_cha( ch ));
 	send_to_char( AT_PINK, buf, ch );
 	send_to_char( AT_CYAN, "You have scored ", ch );
 	sprintf( buf, "&W%d &cexperience points.\n\r", ch->exp );
@@ -1867,7 +1870,6 @@ void do_who( CHAR_DATA *ch, char *argument )
 	bool             rgfClass [ MAX_CLASS ];
 	bool             fClassRestrict;
 	bool 	     fClanRestrict;
-	/*    bool	     fGuildRestrict; */
 	bool             fImmortalOnly;
 	bool             fHeroOnly;
 	bool	     fRaceRestrict;
@@ -1876,8 +1878,6 @@ void do_who( CHAR_DATA *ch, char *argument )
 	int		     iRace;
 	int	   	     iClan;
 	bool	     rgfClan [ MAX_CLAN ];
-	/*    int	 	     iGuild; 
-		  bool	     rgfGuild [ MAX_CLAN ];  */
 	bool	     rgfRace [ MAX_RACE ];
 	int              num_of_imm = 0;
 	int              noclass[MAX_CLASS];
@@ -1895,7 +1895,6 @@ void do_who( CHAR_DATA *ch, char *argument )
 	fRaceRestrict  = FALSE;
 	fNameRestrict  = FALSE;
 	fClanRestrict  = FALSE;
-	/*    fGuildRestrict = FALSE;  */
 	tClan          = NULL;
 
 	send_to_char(C_DEFAULT, "&W\n\r==================================================================\n\r",ch );
@@ -2012,26 +2011,6 @@ void do_who( CHAR_DATA *ch, char *argument )
 								fClanRestrict = FALSE;
 								fNameRestrict = TRUE;
 							} 
-
-							/*		if ( iClan >= MAX_CLAN )
-									{ 
-									fClanRestrict = FALSE;   
-									fGuildRestrict = TRUE;
-									for ( iGuild = 0; guild_table[iGuild].name[0] != '\0'; iGuild++ )
-									{
-									if ( !str_cmp( arg1, guild_table[iGuild].name ) )
-									{
-									rgfGuild[iGuild] = TRUE;
-									break;
-									}
-									}
-
-									if ( guild_table[iGuild].name[0] == '\0' )
-									{
-									fGuildRestrict = FALSE;
-									fNameRestrict = TRUE;
-									} 
-									} */
 						}
 					}
 
@@ -2074,8 +2053,6 @@ void do_who( CHAR_DATA *ch, char *argument )
 				|| ( fClassRestrict && !rgfClass[prime_class(wch)] )
 				|| ( fRaceRestrict  && !rgfRace[wch->race] ) 
 				|| ( fNameRestrict  && str_prefix( arg1, wch->name ) ) 
-				/*	    || ( fGuildRestrict && str_cmp( wch->guild->name,
-						guild_table[iGuild].name ) )   */
 				|| ( fClanRestrict  && !rgfClan[wch->clan] ) )
 			continue;
 
@@ -2219,26 +2196,6 @@ void do_who( CHAR_DATA *ch, char *argument )
 		if ( IS_SET( wch->act, PLR_QUESTOR ) )
 			send_to_char( AT_BLUE, "&z(&YQ&z) ", ch );
 
-		if(wch->guild != NULL)
-		{
-			buf[0] = '\0';
-			sprintf(buf+strlen(buf), "[%s", wch->guild->name);
-			send_to_char(wch->guild->color, buf, ch);
-			buf[0] = '\0';
-			switch(wch->guild_rank)
-			{
-				case 0: sprintf(buf+strlen(buf), "] ");		break;
-				case 1: sprintf(buf+strlen(buf), " %s] ", wch->sex == SEX_FEMALE ?
-								"Lady" : "Lord" );	break;
-				case 2: sprintf(buf+strlen(buf), " High %s] ",
-								wch->sex == SEX_FEMALE ? "Lady" : "Lord" );	break;
-				case 3: sprintf(buf+strlen(buf), " Over%s] ",
-								wch->sex == SEX_FEMALE ? "lady" : "lord" );	break;
-				case 4: sprintf(buf+strlen(buf), " Deity] " ); break;
-				default: sprintf(buf+strlen(buf), "Bug] ");		break;
-			}
-			send_to_char(wch->guild->color, buf, ch);
-		}
 		if ( IS_SET( wch->act, PLR_AFK ) )
 			send_to_char( AT_YELLOW, "&z[&PA&z] ", ch );
 		buf[0] = '\0';
@@ -3307,14 +3264,6 @@ void do_channels( CHAR_DATA *ch, char *argument )
 					ch );
 		}
 
-		if ( get_trust( ch ) >= L_IMP )
-		{
-			send_to_char(AT_DGREY, !IS_SET( ch->deaf, CHANNEL_GUILD_MASTER )
-					? " +GUILDMASTER"
-					: " -guildmaster",
-					ch );
-		}
-
 		send_to_char(AT_PINK, ".\n\r", ch );
 
 	}
@@ -3352,7 +3301,6 @@ void do_channels( CHAR_DATA *ch, char *argument )
 		/*      else if ( !str_cmp( arg+1, "vent"     ) ) bit = CHANNEL_VENT;  */
 		else if ( !str_cmp( arg+1,"classmaster")) bit = CHANNEL_CLASS_MASTER;
 		else if ( !str_cmp( arg+1,"clanmaster") ) bit = CHANNEL_CLAN_MASTER;
-		else if ( !str_cmp( arg+1,"guildmaster")) bit = CHANNEL_GUILD_MASTER;
 		else if ( !str_cmp( arg+1,"arena"     ) ) bit = CHANNEL_ARENA;
 		else if ( !str_cmp( arg+1, "all"      ) ) bit = ~0;
 		else
@@ -4275,149 +4223,6 @@ void do_smash ( CHAR_DATA *ch, char *argument )
 	return;
 }
 
-void do_guild(CHAR_DATA *ch, char *argument)
-{
-	CHAR_DATA *victim;
-
-	if(argument[0] == '\0')
-	{
-		send_to_char(AT_WHITE, "Guild <char>\n\r", ch);
-		return;
-	}
-	if(ch->guild == NULL)
-	{
-		send_to_char(AT_BLUE, "You must be in a guild to induct someone.\n\r", ch);
-		return;
-	}
-	if(!is_name(NULL, ch->name, ch->guild->deity))
-	{
-		send_to_char(AT_BLUE, "You are not the deity of this guild.\n\r", ch);
-		return;
-	}
-	if((victim = get_char_world(ch, argument)) == NULL)
-	{
-		send_to_char(AT_BLUE, "Player not found.\n\r", ch);
-		return;
-	}
-	if(IS_NPC(victim))
-	{
-		send_to_char(AT_BLUE, "May guild PCs only.\n\r", ch);
-		return;
-	}
-	if(victim->guild != NULL)
-	{
-		send_to_char(AT_BLUE, "That person is already guilded.\n\r", ch);
-	}
-	if ( IS_SET( victim->act, PLR_THIEF ) 
-			&& !strcmp( ch->guild->name, "MERCENARY" ) )
-	{
-		send_to_char(AT_BLUE, "That person has a thief flag!\n\r", ch );
-		return;
-	}
-	victim->guild = ch->guild;
-	victim->guild_rank = 0;
-	act(AT_BLUE, "You guild $N.", ch, NULL, victim, TO_CHAR);
-	act(AT_BLUE, "$N guilds you.", victim, NULL, ch, TO_CHAR);
-	return;
-}
-
-void do_unguild(CHAR_DATA *ch, char *argument)
-{
-	CHAR_DATA *victim;
-
-	if(argument[0] == '\0')
-	{
-		send_to_char(AT_WHITE, "Unguild <char>\n\r", ch);
-		return;
-	}
-	if(ch->guild == NULL)
-	{
-		send_to_char(AT_BLUE, "You must be in a guild to unguild someone.\n\r", ch);
-		return;
-	}
-	if(!is_name(NULL, ch->name, ch->guild->deity))
-	{
-		send_to_char(AT_BLUE, "You are not the deity of this guild.\n\r", ch);
-		return;
-	}
-	if((victim = get_char_world(ch, argument)) == NULL)
-	{
-		send_to_char(AT_BLUE, "Player not found.\n\r", ch);
-		return;
-	}
-	if(victim->guild != ch->guild)
-	{
-		send_to_char(AT_BLUE, "That person is not in your guild.\n\r", ch);
-		return;
-	}
-	victim->guild = NULL;
-	act(AT_BLUE, "You unguild $N.", ch, NULL, victim, TO_CHAR);
-	act(AT_BLUE, "$N unguilds you.", victim, NULL, ch, TO_VICT);
-	return;
-}
-
-void do_setrank(CHAR_DATA *ch, char *argument)
-{
-	char	arg1 [MAX_INPUT_LENGTH];
-	CHAR_DATA *victim;
-	int value;
-
-	argument = one_argument(argument, arg1);
-	value = is_number(argument) ? atoi(argument) : 0;
-
-	if(arg1[0] == '\0')
-	{
-		send_to_char(AT_WHITE, "Setrank <char> <rank num>\n\r", ch);
-		send_to_char(AT_WHITE, " rank num > 0            \n\r", ch);
-		return;
-	}
-	if(ch->guild == NULL)
-	{
-		send_to_char(AT_BLUE, "You must be in a guild to induct someone.\n\r", ch);
-		return;
-	}
-	if(!is_name(NULL, ch->name, ch->guild->deity))
-	{
-		send_to_char(AT_BLUE, "You are not the deity of this guild.\n\r", ch);
-		return;
-	}
-	if((victim = get_char_world(ch, arg1)) == NULL)
-	{
-		send_to_char(AT_BLUE, "Player not found.\n\r", ch);
-		return;
-	}
-	if(victim->guild != ch->guild)
-	{
-		send_to_char(AT_BLUE, "That person is not in your guild.\n\r", ch);
-		return;
-	}
-	victim->guild_rank = value;
-	send_to_char(AT_BLUE, "Ok.\n\r", ch);
-	return;
-}
-
-void do_guilds( CHAR_DATA *ch, char *argument )
-{
-	char          buf    [ MAX_STRING_LENGTH ];
-	char          result [ MAX_STRING_LENGTH*2 ];
-	int cnt = 0;
-	sprintf( result, "&z[&R%12s&z] [&R%30s&z]\n\r", "Guild Name","Deities" );
-
-	for ( cnt = 0; guild_table[cnt].name[0] != '\0'; cnt++ )
-	{
-		sprintf( buf, "&z[&W%*s&z] [&W%*s&z]\n\r", 
-				(int)(12 + strlen(guild_table[cnt].name) - strlen_wo_col(guild_table[cnt].name)),
-				guild_table[cnt].name,
-				(int)(30 + strlen(guild_table[cnt].deity) - strlen_wo_col(guild_table[cnt].deity)),
-				guild_table[cnt].deity );
-		strcat( result, buf );
-	}
-
-	send_to_char( AT_WHITE, result, ch );
-	return;
-
-}
-
 void do_clans( CHAR_DATA *ch, char *argument )
 {
 	CLAN_DATA    *pClan;
@@ -4866,7 +4671,7 @@ void do_worth( CHAR_DATA *ch, char *argument )
 	}
 	sprintf( log_buf, "Your current stats are:\n\r  Str: %d.  Wis: %d.  Int: %d.  Dex: %d.  Con: %d.  Cha: %d.\n\r",
 			get_curr_str( ch ), get_curr_wis( ch ), get_curr_int( ch ),
-			get_curr_dex( ch ), get_curr_con( ch ), ch->charisma );
+			get_curr_dex( ch ), get_curr_con( ch ), get_curr_cha( ch ) );
 	send_to_char( AT_RED, log_buf, ch );
 
 	sprintf( log_buf, "You are carrying %d gold, %d silver, and %d copper coins.\n\r", ch->money.gold,

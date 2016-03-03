@@ -2805,6 +2805,7 @@ void clone_mobile(CHAR_DATA *parent, CHAR_DATA *clone)
 	clone->act		= parent->act;
 	clone->affected_by	= parent->affected_by;
 	clone->position	= parent->position;
+	clone->size	= parent->size;
 	clone->practice	= parent->practice;
 	clone->alignment	= parent->alignment;
 	clone->hitroll	= parent->hitroll;
@@ -2814,9 +2815,9 @@ void clone_mobile(CHAR_DATA *parent, CHAR_DATA *clone)
 	clone->armor	= parent->armor;
 
 	/* now add the affects */
-	for (paf = parent->affected; paf != NULL; paf = paf->next)
+	for (paf = parent->affected; paf != NULL; paf = paf->next) {
 		affect_to_char(clone,paf);
-
+	}
 }
 
 
@@ -2997,42 +2998,43 @@ void clone_object(OBJ_DATA *parent, OBJ_DATA *clone)
 /*
  * Clear a new character.
  */
-void clear_char( CHAR_DATA *ch )
-{
+void clear_char( CHAR_DATA *ch ) {
 	static CHAR_DATA ch_zero;
 	int iclass;
 
-	*ch				= ch_zero;
-	ch->name			= &str_empty[0];
+	*ch								= ch_zero;
+	ch->name					= &str_empty[0];
 	ch->short_descr		= &str_empty[0];
 	ch->long_descr		= &str_empty[0];
 	ch->description		= &str_empty[0];
-	ch->prompt                  = &str_empty[0];
-	ch->last_note               = 0;
-	ch->logon			= current_time;
-	ch->armor			= 100;
-	ch->position		= POS_STANDING;
-	ch->level                   = 0;
-	ch->practice		= 21;
-	ch->hit			= 20;
-	ch->perm_hit		= 20;
-	ch->mod_hit			= 0;
-	ch->mana			= 100;
-	ch->perm_mana		= 100;
-	ch->mod_mana		= 0;
-	ch->move			= 100;
-	ch->perm_move		= 100;
-	ch->mod_move		= 0;
-	ch->leader                  = NULL;
-	ch->master                  = NULL;
-	ch->deleted                 = FALSE;
+	ch->prompt       	= &str_empty[0];
+	ch->last_note    	= 0;
+	ch->logon					= current_time;
+	ch->armor					= 100;
+	ch->position			= POS_STANDING;
+	ch->size 					= SIZE_MEDIUM;
+	ch->level					= 0;
+	ch->practice			= 21;
+	ch->hit						= 20;
+	ch->perm_hit			= 20;
+	ch->mod_hit				= 0;
+	ch->mana					= 100;
+	ch->perm_mana			= 100;
+	ch->mod_mana			= 0;
+	ch->move					= 100;
+	ch->perm_move			= 100;
+	ch->mod_move			= 0;
+	ch->leader        = NULL;
+	ch->master        = NULL;
+	ch->deleted       = FALSE;
 	ch->start_align		= 'N';
-	for ( iclass = 0; iclass < MAX_CLASS; iclass++ )
+
+	for ( iclass = 0; iclass < MAX_CLASS; iclass++ ) {
 		ch->class[iclass] = -1;
+	}
+
 	return;
 }
-
-
 
 /*
  * Free a character.
@@ -4644,8 +4646,6 @@ void load_player_list( void )
 		pPlayerList->level 	= 0;
 		pPlayerList->clan_name 	= NULL; /*&str_empty[0]; */
 		pPlayerList->clan_rank 	= 0;
-		pPlayerList->guild_name	= NULL; /*&str_empty[0];*/
-		pPlayerList->guild_rank	= 0;
 
 		/* Load a character */
 		for ( ; ; )
@@ -4668,10 +4668,6 @@ void load_player_list( void )
 				pPlayerList->clan_name 	= fread_string( fp );
 			else if ( !str_cmp( name, "CRank" ) )
 				pPlayerList->clan_rank 	= fread_number( fp );
-			else if ( !str_cmp( name, "Guild" ) )
-				pPlayerList->guild_name 	= fread_string( fp );
-			else if ( !str_cmp( name, "GRank" ) )
-				pPlayerList->guild_rank 	= fread_number( fp );
 		}
 
 		/* check if the player still exits */
@@ -4719,10 +4715,6 @@ void save_player_list( )
 			fprintf( fp, "Clan        %s~\n" ,   pPlayer->clan_name    );
 		if (pPlayer->clan_rank)
 			fprintf( fp, "CRank       %d\n" ,   pPlayer->clan_rank    );
-		if (pPlayer->guild_name)
-			fprintf( fp, "Guild       %s~\n",   pPlayer->guild_name	);
-		if (pPlayer->guild_rank)
-			fprintf( fp, "GRank       %d\n" ,   pPlayer->guild_rank   );
 		fprintf( fp, "END\n" );
 	}
 	fprintf( fp, "#END\n" );
@@ -4788,13 +4780,6 @@ void update_playerlist( CHAR_DATA *ch )
 	else
 		pPlayer->clan_name 	= NULL; /*&str_empty[0]; */
 	pPlayer->clan_rank	= ch->clev;
-	free_string( pPlayer->guild_name );
-	if ( ch->guild )
-		pPlayer->guild_name	= str_dup( ch->guild->name );
-	else
-		pPlayer->guild_name	= NULL; /*&str_empty[0]; */
-	pPlayer->guild_rank	= ch->guild_rank;
-
 }
 
 void add_playerlist(CHAR_DATA *ch)
@@ -4817,12 +4802,6 @@ void add_playerlist(CHAR_DATA *ch)
 	else
 		pPlayer->clan_name      = NULL; /*&str_empty[0]; */
 	pPlayer->clan_rank = ch->clev;
-	if ( ch->guild )
-		pPlayer->guild_name      = str_dup( ch->guild->name );
-	else
-		pPlayer->guild_name      = NULL; /*&str_empty[0]; */
-
-	pPlayer->guild_rank	= ch->guild_rank;
 
 
 	if ( !playerlist )

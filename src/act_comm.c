@@ -232,58 +232,9 @@ bool is_note_to( CHAR_DATA *ch, NOTE_DATA *pnote )
 		  || is_name(NULL, "coders", pnote->to_list ) ) )
 		  return TRUE;*/
 
-	if ( ch->guild && ( !str_cmp( ch->guild->name, "CREATION" ) &&
-				is_name(NULL, "CREATION", pnote->to_list ) ) )
+	if (is_name(NULL, "IMP", pnote->to_list ) && ch->level == L_IMP)
 		return TRUE;
 
-	if ( ch->guild && ( !str_cmp( ch->guild->name, "CLANS" ) &&
-				is_name(NULL, "CLANS", pnote->to_list ) ) )
-		return TRUE;
-
-	if ( ch->guild && ( !str_cmp( ch->guild->name, "QUEST" ) &&
-				is_name(NULL, "QUEST", pnote->to_list ) ) )
-		return TRUE;
-
-	if ( ch->guild && ( !str_cmp( ch->guild->name, "MC" ) &&
-				is_name(NULL, "MC", pnote->to_list ) ) )
-		return TRUE;
-
-	if ( ch->guild && !str_cmp( ch->guild->name, "1045"    ) &&
-			(  is_name(NULL, "1045", pnote->to_list )   ||
-			   is_name(NULL, "coder", pnote->to_list )  ||
-			   is_name(NULL, "code", pnote->to_list )   ||
-			   is_name(NULL, "coders", pnote->to_list )   ) )
-		return TRUE;
-
-	if ( ch->guild && ( !str_cmp( ch->guild->name, "MERCENARY" ) &&
-				is_name(NULL, "MERCENARY", pnote->to_list ) ) )
-		return TRUE;
-
-	if (    is_name(NULL, "IMP", pnote->to_list )
-			&&
-			(
-			 ( ch->level == L_IMP 
-			 )
-			 ||
-			 (    ch->guild 
-				  && !str_cmp( ch->guild->name, "IMP" )
-			 )
-			)
-	   )
-		return TRUE;
-	/*
-	   if (    (    ch->guild 
-	   && (    !str_cmp( ch->guild->name, "IMP" )
-	   && is_name(NULL, "IMP", pnote->to_list ) 
-	   )
-	   )
-	   ||
-	   (
-	   ch->level == L_IMP;
-	   ) 
-	   )
-	   return TRUE;
-	   */
 	if ( is_name(NULL, ch->name, pnote->to_list ) )
 		return TRUE;
 
@@ -986,15 +937,6 @@ void talk_channel( CHAR_DATA *ch, char *argument, int channel, const char *verb 
 			act(AT_YELLOW, buf, ch, argument, NULL, TO_CHAR );
 			ch->position	= position;
 			break;
-		case CHANNEL_GUILD:
-			sprintf( buf, "[%s] $n: '$t'", (ch->guild != NULL)
-					? ch->guild->name : "NONE");
-			position        = ch->position;
-			ch->position   = POS_STANDING;
-			act((ch->guild != NULL) ? 
-					ch->guild->color : AT_RED, buf, ch, argument, NULL, TO_CHAR );
-			ch->position    = position;
-			break;
 		case CHANNEL_CLAN:
 			sprintf( buf, "<%s&R> $n: '$t'",
 					( get_clan_index(ch->clan) && (get_clan_index(ch->clan))->name ?
@@ -1074,13 +1016,6 @@ void talk_channel( CHAR_DATA *ch, char *argument, int channel, const char *verb 
 						get_trust( och ) < L_IMP )
 					continue;
 			}
-			if ( ( channel == CHANNEL_GUILD )
-					&& ( vch->guild != ch->guild ) )
-			{
-				if ( IS_SET( och->deaf, CHANNEL_GUILD_MASTER ) ||
-						get_trust( och ) < L_IMP )
-					continue;
-			}
 			if ( ( channel == CHANNEL_CLAN )
 					&& ( vch->clan != ch->clan ) )
 			{
@@ -1124,9 +1059,6 @@ void talk_channel( CHAR_DATA *ch, char *argument, int channel, const char *verb 
 					sprintf( buf, "$n> &P'$t'" );
 					act( AT_DGREY, buf, ch, argument, vch, TO_VICT );
 					break;/* SOMEONE forgot the break, yeesh heh */
-				case CHANNEL_GUILD:
-					act((ch->guild != NULL) ? ch->guild->color : AT_RED,
-							buf, ch, argument, vch, TO_VICT ); break;
 				case CHANNEL_CLAN:
 					act(AT_RED, buf, ch, argument, vch, TO_VICT ); break;
 				case CHANNEL_CLASS:
@@ -1168,17 +1100,6 @@ void auc_channel ( char *auction )
 			write_to_buffer( d, buf, 0 );
 	}
 
-	return;
-}
-
-void do_gdt( CHAR_DATA *ch, char *argument )
-{
-	if(ch->guild == NULL)
-	{
-		send_to_char(AT_BLUE, "You are not guilded.\n\r", ch);
-		return;
-	}
-	talk_channel( ch, argument, CHANNEL_GUILD, "guildtalk" );
 	return;
 }
 

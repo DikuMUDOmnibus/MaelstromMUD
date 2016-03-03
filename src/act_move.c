@@ -137,18 +137,7 @@ void move_char( CHAR_DATA *ch, int door, bool Fall )
 	}
 	if ( !IS_NPC( ch ) )
 	{
-		int iClass;
 		int move;
-
-		for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
-		{
-			if ( iClass != prime_class( ch )
-					&& to_room->vnum == class_table[iClass].guild )
-			{
-				send_to_char(AT_GREY, "You aren't allowed in there.\n\r", ch );
-				return;
-			}
-		}
 
 		if ( ( in_room->sector_type == SECT_AIR
 					|| to_room->sector_type == SECT_AIR ) && ( !Fall ) )
@@ -1243,6 +1232,14 @@ void do_train( CHAR_DATA *ch, char *argument )
 		pOutput     = "constitution";
 	}
 
+	else if ( !str_cmp( arg, "cha" ) )
+	{
+		if ( class_table[prime_class( ch )].attr_prime == APPLY_CHA )
+			cost    = 3;
+		pAbility    = &ch->pcdata->perm_cha;
+		pOutput     = "charisma";
+	}
+
 	/* ---------------- By Bonecrusher ------------------- */
 
 	else if ( !str_cmp( arg, "hp" ) )
@@ -1279,6 +1276,7 @@ void do_train( CHAR_DATA *ch, char *argument )
 		if ( ch->pcdata->perm_wis < 18 ) strcat( buf, " wis" );
 		if ( ch->pcdata->perm_dex < 18 ) strcat( buf, " dex" );
 		if ( ch->pcdata->perm_con < 18 ) strcat( buf, " con" );
+		if ( ch->pcdata->perm_cha < 18 ) strcat( buf, " cha" );
 
 		strcat( buf, " hp mana move" );
 
@@ -1398,6 +1396,12 @@ void do_raise( CHAR_DATA *ch, char *argument )
 		pOutput     = "constitution";
 	}
 
+	else if ( !str_cmp( arg, "cha" ) )
+	{
+		pAbility    = &ch->pcdata->perm_cha;
+		pOutput     = "charisma";
+	}
+
 
 	else if ( !str_cmp( arg, "hp" ) )
 	{
@@ -1430,6 +1434,7 @@ void do_raise( CHAR_DATA *ch, char *argument )
 		if ( ch->pcdata->perm_wis < 18 ) strcat( buf, " wis" );
 		if ( ch->pcdata->perm_dex < 18 ) strcat( buf, " dex" );
 		if ( ch->pcdata->perm_con < 18 ) strcat( buf, " con" );
+		if ( ch->pcdata->perm_cha < 18 ) strcat( buf, " cha" );
 
 		strcat( buf, " hp mana move" );
 

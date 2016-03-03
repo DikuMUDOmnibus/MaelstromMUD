@@ -180,12 +180,9 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
 	fprintf( fp, "HpMnMv    %d %d %d %d %d %d %d %d %d\n",
 			ch->hit, ch->perm_hit, ch->mod_hit, ch->mana, ch->perm_mana,
 			ch->mod_mana, ch->move, ch->perm_move, ch->mod_move );
-	fprintf( fp, "Charisma    %d\n",    ch->charisma		);
 	fprintf( fp, "Gold	      %d\n",	ch->money.gold		);
 	fprintf( fp, "Silver      %d\n",  	ch->money.silver	);
 	fprintf( fp, "Copper      %d\n",	ch->money.copper	);
-	fprintf( fp, "GRank       %d\n",	ch->guild_rank		);
-	fprintf( fp, "Guild       %s~\n", (ch->guild != NULL) ? ch->guild->name : "\0"		);
 	fprintf( fp, "Exp         %d\n",	ch->exp			);
 	fprintf( fp, "Act         %d\n",    ch->act				);
 	fprintf( fp, "Act2        %d\n",    ch->act2			);
@@ -195,8 +192,8 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
 	fprintf( fp, "ResBits     %ld\n",	ch->res_flags		);
 	fprintf( fp, "VulBits     %ld\n",	ch->vul_flags		);
 	/* Bug fix from Alander */
-	fprintf( fp, "Pos         %d\n",
-			ch->position == POS_FIGHTING ? POS_STANDING : ch->position );
+	fprintf( fp, "Pos         %d\n", ch->position == POS_FIGHTING ? POS_STANDING : ch->position );
+	fprintf( fp, "Size        %d\n", ch->size );
 
 	fprintf( fp, "Prac        %d\n",	ch->practice		);
 	fprintf( fp, "SavThr      %d\n",	ch->saving_throw	);
@@ -254,19 +251,21 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
 				ch->pcdata->bankaccount.copper );
 		fprintf( fp, "Ttle        %s~\n",	ch->pcdata->title	);
 		fprintf( fp, "Whotype	  %s~\n",	ch->pcdata->whotype	);
-		fprintf( fp, "AtrPrm      %d %d %d %d %d\n",
+		fprintf( fp, "AtrPrm      %d %d %d %d %d %d\n",
 				ch->pcdata->perm_str,
 				ch->pcdata->perm_int,
 				ch->pcdata->perm_wis,
 				ch->pcdata->perm_dex,
-				ch->pcdata->perm_con );
+				ch->pcdata->perm_con,
+				ch->pcdata->perm_cha );
 
-		fprintf( fp, "AtrMd       %d %d %d %d %d\n",
+		fprintf( fp, "AtrMd       %d %d %d %d %d %d\n",
 				ch->pcdata->mod_str, 
 				ch->pcdata->mod_int, 
 				ch->pcdata->mod_wis,
 				ch->pcdata->mod_dex, 
-				ch->pcdata->mod_con );
+				ch->pcdata->mod_con,
+				ch->pcdata->mod_cha );
 
 		fprintf( fp, "Cond        %d %d %d\n",
 				ch->pcdata->condition[0],
@@ -505,6 +504,7 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name )
 	ch->pcdata->perm_wis		= 13;
 	ch->pcdata->perm_dex		= 13;
 	ch->pcdata->perm_con		= 13;
+	ch->pcdata->perm_cha		= 13;
 	ch->pcdata->condition[COND_THIRST]	= MAX_THIRST;  /*  48  */
 	ch->pcdata->condition[COND_FULL]	= MAX_FULL;    /*  48  */
 	ch->pcdata->pagelen                 = 60;
@@ -516,7 +516,6 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name )
 	ch->imm_flags			= 0;	/* XOR */
 	ch->res_flags			= 0;	/* XOR */
 	ch->vul_flags			= 0;	/* XOR */
-	ch->guild				= NULL;	/* XOR */
 	ch->pcdata->bankaccount.gold	= 0;
 	ch->pcdata->bankaccount.silver	= 0;
 	ch->pcdata->bankaccount.copper	= 0;
@@ -713,6 +712,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp )
 					ch->pcdata->mod_wis  = fread_number( fp );
 					ch->pcdata->mod_dex  = fread_number( fp );
 					ch->pcdata->mod_con  = fread_number( fp );
+					ch->pcdata->mod_cha  = fread_number( fp );
 					fMatch = TRUE;
 					break;
 				}
@@ -724,6 +724,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp )
 					ch->pcdata->perm_wis = fread_number( fp );
 					ch->pcdata->perm_dex = fread_number( fp );
 					ch->pcdata->perm_con = fread_number( fp );
+					ch->pcdata->perm_cha = fread_number( fp );
 					fMatch = TRUE;
 					break;
 				}
@@ -744,7 +745,6 @@ void fread_char( CHAR_DATA *ch, FILE *fp )
 				break;
 
 			case 'C':
-				KEY( "Charisma",    ch->charisma,           fread_number( fp ) );
 				KEY( "Corpses",	ch->pcdata->corpses,	fread_number( fp ) );
 				KEY( "Clan",        ch->clan,               fread_number( fp ) );
 				KEY( "Clvl",        ch->clev,               fread_number( fp ) );
@@ -801,22 +801,6 @@ void fread_char( CHAR_DATA *ch, FILE *fp )
 
 			case 'G':
 				KEY( "Gold",	ch->money.gold,		fread_number( fp ) );
-				KEY( "GRank",	ch->guild_rank,		fread_number( fp ) );
-				if(!str_cmp(word, "Guild"))
-				{
-					int i;
-					char *guild;
-					guild = fread_string(fp);
-					fMatch = TRUE;
-					for(i = 0;guild_table[i].name[0] != '\0';i++)
-					{
-						if(!strcmp(guild_table[i].name, guild))
-						{
-							ch->guild = (GUILD_DATA *)&(guild_table[i]);
-							break;
-						}
-					}
-				}
 				break;
 
 			case 'H':
@@ -903,6 +887,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp )
 				KEY( "SAlign",	ch->start_align,	fread_letter( fp ) );
 				KEY( "Sx",		ch->sex,		fread_number( fp ) );
 				KEY( "Silver",	ch->money.silver,	fread_number( fp ) );
+				KEY( "Size", ch->size, fread_number( fp ) );
 				KEY( "Slyuc",	ch->pcdata->slayusee,	fread_string( fp ) );
 				KEY( "Slyrm",	ch->pcdata->slayroom,	fread_string( fp ) );
 				KEY( "Slyvict",	ch->pcdata->slayvict,	fread_string( fp ) );

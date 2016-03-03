@@ -335,8 +335,6 @@ void one_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	char      buf [ MAX_STRING_LENGTH ];
 	int       victim_ac;
 	int       thac0;
-	int       thac0_00;
-	int       thac0_97;
 	int       dam;
 	int       diceroll;
 
@@ -367,23 +365,7 @@ void one_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	/*
 	 * Calculate to-hit-armor-class-0 versus armor.
 	 */
-	if ( IS_NPC( ch ) )
-	{
-		thac0_00 =  18;
-		thac0_97 = -24;
-	}
-	else
-	{
-		thac0_00 = class_table[prime_class(ch)].thac0_00;
-		thac0_97 = class_table[prime_class(ch)].thac0_97;
-	}
-
-	if (!IS_NPC(ch))
-		thac0     = interpolate( ch->level, thac0_00, thac0_97 )
-			- GET_HITROLL( ch );
-	else
-		thac0     = interpolate(ch->level, thac0_00, thac0_97 )
-			- (ch->level + ch->level/2);
+	thac0 = GET_THAC0( ch );		
 
 	if ( ( !IS_NPC( ch ) ) && ( ch->pcdata->learned[gsn_enhanced_hit] > 0 ) ) 
 	{
@@ -575,8 +557,6 @@ void one_dual( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	char      buf [ MAX_STRING_LENGTH ];
 	int       victim_ac;
 	int       thac0;
-	int       thac0_00;
-	int       thac0_97;
 	int       dam;
 	int       diceroll;
 
@@ -611,21 +591,13 @@ void one_dual( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	/*
 	 * Calculate to-hit-armor-class-0 versus armor.
 	 */
-	if ( IS_NPC( ch ) )
-	{
-		thac0_00 =  20;
-		thac0_97 = -20;
-	}
-	else
-	{
-		thac0_00 = class_table[prime_class(ch)].thac0_00;
-		thac0_97 = class_table[prime_class(ch)].thac0_97;
-	}
-	thac0     = interpolate( ch->level, thac0_00, thac0_97 )
-		- GET_HITROLL( ch );
+	thac0 = GET_THAC0( ch );		
+
 	victim_ac = UMAX( -15, GET_AC( victim ) / 10 );
-	if ( !can_see( ch, victim ) )
+
+	if ( !can_see( ch, victim ) ) {
 		victim_ac -= 4;
+	}
 
 	/*
 	 * The moment of excitement!
@@ -1095,15 +1067,6 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt )
 		{
 			group_gain( ch, victim );
 
-			if(((ch->guild != NULL) ? ch->guild->type & GUILD_CHAOS : 0)
-					&& ch->guild == victim->guild
-					&& victim->guild_rank > ch->guild_rank)
-			{
-				int temp;
-				temp = ch->guild_rank;
-				ch->guild_rank = victim->guild_rank;
-				victim->guild_rank = temp;
-			}
 			if ( ( !IS_NPC(ch) ) && ( !IS_NPC(victim) ) )
 			{
 				CLAN_DATA  *pClan;
@@ -1148,33 +1111,7 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt )
 							ch->name, victim->in_room->vnum );
 				log_string( log_buf, CHANNEL_LOG, -1 );
 				wiznet(log_buf,NULL,NULL,WIZ_DEATHS,0,0);
-				if ( !IS_NPC( ch )
-						&& IS_SET( victim->act, PLR_THIEF )
-						&& ch->guild
-						&& !strcmp( ch->guild->name, "MERCENARY" ) )
-				{
-					REMOVE_BIT( victim->act, PLR_THIEF );
-					info( "%s the puny thief gets destroyed by the &rMERCENARY&C %s!",
-							(int)victim->name, (int)ch->name );
-				}
-				else if ( !IS_NPC( ch )
-						&& IS_SET( ch->act, PLR_THIEF )
-						&& victim->guild
-						&& !strcmp( victim->guild->name, "MERCENARY" ) )
-				{
-					info( "%s, the sly thief, has killed the &rMERCENARY&C %s.",
-							(int)ch->name, (int)victim->name );
-					if ( ch != victim )
-					{
-						ch->pkills++;
-						victim->pkilled++;
-					}
-				}
-				else
-				{
-					info( "%s gets slaughtered by %s!", (int)victim->name,
-							(int)(IS_NPC(ch) ? ch->short_descr : ch->name) );
-				}
+				info( "%s gets slaughtered by %s!", (int)victim->name, (int)(IS_NPC(ch) ? ch->short_descr : ch->name) );
 				save_clans();
 			}
 		}
@@ -1471,14 +1408,6 @@ bool is_safe( CHAR_DATA *ch, CHAR_DATA *victim )
 	if ( IS_NPC( victim ) )
 		return FALSE;
 
-	if ( IS_SET( victim->act, PLR_THIEF )
-			&& ( ch->guild && !strcmp( ch->guild->name, "MERCENARY" ) ) )
-		return FALSE;
-	if ( IS_SET( ch->act, PLR_THIEF )
-			&& ( victim->guild && !strcmp( victim->guild->name, "MERCENARY" ) ) )
-		/*	return FALSE; */
-		return TRUE;
-
 	/* SIGH
 	   if ( !(IS_SET(ch->act, PLR_PKILLER)) || ( (IS_SET(ch->act, PLR_PKILLER)) &&
 	   !(IS_SET(victim->act, PLR_PKILLER)) ) )
@@ -1512,14 +1441,6 @@ bool is_safe( CHAR_DATA *ch, CHAR_DATA *victim )
 		}
 		else
 			return FALSE;
-	}
-
-	/* give pkill guilds ability to pkill */
-	/* Err.. we might not want pkill guilds attacking unguilded.. */
-	if ( (ch->guild && (ch->guild->type & GUILD_PKILL)) &&
-			(victim->guild && (victim->guild->type & GUILD_PKILL)) )
-	{
-		return FALSE;
 	}
 
 	pClan = get_clan_index( ch->clan );

@@ -1512,17 +1512,6 @@ void wear_obj( CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace )
 			return;
 		}
 		weapon_type = obj->value[3];
-		if((strcmp(flag_string(weapon_flags,weapon_type),"none")))
-		{
-			if ( !(class_table[prime_class(ch)].objtype[weapon_type]) )
-			{
-				sprintf(buf, "%s's cannot use weapons that %s.\n\r", 
-						class_table[prime_class(ch)].who_long,
-						flag_string(weapon_flags,weapon_type) );
-				send_to_char(AT_YELLOW, buf, ch );
-				return;
-			}
-		}
 		act(AT_BLUE, "You wield $p.", ch, obj, NULL, TO_CHAR );
 		act(AT_BLUE, "$n wields $p.", ch, obj, NULL, TO_ROOM );
 		equip_char( ch, obj, WEAR_WIELD );
@@ -1615,7 +1604,6 @@ void do_dual( CHAR_DATA *ch, char *argument )
 {
 	OBJ_DATA *obj;
 	char      arg [ MAX_INPUT_LENGTH ];
-	char      buf [ MAX_STRING_LENGTH ];
 	bool      fReplace;
 	int       weapon_type = 0;
 
@@ -1676,17 +1664,6 @@ void do_dual( CHAR_DATA *ch, char *argument )
 		/* Won't put update_skpell here since it is in fight.c */
 
 		weapon_type = obj->value[3];
-		if((strcmp(flag_string(weapon_flags,weapon_type),"none")))
-		{
-			if ( !(class_table[prime_class(ch)].objtype[weapon_type]) )
-			{
-				sprintf(buf, "%s's cannot use weapons that %s.\n\r", 
-						class_table[prime_class(ch)].who_long, 
-						flag_string(weapon_flags,weapon_type) );
-				send_to_char(AT_YELLOW, buf, ch );
-				return;
-			}
-		}
 		act(AT_BLUE, "You dual wield $p.", ch, obj, NULL, TO_CHAR );
 		act(AT_BLUE, "$n dual wields $p.", ch, obj, NULL, TO_ROOM );
 		equip_char( ch, obj, WEAR_WIELD_2 );
@@ -2502,12 +2479,6 @@ void do_steal( CHAR_DATA *ch, char *argument )
 		 * Failure.
 		 */
 		send_to_char(AT_RED, "Oops.\n\r", ch );
-		if ( ch->guild && !strcmp( ch->guild->name, "MERCENARY" ) )
-		{
-			send_to_char( AT_RED, "You are kicked out of &rMERCENARY&R for treason!\n\r", ch );
-			ch->guild = NULL;
-			ch->guild_rank = 0;
-		}
 		act(AT_RED, "$n tried to steal from you.\n\r", ch, NULL, victim, TO_VICT    );
 		act(AT_RED, "$n tried to steal from $N.\n\r",  ch, NULL, victim, TO_NOTVICT );
 		sprintf( buf, "%s is a bloody thief!", ch->name );
@@ -2868,25 +2839,25 @@ void do_buy( CHAR_DATA *ch, char *argument )
 			update_skpell( ch, gsn_haggle );
 		}         
 
-		if ( ch->charisma > 24 )
+		if ( get_curr_cha( ch ) > 24 )
 		{
 			cost->copper *= 0.80;
 			cost->silver *= 0.80;
 			cost->gold   *= 0.80;
 		}
-		else if ( ch->charisma > 19 && ch->charisma < 25 ) 
+		else if ( get_curr_cha( ch ) > 19 && get_curr_cha( ch ) < 25 ) 
 		{
 			cost->copper *= 0.85;
 			cost->silver *= 0.85;
 			cost->gold   *= 0.85;
 		}
-		else if ( ch->charisma < 15 )
+		else if ( get_curr_cha( ch ) < 15 )
 		{
 			cost->copper += (cost->copper * 0.20);
 			cost->silver += (cost->silver * 0.20);
 			cost->gold   += (cost->gold   * 0.20);
 		}
-		else if ( ch->charisma < 20 )
+		else if ( get_curr_cha( ch ) < 20 )
 		{
 			cost->copper += (cost->copper * 0.15);
 			cost->silver += (cost->silver * 0.15);
@@ -3151,25 +3122,25 @@ void do_sell( CHAR_DATA *ch, char *argument )
 		update_skpell( ch, gsn_haggle );
 	}
 
-	if ( ch->charisma > 24 )
+	if ( get_curr_cha( ch ) > 24 )
 	{
 		cost->gold   += ( cost->gold * 0.05 );
 		cost->silver += ( cost->silver * 0.05 );
 		cost->copper += ( cost->copper * 0.05 );
 	}   
-	if ( ch->charisma > 19 && ch->charisma < 24 )
+	if ( get_curr_cha( ch ) > 19 && get_curr_cha( ch ) < 24 )
 	{
 		cost->gold   += ( cost->gold * 0.02 );
 		cost->silver += ( cost->silver * 0.02 );
 		cost->copper += ( cost->copper * 0.02 );
 	}
-	if ( ch->charisma < 15 )
+	if ( get_curr_cha( ch ) < 15 )
 	{
 		cost->gold   -= ( cost->gold * 0.20 );
 		cost->silver -= ( cost->silver * 0.20 );
 		cost->copper -= ( cost->copper * 0.20 );
 	}
-	if ( ch->charisma < 20 )
+	if ( get_curr_cha( ch ) < 20 )
 	{
 		cost->gold   -= ( cost->gold * 0.15 );
 		cost->silver -= ( cost->silver * 0.15 );

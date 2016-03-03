@@ -17,3 +17,4 @@ nohup.out
 /Makefile
 inspiration/
 environment
+*.todo

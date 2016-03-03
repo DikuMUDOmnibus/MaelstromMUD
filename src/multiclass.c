@@ -45,7 +45,7 @@ bool has_spells( CHAR_DATA *ch )
 	}
 
 	for ( iClass = 0; ch->class[iClass] != -1; iClass++ ) {
-		if ( class_table[iClass].fMana ) {
+		if ( class_table[iClass].spellcaster ) {
 			return TRUE;
 		}
 	}

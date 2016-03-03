@@ -137,6 +137,7 @@ void do_remort( CHAR_DATA *ch, char *argument )
 			d->character->pcdata->perm_wis = 16; 
 			d->character->pcdata->perm_dex = 16; 
 			d->character->pcdata->perm_con = 16; 
+			d->character->pcdata->perm_cha = 16; 
 
 			/* restore */
 			d->character->hit      = MAX_HIT(d->character);
