@@ -556,7 +556,7 @@ struct  race_type {
  * Size Structure
  */
 struct size_type {
-  char   size_full[ 20 ];     // Size name
+  char   name[ 20 ];          // Size name
   int    mac;                 // AC modifier
   int    mstealth;            // Stealth modifier
   float  mcarry;              // Carrying capacity modifier

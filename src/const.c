@@ -116,7 +116,7 @@ const struct class_type class_table [MAX_CLASS] = {
 };
 
 const struct size_type size_table [MAX_SIZE] = {
-//{        "Size", mac, mstealth,  mcarry }
+//{        "size", mac, mstealth,  mcarry }
   {        "Fine",  -8,       16,   0.125 },
   {  "Diminutive",  -4,       12,    0.25 },
   {        "Tiny",  -2,        8,     0.5 },

@@ -1871,8 +1871,10 @@ void do_mstat( CHAR_DATA *ch, char *argument )
 	send_to_char( AT_CYAN, buf, ch );
 	sprintf( buf, "&cTHAC0&w: &R%d ", GET_THAC0( victim ) );
 	send_to_char( AT_CYAN, buf, ch );
-	sprintf( buf, "&cExp&w: &R%d\n\r", victim->exp );
+	sprintf( buf, "&cExp&w: &R%d ", victim->exp );
 	send_to_char( AT_CYAN, buf, ch);
+	sprintf( buf, "&cSize&w: &R%s\n\r", size_table[ch->size].name );
+	send_to_char( AT_CYAN, buf, ch );
 
 	if ( !IS_NPC( victim ) )
 	{

@@ -1440,6 +1440,7 @@ void do_score( CHAR_DATA *ch, char *argument )
 			get_age( ch ),
 			(get_age( ch ) - 17) * 4 );
 	send_to_char( AT_CYAN, buf, ch );
+
 	send_to_char( AT_WHITE, "==================================================================\n\r",
 			ch );
 	sprintf( buf, "&cYou are a &W%s&c &r%s&c.\n\r", race_table[ch->race].race_full, class_long( ch ) );
@@ -1460,7 +1461,7 @@ void do_score( CHAR_DATA *ch, char *argument )
 		}
 	}
 
-	sprintf ( buf, " %d/%d", ch->hit, MAX_HIT(ch) );
+	sprintf ( buf, "%d/%d", ch->hit, MAX_HIT(ch) );
 	send_to_char( AT_WHITE, buf, ch );
 	send_to_char( AT_CYAN, " HP, ", ch );
 	sprintf ( buf, "%d/%d", ch->mana, MAX_MANA(ch) );
@@ -1478,6 +1479,8 @@ void do_score( CHAR_DATA *ch, char *argument )
 			ch->carry_number, can_carry_n( ch ),
 			ch->carry_weight, can_carry_w( ch ) );
 	send_to_char( AT_BLUE, buf, ch );
+	sprintf( buf, "Size: %s\n\r", size_table[ch->size].name );
+	send_to_char( AT_CYAN, buf, ch );
 	send_to_char( AT_WHITE, "==================================================================\n\r",
 			ch );
 	send_to_char( AT_WHITE, "&rAttributes:\n\r", ch );
