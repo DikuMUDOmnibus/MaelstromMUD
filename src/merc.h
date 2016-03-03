@@ -531,6 +531,7 @@ struct  class_type {
   int   skill_adept;        // Maximum skill level
   float mbab;               // Base Attack Bonus Modifier (thac0 = 20 - (level * mbab))
   int   hitdice;            // Hit Dice
+  int   d6gold;             // Number of starting d6 to roll for starting gold
   bool  spellcaster;        // Class is a spellcaster
 };
 

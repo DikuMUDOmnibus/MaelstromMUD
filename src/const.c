@@ -109,10 +109,10 @@ const struct race_type race_table[MAX_RACE] = {
 };
 
 const struct class_type class_table [MAX_CLASS] = {
-//{ "Who",     "Long", attr_prime, skill_adept,  mbab, hitdice, spellcaster }
-  { "Cas",   "Caster",  APPLY_INT,          95,   0.5,       6,        TRUE },
-  { "Rog",    "Rogue",  APPLY_DEX,          85,  0.75,       8,       FALSE },
-  { "Fig",  "Fighter",  APPLY_STR,          85,     1,      10,       FALSE },
+//{ "Who",     "Long", attr_prime, skill_adept,  mbab, hitdice, d6gold, spellcaster }
+  { "Cas",   "Caster",  APPLY_INT,          95,   0.5,       6,      2,        TRUE },
+  { "Rog",    "Rogue",  APPLY_DEX,          85,  0.75,       8,      4,       FALSE },
+  { "Fig",  "Fighter",  APPLY_STR,          85,     1,      10,      5,       FALSE },
 };
 
 const struct size_type size_table [MAX_SIZE] = {

@@ -2062,15 +2062,17 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 
 				SET_BIT( ch->act, PLR_AUTOEXIT + PLR_AUTOCOINS );
 
-				ch->level    	= 1;
-				ch->exp 		 	= number_classes( ch ) == 1 ? 1000 : number_classes( ch ) * 1500;
-				ch->size 		 	= race_table[ch->race].size;
+				ch->level    	 = 1;
+				ch->exp 		 	 = number_classes( ch ) == 1 ? 1000 : number_classes( ch ) * 1500;
+				ch->size 		 	 = race_table[ch->race].size;
 
-				ch->perm_hit  = class_table[prime_class(ch)].hitdice + GET_MOD(get_curr_con(ch));
+				ch->perm_hit   = class_table[prime_class(ch)].hitdice + GET_MOD(get_curr_con(ch));
 
-				ch->hit      	= MAX_HIT(ch);
-				ch->mana     	= MAX_MANA(ch);
-				ch->move     	= MAX_MOVE(ch);
+				ch->hit      	 = MAX_HIT(ch);
+				ch->mana     	 = MAX_MANA(ch);
+				ch->move     	 = MAX_MOVE(ch);
+
+				ch->money.gold = dice(class_table[prime_class(ch)].d6gold, 6) * 10;
 
 				sprintf( buf, "the %s %s", race_table[ch->race].race_full, class_table[prime_class(ch)].who_long );
 				set_title( ch, buf );
