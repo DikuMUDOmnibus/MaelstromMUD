@@ -410,6 +410,7 @@ void save_objects( FILE *fp, AREA_DATA *pArea )
 						pObjIndex->sep_one, pObjIndex->sep_two );
 				for( pAf = pObjIndex->affected; pAf; pAf = pAf->next )
 				{
+					// if ( pAf->location == 25 ) continue; -- used to remove deprecated object affects
 					fprintf( fp, "A\n%d %d\n",  pAf->location, pAf->modifier );
 				}
 

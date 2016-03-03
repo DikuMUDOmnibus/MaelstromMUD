@@ -629,7 +629,7 @@ void affect_modify2( CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd )
 	switch ( paf->location )
 	{
 		default:
-			sprintf( buf, "Affect_modify: unknown location %d on %s.",
+			sprintf( buf, "Affect_modifys: unknown location %d on %s.",
 					paf->location, ch->name );
 			bug ( buf, 0 );
 			return;
