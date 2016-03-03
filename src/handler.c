@@ -197,13 +197,14 @@ int get_curr_cha( CHAR_DATA *ch ) {
 /*
  * Retrieve a character's carry capacity.
  */
-int can_carry_n( CHAR_DATA *ch )
-{
-	if ( !IS_NPC( ch ) && ch->level >= LEVEL_IMMORTAL )
+int can_carry_n( CHAR_DATA *ch ) {
+	if ( !IS_NPC( ch ) && ch->level >= LEVEL_IMMORTAL ) {
 		return 1000;
+	}
 
-	if ( IS_NPC( ch ) && IS_SET( ch->act, ACT_PET ) )
+	if ( IS_NPC( ch ) && IS_SET( ch->act, ACT_PET ) ) {
 		return 0;
+	}
 
 	return MAX_WEAR + 2 * get_curr_dex( ch ) + get_curr_str( ch ) * 2;
 }
@@ -213,27 +214,28 @@ int can_carry_n( CHAR_DATA *ch )
 /*
  * Retrieve a character's carry capacity.
  */
-int can_carry_w( CHAR_DATA *ch )
-{
+int can_carry_w( CHAR_DATA *ch ) {
 	int max_weight = 0;
+	int modified_weight = 0;
+	int coins_weight = 0;
 
-	if ( !IS_NPC( ch ) && ch->level >= LEVEL_IMMORTAL )
+	if ( !IS_NPC( ch ) && ch->level >= LEVEL_IMMORTAL ) {
 		return 1000000;
+	}
 
-	if ( IS_NPC( ch ) && IS_SET( ch->act, ACT_PET ) )
+	if ( IS_NPC( ch ) && IS_SET( ch->act, ACT_PET ) ) {
 		return 0;
+	}
 
-	/* Angi: Make max carry weight less than the weight of your coins. */
+	coins_weight = ch->money.gold/1000 + ch->money.silver/1000 + ch->money.copper/1000;
+	modified_weight = (int)(str_app[get_curr_str( ch )].carry * size_table[ch->size].mcarry);
+	max_weight = modified_weight - coins_weight;
 
-	max_weight = ( ( str_app[get_curr_str( ch )].carry ) -
-			( ch->money.gold/1000 + ch->money.silver/1000 + ch->money.copper/1000 ) );
-	if ( max_weight < 0 )
+	if ( max_weight < 0 ) {
 		max_weight = 0;
+	}
 
 	return max_weight;
-
-	/*    return str_app[get_curr_str( ch )].carry; */
-
 }
 
 

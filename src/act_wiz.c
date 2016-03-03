@@ -3804,7 +3804,7 @@ void do_mset( CHAR_DATA *ch, char *argument )
 		send_to_char(AT_WHITE, "  thirst drunk full security affected_by2\n\r",	 ch );
 		send_to_char(AT_WHITE, "  affected_by act mstr mint mwis mcha\n\r",  	 ch );
 		send_to_char(AT_WHITE, "  mdex mcon bank carryn carryw save race\n\r",   ch );
-		send_to_char(AT_WHITE, "  lname sex salign\n\r",			 ch );
+		send_to_char(AT_WHITE, "  lname sex salign size\n\r",			 ch );
 		send_to_char(AT_WHITE, "&pString being one of:\n\r",			 ch );
 		send_to_char(AT_WHITE, "  name short long title spec\n\r",               ch );
 		send_to_char(AT_WHITE, "&pSlot being 1-2 class slot.\n\r", ch );
@@ -3867,6 +3867,37 @@ void do_mset( CHAR_DATA *ch, char *argument )
 		send_to_char( AT_WHITE, "Ok.\n\r", ch );
 		return;
 	}
+
+	if ( !str_cmp( arg2, "size" ) ) {
+		if ( !str_cmp( arg3, "fine" ) ) {
+			value = SIZE_FINE;
+		} else if ( !str_cmp( arg3, "dimunitive" ) ) {
+			value = SIZE_DIMUNITIVE;
+		} else if ( !str_cmp( arg3, "tiny" ) ) {
+			value = SIZE_TINY;
+		} else if ( !str_cmp( arg3, "small" ) ) {
+			value = SIZE_SMALL;
+		} else if ( !str_cmp( arg3, "medium" ) ) {
+			value = SIZE_MEDIUM;
+		} else if ( !str_cmp( arg3, "large" ) ) {
+			value = SIZE_LARGE;
+		} else if ( !str_cmp( arg3, "huge" ) ) {
+			value = SIZE_HUGE;
+		} else if ( !str_cmp( arg3, "gargantuan" ) ) {
+			value = SIZE_GARGANTUAN;
+		} else if ( !str_cmp( arg3, "colossal" ) ) {
+			value = SIZE_COLOSSAL;
+		} else {
+			send_to_char( AT_WHITE, "Valid sexes are fine, diminutive, tiny, small, medium, large, huge,\n\rgargantuan, and colossal.\n\r", ch );
+			return;
+		}
+
+		victim->size = value;
+
+		send_to_char( AT_WHITE, "Ok.\n\r", ch );
+		return;
+	}
+
 	if ( !str_cmp( arg2, "salign" ) )
 	{
 		if ( IS_NPC(victim) )

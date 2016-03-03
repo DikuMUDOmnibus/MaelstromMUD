@@ -2288,7 +2288,7 @@ extern int    gsn_unholystrength;
 
 #define IS_AWAKE( ch )          ( ch->position > POS_SLEEPING )
 
-#define GET_AC( ch )            ( ch->armor + ( IS_AWAKE( ch ) ? dex_app[get_curr_dex( ch )].defensive : 0 ) )
+#define GET_AC( ch )            ( ch->armor + ( IS_AWAKE( ch ) ? dex_app[get_curr_dex( ch )].defensive : 0 ) + size_table[ch->size].mac )
 #define GET_HITROLL( ch )       ( ch->hitroll + str_app[get_curr_str( ch )].tohit)
 #define GET_DAMROLL( ch )       ( ch->damroll + str_app[get_curr_str( ch )].todam)
 #define GET_BAB( ch )           ( (int)(ch->level * ( IS_NPC( ch ) ? 1 : class_table[prime_class( ch )].mbab) ) )

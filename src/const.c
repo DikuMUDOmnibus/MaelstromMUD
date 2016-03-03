@@ -95,20 +95,20 @@ const struct race_type race_table[MAX_RACE] = {
   }
 };
 
-const struct class_type class_table [MAX_CLASS] = {
+const struct class_type class_table[MAX_CLASS] = {
 //{ "Who",     "Long", attr_prime, skill_adept,  mbab, hitdice, d6gold, spellcaster }
   { "Cas",   "Caster",  APPLY_INT,          95,   0.5,       6,      2,        TRUE },
   { "Rog",    "Rogue",  APPLY_DEX,          85,  0.75,       8,      4,       FALSE },
   { "Fig",  "Fighter",  APPLY_STR,          85,     1,      10,      5,       FALSE },
 };
 
-const struct size_type size_table [MAX_SIZE] = {
+const struct size_type size_table[MAX_SIZE] = {
 //{        "size", mac, mstealth,  mcarry }
   {        "Fine",  -8,       16,   0.125 },
-  {  "Diminutive",  -4,       12,    0.25 },
+  {  "Dimunitive",  -4,       12,    0.25 },
   {        "Tiny",  -2,        8,     0.5 },
   {       "Small",  -1,        4,    0.75 },
-  {      "Medium",   0,        0,       0 },
+  {      "Medium",   0,        0,       1 },
   {       "Large",   1,       -4,       2 },
   {        "Huge",   2,       -8,       4 },
   {  "Gargantuan",   4,      -12,       8 },
