@@ -1067,15 +1067,6 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt )
 		{
 			group_gain( ch, victim );
 
-			if(((ch->guild != NULL) ? ch->guild->type & GUILD_CHAOS : 0)
-					&& ch->guild == victim->guild
-					&& victim->guild_rank > ch->guild_rank)
-			{
-				int temp;
-				temp = ch->guild_rank;
-				ch->guild_rank = victim->guild_rank;
-				victim->guild_rank = temp;
-			}
 			if ( ( !IS_NPC(ch) ) && ( !IS_NPC(victim) ) )
 			{
 				CLAN_DATA  *pClan;
@@ -1120,33 +1111,7 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt )
 							ch->name, victim->in_room->vnum );
 				log_string( log_buf, CHANNEL_LOG, -1 );
 				wiznet(log_buf,NULL,NULL,WIZ_DEATHS,0,0);
-				if ( !IS_NPC( ch )
-						&& IS_SET( victim->act, PLR_THIEF )
-						&& ch->guild
-						&& !strcmp( ch->guild->name, "MERCENARY" ) )
-				{
-					REMOVE_BIT( victim->act, PLR_THIEF );
-					info( "%s the puny thief gets destroyed by the &rMERCENARY&C %s!",
-							(int)victim->name, (int)ch->name );
-				}
-				else if ( !IS_NPC( ch )
-						&& IS_SET( ch->act, PLR_THIEF )
-						&& victim->guild
-						&& !strcmp( victim->guild->name, "MERCENARY" ) )
-				{
-					info( "%s, the sly thief, has killed the &rMERCENARY&C %s.",
-							(int)ch->name, (int)victim->name );
-					if ( ch != victim )
-					{
-						ch->pkills++;
-						victim->pkilled++;
-					}
-				}
-				else
-				{
-					info( "%s gets slaughtered by %s!", (int)victim->name,
-							(int)(IS_NPC(ch) ? ch->short_descr : ch->name) );
-				}
+				info( "%s gets slaughtered by %s!", (int)victim->name, (int)(IS_NPC(ch) ? ch->short_descr : ch->name) );
 				save_clans();
 			}
 		}
@@ -1443,14 +1408,6 @@ bool is_safe( CHAR_DATA *ch, CHAR_DATA *victim )
 	if ( IS_NPC( victim ) )
 		return FALSE;
 
-	if ( IS_SET( victim->act, PLR_THIEF )
-			&& ( ch->guild && !strcmp( ch->guild->name, "MERCENARY" ) ) )
-		return FALSE;
-	if ( IS_SET( ch->act, PLR_THIEF )
-			&& ( victim->guild && !strcmp( victim->guild->name, "MERCENARY" ) ) )
-		/*	return FALSE; */
-		return TRUE;
-
 	/* SIGH
 	   if ( !(IS_SET(ch->act, PLR_PKILLER)) || ( (IS_SET(ch->act, PLR_PKILLER)) &&
 	   !(IS_SET(victim->act, PLR_PKILLER)) ) )
@@ -1484,14 +1441,6 @@ bool is_safe( CHAR_DATA *ch, CHAR_DATA *victim )
 		}
 		else
 			return FALSE;
-	}
-
-	/* give pkill guilds ability to pkill */
-	/* Err.. we might not want pkill guilds attacking unguilded.. */
-	if ( (ch->guild && (ch->guild->type & GUILD_PKILL)) &&
-			(victim->guild && (victim->guild->type & GUILD_PKILL)) )
-	{
-		return FALSE;
 	}
 
 	pClan = get_clan_index( ch->clan );

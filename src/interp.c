@@ -175,15 +175,6 @@ struct	cmd_type	cmd_table	[ ] =
 	{ "cquest",        do_clanquest,    POS_DEAD,        0,  LOG_NORMAL },
 
 	/*
-	 * Guild commands
-	 */
-	{ "guild",		do_guild,	POS_DEAD,	 0,  LOG_ALWAYS },
-	{ "unguild",	do_unguild,	POS_DEAD,	 0,  LOG_ALWAYS	},
-	{ "setrank",	do_setrank,	POS_DEAD,	 0,  LOG_ALWAYS	},
-	{ "gdt",		do_gdt,		POS_SLEEPING,	 0,  LOG_NORMAL },
-	{ "guildtalk",	do_gdt,		POS_SLEEPING,	 0,  LOG_NORMAL },
-	{ "guilds",         do_guilds,      POS_DEAD,        0,  LOG_NORMAL },
-	/*
 	 * Configuration commands.
 	 */
 	{ "alias",          do_alias,       POS_DEAD,        0,  LOG_NORMAL },

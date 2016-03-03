@@ -2479,12 +2479,6 @@ void do_steal( CHAR_DATA *ch, char *argument )
 		 * Failure.
 		 */
 		send_to_char(AT_RED, "Oops.\n\r", ch );
-		if ( ch->guild && !strcmp( ch->guild->name, "MERCENARY" ) )
-		{
-			send_to_char( AT_RED, "You are kicked out of &rMERCENARY&R for treason!\n\r", ch );
-			ch->guild = NULL;
-			ch->guild_rank = 0;
-		}
 		act(AT_RED, "$n tried to steal from you.\n\r", ch, NULL, victim, TO_VICT    );
 		act(AT_RED, "$n tried to steal from $N.\n\r",  ch, NULL, victim, TO_NOTVICT );
 		sprintf( buf, "%s is a bloody thief!", ch->name );

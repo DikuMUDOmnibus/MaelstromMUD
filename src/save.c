@@ -183,8 +183,6 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
 	fprintf( fp, "Gold	      %d\n",	ch->money.gold		);
 	fprintf( fp, "Silver      %d\n",  	ch->money.silver	);
 	fprintf( fp, "Copper      %d\n",	ch->money.copper	);
-	fprintf( fp, "GRank       %d\n",	ch->guild_rank		);
-	fprintf( fp, "Guild       %s~\n", (ch->guild != NULL) ? ch->guild->name : "\0"		);
 	fprintf( fp, "Exp         %d\n",	ch->exp			);
 	fprintf( fp, "Act         %d\n",    ch->act				);
 	fprintf( fp, "Act2        %d\n",    ch->act2			);
@@ -518,7 +516,6 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name )
 	ch->imm_flags			= 0;	/* XOR */
 	ch->res_flags			= 0;	/* XOR */
 	ch->vul_flags			= 0;	/* XOR */
-	ch->guild				= NULL;	/* XOR */
 	ch->pcdata->bankaccount.gold	= 0;
 	ch->pcdata->bankaccount.silver	= 0;
 	ch->pcdata->bankaccount.copper	= 0;
@@ -804,22 +801,6 @@ void fread_char( CHAR_DATA *ch, FILE *fp )
 
 			case 'G':
 				KEY( "Gold",	ch->money.gold,		fread_number( fp ) );
-				KEY( "GRank",	ch->guild_rank,		fread_number( fp ) );
-				if(!str_cmp(word, "Guild"))
-				{
-					int i;
-					char *guild;
-					guild = fread_string(fp);
-					fMatch = TRUE;
-					for(i = 0;guild_table[i].name[0] != '\0';i++)
-					{
-						if(!strcmp(guild_table[i].name, guild))
-						{
-							ch->guild = (GUILD_DATA *)&(guild_table[i]);
-							break;
-						}
-					}
-				}
 				break;
 
 			case 'H':

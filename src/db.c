@@ -4646,8 +4646,6 @@ void load_player_list( void )
 		pPlayerList->level 	= 0;
 		pPlayerList->clan_name 	= NULL; /*&str_empty[0]; */
 		pPlayerList->clan_rank 	= 0;
-		pPlayerList->guild_name	= NULL; /*&str_empty[0];*/
-		pPlayerList->guild_rank	= 0;
 
 		/* Load a character */
 		for ( ; ; )
@@ -4670,10 +4668,6 @@ void load_player_list( void )
 				pPlayerList->clan_name 	= fread_string( fp );
 			else if ( !str_cmp( name, "CRank" ) )
 				pPlayerList->clan_rank 	= fread_number( fp );
-			else if ( !str_cmp( name, "Guild" ) )
-				pPlayerList->guild_name 	= fread_string( fp );
-			else if ( !str_cmp( name, "GRank" ) )
-				pPlayerList->guild_rank 	= fread_number( fp );
 		}
 
 		/* check if the player still exits */
@@ -4721,10 +4715,6 @@ void save_player_list( )
 			fprintf( fp, "Clan        %s~\n" ,   pPlayer->clan_name    );
 		if (pPlayer->clan_rank)
 			fprintf( fp, "CRank       %d\n" ,   pPlayer->clan_rank    );
-		if (pPlayer->guild_name)
-			fprintf( fp, "Guild       %s~\n",   pPlayer->guild_name	);
-		if (pPlayer->guild_rank)
-			fprintf( fp, "GRank       %d\n" ,   pPlayer->guild_rank   );
 		fprintf( fp, "END\n" );
 	}
 	fprintf( fp, "#END\n" );
@@ -4790,13 +4780,6 @@ void update_playerlist( CHAR_DATA *ch )
 	else
 		pPlayer->clan_name 	= NULL; /*&str_empty[0]; */
 	pPlayer->clan_rank	= ch->clev;
-	free_string( pPlayer->guild_name );
-	if ( ch->guild )
-		pPlayer->guild_name	= str_dup( ch->guild->name );
-	else
-		pPlayer->guild_name	= NULL; /*&str_empty[0]; */
-	pPlayer->guild_rank	= ch->guild_rank;
-
 }
 
 void add_playerlist(CHAR_DATA *ch)
@@ -4819,12 +4802,6 @@ void add_playerlist(CHAR_DATA *ch)
 	else
 		pPlayer->clan_name      = NULL; /*&str_empty[0]; */
 	pPlayer->clan_rank = ch->clev;
-	if ( ch->guild )
-		pPlayer->guild_name      = str_dup( ch->guild->name );
-	else
-		pPlayer->guild_name      = NULL; /*&str_empty[0]; */
-
-	pPlayer->guild_rank	= ch->guild_rank;
 
 
 	if ( !playerlist )

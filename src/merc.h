@@ -75,7 +75,6 @@ typedef struct  time_info_data    TIME_INFO_DATA;
 typedef struct  weather_data      WEATHER_DATA;
 typedef struct  mob_prog_data     MPROG_DATA;
 typedef struct  mob_prog_act_list MPROG_ACT_LIST;
-typedef struct  guild_data        GUILD_DATA;       /* XOR */
 typedef struct  quest_data        QUEST_DATA;       /* Angi */
 typedef struct  alias_data        ALIAS_DATA;       /* Altrag */
 typedef struct  trap_data         TRAP_DATA;        /* Altrag */
@@ -487,8 +486,6 @@ struct playerlist_data
   unsigned char level;
   char * clan_name;
   unsigned char clan_rank;
-  char * guild_name;
-  unsigned char guild_rank;
 };
 
 /**
@@ -709,11 +706,6 @@ struct  kill_data
 #define MOB_VNUM_SHADOW            84
 #define MOB_VNUM_BEAST             85
 #define MOB_VNUM_TRENT             86
-
-/* BILL GATES */
-#define GUILD_NORMAL    0
-#define GUILD_PKILL   BV00
-#define GUILD_CHAOS   BV01
 
 /* CLANS */
 #define CLAN_PKILL              BV00
@@ -1465,20 +1457,20 @@ struct  kill_data
  * Log Channels
  * Added by Altrag.
  */
-#define CHANNEL_LOG      2048
-#define CHANNEL_BUILD      4096
+#define CHANNEL_LOG                2048
+#define CHANNEL_BUILD              4096
 #define CHANNEL_GOD                8192
 #define CHANNEL_GUARDIAN          16384
-#define CHANNEL_GUILD     32768
+#define CHANNEL_UNUSED            32768
 #define CHANNEL_CODER             65536
-#define CHANNEL_INFO     131072
+#define CHANNEL_INFO             131072
 #define CHANNEL_CHALLENGE        262144
 
 
 /* Master Channels
  * Added by Decklarean
  */
-#define CHANNEL_GUILD_MASTER     524288
+#define CHANNEL_UNUSED_MASTER    524288
 #define CHANNEL_CLASS_MASTER    1048576
 #define CHANNEL_CLAN_MASTER     2097152
 
@@ -1637,8 +1629,6 @@ struct  char_data
   bool                deleted;
   int     combat_timer; /* XOR */
   int     summon_timer; /* XOR */
-  char    guild_rank;
-  GUILD_DATA *  guild;
   int                 stunned[STUN_MAX];
   int     wiznet;
   int     warpts;
@@ -1651,15 +1641,6 @@ struct  char_data
   int     incarnations;
   int     raisepts;
 
-};
-
-
-struct guild_data
-{
-  char *  name;
-  char *  deity;
-  int   color;
-  int   type;
 };
 
 struct quest_data
@@ -2386,7 +2367,6 @@ extern  const struct  race_type     race_table  [ MAX_RACE    ];
 extern  const struct  size_type     size_table  [ MAX_SIZE    ];
 
 extern  const struct  wiznet_type   wiznet_table  [ ];
-extern  const struct  guild_data    guild_table   [ ];
 extern  const struct  quest_data    quest_table   [ ];
 
 extern  struct  cmd_type  cmd_table [ ];
@@ -2783,11 +2763,6 @@ DECLARE_DO_FUN( do_stare        );
 DECLARE_DO_FUN( do_load   );
 DECLARE_DO_FUN( do_push   );
 DECLARE_DO_FUN( do_drag   );
-DECLARE_DO_FUN( do_guild  );
-DECLARE_DO_FUN( do_guilds       );
-DECLARE_DO_FUN( do_unguild  );
-DECLARE_DO_FUN( do_setrank  );
-DECLARE_DO_FUN( do_gdt    );
 DECLARE_DO_FUN( do_authorize  );
 DECLARE_DO_FUN( do_drain_life );
 DECLARE_DO_FUN( do_gouge        );

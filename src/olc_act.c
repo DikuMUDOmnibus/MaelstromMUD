@@ -1015,7 +1015,7 @@ bool aedit_clan_hq( CHAR_DATA *ch, char *argument )
 
 	EDIT_AREA( ch, pArea );
 
-	if ( get_trust( ch ) >= L_CON || !str_cmp( ch->guild->name, "CREATION") )
+	if ( get_trust( ch ) >= L_CON )
 	{
 		TOGGLE_BIT( pArea->area_flags, AREA_CLAN_HQ );
 		send_to_char(C_DEFAULT, "Ok.\n\r", ch );
@@ -1034,7 +1034,7 @@ bool aedit_prototype( CHAR_DATA *ch, char *argument )
 
 	EDIT_AREA( ch, pArea );
 
-	if ( get_trust( ch ) >= L_CON || !str_cmp( ch->guild->name, "CREATION") )
+	if ( get_trust( ch ) >= L_CON )
 	{
 		pArea->area_flags ^= AREA_PROTOTYPE;
 		send_to_char(C_DEFAULT, "Ok.\n\r", ch );
@@ -1053,7 +1053,7 @@ bool aedit_noquest( CHAR_DATA *ch, char *argument )
 
 	EDIT_AREA( ch, pArea );
 
-	if ( get_trust( ch ) >= L_CON || !str_cmp( ch->guild->name, "CREATION") )
+	if ( get_trust( ch ) >= L_CON )
 	{   
 		TOGGLE_BIT( pArea->area_flags, AREA_NO_QUEST );
 		send_to_char(C_DEFAULT, "Ok.\n\r", ch );
@@ -1076,7 +1076,7 @@ bool aedit_mudschool( CHAR_DATA *ch, char *argument )
 
 	EDIT_AREA( ch, pArea );
 
-	if ( get_trust( ch ) >= L_CON || !str_cmp( ch->guild->name, "CREATION") )
+	if ( get_trust( ch ) >= L_CON )
 	{
 		TOGGLE_BIT( pArea->area_flags, AREA_MUDSCHOOL );
 		send_to_char(C_DEFAULT, "Ok.\n\r", ch );  

@@ -1794,10 +1794,6 @@ void do_mstat( CHAR_DATA *ch, char *argument )
 	}
 	else send_to_char(C_DEFAULT, "   ", ch);
 
-	sprintf( buf, "&cGuild&w: &W%s\n\r",
-			victim->guild ? victim->guild->name : "NONE");
-	send_to_char(C_DEFAULT, buf, ch);
-
 	if (!IS_NPC( victim ) )
 	{
 		CLAN_DATA *pClan = get_clan_index( victim->clan );
