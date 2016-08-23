@@ -15,7 +15,6 @@ addons:
     - llvm-3.0
 before_install:
   - pip install --user cpp-coveralls
-  - cd src
 script:
   - make test ; sh test
 after_success:
