@@ -33,7 +33,7 @@ default: $(MAIN_OBJ) $(OBJS)
 	rm -f $(BIN_DIR)/envy
 	$(CC) $(L_FLAGS) -o $(BIN_DIR)/envy $(MAIN_OBJ) $(OBJS) $(PKG_CFG)
 
-test: $(TEST_OBJS)
+test: $(OBJS) $(TEST_OBJS)
 	rm -rf $(BIN_DIR)/test.envy
 	$(CC) $(TEST_L_FLAGS) -o $(BIN_DIR)/test.envy $(OBJS) $(TEST_OBJS) $(PKG_CFG) -lcunit
 
