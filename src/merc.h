@@ -3046,7 +3046,6 @@ char *  crypt   args( ( const char *key, const char *salt ) );
 #define AREA_LIST       "area.lst"              /* List of areas */
 #define SHUTDOWN_FILE   "shutdown.txt"          /* For 'shutdown' */
 #define DOWN_TIME_FILE  "time.txt"              /* For automatic shutdown */
-#define USERLIST_FILE   "users.txt"             /* Userlist */
 #define AUTH_LIST       "auth.txt"              /* List of who auth who */
 #define BAN_LIST        "../banned.lst"         /* List of banned sites & users */
 #define CLAN_FILE       "../data/clan.dat"      /* For 'clans' */

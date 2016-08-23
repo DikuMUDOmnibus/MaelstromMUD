@@ -4,7 +4,7 @@
 #include <CUnit/Automated.h>
 #include <CUnit/Console.h>
 #include <CUnit/TestDB.h>
-#include "../merc.h"
+#include "../src/merc.h"
 
 /* macros */
 #define STRINGIFY(s) #s
