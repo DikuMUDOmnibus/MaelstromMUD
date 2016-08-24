@@ -21,7 +21,7 @@
 /*
  * The current version of the OASIS
  */
-#define VERSION "0.0.3"
+#define VERSION "1.0.0"
 
 #include <jansson.h>
 #include "devops.h" /* Include devops attributes */
@@ -158,24 +158,6 @@ typedef void SPELL_FUN                  args( ( int sn, int level, CHAR_DATA *ch
 
 /* Save the database - OLC 1.1b */
 #define PULSE_DB_DUMP     (1800* PULSE_PER_SECOND ) /* 30 minutes  */
-
-
-/*
- *  User list structure
- */
-
-/* is not used -Deck
-   struct  userl_data
-   {
-   USERL_DATA *  next;
-   char *        name;
-   int           level;
-   char *        user;
-   char *        host;
-   char *        lastlogin;
-   char *        desc;
-   }; */
-
 
 struct money_data
 {
@@ -3041,6 +3023,7 @@ char *  crypt   args( ( const char *key, const char *salt ) );
  *   so players can go ahead and telnet to all the other descriptors.
  * Then we close it whenever we need to open a file (e.g. a save file).
  */
+ // TODO change working directory to project root instead of area directory
 #define PLAYER_DIR      "../player/"            /* Player files */
 #define NULL_FILE       "/dev/null"             /* To reserve one stream */
 #define AREA_LIST       "area.lst"              /* List of areas */
@@ -3050,16 +3033,17 @@ char *  crypt   args( ( const char *key, const char *salt ) );
 #define BAN_LIST        "../banned.lst"         /* List of banned sites & users */
 #define CLAN_FILE       "../data/clan.dat"      /* For 'clans' */
 #define HOTREBOOT_FILE  "../data/hotreboot.dat" /* temporary data file used */
-#define NEWBIE_FILE     "../data/newbie.dat"    /* Newbie help file */
+#define NEWBIE_FILE     "../data/newbie.json"   /* Newbie help file */
 #define NOTE_FILE       "../data/notes.dat"     /* For 'notes' */
 #define SOCIAL_FILE     "../data/social.dat"    /* For 'socials' */
 #define PLAYERLIST_FILE "../player/player.lst"  /* Player List */
-#define EXE_FILE        "../src/envy"           /* EXE file */
+#define EXE_FILE        "../bin/envy"           /* EXE file */
 
 /*
  * Our function prototypes.
  * One big lump ... this is every function in Merc.
  */
+// TODO remove unnecessary obfuscation
 #define CD  CHAR_DATA
 #define MID MOB_INDEX_DATA
 #define OD  OBJ_DATA

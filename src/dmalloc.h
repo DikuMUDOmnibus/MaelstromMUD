@@ -41,8 +41,6 @@
 #include <sys/types.h>
 #define DMALLOC_SIZE size_t
 
-/* NOTE: start of $Id: dmalloc.h.3,v 1.15 1997/01/16 15:16:46 gray Exp $ */
-
 /* this defines what type the standard void memory-pointer is */
 #if defined(__STDC__) && __STDC__ == 1
 #define DMALLOC_PNT		void *
@@ -59,7 +57,6 @@
 #define MALLOC_ERROR		0L		/* error from malloc */
 #define REALLOC_ERROR		0L		/* error from realloc */
 
-/* NOTE: this if for non- __STDC__ systems only */
 #define FREE_ERROR		0		/* error from free */
 #define FREE_NOERROR		1		/* no error from free */
 

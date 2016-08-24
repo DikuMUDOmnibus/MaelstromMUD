@@ -4817,79 +4817,69 @@ void add_playerlist(CHAR_DATA *ch)
 
 }
 
-/* Angi -- Newbie help  */
-void newbie_sort( NEWBIE_DATA *pNewbie )
-{
+void newbie_sort( NEWBIE_DATA *pNewbie ) {
 	NEWBIE_DATA *fNewbie;
 
-	if ( !newbie_first )
-	{
+	// initialize list with first node and return (nothing left to do)
+	if ( !newbie_first ) {
 		newbie_first = pNewbie;
 		newbie_last  = pNewbie;
+
 		return;
 	}
 
-	if ( strncmp( pNewbie->keyword, newbie_first->keyword, 256 ) > 0 )
-	{
-		pNewbie->next = newbie_first->next;
+	// if the new node's keyword comes alphabetically before the old one, then
+	// place it at the beginning of the list and return (cause we done)
+	if ( strcmp( pNewbie->keyword, newbie_first->keyword ) < 0 ) {
+		pNewbie->next = newbie_first;
 		newbie_first = pNewbie;
+
 		return;
 	}
 
-	for ( fNewbie = newbie_first; fNewbie; fNewbie = fNewbie->next )
-	{
-		if (    ( strncmp( pNewbie->keyword, fNewbie->keyword, 256 ) < 0 ) )
-		{
-			if ( fNewbie != newbie_last )
-			{
-				pNewbie->next = fNewbie->next;
-				fNewbie->next = pNewbie;
-				return;
-			}
+	// traverse the list and find the appropriate place to insert the new node
+	for ( fNewbie = newbie_first; fNewbie; fNewbie = fNewbie->next ) {
+		// if the new node's keyword comes alphabetically before the next one, then
+		// slot it in between the current node and the next one
+		if ( fNewbie->next && strcmp( pNewbie->keyword, fNewbie->next->keyword ) < 0 ) {
+			pNewbie->next = fNewbie->next;
+			fNewbie->next = pNewbie;
+
+			return;
 		}
 	}
+
+	// end of the line, tack the node on the end of the list
 	newbie_last->next = pNewbie;
 	newbie_last = pNewbie;
 	pNewbie->next = NULL;
 
 	return;
-
 }
 
-void load_newbie( void )
-{
-	FILE      *fp;
+void load_newbie( void ) {
 	NEWBIE_DATA *pNewbieIndex;
-	char letter;
+	json_t *arr;
+	json_t *value;
+	json_error_t error;
+	int i;
 
-	if ( !( fp = fopen( NEWBIE_FILE, "r" ) ) )
+	arr = json_load_file(NEWBIE_FILE, 0, &error);
+
+	if ( !arr ) {
 		return;
-	fpArea = fp;
-	strcpy(strArea, NEWBIE_FILE);
-	for ( ; ; )
-	{
-		char*  keyword;
+	}
 
-		letter                          = fread_letter( fp );
-		if ( letter != '#' )
-		{
-			bug( "Load_newbie: # not found.", 0 );
-			continue;
-		}
-		keyword                         = fread_string( fp );
-		if ( !str_cmp( keyword, "END"    ) )
-			break;
+	for ( i = 0 ; i < json_array_size(arr); i++ ) {
+		value = json_array_get(arr, i);
 
-		pNewbieIndex		=	alloc_perm( sizeof( *pNewbieIndex ));
-		pNewbieIndex->keyword		=	keyword;
-		pNewbieIndex->answer1		=	fread_string( fp );
-		pNewbieIndex->answer2		=	fread_string( fp );
+		pNewbieIndex = alloc_perm( sizeof( *pNewbieIndex ));
+
+		json_unpack(value, "{s:s, s:[s, s]}", "keyword", &pNewbieIndex->keyword, "answers", &pNewbieIndex->answer1, &pNewbieIndex->answer2);
 
 		newbie_sort(pNewbieIndex);
 		top_newbie++;
-
 	}
-	fclose ( fp );
 
 	return;
 }

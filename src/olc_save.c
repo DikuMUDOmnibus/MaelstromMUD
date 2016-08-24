@@ -215,11 +215,11 @@ void save_mobiles( FILE *fp, AREA_DATA *pArea )
 				fprintf( fp, "%d ",		pMobIndex->level );
 				fprintf( fp, "%d ",		pMobIndex->hitroll );
 				fprintf( fp, "%d ",		pMobIndex->ac );
-				fprintf( fp, "%dd%d+%d ",	pMobIndex->hitnodice, 
-						pMobIndex->hitsizedice, 
+				fprintf( fp, "%dd%d+%d ",	pMobIndex->hitnodice,
+						pMobIndex->hitsizedice,
 						pMobIndex->hitplus );
-				fprintf( fp, "%dd%d+%d\n",	pMobIndex->damnodice, 
-						pMobIndex->damsizedice, 
+				fprintf( fp, "%dd%d+%d\n",	pMobIndex->damnodice,
+						pMobIndex->damsizedice,
 						pMobIndex->damplus );
 				fprintf( fp, "%d ",		pMobIndex->money.gold );
 				fprintf( fp, "%d ", 		pMobIndex->money.silver );
@@ -237,9 +237,10 @@ void save_mobiles( FILE *fp, AREA_DATA *pArea )
 	return;
 }
 
+// TODO convert clans to json
 void save_clans( )
 {
-	FILE *fp; 
+	FILE *fp;
 	CLAN_DATA *pClan;
 
 	if ( ( fp = fopen( CLAN_FILE, "w" ) ) == NULL )
@@ -252,7 +253,7 @@ void save_clans( )
 		for( pClan = clan_first; pClan; pClan = pClan->next )
 		{
 			fprintf( fp, "#%d\n",      pClan->vnum );
-			fprintf( fp, "%d %d %d\n", pClan->bankaccount.gold, pClan->bankaccount.silver, pClan->bankaccount.copper ); 
+			fprintf( fp, "%d %d %d\n", pClan->bankaccount.gold, pClan->bankaccount.silver, pClan->bankaccount.copper );
 			fprintf( fp, "%s~\n",      pClan->name );
 			fprintf( fp, "%s~\n",      pClan->diety );
 			fprintf( fp, "%s~\n",      pClan->description );
@@ -272,6 +273,7 @@ void save_clans( )
 	return;
 }
 
+// TODO convert socials to json
 void save_social( )
 {
 	FILE *fp;
@@ -286,7 +288,7 @@ void save_social( )
 	{
 		for( pSocial = social_first; pSocial; pSocial = pSocial->next )
 		{
-			fprintf( fp, "#%s~\n",     	pSocial->name 		);
+			fprintf( fp, "#%s~\n",  pSocial->name 		);
 			fprintf( fp, "%s~\n", 	pSocial->char_no_arg	);
 			fprintf( fp, "%s~\n", 	pSocial->others_no_arg	);
 			fprintf( fp, "%s~\n", 	pSocial->char_found	);
@@ -302,31 +304,20 @@ void save_social( )
 	return;
 }
 
-void save_newbie( )
-{
-	FILE *fp;
+void save_newbie( ) {
 	NEWBIE_DATA *pNewbie;
+	json_t *arr = json_array();
 
-	if ( ( fp = fopen( NEWBIE_FILE, "w" ) ) == NULL )
-	{
-		bug( "Save_newbie: fopen", 0 );
-		perror( "area.lst" );
+	for( pNewbie = newbie_first; pNewbie; pNewbie = pNewbie->next ) {
+		json_array_append(arr, json_pack("{s:s, s:[s, s]}", "keyword", pNewbie->keyword, "answers", pNewbie->answer1, pNewbie->answer2));
 	}
-	else
-	{
-		for( pNewbie = newbie_first; pNewbie; pNewbie = pNewbie->next )
-		{    
-			fprintf( fp, "#%s~\n",      pNewbie->keyword           );
-			fprintf( fp, "%s~\n",       pNewbie->answer1           );
-			fprintf( fp, "%s~\n",       pNewbie->answer2           );
-		}
 
-		fprintf( fp, "#END~\n" );
-		fclose( fp );
-	}   
+	if ( json_dump_file(arr, NEWBIE_FILE, JSON_SORT_KEYS | JSON_INDENT(2)) == -1 ) {
+		bug( "Save_newbie: fopen", 0 );
+		perror( NEWBIE_FILE );
+	}
 
 	return;
-
 }
 
 /*****************************************************************************
@@ -668,7 +659,7 @@ void vsave_resets( FILE *fp, AREA_DATA *pArea )
 
 						case 'M':
 							pLastMob = get_mob_index( pReset->arg1 );
-							fprintf( fp, "M 0 %d %2d %-5d \t; %s to %s\n", 
+							fprintf( fp, "M 0 %d %2d %-5d \t; %s to %s\n",
 									pReset->arg1,
 									pReset->arg2,
 									pReset->arg3,
@@ -678,7 +669,7 @@ void vsave_resets( FILE *fp, AREA_DATA *pArea )
 
 						case 'O':
 							pLastObj = get_obj_index( pReset->arg1 );
-							fprintf( fp, "O 0 %d  0 %-5d \t; %s to %s\n", 
+							fprintf( fp, "O 0 %d  0 %-5d \t; %s to %s\n",
 									pReset->arg1,
 									pReset->arg3,
 									capitalize(pLastObj->short_descr),
@@ -687,7 +678,7 @@ void vsave_resets( FILE *fp, AREA_DATA *pArea )
 
 						case 'P':
 							pLastObj = get_obj_index( pReset->arg1 );
-							fprintf( fp, "P 0 %d  0 %-5d \t; %s inside %s\n", 
+							fprintf( fp, "P 0 %d  0 %-5d \t; %s inside %s\n",
 									pReset->arg1,
 									pReset->arg3,
 									capitalize(get_obj_index( pReset->arg1 )->short_descr),
@@ -731,7 +722,7 @@ void vsave_resets( FILE *fp, AREA_DATA *pArea )
 							break;
 
 						case 'R':
-							fprintf( fp, "R 0 %d %2d      \t; Randomize %s\n", 
+							fprintf( fp, "R 0 %d %2d      \t; Randomize %s\n",
 									pReset->arg1,
 									pReset->arg2,
 									pRoomIndex->name );
@@ -861,9 +852,9 @@ void save_helps( FILE *fp, AREA_DATA *pArea )
 				fprintf( fp, "#HELPS\n\n" );
 				found = TRUE;
 			}
-			fprintf( fp, "%d %s~\n%s~\n", 
+			fprintf( fp, "%d %s~\n%s~\n",
 					pHelp->level,
-					all_capitalize( pHelp->keyword ), 
+					all_capitalize( pHelp->keyword ),
 					fix_string( pHelp->text ) );
 		}
 	}
@@ -894,13 +885,13 @@ void save_helps( )
 		return;
 	}
 
-	fprintf( fp, "#HELPS\n\n" );   
+	fprintf( fp, "#HELPS\n\n" );
 
 	for( pHelp = help_first; pHelp; pHelp = pHelp->next )
 	{
-		fprintf( fp, "%d %s~\n%s~\n", 
+		fprintf( fp, "%d %s~\n%s~\n",
 				pHelp->level,
-				all_capitalize( pHelp->keyword ), 
+				all_capitalize( pHelp->keyword ),
 				fix_string( pHelp->text ) );
 	}
 
@@ -988,14 +979,14 @@ void do_asave( CHAR_DATA *ch, char *argument )
 		save_area_list();
 		for( pArea = area_first; pArea; pArea = pArea->next )
 		{
-			if ( IS_SET( pArea->area_flags, AREA_CHANGED ) ) 
+			if ( IS_SET( pArea->area_flags, AREA_CHANGED ) )
 			{
 				REMOVE_BIT( pArea->area_flags, AREA_CHANGED | AREA_ADDED );
 				save_area( pArea );
 			}
-		} 
+		}
 		return;
-	} 
+	}
 
 	argument = one_argument( argument, arg1 );
 
@@ -1051,7 +1042,7 @@ void do_asave( CHAR_DATA *ch, char *argument )
 		{
 			/* Builder must be assigned this area. */
 			if ( !IS_BUILDER( ch, pArea ) )
-				continue;	  
+				continue;
 
 			if ( !str_cmp( "verbose", argument ) )
 				SET_BIT( pArea->area_flags, AREA_VERBOSE );
@@ -1062,7 +1053,7 @@ void do_asave( CHAR_DATA *ch, char *argument )
 		save_clans( );
 		save_social( );
 		save_helps( );
-		save_newbie( ); 
+		save_newbie( );
 		save_player_list( );
 		send_to_all_char( "Database saved.\n\r" );
 		return;
@@ -1121,7 +1112,7 @@ void do_asave( CHAR_DATA *ch, char *argument )
 				sprintf( buf, "%24s - '%s'\n\r", pArea->name, pArea->filename );
 				send_to_char(C_DEFAULT, buf, ch );
 			}
-		} 
+		}
 		if ( !str_cmp( buf, "None.\n\r" ) )
 			send_to_char(C_DEFAULT, buf, ch );
 		return;
@@ -1138,7 +1129,7 @@ void do_asave( CHAR_DATA *ch, char *argument )
 	/* Save area being edited, if authorized. */
 	/* -------------------------------------- */
 	if ( !str_cmp( arg1, "area" ) )
-	{	
+	{
 		/* Find the area to save. */
 		switch (ch->desc->editor)
 		{
