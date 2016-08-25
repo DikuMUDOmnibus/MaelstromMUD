@@ -21,7 +21,7 @@
 /*
  * The current version of the OASIS
  */
-#define VERSION "1.0.0"
+#define VERSION "1.0.1"
 
 #include <jansson.h>
 #include "devops.h" /* Include devops attributes */
@@ -3528,8 +3528,9 @@ extern  ROOM_INDEX_DATA *       room_index_hash [MAX_KEY_HASH];
 
 
 /* db.c */
-void  reset_area      args( ( AREA_DATA * pArea ) );
+void  reset_area  args( ( AREA_DATA * pArea ) );
 void  reset_room  args( ( ROOM_INDEX_DATA *pRoom ) );
+void  newbie_sort args( ( NEWBIE_DATA *pNewbie ) );
 
 /* string.c */
 void  string_edit args( ( CHAR_DATA *ch, char **pString ) );

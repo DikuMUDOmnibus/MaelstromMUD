@@ -4817,6 +4817,32 @@ void add_playerlist(CHAR_DATA *ch)
 
 }
 
+void load_newbie( void ) {
+	NEWBIE_DATA *pNewbie;
+	json_t *arr;
+	json_t *value;
+	json_error_t error;
+	int i;
+
+	arr = json_load_file(NEWBIE_FILE, 0, &error);
+
+	if ( !arr ) {
+		return;
+	}
+
+	for ( i = 0 ; i < json_array_size(arr); i++ ) {
+		value = json_array_get(arr, i);
+
+		pNewbie = new_newbie_index();
+
+		json_unpack(value, "{s:s, s:[s, s]}", "keyword", &pNewbie->keyword, "answers", &pNewbie->answer1, &pNewbie->answer2);
+
+		newbie_sort(pNewbie);
+	}
+
+	return;
+}
+
 void newbie_sort( NEWBIE_DATA *pNewbie ) {
 	NEWBIE_DATA *fNewbie;
 
@@ -4853,33 +4879,6 @@ void newbie_sort( NEWBIE_DATA *pNewbie ) {
 	newbie_last->next = pNewbie;
 	newbie_last = pNewbie;
 	pNewbie->next = NULL;
-
-	return;
-}
-
-void load_newbie( void ) {
-	NEWBIE_DATA *pNewbieIndex;
-	json_t *arr;
-	json_t *value;
-	json_error_t error;
-	int i;
-
-	arr = json_load_file(NEWBIE_FILE, 0, &error);
-
-	if ( !arr ) {
-		return;
-	}
-
-	for ( i = 0 ; i < json_array_size(arr); i++ ) {
-		value = json_array_get(arr, i);
-
-		pNewbieIndex = alloc_perm( sizeof( *pNewbieIndex ));
-
-		json_unpack(value, "{s:s, s:[s, s]}", "keyword", &pNewbieIndex->keyword, "answers", &pNewbieIndex->answer1, &pNewbieIndex->answer2);
-
-		newbie_sort(pNewbieIndex);
-		top_newbie++;
-	}
 
 	return;
 }

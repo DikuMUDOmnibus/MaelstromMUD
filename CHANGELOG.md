@@ -1,3 +1,9 @@
+## 1.0.1 (2016-08-25)
+
+Bugfixes:
+
+* Adding new newbie help keywords are now automatically sorted upon insert
+
 ## 1.0.0 (2016-08-24)
 
 Features:

@@ -77,7 +77,7 @@ bool run_olc_editor( DESCRIPTOR_DATA *d )
 			break;
 		case ED_NEWBIE:
 			nedit( d->character, d->incomm );
-			break; 
+			break;
 		case ED_SPEDIT:
 			spedit( d->character, d->incomm );
 			break;
@@ -140,7 +140,7 @@ char *olc_ed_name( CHAR_DATA *ch )
 			break;
 		case ED_NEWBIE:
 			sprintf( buf, "NEdit" );
-			break; 
+			break;
 		case ED_SPEDIT:
 			sprintf( buf, "SPEdit" );
 			break;
@@ -293,7 +293,7 @@ bool show_commands( CHAR_DATA *ch, char *argument )
 			break;
 		case ED_CLAN:
 			show_olc_cmds( ch, cedit_table );
-			break;    
+			break;
 		case ED_HELP:
 			show_olc_cmds( ch, hedit_table );
 			break;
@@ -319,7 +319,7 @@ bool show_commands( CHAR_DATA *ch, char *argument )
 			break;
 		case ED_NEWBIE:
 			show_olc_cmds( ch, nedit_table );
-			break; 
+			break;
 	}
 
 	return FALSE;
@@ -357,7 +357,7 @@ const struct olc_cmd_type aedit_table[] =
 	{	"ulevel",	aedit_ulevel		},
 	{   "noquest",	aedit_noquest		},
 	{   "mudschool",	aedit_mudschool		},
-	{   "color",	aedit_color		}, 
+	{   "color",	aedit_color		},
 
 	{	"",		0,			}
 };
@@ -470,7 +470,7 @@ const struct olc_cmd_type oedit_table[] =
 
 	{	"mlist",	redit_mlist		},
 	{	"olist",	redit_olist		},
-	{   "rlist",        redit_rlist             }, 
+	{   "rlist",        redit_rlist             },
 
 	{   "?",		show_help		},
 	{   "version",	show_version		},
@@ -509,7 +509,7 @@ const struct olc_cmd_type medit_table[] =
 
 	{	"mlist",	redit_mlist		},
 	{	"olist",	redit_olist		},
-	{   "rlist",        redit_rlist             }, 
+	{   "rlist",        redit_rlist             },
 
 	{   "?",		show_help		},
 	{   "version",	show_version		},
@@ -579,7 +579,7 @@ const struct olc_cmd_type mreset_table[] =
 	{	"?",		show_help		},
 	{   "commands",	show_commands		},
 
-	{   "",            	0,                      }    
+	{   "",            	0,                      }
 };
 
 const struct olc_cmd_type spedit_table[] =
@@ -612,7 +612,7 @@ const struct olc_cmd_type sedit_table[] =
 	{   "others_found",	sedit_others_found	},
 	{   "vict_found",	sedit_vict_found	},
 	{	"char_auto",	sedit_char_auto		},
-	{	"others_auto",	sedit_others_auto	}, 
+	{	"others_auto",	sedit_others_auto	},
 
 	{   "1",  		sedit_char_no_arg       },
 	{   "2",		sedit_others_no_arg     },
@@ -631,7 +631,7 @@ const struct olc_cmd_type sedit_table[] =
 	{   "commands",	show_commands		},
 
 	{   "",            	0,                      }
-};   
+};
 
 const struct olc_cmd_type nedit_table[] =
 {
@@ -640,6 +640,7 @@ const struct olc_cmd_type nedit_table[] =
 	{ "keyword",		nedit_keyword		},
 	{ "answer1",		nedit_answer1		},
 	{ "answer2",		nedit_answer2		},
+	// TODO add delete
 
 	{ "1",		nedit_answer1		},
 	{ "2", 		nedit_answer2		},
@@ -687,7 +688,7 @@ const struct olc_cmd_type forge_obj_table[] =
 	{   "commands",	show_commands,		},
 
 	{   "",            	0,                      }
-};   
+};
 
 /*****************************************************************************
  *                          End Interpreter Tables.                          *
@@ -827,7 +828,7 @@ void aedit( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-	if ( !IS_BUILDER( ch, pArea ) ) /* && ch->level < L_CON ) || 
+	if ( !IS_BUILDER( ch, pArea ) ) /* && ch->level < L_CON ) ||
 									   IS_SWITCHED( ch ) ) */
 	{
 		interpret( ch, arg );
@@ -1136,7 +1137,7 @@ void medit( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-	if ( !IS_BUILDER( ch,  pArea ) ) /* && ch->level < L_CON ) || 
+	if ( !IS_BUILDER( ch,  pArea ) ) /* && ch->level < L_CON ) ||
 										IS_SWITCHED( ch ) ) */
 	{
 		interpret( ch, arg );
@@ -1184,7 +1185,7 @@ void medit( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-	if ( ( value = flag_value( affect2_flags, arg ) ) != NO_FLAG 
+	if ( ( value = flag_value( affect2_flags, arg ) ) != NO_FLAG
 			&& value != AFF_GOLDEN )
 	{
 		TOGGLE_BIT(pMob->affected_by2, value);
@@ -1235,9 +1236,9 @@ void mpedit( CHAR_DATA *ch, char *argument )
 	{
 		edit_done( ch );
 		return;
-	}  
+	}
 
-	if ( !IS_BUILDER( ch, pArea ) ) /*  && ch->level < L_CON ) || 
+	if ( !IS_BUILDER( ch, pArea ) ) /*  && ch->level < L_CON ) ||
 										IS_SWITCHED( ch ) ) */
 	{
 		interpret( ch, arg );
@@ -1365,7 +1366,7 @@ void tedit( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-	if ( !IS_BUILDER( ch, pArea ) ) /*  && ch->level < L_CON ) || 
+	if ( !IS_BUILDER( ch, pArea ) ) /*  && ch->level < L_CON ) ||
 										IS_SWITCHED( ch ) ) */
 	{
 		interpret( ch, arg );
@@ -1507,7 +1508,7 @@ void do_aedit( CHAR_DATA *ch, char *argument )
 		if ( ch->desc->editor == ED_AREA )
 			purge_area( (AREA_DATA *)ch->desc->pEdit );
 		else
-			purge_area( pArea );       
+			purge_area( pArea );
 		send_to_char(C_DEFAULT, "Area purged.\n\r", ch );
 		return;
 	}
@@ -1558,7 +1559,7 @@ void do_redit( CHAR_DATA *ch, char *argument )
 	{
 		players = pRoom->area->nplayer;
 		pRoom->area->nplayer = 0;
-		/* When doing redit reset, make amt of players in area 0 
+		/* When doing redit reset, make amt of players in area 0
 		   so objects reset on the ground --Angi */
 		reset_room( pRoom );
 		send_to_char(C_DEFAULT, "Room reset.\n\r", ch );
@@ -1721,7 +1722,7 @@ bool medit_mpedit( CHAR_DATA *ch, char *argument )
 
 	if ( is_number( command ) )
 	{
-		if ( !( pMProg = get_mprog_data( (MOB_INDEX_DATA *)ch->desc->pEdit, 
+		if ( !( pMProg = get_mprog_data( (MOB_INDEX_DATA *)ch->desc->pEdit,
 						atoi( command ) ) ) )
 		{
 			send_to_char( C_DEFAULT, "MPEdit:  Mobile has no such MobProg.\n\r", ch );
@@ -1898,7 +1899,7 @@ void display_resets( CHAR_DATA *ch )
 	EDIT_ROOM(ch, pRoom);
 	final[0]  = '\0';
 
-	send_to_char ( C_DEFAULT, 
+	send_to_char ( C_DEFAULT,
 			" No.  Loads    Description       Location         Vnum    Max  Description"
 			"\n\r"
 			"==== ======== ============= =================== ======== ===== ==========="
@@ -2038,7 +2039,7 @@ void display_resets( CHAR_DATA *ch )
 					sprintf( buf,
 							"O[%5d] %-13.13s in the inventory of S[%5d]       %-15.15s\n\r",
 							pReset->arg1,
-							pObj->short_descr,                           
+							pObj->short_descr,
 							pMob->vnum,
 							pMob->short_descr  );
 				}
@@ -2275,7 +2276,7 @@ void do_resets( CHAR_DATA *ch, char *argument )
 		 * Inside another object.
 		 * ----------------------
 		 */
-		/*	  if ( !str_prefix( arg4, "inside" ) ) 
+		/*	  if ( !str_prefix( arg4, "inside" ) )
 			  {
 			  pReset->command = 'P';
 			  pReset->arg2    = 0;
@@ -2326,7 +2327,7 @@ void do_resets( CHAR_DATA *ch, char *argument )
 			add_reset( ch->in_room, pReset, atoi( arg1 ) );
 			send_to_char(C_DEFAULT, "Reset added.\n\r", ch );
 			} */
-			  else 
+			  else
 			  {
 				  /*	send_to_char(C_DEFAULT, "Syntax: RESET <number> OBJ <vnum> <wear_loc>\n\r", ch );
 						send_to_char(C_DEFAULT, "        RESET <number> OBJ <vnum> in <vnum>\n\r", ch );
@@ -2356,7 +2357,7 @@ void do_alist( CHAR_DATA *ch, char *argument )
 	char *prot = "";
 
 	/*    sprintf( result, "[%3s] [%-28s] (%-5s-%5s) [%-10s]  %3s  [%-8s]\n\r",*/
-	sprintf( result, "&z[&W%3s&z] &z[&B%-28s&z] &z(&W%-5s-%5s&z) &z[&G%-10s&z] &z[&W%3s&z][&W%-8s&z]\n\r",       
+	sprintf( result, "&z[&W%3s&z] &z[&B%-28s&z] &z(&W%-5s-%5s&z) &z[&G%-10s&z] &z[&W%3s&z][&W%-8s&z]\n\r",
 			"Num", "Area Name", "lvnum", "uvnum", "Filename", "Sec", "Builders" );
 
 	for ( pArea = area_first; pArea; pArea = pArea->next )
@@ -2513,7 +2514,7 @@ void mreset(CHAR_DATA *ch, char *argument)
 
 	if(command[0] == '\0')
 	{
-		mreset_show(ch, argument); 
+		mreset_show(ch, argument);
 		return;
 	}
 
@@ -2623,7 +2624,7 @@ void do_sedit(CHAR_DATA *ch, char *argument)
 		if(argument[0] == '\0')
 		{
 			send_to_char(C_DEFAULT, "SEdit:  Syntax: sedit create <social name>\n\r", ch);
-			return; 
+			return;
 		}
 
 		if(get_social(argument) != NULL)
@@ -2800,7 +2801,7 @@ void forge_pay_cost( CHAR_DATA *ch )
 	FORGE_OBJ(ch, obj);
 
 
-	if ( ( (ch->money.gold*C_PER_G) + (ch->money.silver*S_PER_G) + 
+	if ( ( (ch->money.gold*C_PER_G) + (ch->money.silver*S_PER_G) +
 				(ch->money.copper) ) < ( (obj->cost.gold*C_PER_G) + (obj->cost.silver*S_PER_G) +
 					(obj->cost.copper) ) )
 	{
@@ -2872,7 +2873,7 @@ void do_spedit(CHAR_DATA *ch, char *argument)
 		if(argument[0] == '\0')
 		{
 			send_to_char(C_DEFAULT, "SPedit:  Syntax: spedit create <spell name>\n\r", ch);
-			return; 
+			return;
 		}
 
 		if( skill_lookup(argument) < 0 )
@@ -2891,7 +2892,7 @@ void do_spedit(CHAR_DATA *ch, char *argument)
 			send_to_char(C_DEFAULT, "Spell/skill entry not found.\n\r", ch);
 			return;
 		}
-		pSpell = (SKILL_TYPE *)&skill_table[sn];    
+		pSpell = (SKILL_TYPE *)&skill_table[sn];
 	}
 	ch->desc->pEdit = (void *) pSpell;
 	ch->desc->editor = ED_SPEDIT;
@@ -2938,64 +2939,45 @@ void nedit( CHAR_DATA *ch, char *argument )
 
 }
 
-NEWBIE_DATA *get_newbie_data( char *argument )
-{
+NEWBIE_DATA *get_newbie_data( char *argument ) {
 	NEWBIE_DATA *pNewbie;
 
-	for( pNewbie = newbie_first; pNewbie; pNewbie = pNewbie->next )
-	{
-		if( is_name( NULL, argument, pNewbie->keyword ) )
+	for( pNewbie = newbie_first; pNewbie; pNewbie = pNewbie->next ) {
+		if( is_name( NULL, argument, pNewbie->keyword ) ) {
 			return pNewbie;
+		}
 	}
 
 	return NULL;
-
 }
 
-void do_nedit( CHAR_DATA *ch, char *argument )
-{
+void do_nedit( CHAR_DATA *ch, char *argument ) {
 	NEWBIE_DATA *pNewbie;
 	char command [ MAX_INPUT_LENGTH ];
 	char arg     [ MAX_STRING_LENGTH ];
 
 	strcpy( arg, argument );
-	argument = one_argument(argument, command);  
+	argument = one_argument(argument, command);
 
-	/*  if( argument[0] == '\0' )
-		{
-		send_to_char( C_DEFAULT, 
-		"Syntax: nedit <keyword>\n\rSyntax: nedit create <keyword>\n\r",
-		ch );
-		return;
-		}
-		*/
-	if ( command[0] == 'c' && !str_prefix( command, "create" ) )
-	{
-		if( argument[0] == '\0' )
-		{
+	if ( command[0] == 'c' && !str_prefix( command, "create" ) ) {
+		if( argument[0] == '\0' ) {
 			send_to_char( C_DEFAULT, "Syntax: nedit create <keyword>\n\r", ch );
 			return;
 		}
 
-		if( get_newbie_data( argument ) != NULL )
-		{
+		if( get_newbie_data( argument ) != NULL ) {
 			send_to_char( C_DEFAULT, "Keyword already exists.\n\r", ch );
 			return;
 		}
 
-		pNewbie = new_newbie_index( );
-		newbie_last->next = pNewbie;
-		newbie_last = pNewbie;
+		pNewbie = new_newbie_index();
+
 		pNewbie->keyword = str_dup( argument );
 
-	}
-	else
-	{
-		if ( !(pNewbie = get_newbie_data( arg ) ) )
-		{
-			send_to_char( C_DEFAULT, "Keyword doesn't exist.\n\r", ch );
-			return;
-		}
+		newbie_sort(pNewbie);
+	} else if ( !(pNewbie = get_newbie_data( arg ) ) ) {
+		send_to_char( C_DEFAULT, "Keyword doesn't exist.\n\r", ch );
+		return;
 	}
 
 	ch->desc->pEdit = (void *)pNewbie;
@@ -3003,5 +2985,4 @@ void do_nedit( CHAR_DATA *ch, char *argument )
 	nedit_show( ch, "" );
 
 	return;
-
 }
