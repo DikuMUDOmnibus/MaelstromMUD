@@ -393,17 +393,17 @@ mental block~
 5 5
 0 0 0
 A
-17 -50
-A
-13 100
-A
-2 -2
-A
-107 -1
+19 200
 A
 18 180
 A
-19 200
+107 -1
+A
+2 -2
+A
+13 100
+A
+17 -50
 E
 holy avenger golden sword~
 &YThe holy avenger is a very large sword and is very heavy as well, due to
@@ -423,15 +423,15 @@ reserved~
 0 0
 0 0 0
 A
-17 -75
-A
-26 15
-A
-18 170
+13 100
 A
 19 200
 A
-13 100
+18 170
+A
+26 15
+A
+17 -75
 E
 vorpal sword~
 This sword looks sharp indeed.  Legend has it, that it will decapitate
@@ -450,15 +450,15 @@ reserved~
 0 0
 0 0 0
 A
-18 140
-A
-19 137
-A
-12 90
+3 -2
 A
 17 -75
 A
-3 -2
+12 90
+A
+19 137
+A
+18 140
 E
 serpentine dagger unholy~
 A dagger in which the hilt is of coiling snakes.  It seems to be some
@@ -489,11 +489,11 @@ reserved~
 0 0
 0 0 0
 A
-2 3
+12 -50
 A
 17 -75
 A
-12 -50
+2 3
 #2708
 horns daemonic tiny~
 daemonic horns~
@@ -507,11 +507,11 @@ reserved~
 0 0
 0 0 0
 A
-1 1
+12 -100
 A
 17 -40
 A
-12 -100
+1 1
 E
 daemonic horns tiny~
 A pair of tiny black horns.
@@ -529,11 +529,11 @@ reserved~
 0 0
 0 0 0
 A
-2 -1
+110 -1
 A
 17 -75
 A
-110 -1
+2 -1
 E
 bat-like wings leathery large~
 A pair of large wings that look like those of a bat.
@@ -551,22 +551,22 @@ reserved~
 0 0
 0 0 0
 A
-19 8
-A
-17 -50
+3 -2
 A
 12 -50
 A
-3 -2
-E
-pearl~
-A prize that looks like it belongs in the royal treasury, this string of
-the finest pearls glows softly with its own inner light.  
-~
+17 -50
+A
+19 8
 E
 necklace~
 A prize that looks like it belongs in the royal treasure, this string of
 the finest pearls glows softly with its own inner light 
+~
+E
+pearl~
+A prize that looks like it belongs in the royal treasury, this string of
+the finest pearls glows softly with its own inner light.  
 ~
 #2711
 bikini chainmail pile metal~
@@ -581,11 +581,11 @@ reserved~
 0 0
 0 0 0
 A
-13 100
+23 -10
 A
 17 -100
 A
-23 -10
+13 100
 E
 chainmail bikini pile metal~
 An itsy bitsy teeny weeny chainmail bikini.
@@ -603,11 +603,11 @@ reserved~
 0 0
 0 0 0
 A
-13 75
+17 -30
 A
 23 -13
 A
-17 -30
+13 75
 #2713
 throne fire~
 the throne of fire~
@@ -645,9 +645,9 @@ reserved~
 0 0
 0 0 0
 A
-12 100
-A
 17 -100
+A
+12 100
 E
 gown slinky black~
 A slinky black gown, got a date?
@@ -677,13 +677,13 @@ dispel magic~
 5 5
 0 0 0
 A
-19 9
-A
-12 100
+1 2
 A
 17 -20
 A
-1 2
+12 100
+A
+19 9
 E
 unicorn horn golden~
 A golden spiral of a horn.
@@ -701,17 +701,17 @@ reserved~
 0 0
 0 0 0
 A
-17 50
-A
 2 -2
-E
-shackles~
-These are very heavy chains, cursed be the one who wears these accessories!
-~
+A
+17 50
 E
 chains~
 These look to be very strong chains of some unknown metal.  The shackles
 are padded but tinged in blood.
+~
+E
+shackles~
+These are very heavy chains, cursed be the one who wears these accessories!
 ~
 #2719
 key iron black wyvern~
@@ -787,13 +787,13 @@ reserved~
 0 0
 0 0 0
 E
-black~
-Examining the key, you assume it is made from a treated onyx of some sort.
-~
-E
 key~
 The key is very small in size and is a midnight black in colour. It's hard
 to say what it is made from.
+~
+E
+black~
+Examining the key, you assume it is made from a treated onyx of some sort.
 ~
 #2726
 teddy lace black~
@@ -808,11 +808,11 @@ vibrate~
 0 0
 0 0 0
 A
-24 -5
+17 -50
 A
 1 1
 A
-17 -50
+24 -5
 #0
 
 

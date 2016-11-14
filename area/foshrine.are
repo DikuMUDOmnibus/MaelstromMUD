@@ -539,17 +539,17 @@ reserved~
 0 0
 0 0 0
 A
-18 100
-A
-19 125
-A
-12 75
+26 -10
 A
 13 80
 A
-26 -10
+12 75
+A
+19 125
+A
+18 100
 E
-holy~
+mace~
 This mace glows with the divine power it is infused with.  Sturdy and
 well crafted, it's a weapon one can count on to preform in a fight.  
 ~
@@ -559,7 +559,7 @@ This mace glows with the divine power it is infused with.  Sturdy and
 well crafted, it's a weapon one can count on eto preform in a fight.  
 ~
 E
-mace~
+holy~
 This mace glows with the divine power it is infused with.  Sturdy and
 well crafted, it's a weapon one can count on to preform in a fight.  
 ~
@@ -576,18 +576,18 @@ bio-acceleration~
 0 0
 0 0 0
 A
-24 -15
+12 85
 A
 13 85
 A
-12 85
+24 -15
 E
-righteousness~
+cloak~
 This silver coloured cloak is free from dirt, rips, and flaws.  It is
 amazingly well tailored and the craftsmanship is fit for a king.  
 ~
 E
-cloak~
+righteousness~
 This silver coloured cloak is free from dirt, rips, and flaws.  It is
 amazingly well tailored and the craftsmanship is fit for a king.  
 ~
@@ -604,18 +604,16 @@ reserved~
 0 0
 0 0 0
 A
-1 1
+13 90
 A
 17 -90
 A
-13 90
+1 1
 E
-plate~
-This breastplate is fashioned out of the finest platinum.  It is crafted
-with obvious skill and the quality is high.  
+field~
 ~
 E
-breast~
+breastplate~
 This breastplate is fashioned out of the finest platinum.  It is crafted
 with obvious skill and the quality is high.  
 ~
@@ -625,12 +623,14 @@ This breastplate is fashioned out of the finest platinum.  It is crafted
 with obvious skill and the quality is high.  
 ~
 E
-breastplate~
+breast~
 This breastplate is fashioned out of the finest platinum.  It is crafted
 with obvious skill and the quality is high.  
 ~
 E
-field~
+plate~
+This breastplate is fashioned out of the finest platinum.  It is crafted
+with obvious skill and the quality is high.  
 ~
 #9004
 platinum field helm~
@@ -645,13 +645,13 @@ reserved~
 0 0
 0 0 0
 A
-17 -70
+12 70
 A
 24 -3
 A
-12 70
+17 -70
 E
-helm~
+platinum~
 This finely crafted helmet is highly polished and well kept.  It is free
 from dents, marks, and chips.  
 ~
@@ -661,7 +661,7 @@ This finely crafted helmet is highly polished and well kept.  It is free
 from dents, marks, and chips.  
 ~
 E
-platinum~
+helm~
 This finely crafted helmet is highly polished and well kept.  It is free
 from dents, marks, and chips.  
 ~
@@ -678,25 +678,13 @@ reserved~
 0 0
 0 0 0
 A
-3 1
+13 70
 A
 12 70
 A
-13 70
+3 1
 E
-guard~
-This platinum faceplate is sturdy and well made.
-~
-E
-face~
-This platinum faceplate is sturdy and well made.
-~
-E
-plate~
-This platinum faceplate is sturdy and well made.
-~
-E
-field~
+platinum~
 This platinum faceplate is sturdy and well made.
 ~
 E
@@ -704,7 +692,19 @@ fieldplate~
 This platinum faceplate is sturdy and well made.
 ~
 E
-platinum~
+field~
+This platinum faceplate is sturdy and well made.
+~
+E
+plate~
+This platinum faceplate is sturdy and well made.
+~
+E
+face~
+This platinum faceplate is sturdy and well made.
+~
+E
+guard~
 This platinum faceplate is sturdy and well made.
 ~
 #9006
@@ -720,18 +720,13 @@ reserved~
 0 0
 0 0 0
 A
-13 70
+17 -70
 A
 2 2
 A
-17 -70
+13 70
 E
-field~
-This set of platinum fieldplate leggings is amazingly lightweight, in
-addition to it's obviously superior craftsmanship.  
-~
-E
-leggings~
+platinum~
 This set of platinum fieldplate leggings is amazingly lightweight, in
 addition to it's obviously superior craftsmanship.  
 ~
@@ -741,7 +736,12 @@ This set of platinum fieldplate leggings is amazingly lightweight, in
 addition to it's obviously superior craftsmanship.  
 ~
 E
-platinum~
+leggings~
+This set of platinum fieldplate leggings is amazingly lightweight, in
+addition to it's obviously superior craftsmanship.  
+~
+E
+field~
 This set of platinum fieldplate leggings is amazingly lightweight, in
 addition to it's obviously superior craftsmanship.  
 ~
@@ -758,9 +758,9 @@ reserved~
 0 0
 0 0 0
 A
-18 5
-A
 19 5
+A
+18 5
 #9008
 platinum field fieldplate gauntlets~
 a pair of platinum fieldplate gauntlets~
@@ -774,17 +774,13 @@ reserved~
 0 0
 0 0 0
 A
-26 -7
+17 -70
 A
 1 1
 A
-17 -70
+26 -7
 E
-gauntlets~
-These platinum gauntlets are sturdy, lightweight, and well crafted.
-~
-E
-fieldplate~
+platinum~
 These platinum gauntlets are sturdy, lightweight, and well crafted.
 ~
 E
@@ -792,7 +788,11 @@ field~
 These platinum gauntlets are sturdy, lightweight, and well crafted.
 ~
 E
-platinum~
+fieldplate~
+These platinum gauntlets are sturdy, lightweight, and well crafted.
+~
+E
+gauntlets~
 These platinum gauntlets are sturdy, lightweight, and well crafted.
 ~
 #9009
@@ -808,19 +808,11 @@ reserved~
 0 0
 0 0 0
 A
-24 -4
-A
 17 -70
+A
+24 -4
 E
-arm~
-These platinum armguards are fashioned with incredible craftmanship.
-~
-E
-armguards~
-These platinum armguards are fashioned with incredible craftmanship.
-~
-E
-fieldplate~
+platinum~
 These platinum armguards are fashioned with incredible craftmanship.
 ~
 E
@@ -828,7 +820,15 @@ field~
 These platinum armguards are fashioned with incredible craftmanship.
 ~
 E
-platinum~
+fieldplate~
+These platinum armguards are fashioned with incredible craftmanship.
+~
+E
+armguards~
+These platinum armguards are fashioned with incredible craftmanship.
+~
+E
+arm~
 These platinum armguards are fashioned with incredible craftmanship.
 ~
 #9010
@@ -844,17 +844,17 @@ reserved~
 0 0
 0 0 0
 A
-17 -75
+13 75
 A
 23 -4
 A
-13 75
+17 -75
 E
-platinum~
+shield~
 A fine piece of craftsmanship, the platinum shield is reliable in a fight.
 ~
 E
-shield~
+platinum~
 A fine piece of craftsmanship, the platinum shield is reliable in a fight.
 ~
 #9011
@@ -870,11 +870,11 @@ reserved~
 0 0
 0 0 0
 A
-19 140
-A
 18 112
+A
+19 140
 E
-platinum~
+sword~
 This longsword has a platinum blade, gold hilt, and leather wrapped handle.
 ~
 E
@@ -882,7 +882,7 @@ longsword~
 This longsword has a platinum blade, gold hilt, and leather wrapped handle.
 ~
 E
-sword~
+platinum~
 This longsword has a platinum blade, gold hilt, and leather wrapped handle.
 ~
 #9012
@@ -898,13 +898,13 @@ reserved~
 0 0
 0 0 0
 A
-19 160
+13 80
 A
 18 128
 A
-13 80
+19 160
 E
-platinum~
+bastard~
 This well crafted sword has a platinum blade, silver hilt, and leather wrapped handle.
 ~
 E
@@ -912,7 +912,7 @@ sword~
 This well crafted sword has a platinum blade, silver hilt, and leather wrapped handle.
 ~
 E
-bastard~
+platinum~
 This well crafted sword has a platinum blade, silver hilt, and leather wrapped handle.
 ~
 #9013
@@ -928,19 +928,19 @@ reserved~
 0 0
 0 0 0
 A
-26 -10
-A
-19 200
-A
-18 170
+13 100
 A
 1 2
 A
-13 100
+18 170
+A
+19 200
+A
+26 -10
 E
-holysword~
-A plain looking steel blade with a polished ivory hilt glows softly,
-repelling the darkness.  
+holy~
+This great sword pulses with immense power.  A plain steel blade with a
+polished ivory hilt glows softly among your belongings.  
 ~
 E
 sword~
@@ -948,9 +948,9 @@ A plain looking steel blade with a polished ivory hilt glows softly,
 repelling the darkness.  
 ~
 E
-holy~
-This great sword pulses with immense power.  A plain steel blade with a
-polished ivory hilt glows softly among your belongings.  
+holysword~
+A plain looking steel blade with a polished ivory hilt glows softly,
+repelling the darkness.  
 ~
 #9014
 staff~
@@ -965,15 +965,15 @@ heal~
 5 5
 0 0 0
 A
-2 1
-A
-4 1
-A
-13 70
+18 98
 A
 19 126
 A
-18 98
+13 70
+A
+4 1
+A
+2 1
 E
 staff~
 This sturdy oak staff radiates a pleasant energy..
@@ -991,11 +991,11 @@ reserved~
 0 0
 0 0 0
 E
-key~
+first~
 A simple brass key.
 ~
 E
-first~
+key~
 A simple brass key.
 ~
 #9016
@@ -1011,11 +1011,11 @@ reserved~
 0 0
 0 0 0
 E
-key~
+second~
 A simple brass key.
 ~
 E
-second~
+key~
 A simple brass key.
 ~
 #9017
@@ -1031,11 +1031,11 @@ reserved~
 0 0
 0 0 0
 E
-key~
+third~
 A simple brass key.
 ~
 E
-third~
+key~
 A simple brass key.
 ~
 #9018
@@ -1051,11 +1051,11 @@ reserved~
 0 0
 0 0 0
 E
-key~
+fourth~
 A simple brass key.
 ~
 E
-fourth~
+key~
 A simple brass key.
 ~
 #9019
@@ -1071,21 +1071,21 @@ reserved~
 0 0
 0 0 0
 A
-1 2
-A
-13 70
+18 120
 A
 19 150
 A
-18 120
+13 70
+A
+1 2
 E
-priest~
+sword~
 This blade has intricate engravings on the blade.  The steel hilt is
 covered with holy symbols and small gems.  The handle is comfortable, being
 wrapped in fine leather.  
 ~
 E
-sword~
+priest~
 This blade has intricate engravings on the blade.  The steel hilt is
 covered with holy symbols and small gems.  The handle is comfortable, being
 wrapped in fine leather.  
@@ -1105,12 +1105,12 @@ reserved~
 A
 5 1
 E
-sprites~
+ring~
 This magical ring has one tiny gem on it.  The stone glows softly with a
 pale red light.  
 ~
 E
-ring~
+sprites~
 This magical ring has one tiny gem on it.  The stone glows softly with a
 pale red light.  
 ~
@@ -1127,17 +1127,17 @@ iceshield~
 0 0
 0 0 0
 A
-17 -90
-A
-19 180
-A
-18 153
+12 92
 A
 13 92
 A
-12 92
+18 153
+A
+19 180
+A
+17 -90
 E
-aquablade~
+aqua~
 This sturdy blade has a bluish hue to it.
 ~
 E
@@ -1145,7 +1145,7 @@ blade~
 This sturdy blade has a bluish hue to it.
 ~
 E
-aqua~
+aquablade~
 This sturdy blade has a bluish hue to it.
 ~
 #9022
@@ -1161,15 +1161,15 @@ death field~
 0 0
 0 0 0
 A
-13 90
-A
-12 90
+18 153
 A
 19 180
 A
-18 153
+12 90
+A
+13 90
 E
-sword~
+air~
 This sword is amazingly lightweight, in addition to its mysterious forging.
 ~
 E
@@ -1177,7 +1177,7 @@ elemental~
 This sword is amazingly lightweight, in addition to its mysterious forging.
 ~
 E
-air~
+sword~
 This sword is amazingly lightweight, in addition to its mysterious forging.
 ~
 #9023
@@ -1209,13 +1209,13 @@ blindness~
 5 0
 0 0 0
 A
-19 180
+13 50
 A
 18 150
 A
-13 50
+19 180
 E
-death~
+deathsword~
 This sword radiates evil. All light around it is dim and gloomy.
 ~
 E
@@ -1223,7 +1223,7 @@ sword~
 This sword radiates evil. All light around it is dim and gloomy.
 ~
 E
-deathsword~
+death~
 This sword radiates evil. All light around it is dim and gloomy.
 ~
 #9025
@@ -1271,17 +1271,17 @@ word of recall~
 5 5
 0 0 0
 A
-24 -5
+12 100
 A
 13 100
 A
-12 100
+24 -5
 E
-ring~
+time~
 This ring is made out of gold, and has one opal gem inset in it.
 ~
 E
-time~
+ring~
 This ring is made out of gold, and has one opal gem inset in it.
 ~
 #9028
@@ -1297,19 +1297,19 @@ blindness~
 5 5
 0 0 0
 A
-18 163
-A
-19 192
+12 -100
 A
 26 -10
 A
-12 -100
+19 192
+A
+18 163
 E
-unholy~
+sword~
 Evil emanates form the blade of this sword. The light around the sword is distorted.
 ~
 E
-sword~
+unholy~
 Evil emanates form the blade of this sword. The light around the sword is distorted.
 ~
 #9029
@@ -1325,11 +1325,11 @@ reserved~
 0 0
 9030 0 0
 A
-17 -50
+12 50
 A
 13 50
 A
-12 50
+17 -50
 E
 balron~
 A large, feathered wing.
@@ -1347,13 +1347,13 @@ fly~
 25 25
 0 0 0
 A
-12 100
-A
-13 100
+110 -1
 A
 17 -100
 A
-110 -1
+13 100
+A
+12 100
 E
 wings balron~
 A pair of large, feathered wings.
@@ -1371,17 +1371,17 @@ reserved~
 0 0
 9030 0 0
 A
-12 50
+17 -50
 A
 13 50
 A
-17 -50
+12 50
 E
-wing~
+balron~
 A large, feathered wing.
 ~
 E
-balron~
+wing~
 A large, feathered wing.
 ~
 #9032
@@ -1397,11 +1397,11 @@ reserved~
 0 0
 0 0 0
 A
-13 25
+4 2
 A
 17 -10
 A
-4 2
+13 25
 #9033
 paladin helm power~
 &CHelm of Power~
@@ -1415,17 +1415,17 @@ reserved~
 0 0
 0 0 0
 A
-1 2
-A
-2 2
-A
-13 100
-A
-12 100
+24 -5
 A
 17 -100
 A
-24 -5
+12 100
+A
+13 100
+A
+2 2
+A
+1 2
 E
 helm~
 A helm is humming in a strange manner here.
@@ -1443,15 +1443,15 @@ reserved~
 0 0
 0 0 0
 A
-12 100
-A
-18 168
-A
-19 210
+13 105
 A
 17 -105
 A
-13 105
+19 210
+A
+18 168
+A
+12 100
 E
 death knight blade~
 This sword is given to the Death knights of Zhakarius.  It is the
@@ -1470,15 +1470,15 @@ reserved~
 0 0
 0 0 0
 A
-17 -105
-A
-13 105
-A
-23 -5
+12 105
 A
 24 -5
 A
-12 105
+23 -5
+A
+13 105
+A
+17 -105
 E
 death knight shield~
 This heavy shield is black and gloomy looking, but very strong.
@@ -1496,15 +1496,15 @@ reserved~
 0 0
 0 0 0
 A
-13 105
-A
-12 105
-A
-17 0
+24 -5
 A
 23 -5
 A
-24 -5
+17 0
+A
+12 105
+A
+13 105
 E
 death knight armor~
 Made from an unknown material, it radiates pure evil.
@@ -1522,15 +1522,15 @@ reserved~
 0 0
 0 0 0
 A
-17 -105
-A
-3 1
-A
-4 2
+12 105
 A
 13 105
 A
-12 105
+4 2
+A
+3 1
+A
+17 -105
 E
 death knight helmet~
 This helmet is incredibly sturdy, resistant to dents and scratches.
@@ -1548,15 +1548,15 @@ reserved~
 0 0
 0 0 0
 A
-24 -5
-A
-23 -5
-A
-17 -105
+12 105
 A
 13 105
 A
-12 105
+17 -105
+A
+23 -5
+A
+24 -5
 #9039
 shadow dagger~
 shadow Dagger~
@@ -1570,9 +1570,9 @@ reserved~
 0 0
 0 0 0
 A
-18 158
-A
 19 105
+A
+18 158
 E
 shadow dagger~
 This dagger has an intricate handle and slender black blade.
@@ -1590,13 +1590,13 @@ reserved~
 0 0
 0 0 0
 A
-13 100
-A
-12 100
+24 -5
 A
 17 -100
 A
-24 -5
+12 100
+A
+13 100
 E
 black signet ring~
 This black ring emits an evil emanation and glows softly.

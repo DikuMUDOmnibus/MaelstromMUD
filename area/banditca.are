@@ -515,9 +515,9 @@ reserved~
 0 0
 0 0 0
 A
-13 45
-A
 1 2
+A
+13 45
 E
 bracer strength golden~
 A large golden bracer that glows with a hidden strength.
@@ -535,17 +535,13 @@ reserved~
 0 0
 0 0 0
 A
-19 85
+1 2
 A
 18 75
 A
-1 2
+19 85
 E
-finely~
-A huge axe honed from gold and other fine metals, it looks quite lethal.
-~
-E
-axe~
+golden~
 A huge axe honed from gold and other fine metals, it looks quite lethal.
 ~
 E
@@ -553,7 +549,11 @@ honed~
 A huge axe honed from gold and other fine metals, it looks quite lethal.
 ~
 E
-golden~
+axe~
+A huge axe honed from gold and other fine metals, it looks quite lethal.
+~
+E
+finely~
 A huge axe honed from gold and other fine metals, it looks quite lethal.
 ~
 #502
@@ -569,11 +569,11 @@ reserved~
 0 0
 0 0 0
 A
-18 40
+1 3
 A
 19 60
 A
-1 3
+18 40
 E
 skullcrusher~
 A huge warhammer that seems to weigh a ton. The handle has been stained with
@@ -594,11 +594,11 @@ reserved~
 0 0
 0 0 0
 E
-marble~
+key~
 A strange looking key that seems to be made out of marble.
 ~
 E
-key~
+marble~
 A strange looking key that seems to be made out of marble.
 ~
 #504
@@ -616,7 +616,7 @@ reserved~
 A
 26 7
 E
-dragonskin~
+gloves~
 A pair of soft gloves that seem to be made from the skin of a young dragon.
 ~
 E
@@ -624,7 +624,7 @@ red~
 A pair of soft gloves that seem to be made from the skin of a young dragon.
 ~
 E
-gloves~
+dragonskin~
 A pair of soft gloves that seem to be made from the skin of a young dragon.
 ~
 #505
@@ -640,13 +640,14 @@ reserved~
 0 0
 0 0 0
 A
-17 -60
-A
 13 60
+A
+17 -60
 E
-elven~
+chain~
 A glowing suit of finely woven chain mail.  It seems to almost glow with
-an inner light.  
+an inner light. 
+ 
 ~
 E
 mail~
@@ -654,10 +655,9 @@ A glowing suit of finely woven chain mail.  It seems to almost glow with
 an inner light.
 ~
 E
-chain~
+elven~
 A glowing suit of finely woven chain mail.  It seems to almost glow with
-an inner light. 
- 
+an inner light.  
 ~
 #506
 gladius jewelled short sword~
@@ -672,20 +672,20 @@ reserved~
 0 0
 0 0 0
 A
-19 89
+107 -1
 A
 18 90
 A
-107 -1
-E
-jewelled short sword~
-A short sword that has it's handle encrusted with a multitude of
-different jewels...
-~
+19 89
 E
 gladius~
 A short sword that has it's handle encrusted with a multitude of
 different jewels.  
+~
+E
+jewelled short sword~
+A short sword that has it's handle encrusted with a multitude of
+different jewels...
 ~
 #507
 claymore sword~
@@ -700,15 +700,15 @@ reserved~
 0 0
 0 0 0
 A
-18 60
-A
 19 65
+A
+18 60
 E
-sword~
+claymore~
 A huge sword with rough edges.  It seems to have seen a lot of battles.
 ~
 E
-claymore~
+sword~
 A huge sword with rough edges.  It seems to have seen a lot of battles.
 ~
 #508
@@ -726,15 +726,15 @@ reserved~
 A
 17 25
 E
-helm~
-A large helmet that bears the crest of the dragon wing.  It is burnt and
-chared in a few places.  Obviously the crest didn't save the last owner of
-this helm.  
-~
-E
 dragon~
 A large helmet that bears the crest of the dragon wing.  It is burnt and
 charred in a few places.  Obviously the crest didn't save the last owner of
+this helm.  
+~
+E
+helm~
+A large helmet that bears the crest of the dragon wing.  It is burnt and
+chared in a few places.  Obviously the crest didn't save the last owner of
 this helm.  
 ~
 #509
@@ -750,19 +750,13 @@ reserved~
 0 0
 0 0 0
 A
-17 -37
+23 -4
 A
 24 -4
 A
-23 -4
+17 -37
 E
-dragons dragon~
-Someone put alot of time and effort into making these engravings.  This
-is superb.  A dragon stands on it's hind legs bellowing out a stream of
-fire, it's wings spread behind it to show it's enormous size.  
-~
-E
-breastplate~
+steel~
 A breastplate hardened with cast iron has engravings of an enormous
 dragon on it.  Even through the burnt and partially melted metal you can see
 the great detail in which the engraving was done.  
@@ -774,10 +768,16 @@ dragon on it.  Even through the burnt and partially melted metal you can see
 the great detail in which the engraving was done.  
 ~
 E
-steel~
+breastplate~
 A breastplate hardened with cast iron has engravings of an enormous
 dragon on it.  Even through the burnt and partially melted metal you can see
 the great detail in which the engraving was done.  
+~
+E
+dragons dragon~
+Someone put alot of time and effort into making these engravings.  This
+is superb.  A dragon stands on it's hind legs bellowing out a stream of
+fire, it's wings spread behind it to show it's enormous size.  
 ~
 #510
 battle-axe axe battleaxe~
@@ -792,23 +792,23 @@ reserved~
 0 0
 0 0 0
 A
-1 2
+18 30
 A
 19 40
 A
-18 30
+1 2
 E
-axe~
-A very plain, but very large battle axe that looks worn and very used.
+battle-axe~
+A very plain, but very large and heavy battle axe that looks worn and very
+used.
 ~
 E
 battleaxe~
 A very plain, but very large battle axe that looks worn and very used.
 ~
 E
-battle-axe~
-A very plain, but very large and heavy battle axe that looks worn and very
-used.
+axe~
+A very plain, but very large battle axe that looks worn and very used.
 ~
 #511
 armor hide~
@@ -823,18 +823,18 @@ reserved~
 0 0
 0 0 0
 A
-13 30
-A
 17 -35
-E
-armor~
-A thick piece of animal hide has been fashioned into some sort of body
-armor.  
-~
+A
+13 30
 E
 hide~
 A thick piece of animal hide has been fashioned into some sort of body
 armor.
+~
+E
+armor~
+A thick piece of animal hide has been fashioned into some sort of body
+armor.  
 ~
 #512
 longsword blue steel~
@@ -849,11 +849,11 @@ reserved~
 0 0
 0 0 0
 A
-19 50
-A
 18 37
+A
+19 50
 E
-longsword~
+steel~
 A longsword crafted of blue steel glistens as light flickers off it.
 ~
 E
@@ -861,7 +861,7 @@ blue~
 A longsword crafted of blue steel glistens as light flickers off it.
 ~
 E
-steel~
+longsword~
 A longsword crafted of blue steel glistens as light flickers off it.
 ~
 #513
@@ -879,7 +879,7 @@ reserved~
 A
 17 -30
 E
-shield~
+round~
 A small round black shield with a few scuffs on it.
 ~
 E
@@ -887,7 +887,7 @@ black~
 A small round black shield with a few scuffs on it.
 ~
 E
-round~
+shield~
 A small round black shield with a few scuffs on it.
 ~
 #514
@@ -903,18 +903,18 @@ reserved~
 0 0
 0 0 0
 A
-18 30
-A
 19 36
-E
-short~
-A small and very simple short sword with a small unknown marking on the
-handle.  
-~
+A
+18 30
 E
 sword~
 A small and very simple short sword with a small unknown marking on the
 handle.
+~
+E
+short~
+A small and very simple short sword with a small unknown marking on the
+handle.  
 ~
 #515
 dagger black steel~
@@ -929,22 +929,22 @@ reserved~
 0 0
 0 0 0
 A
-26 5
+18 50
 A
 19 35
 A
-18 50
+26 5
 E
-black~
-A small, deadly looking dagger that appears to be made from black steel.  
+steel~
+A small, deadly looking dagger that appears to be made from black steel.
 ~
 E
 dagger~
 A small, deadly looking dagger that appears to be made from black steel.
 ~
 E
-steel~
-A small, deadly looking dagger that appears to be made from black steel.
+black~
+A small, deadly looking dagger that appears to be made from black steel.  
 ~
 #516
 drinker sword runeblade~
@@ -959,13 +959,13 @@ reserved~
 0 0
 0 0 0
 A
-18 55
-A
 19 70
+A
+18 55
 E
-sword~
-A very small sword that seems to glow with its own inner energy.  Then
-again maybe it's feeding off you.  
+runeblade~
+A black sword covered in all different kinds of runes. You feel a sense of
+power coming from it. Almost as if this sword had sentience.
 ~
 E
 drinker~
@@ -973,9 +973,9 @@ A very small sword that seems to glow with its own inner energy.  Then
 again maybe it's feeding off you.   
 ~
 E
-runeblade~
-A black sword covered in all different kinds of runes. You feel a sense of
-power coming from it. Almost as if this sword had sentience.
+sword~
+A very small sword that seems to glow with its own inner energy.  Then
+again maybe it's feeding off you.  
 ~
 #517
 stone enlightenment~
@@ -990,20 +990,20 @@ reserved~
 0 0
 0 0 0
 A
-3 2
+4 2
 A
 17 -50
 A
-4 2
-E
-stone~
-An incredably light stone that seems to almost want to jump right out of
-your hand.  
-~
+3 2
 E
 enlightenment~
 An incredably light stone that seems to almost want to jump right out of 
 your hand.
+~
+E
+stone~
+An incredably light stone that seems to almost want to jump right out of
+your hand.  
 ~
 #518
 rag cotton dirty~
@@ -1018,7 +1018,8 @@ reserved~
 0 0
 0 0 0
 E
-rag~
+dirty~
+A small and very dirty rag reeks immensely. Peee-ew!
 ~
 E
 cotton~
@@ -1026,8 +1027,7 @@ This rag appears to have been made out of cotton... at least at one point it
 was. It now consists of pure dirt and other unmentionable things.
 ~
 E
-dirty~
-A small and very dirty rag reeks immensely. Peee-ew!
+rag~
 ~
 #519
 sack burlap~
@@ -1042,11 +1042,11 @@ reserved~
 0 0
 0 0 0
 E
-sack~
+burlap~
 A small and very dirty sack.
 ~
 E
-burlap~
+sack~
 A small and very dirty sack.
 ~
 #520
@@ -1062,18 +1062,18 @@ reserved~
 0 0
 0 0 0
 A
-19 10
-A
 18 30
-E
-carving~
-A large and very sharp knife with a serated edge.  Looks like it could
-cut through just about anything.  
-~
+A
+19 10
 E
 knife~
 A large and very sharp knife with a serated edge.  Looks like it could
 cut through just about anything.
+~
+E
+carving~
+A large and very sharp knife with a serated edge.  Looks like it could
+cut through just about anything.  
 ~
 #521
 breeches sturdy~
@@ -1088,11 +1088,11 @@ reserved~
 0 0
 0 0 0
 E
-sturdy~
+breeches~
 A pair of well made and very worn breeches.
 ~
 E
-breeches~
+sturdy~
 A pair of well made and very worn breeches.
 ~
 #522
@@ -1108,18 +1108,18 @@ reserved~
 0 0
 0 0 0
 A
-18 30
-A
 19 25
-E
-poker~
-A wicked looking spear with barbs all along its shaft, which would make
-it nearly impossible to pull it out.  
-~
+A
+18 30
 E
 goblin~
 A wicked looking spear with barbs all along its shaft, which would make
 it nearly impossible to pull it out.
+~
+E
+poker~
+A wicked looking spear with barbs all along its shaft, which would make
+it nearly impossible to pull it out.  
 ~
 #523
 stream~
@@ -1146,11 +1146,11 @@ reserved~
 0 0
 0 0 0
 A
-2 1
-A
 14 50
+A
+2 1
 E
-boots~
+worn~
 A pair of beat-up old leather boots.
 ~
 E
@@ -1158,7 +1158,7 @@ leather~
 A pair of beat-up old leather boots.
 ~
 E
-worn~
+boots~
 A pair of beat-up old leather boots.
 ~
 #525
@@ -1174,15 +1174,15 @@ reserved~
 0 0
 0 0 0
 A
-13 15
-A
 17 -20
+A
+13 15
 E
-leather~
+vest~
 A well worn and comfortable looking leather vest.
 ~
 E
-vest~
+leather~
 A well worn and comfortable looking leather vest.
 ~
 #526
@@ -1200,11 +1200,11 @@ reserved~
 A
 13 30
 E
-helm~
+conical~
 A small conical helmet made of shiny metal.
 ~
 E
-conical~
+helm~
 A small conical helmet made of shiny metal.
 ~
 #527
@@ -1220,16 +1220,16 @@ reserved~
 0 0
 0 0 0
 A
-17 -25
-A
 13 20
+A
+17 -25
 E
-armguards~
+drakeskin~
 A well crafted set of red leathery arm guards made from the skin of a
 drake.  
 ~
 E
-drakeskin~
+armguards~
 A well crafted set of red leathery arm guards made from the skin of a
 drake.  
 ~
@@ -1246,13 +1246,17 @@ reserved~
 0 0
 0 0 0
 A
-13 50
+14 50
 A
 17 -40
 A
-14 50
+13 50
 E
-boots~
+soft~
+A pair of soft reddish leather boots.
+~
+E
+red~
 A pair of soft reddish leather boots.  
 ~
 E
@@ -1260,12 +1264,8 @@ dragonskin~
 A pair of soft reddish leather boots.  
 ~
 E
-red~
+boots~
 A pair of soft reddish leather boots.  
-~
-E
-soft~
-A pair of soft reddish leather boots.
 ~
 #529
 gauntlets large pair~
@@ -1280,27 +1280,18 @@ reserved~
 0 0
 0 0 0
 A
-26 12
-A
-1 2
-A
-5 1
+3 -1
 A
 4 -1
 A
-3 -1
+5 1
+A
+1 2
+A
+26 12
 E
-gauntlets~
-An enormous pair of gauntlets tightly clinched into a fist. There is some
-sort of inscription made upon the underside.
-~
-E
-kekh~
-The inscription reads (in very childlike writings); "Big Ogre Kekh"
-~
-E
-inscription~
-All you can make out are the letters K-E-K-H. Perhaps it spells a name?
+underside~
+All you can make out are the letters K-E-K-H. Perhaps it spells out a name?
 ~
 E
 large pair~
@@ -1308,8 +1299,17 @@ An enormous pair of gauntlets tightly clinched into a fist. There is some
 sort of inscriptiong made upon the underside.
 ~
 E
-underside~
-All you can make out are the letters K-E-K-H. Perhaps it spells out a name?
+inscription~
+All you can make out are the letters K-E-K-H. Perhaps it spells a name?
+~
+E
+kekh~
+The inscription reads (in very childlike writings); "Big Ogre Kekh"
+~
+E
+gauntlets~
+An enormous pair of gauntlets tightly clinched into a fist. There is some
+sort of inscription made upon the underside.
 ~
 #530
 draketooth~
@@ -1324,9 +1324,9 @@ reserved~
 0 0
 0 0 0
 A
-19 30
-A
 18 50
+A
+19 30
 E
 draketooth~
 A razor sharp tooth with just enough root to grab hold of.  Looks like it
@@ -1345,11 +1345,11 @@ reserved~
 0 0
 0 0 0
 E
-steel~
+key~
 A well crafted steel key.
 ~
 E
-key~
+steel~
 A well crafted steel key.
 ~
 #532
@@ -1365,11 +1365,11 @@ reserved~
 0 0
 0 0 0
 E
-chest~
+silver~
 A beautifully hand carved silver chest depicting an epic battle.
 ~
 E
-silver~
+chest~
 A beautifully hand carved silver chest depicting an epic battle.
 ~
 #533
@@ -1387,11 +1387,11 @@ reserved~
 A
 18 50
 E
-claw~
+fiery~
 A huge claw is stained with blood. It radiates heat.
 ~
 E
-fiery~
+claw~
 A huge claw is stained with blood. It radiates heat.
 ~
 #534
@@ -1419,15 +1419,15 @@ reserved~
 0 0
 0 0 0
 A
-19 55
-A
 18 20
+A
+19 55
 E
-heavy~
+mace~
 A large and very heavy mace made from cast iron.
 ~
 E
-mace~
+heavy~
 A large and very heavy mace made from cast iron.
 ~
 #536
@@ -1445,11 +1445,11 @@ reserved~
 A
 13 30
 E
-sturdy~
+bracer~
 A piece of animal hide has been fashioned into a bracer.
 ~
 E
-bracer~
+sturdy~
 A piece of animal hide has been fashioned into a bracer.
 ~
 #537
@@ -1465,11 +1465,11 @@ reserved~
 0 0
 0 0 0
 E
-gate~
+key~
 A large iron key with the word "GATE" scratched into it.
 ~
 E
-key~
+gate~
 A large iron key with the word "GATE" scratched into it.
 ~
 #538
@@ -1485,12 +1485,12 @@ reserved~
 0 0
 0 0 0
 E
-crystal~
+chalice~
 &CA glowing chalice is made of pure crystal. A magical aura wavers about it
 slightly if you look closely.
 ~
 E
-chalice~
+crystal~
 &CA glowing chalice is made of pure crystal. A magical aura wavers about it
 slightly if you look closely.
 ~
@@ -1508,11 +1508,11 @@ reserved~
 0 0 0
 E
 maggots~
-&gThe maggots writhe and squirm about on the floor.
+A large clump of writhing white maggots.
 ~
 E
 maggots~
-A large clump of writhing white maggots.
+&gThe maggots writhe and squirm about on the floor.
 ~
 #540
 key dungeon skeleton~
@@ -1527,11 +1527,11 @@ reserved~
 0 0
 0 0 0
 E
-dungeon~
+key~
 A large black metal skeleton key.
 ~
 E
-key~
+dungeon~
 A large black metal skeleton key.
 ~
 #541
@@ -2778,13 +2778,13 @@ north.
 0 8 0
 Rd     0
 E
+parchments~
+The parchments consist mostly of trading orders and receipts.
+~
+E
 maps~
 The maps are very crudely drawn, and are very worn.  They are of the
 surrounding cities.  
-~
-E
-parchments~
-The parchments consist mostly of trading orders and receipts.
 ~
 D0
 ~
@@ -3105,9 +3105,9 @@ fine wine.  The only obvious exit is a door to the south.
 0 8 0
 Rd     0
 E
-meat~
-The meats seem to be in pretty healthy condition. They are hanging up safely
-so that unwanted critters might not get at them.
+kegs liquor~
+There are several kegs of various types of liquor. Unfortunately, all of
+them are way too heavy for you to carry out of here.
 ~
 E
 sacks flour wheat grains~
@@ -3116,9 +3116,9 @@ they look to be in good condition. Of course, that would be if the rats would
 stop eating away at it.
 ~
 E
-kegs liquor~
-There are several kegs of various types of liquor. Unfortunately, all of
-them are way too heavy for you to carry out of here.
+meat~
+The meats seem to be in pretty healthy condition. They are hanging up safely
+so that unwanted critters might not get at them.
 ~
 D2
 There is a door here in the south wall.
