@@ -33,61 +33,12 @@
 void curl_json_push args( ( const char* url, const char* payload, const char* method ) );
 
 /**
- * Write analytics data to Keen.io
+ * Report an issue to the GitHub repository
  *
- * Required environment variables:
- *  KEENIO_PROJECT_ID
- *  KEENIO_API_KEY
- *
- * Example:
- *  json_t *obj = json_object();
- *  json_object_set_new(obj, "key", json_string( "value" ));
- *
- * @param obj           JSON object
- * @param collection    Keen.io Collection
+ * @param title       Issue title
+ * @param description Issue description
+ * @param label       Issue label
  */
-void write_analytics( json_t* obj, const char* collection ) {
-  char *payload;
-  char url[MAX_STRING_LENGTH];
-
-  if ( KEENIO_PROJECT_ID != NULL && KEENIO_API_KEY != NULL ) {
-    sprintf(url, "https://api.keen.io/3.0/projects/%s/events/%s?api_key=%s", KEENIO_PROJECT_ID, collection, KEENIO_API_KEY);
-    payload = json_dumps( obj, 0 );
-
-    curl_json_push(url, payload, "POST");
-
-    free(payload);
-  }
-
-  return;
-}
-
-/**
- * Trigger a PagerDuty incident
- *
- * Required environment variables:
- *  PAGERDUTY_API_KEY
- *
- * @param description Description of the incident
- */
-void trigger_incident( const char* description ) {
-  char *payload;
-  json_t *obj = json_object();
-
-  if ( PAGERDUTY_API_KEY != NULL ) {
-    json_object_set_new(obj, "service_key", json_string( PAGERDUTY_API_KEY ));
-    json_object_set_new(obj, "event_type", json_string( "trigger" ));
-    json_object_set_new(obj, "description", json_string( description ));
-
-    payload = json_dumps(obj, 0);
-    curl_json_push("https://events.pagerduty.com/generic/2010-04-15/create_event.json", payload, "POST");
-
-    free(payload);
-  }
-
-  return;
-}
-
 void report_issue( const char* title, const char* description, const char* label ) {
   char *payload;
   char url[MAX_STRING_LENGTH];
@@ -118,6 +69,11 @@ void report_issue( const char* title, const char* description, const char* label
   return;
 }
 
+/**
+ * Close a GitHub Issue
+ *
+ * @param number Issue number
+ */
 void close_issue( int number ) {
   char *payload;
   char url[MAX_STRING_LENGTH];
@@ -136,6 +92,12 @@ void close_issue( int number ) {
   return;
 }
 
+/**
+ * Get GitHub issues
+ *
+ * @param  label Issue label
+ * @return       JSON object
+ */
 json_t * get_issues( const char* label ) {
   char url[MAX_STRING_LENGTH];
   const char * response;

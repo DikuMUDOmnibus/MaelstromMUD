@@ -4251,9 +4251,6 @@ void bug( const char *str, int param )
 	sprintf( buf + strlen( buf ), str, param );
 	log_string( buf, 1 , -1 );
 
-	/* Trigger PagerDuty Incident */
-	trigger_incident(str);
-
 	return;
 }
 

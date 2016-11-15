@@ -21,7 +21,7 @@
 /*
  * The current version of the OASIS
  */
-#define VERSION "1.0.1"
+#define VERSION "1.0.2"
 
 #include <jansson.h>
 #include "devops.h" /* Include devops attributes */
@@ -3143,8 +3143,6 @@ void  parse_ban       args( ( char *argument, BAN_DATA *banned ) );
 void    arena_chann args( ( const char *str, int param1, int param2 ) );
 
 /* devops.c */
-void      write_analytics   args( ( json_t* obj, const char *collection ) );
-void      trigger_incident  args( ( const char* description ) );
 void      report_issue      args( ( const char* title, const char* description, const char* label ) );
 void      close_issue       args( ( int number ) );
 json_t *  get_issues        args( ( const char* label ) );

@@ -1924,7 +1924,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 
 					write_to_buffer( d, "&cPress &W'y' &cto enter a description or &WEnter &cto continue&w: ", 0 );
 					do_help(ch, "motd");
-					
+
 					d->connected = CON_READ_MOTD;
 
 					break;
@@ -2113,11 +2113,6 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			if ( !IS_SET( ch->act, PLR_WIZINVIS ) && !IS_SET ( ch->act, PLR_CLOAKED) ) {
 				info( "%s has returned to the storm.", (int)(ch->name), 0 );
 			}
-
-			/* Log player login */
-			json_t *obj = json_object();
-			json_object_set_new(obj, "player_name", json_string( ch->name ));
-			write_analytics(obj, "logins");
 
 			if ( ch->pcdata->corpses >= 2 )
 			{
