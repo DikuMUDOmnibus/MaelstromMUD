@@ -1,3 +1,9 @@
+## 1.0.2 (2016-11-15)
+
+Maintenance:
+
+* Remove Keen.io and PagerDuty integrations
+
 ## 1.0.1 (2016-08-25)
 
 Bugfixes:
