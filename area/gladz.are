@@ -1,5 +1,5 @@
 #AREADATA
-Name        [      ] Facility~
+Name        [      ] Facility            Ristowe~
 Levels      0 0
 Builders    Ristowe~
 VNUMs       1000 1099
@@ -44,8 +44,8 @@ toilet~
 a toilet~
 &WA dirty porcelain toilet protrudes from the back wall.~
 ~
-12 0 0 0 0 0
-0~ 0~ 0~ 0~
+17 0 0 0 0 0
+50~ 25~ 0~ 1~
 0 0 0 0 0
 0 0
 reserved~
@@ -83,6 +83,9 @@ D0
 S
 #1001
 Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  
 ~
 0 0 0
 Rd     0
@@ -101,6 +104,9 @@ D3
 S
 #1002
 Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  
 ~
 0 0 0
 Rd     0
@@ -115,6 +121,9 @@ D3
 S
 #1003
 Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  
 ~
 0 0 0
 Rd     0
@@ -129,6 +138,9 @@ D2
 S
 #1004
 Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  
 ~
 0 0 0
 Rd     0
@@ -143,6 +155,9 @@ D2
 S
 #1005
 Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  
 ~
 0 0 0
 Rd     0
@@ -157,6 +172,9 @@ D1
 S
 #1006
 Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  
 ~
 0 0 0
 Rd     0
@@ -171,6 +189,11 @@ D2
 S
 #1007
 Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  The vent continues to
+the north, but is inaccessible due to a large opening in the floor, leading
+to what looks to be a bathroom stall.  
 ~
 0 0 0
 Rd     0
@@ -185,6 +208,10 @@ D5
 S
 #1008
 Bathroom Stall~
+This cramped bathroom stall looks like it hasn't been cleaned in ages. 
+The once white tile floor has turned to an off-gray color due to age and
+grime, and a faint hint of mold can be detected under the other more
+assaulting scents in the room.  
 ~
 0 0 0
 Rd     0
@@ -199,6 +226,9 @@ D4
 S
 #1009
 Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  
 ~
 0 0 0
 Rd     0
@@ -213,6 +243,9 @@ D2
 S
 #1010
 Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  
 ~
 0 0 0
 Rd     0
@@ -227,6 +260,9 @@ D2
 S
 #1011
 Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  
 ~
 0 0 0
 Rd     0
@@ -241,6 +277,10 @@ D3
 S
 #1012
 Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  Western passage
+through the vent is blocked by a large metal grate.  
 ~
 0 0 0
 Rd     0
@@ -327,6 +367,10 @@ D3
 S
 #1017
 Bathroom Stall~
+This cramped bathroom stall looks like it hasn't been cleaned in ages. 
+The once white tile floor has turned to an off-gray color due to age and
+grime, and a faint hint of mold can be detected under the other more
+assaulting scents in the room.  
 ~
 0 0 0
 Rd     0
@@ -337,6 +381,10 @@ D3
 S
 #1018
 Bathroom Stall~
+This cramped bathroom stall looks like it hasn't been cleaned in ages. 
+The once white tile floor has turned to an off-gray color due to age and
+grime, and a faint hint of mold can be detected under the other more
+assaulting scents in the room.
 ~
 0 0 0
 Rd     0
@@ -383,6 +431,10 @@ D3
 S
 #1021
 Bathroom Stall~
+This cramped bathroom stall looks like it hasn't been cleaned in ages. 
+The once white tile floor has turned to an off-gray color due to age and
+grime, and a faint hint of mold can be detected under the other more
+assaulting scents in the room.
 ~
 0 0 0
 Rd     0
@@ -393,6 +445,10 @@ D1
 S
 #1022
 Bathroom Stall~
+This cramped bathroom stall looks like it hasn't been cleaned in ages. 
+The once white tile floor has turned to an off-gray color due to age and
+grime, and a faint hint of mold can be detected under the other more
+assaulting scents in the room.
 ~
 0 0 0
 Rd     0
@@ -403,6 +459,10 @@ D1
 S
 #1023
 Bathroom Stall~
+This cramped bathroom stall looks like it hasn't been cleaned in ages. 
+The once white tile floor has turned to an off-gray color due to age and
+grime, and a faint hint of mold can be detected under the other more
+assaulting scents in the room.
 ~
 0 0 0
 Rd     0
@@ -760,11 +820,13 @@ M 0 1000 1 1008
 O 0 1000 0 1017
 O 0 1000 0 1018
 M 0 1000 1 1019
+M 0 1000 1 1019
 O 0 1000 0 1021
 M 0 1000 1 1021
 O 0 1000 0 1022
 O 0 1000 0 1023
 O 0 1001 0 1028
+M 0 1000 1 1030
 M 0 1000 1 1030
 M 0 1000 1 1031
 O 0 1001 0 1031
