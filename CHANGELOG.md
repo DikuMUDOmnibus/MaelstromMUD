@@ -1,5 +1,9 @@
 ## 1.0.2 (2016-11-15)
 
+Features:
+
+* Don't disappear empty drink containers
+
 Maintenance:
 
 * Remove Keen.io and PagerDuty integrations
