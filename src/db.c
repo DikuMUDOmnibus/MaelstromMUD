@@ -4145,8 +4145,6 @@ void append_file( CHAR_DATA *ch, char *file, char *str )
 	return;
 }
 
-
-
 /*
  * Info channel.. -- Alty
  */

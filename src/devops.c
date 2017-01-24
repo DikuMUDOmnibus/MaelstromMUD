@@ -30,7 +30,44 @@
 #include <curl/curl.h>
 #include "merc.h"
 
-void curl_json_push args( ( const char* url, const char* payload, const char* method ) );
+void curl_json_push args( ( const char* url, const char* payload, const char* method, const char* username, const char* password ) );
+
+/**
+ * Log an event in Netuitive
+ *
+ * @param title   Event title
+ * @param level   Event level
+ * @param message Event message
+ */
+void log_event( const char* title, const char* level, const char* message ) {
+  char *payload;
+  char url[MAX_STRING_LENGTH];
+
+  json_t *obj = json_array();
+  json_t *event = json_object();
+  json_t *data = json_object();
+
+  if ( NETUITIVE_USERNAME != NULL && NETUITIVE_PASSWORD != NULL ) {
+    json_object_set_new(event, "title", json_string( title ));
+    json_object_set_new(event, "type", json_string( "INFO" ));
+
+    json_object_set_new(data, "elementId", json_string( NETUITIVE_ELEMENT_ID ));
+    json_object_set_new(data, "level", json_string( level ));
+    json_object_set_new(data, "message", json_string( message ));
+    json_object_set_new(event, "data", data);
+
+    json_array_append_new(obj, event);
+
+    sprintf(url, "https://api.app.netuitive.com/ingest/events/%s", NETUITIVE_API_KEY);
+    payload = json_dumps(obj, 0);
+
+    curl_json_push(url, payload, "POST", NETUITIVE_USERNAME, NETUITIVE_PASSWORD);
+
+    free(payload);
+  }
+
+  return;
+}
 
 /**
  * Report an issue to the GitHub repository
@@ -61,7 +98,7 @@ void report_issue( const char* title, const char* description, const char* label
     sprintf(url, "https://api.github.com/repos/%s/issues?access_token=%s", GITHUB_REPO_NAME, GITHUB_ACCESS_TOKEN);
     payload = json_dumps(obj, 0);
 
-    curl_json_push(url, payload, "POST");
+    curl_json_push(url, payload, "POST", NULL, NULL);
 
     free(payload);
   }
@@ -84,7 +121,7 @@ void close_issue( int number ) {
 
     payload = json_dumps(obj, 0);
     sprintf(url, "https://api.github.com/repos/%s/issues/%d?access_token=%s", GITHUB_REPO_NAME, number, GITHUB_ACCESS_TOKEN);
-    curl_json_push(url, payload, "PATCH");
+    curl_json_push(url, payload, "PATCH", NULL, NULL);
 
     free(payload);
   }
@@ -126,7 +163,7 @@ json_t * get_issues( const char* label ) {
  * @param url     The URL
  * @param payload The Payload
  */
-void curl_json_push(const char* url, const char* payload, const char* method) {
+void curl_json_push(const char* url, const char* payload, const char* method, const char* username, const char* password) {
   pid_t pid;
 
   curl_global_init(CURL_GLOBAL_ALL);
@@ -142,11 +179,20 @@ void curl_json_push(const char* url, const char* payload, const char* method) {
 
       headers = curl_slist_append(headers, "Content-Type: application/json");
       headers = curl_slist_append(headers, "User-Agent: OASIS MUD");
+      headers = curl_slist_append(headers, "X-Netuitive-Api-Options: INJECT_TIMESTAMP");
 
       curl_easy_setopt(curl, CURLOPT_URL, url);
       curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
       curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, method);
       curl_easy_setopt(curl, CURLOPT_POSTFIELDS, payload);
+
+      if ( username != NULL ) {
+        curl_easy_setopt(curl, CURLOPT_USERNAME, username);
+      }
+
+      if ( password != NULL ) {
+        curl_easy_setopt(curl, CURLOPT_PASSWORD, password);
+      }
 
       res = curl_easy_perform( curl );
 

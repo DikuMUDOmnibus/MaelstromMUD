@@ -2118,46 +2118,51 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			{
 				char strfng [ MAX_INPUT_LENGTH ];
 				ch->pcdata->corpses = 0;
+
 				/* player files parsed directories by Yaz 4th Realm */
 				sprintf( strfng, "%s%c/%s.cps", PLAYER_DIR, LOWER( ch->name[0] ), capitalize( ch->name ) );
-						if ( remove( strfng ) != 0 )
-							perror( strfng );
-						}
 
-						sprintf(log_buf,"%s!%s@%s has connected.", ch->name, d->user, d->host);
-						log_string(log_buf, (ch->level == L_IMP ? 1 : CHANNEL_LOG), ch->level - 1 );
+				if ( remove( strfng ) != 0 ) {
+					perror( strfng );
+        }
+			}
 
-						if ( !IS_NPC( ch ) && ch->pcdata->storage )
-						{
-						OBJ_DATA *obj;
-						OBJ_DATA *obj_next;
-						int count = 1;
-						char buf[MAX_STRING_LENGTH];
+				sprintf(log_buf,"%s!%s@%s has connected.", ch->name, d->user, d->host);
+				log_string(log_buf, (ch->level == L_IMP ? 1 : CHANNEL_LOG), ch->level - 1 );
 
-						for ( obj = ch->pcdata->storage; obj; obj = obj_next, count++ )
-						{
+        log_event("Player login", NETUITIVE_LEVEL_INFO, log_buf);
+
+				if ( !IS_NPC( ch ) && ch->pcdata->storage )
+				{
+					OBJ_DATA *obj;
+					OBJ_DATA *obj_next;
+					int count = 1;
+					char buf[MAX_STRING_LENGTH];
+
+					for ( obj = ch->pcdata->storage; obj; obj = obj_next, count++ )
+					{
 						obj_next = obj->next_content;
 						if ( (ch->pcdata->bankaccount.gold +
 									(ch->pcdata->bankaccount.silver/S_PER_G) +
 									(ch->pcdata->bankaccount.copper/C_PER_G) ) < count * 1000 )
-							{
-								sprintf( buf,
-										"The bank has repossessed %s from your storage.\n\r",
-										obj->short_descr );
-								send_to_char( AT_RED, buf, ch );
-								obj_from_storage( obj );
-								extract_obj( obj );
-							}
+						{
+							sprintf( buf,
+									"The bank has repossessed %s from your storage.\n\r",
+									obj->short_descr );
+							send_to_char( AT_RED, buf, ch );
+							obj_from_storage( obj );
+							extract_obj( obj );
 						}
+					}
 
-				sprintf( buf,
-						"The bank deducts %dgp from your account for the storage of %d items.\n\r",
-						ch->pcdata->storcount * 1000, ch->pcdata->storcount );
-				send_to_char( AT_PINK, buf, ch );
-				amt.silver = amt.copper = 0;
-				amt.gold = ch->pcdata->storcount * 1000;
-				spend_money( &ch->pcdata->bankaccount, &amt );
-						}
+  				sprintf( buf,
+  						"The bank deducts %dgp from your account for the storage of %d items.\n\r",
+  						ch->pcdata->storcount * 1000, ch->pcdata->storcount );
+  				send_to_char( AT_PINK, buf, ch );
+  				amt.silver = amt.copper = 0;
+  				amt.gold = ch->pcdata->storcount * 1000;
+  				spend_money( &ch->pcdata->bankaccount, &amt );
+				}
 
 				do_look( ch, "auto" );
 

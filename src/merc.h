@@ -3143,6 +3143,7 @@ void  parse_ban       args( ( char *argument, BAN_DATA *banned ) );
 void    arena_chann args( ( const char *str, int param1, int param2 ) );
 
 /* devops.c */
+void      log_event         args( ( const char* title, const char* level, const char* message ) );
 void      report_issue      args( ( const char* title, const char* description, const char* label ) );
 void      close_issue       args( ( int number ) );
 json_t *  get_issues        args( ( const char* label ) );
