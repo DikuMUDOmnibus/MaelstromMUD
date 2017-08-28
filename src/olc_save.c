@@ -273,46 +273,45 @@ void save_clans( )
 	return;
 }
 
-// TODO convert socials to json
 void save_social( )
 {
-	FILE *fp;
 	SOCIAL_DATA *pSocial;
+	json_t *obj = json_object();
 
-	if ( ( fp = fopen( SOCIAL_FILE, "w" ) ) == NULL )
+	for( pSocial = social_first; pSocial; pSocial = pSocial->next )
 	{
+		json_object_set(obj, pSocial->name, json_pack(
+			"{s:{s:s, s:s}, s:{s:s, s:s, s:s}, s:{s:s, s:s}}",
+			"no_arg",
+				"char", pSocial->char_no_arg,
+				"others", pSocial->others_no_arg,
+			"found",
+				"char", pSocial->char_found,
+				"others", pSocial->others_found,
+				"vict", pSocial->vict_found,
+			"auto",
+				"char",	pSocial->char_auto,
+				"others", pSocial->others_auto
+		));
+	}
+
+	if ( json_dump_file(obj, SOCIAL_FILE, JSON_SORT_KEYS | JSON_INDENT(2)) == -1 ) {
 		bug( "Save_social: fopen", 0 );
 		perror( SOCIAL_FILE );
 	}
-	else
-	{
-		for( pSocial = social_first; pSocial; pSocial = pSocial->next )
-		{
-			fprintf( fp, "#%s~\n",  pSocial->name 		);
-			fprintf( fp, "%s~\n", 	pSocial->char_no_arg	);
-			fprintf( fp, "%s~\n", 	pSocial->others_no_arg	);
-			fprintf( fp, "%s~\n", 	pSocial->char_found	);
-			fprintf( fp, "%s~\n", 	pSocial->others_found	);
-			fprintf( fp, "%s~\n", 	pSocial->vict_found	);
-			fprintf( fp, "%s~\n", 	pSocial->char_auto	);
-			fprintf( fp, "%s~\n", 	pSocial->others_auto	);
-		}
 
-		fprintf( fp, "#END~\n" );
-		fclose( fp );
-	}
 	return;
 }
 
 void save_newbie( ) {
 	NEWBIE_DATA *pNewbie;
-	json_t *arr = json_array();
+	json_t *obj = json_object();
 
 	for( pNewbie = newbie_first; pNewbie; pNewbie = pNewbie->next ) {
-		json_array_append(arr, json_pack("{s:s, s:[s, s]}", "keyword", pNewbie->keyword, "answers", pNewbie->answer1, pNewbie->answer2));
+		json_object_set(obj, pNewbie->keyword, json_pack("[s, s]", pNewbie->answer1, pNewbie->answer2));
 	}
 
-	if ( json_dump_file(arr, NEWBIE_FILE, JSON_SORT_KEYS | JSON_INDENT(2)) == -1 ) {
+	if ( json_dump_file(obj, NEWBIE_FILE, JSON_SORT_KEYS | JSON_INDENT(2)) == -1 ) {
 		bug( "Save_newbie: fopen", 0 );
 		perror( NEWBIE_FILE );
 	}

@@ -2109,43 +2109,40 @@ void social_sort( SOCIAL_DATA *pSocial )
 
 void load_socials( void )
 {
-	FILE      *fp;
-	SOCIAL_DATA *pSocialIndex;
-	char letter;
+	SOCIAL_DATA *pSocial;
+	json_t *obj;
+	json_error_t error;
 
-	if ( !( fp = fopen( SOCIAL_FILE, "r" ) ) )
+	obj = json_load_file(SOCIAL_FILE, 0, &error);
+
+	if ( !obj ) {
 		return;
-	fpArea = fp;
-	strcpy(strArea, SOCIAL_FILE);
-	for ( ; ; )
-	{
-		char*  name;
-
-		letter				= fread_letter( fp );
-		if ( letter != '#' )
-		{
-			bug( "Load_socials: # not found.", 0 );
-			continue;
-		}
-
-		name				= fread_string( fp );
-		if ( !str_cmp( name, "END"    ) )
-			break;
-
-		/*	fBootDb = TRUE; */
-		pSocialIndex		= 	alloc_perm( sizeof( *pSocialIndex ));
-		pSocialIndex->name		=	name;
-		pSocialIndex->char_no_arg	=	fread_string( fp );
-		pSocialIndex->others_no_arg	=	fread_string( fp );
-		pSocialIndex->char_found	=	fread_string( fp );
-		pSocialIndex->others_found	=	fread_string( fp );
-		pSocialIndex->vict_found	=	fread_string( fp );
-		pSocialIndex->char_auto		=	fread_string( fp );
-		pSocialIndex->others_auto	=	fread_string( fp );
-		social_sort(pSocialIndex);
-		top_social++;
 	}
-	fclose ( fp );
+
+	void *iter = json_object_iter(obj);
+
+	while(iter) {
+		pSocial       = new_social_index();
+		pSocial->name = (char *)json_object_iter_key(iter);
+
+		json_unpack(json_object_iter_value(iter),
+			"{s:{s:s, s:s}, s:{s:s, s:s, s:s}, s:{s:s, s:s}}",
+			"no_arg",
+				"char", &pSocial->char_no_arg,
+				"others", &pSocial->others_no_arg,
+			"found",
+				"char", &pSocial->char_found,
+				"others", &pSocial->others_found,
+				"vict", &pSocial->vict_found,
+			"auto",
+				"char",	&pSocial->char_auto,
+				"others", &pSocial->others_auto
+		);
+
+		social_sort(pSocial);
+
+		iter = json_object_iter_next(obj, iter);
+	}
 
 	return;
 }
@@ -4816,25 +4813,29 @@ void add_playerlist(CHAR_DATA *ch)
 
 void load_newbie( void ) {
 	NEWBIE_DATA *pNewbie;
-	json_t *arr;
-	json_t *value;
+	json_t *obj;
 	json_error_t error;
-	int i;
 
-	arr = json_load_file(NEWBIE_FILE, 0, &error);
+	obj = json_load_file(NEWBIE_FILE, 0, &error);
 
-	if ( !arr ) {
+	if ( !obj ) {
 		return;
 	}
 
-	for ( i = 0 ; i < json_array_size(arr); i++ ) {
-		value = json_array_get(arr, i);
+	void *iter = json_object_iter(obj);
 
-		pNewbie = new_newbie_index();
+	while(iter) {
+		pNewbie 				 = new_newbie_index();
+		pNewbie->keyword = (char *)json_object_iter_key(iter);
 
-		json_unpack(value, "{s:s, s:[s, s]}", "keyword", &pNewbie->keyword, "answers", &pNewbie->answer1, &pNewbie->answer2);
+		json_unpack(json_object_iter_value(iter),
+			"[s, s]",
+			&pNewbie->answer1, &pNewbie->answer2
+		);
 
 		newbie_sort(pNewbie);
+
+    iter = json_object_iter_next(obj, iter);
 	}
 
 	return;

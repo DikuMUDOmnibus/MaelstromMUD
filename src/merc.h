@@ -3035,7 +3035,7 @@ char *  crypt   args( ( const char *key, const char *salt ) );
 #define HOTREBOOT_FILE  "../data/hotreboot.dat" /* temporary data file used */
 #define NEWBIE_FILE     "../data/newbie.json"   /* Newbie help file */
 #define NOTE_FILE       "../data/notes.dat"     /* For 'notes' */
-#define SOCIAL_FILE     "../data/social.dat"    /* For 'socials' */
+#define SOCIAL_FILE     "../data/social.json"    /* For 'socials' */
 #define PLAYERLIST_FILE "../player/player.lst"  /* Player List */
 #define EXE_FILE        "../bin/envy"           /* EXE file */
 

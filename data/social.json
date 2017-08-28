@@ -1,0 +1,2177 @@
+{
+  "accuse": {
+    "auto": {
+      "char": "You accuse yourself.",
+      "others": "$n seems to have a bad conscience."
+    },
+    "found": {
+      "char": "You look accusingly at $M.",
+      "others": "$n looks accusingly at $N.",
+      "vict": "$n looks accusingly at you."
+    },
+    "no_arg": {
+      "char": "Accuse whom?",
+      "others": "$n is in an accusing mood."
+    }
+  },
+  "ack": {
+    "auto": {
+      "char": "You ACK yourself.",
+      "others": "$n ACKS $mself.  Must be a bad day."
+    },
+    "found": {
+      "char": "You ACK $M.",
+      "others": "$n ACKS $N.",
+      "vict": "$n ACKS you."
+    },
+    "no_arg": {
+      "char": "You gasp and say 'ACK!' at your mistake.",
+      "others": "$n ACKS at $s big mistake."
+    }
+  },
+  "addict": {
+    "auto": {
+      "char": "You stand and admit to all in the room, 'Hi, I'm $n, and I'm a mud addict.'",
+      "others": "$n stands and says, 'Hi, I'm $n, and I'm a mud addict.'"
+    },
+    "found": {
+      "char": "You tell $M that you are addicted to $S love.",
+      "others": "$n tells $N that $e is addicted to $S love.",
+      "vict": "$n tells you that $e is addicted to your love."
+    },
+    "no_arg": {
+      "char": "You stand and admit to all in the room, 'Hi, I'm $n, and I'm a mud addict.'",
+      "others": "$n stands and says, 'Hi, I'm $n, and I'm a mud addict.'"
+    }
+  },
+  "agree": {
+    "auto": {
+      "char": "Well I hope you would agree with yourself!",
+      "others": "$n agrees with $mself, of course."
+    },
+    "found": {
+      "char": "You agree with $M.",
+      "others": "$n agrees with $N.",
+      "vict": "$n agrees with you."
+    },
+    "no_arg": {
+      "char": "You seem to be in an agreeable mood.",
+      "others": "$n seems to agree."
+    }
+  },
+  "anglais": {
+    "auto": {
+      "char": "You exclaim loudly, 'J'ai tu l'air d'un anglais, criss!?'",
+      "others": "$n exclaims loudly that, 'Je suis pas un anglais batard!'"
+    },
+    "found": {
+      "char": "You say to $M, 'Toi, l'anglais, ta yeule!'",
+      "others": "$n says to $N, 'Toi, l'anglais, ta yeule!'",
+      "vict": "$n says to you, 'Toi, l'anglais, ta yeule!'"
+    },
+    "no_arg": {
+      "char": "You exclaim loudly, 'Ostie d'anglais!'",
+      "others": "$n exclaims, 'Ostie d'anglais!'"
+    }
+  },
+  "apologize": {
+    "auto": {
+      "char": "You apologize to yourself.",
+      "others": "$n apologizes to $mself.  Hmmmm."
+    },
+    "found": {
+      "char": "You apologize to $M.",
+      "others": "$n apologizes to $N.",
+      "vict": "$n apologizes to you."
+    },
+    "no_arg": {
+      "char": "You apologize for your behavior.",
+      "others": "$n apologizes for $s rude behavior."
+    }
+  },
+  "autostrip": {
+    "auto": {
+      "char": "You suddenly feel adventurous and begin to rip your clothes off!",
+      "others": "$n moans as $e begins to take off all $s clothing..."
+    },
+    "found": {
+      "char": "You grab $N and start to rip $S clothes off!",
+      "others": "$n grabs $N and starts to rip $S clothes off!",
+      "vict": "$n grabs you and attempts to rip off all your clothes!"
+    },
+    "no_arg": {
+      "char": "You drool in ecstasy as Mel Gibson strips naked in front of you!",
+      "others": "$n drools in ecstasy as Mel Gibson peels off all his clothes!"
+    }
+  },
+  "bark": {
+    "auto": {
+      "char": "You bark at yourself.  Woof!  Woof!",
+      "others": "$n barks at $mself.  Woof!  Woof!"
+    },
+    "found": {
+      "char": "You bark at $M.",
+      "others": "$n barks at $N.",
+      "vict": "$n barks at you."
+    },
+    "no_arg": {
+      "char": "Woof!  Woof!",
+      "others": "$n barks like a dog."
+    }
+  },
+  "beat": {
+    "auto": {
+      "char": "You beat yourself up about the last loss. *sniff*",
+      "others": "$n beats $mself about $s last loss."
+    },
+    "found": {
+      "char": "You beat $M with a rubber chicken.",
+      "others": "$n beats $N with a rubber chicken.",
+      "vict": "$n beats you with a rubber chicken."
+    },
+    "no_arg": {
+      "char": "You look around for someone to beat.",
+      "others": "$n looks around for someone to beat! Better move fast!"
+    }
+  },
+  "beg": {
+    "auto": {
+      "char": "Begging yourself for money doesn't help.",
+      "others": "$n begs $mself for money."
+    },
+    "found": {
+      "char": "You desperately try to squeeze a few coins from $M.",
+      "others": "$n begs $N for a gold piece!",
+      "vict": "$n begs you for money."
+    },
+    "no_arg": {
+      "char": "You beg the gods for mercy.",
+      "others": "The gods fall down laughing at $n's request for mercy."
+    }
+  },
+  "bird": {
+    "auto": {
+      "char": "You give yourself the finger, Doh!",
+      "others": "$n gives $mself the finger, must love $mself."
+    },
+    "found": {
+      "char": "You flip $N off.",
+      "others": "$n flips the bird to $N!",
+      "vict": "$n flips you the bird!"
+    },
+    "no_arg": {
+      "char": "You stand proudly, and give the one-finger salute.",
+      "others": "$n gives the finger to nobody in particular."
+    }
+  },
+  "blah": {
+    "auto": {
+      "char": "You scream 'BLAH BLAH BLAH!'",
+      "others": "$n screams 'BLAH BLAH BLAH!'"
+    },
+    "found": {
+      "char": "You tell $M that everything is just blah.",
+      "others": "$n tells $N that everything is just blah.",
+      "vict": "$n tells you that everything is just blah."
+    },
+    "no_arg": {
+      "char": "You say 'BLAH!'",
+      "others": "$n says 'BLAH!'"
+    }
+  },
+  "bleah": {
+    "auto": {
+      "char": "You yell 'Bleah' for what you just did.",
+      "others": "$n yells 'Bleah' for what $e just did."
+    },
+    "found": {
+      "char": "You turn to $N and yell 'BLEAH!'",
+      "others": "$n turns to $N and yells 'BLEAH!'",
+      "vict": "$n turns to you and yells 'BLEAH!'"
+    },
+    "no_arg": {
+      "char": "You yell, 'Bleah.. hurmbug'.",
+      "others": "$n yells, 'Bleah.. hurmbug'."
+    }
+  },
+  "bleed": {
+    "auto": {
+      "char": "You bleed all over yourself!",
+      "others": "$n bleeds all over $mself."
+    },
+    "found": {
+      "char": "You bleed all over $M!",
+      "others": "$n bleeds all over $N.  Better leave, you may be next!",
+      "vict": "$n bleeds all over you!  YUCK!"
+    },
+    "no_arg": {
+      "char": "You bleed all over the room!",
+      "others": "$n bleeds all over the room!  Get out of $s way!"
+    }
+  },
+  "blink": {
+    "auto": {
+      "char": "You are sooooooooooooo confused",
+      "others": "$n blinks at $mself in complete confusion."
+    },
+    "found": {
+      "char": "You blink at $M in confusion.",
+      "others": "$n blinks at $N in confusion.",
+      "vict": "$n blinks at you in confusion."
+    },
+    "no_arg": {
+      "char": "You blink in utter disbelief.",
+      "others": "$n blinks in utter disbelief."
+    }
+  },
+  "blush": {
+    "auto": {
+      "char": "You blush at your own folly.",
+      "others": "$n blushes as $e notices $s boo-boo."
+    },
+    "found": {
+      "char": "You get all flustered up seeing $M.",
+      "others": "$n blushes as $e sees $N here.",
+      "vict": "$n blushes as $e sees you here.  Such an effect on people!"
+    },
+    "no_arg": {
+      "char": "Your cheeks are burning.",
+      "others": "$n blushes."
+    }
+  },
+  "boggle": {
+    "auto": {
+      "char": "You boggle in incomprehension.",
+      "others": "$n boggles in complete incomprehension."
+    },
+    "found": {
+      "char": "You boggle at what $N just said.",
+      "others": "$n boggles at what $N just said.",
+      "vict": "$n boggles at what you just said."
+    },
+    "no_arg": {
+      "char": "You boggle at all the loonies.",
+      "others": "$n boggles at all the loonies around $m."
+    }
+  },
+  "bonk": {
+    "auto": {
+      "char": "You bonk yourself.",
+      "others": "$n bonks $mself."
+    },
+    "found": {
+      "char": "You bonk $m for being a numbskull.",
+      "others": "$n bonks $N.  What a numbskull.",
+      "vict": "$n bonks you.  BONK BONK BONK!"
+    },
+    "no_arg": {
+      "char": "BONK.",
+      "others": "$n spells 'potato' like Dan Quayle: 'B-O-N-K'."
+    }
+  },
+  "bounce": {
+    "auto": {
+      "char": "You bounce your head like a basketball.",
+      "others": "$n plays basketball with $s head."
+    },
+    "found": {
+      "char": "You bounce onto $S lap.",
+      "others": "$n bounces onto $N's lap.",
+      "vict": "$n bounces onto your lap."
+    },
+    "no_arg": {
+      "char": "BOIINNNNNNGG!",
+      "others": "$n bounces around."
+    }
+  },
+  "bow": {
+    "auto": {
+      "char": "You kiss your toes.",
+      "others": "$n folds up like a jack knife and kisses $s own toes."
+    },
+    "found": {
+      "char": "You bow before $M.",
+      "others": "$n bows before $N.",
+      "vict": "$n bows before you."
+    },
+    "no_arg": {
+      "char": "You bow deeply.",
+      "others": "$n bows deeply."
+    }
+  },
+  "brb": {
+    "auto": {
+      "char": "You mumble to yourself, 'I'll be right back'",
+      "others": "$n mumbles to $mself, 'I'll be right back, won't I?'"
+    },
+    "found": {
+      "char": "You announce to $M that you will be right back.",
+      "others": "$n says to $N in a stern voice, 'I'll be back!'",
+      "vict": "$n says to you in a stern voice, 'I'll be right back!'"
+    },
+    "no_arg": {
+      "char": "You announce that you will be right back.",
+      "others": "$n says in a stern voice, 'I'll be back!'"
+    }
+  },
+  "burp": {
+    "auto": {
+      "char": "You burp at yourself.",
+      "others": "$n burps at $mself.  What a sick sight."
+    },
+    "found": {
+      "char": "You burp loudly to $M in response.",
+      "others": "$n burps loudly in response to $N's remark.",
+      "vict": "$n burps loudly in response to your remark."
+    },
+    "no_arg": {
+      "char": "You burp loudly.",
+      "others": "$n burps loudly."
+    }
+  },
+  "bye": {
+    "auto": {
+      "char": "You say goodbye to yourself.  Contemplating suicide?",
+      "others": "$n says goodbye to $mself.  Is $e contemplating suicide?"
+    },
+    "found": {
+      "char": "You say goodbye to $N.",
+      "others": "$n says goodbye to $N.",
+      "vict": "$n says goodbye to you."
+    },
+    "no_arg": {
+      "char": "You say goodbye to all in the room.",
+      "others": "$n says goodbye to everyone in the room."
+    }
+  },
+  "cackle": {
+    "auto": {
+      "char": "You cackle at yourself.  Now, THAT'S strange!",
+      "others": "$n is really crazy now!  $e cackles at $mself."
+    },
+    "found": {
+      "char": "You cackle gleefully at $N",
+      "others": "$n cackles gleefully at $N.",
+      "vict": "$n cackles gleefully at you.  Better keep your distance from $m."
+    },
+    "no_arg": {
+      "char": "You throw back your head and cackle with insane glee!",
+      "others": "$n throws back $s head and cackles with insane glee!"
+    }
+  },
+  "cheer": {
+    "auto": {
+      "char": "You cheer yourself up.",
+      "others": "$n cheers $mself on."
+    },
+    "found": {
+      "char": "You cheer loudly: 'Go $N Go!'",
+      "others": "$n cheers loudly: 'Go $N Go!'",
+      "vict": "$n cheers you on!"
+    },
+    "no_arg": {
+      "char": "ZIS BOOM BAH!  BUGS BUNNY BUGS BUNNY RAH RAH RAH!",
+      "others": "$n says 'BUGS BUNNY BUGS BUNNY RAH RAH RAH!'"
+    }
+  },
+  "chuckle": {
+    "auto": {
+      "char": "You chuckle at your own joke, since no one else would.",
+      "others": "$n chuckles at $s own joke, since none of you would."
+    },
+    "found": {
+      "char": "You chuckle at $S joke.",
+      "others": "$n chuckles at $N's joke.",
+      "vict": "$n chuckles at your joke."
+    },
+    "no_arg": {
+      "char": "You chuckle politely.",
+      "others": "$n chuckles politely."
+    }
+  },
+  "clap": {
+    "auto": {
+      "char": "You clap at your own performance.",
+      "others": "$n claps at $s own performance."
+    },
+    "found": {
+      "char": "You clap at $S performance.",
+      "others": "$n claps at $N's performance.",
+      "vict": "$n claps at your performance."
+    },
+    "no_arg": {
+      "char": "You clap your hands together.",
+      "others": "$n shows $s approval by clapping $s hands together."
+    }
+  },
+  "comfort": {
+    "auto": {
+      "char": "You make a vain attempt to comfort yourself.",
+      "others": "$n has no one to comfort $m but $mself."
+    },
+    "found": {
+      "char": "You comfort $M.",
+      "others": "$n comforts $N.",
+      "vict": "$n comforts you."
+    },
+    "no_arg": {
+      "char": "Do you feel uncomfortable?",
+      "others": ""
+    }
+  },
+  "cough": {
+    "auto": {
+      "char": "You cough loudly.  Why don't you take better care of yourself?",
+      "others": "$n coughs loudly.  $n should take better care of $mself."
+    },
+    "found": {
+      "char": "You cough loudly.  It must be $S fault, $E gave you this cold.",
+      "others": "$n coughs loudly, and glares at $N, like it is $S fault.",
+      "vict": "$n coughs loudly, and glares at you.  Did you give $M that cold?"
+    },
+    "no_arg": {
+      "char": "You cough to clear your throat and eyes and nose and....",
+      "others": "$n coughs loudly."
+    }
+  },
+  "cry": {
+    "auto": {
+      "char": "You cry to yourself.",
+      "others": "$n sobs quietly to $mself."
+    },
+    "found": {
+      "char": "You cry on $S shoulder.",
+      "others": "$n cries on $N's shoulder.",
+      "vict": "$n cries on your shoulder."
+    },
+    "no_arg": {
+      "char": "Waaaaah ...",
+      "others": "$n bursts into tears."
+    }
+  },
+  "cuddle": {
+    "auto": {
+      "char": "You cuddle up into a little ball...how sweet.",
+      "others": "$n cuddles up into a little ball...how sweet."
+    },
+    "found": {
+      "char": "You cuddle $M.",
+      "others": "$n cuddles $N.",
+      "vict": "$n cuddles you."
+    },
+    "no_arg": {
+      "char": "Whom do you feel like cuddling today?",
+      "others": "$n looks around for someone to cuddle with."
+    }
+  },
+  "curse": {
+    "auto": {
+      "char": "You swear at your own mistakes.",
+      "others": "$n starts swearing at $mself.  Why don't you help?"
+    },
+    "found": {
+      "char": "You swear at $M.",
+      "others": "$n swears at $N.",
+      "vict": "$n swears at you!  Where are $s manners?"
+    },
+    "no_arg": {
+      "char": "You swear loudly for a long time.",
+      "others": "$n swears: @*&^%@*&!"
+    }
+  },
+  "curtsey": {
+    "auto": {
+      "char": "You curtsey to your audience (yourself).",
+      "others": "$n curtseys to $mself, since no one is paying attention to $m."
+    },
+    "found": {
+      "char": "You curtsey to $M.",
+      "others": "$n curtseys gracefully to $N.",
+      "vict": "$n curtseys gracefully for you."
+    },
+    "no_arg": {
+      "char": "You curtsey to your audience.",
+      "others": "$n curtseys gracefully."
+    }
+  },
+  "dammit": {
+    "auto": {
+      "char": "You curse your own stupidity! Bah!",
+      "others": "$n curses $mself!"
+    },
+    "found": {
+      "char": "You throw your hands up in disgust and let the verbal barbs fly at $N!",
+      "others": "$n curses $N to eternity while throwing a fit.",
+      "vict": "$n curses you out like never before, $e must be pretty ticked off."
+    },
+    "no_arg": {
+      "char": "You curse like a drunken sailor for how the fates have treated you.",
+      "others": "$n slams $s weapon on the ground and yells, 'Dammit Dammit DAMMIT!'"
+    }
+  },
+  "dance": {
+    "auto": {
+      "char": "You skip and dance around by yourself.",
+      "others": "$n dances a pas-de-une."
+    },
+    "found": {
+      "char": "You sweep $M into a romantic waltz.",
+      "others": "$n sweeps $N into a romantic waltz.",
+      "vict": "$n sweeps you into a romantic waltz."
+    },
+    "no_arg": {
+      "char": "You dance like only Snoopy can!",
+      "others": "$n does the Snoopy Dance of Joy."
+    }
+  },
+  "dive": {
+    "auto": {
+      "char": "You take a dive.",
+      "others": "$n takes a dive."
+    },
+    "found": {
+      "char": "You dive behind $M and hide.",
+      "others": "$n dives behind $N and hides.",
+      "vict": "$n dives behind you and hides."
+    },
+    "no_arg": {
+      "char": "You dive into the ocean.",
+      "others": "$n dives into the ocean."
+    }
+  },
+  "drool": {
+    "auto": {
+      "char": "You drool on yourself.",
+      "others": "$n drools on $mself."
+    },
+    "found": {
+      "char": "You drool all over $N.",
+      "others": "$n drools all over $N.",
+      "vict": "$n drools all over you."
+    },
+    "no_arg": {
+      "char": "You drool on yourself.",
+      "others": "$n drools on $mself."
+    }
+  },
+  "duck": {
+    "auto": {
+      "char": "You duck behind yourself.  Oww that hurts!",
+      "others": "$n tries to duck behind $mself.  $n needs help getting untied now."
+    },
+    "found": {
+      "char": "You duck behind $M.  Whew!  That was close!",
+      "others": "$n ducks behind $N to avoid the fray.",
+      "vict": "$n ducks behind you to avoid the fray."
+    },
+    "no_arg": {
+      "char": "Whew!  That was close!",
+      "others": "$n is narrowly missed by a low-flying dragon."
+    }
+  },
+  "eh": {
+    "auto": {
+      "char": "You strut proudly and do the Canadian EH.",
+      "others": "$n struts proudly and does the Canadian EH."
+    },
+    "found": {
+      "char": "You raise an eyebrow at $M and say, \"Eh??\"",
+      "others": "$n raises an eyebrow at $N and says, \"Eh??\"",
+      "vict": "$n raises an eyebrow at you and says, \"Eh??\""
+    },
+    "no_arg": {
+      "char": "You say, \"Eh??\"",
+      "others": "$n says, \"Eh??\""
+    }
+  },
+  "embrace": {
+    "auto": {
+      "char": "You wrap your arms around yourself.... how sweet.",
+      "others": "$n embraces $mself... how sweet."
+    },
+    "found": {
+      "char": "You embrace $M lovingly.",
+      "others": "$n embraces $N lovingly.",
+      "vict": "$n embraces you lovingly."
+    },
+    "no_arg": {
+      "char": "Embrace whom?",
+      "others": ""
+    }
+  },
+  "eyebrow": {
+    "auto": {
+      "char": "You raise an eyebrow at yourself.  That hurt!",
+      "others": "$n raises an eyebrow at $mself.  That must have hurt!"
+    },
+    "found": {
+      "char": "You raise an eyebrow at $M.",
+      "others": "$n raises an eyebrow at $N.",
+      "vict": "$n raises an eyebrow at you."
+    },
+    "no_arg": {
+      "char": "You raise an eyebrow.",
+      "others": "$n raises an eyebrow."
+    }
+  },
+  "faint": {
+    "auto": {
+      "char": "You look down at your condition and faint.",
+      "others": "$n looks down at $s condition and faints dead away."
+    },
+    "found": {
+      "char": "You faint into $S arms.",
+      "others": "$n faints into $N's arms.",
+      "vict": "$n faints into your arms.  How romantic."
+    },
+    "no_arg": {
+      "char": "You feel dizzy and hit the ground like a board.",
+      "others": "$n's eyes roll back in $s head and $e crumples to the ground."
+    }
+  },
+  "fakerep": {
+    "auto": {
+      "char": "You report: 12874/13103 hp 9238/10230 mana 2483/3451 mv 2.31E13 xp.",
+      "others": "$n reports: 12874/13103 hp 9238/10230 mana 2483/3451 mv 2.31E13 xp."
+    },
+    "found": {
+      "char": "You report: 12874/13103 hp 9238/10230 mana 2483/3451 mv 2.31E13 xp.",
+      "others": "$n reports: 12874/13103 hp 9238/10230 mana 2483/3451 mv 2.31E13 xp.",
+      "vict": "$n reports: 12874/13103 hp 9238/10230 mana 2483/3451 mv 2.31E13 xp."
+    },
+    "no_arg": {
+      "char": "You report: 12874/13103 hp 9238/10230 mana 2483/3451 mv 2.31E13 xp.",
+      "others": "$n reports: 12874/13103 hp 9238/10230 mana 2483/3451 mv 2.31E13 xp."
+    }
+  },
+  "fart": {
+    "auto": {
+      "char": "You fart at yourself.  You deserve it.",
+      "others": "$n farts at $mself.  Better $m than you."
+    },
+    "found": {
+      "char": "You fart at $M.  Boy, you are sick.",
+      "others": "$n farts in $N's direction.  Better flee before $e turns to you!",
+      "vict": "$n farts in your direction.  You gasp for air."
+    },
+    "no_arg": {
+      "char": "You cut the cheese.",
+      "others": "$n cuts the cheese! Somebody light a match."
+    }
+  },
+  "fk": {
+    "auto": {
+      "char": "",
+      "others": ""
+    },
+    "found": {
+      "char": "You tell $M to Fuck this shit man!",
+      "others": "$n tells $N to Fuck it.",
+      "vict": "$n just told you to Fuck it."
+    },
+    "no_arg": {
+      "char": "You say FUCK IT and sit yo ass down.",
+      "others": "$n says Fuck this shit man!"
+    }
+  },
+  "flex": {
+    "auto": {
+      "char": "You flex your muscles at yourself.  Wow, you are HUGE!",
+      "others": "$n flexes $s muscles at $mself.  How narcissistic!"
+    },
+    "found": {
+      "char": "You flex your bulging muscles at $M.",
+      "others": "$n flexes $s muscles at $N.",
+      "vict": "$n flexes $s muscles at you.  $n must be trying to impress you."
+    },
+    "no_arg": {
+      "char": "You flex your bulging muscles at the beach crowd.",
+      "others": "$n flexes $s muscles and puts yours to shame!"
+    }
+  },
+  "flip": {
+    "auto": {
+      "char": "You tumble all over the room.",
+      "others": "$n does some nice tumbling and gymnastics."
+    },
+    "found": {
+      "char": "You flip $M over your shoulder.",
+      "others": "$n flips $N over $s shoulder.",
+      "vict": "$n flips you over $s shoulder.  Hmmmm."
+    },
+    "no_arg": {
+      "char": "You flip head over heels.",
+      "others": "$n flips head over heels."
+    }
+  },
+  "flirt": {
+    "auto": {
+      "char": "You flirt with yourself.",
+      "others": "$n flirts with $mself.  Hoo boy."
+    },
+    "found": {
+      "char": "You flirt with $M.",
+      "others": "$n flirts with $N.",
+      "vict": "$n wants you to show some interest and is flirting with you."
+    },
+    "no_arg": {
+      "char": "Wink wink!",
+      "others": "$n flirts -- probably needs a date, huh?"
+    }
+  },
+  "fondle": {
+    "auto": {
+      "char": "You fondly fondle yourself, feels funny doesn't it ?",
+      "others": "$n fondly fondles $mself - this is going too far !!"
+    },
+    "found": {
+      "char": "You fondly fondle $M.",
+      "others": "$n fondly fondles $N.",
+      "vict": "$n fondly fondles you."
+    },
+    "no_arg": {
+      "char": "Who needs to be fondled?",
+      "others": ""
+    }
+  },
+  "frag": {
+    "auto": {
+      "char": "You mutter angrily to yourself, 'FRAG FRAG FRAG FRAG!!!'",
+      "others": "$n mutters angrily to $mself, 'FRAG FRAG FRAG FRAG!!!'"
+    },
+    "found": {
+      "char": "You glare at $N and say, 'FRAG FRAG FRAG FRAG!!!'",
+      "others": "$n glares at $N and says, 'FRAG FRAG FRAG FRAG!!!'",
+      "vict": "$n glares at you and says, 'FRAG FRAG FRAG FRAG!!!'"
+    },
+    "no_arg": {
+      "char": "You say, 'FRAG FRAG FRAG FRAG!!!'",
+      "others": "$n says, 'FRAG FRAG FRAG FRAG!!!'"
+    }
+  },
+  "french": {
+    "auto": {
+      "char": "You gather yourself in your arms and try to kiss yourself.",
+      "others": "$n makes an attempt at kissing $mself."
+    },
+    "found": {
+      "char": "You give $N a long and passionate kiss.",
+      "others": "$n kisses $N passionately.",
+      "vict": "$n gives you a long and passionate kiss."
+    },
+    "no_arg": {
+      "char": "Kiss whom?",
+      "others": ""
+    }
+  },
+  "frown": {
+    "auto": {
+      "char": "You frown at yourself.  Poor baby.",
+      "others": "$n frowns at $mself.  Poor baby."
+    },
+    "found": {
+      "char": "You frown at what $E did.",
+      "others": "$n frowns at what $N did.",
+      "vict": "$n frowns at what you did."
+    },
+    "no_arg": {
+      "char": "What's bothering you ?",
+      "others": "$n frowns."
+    }
+  },
+  "fruff": {
+    "auto": {
+      "char": "Finding no one else, you fruff yourself.",
+      "others": "Finding no one else, $n fruffs $mself."
+    },
+    "found": {
+      "char": "You fruff $N until $E starts to giggle out loud.",
+      "others": "$n fruffs $N until $E giggles!",
+      "vict": "$n fruffs you and you giggle out loud!"
+    },
+    "no_arg": {
+      "char": "You turn into a fruff monster and look for someone to fruff.",
+      "others": "$n turns into a fruff monster and looks around for a fruff victim."
+    }
+  },
+  "fume": {
+    "auto": {
+      "char": "You are furious with yourself.",
+      "others": "$n's ears are smokin' with rage."
+    },
+    "found": {
+      "char": "You are fuming with rage at $N.",
+      "others": "$n is fuming with rage at $N.",
+      "vict": "$n is furious with you!"
+    },
+    "no_arg": {
+      "char": "You fume with frightening rage!",
+      "others": "$n fumes in anger around $mself."
+    }
+  },
+  "gasp": {
+    "auto": {
+      "char": "You look at yourself and gasp!",
+      "others": "$n takes one look at $mself and gasps in astonishment!"
+    },
+    "found": {
+      "char": "You gasp as you realize what $e did.",
+      "others": "$n gasps as $e realizes what $N did.",
+      "vict": "$n gasps as $e realizes what you did."
+    },
+    "no_arg": {
+      "char": "You gasp in astonishment.",
+      "others": "$n gasps in astonishment."
+    }
+  },
+  "ghug": {
+    "auto": {
+      "char": "GROUP HUG!  GROUP HUG!",
+      "others": "$n hugs you all in a big group hug.  How sweet!"
+    },
+    "found": {
+      "char": "GROUP HUG!  GROUP HUG!",
+      "others": "$n hugs you all in a big group hug.  How sweet!",
+      "vict": "$n hugs you all in a big group hug.  How sweet!"
+    },
+    "no_arg": {
+      "char": "You grab everyone in the room and give 'em all a squeeze!",
+      "others": "$n grabs you all in a big group hug for a squeeeeze!"
+    }
+  },
+  "giggle": {
+    "auto": {
+      "char": "You giggle at yourself.  You must be nervous or something.",
+      "others": "$n giggles at $mself.  $e must be nervous or something."
+    },
+    "found": {
+      "char": "You giggle in $S presence.",
+      "others": "$n giggles at $N's actions.",
+      "vict": "$n giggles at you.  Hope it's not contagious!"
+    },
+    "no_arg": {
+      "char": "You giggle.",
+      "others": "$n giggles."
+    }
+  },
+  "glare": {
+    "auto": {
+      "char": "You glare icily at your feet, they are suddenly very cold.",
+      "others": "$n glares at $s feet, what is bothering $m?"
+    },
+    "found": {
+      "char": "You glare icily at $M.",
+      "others": "$n glares at $N.",
+      "vict": "$n glares icily at you, you feel cold to your bones."
+    },
+    "no_arg": {
+      "char": "You glare at nothing in particular.",
+      "others": "$n glares around $m."
+    }
+  },
+  "goose": {
+    "auto": {
+      "char": "You goose yourself.",
+      "others": "$n gooses $mself.  Yuck."
+    },
+    "found": {
+      "char": "You goose $S luscious bottom.",
+      "others": "$n gooses $N's soft behind.",
+      "vict": "$n squeezes your tush.  Oh my!"
+    },
+    "no_arg": {
+      "char": "You honk like a goose.",
+      "others": "$n honks like a goose."
+    }
+  },
+  "grimace": {
+    "auto": {
+      "char": "You grimace at yourself in disgust.",
+      "others": "$n grimaces at $mself in disgust."
+    },
+    "found": {
+      "char": "You grimace in disgust at $M.",
+      "others": "$n grimaces in disgust at $N.",
+      "vict": "$n grimaces in disgust at you."
+    },
+    "no_arg": {
+      "char": "You contort your face in disgust.",
+      "others": "$n grimaces is disgust."
+    }
+  },
+  "grin": {
+    "auto": {
+      "char": "You grin at yourself.  You must be getting very bad thoughts.",
+      "others": "$n grins at $mself.  You must wonder what's in $s mind."
+    },
+    "found": {
+      "char": "You grin evilly at $M.",
+      "others": "$n grins evilly at $N.",
+      "vict": "$n grins evilly at you.  Hmmm.  Better keep your distance."
+    },
+    "no_arg": {
+      "char": "You grin evilly.",
+      "others": "$n grins evilly."
+    }
+  },
+  "groan": {
+    "auto": {
+      "char": "You groan as you realize what you have done.",
+      "others": "$n groans as $e realizes what $e has done."
+    },
+    "found": {
+      "char": "You groan at the sight of $M.",
+      "others": "$n groans at the sight of $N.",
+      "vict": "$n groans at the sight of you."
+    },
+    "no_arg": {
+      "char": "You groan loudly.",
+      "others": "$n groans loudly."
+    }
+  },
+  "grovel": {
+    "auto": {
+      "char": "That seems a little silly to me.",
+      "others": ""
+    },
+    "found": {
+      "char": "You grovel before $M.",
+      "others": "$n grovels in the dirt before $N.",
+      "vict": "$n grovels in the dirt before you."
+    },
+    "no_arg": {
+      "char": "You grovel in the dirt.",
+      "others": "$n grovels in the dirt."
+    }
+  },
+  "growl": {
+    "auto": {
+      "char": "You growl at yourself.  Boy, do you feel bitter!",
+      "others": "$n growls at $mself.  This could get interesting..."
+    },
+    "found": {
+      "char": "Grrrrrrrrrr ... take that, $N!",
+      "others": "$n growls at $N.  Better leave the room before the fighting starts.",
+      "vict": "$n growls at you.  Hey, two can play it that way!"
+    },
+    "no_arg": {
+      "char": "Grrrrrrrrrr ...",
+      "others": "$n growls."
+    }
+  },
+  "grumble": {
+    "auto": {
+      "char": "You grumble under your breath.",
+      "others": "$n grumbles under $s breath."
+    },
+    "found": {
+      "char": "You grumble to $M.",
+      "others": "$n grumbles to $N.",
+      "vict": "$n grumbles to you."
+    },
+    "no_arg": {
+      "char": "You grumble.",
+      "others": "$n grumbles."
+    }
+  },
+  "grunt": {
+    "auto": {
+      "char": "GRNNNHTTTT.",
+      "others": "$n grunts to $mself.  What a pig!"
+    },
+    "found": {
+      "char": "GRNNNHTTTT.",
+      "others": "$n grunts to $N.  What a pig!",
+      "vict": "$n grunts to you.  What a pig!"
+    },
+    "no_arg": {
+      "char": "GRUUUUUUNNNNNNNNNNNNTTTTTTTTTTTTTTTT!",
+      "others": "$n grunts like a pig."
+    }
+  },
+  "highfive": {
+    "auto": {
+      "char": "You jump in the air and congratulate yourself!",
+      "others": "$n jumps in the air and gives $mself a big highfive!  Wonder what $e did?"
+    },
+    "found": {
+      "char": "You jump in the air and give $M a big highfive!",
+      "others": "$n jumps in the air and gives $N a big highfive!",
+      "vict": "$n jumps in the air and gives you a big highfive!"
+    },
+    "no_arg": {
+      "char": "You jump in the air...oops, better get someone else to join you.",
+      "others": "$n jumps in the air by $mself.  Is $e a cheerleader, or just daft?"
+    }
+  },
+  "hkl": {
+    "auto": {
+      "char": "You are one sick puppy. Get a room!",
+      "others": "$n practices romantic techniques...alone..."
+    },
+    "found": {
+      "char": "You give the full treatment of affection to $M.",
+      "others": "$n attacks $N with a barrage of hugs and kisses!",
+      "vict": "$n gives you tons of loving hugs and kisses."
+    },
+    "no_arg": {
+      "char": "You look for someone to Hug Kiss and Love.",
+      "others": "$n is looking for someone to hug and kiss and love and call George."
+    }
+  },
+  "hmm": {
+    "auto": {
+      "char": "You Hmmmm out loud.",
+      "others": "$n thinks, 'Hmmmm.'"
+    },
+    "found": {
+      "char": "You gaze thoughtfully at $M and say 'Hmmm.'",
+      "others": "$n gazes thoughtfully at $N and says 'Hmmm.'",
+      "vict": "$n gazes thoughtfully at you and says 'Hmmm.'"
+    },
+    "no_arg": {
+      "char": "You Hmmmm out loud.",
+      "others": "$n thinks, 'Hmmmm.'"
+    }
+  },
+  "hug": {
+    "auto": {
+      "char": "You hug yourself.",
+      "others": "$n hugs $mself in a vain attempt to get friendship."
+    },
+    "found": {
+      "char": "You hug $M.",
+      "others": "$n hugs $N.",
+      "vict": "$n hugs you."
+    },
+    "no_arg": {
+      "char": "Hug whom?",
+      "others": ""
+    }
+  },
+  "jig": {
+    "auto": {
+      "char": "You do a happy jig by yourself.",
+      "others": "$n does a jig by themself, with a smile on their face."
+    },
+    "found": {
+      "char": "You dance a jig around $M",
+      "others": "$n dances a jig around $N.",
+      "vict": ""
+    },
+    "no_arg": {
+      "char": "You break out into a lively jig.",
+      "others": "$n breaks out into a lively jig."
+    }
+  },
+  "kiss": {
+    "auto": {
+      "char": "All the lonely people :(",
+      "others": ""
+    },
+    "found": {
+      "char": "You kiss $M.",
+      "others": "$n kisses $N.",
+      "vict": "$n kisses you."
+    },
+    "no_arg": {
+      "char": "Isn't there someone you want to kiss?",
+      "others": ""
+    }
+  },
+  "lag": {
+    "auto": {
+      "char": "You complain about the lag, your hitpoints, your mana...",
+      "others": "$n has lost $s link because of the lag."
+    },
+    "found": {
+      "char": "You complain to $N about the lag, your hitpoints, your mana...",
+      "others": "$n has lost $s link because of the lag.",
+      "vict": "$n has lost $s link because of the lag."
+    },
+    "no_arg": {
+      "char": "You complain about the lag, your hitpoints, your mana...",
+      "others": "$n has lost $s link because of the lag."
+    }
+  },
+  "lapdance": {
+    "auto": {
+      "char": "You lapdance yourself.  Kinky!",
+      "others": "$n lapdances $mself. You wonder, 'Are they really that lonely?'"
+    },
+    "found": {
+      "char": "You lapdance $M making $M pop into a sweat!",
+      "others": "$n lapdances $N till they beg for mercy!",
+      "vict": "$n lapdances you slowly to the beat of Latin music!"
+    },
+    "no_arg": {
+      "char": "You look around for someone to lapdance.",
+      "others": "$n looks around for someone to lapdance."
+    }
+  },
+  "laugh": {
+    "auto": {
+      "char": "You laugh at yourself.  I would, too.",
+      "others": "$n laughs at $mself.  Let's all join in!!!"
+    },
+    "found": {
+      "char": "You laugh at $N mercilessly.",
+      "others": "$n laughs at $N mercilessly.",
+      "vict": "$n laughs at you mercilessly.  Hmmmmph."
+    },
+    "no_arg": {
+      "char": "You laugh.",
+      "others": "$n laughs."
+    }
+  },
+  "lick": {
+    "auto": {
+      "char": "You lick yourself.",
+      "others": "$n licks $mself - YUCK."
+    },
+    "found": {
+      "char": "You lick $M.",
+      "others": "$n licks $N.",
+      "vict": "$n licks you."
+    },
+    "no_arg": {
+      "char": "You lick your lips and smile.",
+      "others": "$n licks $s lips and smiles."
+    }
+  },
+  "liege": {
+    "auto": {
+      "char": "You liege yourself, how silly!",
+      "others": "$n lieges $mself, how strange."
+    },
+    "found": {
+      "char": "You kneel before $M and say, 'My liege!'",
+      "others": "$n kneels before $N and says, 'My liege!'",
+      "vict": "$n kneels before you and says, 'My liege!'"
+    },
+    "no_arg": {
+      "char": "You kneel down on the ground, looking for someone to liege.",
+      "others": "$n kneels to the ground, looking for someone to liege."
+    }
+  },
+  "ltns": {
+    "auto": {
+      "char": "Better see some counselling about that.",
+      "others": "$n hasn't seen $mself lately. Makeover time."
+    },
+    "found": {
+      "char": "Hey! It's $N! Long time no see!",
+      "others": "$n is overjoyed to see $N.",
+      "vict": "$n seems to be very happy to see you! Long time no see!"
+    },
+    "no_arg": {
+      "char": "Long time no see whom?",
+      "others": ""
+    }
+  },
+  "massage": {
+    "auto": {
+      "char": "You practice yoga as you try to massage yourself.",
+      "others": "$n gives a show on yoga positions, trying to massage $mself."
+    },
+    "found": {
+      "char": "You gently massage $N's shoulders.",
+      "others": "$n massages $N's shoulders.",
+      "vict": "$n gently massages your shoulders.  Ahhhhhhhhhh ..."
+    },
+    "no_arg": {
+      "char": "Massage what?  Thin air?",
+      "others": ""
+    }
+  },
+  "mmm": {
+    "auto": {
+      "char": "You think of yourself, and go mmMMmmMMmmMMmm.",
+      "others": "$n thinks of $mself and says, 'mmMMmmMMmmMMmm.'"
+    },
+    "found": {
+      "char": "You go mmMMmmMMmmMMmm.",
+      "others": "$n says, 'mmMMmmMMmmMMmm.'",
+      "vict": "$n thinks of you and says, 'mmMMmmMMmmMMmm.'"
+    },
+    "no_arg": {
+      "char": "You go mmMMmmMMmmMMmm.",
+      "others": "$n says, 'mmMMmmMMmmMMmm.'"
+    }
+  },
+  "moan": {
+    "auto": {
+      "char": "You moan at yourself.",
+      "others": "$n makes $mself moan."
+    },
+    "found": {
+      "char": "You moan at the sight of $M",
+      "others": "You moan at the sight of $N.",
+      "vict": "$n moans at the sight of you.  Hmmmm."
+    },
+    "no_arg": {
+      "char": "You start to moan.",
+      "others": "$n starts moaning."
+    }
+  },
+  "mock": {
+    "auto": {
+      "char": "You mock yourself alot.",
+      "others": "$n mocks $mself just cause $e can."
+    },
+    "found": {
+      "char": "You look at $M, smile, and say 'I mock you.'",
+      "others": "$n mocks $N mercilessly.",
+      "vict": "$n looks at you, smiles, and says 'I mock you.'"
+    },
+    "no_arg": {
+      "char": "You mock nothing in general.",
+      "others": "$n mocks nothing in general."
+    }
+  },
+  "muhaha": {
+    "auto": {
+      "char": "Muhaha at yourself??  Wierd.",
+      "others": ""
+    },
+    "found": {
+      "char": "You laugh at $M diabolically.  MUHAHAHAHAHAHA!",
+      "others": "$n laughs at $N diabolically.  MUHAHAHAHAHAHA!",
+      "vict": "$n laughs at you diabolically.  MUHAHAHAHAHAHA!"
+    },
+    "no_arg": {
+      "char": "You laugh diabolically.  MUHAHAHAHAHAHA!",
+      "others": "$n laughs diabolically.  MUHAHAHAHAHAHA!"
+    }
+  },
+  "nasty": {
+    "auto": {
+      "char": "You do the nasty with yourself!",
+      "others": "$n does the nasty with $mself."
+    },
+    "found": {
+      "char": "You do the nasty with $M!",
+      "others": "$n does the nasty with $N!",
+      "vict": "$n does the nasty with you."
+    },
+    "no_arg": {
+      "char": "Nasty, nasty, nasty!",
+      "others": "$n looks around for someone to do the nasty with."
+    }
+  },
+  "ni": {
+    "auto": {
+      "char": "You exclaim proudly, 'I am a knight that goes NI!'",
+      "others": "$n exclaims proudly, 'I am a knight that goes NI!'"
+    },
+    "found": {
+      "char": "You exclaim proudly to $M, 'I am a knight that goes NI!'",
+      "others": "$n exclaims proudly to $N, 'I am a knight that goes NI!'",
+      "vict": "$n proudly exclaims to you, 'I am a knight that goes NI!'"
+    },
+    "no_arg": {
+      "char": "You exclaim proudly, 'I am a knight that goes NI!'",
+      "others": "$n exclaims proudly, 'I am a knight that goes NI!'"
+    }
+  },
+  "nibble": {
+    "auto": {
+      "char": "You nibble on your OWN ear. Nice lobes.",
+      "others": "$n nibbles on $s OWN ear. Now That's talent!"
+    },
+    "found": {
+      "char": "You nibble on $N's ear.",
+      "others": "$n nibbles on $N's ear.",
+      "vict": "$n nibbles on your ear."
+    },
+    "no_arg": {
+      "char": "Nibble on whom?",
+      "others": ""
+    }
+  },
+  "nod": {
+    "auto": {
+      "char": "You nod at yourself.  Are you getting senile?",
+      "others": "$n nods at $mself.  $e must be getting senile."
+    },
+    "found": {
+      "char": "You nod in recognition to $M.",
+      "others": "$n nods in recognition to $N.",
+      "vict": "$n nods in recognition to you."
+    },
+    "no_arg": {
+      "char": "You nod affirmative.",
+      "others": "$n nods affirmative."
+    }
+  },
+  "nudge": {
+    "auto": {
+      "char": "You nudge yourself, for some strange reason.",
+      "others": "$n nudges $mself, to keep $mself awake."
+    },
+    "found": {
+      "char": "You nudge $M.",
+      "others": "$n nudges $N.",
+      "vict": "$n nudges you."
+    },
+    "no_arg": {
+      "char": "Nudge whom?",
+      "others": ""
+    }
+  },
+  "nuzzle": {
+    "auto": {
+      "char": "You must be very lonely to nuzzle your own neck.",
+      "others": "$n nuzzles $n's own neck, kinky eh?"
+    },
+    "found": {
+      "char": "You nuzzle $N's neck softly.",
+      "others": "$n nuzzles $N's neck softly.",
+      "vict": "$n softly nuzzles your neck."
+    },
+    "no_arg": {
+      "char": "You look around for someone to nuzzle.",
+      "others": "$n Looks around for someone to nuzzle."
+    }
+  },
+  "ooo": {
+    "auto": {
+      "char": "You go ooOOooOOooOOoo.",
+      "others": "$n says, 'ooOOooOOooOOoo.'"
+    },
+    "found": {
+      "char": "You go ooOOooOOooOOoo.",
+      "others": "$n says, 'ooOOooOOooOOoo.'",
+      "vict": "$n thinks of you and says, 'ooOOooOOooOOoo.'"
+    },
+    "no_arg": {
+      "char": "You go ooOOooOOooOOoo.",
+      "others": "$n says, 'ooOOooOOooOOoo.'"
+    }
+  },
+  "oral": {
+    "auto": {
+      "char": "You remind yourself of the answer, &YORAL SEX!",
+      "others": "$n yells, &C'Answer: ORAL SEX!! And lots of it!'"
+    },
+    "found": {
+      "char": "Answer: &YORAL SEX!! &PAnd lots of it!",
+      "others": "$n yells, &C'Answer: ORAL SEX!! And lots of it!'",
+      "vict": "$n yells, &C'Answer: ORAL SEX!! And lots of it!'"
+    },
+    "no_arg": {
+      "char": "Answer: &YORAL SEX!! &PAnd lots of it!",
+      "others": "$n yells, &C'Answer: ORAL SEX!! And lots of it!'"
+    }
+  },
+  "peer": {
+    "auto": {
+      "char": "You peer intently about your surroundings.",
+      "others": "$n peers intently about the area, looking for thieves no doubt."
+    },
+    "found": {
+      "char": "You peer at $M quizzically.",
+      "others": "$n peers at $N quizzically.",
+      "vict": "$n peers at you quizzically."
+    },
+    "no_arg": {
+      "char": "You peer intently about your surroundings.",
+      "others": "$n peers intently about the area, looking for thieves no doubt."
+    }
+  },
+  "pet": {
+    "auto": {
+      "char": "You pat yourself on your head.  Aren't you proud?",
+      "others": "$n pats $mself on the head.  $e is proud of $mself!"
+    },
+    "found": {
+      "char": "You pat $N on $S head.",
+      "others": "$n pats $N on $S head.",
+      "vict": "$n pats you on your head."
+    },
+    "no_arg": {
+      "char": "Pat whom?",
+      "others": ""
+    }
+  },
+  "pinch": {
+    "auto": {
+      "char": "You need a pinch of salt.",
+      "others": "$n needs a pinch of salt."
+    },
+    "found": {
+      "char": "You pinch $S rosy cheeks.",
+      "others": "$n pinches $N's rosy cheeks.",
+      "vict": "$n pinches your chubby cheeks."
+    },
+    "no_arg": {
+      "char": "You toss a pinch of salt over your shoulder.",
+      "others": "$n tosses a pinch of salt over $s shoulder."
+    }
+  },
+  "point": {
+    "auto": {
+      "char": "You point proudly at yourself.",
+      "others": "$n points proudly at $mself."
+    },
+    "found": {
+      "char": "You point at $M accusingly.",
+      "others": "$n points at $N accusingly.",
+      "vict": "$n points at you accusingly."
+    },
+    "no_arg": {
+      "char": "Point at whom?",
+      "others": ""
+    }
+  },
+  "poke": {
+    "auto": {
+      "char": "You poke yourself in the ribs, feeling very silly.",
+      "others": "$n pokes $mself in the ribs, looking very sheepish."
+    },
+    "found": {
+      "char": "You poke $M in the ribs.",
+      "others": "$n pokes $N in the ribs.",
+      "vict": "$n pokes you in the ribs."
+    },
+    "no_arg": {
+      "char": "Poke whom?",
+      "others": ""
+    }
+  },
+  "ponder": {
+    "auto": {
+      "char": "You ponder your sexuality.",
+      "others": "$n ponders $s sexuality."
+    },
+    "found": {
+      "char": "You ponder what $N just did.",
+      "others": "$n ponders what $N just did.",
+      "vict": "$n ponders what you just did."
+    },
+    "no_arg": {
+      "char": "You ponder the question.",
+      "others": "$n sits down and thinks deeply."
+    }
+  },
+  "pounce": {
+    "auto": {
+      "char": "You attempt to pounce on yourself. Not too swift...",
+      "others": "$n attempts to pounce on $mself! Not too swift..."
+    },
+    "found": {
+      "char": "You pounce onto $N's lap playfully.",
+      "others": "$n pounces onto $N's lap playfully.",
+      "vict": "$n crouches low to the ground, looking for someone to pounce on..."
+    },
+    "no_arg": {
+      "char": "You crouch low to the ground, looking for someone to pounce on...",
+      "others": "$n pounces up and down like a mad man!"
+    }
+  },
+  "pout": {
+    "auto": {
+      "char": "Ah, don't take it so hard.",
+      "others": "$n pouts."
+    },
+    "found": {
+      "char": "Ah, don't take it so hard.",
+      "others": "$n pouts at $N.  What did $N do?",
+      "vict": "$n pouts at you.  What did you do to $m?"
+    },
+    "no_arg": {
+      "char": "Ah, don't take it so hard.",
+      "others": "$n pouts."
+    }
+  },
+  "pray": {
+    "auto": {
+      "char": "Talk about narcissism ...",
+      "others": "$n mumbles a prayer to $mself."
+    },
+    "found": {
+      "char": "You crawl in the dust before $M.",
+      "others": "$n falls down and grovels in the dirt before $N.",
+      "vict": "$n kisses the dirt at your feet."
+    },
+    "no_arg": {
+      "char": "You feel righteous, and maybe a little foolish.",
+      "others": "$n begs and grovels to the powers that be."
+    }
+  },
+  "prod": {
+    "auto": {
+      "char": "You prod yourself. Ummm...",
+      "others": "$n is prodding $mself. Kinky."
+    },
+    "found": {
+      "char": "$n prods $N.",
+      "others": "$n is prodding $N.",
+      "vict": "$n is prodding you. Wonder what $e wants now."
+    },
+    "no_arg": {
+      "char": "You look around for someone to prod.",
+      "others": "$n looks around for someone to prod."
+    }
+  },
+  "puke": {
+    "auto": {
+      "char": "You puke on yourself.",
+      "others": "$n pukes on $s clothes."
+    },
+    "found": {
+      "char": "You puke on $M.",
+      "others": "$n pukes on $N.",
+      "vict": "$n spews vomit and pukes all over your clothing!"
+    },
+    "no_arg": {
+      "char": "You puke ... chunks everywhere!",
+      "others": "$n pukes."
+    }
+  },
+  "raise": {
+    "auto": {
+      "char": "You raise your hand in response.",
+      "others": "$n raises $s hand in response."
+    },
+    "found": {
+      "char": "You raise your hand in response.",
+      "others": "$n raises $s hand in response.",
+      "vict": "$n raises $s hand in response to you."
+    },
+    "no_arg": {
+      "char": "You raise your hand in response.",
+      "others": "$n raises $s hand in response."
+    }
+  },
+  "rofl": {
+    "auto": {
+      "char": "You roll on the floor and laugh at yourself.",
+      "others": "$n laughs at $mself.  Join in the fun."
+    },
+    "found": {
+      "char": "You laugh your head off at $S remark.",
+      "others": "$n rolls on the floor laughing at $N's remark.",
+      "vict": "$n can't stop laughing at your remark."
+    },
+    "no_arg": {
+      "char": "You roll on the floor laughing hysterically.",
+      "others": "$n rolls on the floor laughing hysterically."
+    }
+  },
+  "roflmao": {
+    "auto": {
+      "char": "You roll on the floor, laughing your ass off at yourself!",
+      "others": "$n rolls on the floor, laughing $s ass off at $mself...Strange."
+    },
+    "found": {
+      "char": "You roll on the floor, laughing your ass off at $M!",
+      "others": "$n rolls on the floor, laughing $s ass off at $N!",
+      "vict": "$n rolls on the floor, laughing $s ass off at YOU!"
+    },
+    "no_arg": {
+      "char": "You roll on the floor, laughing your ass off!",
+      "others": "$n rolls on the floor, laughing $s ass off!"
+    }
+  },
+  "roll": {
+    "auto": {
+      "char": "You roll your eyes at yourself.",
+      "others": "$n rolls $s eyes at $mself."
+    },
+    "found": {
+      "char": "You roll your eyes at $M.",
+      "others": "$n rolls $s eyes at $N.",
+      "vict": "$n rolls $s eyes at you."
+    },
+    "no_arg": {
+      "char": "You roll your eyes.",
+      "others": "$n rolls $s eyes."
+    }
+  },
+  "ruffle": {
+    "auto": {
+      "char": "You ruffle your hair.",
+      "others": "$n ruffles $s hair."
+    },
+    "found": {
+      "char": "You ruffle $N's hair playfully.",
+      "others": "$n ruffles $N's hair playfully.",
+      "vict": "$n ruffles your hair playfully."
+    },
+    "no_arg": {
+      "char": "You've got to ruffle SOMEONE.",
+      "others": ""
+    }
+  },
+  "salute": {
+    "auto": {
+      "char": "Huh?",
+      "others": ""
+    },
+    "found": {
+      "char": "You salute $M.",
+      "others": "$n salutes $N.",
+      "vict": "$n salutes you."
+    },
+    "no_arg": {
+      "char": "You salute smartly.",
+      "others": "$n salutes smartly."
+    }
+  },
+  "sarc": {
+    "auto": {
+      "char": "You are being sarcastic with yourself.",
+      "others": "$n is being sarcastic with $mself. What a wacko!"
+    },
+    "found": {
+      "char": "Your biting sarcasm emasculates $N.",
+      "others": "$n is being sarcastic with $N.",
+      "vict": "You are emasculated by $n's biting sarcasm."
+    },
+    "no_arg": {
+      "char": "Your lips drip with sarcasm.",
+      "others": "$n is dripping with sarcasm."
+    }
+  },
+  "scream": {
+    "auto": {
+      "char": "You scream at yourself.  Yes, that's ONE way of relieving tension!",
+      "others": "$n screams loudly at $mself!  Is there a full moon up?"
+    },
+    "found": {
+      "char": "ARRRRRRRRRRGH!!!!!  Yes, it MUST have been $S fault!!!",
+      "others": "$n screams loudly at $N.  Better leave before $e blames you, too!!!",
+      "vict": "$n screams at you!  That's not nice!  *sniff*"
+    },
+    "no_arg": {
+      "char": "ARRRRRRRRRRGH!!!!!",
+      "others": "$n screams loudly!"
+    }
+  },
+  "shake": {
+    "auto": {
+      "char": "You are shaken by yourself.",
+      "others": "$n shakes and quivers like a bowl full of jelly."
+    },
+    "found": {
+      "char": "You shake $S hand.",
+      "others": "$n shakes $N's hand.",
+      "vict": "$n shakes your hand."
+    },
+    "no_arg": {
+      "char": "You shake your head.",
+      "others": "$n shakes $s head."
+    }
+  },
+  "shrug": {
+    "auto": {
+      "char": "You shrug to yourself.",
+      "others": "$n shrugs to $mself.  What a strange person."
+    },
+    "found": {
+      "char": "You shrug in response to $s question.",
+      "others": "$n shrugs in response to $N's question.",
+      "vict": "$n shrugs in respopnse to your question."
+    },
+    "no_arg": {
+      "char": "You shrug.",
+      "others": "$n shrugs helplessly."
+    }
+  },
+  "sigh": {
+    "auto": {
+      "char": "You sigh at yourself.  You MUST be lonely.",
+      "others": "$n sighs at $mself.  What a sorry sight."
+    },
+    "found": {
+      "char": "You sigh as you think of $M.",
+      "others": "$n sighs at the sight of $N.",
+      "vict": "$n sighs as $e thinks of you.  Touching, huh?"
+    },
+    "no_arg": {
+      "char": "You sigh.",
+      "others": "$n sighs loudly."
+    }
+  },
+  "slap": {
+    "auto": {
+      "char": "You slap yourself across the face.",
+      "others": "$n slaps $mself across the face."
+    },
+    "found": {
+      "char": "You slap $M.",
+      "others": "$n slaps $N.",
+      "vict": "$n slaps you."
+    },
+    "no_arg": {
+      "char": "You look around for someone to slap.",
+      "others": "$n looks around for someone to slap."
+    }
+  },
+  "slither": {
+    "auto": {
+      "char": "You slither around the room, peering up girls' dresses!",
+      "others": "$n slithers around the room, peering up girls' dresses!"
+    },
+    "found": {
+      "char": "You slither up next to $N.",
+      "others": "$n slithers up next to $N.",
+      "vict": "$n slithers up next to you."
+    },
+    "no_arg": {
+      "char": "You slither away.",
+      "others": "$n slithers away."
+    }
+  },
+  "slobber": {
+    "auto": {
+      "char": "You slobber all down your front.",
+      "others": "$n slobbers all over $mself."
+    },
+    "found": {
+      "char": "You slobber all over $M.",
+      "others": "$n slobbers all over $N.",
+      "vict": "$n slobbers all over you."
+    },
+    "no_arg": {
+      "char": "You slobber all over the floor.",
+      "others": "$n slobbers all over the floor."
+    }
+  },
+  "smile": {
+    "auto": {
+      "char": "You smile at yourself.",
+      "others": "$n smiles at $mself."
+    },
+    "found": {
+      "char": "You smile at $M.",
+      "others": "$n beams a smile at $N.",
+      "vict": "$n smiles at you."
+    },
+    "no_arg": {
+      "char": "You smile happily.",
+      "others": "$n smiles happily."
+    }
+  },
+  "smirk": {
+    "auto": {
+      "char": "You smirk at yourself.  Okay ...",
+      "others": "$n smirks at $s own 'wisdom'."
+    },
+    "found": {
+      "char": "You smirk at $S saying.",
+      "others": "$n smirks at $N's saying.",
+      "vict": "$n smirks at your saying."
+    },
+    "no_arg": {
+      "char": "You smirk.",
+      "others": "$n smirks."
+    }
+  },
+  "smite": {
+    "auto": {
+      "char": "You smite yourself.",
+      "others": "$n curses $mself with smite."
+    },
+    "found": {
+      "char": "You smite $M.",
+      "others": "$n looks down upon $N and says, \"I smite thee!\"",
+      "vict": "$n towers over you and says, \"I smite thee!\""
+    },
+    "no_arg": {
+      "char": "You look around for someone to smite.",
+      "others": "$n is taking volunteers to smite."
+    }
+  },
+  "smooch": {
+    "auto": {
+      "char": "You smooch yourself.",
+      "others": "$n smooches $mself.  Yuck."
+    },
+    "found": {
+      "char": "You give $M a nice, wet smooch.",
+      "others": "$n and $N are smooching in the corner.",
+      "vict": "$n smooches you passionately on the lips."
+    },
+    "no_arg": {
+      "char": "You are searching for someone to smooch.",
+      "others": "$n is looking for someone to smooch."
+    }
+  },
+  "sneeze": {
+    "auto": {
+      "char": "",
+      "others": ""
+    },
+    "found": {
+      "char": "",
+      "others": "",
+      "vict": ""
+    },
+    "no_arg": {
+      "char": "Gesundheit!",
+      "others": "$n sneezes."
+    }
+  },
+  "snicker": {
+    "auto": {
+      "char": "You snicker at your own evil thoughts.",
+      "others": "$n snickers at $s own evil thoughts."
+    },
+    "found": {
+      "char": "You snicker with $M about your shared secret.",
+      "others": "$n snickers with $N about their shared secret.",
+      "vict": "$n snickers with you about your shared secret."
+    },
+    "no_arg": {
+      "char": "You snicker softly.",
+      "others": "$n snickers softly."
+    }
+  },
+  "sniff": {
+    "auto": {
+      "char": "You sniff sadly at your lost opportunities.",
+      "others": "$n sniffs sadly at $mself.  Something MUST be bothering $m."
+    },
+    "found": {
+      "char": "You sniff sadly at the way $E is treating you.",
+      "others": "$n sniffs sadly at the way $N is treating $m.",
+      "vict": "$n sniffs sadly at the way you are treating $m."
+    },
+    "no_arg": {
+      "char": "You sniff sadly. *SNIFF*",
+      "others": "$n sniffs sadly."
+    }
+  },
+  "snort": {
+    "auto": {
+      "char": "",
+      "others": ""
+    },
+    "found": {
+      "char": "",
+      "others": "",
+      "vict": ""
+    },
+    "no_arg": {
+      "char": "You snort at the thought.",
+      "others": "$n snorts at the thought."
+    }
+  },
+  "snuggle": {
+    "auto": {
+      "char": "You snuggle up into a little ball.",
+      "others": "$n snuggles up into a little ball."
+    },
+    "found": {
+      "char": "You snuggle up against $M lovingly.",
+      "others": "$n snuggles up against $N in a loving fashion.",
+      "vict": "$n snuggles against you in a loving fashion."
+    },
+    "no_arg": {
+      "char": "You look for someone to snuggle with.",
+      "others": "$n is in a snuggling mood."
+    }
+  },
+  "spank": {
+    "auto": {
+      "char": "You spank yourself.  Kinky!",
+      "others": "$n spanks $mself.  Kinky!"
+    },
+    "found": {
+      "char": "You spank $M playfully.",
+      "others": "$n spanks $N playfully.",
+      "vict": "$n spanks you playfully.  OUCH!"
+    },
+    "no_arg": {
+      "char": "Spank whom?",
+      "others": ""
+    }
+  },
+  "squeeze": {
+    "auto": {
+      "char": "You squeeze yourself - try to relax a little!",
+      "others": "$n squeezes $mself."
+    },
+    "found": {
+      "char": "You squeeze $M fondly.",
+      "others": "$n squeezes $N fondly.",
+      "vict": "$n squeezes you fondly."
+    },
+    "no_arg": {
+      "char": "Where, what, how, whom?",
+      "others": ""
+    }
+  },
+  "strip": {
+    "auto": {
+      "char": "You show some of your shoulder as you begin your performance.",
+      "others": "$n shows $s bare shoulder and glances seductively around the room."
+    },
+    "found": {
+      "char": "You show some of your shoulder as you begin your performance.",
+      "others": "$n shows $s bare shoulder and glances seductively at $N.",
+      "vict": "$n shows $s bare shoulder and glances seductively at you."
+    },
+    "no_arg": {
+      "char": "You show some of your shoulder as you begin your performance.",
+      "others": "$n shows $s bare shoulder and glances seductively around the room."
+    }
+  },
+  "strut": {
+    "auto": {
+      "char": "You strut to yourself, lost in your own world.",
+      "others": "$n struts to $mself, lost in $s own world."
+    },
+    "found": {
+      "char": "You strut to get $S attention.",
+      "others": "$n struts, hoping to get $N's attention.",
+      "vict": "$n struts, hoping to get your attention."
+    },
+    "no_arg": {
+      "char": "Strut your stuff.",
+      "others": "$n struts proudly."
+    }
+  },
+  "subzero": {
+    "auto": {
+      "char": "You rip your head off and hold it in the air. FATALITY.",
+      "others": "$n rips his head off and holds it in the air. FATALITY."
+    },
+    "found": {
+      "char": "You rip off $N's head and hold it in the air. FATALITY.",
+      "others": "$n rips off $N's head and holds it in the air. FATALITY",
+      "vict": "$n rips your head off and holds it in the air. FATALITY."
+    },
+    "no_arg": {
+      "char": "You say in a booming voice 'FINISH HIM!'",
+      "others": "$n says in a booming voice 'FINISH HIM!'"
+    }
+  },
+  "swoon": {
+    "auto": {
+      "char": "You swoon in ecstacy.",
+      "others": "$n swoons in ecstacy."
+    },
+    "found": {
+      "char": "You swoon in ecstacy at the thought of $M.",
+      "others": "$n swoons in ecstacy at the thought of $N.",
+      "vict": "$n swoons in ecstacy as $e thinks of you."
+    },
+    "no_arg": {
+      "char": "You swoon in ecstacy.",
+      "others": "$n swoons in ecstacy."
+    }
+  },
+  "tackle": {
+    "auto": {
+      "char": "You wrap your arms around yourself, and throw yourself to the ground.",
+      "others": "$n wraps $s arms around $mself and brings $mself down!?"
+    },
+    "found": {
+      "char": "You run over to $M and bring $M down!",
+      "others": "$n runs over to $N and tackles $M to the ground!",
+      "vict": "$n runs over to you and tackles you to the ground!"
+    },
+    "no_arg": {
+      "char": "You can't tackle the AIR!",
+      "others": ""
+    }
+  },
+  "thank": {
+    "auto": {
+      "char": "You thank yourself since nobody else wants to !",
+      "others": "$n thanks $mself since you won't."
+    },
+    "found": {
+      "char": "You thank $N heartily.",
+      "others": "$n thanks $N heartily.",
+      "vict": "$n thanks you heartily."
+    },
+    "no_arg": {
+      "char": "Thank you too.",
+      "others": ""
+    }
+  },
+  "think": {
+    "auto": {
+      "char": "You think about times past and friends forgotten.",
+      "others": "$n thinks deeply and is lost in thought."
+    },
+    "found": {
+      "char": "You think about times past and friends forgotten.",
+      "others": "$n thinks deeply and is lost in thought.",
+      "vict": "$n thinks deeply and is lost in thought.  Maybe $e is thinking of you?"
+    },
+    "no_arg": {
+      "char": "You think about times past and friends forgotten.",
+      "others": "$n thinks deeply and is lost in thought."
+    }
+  },
+  "tickle": {
+    "auto": {
+      "char": "You tickle yourself, how funny!",
+      "others": "$n tickles $mself."
+    },
+    "found": {
+      "char": "You tickle $N - $E starts giggling.",
+      "others": "$n tickles $N - $E starts giggling.",
+      "vict": "$n tickles you - hee hee hee."
+    },
+    "no_arg": {
+      "char": "Whom do you want to tickle?",
+      "others": ""
+    }
+  },
+  "twiddle": {
+    "auto": {
+      "char": "You twiddle your ears like Dumbo.",
+      "others": "$n twiddles $s own ears like Dumbo."
+    },
+    "found": {
+      "char": "You twiddle $S ears.",
+      "others": "$n twiddles $N's ears.",
+      "vict": "$n twiddles your ears."
+    },
+    "no_arg": {
+      "char": "You patiently twiddle your thumbs.",
+      "others": "$n patiently twiddles $s thumbs."
+    }
+  },
+  "undress": {
+    "auto": {
+      "char": "You look at yourself and wish you were naked.",
+      "others": "$n looks at $mself and wishes they were naked."
+    },
+    "found": {
+      "char": "You slowly undress $M with your eyes.",
+      "others": "$n slowly undresses $N with their eyes.",
+      "vict": "$n looks at you and begins to undress you with their eyes!"
+    },
+    "no_arg": {
+      "char": "You slowly begin to remove your clothes...kinky!",
+      "others": "$n slowly begins to undress in front of you, OooOOo!"
+    }
+  },
+  "wave": {
+    "auto": {
+      "char": "Are you going on adventures as well?",
+      "others": "$n waves goodbye to $mself."
+    },
+    "found": {
+      "char": "You wave goodbye to $N.",
+      "others": "$n waves goodbye to $N.",
+      "vict": "$n waves goodbye to you.  Have a good journey."
+    },
+    "no_arg": {
+      "char": "You wave.",
+      "others": "$n waves happily."
+    }
+  },
+  "wedgie": {
+    "auto": {
+      "char": "You delight in pinning your underwear to the sky.",
+      "others": "$n wedgies $mself and revels with glee."
+    },
+    "found": {
+      "char": "You wedgie $M.  Must be fun! ",
+      "others": "$n wedgies $N to the heavens.",
+      "vict": "$n wedgies you!  Ouch!"
+    },
+    "no_arg": {
+      "char": "You look around for someone to wedgie.",
+      "others": "$n is looking around for someone to wedgie!  Run!"
+    }
+  },
+  "whine": {
+    "auto": {
+      "char": "You whine like the great whiners of the century.",
+      "others": "$n whines 'I want to be a god already.  I need more hitpoints..I...'"
+    },
+    "found": {
+      "char": "You whine to $M like the great whiners of the century.",
+      "others": "$n whines to $N 'I want to be an immortal already.  I need more hp...I..'",
+      "vict": "$n whines to you 'I want to be an immortal already.  I need more hp...I...'"
+    },
+    "no_arg": {
+      "char": "Would you like some cheese with that whine?",
+      "others": "$n whines 'I want to be a god already.  I need more hitpoints..I...'"
+    }
+  },
+  "whistle": {
+    "auto": {
+      "char": "You whistle at yourself...you're beautiful!",
+      "others": "$n whistles at $mself, since nobody else will."
+    },
+    "found": {
+      "char": "You whistle at the sight of $M.",
+      "others": "$n whistle at the sight of $N.",
+      "vict": "$n whistles at the sight of you, woohoo!"
+    },
+    "no_arg": {
+      "char": "You whistle appreciatively.",
+      "others": "$n whistles appreciatively."
+    }
+  },
+  "wiggle": {
+    "auto": {
+      "char": "You wiggle your bottom like a bowl of Jell-O.",
+      "others": "$n wiggles $s bottom like Jell-O."
+    },
+    "found": {
+      "char": "You wiggle your bottom at $M.",
+      "others": "$n wiggles $s bottom towards $N.",
+      "vict": "$n wiggles $s bottom at you."
+    },
+    "no_arg": {
+      "char": "You wiggle your bottom.",
+      "others": "$n wiggles $s bottom."
+    }
+  },
+  "wince": {
+    "auto": {
+      "char": "You wince at yourself.  Ouch!",
+      "others": "$n winces at $mself.  Ouch!"
+    },
+    "found": {
+      "char": "You wince at $M.",
+      "others": "$n winces at $N.",
+      "vict": "$n winces at you."
+    },
+    "no_arg": {
+      "char": "You wince.  Ouch!",
+      "others": "$n winces.  Ouch!"
+    }
+  },
+  "wink": {
+    "auto": {
+      "char": "You wink at yourself ?? - what are you up to ?",
+      "others": "$n winks at $mself - something strange is going on..."
+    },
+    "found": {
+      "char": "You wink suggestively at $N.",
+      "others": "$n winks at $N.",
+      "vict": "$n winks suggestively at you."
+    },
+    "no_arg": {
+      "char": "You wink suggestively.",
+      "others": "$n winks suggestively."
+    }
+  },
+  "yawn": {
+    "auto": {
+      "char": "You must be tired.",
+      "others": "$n yawns."
+    },
+    "found": {
+      "char": "You must be tired.",
+      "others": "$n yawns at $N.  Maybe you should let them go to bed?",
+      "vict": "$n yawns at you.  Maybe $e wants you to go to bed with $m?"
+    },
+    "no_arg": {
+      "char": "You must be tired.",
+      "others": "$n yawns."
+    }
+  }
+}
