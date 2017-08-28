@@ -1,0 +1,915 @@
+#AREADATA
+Name        [      ] Facility            Ristowe~
+Levels      0 0
+Builders    Ristowe~
+VNUMs       1000 1099
+Security    113
+Recall      25000
+Flags       16
+Color       6
+End
+
+
+
+#MOBILES
+#1000
+standing soviet soldier~
+a soviet soldier~
+&gA soviet soldier stands around staring aimlessly.
+~
+~
+16483 0 0 0 S
+0 0 0 0d0+0 0d0+0
+0 0 0 0
+0 0 1
+0 0 0
+#1001
+patrolling soviet soldier~
+a soviet soldier~
+&gA soviet soldier patrols the area.
+~
+~
+16481 0 0 0 S
+0 0 0 0d0+0 0d0+0
+0 0 0 0
+0 0 1
+0 0 0
+#0
+
+
+
+#OBJECTS
+#1000
+toilet~
+a toilet~
+&WA dirty porcelain toilet protrudes from the back wall.~
+~
+17 0 0 0 0 0
+50~ 25~ 0~ 1~
+0 0 0 0 0
+0 0
+reserved~
+0 0
+0 0 0
+#1001
+wooden crate~
+a wooden crate~
+&OA wooden crate sits in the corner.~
+~
+15 0 0 0 0 0
+1000~ 5~ 0~ 0~
+0 0 0 0 0
+0 0
+reserved~
+0 0
+0 0 0
+#1002
+urinal~
+a urinal~
+&WA cracked and chipped urinal hangs off the wall.~
+~
+17 0 0 0 0 0
+10~ 5~ 0~ 1~
+0 0 0 0 0
+0 0
+reserved~
+0 0
+0 0 0
+#1003
+sink faucet~
+a leaky faucet~
+&WA dirty, dripping faucet sticks out of the wall.~
+~
+25 0 0 0 0 0
+0~ 0~ 0~ 0~
+0 0 0 0 0
+0 0
+reserved~
+0 0
+0 0 0
+#0
+
+
+
+#ROOMDATA
+#1000
+Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  
+~
+0 0 0
+Rd     0
+D0
+~
+~
+0 0 1001
+S
+#1001
+Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  
+~
+0 0 0
+Rd     0
+D0
+~
+~
+0 0 1003
+D2
+~
+~
+0 0 1000
+D3
+~
+~
+0 0 1002
+S
+#1002
+Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  
+~
+0 0 0
+Rd     0
+D1
+~
+~
+0 0 1001
+D3
+~
+~
+0 0 1005
+S
+#1003
+Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  
+~
+0 0 0
+Rd     0
+D0
+~
+~
+0 0 1004
+D2
+~
+~
+0 0 1001
+S
+#1004
+Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  
+~
+0 0 0
+Rd     0
+D0
+~
+~
+0 0 1009
+D2
+~
+~
+0 0 1003
+S
+#1005
+Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  
+~
+0 0 0
+Rd     0
+D0
+~
+~
+0 0 1006
+D1
+~
+~
+0 0 1002
+S
+#1006
+Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  
+~
+0 0 0
+Rd     0
+D0
+~
+~
+0 0 1007
+D2
+~
+~
+0 0 1005
+S
+#1007
+Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  The vent continues to
+the north, but is inaccessible due to a large opening in the floor, leading
+to what looks to be a bathroom stall.  
+~
+0 0 0
+Rd     0
+D2
+~
+~
+0 0 1006
+D5
+~
+~
+0 0 1008
+S
+#1008
+Bathroom Stall~
+This cramped bathroom stall looks like it hasn't been cleaned in ages. 
+The once white tile floor has turned to an off-gray color due to age and
+grime, and a faint hint of mold can be detected under the other more
+assaulting scents in the room.  
+~
+0 0 0
+Rd     0
+D3
+~
+~
+3 0 1013
+D4
+~
+~
+0 0 1007
+S
+#1009
+Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  
+~
+0 0 0
+Rd     0
+D0
+~
+~
+0 0 1010
+D2
+~
+~
+0 0 1004
+S
+#1010
+Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  
+~
+0 0 0
+Rd     0
+D0
+~
+~
+0 0 1011
+D2
+~
+~
+0 0 1009
+S
+#1011
+Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  
+~
+0 0 0
+Rd     0
+D2
+~
+~
+0 0 1010
+D3
+~
+~
+0 0 1012
+S
+#1012
+Vent~
+&wThe ventilation system of the Arkangel Chemical Weapons Facility is
+unusually accessible.  Its aluminum frame is large enough to fit even the
+most robust creature, albeit in a crawling position.  Western passage
+through the vent is blocked by a large metal grate.  
+~
+0 0 0
+Rd     0
+D1
+~
+~
+0 0 1011
+S
+#1013
+Bathroom~
+This filthy bathroom hasn't received any attention from janitorial staff
+in years.  The floors are covered in a thin layer of dirt and mold, the
+walls are damaged beyond repair, and the smell is inescapable.  
+~
+0 0 0
+Rd     0
+D0
+~
+~
+0 0 1014
+D1
+~
+~
+3 0 1008
+D2
+~
+~
+0 0 1015
+S
+#1014
+Bathroom~
+The north wall of the bathroom is lined with a bank of barely working
+sinks.  Usual bathroom amenities like soap and towels are nowhere in sight. 
+The faint sound of dripping faucets can be heard alongside the occasional
+clanking of rusty pipes.
+~
+0 0 0
+Rd     0
+D1
+~
+~
+3 0 1017
+D2
+~
+~
+0 0 1013
+D3
+~
+~
+0 0 1019
+S
+#1015
+Bathroom~
+This filthy bathroom hasn't received any attention from janitorial staff
+in years.  The floors are covered in a thin layer of dirt and mold, the
+walls are damaged beyond repair, and the smell is inescapable.  
+~
+0 0 0
+Rd     0
+D0
+~
+~
+0 0 1013
+D1
+~
+~
+3 0 1018
+D2
+~
+~
+3 0 1024
+D3
+~
+~
+0 0 1020
+S
+#1016
+Bathroom~
+This filthy bathroom hasn't received any attention from janitorial staff
+in years.  The floors are covered in a thin layer of dirt and mold, the
+walls are damaged beyond repair, and the smell is inescapable.
+~
+0 0 0
+Rd     0
+D0
+~
+~
+0 0 1019
+D2
+~
+~
+0 0 1020
+D3
+~
+~
+3 0 1021
+S
+#1017
+Bathroom Stall~
+This cramped bathroom stall looks like it hasn't been cleaned in ages. 
+The once white tile floor has turned to an off-gray color due to age and
+grime, and a faint hint of mold can be detected under the other more
+assaulting scents in the room.  
+~
+0 0 0
+Rd     0
+D3
+~
+~
+3 0 1014
+S
+#1018
+Bathroom Stall~
+This cramped bathroom stall looks like it hasn't been cleaned in ages. 
+The once white tile floor has turned to an off-gray color due to age and
+grime, and a faint hint of mold can be detected under the other more
+assaulting scents in the room.
+~
+0 0 0
+Rd     0
+D3
+~
+~
+0 0 1015
+S
+#1019
+Bathroom~
+The north wall of the bathroom is lined with a bank of barely working
+sinks.  Usual bathroom amenities like soap and towels are nowhere in sight. 
+The faint sound of dripping faucets can be heard alongside the occasional
+clanking of rusty pipes.  
+~
+0 0 0
+Rd     0
+D1
+~
+~
+0 0 1014
+D2
+~
+~
+0 0 1016
+D3
+~
+~
+3 0 1022
+S
+#1020
+Bathroom~
+This filthy bathroom hasn't received any attention from janitorial staff
+in years.  The floors are covered in a thin layer of dirt and mold, the
+walls are damaged beyond repair, and the smell is inescapable.  A few
+cracked and chipped urinals hang off the south wall.  
+~
+0 0 0
+Rd     0
+D0
+~
+~
+0 0 1016
+D1
+~
+~
+0 0 1015
+D3
+~
+~
+3 0 1023
+S
+#1021
+Bathroom Stall~
+This cramped bathroom stall looks like it hasn't been cleaned in ages. 
+The once white tile floor has turned to an off-gray color due to age and
+grime, and a faint hint of mold can be detected under the other more
+assaulting scents in the room.
+~
+0 0 0
+Rd     0
+D1
+~
+~
+3 0 1016
+S
+#1022
+Bathroom Stall~
+This cramped bathroom stall looks like it hasn't been cleaned in ages. 
+The once white tile floor has turned to an off-gray color due to age and
+grime, and a faint hint of mold can be detected under the other more
+assaulting scents in the room.
+~
+0 0 0
+Rd     0
+D1
+~
+~
+3 0 1019
+S
+#1023
+Bathroom Stall~
+This cramped bathroom stall looks like it hasn't been cleaned in ages. 
+The once white tile floor has turned to an off-gray color due to age and
+grime, and a faint hint of mold can be detected under the other more
+assaulting scents in the room.
+~
+0 0 0
+Rd     0
+D1
+~
+~
+0 0 1020
+S
+#1024
+Bathroom Entrance~
+This plain room sits between the bathroom and the rest of the facility,
+playing the part of airlock to keep the scent of mold and filth where it
+belongs.  
+~
+0 0 0
+Rd     0
+D0
+~
+~
+3 0 1015
+D3
+~
+~
+3 0 1025
+S
+#1025
+Landing~
+From the top of a large staircase, this small landing looks down over the
+main hallway of the facility, where a few soldiers can be seen patrolling
+and milling about.  The area below looks to be heavily guarded, with clearly
+locked rooms and armed guards at every corner.  
+~
+0 0 0
+Rd     0
+D1
+~
+~
+3 0 1024
+D2
+~
+~
+0 0 1026
+D5
+~
+~
+0 0 1027
+S
+#1026
+Landing~
+This small landing looks down over the main hallway of the facility, where
+a few soldiers can be seen patrolling and milling about.  The area below
+looks to be heavily guarded, with clearly locked rooms and armed guards at
+every corner.
+~
+0 0 0
+Rd     0
+D0
+~
+~
+0 0 1025
+D2
+~
+~
+0 0 1028
+S
+#1027
+Hallway~
+~
+0 0 0
+Rd     0
+D0
+~
+~
+3 0 1031
+D1
+~
+~
+0 0 1032
+D3
+~
+~
+0 0 1033
+D4
+~
+~
+0 0 1025
+S
+#1028
+Landing~
+This small landing looks down over the main hallway of the facility, where
+a few soldiers can be seen patrolling and milling about.  The area below
+looks to be heavily guarded, with clearly locked rooms and armed guards at
+every corner.
+~
+0 0 0
+Rd     0
+D0
+~
+~
+0 0 1026
+D1
+~
+~
+3 0 1029
+S
+#1029
+Landing~
+At the top of a small staircase, this small landing looks down over a
+back hallway of the facility.  The area below is significantly less guarded
+than the main hallway, with only one soldier standing barely at attention.  
+~
+0 0 0
+Rd     0
+D3
+~
+~
+3 0 1028
+D5
+~
+~
+0 0 1030
+S
+#1030
+Hallway~
+~
+0 0 0
+Rd     0
+D2
+~
+~
+0 0 1032
+D3
+~
+~
+3 0 1036
+D4
+~
+~
+0 0 1029
+S
+#1031
+Hallway~
+~
+0 0 0
+Rd     0
+D0
+~
+~
+0 0 1037
+D2
+~
+~
+3 0 1027
+S
+#1032
+Hallway~
+~
+0 0 0
+Rd     0
+D0
+~
+~
+0 0 1030
+D3
+~
+~
+3 0 1027
+S
+#1033
+Hallway~
+~
+0 0 0
+Rd     0
+D0
+~
+~
+3 0 1034
+D1
+~
+~
+0 0 1027
+D2
+~
+~
+3 0 1035
+D3
+~
+~
+0 0 1038
+S
+#1034
+Lab~
+~
+0 0 0
+Rd     0
+D2
+~
+~
+3 0 1033
+S
+#1035
+Control Room~
+~
+0 0 0
+Rd     0
+D0
+~
+~
+3 0 1033
+S
+#1036
+Hallway~
+~
+0 0 0
+Rd     0
+D1
+~
+~
+3 0 1030
+S
+#1037
+Hallway~
+~
+0 0 0
+Rd     0
+D2
+~
+~
+0 0 1031
+S
+#1038
+Hallway~
+~
+0 0 0
+Rd     0
+D0
+~
+~
+0 0 1039
+D1
+~
+~
+0 0 1033
+D2
+~
+~
+0 0 1040
+D3
+~
+~
+3 0 1041
+S
+#1039
+Alcove~
+~
+0 0 0
+Rd     0
+D2
+~
+~
+0 0 1038
+D3
+~
+~
+3 0 1042
+S
+#1040
+Hallway~
+~
+0 0 0
+Rd     0
+D0
+~
+~
+0 0 1038
+D1
+~
+~
+3 0 1043
+S
+#1041
+Lab~
+~
+0 0 0
+Rd     0
+D0
+~
+~
+3 0 1042
+D1
+~
+~
+3 0 1038
+S
+#1042
+Hallway~
+~
+0 0 0
+Rd     0
+D1
+~
+~
+3 0 1039
+D2
+~
+~
+3 0 1041
+S
+#1043
+Airlock~
+~
+0 0 0
+Rd     0
+D2
+~
+~
+3 0 1044
+D3
+~
+~
+3 0 1040
+S
+#1044
+Locker Room~
+~
+0 0 0
+Rd     0
+D0
+~
+~
+3 0 1043
+D1
+~
+~
+0 0 1045
+D2
+~
+~
+3 0 1046
+S
+#1045
+Locker Room~
+~
+0 0 0
+Rd     0
+D3
+~
+~
+0 0 1044
+S
+#1046
+Hallway~
+~
+0 0 0
+Rd     0
+D0
+~
+~
+3 0 1044
+S
+#0
+
+
+
+#SPECIALS
+S
+
+
+
+#RESETS
+O 0 1000 0 1008
+M 0 1000 1 1008
+O 0 1003 0 1014
+O 0 1000 0 1017
+O 0 1000 0 1018
+M 0 1000 1 1019
+O 0 1003 0 1019
+O 0 1002 0 1020
+O 0 1000 0 1021
+M 0 1000 1 1021
+O 0 1000 0 1022
+O 0 1000 0 1023
+O 0 1001 0 1028
+M 0 1000 1 1030
+M 0 1000 1 1031
+O 0 1001 0 1031
+M 0 1000 1 1034
+M 0 1000 1 1034
+M 0 1000 1 1035
+M 0 1000 1 1035
+M 0 1001 1 1038
+O 0 1001 0 1040
+M 0 1000 1 1040
+M 0 1000 1 1045
+M 0 1000 1 1045
+S
+
+
+
+#SHOPS
+0
+
+
+
+#$
