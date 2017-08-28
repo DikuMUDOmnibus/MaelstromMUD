@@ -141,7 +141,7 @@ void curl_json_push(const char* url, const char* payload, const char* method) {
       CURLcode res;
 
       headers = curl_slist_append(headers, "Content-Type: application/json");
-      headers = curl_slist_append(headers, "User-Agent: OASIS MUD");
+      headers = curl_slist_append(headers, "User-Agent: Maelstrom");
 
       curl_easy_setopt(curl, CURLOPT_URL, url);
       curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
@@ -196,7 +196,7 @@ char * curl_get(const char* url) {
   if ( (curl = curl_easy_init()) ) {
     CURLcode res;
 
-    headers = curl_slist_append(headers, "User-Agent: OASIS MUD");
+    headers = curl_slist_append(headers, "User-Agent: Maelstrom");
 
     curl_easy_setopt(curl, CURLOPT_URL, url);
     curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);

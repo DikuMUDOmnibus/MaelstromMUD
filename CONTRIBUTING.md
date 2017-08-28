@@ -1,6 +1,6 @@
 # How to contribute
 
-First off, thanks for taking the time to contribute! The following is a set of guidelines for contributing to OASIS MUD. These are just guidelines, not rules, so use your best judgement and feel free to propose changes to this document in a pull request.
+First off, thanks for taking the time to contribute! The following is a set of guidelines for contributing to Maelstrom. These are just guidelines, not rules, so use your best judgement and feel free to propose changes to this document in a pull request.
 
 ## Code of Conduct
 

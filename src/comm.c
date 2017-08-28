@@ -1503,7 +1503,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 						write_to_buffer( d, "Please email storm@netway.com to ", 0 );
 						write_to_buffer( d, "register your character.\n\r\n\r", 0 );
 						write_to_buffer( d, "One email address per character please.\n\r", 0 );
-						write_to_buffer( d, "Thank you, EnvyMud Staff.\n\r\n\r", 0 );
+						write_to_buffer( d, "Thank you, Maelstrom Staff.\n\r\n\r", 0 );
 					}
 
 					close_socket( d ) ;
@@ -2867,13 +2867,13 @@ bool check_ban( DESCRIPTOR_DATA *dnew, bool loggedin )
 				if ( !str_suffix( pban->name, dnew->host ) )
 				{
 					write_to_descriptor(
-							"You have been banned from Eye of the Storm.\n\r", 0, dnew );
+							"You have been banned from Maelstrom.\n\r", 0, dnew );
 				}
 			if ( !str_suffix( pban->name, dnew->host ) &&
 					!pban->user )
 			{
 				write_to_descriptor(
-						"Your site has been banned from Eye of the Storm.\n\r", 0, dnew );
+						"Your site has been banned from Maelstrom.\n\r", 0, dnew );
 			}
 			sprintf( log_buf, "%s!%s@%s being denied access.",
 					dnew->character ? dnew->character->name : "(unknown)",
@@ -2919,13 +2919,13 @@ bool check_newban( DESCRIPTOR_DATA *dnew, bool loggedin )
 				if ( !str_suffix( pban->name, dnew->host ) )
 				{
 					write_to_descriptor(
-							"You have been banned from making new characters on Eye of the Storm.\n\r", 0, dnew );
+							"You have been banned from making new characters on Maelstrom.\n\r", 0, dnew );
 				}
 			if ( !str_suffix( pban->name, dnew->host ) &&
 					!pban->user )
 			{
 				write_to_descriptor(
-						"Your site has been banned from making new characters on Eye of the Storm.\n\r", 0, dnew );
+						"Your site has been banned from making new characters on Maelstrom.\n\r", 0, dnew );
 			}
 			sprintf( log_buf, "%s!%s@%s being denied access.",
 					dnew->character ? dnew->character->name : "(unknown)",

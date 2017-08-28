@@ -19,7 +19,7 @@
  ***************************************************************************/
 
 /*
- * The current version of the OASIS
+ * The current version of Maelstrom
  */
 #define VERSION "1.0.2"
 
