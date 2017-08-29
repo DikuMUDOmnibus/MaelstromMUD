@@ -3031,7 +3031,7 @@ char *  crypt   args( ( const char *key, const char *salt ) );
 #define DOWN_TIME_FILE  "time.txt"              /* For automatic shutdown */
 #define AUTH_LIST       "auth.txt"              /* List of who auth who */
 #define BAN_LIST        "../banned.lst"         /* List of banned sites & users */
-#define CLAN_FILE       "../data/clan.dat"      /* For 'clans' */
+#define CLAN_FILE       "../data/clans.json"      /* For 'clans' */
 #define HOTREBOOT_FILE  "../data/hotreboot.dat" /* temporary data file used */
 #define NEWBIE_FILE     "../data/newbie.json"   /* Newbie help file */
 #define NOTE_FILE       "../data/notes.dat"     /* For 'notes' */

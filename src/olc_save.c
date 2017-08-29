@@ -237,39 +237,46 @@ void save_mobiles( FILE *fp, AREA_DATA *pArea )
 	return;
 }
 
-// TODO convert clans to json
 void save_clans( )
 {
-	FILE *fp;
 	CLAN_DATA *pClan;
+	json_t *obj = json_object();
+	char buffer[MAX_STRING_LENGTH];
 
-	if ( ( fp = fopen( CLAN_FILE, "w" ) ) == NULL )
-	{
+	for( pClan = clan_first; pClan; pClan = pClan->next ) {
+		sprintf(buffer, "%d", pClan->vnum);
+
+		json_object_set(obj, buffer, json_pack(
+			"{s:s, s:s, s:{s:s, s:s, s:s, s:s}, s:{s:i, s:i, s:i}, s:i, s:{s:i, s:i, s:i, s:i, s:i}, s:[i, i, i], s:i, s:s}",
+			"name", pClan->name,
+			"deity", pClan->diety,
+			"leaders",
+				"champ", pClan->champ,
+				"leader", pClan->leader,
+				"first", pClan->first,
+				"second", pClan->second,
+			"bankaccount",
+				"gold", pClan->bankaccount.gold,
+				"silver", pClan->bankaccount.silver,
+				"copper", pClan->bankaccount.copper,
+			"recall", pClan->recall,
+			"stats",
+				"members", pClan->members,
+				"pkills", pClan->pkills,
+				"mkills", pClan->mkills,
+				"pdeaths", pClan->pdeaths,
+				"mdeaths", pClan->mdeaths,
+			"objects", pClan->obj_vnum_1, pClan->obj_vnum_2, pClan->obj_vnum_3,
+			"settings", pClan->settings,
+			"description", pClan->description
+		));
+	}
+
+	if ( json_dump_file(obj, CLAN_FILE, JSON_SORT_KEYS | JSON_INDENT(2)) == -1 ) {
 		bug( "Save_clans: fopen", 0 );
-		perror( "area.lst" );
+		perror( CLAN_FILE );
 	}
-	else
-	{
-		for( pClan = clan_first; pClan; pClan = pClan->next )
-		{
-			fprintf( fp, "#%d\n",      pClan->vnum );
-			fprintf( fp, "%d %d %d\n", pClan->bankaccount.gold, pClan->bankaccount.silver, pClan->bankaccount.copper );
-			fprintf( fp, "%s~\n",      pClan->name );
-			fprintf( fp, "%s~\n",      pClan->diety );
-			fprintf( fp, "%s~\n",      pClan->description );
-			fprintf( fp, "%s~ %s~ %s~ %s~\n",  pClan->champ, pClan->leader, pClan->first, pClan->second );
-			fprintf( fp, "%d %d %d %d\n", pClan->ischamp, pClan->isleader, pClan->isfirst, pClan->issecond );
-			fprintf( fp, "%d\n",       pClan->recall );
-			fprintf( fp, "%d %d ",      pClan->pkills, pClan->mkills );
-			fprintf( fp, "%d\n",       pClan->members );
-			fprintf( fp, "%d %d\n",    pClan->pdeaths, pClan->mdeaths );
-			fprintf( fp, "%d %d %d\n", pClan->obj_vnum_1, pClan->obj_vnum_2, pClan->obj_vnum_3 );
-			fprintf( fp, "%d\n",     pClan->settings );
-		}
 
-		fprintf( fp, "#999\n\n" );
-		fclose( fp );
-	}
 	return;
 }
 

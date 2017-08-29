@@ -1,0 +1,32 @@
+{
+  "0": {
+    "bankaccount": {
+      "copper": 0,
+      "gold": 0,
+      "silver": 0
+    },
+    "deity": "",
+    "description": "",
+    "leaders": {
+      "champ": "",
+      "first": "",
+      "leader": "",
+      "second": ""
+    },
+    "name": "Unclanned",
+    "objects": [
+      1,
+      1,
+      1
+    ],
+    "recall": 25000,
+    "settings": 0,
+    "stats": {
+      "mdeaths": 0,
+      "members": 0,
+      "mkills": 0,
+      "pdeaths": 0,
+      "pkills": 0
+    }
+  }
+}

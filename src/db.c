@@ -1994,77 +1994,56 @@ void load_specials( FILE *fp )
 
 void load_clans( void )
 {
-	FILE      *fp;
-	CLAN_DATA *pClanIndex;
-	char letter;
+	CLAN_DATA *pClan;
+	json_t *obj;
+	json_error_t error;
 
-	if ( !( fp = fopen( CLAN_FILE, "r" ) ) )
+	obj = json_load_file(CLAN_FILE, 0, &error);
+
+	if ( !obj ) {
 		return;
-	fpArea = fp;
-	strcpy(strArea, CLAN_FILE);
-	for ( ; ; )
-	{
-		int  vnum;
-
-		letter				= fread_letter( fp );
-		if ( letter != '#' )
-		{
-			bug( "Load_clans: # not found.", 0 );
-			continue;
-		}
-
-		vnum				= fread_number( fp );
-		if ( vnum == 999 )
-			break;
-
-		fBootDb = FALSE;
-		if ( get_clan_index( vnum ) )
-		{
-			bug( "Load_clans: vnum %d duplicated.", vnum );
-			break;
-		}
-		fBootDb = TRUE;
-		pClanIndex			= alloc_perm( sizeof( *pClanIndex ));
-		pClanIndex->vnum		= vnum;
-		pClanIndex->bankaccount.gold	= fread_number( fp );
-		pClanIndex->bankaccount.silver  = fread_number( fp );
-		pClanIndex->bankaccount.copper  = fread_number( fp );
-		pClanIndex->name		= fread_string( fp );
-		pClanIndex->diety               = fread_string( fp );
-		pClanIndex->description         = fread_string( fp );
-		pClanIndex->champ               = fread_string( fp );
-
-		pClanIndex->leader              = fread_string( fp );
-		pClanIndex->first               = fread_string( fp );
-		pClanIndex->second              = fread_string( fp );
-		pClanIndex->ischamp             = fread_number( fp );
-		pClanIndex->isleader            = fread_number( fp );
-		pClanIndex->isfirst             = fread_number( fp );
-		pClanIndex->issecond            = fread_number( fp );
-		pClanIndex->recall		= fread_number( fp );
-		pClanIndex->pkills		= fread_number( fp );
-		pClanIndex->mkills		= fread_number( fp );
-		pClanIndex->members		= fread_number( fp );
-		pClanIndex->pdeaths		= fread_number( fp );
-		pClanIndex->mdeaths		= fread_number( fp );
-		pClanIndex->obj_vnum_1		= fread_number( fp );
-		pClanIndex->obj_vnum_2		= fread_number( fp );
-		pClanIndex->obj_vnum_3		= fread_number( fp );
-		pClanIndex->settings            = fread_number( fp );
-		/*        if ( !clan_first )
-				  clan_first = pClanIndex;
-				  if (  clan_last  )
-				  {
-				  clan_last->next = pClanIndex;
-				  }
-				  clan_last	= pClanIndex;
-
-				  pClanIndex->next	= clan_index_data;
-				  clan_index_data 	= pClanIndex;*/
-		clan_sort(pClanIndex);
-		top_clan++;
 	}
-	fclose ( fp );
+
+	void *iter = json_object_iter(obj);
+
+	while(iter) {
+		pClan			    = new_clan_index();
+		pClan->vnum		= atoi(json_object_iter_key(iter));
+
+		json_unpack(json_object_iter_value(iter),
+			"{s:s, s:s, s:{s:s, s:s, s:s, s:s}, s:{s:i, s:i, s:i}, s:i, s:{s:i, s:i, s:i, s:i, s:i}, s:[i, i, i], s:i, s:s}",
+			"name", &pClan->name,
+			"deity", &pClan->diety,
+			"leaders",
+				"champ", &pClan->champ,
+				"leader", &pClan->leader,
+				"first", &pClan->first,
+				"second", &pClan->second,
+			"bankaccount",
+				"gold", &pClan->bankaccount.gold,
+				"silver", &pClan->bankaccount.silver,
+				"copper", &pClan->bankaccount.copper,
+			"recall", &pClan->recall,
+			"stats",
+				"members", &pClan->members,
+				"pkills", &pClan->pkills,
+				"mkills", &pClan->mkills,
+				"pdeaths", &pClan->pdeaths,
+				"mdeaths", &pClan->mdeaths,
+			"objects", &pClan->obj_vnum_1, &pClan->obj_vnum_2, &pClan->obj_vnum_3,
+			"settings", &pClan->settings,
+			"description", &pClan->description
+		);
+
+		pClan->ischamp  = pClan->champ[0]  != '\0';
+		pClan->isleader = pClan->leader[0] != '\0';
+		pClan->isfirst  = pClan->first[0]  != '\0';
+		pClan->issecond = pClan->second[0] != '\0';
+
+		clan_sort(pClan);
+
+		iter = json_object_iter_next(obj, iter);
+	}
 
 	return;
 }
