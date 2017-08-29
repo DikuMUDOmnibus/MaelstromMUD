@@ -1,5 +1,10 @@
 #! /bin/bash
 
+# Load .env variables
+if [ -e .env ]; then
+  export $(cat .env | grep -v ^\# | xargs)
+fi
+
 # Change to area directory.
 cd ./area
 

@@ -1,45 +1,63 @@
-#! /bin/csh -f
+#! /bin/bash
 # Written by Furey.
 # With additions from Tony.
 # With changes from Kahn.
 
+# Load .env variables
+if [ -e .env ]; then
+  export $(cat .env | grep -v ^\# | xargs)
+fi
+
 # Set the port number.
-set port = 1234
-if ( "$1" != "" ) set port="$1"
+PORT=1234
+
+if [ -z $1 ]; then
+  PORT="$1"
+fi
 
 # Change to area directory.
 cd ./area
 
 # Set limits.
-nohup
-nice +4
-limit stack 1024k
-if ( -e shutdown.txt ) rm -f shutdown.txt
-unlimit core
+ulimit -s 1024
 
-while ( 1 )
+if [ -e shutdown.txt ]; then
+  rm -f shutdown.txt
+fi
+
+ulimit -c unlimited
+
+while true; do
   # If you want to have logs in a different directory,
   # change the 'set logfile' line to reflect the directory name.
-  set index = 1000
-  while ( 1 )
-    set logfile = ../log/$index.log
-    if ( ! -e $logfile ) break
-    @ index++
-  end
+  INDEX=1000
+
+  while true; do
+    logfile="../log/$INDEX.log"
+
+    if [ ! -e $logfile ]; then
+      break
+    fi
+
+    INDEX=$((INDEX+1))
+  done
 
   # Run envy.
-  if ( -e shutdown.txt ) rm -f shutdown.txt
-  ../bin/envy $port >&! $logfile
+  if [ -e shutdown.txt ]; then
+     rm -f shutdown.txt
+  fi
 
-  if ( -e core ) then
-    mv core ../bin/$index.core
-  endif
+  ../bin/envy $PORT > $logfile
+
+  if [ -e core ]; then
+    mv core ../bin/$INDEX.core
+  fi
 
   # Restart, giving old connections a chance to die.
-  if ( -e shutdown.txt ) then
+  if [ -e shutdown.txt ]; then
     rm -f shutdown.txt
     exit 0
-  endif
+  fi
 
   sleep 5
-end
+done
