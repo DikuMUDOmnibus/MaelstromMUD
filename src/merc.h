@@ -2851,7 +2851,6 @@ DECLARE_SPELL_FUN(  spell_general_purpose );
 DECLARE_SPELL_FUN(  spell_giant_strength  );
 DECLARE_SPELL_FUN(      spell_eternal_intellect );
 DECLARE_SPELL_FUN(  spell_golden_aura );
-DECLARE_SPELL_FUN(  spell_group_healing );
 DECLARE_SPELL_FUN(  spell_haste   );
 DECLARE_SPELL_FUN(      spell_goodberry         );
 DECLARE_SPELL_FUN(  spell_harm    );
@@ -2861,7 +2860,6 @@ DECLARE_SPELL_FUN(  spell_iceshield   );
 DECLARE_SPELL_FUN(      spell_icestorm          );
 DECLARE_SPELL_FUN(      spell_incinerate        );
 DECLARE_SPELL_FUN(  spell_infravision );
-DECLARE_SPELL_FUN(  spell_inspiration   );
 DECLARE_SPELL_FUN(  spell_invis   );
 DECLARE_SPELL_FUN(  spell_know_alignment  );
 DECLARE_SPELL_FUN(  spell_lightning_bolt  );
@@ -2906,7 +2904,6 @@ DECLARE_SPELL_FUN(  spell_summon_demon  );  /* XOR */
 DECLARE_SPELL_FUN(  spell_cancellation  );  /* XOR */
 DECLARE_SPELL_FUN(  spell_detect_good );  /* XOR */
 DECLARE_SPELL_FUN(  spell_protection_good );  /* XOR */
-DECLARE_SPELL_FUN(  spell_enchanted_song  );  /* XOR */
 DECLARE_SPELL_FUN(  spell_holy_strength );  /* XOR */
 DECLARE_SPELL_FUN(  spell_curse_of_nature );  /* XOR */
 DECLARE_SPELL_FUN(      spell_holysword        );      /* ELVIS */

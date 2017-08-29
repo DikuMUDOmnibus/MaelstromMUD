@@ -17,7 +17,7 @@ Ice Devil~
 An Ice Devil~
 An Ice Devil flies above you, mocking your bad fortune...
 ~
-The Ice Devil is Satan's cold variety of the common demon. The Lord of  
+The Ice Devil is Satan's cold variety of the common demon. The Lord of
 Darkness has created this species to extend his rule into the arctic areas
 of Storm where other demons way perish due to the lack of fire.
 The Ice Devil is not really aggressive, but his constant mocking is really
@@ -50,7 +50,7 @@ Snowflake~
 A Snowflake~
 A living Snowflake floats through the cold air...
 ~
-Its just a snowflake, no? Hmm..on second thought, this flake seems to be 
+Its just a snowflake, no? Hmm..on second thought, this flake seems to be
 alive, or is it?
 ~
 193 565928 0 200 S
@@ -109,7 +109,7 @@ Schnee is about six meters tall.  He has four arms and two legs.  His
 entire body seems to be craved out of a single giant block of ice.  He does
 not appear to have any internal organs, you can practically see right
 through him.  However, seeing through him and getting past him are two
-differnent things!  
+differnent things!
 ~
 99 201335528 0 -333 S
 95 0 0 20000d0+0 0d0+0
@@ -127,7 +127,7 @@ The Yeti~
 The Yeti eyes you curiously...
 ~
 You have found the legendary Yeti! He is big, humanoid and has white, shaggy
-fur all over his body. He moves slowly, almost timedly, towards you. 
+fur all over his body. He moves slowly, almost timedly, towards you.
 Although he looks like a formidable opponent, he does not seem to be hostile
 at all...just curious.
 ~
@@ -175,7 +175,7 @@ A Piece of Light~
 A Piece of Light strikes at you!
 ~
 &RFlashes of light are burning the retina of your eyes!!
-  
+
 ~
 35 134218280 0 0 S
 50 0 0 750d0+0 0d0+0
@@ -245,7 +245,7 @@ rake $n
 punch $n
 ~
 >death_prog 100~
-Mpoload 20003 
+Mpoload 20003
 ~
 |
 #20197
@@ -452,7 +452,7 @@ hq8~
 &C-----------
 &cInstead of 3 gatekeepers, we've decided to leave it at 1 gatekeeper.  Basically
 I'm looking for a cross between the Dragon King w/dispel magic and a champion on
-a major PCP high.  He can't use 'shatter' or 'molecular unbinding' though, nor 
+a major PCP high.  He can't use 'shatter' or 'molecular unbinding' though, nor
 is he allowed to load himself as a death_prog.  Here's what I'd like to see:
 &clevel   &w=&r 106 (This'll keep death field off your guard)
 &cHP      &w=&r 30,000hp
@@ -463,8 +463,8 @@ be, but still passable for a couple champs.  With 3 before we'd likely have
 almost no one raiding..it just wouldn't be worth it.
 &c
 &BEquipment for GATEKEEPER guardians:
-&cGuardians may wear any of your clan equipment and in addition may dual wield a 
-lv100 -piercing- weapon that you create.  The flags for the weapon are set as 
+&cGuardians may wear any of your clan equipment and in addition may dual wield a
+lv100 -piercing- weapon that you create.  The flags for the weapon are set as
 this:
 &clevel       &w=&r 100
 &cExtra       &w=&r no_damage, nolocate, inventory, poisoned, chaotic & flame.
@@ -580,7 +580,7 @@ hq5~
 one type of Mana, HP & Vitality potion.
 &cPotion Guidelines:
     &Wa&z) &cWeight &w= &r1
-    &Wb&z) &cPlvl   &w= &cLevel of the Potion.  (&rPeaceful = 30 & PK = 50&c) 
+    &Wb&z) &cPlvl   &w= &cLevel of the Potion.  (&rPeaceful = 30 & PK = 50&c)
     &Wc&z) &cSlvl   &w= &rLevel of the Potion's spells.
     &Wd&z) &cFlags  &w= &rno_damage, glow & nolocate
 &z ____________________________________________________________________________
@@ -622,7 +622,7 @@ Champ EQ now has a max of 25 invoke charges.
 These spells may &R*&zNOT&R*&c be any of the following:
 &RSanctuary  &r-  &RShields (ANY)  &r-  &RBiofeedback  &r-  Or &RANY OFFENSIVE SPELL.
 &cOffensive is &RANY&c spell that is used against a MOB or PLAYER.
-ie/ Fireball, enchanted song, hex, curse, blind, holy fires, meteor swarm etc.
+ie/ Fireball, hex, curse, blind, holy fires, meteor swarm etc.
 &z
 &zArch
 &z-<&CClan Administrator&z>-
@@ -780,7 +780,7 @@ reserved~
 E
 two~
 Okay, more rules on clans:
-  
+
 1) No unclanned mortal character may posses any clan equipment whatsoever.
 2) Trading of clan equipment is not allowed until we decide otherwise.
 3) All clan equipment has to have the name of the clan set with name.
@@ -1372,7 +1372,7 @@ A Frozen Trail~
 &W You are travelling further north following a thin, snow covered trail.
 The temperature is now well below zero, and the chilling wind is tearing
 mercilessly on your clothes and armor.  To the south, you can make out the
-icy portal.  
+icy portal.
 ~
 0 401420 2
 Rd     0
@@ -1407,8 +1407,8 @@ S
 Losing the Trail~
 &WThe trail, or what was left of it, has ended.  No matter how hard you
 search it just has disappeared under all the snow and ice.  East of you, you
-can see an endless frozen wasteland that does not look very inviting.... 
-And on top of all, it still seems to get colder!  
+can see an endless frozen wasteland that does not look very inviting....
+And on top of all, it still seems to get colder!
 ~
 0 401416 2
 Rd     0
@@ -1443,7 +1443,7 @@ S
 Arctic Wasteland~
 &WContuing snow is all around.  All over the place the only visible thing
 is snow and ice and white.  The skies seem grey and white.  There are snow
-peaked mountains up ahead.  
+peaked mountains up ahead.
 ~
 0 268836872 2
 Rd     5
@@ -1468,7 +1468,7 @@ S
 Arctic Wasteland~
 &WWhite fields of ice and cold for miles up ahead.  The temperature seems
 colder as you travel further into the wasteland.  The Sun when it shines
-doesn't seem to penetrate the cold atmosphere that hovers above.  
+doesn't seem to penetrate the cold atmosphere that hovers above.
 ~
 0 268836872 2
 Rd     1
@@ -1530,7 +1530,7 @@ D3
 S
 #20018
 A Lost Trail~
-In the midst of all the snow and ice here, you make out a very faint trail 
+In the midst of all the snow and ice here, you make out a very faint trail
 leading to the east. West of here, the trail is completely burried under
 several meters of snow and ice.
 ~
@@ -1547,9 +1547,9 @@ D3
 S
 #20019
 A Lost Trail~
-This trail is very faint!  It takes all your concentration to follow it. 
+This trail is very faint!  It takes all your concentration to follow it.
 The chilling winds and the extremely cold temperature make this all the more
-difficult.  The trail appears to lead to the west from here.  
+difficult.  The trail appears to lead to the west from here.
 ~
 0 401416 2
 Rd     0
@@ -1577,7 +1577,7 @@ Arctic Wasteland~
 &WSearing cold air all around and white fields of ice and desolate trees
 are all that you see for miles.  All around there are exits, you seem to see
 the same sights all around.  The wind picks up speeed every now and then
-blasting down at you.  
+blasting down at you.
 ~
 0 268836873 2
 Rd     1
@@ -1628,7 +1628,7 @@ Arctic Wasteland~
 &WBlinding snow all around for as far as your eyes will take you.  You
 wonder if you will ever make you way out of here alive.  Being frozen to
 death isn't an option you'd like to consider and you see that the field
-continues in all directions of bleak.  
+continues in all directions of bleak.
 ~
 0 268836873 2
 Rd     5
@@ -1666,10 +1666,10 @@ S
 #20026
 The Yeti's Hideout~
 You were wandering the arctic wasteland for so long before you found this
-cave! Your eyes are still somewhat snow blind and you have no feeling in 
+cave! Your eyes are still somewhat snow blind and you have no feeling in
 most of your body parts. Inside this cavern, the temperature seems to be
 significantly higher than out in the open tundra...a good place to rest!
-But then you hear some grunting from the far corner of the shelter. You 
+But then you hear some grunting from the far corner of the shelter. You
 see a large, shaggy creature resting there...the legendary Yeti!
 ~
 0 401421 0
@@ -1720,7 +1720,7 @@ Arctic Wasteland~
 &WBlinding snow all around for as far as your eyes will take you.  You
 wonder if you will ever make you way out of here alive.  Being frozen to
 death isn't an option you'd like to consider.  The field spreads out in all
-directions of bleak.  
+directions of bleak.
 ~
 0 268836873 2
 Rd     1
@@ -1746,7 +1746,7 @@ Arctic Wasteland~
 &WSearing cold air all around and white fields of ice and desolate trees
 are all that you see for miles.  All around there are exits, you seem to see
 the same sights all around.  The wind picks up speeed every now and then
-blasting down at you.  
+blasting down at you.
 ~
 0 268836873 2
 Rd     1
@@ -1843,7 +1843,7 @@ S
 Arctic Wasteland~
 &WSearing cold air all around and white fields of ice and desolate trees
 are all that you see for miles.  All around there are exits, you seem to see
-the same sights all around.  The wind picks up speeed every now and then 
+the same sights all around.  The wind picks up speeed every now and then
 blasting down at you.
 ~
 0 268836873 2
@@ -1924,7 +1924,7 @@ Arctic Wasteland~
 &WBlinding snow all around for as far as your eyes will take you.  You
 wonder if you will ever make you way out of here alive.  Being frozen to
 death isn't an option you'd like to consider.  The field spreads out in all
-directions of bleak.  
+directions of bleak.
 ~
 0 1342578697 2
 Rd     1
@@ -1950,7 +1950,7 @@ Arctic Wasteland~
 &WSearing cold air all around and white fields of ice and desolate trees
 are all that you see for miles.  All around there are exits, you seem to see
 the same sights all around.  The wind picks up speeed every now and then
-blasting down at you.  
+blasting down at you.
 ~
 0 268836873 2
 Rd     1
@@ -2067,7 +2067,7 @@ S
 North Star~
 &WYou must have reached the north pole of the Storm world! Much in contrast
 to the frozen inferno that rages outside, this cavern is of eerie silence.
-It seems to be less cold in here as well. Near the north wall shines an 
+It seems to be less cold in here as well. Near the north wall shines an
 extremely bright light, pulsating quietly....is this light alive?
 ~
 0 4595724 0
@@ -2081,8 +2081,8 @@ S
 Arctic Wasteland~
 &WYou stand before a chilling iceburg.  You see that it is dug out into a
 cave only the entrance seems to be closed and hidden.  The iceburg is the
-only thing that you see of variation from the white fields and dead trees. 
-You can go back towards the bleak fields to the south.  
+only thing that you see of variation from the white fields and dead trees.
+You can go back towards the bleak fields to the south.
 ~
 0 1342578697 2
 Rd     1
@@ -2132,7 +2132,7 @@ An Icy Hallway~
 &WYou are in a glistening hallway.  All the icy walls around you sparkle
 in the light of your torch.  To the west lies the castle entrance, south and
 east of you are icy catacombs.  To the north, you see a large hall with a
-huge throne in its center...  
+huge throne in its center...
 ~
 0 401421 0
 Rd     0
@@ -2156,7 +2156,7 @@ S
 #20052
 Winter's Throne Room~
 &WYou have entered a long hall with a wide ceiling. In the center of the hall
-stands a throne entirely made from ice. The throne is carved with many 
+stands a throne entirely made from ice. The throne is carved with many
 familiar winter images and seems to be fused to the icy floor. Upon this
 throne sits Winter himself, his icy stare solemly fixed upon you.
 ~
@@ -2184,7 +2184,7 @@ S
 A Cold Cavern~
 &WYou have entered a very cold cavern.  It is very silent in here, and
 you feel somewhat like being in a cathedral.  The room is otherwise
-completely empty...  Or is it?  The only way out seems to be west.  
+completely empty...  Or is it?  The only way out seems to be west.
 ~
 0 139277 0
 Rd     0
@@ -2325,8 +2325,8 @@ S
 Arctic Wasteland~
 &WYou are walking on what seems to be a frozen lake.  The blinding cold
 wind hasn't let up and doesnt seem to want to let up any time soon.  All
-around the blizzard does the dance of winter reveling in its cold embrace. 
-The lake continues in all directions.  
+around the blizzard does the dance of winter reveling in its cold embrace.
+The lake continues in all directions.
 ~
 0 268836873 2
 Rd     1
@@ -2355,9 +2355,9 @@ S
 Arctic Wasteland~
 &WYou are walking on what seems to be a frozen lake.  The blinding cold
 wind hasn't let up and doesnt seem to want to let up any time soon.  All
-around the blizzard does the dance of winter reveling in its cold embrace. 
+around the blizzard does the dance of winter reveling in its cold embrace.
 There is a huge iceburg up ahead blocking passage any further in any
-direction but north.  
+direction but north.
 ~
 0 268836872 2
 Rd     1
@@ -2369,16 +2369,16 @@ S
 #20064
 Breaking Ice!!~
 You are wandering around aimlessly when suddenly the ice gives it!!!
-   
-   
-  
+
+
+
                        AAAAHHHHHHHRRRRRRGGG!!
-  
-  
- 
+
+
+
 You fall a few meters, then you hit water....SPLASH!!
-  
-The icy water trenches you completely. There is no way to climb onto the 
+
+The icy water trenches you completely. There is no way to climb onto the
 solid ice again...you better use magic to get out here...fast!!
 ~
 0 277217293 8

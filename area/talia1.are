@@ -30,7 +30,7 @@ A colourful carp is swimming in the waters around you.
 ~
 This large fish looks like an over-grown gold fish.  It and its bretheren
 swarm up to you searching for food you may have on your person.  They come
-in many colors ranging from pure white to fiery red to a rich gold.  
+in many colors ranging from pure white to fiery red to a rich gold.
 ~
 65 0 0 0 S
 65 0 0 12500d0+0 0d0+0
@@ -45,7 +45,7 @@ Mai Lin is here singing with her nightingale companion.
 Mai Lin is a beautiful young woman who appears to be in her late teens,
 but her eyes betray age and knowledge most teens never know.  Her black silk
 hair is piled onto her head in an elaborate headdress.  She smiles softly
-and goes back to singing with her nightingale.  
+and goes back to singing with her nightingale.
 ~
 67 136 0 1000 S
 78 0 0 15000d0+0 0d0+0
@@ -66,7 +66,7 @@ A woman with pink hair that reaches to her waist is playing a soft,
 pleasant tune on a set of reed pipes.  As you stop to listen you feel your
 will slipping away and you start to feel sleepy.  You don't think you'll be
 able to wake up on your own if you lay down on that inviting bed of cherry
-blossoms.  
+blossoms.
 ~
 67 65664 0 0 S
 75 0 0 14000d0+0 0d0+0
@@ -80,7 +80,7 @@ The mayor of Shou Lung is here greeting visitors.
 ~
 Hou Phat is a large oriental man with a Foo Man Chu mustache that he's
 very proud of.  He is garbed in fine silks and his long hair is pulled up
-into a topknot that denotes honor amongst his people.  
+into a topknot that denotes honor amongst his people.
 ~
 67 136 0 500 S
 80 0 0 16000d0+0 0d0+0
@@ -99,7 +99,7 @@ A &zp&Be&Pa&gc&Po&bc&zk&X is here strutting his stuff.
 ~
 This beautiful bird's tail feathers are spread in a large fan shape of
 many colors.  The feathers have small black dots on them that look as if a
-million eyes are watching you.  
+million eyes are watching you.
 ~
 65 0 0 0 S
 65 0 0 12500d0+0 0d0+0
@@ -114,7 +114,7 @@ A bright red fish is swimming effortlessly through the water.
 This fish is the color of blood.  Its fins are long and delicate looking
 and its eyes look like they're ready to pop out of its head.  It doesn't
 look like it would make for very good eating, tho.  It seems to be mostly
-fins and eyes.  
+fins and eyes.
 ~
 65 0 0 0 S
 60 0 0 10000d0+0 0d0+0
@@ -129,7 +129,7 @@ A man in wizard's robes looks up from the book he was reading.
 Wu Jen are oriental mages.  Most of them use black magic and do evil
 rituals, thus shunning them from most society, but not all follow the path
 of darkness.  This one seems to be more of the scholarly type and looks to
-be a bit annoyed at your intrusion into his room.  
+be a bit annoyed at your intrusion into his room.
 ~
 67 67108872 0 0 S
 75 0 0 14000d0+0 0d0+0
@@ -143,9 +143,9 @@ A woman dressed in armor dances about for an unseen audience.
 ~
 This is a small woman with long black hair pulled up onto her head in
 some kind of headdress.  Her face has been painted a bright white and she's
-dressed in armor.  She seems to be practicing for a performance later on. 
+dressed in armor.  She seems to be practicing for a performance later on.
 She whips her fan about at enemies only she can see and blocks unseen blows
-with her shield.  You decide to leave her to her practice.  
+with her shield.  You decide to leave her to her practice.
 ~
 67 16392 0 200 S
 70 0 0 12000d0+0 0d0+0
@@ -157,10 +157,10 @@ dancer woman~
 a dancer~
 A dancer is here limbering up for her next performance.
 ~
-This woman looks different from the people that live in this village. 
+This woman looks different from the people that live in this village.
 Her skin tone is lighter and her hair is a deep red instead of the rich
 silken black of the other women.  Her blue eyes sparkle happily as she sees
-you and she goes on with her warm-ups.  
+you and she goes on with her warm-ups.
 ~
 67 0 0 100 S
 70 0 0 15000d0+0 0d0+0
@@ -177,7 +177,7 @@ ponds, rivers and streams of fresh water.  They are little creatures,
 standing approximately two feet hight with the general proportions of a
 young boy.  On their back is a thick tortoise-like shell.  The top of their
 head is concave, forming a small bowl filled with water from which they draw
-their power.  
+their power.
 ~
 67 0 0 -1000 S
 75 0 0 17500d0+0 0d0+0
@@ -191,7 +191,7 @@ An air spirit dances madly about in the air before you.
 ~
 A tiny woman with wispy wings and white silken hair, she doesn't seem to
 notice you as she dances about in the space before you.  This one's
-movements sound like someone whispering and you decide to call her that.  
+movements sound like someone whispering and you decide to call her that.
 ~
 67 524288 0 1000 S
 70 0 0 15000d0+0 0d0+0
@@ -236,7 +236,7 @@ A delicate looking set of pipes has been dropped here.~
 100~ 15~ 15~ sleep~
 1 0 0 0 0
 5 0
-song of charm~
+charm person~
 5 5
 0 0 0
 #7041
@@ -300,7 +300,7 @@ A &znig&wht&Wi&wng&zale&X is singing it sweet song here.~
 0~ 0~ 0~ 0~
 1 0 0 0 0
 5 0
-song of sight~
+true sight~
 5 5
 0 0 0
 A
@@ -393,7 +393,7 @@ This rose must have been crafted by unearthly hands for you have never
 seen such perfect petals, leaves and even thorns.  The fact that it changes
 color each time you look upon it is reason enough to wonder how it came to
 be.  A delicate aroma reaches your nose from it and you know that no mortal
-could have created this treasure.  
+could have created this treasure.
 ~
 #7099
 earring feather colored~
@@ -912,7 +912,7 @@ In the center of a small island is a large cherry tree.  Its branches are
 completely covered with cherry blossoms.  An unseen musician plays a soft
 melody on reed pipes.  You feel yourself nodding off as the music and the
 fragrance of the cherry blossoms work at putting you into a nice, relaxing
-slumber.  A small fish pond lies to the west of you.  
+slumber.  A small fish pond lies to the west of you.
 ~
 0 4 2
 Rd     0
@@ -1071,7 +1071,7 @@ to relaxe within and be thoroughly cleansing.  A small window overlooks the
 pond outside to the north of you and you can see cherry blossoms float by
 the window.  It looks as if the bath is continually cleaning itself as the
 water flows in and out from a grate that you assume is directly connected to
-the small pond.  
+the small pond.
 ~
 0 8 0
 Rd     0
@@ -1302,7 +1302,7 @@ around the table and perform the tea ceremony that holds so much importance
 to this village.  It doesn't look as if one is being held at the moment so
 it seems safe to look around.  A door leads out to the east and you can the
 sounds of pots being hit together coming from the south.  Or you may go to
-the reception area to the west of you.  
+the reception area to the west of you.
 ~
 0 8 0
 Rd     0
@@ -1326,7 +1326,7 @@ that here, in the middle of the desert, you'd find so many trees and birds
 in once place.  Peacocks, nightingales, canaries and a multitude of other
 birds create a loud cacophany of noise.  Whomever owns this aviary obviously
 cares for it quite a bit.  The only obvious exit seems to be through a rice
-paper door to the west.  
+paper door to the west.
 ~
 0 8 0
 Rd     0
@@ -1543,7 +1543,7 @@ The Red Room~
 wardrobe and chest of drawers have been stained to a deep red, matching the
 crimson curtains on the window that adorns the west wall.  The bed is
 dressed in red velvet bed covers and pink silk sheets.  The only obvious
-exit out is through a door to the east.  
+exit out is through a door to the east.
 ~
 0 8 0
 Rd     0
@@ -1752,7 +1752,7 @@ see rows of logs for people to sit on as they watch the shows.  Small cubby
 holes are to the north and south of you for actors and dancers to wait for
 their cue to go on stage.  Wooden katanas and other fake weapons lie strewn
 about waiting for their owners to pick them up and resume their mock
-battles.  
+battles.
 ~
 0 8 0
 Rd     0
@@ -1767,12 +1767,12 @@ D3
 S
 #7088
 The Dressing Room~
-You find yourself within the dressing rooms of the dancers' pavillion. 
-Costumes of all sorts are hanging from pegs and from the backs of chairs. 
+You find yourself within the dressing rooms of the dancers' pavillion.
+Costumes of all sorts are hanging from pegs and from the backs of chairs.
 Props for many different performances rest within the wardrobes standing
 along the wall and small instruments sit within their cases.  A counter with
 a large mirror is lined with make-up and perfumes.  The only obvious exit is
-through a curtain to the west.  
+through a curtain to the west.
 ~
 0 8 0
 Rd     0

@@ -63,7 +63,7 @@ const   struct  quest_data      quest_table     []              =
 };
 
 const struct race_type race_table[MAX_RACE] = {
-//{ "Sml", "Full Name", mstr, mint, mwis, mdex, mcon, mcha, age, size        }, 
+//{ "Sml", "Full Name", mstr, mint, mwis, mdex, mcon, mcha, age, size        },
   { "Hum", "Human",        0,    0,    0,    0,    0,    0,  15, SIZE_MEDIUM },
   { "Elf", "Elf",          0,    2,    0,    2,   -2,    0, 110, SIZE_MEDIUM },
   { "Dwa", "Dwarf",        0,    0,    2,    0,    2,   -2,  40, SIZE_MEDIUM },
@@ -96,7 +96,7 @@ const struct size_type size_table[MAX_SIZE] = {
  */
 #define L_HER            LEVEL_HERO
 
-/* 
+/*
  * Wiznet table and prototype for future flag setting
  */
 const struct wiznet_type wiznet_table[] = {
@@ -157,10 +157,10 @@ const struct  str_app_type  str_app   [31]    =
   {  6,  8, 800, 50 },
   {  8, 10, 900, 55 },
   { 10, 12, 999, 60 },  /* 25   */
-  { 12, 14, 999, 60 },  
-  { 14, 16, 999, 60 },  
+  { 12, 14, 999, 60 },
+  { 14, 16, 999, 60 },
   { 16, 18, 999, 60 },  /* 28 */
-  { 18, 20, 999, 60 },  
+  { 18, 20, 999, 60 },
   { 20, 22, 999, 60 }  /* 30   */
 
 };
@@ -195,10 +195,10 @@ const struct  int_app_type  int_app   [31]    =
   { 70 },
   { 85 },
   { 99 }, /* 25 */
-  { 99 }, 
-  { 99 }, 
-  { 99 }, 
-  { 99 }, 
+  { 99 },
+  { 99 },
+  { 99 },
+  { 99 },
   { 99 }  /* 30 */
 };
 
@@ -232,10 +232,10 @@ const struct  wis_app_type  wis_app   [31]    =
   { 7 },
   { 7 },
   { 8 },  /* 25 */
-  { 8 },  
-  { 8 },  
-  { 9 },  
-  { 9 },  
+  { 8 },
+  { 8 },
+  { 9 },
+  { 9 },
   { 10 }  /* 30 */
 };
 
@@ -269,10 +269,10 @@ const struct  dex_app_type  dex_app   [31]    =
   { - 90 },
   { -L_SEN },
   { -120 },    /* 25 */
-  { -140 },    
-  { -160 },    
-  { -180 },    
-  { -200 },    
+  { -140 },
+  { -160 },
+  { -180 },
+  { -200 },
   { -220 }    /* 30 */
 };
 
@@ -306,10 +306,10 @@ const struct  con_app_type  con_app   [31]    =
   {  6, 99 },
   {  7, 99 },
   {  8, 99 },    /* 25 */
-  {  8, 99 },    
-  {  9, 99 },    
-  {  9, 99 },    
-  {  10, 99 },    
+  {  8, 99 },
+  {  9, 99 },
+  {  9, 99 },
+  {  10, 99 },
   {  10, 99 }    /* 30 */
 };
 
@@ -354,7 +354,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
      {CAS,ROG,FIG}
      function,    target type,    position,
      gsn,     min mana, wait,
-     "damage name",   "off name", "room see spell ends", 
+     "damage name",   "off name", "room see spell ends",
      dispelable, SLOT(slot)
      },
      */
@@ -607,7 +607,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_detect_evil,  TAR_CHAR_SELF,    POS_STANDING,
     NULL,     5,  12,
-    "",     "The red in your vision disappears.", 
+    "",     "The red in your vision disappears.",
     "$n's vision is restored to normal.", TRUE, SLOT(8)
   },
 
@@ -616,7 +616,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_detect_hidden,  TAR_CHAR_SELF,    POS_STANDING,
     NULL,     5,  12,
-    "", "You feel less aware of your suroundings.", 
+    "", "You feel less aware of your suroundings.",
     "$n feels less aware of $s surroundings.", TRUE, SLOT(9)
   },
 
@@ -625,7 +625,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_detect_invis, TAR_CHAR_SELF,    POS_STANDING,
     NULL,     5,  12,
-    "", "You no longer see invisible objects.", 
+    "", "You no longer see invisible objects.",
     "$n's vision returns to normal.", TRUE, SLOT(10)
   },
 
@@ -634,7 +634,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_detect_magic, TAR_CHAR_SELF,    POS_STANDING,
     NULL,     5,  12,
-    "",     "The detect magic wears off.", 
+    "",     "The detect magic wears off.",
     "$n's vision returns to normal.", TRUE, SLOT(11)
   },
 
@@ -838,7 +838,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_incinerate, TAR_CHAR_OFFENSIVE, POS_STANDING,
     &gsn_incinerate,  30, 12,
-    "&rflames&X","The flames have been extinguished.", 
+    "&rflames&X","The flames have been extinguished.",
     "The flames around $n have been extinguished.",TRUE, SLOT(20)
   },
 
@@ -991,7 +991,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_scry,   TAR_CHAR_SELF,    POS_STANDING,
     NULL,     35, 20,
-    "",     "Your vision returns to normal.", 
+    "",     "Your vision returns to normal.",
     "$n's vision returns to normal.", TRUE, SLOT(0)
   },
 
@@ -1031,7 +1031,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_sleep,    TAR_CHAR_OFFENSIVE, POS_STANDING,
     &gsn_sleep,   15, 12,
-    "",     "You feel less tired.", 
+    "",     "You feel less tired.",
     "$n looks much more refreshed.", TRUE, SLOT(30)
   },
 
@@ -1133,7 +1133,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
   },
 
   {
-    "lightning breath", 
+    "lightning breath",
     { L_APP, L_APP, L_APP },
     spell_lightning_breath, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL,     50, 12,
@@ -1255,7 +1255,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
   },
 
   {
-    "feed",     
+    "feed",
     { L_APP, L_APP, L_APP },
     spell_null,   TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_feed,    0,   12,
@@ -1720,7 +1720,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_null,             TAR_CHAR_SELF,          POS_STANDING,
     &gsn_heighten,          0,      0,
-    "",                     "Your senses return to normal.", 
+    "",                     "Your senses return to normal.",
     "$n's senses return to normal.", FALSE, SLOT(48)
   },
 
@@ -1777,7 +1777,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_mental_barrier,   TAR_CHAR_SELF,          POS_STANDING,
     NULL,                   8,     12,
-    "",                     "Your mental barrier breaks down.", 
+    "",                     "Your mental barrier breaks down.",
     "$n's mental barrier diminishes.", FALSE, SLOT(52)
   },
 
@@ -1837,7 +1837,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_null,             TAR_IGNORE,             POS_STANDING,
     &gsn_shadow,            0,     12,
-    "",                     "You no longer move in the shadows.", 
+    "",                     "You no longer move in the shadows.",
     "$n returns from the shadows.", FALSE, SLOT(54)
   },
 
@@ -1846,7 +1846,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_share_strength,   TAR_CHAR_DEFENSIVE,     POS_STANDING,
     NULL,                   8,     12,
-    "",                 "You no longer share strength with another.", 
+    "",                 "You no longer share strength with another.",
     "$n stops sharing $m strength.", FALSE, SLOT(55)
   },
 
@@ -1855,7 +1855,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_thought_shield,   TAR_CHAR_SELF,          POS_STANDING,
     NULL,                   5,     12,
-    "",                     "You no longer feel so protected.", 
+    "",                     "You no longer feel so protected.",
     "$n doesn't feel very protected.", FALSE, SLOT(56)
   },
 
@@ -1864,7 +1864,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_ultrablast,       TAR_IGNORE,             POS_FIGHTING,
     NULL,                   75,     24,
-    "&zultr&wabl&Wast&X",   "!Ultrablast!" , "", FALSE, 
+    "&zultr&wabl&Wast&X",   "!Ultrablast!" , "", FALSE,
     SLOT(0)
   },
 
@@ -1901,7 +1901,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_mental_block, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL,               25,     8,
-    "",                 "Your mind feels more vulnerable.", 
+    "",                 "Your mind feels more vulnerable.",
     "$n's mind becomes more vulnerable.", FALSE, SLOT(57)
   },
 
@@ -1953,7 +1953,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_holy_strength,  TAR_CHAR_SELF,    POS_STANDING,
     NULL,     100,  12,
-    "",     "Your divine strength fades.",  
+    "",     "Your divine strength fades.",
     "The divine strength surrounding $n fades.", FALSE, SLOT(59)
   },
 
@@ -1962,7 +1962,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_curse_of_nature,  TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL,     100,  12,
-    "",   "You feel in sync with nature once again.", 
+    "",   "You feel in sync with nature once again.",
     "$n feels in sync with nature once again.",TRUE, SLOT(60)
   },
 
@@ -1971,7 +1971,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_detect_good,  TAR_CHAR_SELF,    POS_STANDING,
     NULL,     5,  12,
-    "",     "The white in your vision disappears.", 
+    "",     "The white in your vision disappears.",
     "$n's vision returns to normal.", TRUE, SLOT(61)
   },
 
@@ -1980,7 +1980,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_protection_good,  TAR_CHAR_SELF,    POS_STANDING,
     NULL,     5,  12,
-    "",     "You feel less protected.", 
+    "",     "You feel less protected.",
     "$n looks less protected.", TRUE, SLOT(62)
   },
 
@@ -1990,15 +1990,6 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     spell_null,   TAR_IGNORE,   POS_FIGHTING,
     &gsn_shield_block,  0,   0,
     "",     "!Shield Block!", "", FALSE, SLOT(0)
-  },
-
-  {
-    "enchantment",
-    { L_APP, L_APP, L_APP },
-    spell_enchanted_song, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-    NULL,     100,  12,
-    "",     "The peace leaves you.",  
-    "The peace within $n disappears.", FALSE, SLOT(0)
   },
 
   {
@@ -2026,7 +2017,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
   },
 
   {
-    "holy sword", 
+    "holy sword",
     { L_APP, L_APP, L_APP },
     spell_holysword,         TAR_OBJ_INV,        POS_STANDING,
     NULL,     100,  24,
@@ -2054,7 +2045,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_truesight,  TAR_CHAR_SELF,    POS_STANDING,
     NULL,     59, 12,
-    "",     "Your vision is no longer so true.", 
+    "",     "Your vision is no longer so true.",
     "$n's vision returns to normal.", TRUE, SLOT(64)
   },
 
@@ -2063,19 +2054,19 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_bladebarrier, TAR_CHAR_SELF,    POS_STANDING,
     NULL,     150,  12,
-    "",     "The phantom blades dissipate into the air.", 
+    "",     "The phantom blades dissipate into the air.",
     "The phantom blades surrounding $n disappear.", TRUE, SLOT(65)
   },
 
-  { 
+  {
     "alchemy",
     { L_APP, L_APP, L_APP },
     spell_null,              TAR_IGNORE,             POS_STANDING,
     &gsn_alchemy,             0,  50,
     "",                      "!ALCHEMY!", "", FALSE, SLOT(0)
-  },      
+  },
 
-  { 
+  {
     "scribe",
     { L_APP, L_APP, L_APP },
     spell_null,              TAR_IGNORE,             POS_STANDING,
@@ -2084,7 +2075,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
   },
 
   {
-    "flame blade", 
+    "flame blade",
     { L_APP, L_APP, L_APP },
     spell_flame_blade,       TAR_OBJ_INV,        POS_STANDING,
     NULL,     100,  24,
@@ -2092,7 +2083,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
   },
 
   {
-    "chaos blade", 
+    "chaos blade",
     { L_APP, L_APP, L_APP },
     spell_chaos_blade,       TAR_OBJ_INV,        POS_STANDING,
     NULL,     100,  24,
@@ -2100,7 +2091,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
   },
 
   {
-    "frost blade", 
+    "frost blade",
     { L_APP, L_APP, L_APP },
     spell_frost_blade,       TAR_OBJ_INV,        POS_STANDING,
     NULL,     100,  24,
@@ -2120,25 +2111,25 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_null,       TAR_IGNORE,       POS_FIGHTING,
     &gsn_berserk,     0, 0,
-    "",        "You feel more sane.", 
+    "",        "You feel more sane.",
     "$n has regained $s sanity.", FALSE, SLOT(0)
   },
 
   {
-    "web", 
+    "web",
     { L_APP, L_APP, L_APP },
-    spell_web,         TAR_CHAR_OFFENSIVE,        POS_FIGHTING,      
+    spell_web,         TAR_CHAR_OFFENSIVE,        POS_FIGHTING,
     NULL,     25, 14,
-    "",     "The webs melt away.", 
+    "",     "The webs melt away.",
     "The webs entangling $n melt away.", TRUE, SLOT(66)
   },
 
   {
-    "entangle", 
+    "entangle",
     { L_APP, L_APP, L_APP },
     spell_entangle,          TAR_CHAR_OFFENSIVE,        POS_FIGHTING,
     NULL,     25, 14,
-    "",     "The vines release their grasp.", 
+    "",     "The vines release their grasp.",
     "The vines unwrap themselves from $n.", TRUE, SLOT(67)
   },
 
@@ -2147,30 +2138,30 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_darkbless,       TAR_CHAR_DEFENSIVE,        POS_STANDING,
     NULL,     50, 24,
-    "",     "The sweet caress of oblivion has lifted.", 
+    "",     "The sweet caress of oblivion has lifted.",
     "The sweet caress of oblivion rises from $n.", FALSE, SLOT(68)
   },
     /* 250 */
   {
-    "bio-acceleration", 
+    "bio-acceleration",
     { L_APP, L_APP, L_APP },
     spell_bio_acceleration,  TAR_CHAR_SELF,        POS_STANDING,
     NULL,     50, 24,
-    "",     "Your body structure returns to normal.",     
+    "",     "Your body structure returns to normal.",
     "$n's body returns to a normal form.", FALSE, SLOT(69)
   },
 
   {
-    "confusion", 
+    "confusion",
     { L_APP, L_APP, L_APP },
     spell_confusion,       TAR_CHAR_OFFENSIVE,        POS_FIGHTING,
     NULL,     50, 24,
-    "",   "You become more sure of your surroundings.", 
+    "",   "You become more sure of your surroundings.",
     "$n looks less confused.", TRUE, SLOT(70)
   },
 
   {
-    "mind probe", 
+    "mind probe",
     { L_APP, L_APP, L_APP },
     spell_mind_probe,       TAR_CHAR_DEFENSIVE,        POS_STANDING,
     NULL,     50, 24,
@@ -2227,11 +2218,11 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
   },
 
   {
-    "fumble", 
+    "fumble",
     { L_APP, L_APP, L_APP },
     spell_fumble,       TAR_CHAR_OFFENSIVE,        POS_STANDING,
     NULL,     50, 24,
-    "",     "You feel more sure of hand.", 
+    "",     "You feel more sure of hand.",
     "$n looks more confident.", TRUE, SLOT(73)
   },
 
@@ -2240,7 +2231,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_dancing_lights, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL,     50, 12,
-    "dancing lights","The dancing lights about your body fade away.", 
+    "dancing lights","The dancing lights about your body fade away.",
     "Dancing lights about $n fade away.", FALSE, SLOT(74)
   },
 
@@ -2305,7 +2296,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_phase_shift,  TAR_CHAR_SELF,    POS_STANDING,
     NULL,     100,  12,
-    "",     "You shift back into the physical plane.", 
+    "",     "You shift back into the physical plane.",
     "$n's body shifts back into the existing world.", FALSE, SLOT(75)
   },
 
@@ -2314,7 +2305,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_disrupt,        TAR_CHAR_OFFENSIVE,       POS_FIGHTING,
     NULL,                 125,     12,
-    "disruption",         "You feel less disrupted.", 
+    "disruption",         "You feel less disrupted.",
     "$n looks more stable.", TRUE, SLOT(76)
   },
 
@@ -2339,7 +2330,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_null,           TAR_CHAR_SELF,    POS_RESTING,
     &gsn_prayer,       0, 12,
-    "",   "Thalador's blessing leaves your soul.",   
+    "",   "Thalador's blessing leaves your soul.",
     "Thalador's blessing rises from $n's soul.", FALSE, SLOT(77)
   },
   {
@@ -2362,7 +2353,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_hex,     TAR_CHAR_OFFENSIVE,  POS_FIGHTING,
     NULL,   75, 12,
-    "", "The hex placed upon your soul wears off.", 
+    "", "The hex placed upon your soul wears off.",
     "The hex placed upon $n's soul vanishes.", TRUE, SLOT(78)
   },
   {
@@ -2430,14 +2421,14 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     spell_null,     TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_bite,      0, 12,
     "vicious bite", "!Bite!", "", FALSE, SLOT(0)
-  }, 
+  },
   {
     "adrenaline rush",
     { L_APP, L_APP, L_APP },
     spell_null,   TAR_IGNORE, POS_RESTING,
     &gsn_rush,      0, 12,
     "",
-    "You feel the rush of adrenaline wash away.", 
+    "You feel the rush of adrenaline wash away.",
     "$n has calmed down.", FALSE, SLOT(81)
   },
 
@@ -2481,15 +2472,6 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
   },
 
   {
-    "song of sanctuary",
-    { L_APP, L_APP, L_APP },
-    spell_sanctuary,    TAR_CHAR_DEFENSIVE,     POS_STANDING,
-    NULL,                       75,     12,
-    "",                 "The white aura around your body fades.", 
-    "The white aura surrounding $n fades away.", TRUE, SLOT(85)
-  },
-
-  {
     "missiles",
     { L_APP, L_APP, L_APP },
     spell_magic_missile,        TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
@@ -2506,15 +2488,6 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
   },
 
   {
-    "song of evil sight",
-    { L_APP, L_APP, L_APP },
-    spell_detect_evil,  TAR_CHAR_SELF,          POS_STANDING,
-    NULL,                       5,      12,
-    "",                 "The red in your vision disappears.", 
-    "$n's vision returns to normal.", TRUE, SLOT(86)
-  },
-
-  {
     "icy touch",
     { L_APP, L_APP, L_APP },
     spell_chill_touch,  TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
@@ -2524,19 +2497,11 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
   },
 
   {
-    "song of alignment",
-    { L_APP, L_APP, L_APP },
-    spell_know_alignment,       TAR_CHAR_DEFENSIVE,     POS_FIGHTING,
-    NULL,                       9,      12,
-    "",                 "!Know Alignment!", "", FALSE, SLOT(0)
-  },
-
-  {
     "night vision",
     { L_APP, L_APP, L_APP },
     spell_infravision,  TAR_CHAR_DEFENSIVE,     POS_STANDING,
     NULL,                       5,      18,
-    "",                 "You no longer see in the dark.", 
+    "",                 "You no longer see in the dark.",
     "$n's vision returns to normal.", TRUE, SLOT(88)
   },
 
@@ -2545,7 +2510,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_armor,                TAR_CHAR_DEFENSIVE,     POS_STANDING,
     NULL,                       5,      12,
-    "",                 "You feel less protected.", 
+    "",                 "You feel less protected.",
     "$n looks less protected.", TRUE, SLOT(89)
   },
 
@@ -2570,7 +2535,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_detect_magic, TAR_CHAR_SELF,          POS_STANDING,
     NULL,                       5,      12,
-    "",                 "The detect magic wears off.", 
+    "",                 "The detect magic wears off.",
     "$n's vision returns to normal.", TRUE, SLOT(90)
   },
 
@@ -2579,7 +2544,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_fly,          TAR_CHAR_DEFENSIVE,     POS_STANDING,
     NULL,                       10,     18,
-    "",                 "You slowly float to the ground.", 
+    "",                 "You slowly float to the ground.",
     "$n slowly floats to the ground.", TRUE, SLOT(91)
   },
 
@@ -2597,7 +2562,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_charm_person, TAR_CHAR_OFFENSIVE,     POS_STANDING,
     &gsn_charm_person,  5,      12,
-    "",                 "You feel more self-confident.", 
+    "",                 "You feel more self-confident.",
     "$n looks more confident.", TRUE, SLOT(92)
   },
 
@@ -2606,7 +2571,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_scry,         TAR_CHAR_SELF,          POS_STANDING,
     NULL,                       35,     20,
-    "",                 "Your vision returns to normal.", 
+    "",                 "Your vision returns to normal.",
     "$n's vision returns to normal.", TRUE, SLOT(93)
   },
 
@@ -2615,7 +2580,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_giant_strength,       TAR_CHAR_DEFENSIVE,     POS_STANDING,
     NULL,                       20,     12,
-    "",                 "You feel weaker.", 
+    "",                 "You feel weaker.",
     "$n looks much weaker.", TRUE, SLOT(94)
   },
 
@@ -2624,7 +2589,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_detect_invis, TAR_CHAR_SELF,          POS_STANDING,
     NULL,                       5,      12,
-    "",                 "You no longer see invisible objects.", 
+    "",                 "You no longer see invisible objects.",
     "$n's vision returns to normal.", TRUE, SLOT(95)
   },
 
@@ -2649,7 +2614,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_invis,                TAR_CHAR_DEFENSIVE,     POS_STANDING,
     &gsn_invis,         5,      12,
-    "",                 "You are no longer invisible.", 
+    "",                 "You are no longer invisible.",
     "$n appears from thin air.", TRUE, SLOT(96)
   },
 
@@ -2674,7 +2639,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_shield,               TAR_CHAR_DEFENSIVE,     POS_STANDING,
     NULL,                       12,     18,
-    "",                 "Your force shield shimmers then fades away.", 
+    "",                 "Your force shield shimmers then fades away.",
     "The force shield surrounding $n shimmers and fades away.", FALSE, SLOT(98)
   },
 
@@ -2683,161 +2648,17 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_adrenaline_control,       TAR_CHAR_SELF,  POS_STANDING,
     NULL,                           6,      12,
-    "",                             "The adrenaline rush wears off.", 
+    "",                             "The adrenaline rush wears off.",
     "$n doesn't seem so pumped up anymore.", FALSE, SLOT(99)
   },
 
-  {
-    "song of acid blast",
-    { L_APP, L_APP, L_APP },
-    spell_acid_blast,   TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
-    NULL,                       20,     12,
-    "&gacid blast&X",   "!Acid Blast!", "", FALSE, SLOT(0)
-  },
-
-  {
-    "song of colour spray",
-    { L_APP, L_APP, L_APP },
-    spell_colour_spray, TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
-    NULL,                       15,     12,
-    "&rc&go&cl&Yo&Gu&Rr &rsp&gr&Ba&Gy&X","!Colour Spray!", "",
-    FALSE, SLOT(0)
-  },
-
-  {
-    "song of hidden sight",
-    { L_APP, L_APP, L_APP },
-    spell_detect_hidden,        TAR_CHAR_SELF,          POS_STANDING,
-    NULL,                       5,      12,
-    "",                 "You feel less aware of your suroundings.", 
-    "$n's vision returns to normal.", TRUE, SLOT(100)
-  },
-
-  {
-    "song of cursing",
-    { L_APP, L_APP, L_APP },
-    spell_curse,                TAR_CHAR_OFFENSIVE,     POS_FIGHTING,
-    &gsn_curse,                 20,     12,
-    "curse",            "The curse wears off.", 
-    "The curse within $n vanishes.", TRUE, SLOT(101)
-  },
-
-  {
-    "song of earthquake",
-    { L_APP, L_APP, L_APP },
-    spell_earthquake,           TAR_IGNORE,             POS_FIGHTING,
-    NULL,                       15,     12,
-    "&Oearthquake&X",   "!Earthquake!", "", FALSE, SLOT(0)
-  },
-
-  {
-    "song of faerie fire",
-    { L_APP, L_APP, L_APP },
-    spell_faerie_fire,          TAR_CHAR_OFFENSIVE,    POS_FIGHTING,
-    NULL,                       5,      12,
-    "faerie fire",       "The pink aura around you fades away.", 
-    "The pink aura enveloping $n slowly fades away.", TRUE, SLOT(102)
-  },
-
-  {
-    "song of astral travel",
-    { L_APP, L_APP, L_APP },
-    spell_astral,               TAR_IGNORE,            POS_STANDING,
-    NULL,                       50,     12,
-    "",                  "!Astral Walk!", "", FALSE, SLOT(0)
-  },
-
-  {
-    "song of the ghosts",
-    { L_APP, L_APP, L_APP },
-    spell_pass_door,            TAR_CHAR_SELF,         POS_STANDING,
-    NULL,                       20,     12,
-    "",                  "You feel solid again.", 
-    "$n's body appears more solid.", TRUE, SLOT(103)
-  },
-
-  {
-    "song of revealing",
-    { L_APP, L_APP, L_APP },
-    spell_faerie_fog,            TAR_IGNORE,           POS_STANDING,
-    NULL,                        12,     12,
-    "faerie fog",         "!Faerie Fog!", "", FALSE, SLOT(0)
-  },
-
-  {
-    "song of stone",
-    { L_APP, L_APP, L_APP },
-    spell_stone_skin,            TAR_CHAR_SELF,        POS_STANDING,
-    NULL,                        12,     18,
-    "",                   "Your skin feels soft again.", 
-    "$n's skin takes on a softer texture.", TRUE,  SLOT(104)
-  },
-
-  {
-    "lullaby",
-    { L_APP, L_APP, L_APP },
-    spell_sleep,                 TAR_CHAR_OFFENSIVE,   POS_STANDING,
-    &gsn_sleep,                  15,     12,
-    "",                   "You feel less tired.",        
-    "$n looks more energetic.", TRUE,  SLOT(105)
-  },
-
-  {
-    "song of fiery death",
-    { L_APP, L_APP, L_APP },
-    spell_fireball,             TAR_CHAR_OFFENSIVE,   POS_FIGHTING,
-    NULL,                       15,     12,
-    "&Rfireball&X",   "!Fireball!", "", FALSE, SLOT(0)
-  },
-
-  {
-    "song of cancellation",
-    { L_APP, L_APP, L_APP },
-    spell_cancellation,          TAR_CHAR_DEFENSIVE,   POS_FIGHTING,
-    NULL,                        15,     16,
-    "",                   "!Cancellation!",              "", FALSE, SLOT(0)
-  },
-
-  {
-    "song of sight",
-    { L_APP, L_APP, L_APP },
-    spell_truesight,             TAR_CHAR_SELF,        POS_STANDING,
-    NULL,                        59,     12,  
-    "",                  "Your vision is no longer so true.", 
-    "$n's vision returns to normal.", TRUE, SLOT(106)
-  },
-
-  {
-    "song of fireshield",
-    { L_APP, L_APP, L_APP },
-    spell_fireshield,            TAR_CHAR_DEFENSIVE,   POS_STANDING,
-    NULL,                        75,     12,
-    "",               "The flames engulfing you body burn out.", 
-    "The flames surrounding $n suddenly burn out.", TRUE, SLOT(107)
-  },
-
-  {
-    "song of portal",
-    { L_APP, L_APP, L_APP },
-    spell_portal,                TAR_IGNORE,           POS_STANDING,
-    NULL,                        100,    12,
-    "",               "",                            "", FALSE, SLOT(0)
-  },
-
-  {
-    "song of healing",
-    { L_APP, L_APP, L_APP },
-    spell_heal,                  TAR_CHAR_DEFENSIVE,   POS_FIGHTING,
-    NULL,                        50,     12,
-    "",              "!Heal!",                       "", FALSE, SLOT(0)
-  },
   {
     "track",
     { L_APP, L_APP, L_APP },
     spell_null,         TAR_IGNORE,             POS_STANDING,
     &gsn_track,         0,       0,
     "",                 "!Track!",              "", FALSE, SLOT(0)
-  }, 
+  },
   {
     "headbutt",
     { L_APP, L_APP, L_APP },
@@ -2911,7 +2732,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_null,         TAR_CHAR_OFFENSIVE,             POS_FIGHTING,
     &gsn_nerve,     0,      24,
-    "",        "You can feel your arms again.", 
+    "",        "You can feel your arms again.",
     "Feeling returns to $n's arms.", FALSE, SLOT(111)
   },
   {
@@ -2935,7 +2756,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_chi_shield,      TAR_CHAR_SELF,          POS_STANDING,
     NULL,                   75,     12,
-    "", "Your chi shield dissipates.", 
+    "", "Your chi shield dissipates.",
     "The chi shield surrounding $n dissipates.", FALSE, SLOT(113)
   },
   {
@@ -2943,7 +2764,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_null,      TAR_CHAR_SELF,          POS_STANDING,
     &gsn_ironfist,     0,     12,
-    "", "Your fists are flesh once again.", 
+    "", "Your fists are flesh once again.",
     "$n's fists return to a normal structure.", FALSE, SLOT(114)
   },
   {
@@ -2951,7 +2772,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     { L_APP, L_APP, L_APP },
     spell_null,   TAR_IGNORE,   POS_FIGHTING,
     &gsn_globedark,   50, 0,
-    "&zYou raise your hand and the globe dissipates.",  
+    "&zYou raise your hand and the globe dissipates.",
     "You are no longer able to sustain your &zglobe &cin &w:&W",
     "The globe of darkness about $n dissipates.", TRUE, SLOT(0)
   },
@@ -3021,11 +2842,11 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
   },
 
   {
-    "ethereal mist", 
+    "ethereal mist",
     { L_APP, L_APP, L_APP },
     spell_pass_door,    TAR_CHAR_SELF,          POS_STANDING,
     NULL,                       20,     12,
-    "",                 
+    "",
     "You feel solid again.",
     "$n's body becomes more solid.", TRUE, SLOT(115)
   },
@@ -3063,7 +2884,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     "The acidic spit burning $n evaporates.", FALSE, SLOT(118)
   },
   {
-    "ward of safety", 
+    "ward of safety",
     { L_APP, L_APP, L_APP },
     spell_null,       TAR_IGNORE,        POS_STANDING,
     &gsn_ward_safe,     100,  12,
@@ -3072,7 +2893,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     "The wards of safety crumble.", FALSE, SLOT(0)
   },
   {
-    "ward of healing", 
+    "ward of healing",
     { L_APP, L_APP, L_APP },
     spell_null,       TAR_IGNORE,        POS_STANDING,
     &gsn_ward_heal,     200,  12,
@@ -3090,28 +2911,11 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
   },
 
   {
-    "inspiration",
-    { L_APP, L_APP, L_APP },
-    spell_inspiration,    TAR_CHAR_DEFENSIVE, POS_STANDING,
-    NULL,     15, 12,
-    "",   "The inspiration you once felt vanishes.", 
-    "The inspiration within $n disappears.", FALSE, SLOT(0)
-  },
-
-  {
     "warcry",
     { L_APP, L_APP, L_APP },
     spell_war_cry,    TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL,     15, 12,
     "war cry",      "!War cry!", "", SLOT(0)
-  },  
-
-  {
-    "group healing",
-    { L_APP, L_APP, L_APP },
-    spell_group_healing,       TAR_CHAR_DEFENSIVE,     POS_FIGHTING,
-    NULL,                       50,     12,
-    "",                 "!Group Heal!", "", FALSE, SLOT(0)  
   },
 
   {
@@ -3163,11 +2967,11 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
   },
 
   {
-    "draw strength", 
+    "draw strength",
     { L_APP, L_APP, L_APP },
     spell_draw_strength,  TAR_CHAR_SELF,        POS_STANDING,
     NULL,     80, 40,
-    "",   "Strength returns to your body.",     
+    "",   "Strength returns to your body.",
     "$n's doesn't look so weak anymore.", FALSE, SLOT(202)
   },
 
@@ -3219,7 +3023,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     "silence",
     { L_APP, L_APP, L_APP },
     spell_silence,  TAR_CHAR_OFFENSIVE, POS_STANDING,
-    NULL, 60, 12, "", "You may cast spells again.", 
+    NULL, 60, 12, "", "You may cast spells again.",
     "$n is somatic once again.", TRUE, SLOT(24)
   },
 
@@ -3233,7 +3037,7 @@ const struct  skill_type  skill_table [ MAX_SKILL ] =
     "hallucinate",
     { L_APP, L_APP, L_APP },
     spell_hallucinate,  TAR_CHAR_OFFENSIVE, POS_STANDING,
-    NULL, 160,  12, "", "You regain your sanity.", 
+    NULL, 160,  12, "", "You regain your sanity.",
     "$n looks better.", TRUE, SLOT(205)
   },
   {
