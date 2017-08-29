@@ -122,7 +122,7 @@ typedef void SPELL_FUN                  args( ( int sn, int level, CHAR_DATA *ch
  * Increase the max'es if you add more of something.
  * Adjust the pulse numbers to suit yourself.
  */
-#define MAX_SKILL                  344
+#define MAX_SKILL                  400
 #define MAX_GSPELL                 2
 #define MAX_CLASS                  3
 #define MAX_RACE                   5

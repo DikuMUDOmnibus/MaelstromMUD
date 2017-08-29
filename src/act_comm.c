@@ -168,7 +168,7 @@ bool is_note_to( CHAR_DATA *ch, NOTE_DATA *pnote )
 
 	/*    for ( pClan = clan_first->next; pClan; pClan = pClan->next )
 		  {
-		  if ( ( ch->clan == pClan->vnum ) && 
+		  if ( ( ch->clan == pClan->vnum ) &&
 		  ( !str_cmp( pnote->to_list, strip_color( pClan->name ) ) ) )
 		  {
 		  return TRUE;  <search for clan name in arg1 >
@@ -183,7 +183,7 @@ bool is_note_to( CHAR_DATA *ch, NOTE_DATA *pnote )
 		return TRUE;
 
 	if ( ch->clan == 2 && (   is_name(NULL, "ELYSIUM", pnote->to_list ) ) )
-		return TRUE;  
+		return TRUE;
 
 	if ( ch->clan == 3 && (   is_name(NULL, "LEGION", pnote->to_list ) ) )
 		return TRUE;
@@ -191,7 +191,7 @@ bool is_note_to( CHAR_DATA *ch, NOTE_DATA *pnote )
 	if ( ch->clan == 4 && (   is_name(NULL, "MYSTICALTWILIGHT", pnote->to_list ) ) )
 		return TRUE;
 
-	if ( ch->clan == 5 && (   is_name(NULL, "GRIMREAPERS", pnote->to_list ) ) ) 
+	if ( ch->clan == 5 && (   is_name(NULL, "GRIMREAPERS", pnote->to_list ) ) )
 		return TRUE;
 
 	if ( ch->clan == 6 && (   is_name(NULL, "HEADHONCHOS", pnote->to_list ) ) )
@@ -215,7 +215,7 @@ bool is_note_to( CHAR_DATA *ch, NOTE_DATA *pnote )
 	if ( ch->clan == 12 && (   is_name(NULL, "MAIDENS", pnote->to_list ) ) )
 		return TRUE;
 
-	if ( ( get_trust( ch ) >= LEVEL_IMMORTAL ) 
+	if ( ( get_trust( ch ) >= LEVEL_IMMORTAL )
 			&& ( (   is_name(NULL, "immortal", pnote->to_list )
 					|| is_name(NULL, "immortals", pnote->to_list )
 					|| is_name(NULL, "imm",       pnote->to_list )
@@ -301,7 +301,7 @@ void note_remove( CHAR_DATA *ch, NOTE_DATA *pnote )
 	/*
 	 * Just a simple recipient removal?
 	 */
-	if ( str_cmp( ch->name, pnote->sender ) && to_new[0] != '\0' && 
+	if ( str_cmp( ch->name, pnote->sender ) && to_new[0] != '\0' &&
 			get_trust(ch) < L_DEM )
 	{
 		free_string( pnote->to_list );
@@ -461,8 +461,8 @@ void do_note( CHAR_DATA *ch, char *argument )
 				free_string( letter->description );
 				letter->description = str_dup(buf);
 				note			= new_extra_descr();
-				note->keyword 	= str_dup( "note" ); 
-				note->next		= letter->extra_descr;  
+				note->keyword 	= str_dup( "note" );
+				note->next		= letter->extra_descr;
 				note->description	= str_dup( buf1 );
 				letter->extra_descr	= note;
 				obj_to_char( letter, ch );
@@ -805,7 +805,7 @@ void do_note( CHAR_DATA *ch, char *argument )
 			if ( !to_ch->in_room || to_ch->deleted )
 				continue;
 			if ( is_note_to( to_ch, pnote ) && to_ch != ch )
-				send_to_char( C_DEFAULT, "New note.\n\r", to_ch );	    
+				send_to_char( C_DEFAULT, "New note.\n\r", to_ch );
 		}
 
 		return;
@@ -905,7 +905,7 @@ void talk_channel( CHAR_DATA *ch, char *argument, int channel, const char *verb 
 		return;
 	}
 
-	if ( IS_SET( ch->in_room->room_flags, ROOM_SILENT ) 
+	if ( IS_SET( ch->in_room->room_flags, ROOM_SILENT )
 			&& (get_trust(ch)<L_DIR) )
 	{
 		send_to_char(AT_WHITE, "You can't do that here.\n\r", ch );
@@ -914,8 +914,8 @@ void talk_channel( CHAR_DATA *ch, char *argument, int channel, const char *verb 
 
 	REMOVE_BIT( ch->deaf, channel );
 	/*
-	   if (    IS_QUESTOR( ch ) 
-	   && channel != CHANNEL_SHOUT 
+	   if (    IS_QUESTOR( ch )
+	   && channel != CHANNEL_SHOUT
 	   && channel != CHANNEL_YELL  )
 	   {
 	   send_to_char(AT_WHITE, "You can't do that your questing.\n\r", ch);
@@ -954,7 +954,7 @@ void talk_channel( CHAR_DATA *ch, char *argument, int channel, const char *verb 
 			ch->position     = position;
 			break;
 		case CHANNEL_CLASS:
-			sprintf( buf, "{%s} $n: $t", 
+			sprintf( buf, "{%s} $n: $t",
 					class_table[prime_class(ch)].who_long );
 			position        = ch->position;
 			ch->position   = POS_STANDING;
@@ -981,7 +981,7 @@ void talk_channel( CHAR_DATA *ch, char *argument, int channel, const char *verb 
 			ch->position    = POS_STANDING;
 			act(AT_BLUE, buf, ch, argument, NULL, TO_CHAR );
 			ch->position    = position;
-			break; 
+			break;
 	}
 
 	for ( d = descriptor_list; d; d = d->next )
@@ -994,14 +994,14 @@ void talk_channel( CHAR_DATA *ch, char *argument, int channel, const char *verb 
 
 		if ( d->connected == CON_PLAYING
 				&& vch != ch
-				&& !IS_SET( och->deaf, channel ) 
+				&& !IS_SET( och->deaf, channel )
 				&& !IS_SET( och->in_room->room_flags, ROOM_SILENT ) )
 		{
-			if (    IS_QUESTOR( och ) 
-					&& channel != CHANNEL_SHOUT 
+			if (    IS_QUESTOR( och )
+					&& channel != CHANNEL_SHOUT
 					&& channel != CHANNEL_YELL  )
 				continue;
-			if ( channel == CHANNEL_VENT && och->level < 3 ) 
+			if ( channel == CHANNEL_VENT && och->level < 3 )
 				continue;
 			if ( channel == CHANNEL_IMMTALK && !IS_IMMORTAL( och ) )
 				continue;
@@ -1028,15 +1028,15 @@ void talk_channel( CHAR_DATA *ch, char *argument, int channel, const char *verb 
 				continue;
 
 
-			/* If ch is not in Mudschool, don't send to chars in mudschool unless you are Immortal  
+			/* If ch is not in Mudschool, don't send to chars in mudschool unless you are Immortal
 			   if ( ( !IS_SET( ch->in_room->area->area_flags, AREA_MUDSCHOOL ) )
 			   && ( ch->level < LEVEL_IMMORTAL ) )
-			   if ( ( IS_SET( vch->in_room->area->area_flags, AREA_MUDSCHOOL ) ) 
+			   if ( ( IS_SET( vch->in_room->area->area_flags, AREA_MUDSCHOOL ) )
 			   && ( vch->level < LEVEL_IMMORTAL ) )
 			   continue;
 
-			   If ch IS in Mudschool, send only to chars in mudschool and Immortals 
-			   if ( ( IS_SET( ch->in_room->area->area_flags, AREA_MUDSCHOOL ) ) 
+			   If ch IS in Mudschool, send only to chars in mudschool and Immortals
+			   if ( ( IS_SET( ch->in_room->area->area_flags, AREA_MUDSCHOOL ) )
 			   && ( ch->level < LEVEL_IMMORTAL ) )
 			   if ( ( !IS_SET( vch->in_room->area->area_flags, AREA_MUDSCHOOL ) )
 			   && ( vch->level < LEVEL_IMMORTAL ) )
@@ -1070,12 +1070,12 @@ void talk_channel( CHAR_DATA *ch, char *argument, int channel, const char *verb 
 
 					/* so only trust 112+ can see person's name */
 					/*                     if ( vch->trust > 111 )
-										   sprintf( buf, "&W<VENT> $n: '$t'" ); 
+										   sprintf( buf, "&W<VENT> $n: '$t'" );
 										   else
 										   sprintf( buf, "&W<VENT>: '$t'" );   */
 
 					act(AT_WHITE, buf, ch, argument, vch, TO_VICT );
-					break; 
+					break;
 			}
 			vch->position	= position;
 		}
@@ -1190,7 +1190,7 @@ void do_auction( CHAR_DATA *ch, char *argument )
 	{
 		send_to_char(AT_WHITE, "Auction it for how much?\n\r",ch );
 		return;
-	}    
+	}
 	/* Lowest bidding price to start an auction */
 	if ( ( aucamt.gold < 100 ) && ( aucamt.silver < 100 )
 			&& ( aucamt.copper < 50 ) )
@@ -1209,9 +1209,9 @@ void do_auction( CHAR_DATA *ch, char *argument )
 	{
 		if ( ( auc_obj = get_obj_carry( ch, arg ) ) )
 		{
-			if ( (auc_obj->pIndexData->vnum > 1 && auc_obj->pIndexData->vnum < 23 ) 
+			if ( (auc_obj->pIndexData->vnum > 1 && auc_obj->pIndexData->vnum < 23 )
 					|| ( auc_obj->item_type == ITEM_CONTAINER && auc_obj->contains ) )
-			{ 
+			{
 				send_to_char( AT_DGREEN, "You can't auction that.\n\r", ch );
 				auc_obj = NULL;
 				return;
@@ -1335,10 +1335,10 @@ void do_bid( CHAR_DATA *ch, char *argument )
 	/* else bug, auc_cost has to have a cost */
 
 	if ( !bid_amt )
-	{  
+	{
 		send_to_char( AT_WHITE, "Bid is not high enough.\n\r", ch );
 		return;
-	}     
+	}
 
 	if ( ( (ch->money.gold*C_PER_G) + (ch->money.silver*S_PER_G) +
 				(ch->money.copper) ) < ( (amt.gold*C_PER_G) + (amt.silver*S_PER_G) +
@@ -1366,7 +1366,7 @@ void do_chat( CHAR_DATA *ch, char *argument )
 }
 /* OOC added by Hannibal */
 void do_ooc( CHAR_DATA *ch, char *argument )
-{    
+{
 	talk_channel( ch, argument, CHANNEL_OOC, "OOC" );
 	return;
 }
@@ -1471,7 +1471,7 @@ void do_say( CHAR_DATA *ch, char *argument )
 
 	/* Check if ch is asking newbie helper for help */
 
-	if ( !IS_NPC( ch ) && ( ch->level < 4 ) && 
+	if ( !IS_NPC( ch ) && ( ch->level < 4 ) &&
 			( IS_SET( ch->in_room->area->area_flags, AREA_MUDSCHOOL ) ) )
 		newbie_help( ch, argument );
 
@@ -1517,7 +1517,7 @@ void do_tell( CHAR_DATA *ch, char *argument )
 		 || ( IS_NPC( victim ) && victim->in_room != ch->in_room ) ) */
 	if (    (    !( victim = get_pc_world( ch, arg )   )
 				&& !( victim = get_char_world( ch, arg ) )  )
-			|| (    IS_NPC( victim ) 
+			|| (    IS_NPC( victim )
 				&& victim->in_room != ch->in_room           ) )
 	{
 		send_to_char(AT_WHITE, "They aren't here.\n\r", ch );
@@ -1543,18 +1543,18 @@ void do_tell( CHAR_DATA *ch, char *argument )
 	}
 	/*    if ( !IS_NPC( victim ) && IS_SET( victim->act, PLR_AFK ) )
 		  {
-		  act( AT_WHITE, "$E is AFK at the moment.", ch, 0, victim, 
+		  act( AT_WHITE, "$E is AFK at the moment.", ch, 0, victim,
 		  TO_CHAR );
 		  return;
 		  } */
 	if ( !IS_NPC( victim ) && IS_SET( victim->act, PLR_AFK ) )
 	{
-		sprintf( buf, "%s %s.", victim->name, 
+		sprintf( buf, "%s %s.", victim->name,
 				( victim->pcdata && victim->pcdata->afkchar[0] != '\0' )
 				? victim->pcdata->afkchar : "is AFK at the moment" );
 		act( AT_WHITE, buf, ch, NULL, victim, TO_CHAR );
 		return;
-	} 
+	}
 
 	if ( victim->desc && victim->desc->pString )
 	{
@@ -1670,8 +1670,8 @@ void do_reply( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-	if ( ( !IS_IMMORTAL( ch ) && !IS_AWAKE( victim ) ) 
-			|| ( IS_SET( victim->in_room->room_flags, ROOM_SILENT ) 
+	if ( ( !IS_IMMORTAL( ch ) && !IS_AWAKE( victim ) )
+			|| ( IS_SET( victim->in_room->room_flags, ROOM_SILENT )
 				&& (get_trust(ch) < L_APP ) ) )
 	{
 		act(AT_WHITE, "$E can't hear you.", ch, 0, victim, TO_CHAR );
@@ -2194,8 +2194,13 @@ void do_info( CHAR_DATA *ch, char *argument )
 
 void do_bug( CHAR_DATA *ch, char *argument )
 {
-	report_issue(argument, NULL, GITHUB_LABEL_BUG);
-	send_to_char(AT_WHITE, "Ok.  Thanks.\n\r", ch );
+	if ( argument[0] == '\0' ) {
+		send_to_char(AT_WHITE, "Syntax: bug <string>\n\r", ch);
+	} else {
+		report_issue(argument, NULL, GITHUB_LABEL_BUG);
+		send_to_char(AT_WHITE, "Ok.  Thanks.\n\r", ch );
+	}
+
 	return;
 }
 
@@ -2203,8 +2208,13 @@ void do_bug( CHAR_DATA *ch, char *argument )
 
 void do_idea( CHAR_DATA *ch, char *argument )
 {
-	report_issue(argument, NULL, GITHUB_LABEL_IDEA);
-	send_to_char(AT_WHITE, "Ok.  Thanks.\n\r", ch );
+	if ( argument[0] == '\0' ) {
+		send_to_char(AT_WHITE, "Syntax: idea <string>\n\r", ch);
+	} else {
+		report_issue(argument, NULL, GITHUB_LABEL_IDEA);
+		send_to_char(AT_WHITE, "Ok.  Thanks.\n\r", ch );
+	}
+
 	return;
 }
 
@@ -2212,8 +2222,13 @@ void do_idea( CHAR_DATA *ch, char *argument )
 
 void do_typo( CHAR_DATA *ch, char *argument )
 {
-	report_issue(argument, NULL, GITHUB_LABEL_TYPO);
-	send_to_char(AT_WHITE, "Ok.  Thanks.\n\r", ch );
+	if ( argument[0] == '\0' ) {
+		send_to_char(AT_WHITE, "Syntax: typo <string>\n\r", ch);
+	} else {
+		report_issue(argument, NULL, GITHUB_LABEL_TYPO);
+		send_to_char(AT_WHITE, "Ok.  Thanks.\n\r", ch );
+	}
+
 	return;
 }
 
@@ -2240,7 +2255,7 @@ void do_quit( CHAR_DATA *ch, char *argument )
 	DESCRIPTOR_DATA *d;
 	CHAR_DATA *PeT;
 	CHAR_DATA *gch;
-	MONEY_DATA tax;     
+	MONEY_DATA tax;
 
 	if ( IS_NPC( ch ) )
 		return;
@@ -2323,7 +2338,7 @@ void do_quit( CHAR_DATA *ch, char *argument )
 	if ( IS_AFFECTED2( ch, AFF_PLOADED ) )
 		REMOVE_BIT( ch->affected_by2, AFF_PLOADED );
 	if (ch->level != L_IMP)
-	{ 
+	{
 		sprintf( log_buf, "%s has quit in room vnum %d.", ch->name, ch->in_room->vnum );
 		log_string( log_buf, -1, -1 );
 		wiznet( log_buf, ch, NULL, WIZ_LOGINS, 0, get_trust( ch ) );
@@ -2341,7 +2356,7 @@ void do_quit( CHAR_DATA *ch, char *argument )
 			REMOVE_BIT( ch->act, PLR_QUESTOR );
 		}
 	}
-	
+
 	if ( auc_held && ch == auc_held && auc_obj )
 	{
 		if ( auc_bid )
@@ -2356,7 +2371,7 @@ void do_quit( CHAR_DATA *ch, char *argument )
 			}
 			else
 			{
-				sprintf(log_buf, "Holder of %s has left; selling item to last bidder.", 
+				sprintf(log_buf, "Holder of %s has left; selling item to last bidder.",
 						auc_obj->short_descr );
 				obj_to_char( auc_obj, auc_bid );
 				add_money( &ch->money, &auc_cost );
@@ -2400,7 +2415,7 @@ for ( PeT = ch->in_room->people; PeT; PeT = PeT->next_in_room )
 			extract_char( PeT, TRUE );
 			break;
 		}
-}       
+}
 d = ch->desc;
 extract_char( ch, TRUE );
 if ( d )
@@ -2495,7 +2510,7 @@ void do_delete( CHAR_DATA *ch, char *argument )
 
 	/* Delete Player File */
 	sprintf(log_buf, "%s%c/%s", PLAYER_DIR, LOWER(ch->name[0]), capitalize(ch->name));
-	remove(log_buf); 
+	remove(log_buf);
 
 	/* Delete Finger File */
 	sprintf(log_buf, "%s%c/%s.fng", PLAYER_DIR, LOWER(ch->name[0]), capitalize(ch->name));
@@ -2508,7 +2523,7 @@ void do_delete( CHAR_DATA *ch, char *argument )
 	delete_playerlist( ch->name );
 
 	d = ch->desc;
-	
+
 	extract_char(ch, TRUE);
 
 	if ( d ) {
@@ -2725,7 +2740,7 @@ void do_order( CHAR_DATA *ch, char *argument )
 				continue;
 
 		if ( IS_AFFECTED( och, AFF_CHARM )
-				&& och->master == ch 
+				&& och->master == ch
 				&& ( fAll || och == victim ) )
 		{
 			found = TRUE;
@@ -2865,7 +2880,7 @@ void do_split( CHAR_DATA *ch, char *argument )
 		amt.copper = amount;
 	else
 	{
-		send_to_char( AT_WHITE, "&WSyntax: &Rsplit <amount> <currency type>\n\r", 
+		send_to_char( AT_WHITE, "&WSyntax: &Rsplit <amount> <currency type>\n\r",
 				ch );
 		return;
 	}
@@ -2880,7 +2895,7 @@ void do_split( CHAR_DATA *ch, char *argument )
 	if ( ( amt.gold == 0 ) && ( amt.silver == 0 )
 			&& ( amt.copper == 0 ) )
 	{
-		send_to_char(AT_YELLOW, "You hand out zero coins, but no one notices.\n\r", 
+		send_to_char(AT_YELLOW, "You hand out zero coins, but no one notices.\n\r",
 				ch );
 		return;
 	}
@@ -3096,9 +3111,9 @@ void newbie_help( CHAR_DATA *ch, char *argument )
 	{
 		if ( chance( 30 ) )
 		{
-			act(AT_WHITE, 
-					"$n tells you 'I'm not sure if I can help you. Try being more specific.'", 
-					helper, buf, ch, TO_VICT );  
+			act(AT_WHITE,
+					"$n tells you 'I'm not sure if I can help you. Try being more specific.'",
+					helper, buf, ch, TO_VICT );
 			return;
 		}
 		else

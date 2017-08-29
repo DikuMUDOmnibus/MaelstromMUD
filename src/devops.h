@@ -3,7 +3,7 @@
  */
 #define GITHUB_ACCESS_TOKEN   getenv("GITHUB_ACCESS_TOKEN")
 
-#define GITHUB_REPO_NAME      "zachflower/the-storm-mud"
+#define GITHUB_REPO_NAME      "zachflower/oasis-mud"
 
 #define GITHUB_LABEL_BUG      "bug"
 #define GITHUB_LABEL_IDEA     "idea"

@@ -147,6 +147,11 @@ void parse_issues( CHAR_DATA *ch, char *argument, const char *label ) {
 
 		report_issue(argument, NULL, label);
 		send_to_char(AT_WHITE, "Ok.  Thanks.\n\r", ch);
+	} else {
+		send_to_char(AT_WHITE, "Syntax:\n\r",ch);
+		send_to_char(AT_RED,  "  todo                (List todos)\n\r",ch);
+		send_to_char(AT_RED,  "  todo add   <string> (Create a new todo)\n\r",ch);
+		send_to_char(AT_RED,  "  todo close <id>     (Close a todo)\n\r",ch);
 	}
 
 	return;
