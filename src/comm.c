@@ -246,7 +246,12 @@ int game_main( int argc, char **argv )
 		if ( !(fp = fopen( new_comlog, "w" ) ) ) {
 			perror( new_comlog );
 		} else {
-			fprintf( fp, "%s: %s\n", ctime( &current_time ), log_buf );
+			char *strtime;
+
+			strtime = ctime( &current_time );
+			strtime[strlen(strtime)-1] = '\0';
+
+			fprintf( fp, "%s: %s\n", strtime, log_buf );
 			fclose(fp);
 		}
 
@@ -470,16 +475,20 @@ void game_loop_unix( int control )
 					{
 						char buf[MAX_INPUT_LENGTH];
 						char buf2[MAX_STRING_LENGTH];
+						char *strtime;
 						FILE *fp;
 
+						strtime = ctime( &current_time );
+						strtime[strlen(strtime)-1] = '\0';
+
 						sprintf( buf, "comlog%d.txt", port );
-						sprintf( buf2, "%s: %s: %s\n", ctime( &current_time ),
+						sprintf( buf2, "%s: %s: %s\n", strtime,
 								d->character ? d->character->name : "(Unknown)",
 								d->incomm );
 						fclose(fpReserve);
 						if ( (fp = fopen( buf, "a" ) ) )
 						{
-							fprintf( fp, "%s: %s: %s\n", ctime( &current_time ),
+							fprintf( fp, "%s: %s: %s\n", strtime,
 									d->character ? d->character->name : "(Unknown)",
 									d->incomm );
 							fclose(fp);

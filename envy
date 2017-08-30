@@ -9,7 +9,7 @@ if [ -e .env ]; then
 fi
 
 # Set the port number.
-PORT=1234
+PORT="1234"
 
 if [ -z $1 ]; then
   PORT="$1"
@@ -29,13 +29,13 @@ ulimit -c unlimited
 
 while true; do
   # If you want to have logs in a different directory,
-  # change the 'set logfile' line to reflect the directory name.
+  # change the 'set LOGFILE' line to reflect the directory name.
   INDEX=1000
 
   while true; do
-    logfile="../log/$INDEX.log"
+    LOGFILE="../log/$INDEX.log"
 
-    if [ ! -e $logfile ]; then
+    if [ ! -e $LOGFILE ]; then
       break
     fi
 
@@ -47,7 +47,7 @@ while true; do
      rm -f shutdown.txt
   fi
 
-  ../bin/envy $PORT > $logfile
+  ../bin/envy $PORT &> $LOGFILE
 
   if [ -e core ]; then
     mv core ../bin/$INDEX.core
