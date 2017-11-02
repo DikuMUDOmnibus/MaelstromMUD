@@ -1,3 +1,20 @@
+## 2.0.0 (2017-11-02)
+
+Features:
+
+* OASIS is now Maelstrom
+* Save and load social data in JSON
+* Save and load clan data in JSON
+* Songs have been removed
+* Added in .env file support
+* List/create todo functionality
+* Beautify logs
+
+Maintenance:
+
+* Areas have been brought back into the main repository until a better storage mechanism can be figured out
+* Vagrant setup is a little more organized now
+
 ## 1.0.2 (2016-11-15)
 
 Features:
