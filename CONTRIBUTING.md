@@ -4,17 +4,17 @@ First off, thanks for taking the time to contribute! The following is a set of g
 
 ## Code of Conduct
 
-This project adheres to the [Contributor Covenant 1.2](http://contributor-covenant.org/version/1/2/0). By participating, you are expected to uphold this code. Please report unacceptable behavior to [zach@zacharyflower.com](mailto:zach@zacharyflower.com).
+This project adheres to the [Contributor Covenant 1.2](http://contributor-covenant.org/version/1/2/0). By participating, you are expected to uphold this code. Please report unacceptable behavior to [zach@mudcoders.com](mailto:zach@mudcoders.com).
 
 ## Getting Started
 
-This codebase is built on top of decades of development. If you are new to C, or MUDs in general, head on over to [MudBytes](http://www.mudbytes.net/), [/r/MUD](https://www.reddit.com/r/MUD), and the [MUD Coders Guild Slack](http://signup.mudcommunity.com/) to get acquainted (and meet some uncomfortably enthusiastic people in the process).
+This codebase is built on top of decades of development. If you are new to the C programming language, or MUDs in general, head on over to [MudBytes](http://www.mudbytes.net/), [/r/MUD](https://www.reddit.com/r/MUD), and [The MUD Coders Guild](http://signup.mudcommunity.com/) to get acquainted (and meet some uncomfortably enthusiastic people in the process).
 
-- Make sure you have a [GitHub account](https://github.com/signup/free)
+- Make sure you have a [GitHub account](https://github.com/signup/free).
 - For issues or feature requests, submit an issue on GitHub (assuming one does not already exist).
   - Clearly describe the issue including steps to reproduce when it is a bug.
   - Make sure you fill in the earliest version that you know has the issue.
-- Fork the repository on GitHub
+- Fork the repository on GitHub.
 
 ## Making Changes
 
