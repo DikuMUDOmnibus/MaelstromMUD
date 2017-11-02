@@ -8,34 +8,34 @@
 &BSyntax: &WASAVE  <world/area/changed/list>    - Save Editing to Disk.
 &BSyntax: &WALIST                               - Listing of Areas.
 &BSyntax: &WRESET  See Help Resets.             - Set Game Resets.
- 
+
 &RDefinition: &W[optional]  <required>  (combined arguments)
- 
+
 The above commands are used to expand the game world.  The original
 code is based on was written by Surreality and installed in The Isles by Locke.
 It was then converted to work with Envy by Jason Dinkel, and ported to ROM
 by Hans Birkeland (Hugin).
- 
+
 Inside an editor, typing COMMANDS lists working commands and ? gives
 help. AEDIT and REDIT default to the current area or room. EDIT ROOM RESET
 resets the current room.  Most commands with no arguments display syntax.
 &PSee also help: &WAEDIT REDIT MEDIT OEDIT
- 
+
 ~
 0 ALIST~
 &BSyntax: &WALIST
- 
+
 This command gives you a listing of all the areas along with their
 vnum assignments and the builder(s) assigned to editing them.
- 
+
 ~
 0 AEDIT~
 &BSyntax: &Waedit            -Enters the editor for the current area.
 &BSyntax: &Waedit <vnum>     -Enters the editor for the selected area.
- 
- 
+
+
 The follow commands are available from within the &PAEDITOR&W:
- 
+
 &Gage <number>        &W- set the age of the area
 &Gbuilder <player>    &W- toggle that builders access
 &Gbuilder all         &W- allows all builders to edit area
@@ -52,15 +52,15 @@ The follow commands are available from within the &PAEDITOR&W:
 &Guvnum <upper>       &W- set the upper vnum
 &G<flags>             &W- area flags, type ? AREA for a list
 &Gpurge               &W- purges everything in current area
- 
- 
+
+
 ~
 0 REDIT~
 &BSyntax: &Wredit           -Enters the editor for the current room.
 &BSyntax: &Wredit create    -Creates a new room using first available vnum
- 
+
 The following commands are available from within the &PREDITOR&W:
- 
+
 &Gcommands            &W- prints a list of possible commands
 &Gcreate <vnum>       &W- creates a room with a certain vnum
 &Gdesc                &W- edit description of room
@@ -76,11 +76,11 @@ The following commands are available from within the &PREDITOR&W:
 &G<room-flags>        &W- room attributes, type ? ROOM for a list
 &G<sector>            &W- terrain of room, type ? SECTOR for a list
 &G<direction>         &W- see help EXIT, or type <dir> ?
- 
+
 ~
 0 EXIT~
 &WFor &Pexits&W, type the direction (north/s/e/w) followed by:
- 
+
 &Gdig <vnum>         &W- creates the room and makes a two way link
 &Glink <room vnum>   &W- make a two way link
 &Groom <room vnum>   &W- make a one way link (use with caution)
@@ -89,21 +89,21 @@ The following commands are available from within the &PREDITOR&W:
 &Gdesc               &W- edit the description of the exit
 &Gdelete             &W- delete this exit
 &G<exit-flags>       &W- type ? EXIT for a list(make exit door, locked etc.)
- 
+
 The exit flags are presented in the following manner.  The capitalized
 flags are ones not included in the reset info.  i.e. closed is due to
 a player closing the door and not due to the door being set to be closed.
- 
+
 &RExample:&W
 -South to [ 3744] Key: [   -1] Exit flags: [door CLOSED bashed pickproof]
- 
+
 ~
 0 OEDIT~
 &BSyntax: &Woedit create     -Creates first available vnum within that range
 &BSyntax: &Woedit <vnum>     -Enters edit mode for the specified object
- 
+
 The following commands are available from within the &POEDITOR&W:
- 
+
 &Gaddaffect           &W- applies an affect to an object, no args for help
 &Gdelaffect           &W- removes an affect to an object, no args for help
 &Gcommands            &W- prints a list of possible commands
@@ -127,14 +127,14 @@ The following commands are available from within the &POEDITOR&W:
 &Gextra               &W- attributes of object, type ? EXTRA for a list
 &Gwear                &W- where object is worn, type ? WEAR for a list
 &Gmaterial &R*N/A*      &W- material the object is made from
- 
+
 ~
 0 MEDIT~
 &BSyntax: &Wmedit create    -Creates first available mob within area vnum range
 &BSyntax: &Wmedit <vnum>    -Enters editor for specified mobile
- 
+
 The following commands are available from within the &PMEDITOR&W:
- 
+
 &Galignment <value>   &W- set the mobile's alignment
 &Gcommands            &W- prints a list of possible commands
 &Gcreate <vnum>       &W- creates mobile with specified vnum
@@ -163,13 +163,13 @@ The following commands are available from within the &PMEDITOR&W:
 &Gmanadice            &W- dice to toss to get mobile's mana
 &Gdamdice             &W- dice to toss to get mobile's hand to hand damage
 &Gdamtype             &W- type of damage done without a weapon
- 
+
 &PSee also help: &WHITDICE, MANADICE, DAMDICE, DAMTYPE
 ~
 0 HITDICE~
 &WA high number of dice makes for less &Pvariance &Win mobiles hitpoints.
 Suggested values are:
- 
+
 &RLevel:     Dice        Min         Max        Mean
 &G 1:&W       1d2+6       7(  7)     8(   8)     8(   8)
 &G 2:&W       1d3+15     16( 15)    18(  18)    17(  17)
@@ -179,10 +179,10 @@ Suggested values are:
 &G15:&W      5d30+161   166(159)   311( 311)   239( 235)
 &G30:&W     10d61+416   426(419)  1026(1026)   726( 723)
 &G50:&W    10d169+920   930(923)  2610(2610)  1770(1767)
- 
+
 &PDiff = max - min&W.  Mean is the arithmetic mean.
 The values in parenthesis are the the standard merc values.
- 
+
 ~
 0 MANADICE~
 A high number of dice makes for less variance in mobiles mana.
@@ -219,14 +219,14 @@ The type of damage done by weaponless mobiles, These are your choices:
     stab	    DAM_PIERCE	slash	 	DAM_SLASH
     whip	    DAM_SLASH	claw		DAM_SLASH
     blast	    DAM_BASH	pound		DAM_BASH
-    crush	    DAM_BASH	grep		DAM_SLASH	
-    bite	    DAM_PIERCE	pierce		DAM_PIERCE	
-    suction	    DAM_BASH	beating		DAM_BASH	
-    digestion	    DAM_ACID	charge		DAM_BASH	
-    slap	    DAM_BASH	punch		DAM_BASH	
-    wrath	    DAM_ENERGY	magic		DAM_ENERGY	
-    divine power    DAM_HOLY	cleave		DAM_SLASH	
-    scratch	    DAM_PIERCE	peck		DAM_PIERCE	
+    crush	    DAM_BASH	grep		DAM_SLASH
+    bite	    DAM_PIERCE	pierce		DAM_PIERCE
+    suction	    DAM_BASH	beating		DAM_BASH
+    digestion	    DAM_ACID	charge		DAM_BASH
+    slap	    DAM_BASH	punch		DAM_BASH
+    wrath	    DAM_ENERGY	magic		DAM_ENERGY
+    divine power    DAM_HOLY	cleave		DAM_SLASH
+    scratch	    DAM_PIERCE	peck		DAM_PIERCE
     chop	    DAM_SLASH   sting	    	DAM_PIERCE
     smash           DAM_BASH	shocking bite   DAM_LIGHTNING
     flaming bite    DAM_FIRE	freezing bite   DAM_COLD
@@ -236,22 +236,22 @@ The type of damage done by weaponless mobiles, These are your choices:
 Syntax: RESETS                -Shows current resets in room
 Syntax: RED RESET             -Resets current room
 Syntax: RESET # DELETE        -Deletes specified reset
- 
+
 Making new resets:
- 
+
 Syntax: Mreset <vnum> <max#>                -Resets specified mobile into room
 Syntax: Oreset <vnum> <mobname> <wear-loc>  -Resets specified eq on last mobile
 Syntax: Oreset <vnum> <max#>                -Resets specified object into room
 Syntax: Oreset <vnum> <objname>             -Resets specified obj into container
- 
+
 **It is important when making new resets that they are done in the above
   order, over-looking steps that are not included.**
- 
+
 The &c#&w of the reset is the first value shown when typing RESETS.
 The &cvnum&w is the number of the specified mobile/object.
 The &cmax#&w is the maximum number of mobiles/objects to be loaded into the
 room per reset (only include when there is more than one to be loaded)
- 
+
 When using the RESET # DELETE command, be sure to purge all specified mobiles/
 objects in order to keep the MUD clean. Before using RED RESET, you must already
 be in REDIT mode and likewise for making new resets.
@@ -259,7 +259,7 @@ be in REDIT mode and likewise for making new resets.
 0 ITEM_LIGHT~
 .   value 0    unused
    value 1    unused
-   value 2    hours of light available, 0 is dead, -1 or 999 is infinite            
+   value 2    hours of light available, 0 is dead, -1 or 999 is infinite
    value 3    unused
    value 4    unused
 ~
@@ -310,7 +310,7 @@ converting a merc-format mobile to ROM format.  A higher
 number of dice gives less variance in damage.  There is no
 dice-bonus on weapon dice.
 
-      level:   dice 
+      level:   dice
         1:     1d8
         2:     2d5
         3:     2d5
@@ -322,7 +322,7 @@ dice-bonus on weapon dice.
 ~
 0 ITEM_CONTAINER~
 value 0    weight capacity in kg's
-   value 1    flags: closeable, pickproof, closed, locked            
+   value 1    flags: closeable, pickproof, closed, locked
    value 2    key vnum
    value 3    unused
    value 4    unused
@@ -380,7 +380,7 @@ The current letters for &Rc&Bo&Wl&Go&Pr&Ys&w are:
 on was written by Surreality and installed in The Isles by Locke.  It was then
 converted to work with Envy by Jason Dinkel.
 
-Inside an editor, typing COMMANDS lists working commands and ? gives help. AEDIT and 
+Inside an editor, typing COMMANDS lists working commands and ? gives help. AEDIT and
 REDIT default to the current area or room. EDIT ROOM RESET resets the current room.
 Most commands with n arguments display syntax.
 
@@ -394,18 +394,18 @@ See also help: &RAEDIT REDIT MEDIT OEDIT
 	  &wauth playername         ( to accept )
 
 &WExamples:
-      auth fred      
-      auth fred yes  
+      auth fred
+      auth fred yes
       auth fred Please choose a more medieval name.
 
-All new players must be authorized by an immortal.  To be notified when a new player 
+All new players must be authorized by an immortal.  To be notified when a new player
 logs on, be sure to have &Rwiznet newbies&W option on.  See HELP WIZNET for more
 information.
 
 ~
 0 ASTAT~
 &RSyntax: &wastat     astat <vnum>     astat <playername>/<mobname>
- 
+
 &WThis command gives you area information of the requested area. Typing ASTAT
 by itself will give you information on the area you are currently in. Typing
 ASTAT <VNUM> will give you information on the area in which that specific vnum
@@ -546,16 +546,16 @@ that an object can be loaded to.  The [<max #>] is the maximum number of
 mobiles allowed in this room and will default to 1 if no number is entered.
 
 For resets to be successful make sure that you add them in a logical order.
-For example, if you are equipping a mobile, don't load a container in the 
+For example, if you are equipping a mobile, don't load a container in the
 room and fill it with some objects and then continue equipping the mobile.
 It is likely that resets will backfire if they are not carefully entered.
 
-If you wish to reset the room then use EDIT ROOM RESET.  
+If you wish to reset the room then use EDIT ROOM RESET.
 ~
 0 ITEM_LIGHT~
 .   value 0    unused
    value 1    unused
-   value 2    hours of light available, 0 is dead, -1 is infinite            
+   value 2    hours of light available, 0 is dead, -1 is infinite
    value 3    unused
 ~
 0 ITEM_STAFF_WAND~
@@ -588,7 +588,7 @@ An up-to-date list of weapon types can be obtained by typing
 ~
 0 ITEM_CONTAINER~
 .   value 0    weight capacity
-   value 1    flags: closeable, pickproof, closed, locked            
+   value 1    flags: closeable, pickproof, closed, locked
    value 2    key vnum
    value 3    unused
 
@@ -621,10 +621,10 @@ An up-to-date list of liquids can be obtained by typing
 101 POLICY IMMRULES~
 &RImmortal Rules/Guidelines&w
 -------------------------
- 
+
 We, as immortals, are here to insure that our world runs with a minimal amount
   of distress and anarchy. To those ends here is a list of _Do's_and_Dont's_.
- 
+
     Do's                                                       Dont's
 &R==============================================================================&w
 Cast a few spells on newbies ( =< 5 )   ||   Load dangerous mobs where mortals
@@ -636,7 +636,7 @@ Be helpful..and use your best judgement ||     is near death then flee/goto
                                         ||     unless harrassment is going on
                                         ||   Be anal
 =============================================================================
- 
+
 The above may be changed/added to so check this entry often review it sometime
 
 Failure to adhere to the rules will result in the following:
@@ -650,7 +650,7 @@ or to render them null and void.
 ~
 -1 ACCEPT~
 Type accept when a player is challenging someone to fight in the arena.
-You cannot accept a challenge while in hell or jail, or fighting. 
+You cannot accept a challenge while in hell or jail, or fighting.
 If you have the required amount of coins being challenged, you will both
 be transported to the arena.
 
@@ -776,7 +776,7 @@ PUT puts an object into a container.
 DROP, GET, and PUT, as well as most other object manipulation commands,
 allow the use of #.object format, where # is a number or the word "all".
 For example, if you had five daggers and you wanted to give the third
-one away, you would type "give 3.dagger frag".  Or if you felt 
+one away, you would type "give 3.dagger frag".  Or if you felt
 philanthropic and decided to let everyone eat your pot pies, you could
 type "drop all.pie".
 ~
@@ -848,7 +848,7 @@ Syntax: stand
 Syntax: wake
 Syntax: wake  <character>
 
-These commands change your position.  When you REST or SLEEP, you 
+These commands change your position.  When you REST or SLEEP, you
 regenerate hit points, mana points, and movement points faster.
 However, you are more vulnerable to attack, and if you SLEEP,
 you won't hear many things happen.
@@ -919,7 +919,7 @@ suggested levels.
 COMMANDS shows you all of the commands (except socials) available to you.
 
 SOCIALS shows you all of the social commands available to you.
- 
+
 AREA <LEVEL#> will show you a list of all areas within that level range.
 ~
 -1 SUMMARY~
@@ -960,7 +960,7 @@ least damage to most damage:
 &WPlease read this, and keep all in mind. For short version see "help death2".&w
 When your character dies, you are reincarnated persay. This is, of course,
 depending on the level of your character at the time of death.
- 
+
 If you die AT or UNDER LEVEL 20, you and your corpse will be transferred to
 the morgue. Here you can GET ALL CORPSE and SAVE. You will then have to ENTER
 <your portal of choice>. If you are GOOD ALIGNED, you will want to ENTER
@@ -968,17 +968,17 @@ BETHAVEN. If you are EVIL ALIGNED, you will most likely choose to ENTER
 RAVENWOOD, as it is well-known for its shadowy places. NEUTRAL characters
 are welcomed in either of the towns. Of course, you may go to Ravenwood if
 you are good aligned, but you will surely pay the price.
- 
+
 If you are OVER LEVEL 20 at the time of death, you will be sent to the morgue.
 That is, your mind and soul will be transferred to the morgue where it will
 have to seek out and find your body to join with once again. Of course, if
 you have no luck in finding your corpse you will have to re-equip yourself
 with no armour to aid you.
- 
+
 The Gods have been known to grant favors for mortals who are reknown for great
 deed-doing (helping newbies, and helping others retrieve lost corpses). To
 expect such a favor is sacriledge, and to receive one... a great honor.
- 
+
 ** Any affected_by spells are cancelled upon death.**
 **Followers and group members are not affected by death**
 **You lose experience points for dying. You lose half-way back to the
@@ -1224,7 +1224,7 @@ Syntax: slist <class>
 
 This command (with no argument) shows you ALL spells and skills available
 for your class.
- 
+
 Typing this command with an argument shows you the list of spells and skills
 for the specified class.
 ~
@@ -1236,12 +1236,12 @@ Syntax: who <class> <level-range>
 
 WHO shows the people currently in the game.  Some people may choose to
 remain unseen and won't appear on the WHO.
- 
+
 WHO without any arguments shows all of the (visible) people currently playing.
 
 With arguments, WHO can show players of certain classes or levels.
 For example:
- 
+
 who 10          lists all players of level 10 or above
 who 15 20       lists all players between level 15 and 20
 who cleric      lists all clerics playing
@@ -1290,10 +1290,10 @@ FULLNAME is important to have on (+) if you wish to see Extra Descriptions
 on objects. This is sometimes necessary to use when looking for clues in
 certain areas/quests.
 
-You can also type AUTOEXIT, AUTOLOOT, AUTOSAC, BLANK, BRIEF, or COMBINE 
+You can also type AUTOEXIT, AUTOLOOT, AUTOSAC, BLANK, BRIEF, or COMBINE
 directly from the prompt to toggle the status of these options.  See the
 helps for these commands.
- 
+
 ~
 0 AUTOEXIT~
 Syntax: autoexit
@@ -1353,7 +1353,7 @@ minus sign and an option, CHANNELS turns that channel on or off.
 0 DESCRIPTION~
 Syntax: description <string>
 Syntax: description + <string>
- 
+
 Sets your personal description. That is, the description that players will see
 when they "look" at you. If the description string starts with a '+', the part
 after the '+' is appended to your currect description, so that you can make
@@ -1484,8 +1484,8 @@ NOTE REMOVE removes the entire note if you are the sender, or just removes you
 from the to-list if you are a recipient.
 
 NOTE WRITE allows you to write your whole note without having to do your note
-line by line. You can write out the whole note and edit it in one editor. 
- 
+line by line. You can write out the whole note and edit it in one editor.
+
 ~
 0 BRANDISH QUAFF RECITE ZAP~
 Syntax: brandish
@@ -1525,152 +1525,152 @@ Also see BASH for warriors.
 ~
 0 DRINK~
 &BSyntax: &Wdrink <object>
- 
+
 Drinking is very &Pimportant &Win this game, if you do not perhaps
 you might die of &Pdehydration&W.  Remember always keep you fluids
 up!
- 
+
 ~
 0 SACRIFICE~
 &BSyntax: &Wsacrifice <object>
- 
-SACRIFICE offers an object to your God.  God may &Preward &Wyou for the 
+
+SACRIFICE offers an object to your God.  God may &Preward &Wyou for the
 sacrifice.  The nature of the reward &Pdepends &Wupon the type of object.
 &RHint:&W God likes corpses.
- 
+
 ~
 0 FLEE~
 &BSyntax: &Wflee
- 
+
 Once you start a fight, you can't just walk away from it.  If the fight
 is not going well, you can &Pattempt&W to FLEE.  All this means is that instead
 of fighting, you turn tail and haul ass.  Flee &Pdoes not always work&W and you
 will lose experience for succeeding or failing for showing such cowardice.
- 
+
 ~
 0 BASH 'BASH DOOR'~
 &BSyntax:&W bash <direction>
- 
+
 A powerful warrior can attempt to &Pbypass&W the intricacies of unlocking
 and opening doors by simply BASHING through them.  This, of course,
 tends to make the doors rather useless, which always amuses warriors.
 Be aware, however, that bashing is a fairly &Paggressive&W action, and
 some mobs don't take kindly to that type of behavior...
- 
+
 ~
 0 CHAMELEON 'CHAMELEON POWER'~
 &BSyntax: &Wchameleon
- 
+
 With CHAMELEON POWER, a psionicist uses the power of his or her mind to &Pchange&W
 the appearance and coloration of his or her body, armor, and equipment to
 blend in with the surroundings.  This skill is only effective if the
 psionicist remains &Pabsolutely still&W.
- 
+
 ~
 0 FOLLOW GROUP~
 &BSyntax: &Wfollow <character>
 &BSyntax: &Wgroup
 &BSyntax: &Wgroup <character>
- 
+
 FOLLOW starts you following another character.  To stop following anyone else,
 just FOLLOW <yourself>.
- 
+
 GROUP <character> makes someone who is following you a member of your group.
 Group members share experience points from kills and may use the GTELL and
 SPLIT commands.  If anyone in your group is attacked, you will automatically
 join the fight.
- 
+
 If the <character> is already a member of your group, then GROUP will
 kick out the <character> from your group.  Characters can also leave your
 group by using a FOLLOW command to stop following you.
- 
+
 GROUP with no argument shows statistics for each character in your group.
- 
+
 &RNOTE:&W You may FOLLOW and GROUP only with characters who are within five levels of
 your own.
- 
+
 ~
 0 HEIGHTEN 'HEIGHTEN SENSES'~
 &BSyntax: &Wheighten
- 
-A psionicist is able to heighten there senses some times.  When they do this, 
-they have the ability to &Pdetect&W things that would otherwise go unnoticed.  
+
+A psionicist is able to heighten there senses some times.  When they do this,
+they have the ability to &Pdetect&W things that would otherwise go unnoticed.
 So in other words, they become more &Palert&W, etc.
- 
+
 ~
 0 HIDE SNEAK VISIBLE~
 &BSyntax: &WHIDE
 &BSyntax: &WSNEAK
 &BSyntax: &WVISIBLE
- 
+
 The skill hide, is used by a lot of thieves.  Many times they have to &Phide&W
 when a storekeeper (or someone else they robbed), is chasing after them
 calling for the police.  If done properly most people &Pcannot see you&W.
- 
+
 Sometimes you must also try to sneak out of a room when &Phiding&W.  If you
 sneak &Pproperly&W, most people will not be able to see you and hear you when
 you leave.
- 
+
 If you must become &Pvisible&W again, type visible and it &Pcancels&W you hiding and
 sneaking. It also cancels almost any invisibility routine.
- 
+
 ~
 0 'POISON WEAPON'~
 &BSyntax: &Wpoison <weapon>
- 
+
 With this skill, a thief can create a &Pdeadly&W poison that can be poured
 onto any weapon, rendering it more deadly.  This skill is not easy,
 however, because the poison itself requires &Pspecial ingredients&W, and the
 thief must be steady of hand and clear of mind.  The profit-minded thief
 (is there any other kind?) might even think about selling the products
 of his or her labor to other adventurers for a tidy profit.
- 
+
 &RCaution:&W The poison is highly corrosive and will damage your weapon
 in due time.  Special blades may be more resistant to the poison effects
 on the steel.
- 
+
 ~
 0 PRACTICE~
 &BSyntax: &WPRACTICE
 &BSyntax: &WPRACTICE <skill|spell>
- 
+
 PRACTICE without an argument tells you your current ability level in all
 the skills and spells available to you.  You can check this anywhere.
- 
+
 PRACTICE with an argument practices that skill or spell.  Your learning
-percentage varies from 0% (unlearned) to a some maximum between 80% and 
-100%, depending on your class.  You must be at a &PGUILDMASTER &Wto 
+percentage varies from 0% (unlearned) to a some maximum between 80% and
+100%, depending on your class.  You must be at a &PGUILDMASTER &Wto
 practice.
- 
+
 The higher your &Pintelligence&W, the more you will learn at each practice
 session. The higher your &Pwisdom&W, the more practice sessions you will
 have each time you gain a level.  Unused sessions are saved until you
 do use them.
- 
+
 ~
 0 QUIT RENT SAVE~
 &BSyntax:&W QUIT
 &BSyntax:&W SAVE
- 
+
 SAVE saves your character and objects.  You must be at least second level to
 save. The game will &Pauto-save&W your character every few minutes whether you
 save or not.
- 
-&RNOTE: &WSome objects, such as keys and objects of higher level than you, 
+
+&RNOTE: &WSome objects, such as keys and objects of higher level than you,
 may not be saved.
- 
- 
+
+
 QUIT leaves the game. You may QUIT anywhere. When you return to the
 game, you will find yourself in the room you last quit in.
- 
+
 QUIT automatically does a SAVE, so you can &Psafely &Wleave the game with just one
 command. Nevertheless it's a good idea to SAVE before QUIT.  If you get into
 the habit of using QUIT without SAVE, and then you play some other mud that
 doesn't save before quitting, you're going to &Pregret &Wit
- 
-&RNOTE: &WThere is no RENT on this MUD.  Just SAVE and QUIT whenever you 
+
+&RNOTE: &WThere is no RENT on this MUD.  Just SAVE and QUIT whenever you
 want to leave.
- 
+
 ~
 0 RECALL 'RECITE RECALL'~
 Syntax: RECALL
@@ -1691,7 +1691,7 @@ curse will not recall at all.
 0 SHADOW 'SHADOW FORM'~
 Syntax: shadow
 
-A psionicist can use his or her mind power to blend in with the shadows while 
+A psionicist can use his or her mind power to blend in with the shadows while
 moving, having the same effect as the thief skill SNEAK.  See also VISIBLE.
 ~
 0 SPELLS~
@@ -1712,12 +1712,12 @@ the gold after a kill.
 0 STEAL~
 &BSyntax:&W STEAL coins    <character>
 &BSyntax:&W STEAL <object> <character>
- 
+
 Steal is the one skill that &Pdefines&W a person as a thief.  If you are
 a thief most of your life revolves around this skill.  Thieves would
 much rather &Ptake&W something from someone else, rather than earn it.
 But what can you say?  They are thieves.
- 
+
 &RBeware: &WThere are penalties for using steal on other players.
 ~
 0 TRAIN~
@@ -1781,7 +1781,7 @@ The site ban test works by suffix comparison, so if you ban 'foo.edu',
 all sites within 'foo.edu' are banned as well.
 
 Site bans are not saved; every time the server is rebooted, the site
-ban list is cleared.  
+ban list is cleared.
 ~
 52 REBOOT SHUTDOWN WIZLOCK NEWLOCK NUMLOCK~
 Syntax: reboot
@@ -2095,7 +2095,7 @@ more damage.
 ~
 0 ARMOR~
 &BSyntax: &Wcast armor <character>
- 
+
 Armor is said to be a spell which deals with &Pmatter&W.  It is rumored
 that when this spell is cast upon your armor, it reinforces it.
 Thus making you &Pmore invulnerable&W to your enemies attacks.
@@ -2463,8 +2463,8 @@ Mega City One area.  Guess what they do?
 0 GUILD~
 The GUILD is the place where adventurers can go to relax, have a few
 drinks, tell a few tales, and in general blow off steam.  Each player
-class has its own guild, into which other classes cannot set foot.  
-Each guild is run by a GUILDMASTER, who is fully versed in all of 
+class has its own guild, into which other classes cannot set foot.
+Each guild is run by a GUILDMASTER, who is fully versed in all of
 the skills of their class, and can teach them to worthy students.
 ~
 0 GUILDMASTER~
@@ -2497,7 +2497,7 @@ society or doctors to their comrades in arms.
 -1 CAS CASTER MAGIC MAGIC-USER 'MAGIC USER'~
 The CASTER class is a 'spellcasting' class devoted primarily toward control
 over the elements.  The universe contains an unmeasured power the CASTER taps
-into to influence the world. 
+into to influence the world.
 ~
 -1 ROG ROGUE~
 The ROGUE class can be characterized as a WARRIOR who dropped out of school
@@ -2520,9 +2520,9 @@ his or her own being.  As a result, many of the devotions that a Psionisist can
 practice are strictly personal in effect, and cannot be used on other players.
 
 Disclaimer:  Psionisist class was originally developed by Thelonius (EnvyMud)
-from 'The Complete Psionics Handbook' by Steve Winter, published by TSR, Inc.  
+from 'The Complete Psionics Handbook' by Steve Winter, published by TSR, Inc.
 Skills and spells described therein will be quite similar to those here, though
-the interpretation has been changed to coincide with a MERC DIKU MUD.  
+the interpretation has been changed to coincide with a MERC DIKU MUD.
 Questions, comments, and suggestions are welcome.
 ~
 0 GHOST~
@@ -2530,17 +2530,17 @@ When traveling in the night, beware of GHOSTS.  Fortunately, sunlight is
 a bane for these representatives of the dead.
 ~
 0 'ADRENALINE CONTROL'~
-Syntax: cast 'adrenaline control' 
+Syntax: cast 'adrenaline control'
 
-By controlling the production and release of adrenaline in his or her system, 
-the psionicist can gain temporary boosts in dexterity and constitution.  This 
-control cannot be initiated during battle because, hey, even psionicists get a 
+By controlling the production and release of adrenaline in his or her system,
+the psionicist can gain temporary boosts in dexterity and constitution.  This
+control cannot be initiated during battle because, hey, even psionicists get a
 little excited from time to time.
 ~
 0 AGITATION~
 Syntax: cast 'agitation' <character>
 
-This skill is nearly identical to the Mage spell BURNING HANDS.  With this 
+This skill is nearly identical to the Mage spell BURNING HANDS.  With this
 skill, a psionicist can cause the cells in his or her victim to become
 agitated, moving so fast as to cause burn damage.
 ~
@@ -2556,7 +2556,7 @@ after only a brief lull in the action.
 0 'BALLISTIC ATTACK'~
 Syntax: cast 'ballistic attack' <character>
 
-BALLISTIC ATTACK lets a psionicist use the powers of his or her mind to throw 
+BALLISTIC ATTACK lets a psionicist use the powers of his or her mind to throw
 small objects, usually a rock or other debris that happens to be in the area,
 at the target.  The results can be rather amusing to the psionicist, and
 painful to the victim.
@@ -2564,7 +2564,7 @@ painful to the victim.
 0 'BIOFEEDBACK'~
 Syntax: cast 'biofeedback'
 
-BIOFEEDBACK is the power with which a psionicist controls the flow of blood 
+BIOFEEDBACK is the power with which a psionicist controls the flow of blood
 through his or her body.  This control allows the psionicist to reduce
 bleeding, as well as cushion blows against him or her, effectively reducing
 the damage by half.  Mind over body indeed...
@@ -2572,23 +2572,23 @@ the damage by half.  Mind over body indeed...
 0 'CELL ADJUSTMENT'~
 Syntax: cast 'cell adjustment'
 
-A skilled psionicist can also perform CELL ADJUSTMENT, which can remove both 
+A skilled psionicist can also perform CELL ADJUSTMENT, which can remove both
 curses and poisons from his or her body.
 ~
 0 'COMBAT MIND'~
 Syntax: cast 'combat mind'
 
-A psionicist using COMBAT MIND has a very keen understanding of his or her 
-enemies and their fighting tactics.  As a result, the psionicist has an 
-increased chance of hitting his or her enemies, and knows how to minimize the 
-damage received from their blows.  Because psionicists are telepathinc, this 
+A psionicist using COMBAT MIND has a very keen understanding of his or her
+enemies and their fighting tactics.  As a result, the psionicist has an
+increased chance of hitting his or her enemies, and knows how to minimize the
+damage received from their blows.  Because psionicists are telepathinc, this
 knowledge can also be shared with the his or her companions.
 ~
 0 'CONTROL FLAMES'~
 Syntax: cast 'control flames' <character>
 
 With this skill, a psionicist can will the flames in his or her light source to
-leap out and strike an enemy.  And if you don't think your light source uses a 
+leap out and strike an enemy.  And if you don't think your light source uses a
 flame, well, you're wrong.  You just aren't looking close enough.
 ~
 0 'DEATH FIELD'~
@@ -2607,11 +2607,11 @@ damage.
 Syntax: cast 'detonate'     <character>
 Syntax: cast 'disintegrate' <character>
 
-With both of these skills, a psionocist uses his or her mind to affect the 
-latent energy inside inanimate objects.  If these objects are close enough to 
-the intended victim, they can cause great damage.  For this reason, most 
-psionocists choose the victim itself as the target, since there's bound to be 
-SOMETHING dead on it, sooner or later.  Mid-level psionicists can DETONATE 
+With both of these skills, a psionocist uses his or her mind to affect the
+latent energy inside inanimate objects.  If these objects are close enough to
+the intended victim, they can cause great damage.  For this reason, most
+psionocists choose the victim itself as the target, since there's bound to be
+SOMETHING dead on it, sooner or later.  Mid-level psionicists can DETONATE
 objects on their victim, and extremely skilled psionicists can even
 DISINTEGRATE their victims, killing them instantly.
 ~
@@ -2632,19 +2632,19 @@ by the psionicist's will.
 DISPLACEMENT makes the psionicist appear to be displaced from his or her actual
 position, thus making him or her more difficult to hit.
 
-With the FLESH ARMOR devotion, a psionicist can harden his or her skin into an 
+With the FLESH ARMOR devotion, a psionicist can harden his or her skin into an
 armor-like substance.
 
-INTELLECT FORTRESS shares the powers of the psionicist's mind with the other 
+INTELLECT FORTRESS shares the powers of the psionicist's mind with the other
 members in his or her group, extending a shield around all of them.
 
-INERTIAL BARRIER creates a barrier of positive energy that reduces the damage 
+INERTIAL BARRIER creates a barrier of positive energy that reduces the damage
 infliced by creatures of negative energy.
 ~
 0 'DOMINATION'~
 Syntax: cast 'domination' <character>
 
-With this skill, a psionicist can DOMINATE the mind of his or her intended 
+With this skill, a psionicist can DOMINATE the mind of his or her intended
 victim, causing the victim to do exactly as the psionicist says.  As with
 CHARM, the actions of dominated characters affect the status of the dominator;
 don't whine if you get a KILLER flag.
@@ -2652,21 +2652,21 @@ don't whine if you get a KILLER flag.
 0 'EGO WHIP'~
 Syntax: cast 'ego whip' <character>
 
-Because a psionicist understands the inner workings of the mind so well, he or 
+Because a psionicist understands the inner workings of the mind so well, he or
 she can attempt to EGO WHIP a victim, making them less confident by bringing
-up bad childhood memories, embarrassing moments, and failures.  This lack of 
+up bad childhood memories, embarrassing moments, and failures.  This lack of
 confidence can significantly reduce their battle effectiveness.
 ~
 0 'ENERGY CONTAINMENT'~
 Syntax: cast 'energy containment'
 
-By using ENERGY CONTAINMENT, a psionicist can absorb many forms of energy 
+By using ENERGY CONTAINMENT, a psionicist can absorb many forms of energy
 without damage.  As the psionicist gains experience, this skill improves.
 ~
 0 'ENHANCE ARMOR'~
 Syntax: cast 'enhance armor' <object>
 
-With this devotion, a psionicist can change the molecular makeup of objects, 
+With this devotion, a psionicist can change the molecular makeup of objects,
 making them stronger and more durable.  This has obvious applications to
 armor, but if the armor is already magically enchanted, a psionicist cannot
 rearrange its molecules.
@@ -2678,7 +2678,7 @@ Syntax: cast 'psychic crush' <character>
 Syntax: cast 'psionic blast' <character>
 Syntax: cast 'ultrablast'    <character>
 
-With these skills, a psionicist can telepathically cause damage to the neural 
+With these skills, a psionicist can telepathically cause damage to the neural
 synapses of his or her victim.  The devotions are listed in increasing order of
 damage inflicted.
 ~
@@ -2691,7 +2691,7 @@ expense.  That's what friends are for, right?
 0 'PROJECT FORCE'~
 Syntax: cast 'project force' <character>
 
-If a psionicist successfully PROJECTS FORCE, the force of his or her mind will 
+If a psionicist successfully PROJECTS FORCE, the force of his or her mind will
 strike against the victim's body, causing moderate damage.
 ~
 0 'PSYCHIC DRAIN'~
@@ -2710,7 +2710,7 @@ does not become too weak.
 ~
 -1 SOCIALS~
 This is a complete list of socials:
- 
+
 accuse       adjust      air          apologize     applaud     babble
 bark         bcatch      beckon       beer          bearhug     beg
 bird         bkiss       bleed        blink         blush       boast
@@ -2742,32 +2742,32 @@ tease        thank       threaten     tickle        tip         tongue
 twiddle      type        undress      view          wave        whine
 whistle      wiggle      wince        wink          wonder      worry
 worship      yawn        yeehaw       yodel
- 
+
 (list and many of the socials written by Sara)
 ~
 -1 'NEWBIE INFO'~
 Ah! Another mortal, seeking adventure.  You should go through mudschool first,
 to gain experience to face the trials outside.  Be sure to practice a weapon
 in the guild room, or your stay with us shall be very short indeed.  Type
-'equipment' to see what your are wielding, 'spells' to see your spells, 
+'equipment' to see what your are wielding, 'spells' to see your spells,
 'skills' to see your skills, and 'commands' for a list of commands. Help is
 available on most commands and abilities.
 ~
 -1 MOTD~
 &W
 Welcome to Entropy of the Soul
- 
+
 We are open to all players, &RPK&W is restricted to &RPK&Willers,
 &BR&Wole &BP&Wlay is optional.
 Use commands if you need a list of commands.
 Everyone welcome back &RTorann&W!
- 
+
 +++&RHelp rules&W. Ignorance of the rules is no excuse.+++
 
 http://www.kyndig.com/rate.php?id=710
 &BRate us!
- 
- 
+
+
 &G<Hit Enter>
 ~
 101 IMOTD~
@@ -2814,7 +2814,7 @@ as Areas, Mortal Affairs, Clan Affairs and so on.
 The Guardians are the law enforcers of the MUD.  These are the ones you
 will have to deal with if you are charged with a crime, or accused of a
 wrong doing.  Be aware that Guardians enfore Immortal laws as well as Mortal
-laws, so no one is exempt from their justice.  
+laws, so no one is exempt from their justice.
 ~
 0 COUNCIL 112~
 The Council members will be a select few individuals who are put in charge of
@@ -2834,38 +2834,38 @@ He is here to oversee everything, mortal and immortal.
                          ***********************
                          ** The Rules of EotS **
                          ***********************
- 
+
 1)  Do not kill mortals, do not kill mortals, do not kill mortals.
     This includes transferring/summoning them to aggressive mobs.
- 
-2)  Do not cheat for ANY mortal in ANY way, especially your own. 
+
+2)  Do not cheat for ANY mortal in ANY way, especially your own.
     Unless of course you LIKE deletion. Yes this includes tanking,
-    healing/restoring, casting protection spells <armor, sanct>,    
+    healing/restoring, casting protection spells <armor, sanct>,
     and softening up or altering mobs.
- 
+
 3)  Do not transfer or summon mobs to mortals or mortals to mobs.
     They have legs, if they want to kill a mob, they can easilly
     go there themselves.
- 
+
 4)  DO NOT kill the shopkeepers for any reason at ALL.
- 
+
 5)  DO NOT use reboot.  <--- Note, simple English.
- 
+
 6)  Do not give out free equipment.  You don't need to win brownie
     points with the mortals.  Quest are fine but handing out items
     isn't.
- 
-7)  A note on quests: Quests are a good thing, more or less, BUT 
-    do not give out overly extravagant prizes.  Exercise some 
+
+7)  A note on quests: Quests are a good thing, more or less, BUT
+    do not give out overly extravagant prizes.  Exercise some
     common sense here folks.  Do not load items more than 4 levels
     below their normal level (i.e. no level 5 ogre gauntlets).
- 
-8)  Do not undermine the authority of a higher level god.  If you 
+
+8)  Do not undermine the authority of a higher level god.  If you
     see that someone has been frozen or nochannelled do not restore
     their priveleges.  They are being punished for a reason.
- 
-9)  Do not try to overrule each other.  
- 
+
+9)  Do not try to overrule each other.
+
 10) Trusted mortals:  Do not use your god powers to help your mortal
     character.  If you do, your trust will be taken away.
 
@@ -2900,33 +2900,33 @@ These are the rules of EotS.  For other matters, use commom sense.
 * sexual harassment of any form will not be tolerated, punishable by deletion
 
 * your presence here is a privilige not a right
- 
-* no multiple logins, multiple playing, or helping your own characters with 
+
+* no multiple logins, multiple playing, or helping your own characters with
   other characters you own -- by any arrangment.
- 
-* no kill stealing.  This means you cannot attack a mob someone else is 
+
+* no kill stealing.  This means you cannot attack a mob someone else is
   fighting, unless they ask you to. Also avoid attacking fleeing mobs.
 
 * cheating will not be tolerated.  This includes accepting favors from gods
   and exploiting bugs. If you find a bug, report it, then do not use it.
   You risk deletion should you be caught.
- 
+
 * Absolutely NO summonsing any mobs to Bethaven or Ravenwood.  I do NOT
    wish newbies jeopardized.  There's plenty of room outside those towns,
    use them.
- 
+
 ~
 -1 NEWS~
 EotS NEWS
- 
+
 4/23/03 - EotS, the EOS debug release project begins.
 4/20/96 - EOSII returns
 4/28/96 - EOSII is officially open to the public!
-8/96    - Added the races Ghoul and Illithid 
+8/96    - Added the races Ghoul and Illithid
 8/96    - Added the classes Necromancer and Werewolf
- 
+
 More new exciting changes in the works!
- 
+
 Thanks to Thalador for beginning the EOSII project.
 ~
 -1 STORY~
@@ -2950,18 +2950,18 @@ The clone command duplicates an object or mobile.  The level of item or mobile
 that may be cloned depends on your level.  The target object or mob must be in
 the same room as you, or in your posession.  Strung and set information is
 preserved by clone, as well as any spell effects and container contents or
-mobile inventory, except for items which are too high for you to clone.  
+mobile inventory, except for items which are too high for you to clone.
 Strung extended descriptions on objects are not kept, however.
 ~
 0 SKILLS SPELLS~
 The spells command is used to display your character's list of available
 skills and spells.  Slist will also show you all skills and spells available
 to your character.  Skills and spells are listed showing amount of pts
-(points) it costs for each particular one, when you type spells.  
+(points) it costs for each particular one, when you type spells.
 ~
 0 OUTFIT~
 The outfit command, usable by levels 5 and below, equips your character with
-a new set of sub issue gear (banner, weapon, helmet, shield, and vest), 
+a new set of sub issue gear (banner, weapon, helmet, shield, and vest),
 courtesy of the Mayor's warehouses.  Only empty equipment slots are affected.
 ~
 0 AUTO AUTOLIST AUTOLOOT AUTOGOLD AUTOSAC AUTOEXIT AUTOASSIST AUTOSPLIT~
@@ -2977,7 +2977,7 @@ autosplit : split up spoils from combat among your group members
 autoassit : makes you help group members in combat
 
 Typing a command sets the action (except for autolist), typing it again removes
-it. 
+it.
 ~
 -1 COUNT~
 The count command displays the number of people (that you can see) logged
@@ -3012,7 +3012,7 @@ Note:  vused
 106 RESTRICT~
 Syntax: restrict [commandname] [level]
 Syntax: restrict [commandname] log [logtype]
- 
+
 Commandname is the name of the command you wish to change the level or
 logtype of, you can use shortforms of commands giving there aren't any
 other commands with those sames letters or you may not get the one you
@@ -3025,7 +3025,7 @@ is the number of the command you wish to list to.
 ~
 101 WRLIST~
 Syntax: wrlist [type(r/o/m/p)] [lvnum] [uvnum]
- 
+
 Wrlist lists the vnums and names of the items in those vnums.  You can list
 room vnums and their names with r, objects with o, and mobs with m.  When
 listing rooms, it also shows you the resets in each room.  Lvnum is the
@@ -3034,7 +3034,7 @@ Note, with m, if the mob has mobprogs, it will list each of the
 different types of mobprogs the mob has.  P will list all the mobs with
 mobprogs within the range.  It will show the full mobprog: type, arglist,
 AND comlist, unlike with m.
- 
+
 When checking for progs (p) using wrlist, please only use a maximum vnum
 range of about 25 at a time, or the Mud will crash due to spamming.
 ~
@@ -3077,13 +3077,13 @@ Here is a list of variables that can possibly be used in most mobprog commands
 101 SPEC~
 {MEdit Command}
 syntax: spec spec_xxx
- 
+
 spec_breath_acid: Acid breath attack.
 spec_breath_frost: Ice breath attack.
 spec_breath_gas: Gas breath attack.
 spec_breath_fire: Fire breath attack.
 spec_breath_lightning: Lightning breath attack.
-spec_breath_any: All breath attacks above. 
+spec_breath_any: All breath attacks above.
 cast_adept: Mob hits target more frequently.
 cast_cleric: Mob uses selected Cleric spells.
 cast_mage: Mob uses selected Mage spells.
@@ -3093,7 +3093,7 @@ cast_judge: Mob uses the 'high explosives' spell.
 cast_psionicist: Mob uses selected Psi spells (including Disintegrate!).
 spec_executioner: Mob will auto-attack player with Thief or Killer flag.
 spec_fido: Mob devours npc-corpses.
-spec_guard: Depending on alignment, mob helps fight player or other mob. 
+spec_guard: Depending on alignment, mob helps fight player or other mob.
 spec_janitor: Mob will scavenge the area for items (with take-flag).
 spec_mayor: Mob will walk a hardcoded route. (Not useful)
 spec_poison: Mob will attack with poison bite (same as poison spell).
@@ -3103,42 +3103,42 @@ spec_healer: Mob will cast armor, bless, shield, heal, refresh on player.
 spec_wanderer: Mob will steal, teleport, and cast spells at itself.
 spec_summon_demon: Mob will cast spells at itself and summons help.
 spec_summon_light: Mob will cast spells at itself and summons help.
- 
+
 [note: breath attacks are area effects and detroy inventories.]
 [note: the spec_summon_zzz are for highest level mobs only!]
- 
+
 ~
 0 BANK DEPOSIT WITHDRAW STORE RETRIEVE~
 Syntax: deposit <amount> coins
 Syntax: deposit <amount>
-Syntax: withdraw <amount> coins     
+Syntax: withdraw <amount> coins
 Syntax: withdraw <amount>
 Syntax: account
-Syntax: store <object> 
+Syntax: store <object>
 Syntax: store
 Syntax: retrieve <object>
- 
- 
- 
+
+
+
 DEPOSIT (# of coins)
    This will deposit this number of coins into your account.
-                                                            
+
 WITHDRAW (# of coins)
    This will withdraw this number of coins from your account.
-                                                             
+
 ACCOUNT
    This will tell you what your current balance is.
- 
+
 Store (item)
    This will store an item in locker. A charge for storage is deducted
    from your account when placing the item in locker and logging into
-   storm. 
- 
-Store 
+   storm.
+
+Store
    Store alone lists items in your locker.
- 
+
 Retrieve (item)
-   This will get an item from your locker.   
+   This will get an item from your locker.
 ~
 -1 HUMAN HUM~
 &z_____________________________________________________________________________
@@ -3187,13 +3187,13 @@ of the other races throughout the lands.
 ~
 -1 GNOME GNO~
 &z_____________________________________________________________________________
-&wGnomes have an intricate society based on their love of all kinds of arts, 
-pranks, and their long lives. Their society is based on art; all gnomes must 
-take up some form of art whether music, painting, cooking, building, or any 
+&wGnomes have an intricate society based on their love of all kinds of arts,
+pranks, and their long lives. Their society is based on art; all gnomes must
+take up some form of art whether music, painting, cooking, building, or any
 other form that is considered creative by the time they come of age.
 &W
-Gnomes are naturally friendly, highly social and fun loving people. They are 
-respected by Elves for their communion with nature and knowledge of arcane 
+Gnomes are naturally friendly, highly social and fun loving people. They are
+respected by Elves for their communion with nature and knowledge of arcane
 magic, admired by Halflings for their humor, and sought out by Dwarves for
 their gemcutting skills.
 &W
@@ -3243,10 +3243,10 @@ The drow are good for thieves.
 ~
 -1 ELDER ELD~
 &z_____________________________________________________________________________
-&wNearly as ancient as the immortals themselves, these beings, commonly 
+&wNearly as ancient as the immortals themselves, these beings, commonly
 referred to as elders, hold a place of high respect among the realms of the
-storm.  They often spend their entire life wandering throughout the lands, 
-spreading their near infinate wisdom to those they meet and are constantly 
+storm.  They often spend their entire life wandering throughout the lands,
+spreading their near infinate wisdom to those they meet and are constantly
 seeking new knowledge.
 &W
 &WSize&w: MAN-SIZE
@@ -3304,13 +3304,13 @@ Con: +4, Wis: -4
 ~
 101 MPSTAT~
 Syntax: mpstat <mobname>
- 
+
 This command gives some general stats on <mobname> and then lists all of the
 mobprograms which are currently assigned to it.
 ~
 105 MPASOUND~
 Syntax: mpasound $? message
- 
+
 This command echos a message to all the characters in the rooms surrounding
 the room in which $? is in. (One room in each direction from $?'s room.)
 ~
@@ -3319,101 +3319,101 @@ Syntax: mpjunk <objname>
 Syntax: mpjunk <#.objname>
 Syntax: mpjunk <all.objname>
 Syntax: mpjunk all
- 
+
 This command purges objects from a mob's inventory/equipped.  The syntaxes
 are self explanitory.  (Note: the command does not tell anyone in the room
 that the mob has junked an item, perhaps use mpecho if you need a message.)
 ~
 105 MPECHO~
 Syntax: mpecho message
- 
+
 This command echos a message to all the characters in the room in which
 the mob with the mobprog is in.
 ~
 105 MPECHOAT~
 Syntax: mpechoat $? message
- 
+
 This command sends a message only to $?.
 ~
 105 MPECHOAROUND~
 Syntax: mpechoaround $? message
- 
+
 This command sends a message to all the characters in the room of the mob
 with the mobprog except for $?.
 ~
 105 MPKILL~
 Syntax: mpkill <$?/moborplayername>
- 
+
 This is a mobs version of kill which bypasses checks on clan, pc, etc so
 that the mob doesn't have to 'MURDER' $?/moborplayername.
 ~
 105 MPMLOAD~
 Syntax: mpmload vnum
- 
+
 This command works exactly the same as the imm command mload.
 ~
 105 MPOLOAD~
 Syntax: mpoload vnum
- 
+
 This command works in exactly the same fashion as the imm command oload.
 ~
 105 MPPURGE~
 Syntax: mppurge <mobname/objname>
- 
+
 This command works the same as the imm command purge, it purges an object/
 mob from the room.  This command must be used instead of purge if the mob
 needs to purge something.
 ~
 105 MPGOTO~
 Syntax: mpgoto vnum
- 
+
 This command works exactly the same as the imm command goto.
 ~
 105 MPAT~
 Syntax: mpat vnum commandstring
- 
+
 This command works exactly the same as the imm command 'AT'.
 ~
 105 MPTRANSFER~
 Syntax: mptransfer <mob/playername> [vnum]
 Syntax: mptransfer all <vnum>
- 
+
 This command works exactly the same as the imm command transfer, except
 that 'mptransfer all' will only affect the characters in the room with
 the mob which has the mobprog.
 ~
 105 MPFORCE~
 Syntax: mpforce <$?> <commandstring>
- 
+
 This command works exactly the same as the imm command force.
 ~
 105 MPTELEPORT~
 Syntax: mpteleport
- 
+
 This will cause the mob to teleport to another room within the same area.
 ~
 105 MPCOMMANDS~
 Syntax: mpcommands
- 
+
 This command will list all the mpcommands which can be used in
 mobprogs.
 ~
 105 QECHO~
 Syntax: qecho message
- 
+
 This command echos a message to everyone which has a quest flag.
 ~
 1 DRAIN LIFE~
 Skill, initiated during combat.
 syntax: drain, drain <target>
-  
+
 Drain Life allows the Vampire to do significant damage to a victim while
 adding to his/her own life force.
 ~
 1 FEED~
 Skill, initiated in combat.
 syntax: feed
-  
+
 Feed allows the Vampire to do moderate damage to a victim while restoring
 his/her own bloodpoints.
 ~
@@ -3422,26 +3422,26 @@ Extra         flag #       Extra            flag #
 ==================================================
 glow               1       hum                   2
 dark               4       lock                  8
-evil              16       invis                32 
-magic             64       nodrop              128  
-bless            256       anti-good           512  
-anti-evil       1024       anti-neutral       2048   
-anti-mage      32768       anti-paladin    4194304   
-anti-cleric    65536       anti-thief       131072  
-anti-warrior  262144       anti-psi         524288  
-anti-druid   1048576       anti-ranger     2097152   
-anti-bard    8388608       anti-vamp      16777216   
+evil              16       invis                32
+magic             64       nodrop              128
+bless            256       anti-good           512
+anti-evil       1024       anti-neutral       2048
+anti-mage      32768       anti-paladin    4194304
+anti-cleric    65536       anti-thief       131072
+anti-warrior  262144       anti-psi         524288
+anti-druid   1048576       anti-ranger     2097152
+anti-bard    8388608       anti-vamp      16777216
 noremove        4096       inventory          8192
 poisoned       16384       nolocate              ?
-nodamage   536970912       flame          33554432     
-chaos       67108864       patched               ? 
+nodamage   536970912       flame          33554432
+chaos       67108864       patched               ?
 ~
 1 WORTH~
 syntax: worth
 Displays the current level, all stats, and amount of gold carried.
 ~
 0 CAST CASTING SPELL~
-For all spell casting classes, once you reach a certain level, you recieve 
+For all spell casting classes, once you reach a certain level, you recieve
 spells which you may practice, and then cast.  There are spells devoted to
 protection, attack, healing, and one or two other miscellaneous subject
 areas.  To be able to cast a spell, it must be practiced to at least 1% or
@@ -3454,13 +3454,13 @@ cost.  To see how much mana/bp your currently practiced spells will
 cost to cast, you may type SPELLS.  Typing PRACTICE will list all currently
 practiced spells and skills.  Also, to see all the spells and skills that
 your class will recieve, type SLIST.
- 
+
 Syntax:  cast 'spellname'
 Syntax:  cast 'spellname' target
 ~
 0 ALIAS~
 Syntax: alias [old] [new]
- 
+
 Typing alias by itself will give you a list of current command alias'
 If you include the [old] string, but not the [new] string, the alias that
 was on the [old] string will be removed.
@@ -3469,10 +3469,10 @@ replacement string [new].
 A command alias can be used in any place where a command is valid.
 I.E, any time you see your normal prompt.  By typing a command alias, the
 game driver will replace what you typed with the string found in [new].
- 
+
 [old] is a one-word string of any length (ie, no spaces or punctuation)..
 [new] is any string, including spaces and punctuation.
- 
+
 Example:
 <prompt> alias clb cast 'lightning breath'
 Alias 'clb' added.
@@ -3480,48 +3480,48 @@ Alias 'clb' added.
 Cast spell on whom?
 <prompt> clb dragon
 Your blast of lightning MUTILATES the dragon.
- 
+
 And continue on playing as normal.
 ~
 0 TRUE TRUESIGHT~
 syntax:  cast truesight
- 
+
 This spell is an enhanced version of the detect invis spell.  It allows
 the caster to see just about anything that's hidden, invis or otherwise
 obscured from vision.
 ~
 0 'ANIMATE DEAD'~
 Syntax: cast 'animate dead' corpse
- 
+
 When successful, this spell causes a corpse on the ground to rise and become
 animated, following the caster as if it were charmed by a 'Charm person' spell.
- 
+
 NOTE: See 'CHARM PERSON' for more details on charmed monsters and how to
 control them.
 ~
 0 'ASTRAL WALK'~
 Syntax: cast 'astral walk' <target>
- 
+
 This spell allows instant travel between your location and another
 character or mob in the world.
- 
+
 NOTE: This spell doesn't always work because certain areas and rooms
 cannot be reached by this spell.
 ~
 0 PORTAL~
 Syntax: cast 'portal' <target>
- 
+
 This spell temporarily creates a shimmering two-way portal between the
 caster and another mob/player in the game.  Other players are able to see
 and enter the portal from both points until the portal eventually fades
 away.
- 
+
 NOTE: This spell doesn't always work because certain areas and rooms cannot
 be reached by spells of this nature.
 ~
 1 DUAL~
 Syntax: dual <weapon>
- 
+
 This skill allows you to use two weapons at one time effectively doubling your
 attacks per round.  You may not be holding anything or wearing a shield to dual
 wield.
@@ -3531,7 +3531,7 @@ This spell summons a demon from the deepest darkest pits of the abyss.
 Fortunately for the player, the demon is charmed.  The demon will last
 longer as the players level increases.
 See charm person for help in controlling your new pet.
-                                          
+
 Syntax: cast 'summon demon   (not to be confused with cast summon demon
 which may summon a demon of the unfriendly persuation)
 ~
@@ -3546,85 +3546,85 @@ Use of this skill is automatic once you have practiced it.
 0 VIBRATE~
 Syntax: cast vibrate
 Syntax: cast vibrate <target>
- 
+
 This spell creates a complex set of vibrations around the affected
 character's body, creating a protective psionic shield around them. This
 shield consequently retalliates all melee attacks against the affected
 character with a blast of powerful psionic energy.
- 
+
 Use of this spell also decreases damage done to the recipient by 1/4.
- 
+
 NOTE: This spell is defensive in nature, and cannot be casted in combat,
 and the duration of this spell is proportional to the caster's level.
 ~
 0 SHOCKSHIELD~
 Syntax: cast shockshield
- 
+
 This spell causes sparks of electricity to flow into the caster's body,
 creating a protective shield around them.  This shield consequently
 retalliates all melee attacks against the affected character with deadly
 bolts of lightning.
- 
+
 Use of this spell also decreases damage done to the recipient by 1/4.
- 
+
 NOTE: This spell is defensive in nature, and cannot be casted in combat,
 and the duration of this spell is proportional to the caster's level.
 ~
 0 ICESTORM~
 Syntax: cast icestorm <victim>
- 
+
 This spell causes a frigid, tornado-like spiral of wind to consume and
 forcibly chill it's victim, as large chunks of ice are hurled around at
 blinding speed ...slashing and crushing it's target in an icy fury.
 ~
 0 'AURA OF PEACE'~
 &BSyntax: &Wcast 'aura of peace'
- 
+
 This spell calls upon the character's deity to bless them with a &Ppeaceful&W
-aura that protects them from harmful aggressors.  This spell completely 
+aura that protects them from harmful aggressors.  This spell completely
 surrounds the caster in their deities aura, which &Pstops&W people from attacking
 them. It is said that the duration of the spell, depends upon how favoured you
 are by your god.
 ~
 0 'DISPEL EVIL'~
 Syntax: cast 'dispel evil' <victim>
- 
+
 This spell invokes the wrath of the character's deity upon an evil victim,
 causing massive damage.
- 
+
 NOTE: The character's alignment must not be EVIL in order to cast this spell.
 ~
 0 ARMOR~
 Syntax: cast bless <character>
- 
+
 This spell improves the to-hit roll and saving throw versus spell of the
 target character by a base value of +1 each.
- 
+
 NOTE: This spell's duration and effects are proportional to the level of
 the caster.
 ~
 0 BLESS~
 Syntax: cast bless <character>
- 
+
 This spell improves the to-hit roll and saving throw versus spell of the
 target character by a base value of +1 each.
- 
+
 NOTE: This spell's duration and effects are proportional to the level of
 the caster.
 ~
 0 EARTHQUAKE~
 Syntax: cast earthquake
- 
+
 This spell causes the ground-shattering earthquake that damages every
 mob in the room, and causes a tremendous noise that can be heard by anyone
 in the immediate area.
- 
-NOTE: Any mobs in the room that haven't attacked you yet WILL attack you 
+
+NOTE: Any mobs in the room that haven't attacked you yet WILL attack you
 upon casting this spell.
 ~
 0 'ENCHANT WEAPON'~
 Syntax: cast 'enchant weapon' <weapon>
- 
+
 This spell magically enchants a weapon, increasing its to-hit and to-dam
 bonuses.  The weapon must be un-magical to start with.  This spell also
 causes the weapon to be aligned with the alignment of the caster.
@@ -3632,31 +3632,31 @@ causes the weapon to be aligned with the alignment of the caster.
 0 FIRESHIELD~
 Syntax : cast fireshield
 Syntax : cast fireshield <target>
- 
+
 This spell engulfs the recipient in magical flames, effectively creating
 a protective shield around them.  This shield consequently retalliates all
 melee attacks against the affected character with a fierce fireball.
- 
+
 Use of this spell also decreases damage done to the recipient by 1/8th.
- 
+
 NOTE: This spell is defensive in nature, and cannot be casted in combat,
 and the duration of this spell is proportional to the caster's level.
 ~
 0 ICESHIELD~
 Syntax: cast iceshield
- 
+
 This spell covers the caster in a layer of frost and ice, effectively creating
 a protective shield around them. This shield consequently retalliates all
 melee attacks against the affected character with a chilling, icy blast.
- 
+
 Use of this spell also decreases damage done to the recipient by 1/4.
- 
+
 NOTE: This spell is defensive in nature, and cannot be casted in combat,
 and the duration of this spell is proportional to the caster's level.
 ~
 0 FLAMESTRIKE~
 Syntax: cast flamestrike <victim>
- 
+
 This spell causes the victim to be engulfed in a large, blazing column of
 flame.
 ~
@@ -3666,9 +3666,9 @@ when it is equiped.
 ~
 1 HOLY STRENGTH~
 HOLY STRENGTH
- 
+
 SYNTAX: cast 'holy strength'
- 
+
 This spell modifies strength by 2 and hit/dam rolls.
 ~
 106 ADVM_106~
@@ -3712,45 +3712,45 @@ You have been promoted to STORM LORD level.  (Level 113)
 ~
 105 'DANCING 'LIGHTS'~
 Syntax: cast 'dancing lights' <target>
- 
- 
+
+
 ~
 1 'DANCING LIGHTS' DANCING~
 Syntax: cast 'dancing lights' <target>
- 
+
 When successfully cast, this spell lowers the target's hit roll.  In
 addition to this, it also increases the damage done to the victim.
 ~
 0 'HOLY SWORD'~
 Syntax: cast 'holy sword' <weapon>
- 
+
 This spell permanently increases the target weapon's Hitroll and Damroll
 bonuses by filling the weapon with the magical force of the caster's deity.
 By enchanting a weapon this way, it makes it useable by classes of a holy
 nature only <Clerics and Paladins> due to the holy nature of the spell.
- 
+
 NOTE: The effectiveness of this spell is directly proportional to the level
 of the caster.
 ~
 1 CANCELLATION~
 Syntax: cast cancellation
- 
+
 The spell cancellation is a personalized 'dispel magic' spell.  It takes less
 mana than 'dispel magic'.  This cancellation spell, removes unwated
 magical effects.
- 
+
 Note:  Cannot be casted on others, only yourself.
 ~
 1 'FLAME BLADE'~
 Syntax: c 'flame blade' <object>
- 
+
 Flame blade magically enchants your weapon (if it has not been previously
 enchanted).  If your weapon has flame blade casted on it, every few rounds
 the weapon will cast a fireball spell.
 ~
 1 AURA 'AURA OF PEACE'~
 Syntax: cast 'aura of peace'
- 
+
 When cast, this spell protects the caster.  If aura of peace is on, people
 cannot attack you.  Unless it is dispelled.
 ~
@@ -3772,27 +3772,27 @@ See Also&w: SCRIBE
 ~
 1 'SUMMON SWARM'~
 Syntax: cast 'summon swarm'
- 
+
 When casting summon swarm, a large swarm of insects appear.  They act as
 any normal charmed character.  They obey orders, etc.
 ~
 1 'FROST BLADE'~
 Syntax: cast 'frost blade' <object>
- 
+
 When casted, this spell enchants a weapon magically.  If weapon has been
 enchanted by frost blade, it will cast ice storm every few rounds.
 The spell will not work, if it has been previously enchanted.
 ~
 1 'SUMMON ANGEL'~
 Syntax: cast 'summon angel'
- 
+
 When cast, you summon an angel from heaven.  There are a few catches
 though.  You can't be evil, for angels do not help evil people.
 Other than that, it is pretty simple.
 ~
 1 'SUMMON PACK~
 Syntax: cast 'summon pack'
- 
+
 When casted, you summon a pack of wolves.  They act just like any other
 charm creature.  Take orders, etc.
 ~
@@ -3801,178 +3801,178 @@ To be bloated... to bloat... to be inflated
 ~
 1 'DARK BLESSING'~
 Syntax: cast 'dark blessing'
- 
+
 When you recieve a dark blessing, your hp's and dam roll goes up.
 ~
 0 'HOLY FIRES'~
 Syntax: cast 'holy fires' <victim>
- 
+
 This spell calls upon the power of the caster's deity to engulf the target's
 body and soul in a holy inferno, causing massive damage.
 ~
 1 'HOLY STRENGTH'~
 Syntax: cast 'holy strength' <target>
- 
+
 Holy strength, takes the will and strength of the gods and fuses it into
 the target's body.  When this happens, your strength goes up, as does
 your dam roll and hit roll.
 ~
 1 'CHAOS FIELD' CHAOS~
 Syntax: cast 'chaos field'
- 
+
 This spell draws forth the substance of chaos, creating a shield around
 the caster's body. This shield consequently retalliates some melee
 attacks against the caster by draining the life force of the attacker to
 heal the caster.
- 
+
 Use of this spell also decreases damage done to the recipient by 1/4.
- 
+
 NOTE: This spell is defensive in nature, and cannot be casted in combat,
 and the duration of this spell is proportional to the caster's level.
 ~
 1 'TRACK'~
 Syntax: track <prey>
- 
+
 The track skill, let's you track your prey.  Everytime you enter a room
 a message will come up telling you which way your prey is.
 ~
 1 'SUMMON DEMON'~
 Syntax: cast 'summon demon'
- 
+
 When cast, you summon a demon from the abyss.  The demon acts like any
 normal charmed character.  Takes orders, follows you, etc.
 ~
 0 BLADE 'BLADE BARRIER'~
 Syntax: cast 'blade barier'
- 
+
 This spell causes thousands of razor-sharp blades to spin around the body
 of the caster, creating a shield. This shield consequently retalliates all
 melee attacks against the caster and severely damages the attacker.
- 
+
 Use of this spell also decreases damage done to the recipient by 1/4.
- 
+
 NOTE: This spell is defensive in nature, and cannot be casted in combat,
 and the duration of this spell is proportional to the caster's level.
 ~
 1 'BIO-ACCELERATION'~
 Syntax: cast bio-acceleration
- 
+
 When this spells is cast, it accelerates you bios.  This increases your
 movement points, and hit points.
 ~
 1 HASTE~
 Syntax: cast haste
- 
+
 When you cast haste upon your self, you feel much quicker, and more
 athletic.  In other words it increases your dexterity.
 ~
 1 ENTANGLE~
 Syntax: cast entangle <target>
- 
+
 When you entangle your target, they cannot flee.  This is especially good,
 when you have a chicken enemy, this way you can kill them.
 ~
 1 'DETECT GOOD'~
 Syntax: cast 'detect good'
- 
+
 This spell enables the caster to detect good characters, which will
 reveal a characteristic blue aura.
 ~
 1 STUN~
 Sytnax: stun
- 
+
 Stun is a command used in battle to try and stun the other person.  If it
 succeeds, the opponent will be stunned.
 ~
 1 METEOR 'METEOR SWARM'~
 Syntax: cast 'meteor swarm' <target>
- 
+
 Meteor swarm, is another offensive spell.  When you cast it, flaming
 meteors fly from your outstretched hand into the target, for lotsa
 damage.
 ~
 1 CHAIN 'CHAIN LIGHTNING'~
 Syntax: cast 'chain lightning'
- 
+
 Chain lightning is an offensive spell, that hits everyone in the room.
 For example if there was a goat, dog, and cat in the room.  The electrical
 blast would get them all.
 ~
 1 MANA~
 Syntax: cast mana <target>
- 
+
 A mana spell increase the mana of your target (unless they have full).
 But be careful how much you cast this, cause it also lowers your own.
 ~
 1 BLOODBATH~
 Syntax: cast bloodbath
- 
+
 Bloodbath is a healing spell for vampires.  You need to have two puddles
 of blood.  Then you bathe in it.  This restores alot of hit points.
 ~
 1 INCINERATE~
 Syntax: cast incinerate <target>
- 
+
 This spell sets the victim's body on fire.  Every few rounds, the victim
 will recieve damage from this fire.  That is until the fire wears out.
 ~
 1 IRON 'IRON GRIP'~
 Syntax: Iron
- 
+
 Iron grip, makes you wield your weapon tighter.  So therefore iron grip
 modifies your anti-disarm score.
 ~
 1 PUNCH~
 Syntax: punch <target>
- 
+
 This is another option you have while fighting.  You can try to punch
 your opponent, while hitting him with weapon, etc.
 ~
 1 'ENCHANTED SONG'~
 Syntax: cast 'enchanted song' <victim>
- 
+
 When this spell is succesfully cast, it pacifies yours victim.
 ~
 1 WEB~
 Syntax: cast web <target>
- 
+
 When you cast web on your target, they cannot flee.  This is especially good,
 if your opponent has a tendancey to run, this way you can kill them.
 ~
 1 'MENTAL BLOCK'~
 Syntax: cast 'mental barrier'
- 
+
 Mental block, provides a mental block around your mind.  If you ahve this
 up you cannt be summoned, astral walked to, or any other spell of this
 nature.
 ~
 1 BIND 'SPELL BIND'~
 Syntax: cast 'spell bind' <item>
- 
+
 When you spell bind an item, it will restore charges.  So you would use it
 on things, such as wands, staffs, etc.
 ~
 1 PATCH~
 Syntax: patch <object>
- 
+
 When you patch something, you are trying to repair it, like the
 blacksmiths.
 ~
 1 GOODBERRY~
 Syntax: cast goodberry <food>
- 
+
 Goodberry changes a normal piece of food, into a healing berry.
 This berry will heal alot of your hit point's but not stop hunger.
 ~
 0 FINGER~
 Syntax:  finger <playername>
- 
+
 This shows you information (including last log-on date and time) on the
 specified player.
 ~
 0 SHATTER~
 &BSyntax: &Wcast shatter <victim>
- 
+
 Shatter is an example of a good spell &Pgone too far&W.  It is said
 in ancient lore, that the spell shatter was discovered when
 a mage was experimenting with the spell 'armor'.  These two spells
@@ -3980,7 +3980,7 @@ both work on basically the same principal.  They both try to harden
 the structure of the armor.  But with shatter the armor get so hard,
 that the matter just cannot stay together.  This is why the equipment
 &P'shatters'&W.
- 
+
 &RBeware: &WMost players will get very upset, if this spell is used
 upon them.  Because it will leave most somewhat naked.
 ~
@@ -3995,73 +3995,73 @@ Description:  This spell turns the caster's skin to stone
 ~
 1 'MENTAL DRAIN'~
 Syntax: mental
- 
+
 When you are fighitng you can mentally drain your opponent.  You have
 to be fighting to do this.  Mental drain, does moderate damage.
 ~
 1 THROW~
 Syntax: throw <item> <target>
- 
+
 By throwing an item at a victim, you start a fight.  The item that is
 thrown will do damage to the unfourtunate victim.
 ~
 1 'CHAOS BLADE'~
 Syntax: cast 'chaos blade' <weapon>
- 
+
 This is another enchant weapon spell.  If successfully cast, the weapon
 will unleash raw chaos every few rounds.  Note if the weapon is
 already enchanted this will not work.
 ~
 1 'SUMMON TRENT'~
 Syntax: cast 'summon trent'
- 
+
 When casted, you will summon a trent.  It will act just like any other
 charmed creature.  Take orders, etc.
 ~
 1 'CURSE OF NATURE'~
 Syntax: cast 'curse of nature' <target>
- 
+
 When someone has a curse of nature upon them, their dam roll, hit roll, and
 strength all decrease.  So try not to get cursed.
 ~
 1 GOUGE~
 Syntax: gouge
- 
+
 Gouge is another skill you can use to hurt people while in combat.  It does
 moderate damage, but be careful.  You could gouge someone's eye out!!!
 ~
 1 PERMENANCY~
 Syntax: cast permenancy <item>
- 
+
 Permenancy will put unlimited charges on wands, staffs, etc.
 ~
 1 'TRUE SIGHT'~
 Syntax: cast 'true sight'
- 
+
 True sight allows you to see through invisible things, such as Dark Invis.
 ~
 1 'SUMMON SHADOW'~
 Syntax: cast 'summon shadow'
- 
+
 This spell is the opposite of summon angel.  You have to be evil to do it,
 and also you have to have lots of blood points to bind the shadow in this
 world.
 ~
 1 'PHASE SHIFT'~
 Syntax: cast 'phase shift'
- 
+
 Phase shift is another invis routine, kinda like Dark invis.  Only a little
 bit different.  Try for yourself, enjoy.
 ~
 1 BERSERK~
 Syntax: berserk
- 
+
 While in a fight, if you go berserk.  Your dam roll, and hit roll go up
 and your armour class goes down.
 ~
 1 CIRCLE~
 Syntax: circle
- 
+
 Circle is another attack.  If you are in battle, and do a successful circle
 you will get behind your opponent for another attack.
 ~
@@ -4071,7 +4071,7 @@ If fumble is successfully cast on someone, it will make them very clumsy.
 ~
 1 CONFUSION~
 Syntax: cast confusion <victim>
- 
+
 Your target will become very confused.  It will not attack as often,
 because of this confusion.
 ~
@@ -4094,50 +4094,50 @@ See Also&w: ALCHEMY
 ~
 1 TURN UNDEAD~
 TURN UNDEAD
- 
+
 Syntax: cast turn >mob<
- 
+
 If successful this spell will instantly kill any undead creature.
 There is a good chance of the spell failing.
 ~
 1 SUMMON BEAST~
 SUMMON BEAST
- 
+
 Syntax: cast 'summon beast'
 This spell summons a beast to protect the caster.
 Obvious, huh?
 ~
 1 MIND PROBE~
 MIND PROBE
- 
+
 Syntax: cast 'mind probe' player
- 
- 
+
+
 This is perhaps the very best spell you can cast to find out another players
 stats.  Successfully cast, it will show you thier score just like when
 you type score to see your own stats.
- 
+
 This spell does not work against mobs.
 ~
 1 PSYCHIC QUAKE~
 PSYCHIC QUAKE
- 
+
 Syntax: cast 'psychic quake'
 This spell unleashes the chaos within your mind to do devastating damage
 upon all creatures in the room.
- 
+
 ~
 1 TURN EVIL~
 TURN EVIL
- 
+
 Syntax: cast 'turn evil' >mob<
- 
+
 This spell will severely injure or even kill any creature that is evil.
 ~
 101 OVARS OVARIABLES~
 All obj_progs may use these variables:
   $i, $n, $o, $r, and modifications of these (like $e for $n)
- 
+
 prog name     | param type | useable variables
 --------------+------------+------------------
 get_prog      | percent    | (none)
@@ -4166,7 +4166,7 @@ unlock_prog   | percent    | $p
 pick_prog     | percent    | (none)
 throw_prog    | percent    | (none)
 rand_prog     | percent    | (none)
- 
+
 Note: rand_prog does *NOT* have a $n variable available.
 for invoke_prog, variables are determined by type
   Type 1 (ObjLoad): $p
@@ -4174,7 +4174,7 @@ for invoke_prog, variables are determined by type
   Type 3 (Transfer): (none)
   Type 4 (ObjMorph): $p - $o is original object, $p is new object
   Type 5 (Spell): Same as for use_prog
- 
+
 For use_prog, variables are determined by spell target
   Target Offensive (Attack): $t
   Target Defensive (Shield): $t
@@ -4185,7 +4185,7 @@ For use_prog, variables are determined by spell target
 101 RVARS RVARIABLES~
 All room_progs may use the following variables:
   $i, $n, $r, and modifications of these (like $e for $n)
- 
+
 prog name    | param type | useable variables
 -------------+------------+------------------
 enter_prog   | percent    | (none)
@@ -4199,9 +4199,9 @@ rest_prog    | percent    | (none)
 death_prog   | percent    | (none)
 time_prog    | hour       | (none)
 rand_prog    | percent    | (none)
- 
+
 Note: rand_prog and time_prog do *NOT* have a $n variable available.
- 
+
 For cast_sn_prog, variables are determined by spell target
   Target Offensive (Attack): $t
   Target Defensive (Shield): $t
@@ -4212,7 +4212,7 @@ For cast_sn_prog, variables are determined by spell target
 105 EVARS EVARIABLES~
 All exit_progs may use the following variables:
   $i, $n, $r, and modifications of these (like $e for $n)
- 
+
 prog name   | param type | useable variables
 ------------+------------+------------------
 enter_prog  | percent    | (none)
@@ -4231,12 +4231,12 @@ All x_progs are triggered by certain actions, and then are passed through
 a check to see if the trigger is activated.  There are various types
 of parameters based on these checks, which are compared to the information
 received by the game driver.
- 
+
 Percent Parameters:
   These are the most common kind of checks.  The parameter is a number
 between 0 and 100, 0 meaning the trigger will never activate, and 100
 meaning the trigger will activated every time it is called.
- 
+
 Word Parameters:
   These parameters may be specified in one of two ways: As a word list or
 as a phrase.  As a word list, each word of the parameter is check against
@@ -4244,32 +4244,32 @@ each word of the incoming data, and if any of the words match, the trigger
 will be activated.  A phrase parameter starts off with the letter 'p' as
 the first word, followed by the phrase to be compared.  In a phrase, all
 words compared much match (excluding the initial 'p').
- 
+
 Slot Parameters:
   These indicate a spell slot.  Spell slots may be found by using the
 'slookup' command.  Be careful to use the SLOT and not the SN, as they
 are two different numbers, used for different purposes.
- 
+
 Hour Parameters:
   This type takes two arguments: The starting hour and the finishing
 hour.  These are called every game hour, and if the time is between the
 two numbers, the trigger will activate.  Numbers must be in 24 hour format,
 and may wrap around midnight.  (ie: '20 8' would activate every hour between
 8:00pm and 8:00am, game time, every game night.)
- 
+
 Hitpoints Parameters:
   The parameters for this trigger is a number between 0 and 100, indicating
 the percentage of hitpoints the mob has from its max hitpoints.  The trigger
 is activated when the mobile's hitpoints to max hitpoints percentage fall
 below the specified percentage.
- 
+
 Itemlist Parameters:
   This is a list of items which may activate the trigger.  Use quotation
 marks (' or ") if you wish to use items with more than one keyword.
 eg: 'orange dagger' as opposed to orange dagger.  The first example would
 need an item with both names to activate the trigger, and the second
 example would need an item with either name to activate.
- 
+
 Goldpieces Parameters:
   The ammount specified in the single parameter is the minimum ammount
 of gold needed to activate the trigger.
@@ -4277,7 +4277,7 @@ of gold needed to activate the trigger.
 101 MVARS MVARIABLES~
 All mob_progs may use the following variables:
   $i, $n, $r, and modifications of these (like $e for $n)
- 
+
 prog name      | param type | useable variables
 ---------------+------------+------------------
 act_prog       | word       | see below
@@ -4291,9 +4291,9 @@ greet_prog     | percent    | (none)
 all_greet_prog | percent    | (none)
 give_prog      | itemlist   | $o
 bribe_prog     | goldpieces | (none)
- 
+
 Note: rand_prog and entry_prog do *NOT* have a $n variable available.
- 
+
 For act_prog, the variables depend on the information received
 Any action that involves an object may use $o.
 Any action that involves two or more objects may use $o and $p.
@@ -4305,9 +4305,9 @@ the target of the action.
 ~
 1 PKILL PK~
 &RPK -> Pkill -> Player Killing
- 
+
 &GRules for Player Killing (8/03/96)
- 
+
 &z[&W1&z]  &RPlayer Killing &Wrange is +/- 5 levels.
      Regardless of whether or not you think you can take on
      a higher level foe.  +/- 5 levels strictly enforced.
@@ -4339,30 +4339,26 @@ the target of the action.
      &B[&wINFO&B]&w: &Wchannel what mob killed a person.
 ~
 -1 GREETING~
-&gConnected to OASIS MUD, based on Diku, Merc, and Envy.
+&zConnected to Maelstrom, based on Diku, Merc, and Envy.
 
-================================================================================
-               .d88888b.        d8888  .d8888b. 8888888 .d8888b.               
-              d88P" "Y88b      d88888 d88P  Y88b  888  d88P  Y88b              
-              888     888     d88P888 Y88b.       888  Y88b.                   
-              888     888    d88P 888  "Y888b.    888   "Y888b.                
-              888     888   d88P  888     "Y88b.  888      "Y88b.              
-              888     888  d88P   888       "888  888        "888              
-              Y88b. .d88P d8888888888 Y88b  d88P  888  Y88b  d88P              
-               "Y88888P" d88P     888  "Y8888P" 8888888 "Y8888P"               
-================================================================================
- 
+&rB80B80B80B80B80B80B80B80B80B80B80B80B80B80B80B80B80B80B80B80B80B80B80B80B80
+&r80&c&r.&c8b&r.&c&r.&c&r.&c&r.&cd8&r.&c&r.&c&r.&c&r.&cdb&r.&c&r.&c&r.&c&r.&c888888&r.&c88&r.&c&r.&c&r.&c&r.&c&r.&c.dP"Y8&r.&c888888&r.&c88""Yb&r.&c&r.&cdP"Yb&r.&c&r.&c8b&r.&c&r.&c&r.&c&r.&cd8&r.&c&r0B
+&r0B&c&r.&c88b&r.&c&r.&cd88&r.&c&r.&c&r.&cdPYb&r.&c&r.&c&r.&c88__&r.&c&r.&c&r.&c88&r.&c&r.&c&r.&c&r.&c&r.&c`Ybo."&r.&c&r.&c&r.&c88&r.&c&r.&c&r.&c88__dP&r.&cdP&r.&c&r.&c&r.&cYb&r.&c88b&r.&c&r.&cd88&r.&c&rB8
+&rB8&c&r.&c88YbdP88&r.&c&r.&cdP__Yb&r.&c&r.&c88""&r.&c&r.&c&r.&c88&r.&c&r.&c.o&r.&co.`Y8b&r.&c&r.&c&r.&c88&r.&c&r.&c&r.&c88"Yb&r.&c&r.&cYb&r.&c&r.&c&r.&cdP&r.&c88YbdP88&r.&c&r80
+&r80&c&r.&c88&r.&cYY&r.&c88&r.&cdP""""Yb&r.&c888888&r.&c88ood8&r.&c8bodP'&r.&c&r.&c&r.&c88&r.&c&r.&c&r.&c88&r.&c&r.&cYb&r.&c&r.&cYbodP&r.&c&r.&c88&r.&cYY&r.&c88&r.&c&r0B
+&r0B80B80B80B80B80B80B80B80B80B80B80B80B80B80B80B80B80B80B80B80B80B80B80B80B8
+
 ~
 0 ANIMATE DEAD~
 Syntax: cast 'animate dead' corpse
- 
+
 This spell will cause the target corpse to become undead and serve the you.
 The undead corpse will automatically follow you and do what you 'order' it
 to do.
 ~
 0 ASTRAL WALK~
 Syntax: cast 'astral walk' <intended name of mob or character>
- 
+
 This spell enables the caster to 'astral' (automatically go) to an intended
 location anywhere in the Storm.  As long as the area will allow you to
 astral to it or out of it.
@@ -4377,23 +4373,23 @@ use (or not use) any area submitted to us.  Once a zone is submitted and it
 is linked into the mud the author of the zone gives up any rights to remove
 the zone from the mud.  We will not give your area away without doing
 everything in our power to ask your permission first and we kindly ask that
-you do the same for us.  
- 
+you do the same for us.
+
 If you feel you are qualified to build for us please speak to
 Grunt, who is head of building here.
 (Previous building experience is highly recommended)
 ~
 1 NEWBIE~
 To the absolute beginner:
- 
+
 Welcome to The Storm.  The Storm is a multi user Dungeon game or Mud for
 short.  If you have gotten this far you have already chosen your race and
 class.  Those choices you have made have created the character you are now
 controlling.  You can make your character do almost anything by using a command
 and pressing enter.  If your screen scrolls while you are typing just continue
 to enter your command the mud will understand you.
- 
- 
+
+
 Some commands to get you going are as follows:
    >look           and also 'look in <item>'
    >say            followed by the sentence you wish to say
@@ -4412,7 +4408,7 @@ Some commands to get you going are as follows:
    >score          gives you your current score.
    >save saves your char and equipment.
    >quit  quits the game.
- 
+
 All commands can be abbreviated.  Thus the command 'look' can be abbreviated to
 just 'l'.  Names of things and items can NOT be abbreviated, you must write
 their full name to refer to them.  Be careful! Learn which abbreviations trigger
@@ -4432,13 +4428,13 @@ who list for a god with "Mortal Council" in their title.  Please try not to
 bother other gods as they are usually very busy trying to add  to the world.
   From all the gods here at Storm we hope you have fun and wish your
   character luck as it runs into anything and everything.
- 
+
 ~
 1 THALADOR THAL~
-Thalador, once a mortal druid is now the top Immortals of the land.. 
-And so on.  
+Thalador, once a mortal druid is now the top Immortals of the land..
+And so on.
 And modest too. :P
- 
+
 To contact Thal send email to
 storm@netway.net
 ~
@@ -4447,7 +4443,7 @@ The RANGER is a class devoted primarily towards hand-to-hand
 combat.  The RANGER has a powerful affiliation with nature and
 receives limited spells from the DRUID class repetoire.  Though the
 RANGER does not have as many multiple attacks as the WARRIOR,
-his spellcasting ability makes the RANGER a formidable foe.  Few can 
+his spellcasting ability makes the RANGER a formidable foe.  Few can
 best a prepared RANGER.
 ~
 0 BARD~
@@ -4466,13 +4462,13 @@ destroy and heal.
 0 DRUID~
 DRUIDS are a powerful nature based class.  There intimate
 knowledge of the land allows them to draw magic from it.
-They use nature as their ally, controlling it and shaping it to 
+They use nature as their ally, controlling it and shaping it to
 fit their needs.  Druids are the priests of nature, and the
 guardians and protectors of the forests.
 ~
 0 PALADIN~
 The PALADIN is an incredible fighter that lives by his deeds.
-As strong as a Warrior, the Paladin fairs well in battle.  His 
+As strong as a Warrior, the Paladin fairs well in battle.  His
 skills in the art of healing others make him an excellent
 player to group with.  With luck, tales of a Paladin's deeds
 will live long after that Paladidn has ceased to exist.
@@ -4482,13 +4478,13 @@ The Vampire is a class that owns the night.  Their spells are
 focused on draining the life from the living.  They get their power
 from the blood of others.  Vampires possess the spell Dark Blessing,
 which greatly increases hit points and damage roll.  Vampire's are
-powerful fighters that also receive the dual wield skill. A Vampire  
+powerful fighters that also receive the dual wield skill. A Vampire
 has a huge disadvantage in the sunlight, and must be indoors to
 be safe from the suns' harmful light during the daylight hours.
 ~
 102 NEWCORPSE~
 Syntax: newcorpse <player> Syntax: newcorpse <player> <corpse #>
-Newcorpse allows you to recreate a corpse for a player who has lost thiers. 
+Newcorpse allows you to recreate a corpse for a player who has lost thiers.
 The player must be online in order for the corpse to be recreated.  The 5
 most recent corpses will be saved.  Typing newcorpse <player> will display a
 list of corpses and number of items each corpse contains The corpses will be
@@ -4498,8 +4494,8 @@ only one item.  Therefore if the player has died trying to get his original
 corpse, and has only a light source, that corpse will not be saved.  Once
 the apporiate corpses to be recreated is decided upon , typing newcorpse
 <player> <corpse #> will recreate the corpse.  The corpse will be recreated
-in the room in which you issued the command.  
- 
+in the room in which you issued the command.
+
 ~
 1 RACE~
 &wThere are 16 races available to choose from in the MUD, each with their
@@ -4521,11 +4517,11 @@ See Also&w: RACE SKILLS, RACE MODIFICATIONS
 1 CLASS~
 The MUD contains 13 classes, each varying in abilities and proficiencies.
 The classes are as follows;
- 
+
 Mage       Cleric       Thief       Warrior       Psionisist       Druid
-Ranger     Paladin      Bard        Vampire       Necromancer      Werewolf    
+Ranger     Paladin      Bard        Vampire       Necromancer      Werewolf
 Monk
- 
+
 For information on each class, type help <class name>
 ~
 101 PET_SHOP~
@@ -4534,146 +4530,146 @@ shop requires 2 rooms in order to function correctly.  The first room is
 where the person goes to buy their pet.  The second room is where the mobs
 for sale are reset to.  It is EXTREMELY IMPORTANT that the second room be
 the VERY NEXT VNUM after the first.  (Thus if the pet shop is room 1234,
-then the second room where the pets are stored should be 1235) 
+then the second room where the pets are stored should be 1235)
 Room1: Gets the pet_shop flag. No mob is necessary but one just standing there
-       pretending to be a shopkeeper adds to the reality. The mob is not a 
+       pretending to be a shopkeeper adds to the reality. The mob is not a
        shopkeeper, the room itself is the shopkeeper.
 Room2: This is where you reset the mobs for sale. the mobs must have the flag
        'Pet' toggled under the act section. Prices are set by mob level.
- 
+
 -Grunt
 ~
 1 PRAYER~
-Syntax: Pray This is a powerful spell for both CLERICS and PALADINS. 
+Syntax: Pray This is a powerful spell for both CLERICS and PALADINS.
 When cast on a character with good alignment, the spell will bestow many
 positive effects.  A blessing from the gods, you can temporarily increase
 you hit points, by praying for yourself..  When a evil characters cast
 prayer, their alignment will move toward that of a good character, though
-they won't receive the blessings a good character would receive.  
+they won't receive the blessings a good character would receive.
 ~
 101 CLASSES~
 Here is a list of all the possible classes here at EotS
- 
+
 Mage     Cleric     Thief     Warrior     Psionicist     Druid
 Ranger   Paladin    Bard      Vampire     Necromancer    Werewolf
 Monk
- 
+
 For further information on a particular class, type help <class name>.
 ~
 1 SOULSTRIKE~
 Syntax: soulstrike
- 
+
 A skill for paladins that uses some of their hp to inflict damage on the enemy.
 This skill is used while in combat, and only by those who are good of heart.
 ~
 1 DISRUPT~
 Syntax: cast disrupt <target>
- 
-A very powerful high level Psionisist spell, that can inflict major 
+
+A very powerful high level Psionisist spell, that can inflict major
 damage on an enemy  by disrupting the fabric of their being
 causing intense pain and suffering.
 ~
 1 'MOLECULAR UNBINDING'~
 Syntax cast 'molecular unbinding' <victim>
- 
-Casting this spell before combat will auto-start a battle after 
+
+Casting this spell before combat will auto-start a battle after
 attempting to wreck one of your victim's worn/wielded items.  Can
 also be cast from within combat.  The victim of the spell is given
 a save to negate the affects.
 ~
 101 INVOKE~
 Ok builders,.... here's the info you all have been waiting for.
- 
+
 While in oedit, you have the possibility to do 5 things with INVOKE.
-These are set by the ac_type command.  (See help AC_TYPE)  The most 
+These are set by the ac_type command.  (See help AC_TYPE)  The most
 common of these is ac_type 5, which is for casting spells. Once you set the
 ac_type, you then must fill in any other information required.  For casting a
 spell, you must provide a spell (help ac_setspell) and a current and maximum
 charge level (help ac_v1, and ac_v2).  To change an object from the current
-one to another, you must provide a second object the current one will 
+one to another, you must provide a second object the current one will
 transform to (help ac_vnum).  Here's a sample for invoking invis:
- 
+
 ac_type 5
 ac_setspell invisibility
 ac_v1 5
 ac_v2 5
- 
+
 Your friendly help file person Muerte :)
 ~
 101 AC_TYPE~
 AC_TYPE is used to set the function that the invoke command will
 execute.  There are 5 different functions possible:
-ac_type 1  will oload an item 
+ac_type 1  will oload an item
 ac_type 2  will mload a mob
 ac_type 3 will trans a player
 ac_type 4 will change one item to another
 ac_type 5  will cast a spell
- 
+
 For all except 5, you must provide a vnum for either an object, mob, or location
 ~
 101 AC_VNUM~
 This command is used in conjunction with the ac_type command.
- 
+
 Syntax ac_vnum <vnum>
- 
+
 You can use the vnum of an object, a mob, or a location.
 The vnum does not have to be from your area.
 ~
 101 AC_SETSPELL~
 Syntax ac_setspell <spell name>
- 
+
 This command is used in conjunction with using the ac_type 5.
 It will set the spell that will be invoked.
 ~
 101 AC_V1~
-Syntax:  ac_v1 <#>  
- 
-This will set the current number of charges, or times an object can 
-be invoked.    
+Syntax:  ac_v1 <#>
+
+This will set the current number of charges, or times an object can
+be invoked.
 ~
 101 AC_V2~
 Syntax:  ac_v2 <#> (use -1 for infinite amount)
- 
+
 This will set the maximum number of charges allowed on the object.
 ~
 1 'HEALING HANDS'~
 Syntax:   cast 'Healing hands' <player>
- 
+
 This is a powerful healing spell that paladins can use to heal others.
 You cannot cast this spell on yourself.
 ~
 1 'CLASS CHANNEL'~
-Syntax: class <message> 
+Syntax: class <message>
         or      >      {message}
- 
-The Class Channel will broadcast your message to everybody 
-who is on from your class.  
+
+The Class Channel will broadcast your message to everybody
+who is on from your class.
 ~
 1 CHAMPION 100 HERO~
 CHAMPION HERO 100
- 
-CHAMPIONS, aka HEROes are those players who have progressed as 
+
+CHAMPIONS, aka HEROes are those players who have progressed as
 far as can be attained in the game on a mortal level. Having mastered
 the mud, they are a good first source of information should you need
 help.
- 
+
 Champions can communicate with each other using the HERO
 channel, by typing hero <message> or -<message>
 ~
 1 REMOTE~
 To use the REMOTE EMOTE actions, type <player's name (action) for example
 <Thalador hugs you!  Thalador would see + <your name> hugs you!  Try them
-out on your friends or victims and have a ball!  
+out on your friends or victims and have a ball!
 ~
 1 LAPDANCE~
 Syntax: Lapdance
         Beg for Lapdance
- 
+
 NOTE: Do NOT attempt this maneuver on anyone wearing spiked armor.
 ~
 1 DONATE~
 &GSyntax:  donate <object> ; don <object>
- 
+
 &YDonate&G is a new command that will send an item in your
 inventory to one of the 4 donation rooms in Bethaven.  The
 donation rooms are located *&YWEST&G* of the Oracle.  Each
@@ -4698,7 +4694,7 @@ up for in strength and constitution.
 Str: +2, Int: -1, Wis: -1, Dex: -1, Con: +1
 &W
 *&zNOTE&W*&w Ghouls find food by eating corpses left behind by fallen foes, NOT
-through conventional means.  Ghouls are also considered 'undead' and are 
+through conventional means.  Ghouls are also considered 'undead' and are
 treated accordingly.
 &z_____________________________________________________________________________
 ~
@@ -4724,7 +4720,7 @@ Str: -3, Int: +3, Wis: +2, Con: -2
 ~
 1 HEX~
 syntax: c 'hex' <target>
- 
+
 Drawing on the powers of the dead and the dark, Necromancers are able
 to place very powerfull hexes on their opponents.  This spell has been
 known to affect it's victims in many different, and nefarious, ways.
@@ -4746,7 +4742,7 @@ method to get rid of corpses.
 1 SPELLCRAFT~
 When Mages become more knowledgable in the arts, they are given to the
 learning of this skill.  A Mage skilled in spellcraft is able to double the
-power of his damage dealing spells.  
+power of his damage dealing spells.
 ~
 1 MULTIBURST~
 syntax: multiburst <spell> <spell>
@@ -4766,27 +4762,27 @@ Necromancers are feared throughout life... and death.
 Werewolves are the beastly killers of the realm.  Using their claws and
 jaws to fight, they have become more than equal adversaries to the warriors
 of the lands.  They use all sort of tactics to frighten their opponents into
-not fighting at their peak level.  
+not fighting at their peak level.
 ~
 1 ENHANCED CLAWS~
 Werewolves being animals, the adore fighting with their claws.  At an
 early period in their lives, the develop a better fighting style with only
 the use of their claws.  Enhanced claws is the skill in which a werewolf
 learns how to better wound his opponent when fighting bare handed.  (If you
-can call razor sharp claws bare hand, that is...)  
+can call razor sharp claws bare hand, that is...)
 ~
 1 DUAL CLAWS~
 When a werewolf becomes more adept at fighting bare hand, he becomes more
 skilled and better balanced.  It is at this point that one starts to fight
 using both claws at once.  No longer raking and clawing only with one hand,
-werewolves become even fiercer adversaries.  
+werewolves become even fiercer adversaries.
 ~
 1 RAGE~
 Rage is the ability of a werewolf too unleash all his anger and revert to
 the most primitive form of his species.  When enraged, werewolves lose all
 sense of modern warfare, refusing the use of weapons.  They, however, become
 a force to be rekonned with with in melee battles, using brute force to
-crush their opponents.  
+crush their opponents.
 ~
 1 STENCH OF DECAY~
 syntax: c 'stench of decay' <victim>
@@ -4818,9 +4814,9 @@ inflict damage on their opponents.
 For all &WImmortals &cof the Storm, Whotype allows you to
 create & change the title before your name on 'who'.
 The title is the one in &W[ ]&c's.
- 
+
 &CSyntax:  &Wwhotype &w<&Wtext&w>
- 
+
 &cNote:  &PC&Wo&Rl&Yo&Gr &cCodes are &CEXEMPT&c from the &W10&c space limit.
        To set whotype to default, type &Cwhotype default&c.
 ~
@@ -4842,7 +4838,7 @@ that you will deal.
 ~
 1 BITE~
 Bite is a extra attack for werewolves, similar to kick.
- 
+
 This skill will improve with each level you gain.
 ~
 1 HOWL OF FEAR~
@@ -4851,7 +4847,7 @@ This skill lowers the damroll and hitroll of your opponent.
 1 SING~
 Bards are masters of song.  Their voices possess magical powers that
 protect, heal, and destroy.
- 
+
 &CSyntax&C: &c  &WSing &w<&WSong/Spell&w>
 ~
 101 BANLIST PERMBAN TEMPBAN NEWBAN ALLOW~
@@ -4863,7 +4859,7 @@ protect, heal, and destroy.
 &RNewban&w : Prevents a site or user from making new characters.
          ALWAYS use this when banning a specific username.
 &RAllow&w  : Command used to remove a site or user from the ban list.
- 
+
 &wUse &RPERMBAN&w, &RTEMPBAN&w, &RNEWBAN&w & &RALLOW&w without arguments to see the syntax
 of these commands.
 ~
@@ -4924,11 +4920,11 @@ both hands with daggers ready.
 ~
 101 DEMM_101~
 &RThe world twist and spirles in.  Power drains away from you leaving you
-empty.  A meager spark remains from the power you once had.  
+empty.  A meager spark remains from the power you once had.
 ~
 1 'CHAMPLIST'~
 &z______________________________________________________________________________
-&z|              &B The Collective Champions of &rEntropy of the Soul          
+&z|              &B The Collective Champions of &rEntropy of the Soul
 &z|
 &z|----------------------------------------------------------------------------&z|
 &z| Level 101 Champions:                                                       &z|
@@ -4967,13 +4963,13 @@ asked by the above listed please do not edit clan statistics.
 ~
 107 'MSETLIST'~
 &z________________________________________________________________________________
-&z___________________  _____________________  
+&z___________________  _____________________
 &z| RACE       |  # |  | CLASS        |  # |  Other settings of MSET:
 &z|------------|----|  |--------------|----|  --------------------------------
 &z| &BHuman      &z|&R  0 &z|  | &BMage         &z|&R  0 &z|  &z[&Rstr, int, wis, dex & con&z]
 &z| &BElf        &z|&R  1 &z|  | &BCleric       &z|&R  1 &z|  &wTrained stats of a character.
 &z| &BDwarf      &z|&R  2 &z|  | &BThief        &z|&R  2 &z|  &Wsyntaxname.
- 
+
               &W-&RT&Ya&Gl&Bi&Pa&w, &rMistress &wof the &zBlack Arts&W-
 ~
 101 GRUNT~
@@ -4981,8 +4977,8 @@ asked by the above listed please do not edit clan statistics.
 times to be around here on the mud, so I've decided to follow along, here is
 when you can usually find me either here, or on the builders port.  I'm
 usually on both at the same time when I am on, to make it easier for people
-to find me.  
- 
+to find me.
+
 &BMonday&w:    &c6-11pm EST
 &BTuesday&w:   &c6-11pm EST
 &BWednesday&w: &c6-11pm EST
@@ -4990,10 +4986,10 @@ to find me.
 &BFriday&w:    &c6-11pm EST
 &BSaturday&w:  &cVarious Times EST
 &BSunday&w:    &cVarious Times EST
- 
+
 &CAnd if all else fails, you can email me at:
 &Bplayboy&c@&wziplink&C.&wnet
- 
+
  &b-&WGrunt
 ~
 -1 'IMMORTALS'~
@@ -5027,13 +5023,13 @@ An Imm Toy is any item created by an Imm with illegal stats on it.
 Illegal stats meaning something that would NOT be allowed in game.
 Imm Toys cause more crashes and headaches around here, and that leads
 to pissing me off, and you really don't want to do that.  Imm Toys are NOT
-allowed, and if you've created any, delete them NOW!  There's enough 
+allowed, and if you've created any, delete them NOW!  There's enough
 Imm crap in game as it is.
 ~
 1 AUTOQUEST~
 &W Autoquesting is for every level and there are certain rules and
 commands to know about.  &W You have to be at a Quest Master mob to use most
-the available commands.  
+the available commands.
 &W
 &wQUEST INFO:&W This will tell you what you are currently questing for.
 &wQUEST TIME:&W Displays the amount of time you have left to complete your current
@@ -5044,33 +5040,33 @@ the available commands.
 &W               will then see if it has a quest to give you.
 &wQUEST COMPLETE:&W Once you've completed a quest, return to the &cQuest Master&W
 &W                who assigned you the quest, and type QUEST COMPLETE.
-&wQUEST LIST:&W This lists the available items you can buy with your quest points. 
+&wQUEST LIST:&W This lists the available items you can buy with your quest points.
 &W            You must be at a &cQuest Master&W to list or buy items also.
 &wQUEST BUY:&W To buy an item type QUEST BUY <item>.
 &wQUEST AREA:&W When you are assigned a quest, you may type QUEST AREA to see what
 &W            area your quest is in.
 &W
- 
+
 &WAutoquests are random, and chosen suitable to your level. Sometimes you will
 &Wget a quest to kill a mob, or a quest to find an object. If you are assigned an
-&Wobject quest, the object is placed in the room of a suitable mob according to 
+&Wobject quest, the object is placed in the room of a suitable mob according to
 &Wyour level. You must go get the object and return to the &cQuest Master&W and
 &Wtype QUEST COMPLETE.  He will then take the object from you and reward you with
 &Wquest points.
- 
-&WIf you are assigned a mob quest, you must go find the mob and kill it, then 
+
+&WIf you are assigned a mob quest, you must go find the mob and kill it, then
 &Wreturn to the &cQuest Master&W and type QUEST COMPLETE.  The mob you are to kill
 &Wwill have a [TARGET] flag and while you are questing you will have a [QUESTING]
-&Wflag.  
- 
+&Wflag.
+
 &R --- Before you begin questing, make sure you read HELP AUTOQUEST RULES ---
- 
+
 &WThe amount of time you are given for a quest is random, and can range anywhere
-&Wfrom 10-30 minutes.  Once you have completed a quest, you must wait 30 minutes 
+&Wfrom 10-30 minutes.  Once you have completed a quest, you must wait 30 minutes
 &W-REAL- time before you can autoquest again.  If you request a quest and the
 &cQuest Master&W doesn't have a quest for you, you must wait 10 minutes before
 &Wtrying to quest again.
- 
+
 &WThe points you gain while questing are saved every time you log off, but don't
 &Wlast forever.  Each ten levels you lose any quest points you might of gained,
 &Wfor example at level 10 you would be back at 0 quest points.  So quest lots and
@@ -5097,7 +5093,7 @@ hitting the monk.  It also serves to reduce a bit of damage.
 ~
 0 MONK~
 &wMONK
- 
+
 Although he is not unfamiliar with weapon combat, the
 Monk believes in "using what you have" to fight with.
 In the form of the martial arts, the Monk uses his
@@ -5500,11 +5496,11 @@ wisdom from the individual races throughout the storm.
 ~
 0 'SHADOWWALK'~
 SHADOWWALK
- 
+
 Syntax: shadow <mob>
 Syntax: shadow 'mob's name'
 Syntax: (Ie.  shadow 'white dragon')
- 
+
 Thieves and werewolves of high level and experience are able to apply their
 skills at the art of stealth into a form of stalking.  Able to simple disappear
 into the shadows before your eyes, these shadow walkers can appear in the blink
@@ -5543,7 +5539,7 @@ There are several things you should know about 'forge' before using it
 though.  So please remember to read all of the necessary help files so you
 don't find yourself wasting your money.
 &z
-*&WNOTE&z*&w Forge is a race-specific spell.  You must be of the "dwarf" race or it 
+*&WNOTE&z*&w Forge is a race-specific spell.  You must be of the "dwarf" race or it
        will not work.
 &W
 See Also&w: FORGE RACES, FORGE LIMITS, FORGE COSTS, FORGE EDITOR, DWARF
@@ -5667,7 +5663,7 @@ and poisons the ennemy.  On occasion, they aim their spit at the facial part
 of their ennemies, thus they can hit the eyes or mouth, rendering their
 opponent either blind or unable to cast spells.
 &z
-*&WNOTE&z*&w Spit is a race-specific spell.  You must be of the "lizardman" race or 
+*&WNOTE&z*&w Spit is a race-specific spell.  You must be of the "lizardman" race or
 it will not work.
 &W
 See Also&w: LIZARDMAN&z
@@ -5801,126 +5797,126 @@ make up for it with their uncanny agility and undying stamina.
 110 PROGLIST PROG~
 Use this command while in redit to view which objects, mobs, and/or rooms
 have programs on them.  It shows you the vnum and name or short description.
-It -doesn't- show you each vnum's programs.  
+It -doesn't- show you each vnum's programs.
 Syntax: &R proglist <all/mob/obj/room>
 ~
 106 MOB_CHART~
 MOB Maxinums Table
 ---------------------------------------------------------------------------- Lvl ' Shld ' Hitpnts ' eq ' Treasure '' Lvl ' Shld ' Hitpnts ' eq ' Treasure
 ----'------'---------'----'----------''-----'------'---------'----'---------
-  1 '  --  '     10  '  1 '      5 c ''  51 '   3  '   6400  '  4 '     57 s 
-  2 '  --  '     15  '  1 '     10 c ''  52 '   3  '   6800  '  4 '     59 s 
-  3 '  --  '     30  '  1 '     15 c ''  53 '   3  '   7200  '  4 '     61 s 
-  4 '  --  '     60  '  1 '     20 c ''  54 '   3  '   7600  '  4 '     63 s 
-  5 '  --  '    100  '  1 '     25 c ''  55 '   3  '   8000  '  4 '     65 s 
- 
-  6 '  --  '    115  '  1 '     30 c ''  56 '   3  '   8400  '  4 '     67 s 
-  7 '  --  '    130  '  1 '     35 c ''  57 '   3  '   8800  '  4 '     69 s 
-  8 '  --  '    150  '  1 '     40 c ''  58 '   3  '   9200  '  4 '     71 s 
-  9 '  --  '    175  '  1 '     45 c ''  59 '   3  '   9600  '  4 '     73 s 
- 10 '  --  '    200  '  1 '     50 c ''  60 '   3  '  10000  '  4 '     75 s 
- 11 '  --  '    240  '  1 '     55 c ''  61 '   3  '  10500  '  4 '     10 g 
- 12 '  --  '    280  '  1 '     60 c ''  62 '   3  '  11000  '  4 '     15 g 
- 13 '  --  '    320  '  1 '     65 c ''  63 '   3  '  11500  '  4 '     20 g 
- 14 '  --  '    360  '  1 '     70 c ''  64 '   3  '  12000  '  4 '     25 g 
- 15 '  --  '    400  '  1 '     75 c ''  65 '   3  '  12500  '  4 '     30 g 
- 16 '   1  '    440  '  2 '     80 c ''  66 '   3  '  13000  '  4 '     35 g 
- 17 '   1  '    480  '  2 '     85 c ''  67 '   3  '  13500  '  4 '     40 g 
- 18 '   1  '    520  '  2 '     90 c ''  68 '   3  '  14000  '  4 '     50 g 
- 19 '   1  '    560  '  2 '     95 c ''  69 '   3  '  14500  '  4 '     60 g 
- 20 '   1  '    600  '  2 '    100 c ''  70 '   3  '  15000  '  4 '     70 g 
- 21 '   1  '    690  '  2 '    110 c ''  71 '   4  '  15500  '  4 '     80 g 
- 22 '   1  '    780  '  2 '    120 c ''  72 '   4  '  16000  '  4 '     90 g 
- 23 '   1  '    870  '  2 '    130 c ''  73 '   4  '  16500  '  4 '    100 g 
- 24 '   1  '    960  '  2 '    140 c ''  74 '   4  '  17000  '  4 '    110 g 
- 25 '   1  '   1050  '  2 '    150 c ''  75 '   4  '  17500  '  4 '    120 g 
-26 '   2  '   1140  '  2 '     16 s ''  76 '   4  '  18000  '  4 '    130 g 
- 27 '   2  '   1230  '  2 '     17 s ''  77 '   4  '  18500  '  4 '    140 g 
- 28 '   2  '   1320  '  2 '     18 s ''  78 '   4  '  19000  '  4 '    150 g 
- 29 '   2  '   1410  '  2 '     19 s ''  79 '   4  '  19500  '  4 '    160 g 
- 30 '   2  '   1500  '  2 '     20 s ''  80 '   4  '  20000  '  4 '    170 g 
- 31 '   2  '   1600  '  3 '     21 s ''  81 '   4  '  20500  '  5 '    180 g 
- 32 '   2  '   1700  '  3 '     22 s ''  82 '   4  '  21000  '  5 '    190 g 
- 33 '   2  '   1800  '  3 '     23 s ''  83 '   4  '  21500  '  5 '    200 g 
- 34 '   2  '   1900  '  3 '     24 s ''  84 '   4  '  22000  '  5 '    220 g 
- 35 '   2  '   2000  '  3 '     25 s ''  85 '   4  '  22500  '  5 '    240 g 
- 36 '   2  '   2100  '  3 '     27 s ''  86 '   5  '  23000  '  5 '    260 g 
- 37 '   2  '   2200  '  3 '     29 s ''  87 '   5  '  23500  '  5 '    280 g 
- 38 '   2  '   2300  '  3 '     31 s ''  88 '   5  '  24000  '  5 '    300 g 
- 39 '   2  '   2400  '  3 '     33 s ''  89 '   5  '  24500  '  5 '    320 g 
- 40 '   2  '   2500  '  3 '     35 s ''  90 '   5  '  25000  '  5 '    350 g 
- 41 '   2  '   2850  '  3 '     37 s ''  91 '   5  '  25500  '  5 '    400 g 
- 42 '   2  '   3200  '  3 '     39 s ''  92 '   5  '  26000  '  5 '    450 g 
- 43 '   2  '   3550  '  3 '     41 s ''  93 '   5  '  26500  '  5 '    500 g 
- 44 '   2  '   3900  '  3 '     43 s ''  94 '   5  '  27000  '  5 '    550 g 
- 45 '   2  '   4250  '  3 '     45 s ''  95 '   6  '  27500  '  5 '    600 g 
- 46 '   2  '   4600  '  3 '     47 s ''  96 '   6  '  28250  '  6 '    700 g 
- 47 '   2  '   4950  '  3 '     49 s ''  97 '   6  '  29250  '  6 '    800 g 
- 48 '   2  '   5300  '  3 '     51 s ''  98 '   6  '  30000  '  6 '    900 g 
- 49 '   2  '   5650  '  3 '     53 s ''  99 '   6  '  31000  '  6 '   1000 g 
- 50 '   2  '   6000  '  3 '     55 s '' 100 '   6  '  32000  '  6 '   1250 g 
+  1 '  --  '     10  '  1 '      5 c ''  51 '   3  '   6400  '  4 '     57 s
+  2 '  --  '     15  '  1 '     10 c ''  52 '   3  '   6800  '  4 '     59 s
+  3 '  --  '     30  '  1 '     15 c ''  53 '   3  '   7200  '  4 '     61 s
+  4 '  --  '     60  '  1 '     20 c ''  54 '   3  '   7600  '  4 '     63 s
+  5 '  --  '    100  '  1 '     25 c ''  55 '   3  '   8000  '  4 '     65 s
+
+  6 '  --  '    115  '  1 '     30 c ''  56 '   3  '   8400  '  4 '     67 s
+  7 '  --  '    130  '  1 '     35 c ''  57 '   3  '   8800  '  4 '     69 s
+  8 '  --  '    150  '  1 '     40 c ''  58 '   3  '   9200  '  4 '     71 s
+  9 '  --  '    175  '  1 '     45 c ''  59 '   3  '   9600  '  4 '     73 s
+ 10 '  --  '    200  '  1 '     50 c ''  60 '   3  '  10000  '  4 '     75 s
+ 11 '  --  '    240  '  1 '     55 c ''  61 '   3  '  10500  '  4 '     10 g
+ 12 '  --  '    280  '  1 '     60 c ''  62 '   3  '  11000  '  4 '     15 g
+ 13 '  --  '    320  '  1 '     65 c ''  63 '   3  '  11500  '  4 '     20 g
+ 14 '  --  '    360  '  1 '     70 c ''  64 '   3  '  12000  '  4 '     25 g
+ 15 '  --  '    400  '  1 '     75 c ''  65 '   3  '  12500  '  4 '     30 g
+ 16 '   1  '    440  '  2 '     80 c ''  66 '   3  '  13000  '  4 '     35 g
+ 17 '   1  '    480  '  2 '     85 c ''  67 '   3  '  13500  '  4 '     40 g
+ 18 '   1  '    520  '  2 '     90 c ''  68 '   3  '  14000  '  4 '     50 g
+ 19 '   1  '    560  '  2 '     95 c ''  69 '   3  '  14500  '  4 '     60 g
+ 20 '   1  '    600  '  2 '    100 c ''  70 '   3  '  15000  '  4 '     70 g
+ 21 '   1  '    690  '  2 '    110 c ''  71 '   4  '  15500  '  4 '     80 g
+ 22 '   1  '    780  '  2 '    120 c ''  72 '   4  '  16000  '  4 '     90 g
+ 23 '   1  '    870  '  2 '    130 c ''  73 '   4  '  16500  '  4 '    100 g
+ 24 '   1  '    960  '  2 '    140 c ''  74 '   4  '  17000  '  4 '    110 g
+ 25 '   1  '   1050  '  2 '    150 c ''  75 '   4  '  17500  '  4 '    120 g
+26 '   2  '   1140  '  2 '     16 s ''  76 '   4  '  18000  '  4 '    130 g
+ 27 '   2  '   1230  '  2 '     17 s ''  77 '   4  '  18500  '  4 '    140 g
+ 28 '   2  '   1320  '  2 '     18 s ''  78 '   4  '  19000  '  4 '    150 g
+ 29 '   2  '   1410  '  2 '     19 s ''  79 '   4  '  19500  '  4 '    160 g
+ 30 '   2  '   1500  '  2 '     20 s ''  80 '   4  '  20000  '  4 '    170 g
+ 31 '   2  '   1600  '  3 '     21 s ''  81 '   4  '  20500  '  5 '    180 g
+ 32 '   2  '   1700  '  3 '     22 s ''  82 '   4  '  21000  '  5 '    190 g
+ 33 '   2  '   1800  '  3 '     23 s ''  83 '   4  '  21500  '  5 '    200 g
+ 34 '   2  '   1900  '  3 '     24 s ''  84 '   4  '  22000  '  5 '    220 g
+ 35 '   2  '   2000  '  3 '     25 s ''  85 '   4  '  22500  '  5 '    240 g
+ 36 '   2  '   2100  '  3 '     27 s ''  86 '   5  '  23000  '  5 '    260 g
+ 37 '   2  '   2200  '  3 '     29 s ''  87 '   5  '  23500  '  5 '    280 g
+ 38 '   2  '   2300  '  3 '     31 s ''  88 '   5  '  24000  '  5 '    300 g
+ 39 '   2  '   2400  '  3 '     33 s ''  89 '   5  '  24500  '  5 '    320 g
+ 40 '   2  '   2500  '  3 '     35 s ''  90 '   5  '  25000  '  5 '    350 g
+ 41 '   2  '   2850  '  3 '     37 s ''  91 '   5  '  25500  '  5 '    400 g
+ 42 '   2  '   3200  '  3 '     39 s ''  92 '   5  '  26000  '  5 '    450 g
+ 43 '   2  '   3550  '  3 '     41 s ''  93 '   5  '  26500  '  5 '    500 g
+ 44 '   2  '   3900  '  3 '     43 s ''  94 '   5  '  27000  '  5 '    550 g
+ 45 '   2  '   4250  '  3 '     45 s ''  95 '   6  '  27500  '  5 '    600 g
+ 46 '   2  '   4600  '  3 '     47 s ''  96 '   6  '  28250  '  6 '    700 g
+ 47 '   2  '   4950  '  3 '     49 s ''  97 '   6  '  29250  '  6 '    800 g
+ 48 '   2  '   5300  '  3 '     51 s ''  98 '   6  '  30000  '  6 '    900 g
+ 49 '   2  '   5650  '  3 '     53 s ''  99 '   6  '  31000  '  6 '   1000 g
+ 50 '   2  '   6000  '  3 '     55 s '' 100 '   6  '  32000  '  6 '   1250 g
 ----'------'---------'----'----------''-----'------'---------'----'---------
-101+'   6  '+3000/lvl'  6 '    +120 g'' 1 gold=10 silver  1 silver=10 copper 
+101+'   6  '+3000/lvl'  6 '    +120 g'' 1 gold=10 silver  1 silver=10 copper
 ----------------------------------------------------------------------------
- 
+
 On the 1 shield only levels, ONLY SANCTUARY may be used.
 When using shields on mobs, the HP of the mob must be reduced to take into
 account for the shield bonuses. According to how many shields the mob has,
 reduce the HP by using the following percentages to multiply the base hp by.
 ----------------------------------------------------------------------------
-Shields:  One        Two        Three        Four        Five        Six     
+Shields:  One        Two        Three        Four        Five        Six
 ============================================================================
-Percent:  80%        65%          50%         45%         35%        30%     
+Percent:  80%        65%          50%         45%         35%        30%
 ----------------------------------------------------------------------------
 So a level 99 mob with 6 shields would have (31000 * 30% = ) 6300 Hps.
- 
+
 This is all stolen/Borrowed from The Unabuilder Manifesto By Grunt U. Neanderthal.
 Rewritten into this form By Reklar The Ice Lord.
 ~
 110 DEATH2~
 When you die, a corpse is made. If you are AT or UNDER LEVEL 20 it is sent
 to the Morgue where you can GET ALL CORPSE and SAVE. Then you have to
-choose between the Bethaven Portal and the Ravenwood Portal. To choose, type 
+choose between the Bethaven Portal and the Ravenwood Portal. To choose, type
 ENTER BETHAVEN or ENTER RAVENWOOD.
- 
+
 If you are OVER LEVEL 20 when you die, a corpse is made at that very spot
 where death hit you. You are sent to the morgue, and from there you have to
 seek out and find your corpse once again to get your equipment back.
- 
+
 All affected_by spells are cancelled upon death.
 Followers and group members are not affected by your death.
 Followers will stop following you upon your death (or theirs, hehe)
- 
+
 &R**&W Corpses decay over time, and so do the object IN the corpses. You have
 30 MUD HOURS (15 real minutes) to seek and collect all your corpse items.
 Only you or members of your group may collect things FROM your corpse.&R**
- 
+
 REIMBURSEMENTS will NOT be done under normal circumstances.
 ~
 106 OBJ_CHART~
 Anti-Race Groupings:
- 
+
 These are the required anti-race groupings based on the size of the equipment.
 You may add other anti-race flags, for other reasons, but these must be used
 in the cases of armor at the very least.
-Group 1     Group 2     Group 3     Group 4          
-(small)     (Medium)   (Humanoid)   (Giant)            
------------------------------------------------        
-Pixie    '   Illithid  ' Human      'Ogre     '      
-Halfling '   Elf       ' Ghoul      'Demon    '       
+Group 1     Group 2     Group 3     Group 4
+(small)     (Medium)   (Humanoid)   (Giant)
+-----------------------------------------------
+Pixie    '   Illithid  ' Human      'Ogre     '
+Halfling '   Elf       ' Ghoul      'Demon    '
 Dwarf    '   Drow      ' Elder      'Minotaur '
 Shadow   '   Tabaxi    ' Lizardman  'Troll    '
          '             '            '         '
 ----------------------------------------------
- 
+
 Anti-Class Flags:
- 
+
 Each class has its own restrictions, as to what they can not use, based more
 or less on standard RPG rules. As in the case of anti-race flags, you can add
 more, but these are the ones which must apply. These take effect after level
 20.
- 
- 
+
+
 Class          Restrictions
 Mage          'Daggers, Blunt weapons only  Leather or worse armor
 Ranger        'Same as Warrior
@@ -5935,10 +5931,10 @@ Bard          'No restrictions on weapons, chain or worse armor
 Druid         'Same as Mage
 Werewolf      'No Silver items, no wands/staves, chain or worse armor
 Vampire       'Leather or worse armor, no blunt weapons
- 
- 
+
+
                          Addaffects
-Addaffect          Limits          
+Addaffect          Limits
 -----------------------------------------------------------------------------
 Hp                 Level of Object
 Mana               Level of Object
@@ -5950,8 +5946,8 @@ Damroll            Level of Object x 2  (Weapons Only!)
 Save vs spell      Level of Object divided by 20
 Save vs breath     Level of Object divided by 20
 Anti-disarm        Level of Object divided by 10 (Weapons and Hands only!)
- 
- 
+
+
 The Hitroll and Damroll bonuses on weapons, being covered by a percentage are
 as follows:
 Weapon Type   Hitroll  Damroll    Damage Type
@@ -5964,9 +5960,9 @@ Axe             80%      90%      chop
 Blunt           70%      90%      hit, pound, crush
 Whip           100%      30%      whip
 Claws           40%      60%      claw, slash
-Exotic         var%     var%      suction, blast 
+Exotic         var%     var%      suction, blast
 -------------------------------------------------------
- 
+
 So a level 60 dagger could have (60 x 2 x 75% = ) 80 points for hitroll and
 (60 x 2 x 50% = ) 60 points for damroll. Similarly, a level 20 mace could have
 (20 x 2 x 70% = ) 28 points for hitroll and (20 x 2 x 90% = ) 36 points for
@@ -5977,10 +5973,10 @@ can be split into the two percentages, no more than 100% on one.
 Remember: ONLY WEAPONS get a hitroll and damroll bonus added to them. And
 only weapons and items worn on hands are allowed to have an anti-disarm
 bonus to them.
- 
- 
+
+
 Max Addaffects:
- 
+
 Level    # of addaffects MAXIMUM
 --------------------------------
 01-20         One
@@ -5993,9 +5989,9 @@ Stat Raises are governed by level of object only and are as follows:
 The number of points can be divided into the number of stat raises.
 so 3 points in 2 stats can be +2,+1 or +3. (Note: +3 is the max on any
 one stat, for levels where 4 or more points are used)
- 
- 
-Levels   # stats  # points (total)     
+
+
+Levels   # stats  # points (total)
 ----------------------------------
 1-10        1         1
 11-20       1         1
@@ -6005,13 +6001,13 @@ Levels   # stats  # points (total)
 51-60       2         3
 61-70       2         4
 71-80       3         4
-81-90       3         5   
+81-90       3         5
 91-99       3         5
 100+        3         6
 Healing/Mana/Refresh Potions
 The spells are distributed by level for these types of potions and are as
 follows:
- 
+
 [            Healing Potions              ]         [Mana]  [Refresh]
 Level   Heal1             Heal2               Heal3        Mana(1-3) Refresh
 01-10   Cure Light        .....               .....       :  .....  :..... :
@@ -6026,36 +6022,36 @@ Level   Heal1             Heal2               Heal3        Mana(1-3) Refresh
 91-100  Heal              Heal               Heal         :    3    :  1   :
 101+    Heal              Heal               Heal         :    3    :  1   :
 Charge limits:
- 
+
 Spell Type         Invoke Items      Wands/Staves
 -------------------------------------------------
 Shields (FS/Sanc)  Lvl/20            Lvl/20
 Offensive          Lvl/20            Lvl/15
 Other spells       Lvl/20            Lvl/10
- 
+
 This is all stolen/Borrowed from The Unabuilder Manifesto By Grunt U. Neanderthal.
 Rewritten into this form By Reklar The Ice Lord.
 ~
 0 'BARK SKIN' BARK SKIN~
 Syntax: cast 'bark skin'
- 
+
 This spell improves the casters armor class.  As the caster raises in
 level so does the protection of the spell.
 ~
 0 AID~
 Syntax: cast aid <character>
- 
+
 This spell is a more powerfull form of BLESS.
 ~
 0 BLUR~
 Syntax: cast blur
- 
+
 This magic spell blurs the outline of the caster making it harder for
 attackers to hit them with weapons and spells.
 ~
 0 FIREWALL~
 Syntax: cast firewall
- 
+
 The spell firewall is a devastaing attack that sweaps out in a ring from
 the caster.  Attacking everything in its path.
 ~
@@ -6065,27 +6061,27 @@ their max mana for a time.
 ~
 0 FLURY~
 Syntax: flury <target>
- 
+
 The warrior will throw a flury of punches and kicks going on pure instinct.
 ~
 0 ALIGNMENT ALIGN~
 ALIGNMENT is that state in which your character is GOOD, NEUTRAL, or EVIL in
 behavior and beliefs.
- 
+
 There are many "spectrums" of Alignment, but the above three are the main
 states.
- 
+
 Alignment is mostly there for roleplaying purposes, in that you act out your
 Alignment. Some mobs react differently to certain Alignments, and some
 equipment may or may not be usable by certain alignments.
- 
+
 Roleplaying is certainly encouraged here at Entropy of the Soul, but is not
-mandatory and the guideline of RESPECT and CONSIDERATION should also be 
+mandatory and the guideline of RESPECT and CONSIDERATION should also be
 a big thought when Roleplaying.
 ~
 0 FIREBALL~
 &BSyntax: &Wcast 'fireball' <victim>
- 
+
 Fireball is another distinctive spell, that is almost always
 associated with mages.  This spell is a favourite among most
 mages, because of it's large offensive &Ppower&W.  Truly, it is much
@@ -6094,18 +6090,18 @@ to do some minor damage on them.
 ~
 0 'ACID BLAST'~
 &BSyntax:&W cast 'acid blast' <victim>
- 
+
 Acid Blast is another &Pnasty&W mage spell.  When a mage is in combat, sometimes
-they use this spell to severely hurt their enemy.  When casted, streaks of very 
-potent acid come shooting out of the casters fingers.  If this acid hits the 
-skin, it will eat away at it, and leave some very large and &Punpleasant gaping 
+they use this spell to severely hurt their enemy.  When casted, streaks of very
+potent acid come shooting out of the casters fingers.  If this acid hits the
+skin, it will eat away at it, and leave some very large and &Punpleasant gaping
 wounds&W.
- 
+
 ~
 110 AT_COLOR~
 &YCOLOR VALUES FOR AEDIT COLOR:
 &B-----------------------------
- 
+
 &r     BLOOD RED&W     1
 &g     DARK GREEN    &W2
 &O     ORANGE        &W3
@@ -6126,7 +6122,7 @@ wounds&W.
 This help file is here for those of you that are interested in knowing and
 giving thanks to the ones who helped to bring back and make this Mud better
 for you. &zEntropy of the Soul &wwould like to thank the following;
- 
+
 &YREKLAR   &wfor The Dwarven Fort, The Haunted Graveyard, The House of
          Domination, Tolaria, Forest Vale, Bethaven Badlands, Hammerheim,
          Bethaven Sewers, Game Preserves, and Heaven. Also for putting our
@@ -6151,7 +6147,7 @@ for you. &zEntropy of the Soul &wwould like to thank the following;
 &YXHERI    &wfor The Fortress.
 &YGRUNT    &wfor The Game Preserves.
 &YTARLIS   &wfor revamping help files.
- 
+
 &Y** &wPlease note that areas not listed were done by Thalador, Angi or
    myself. Special thanks to Angi for the New and Improved Mudschool! &Y**&w
 &R** &wA HUGE thanks to &RDECKLAREAN&w, &RANGI&w, and &RTHALADOR &wfor their
@@ -6164,31 +6160,31 @@ for you. &zEntropy of the Soul &wwould like to thank the following;
 ~
 1 EAT~
 &BSyntax: &Weat   <object>
- 
+
 You also must eat to &Pstay alive&W in the Storm.  Even though
 you are a brave and valiant warrior, who can slay dragons
 and save damsels in distress.  You still need &Pproper nutrition&W.
- 
+
 ~
 1 FILL~
 &BSyntax: &Wfill <object>
- 
+
 To fill a drink container with water, you must be at a
 fountain.  Then all you must do is type fill <object>,
 and presto!  You got water in your container.
- 
+
 ~
 1 RESCUE~
 &BSyntax: &Wrescue <character>
- 
+
 Rescue is the exact opposite of flee.  With flee you are showing such
 cowardice by running away.  But if you notice someone who is in trouble,
 you can &Ptry &Wto rescue them.  This means that you will take the monsters
 attention away from the person who is in &Ptrouble&W.  The monster will then
 try and beat on you.
- 
+
 &RNote:&W In order to RESCUE successfully, you must practice the appropriate skill.
- 
+
 ~
 1 CLASS_RESTRICTIONS~
 &R**&w Please specify one class. &R**
@@ -6196,7 +6192,7 @@ try and beat on you.
 &wHELP <class>_RESTRICTIONS
 &RNote&w: The three letter class abbreviation is also accepted.
       Example: war_restrictions, rng_restrictions.
- 
+
 &RSEE ALSO&w:&w HELP EQ_RESTRICTIONS
           HELP SIZE
           HELP <race>
@@ -6221,7 +6217,7 @@ try and beat on you.
 &z____________________________________________________________________________
 &wThere are factors that prevent certain races and/or classes from using a
 particular piece of equipment. These factors are as follows;
- 
+
 &WRACE&w: The race of your character may affect what he or she can or
       cannot use.
 For Example: A minotaur will not be able to wear most helmets due to its
@@ -6231,16 +6227,16 @@ For Example: A minotaur will not be able to wear most helmets due to its
       equipment you can or cannot use.
 For Example: A pixie will not be able to wear the same breastplate that
              a minotaur can and vice-versa.
- 
+
 &WCLASS&w: Your class(es) may affect what equipment you can or cannot use.
        Multi-classed characters may have a difficult time finding equipment.
 For Example: Certain beliefs may not allow that class to use a particular
              type of weapon or armor. Vampires can use only cutting weapons,
              as their goal is to draw blood.
- 
+
 &RNote&w: Materials of equipment also affects some classes. Currently, the
       Werewolf is prevented from using anything made of silver.
- 
+
 &RSEE ALSO&w: HELP <class>_RESTRICTIONS
           HELP SIZE
           HELP <race>
@@ -6267,7 +6263,7 @@ class).
 
 &RNote&w: Some exceptions are made, and this is strictly by the builders own
       reasoning and by the acceptance of the CREATION GUILDMASTER.
- 
+
 &RSEE ALSO&w: HELP SIZE
           HELP <race>
           HELP EQ_RESTRICTIONS
@@ -6292,11 +6288,11 @@ and what is permitted.
 &WClerics are restricted to using only chainmail or worse armor (unless a
 specific armor is magically enchanted for their usage).
 &z____________________________________________________________________________
- 
+
 &RNote&w: Most clerical weapons will be alignment-dependant, although some
       exceptions are made at the builders discretion and by the
       acceptance of the CREATION GUILDMASTER.
- 
+
 &RSEE ALSO&w: HELP SIZE
           HELP <race>
           HELP EQ_RESTRICTIONS
@@ -6324,11 +6320,11 @@ when you are armoured to the hilt. Bright and flashy equipment is also not
 favoured by thieves as it is likely to make them stand out, contrary to their
 goal.
 &z_______________________________________________________________________________
- 
+
 &RNote&w: Some exceptions are made because of magically enchanted weapons and
       armor, but this is at the builders discretion and by the acceptance
       of the CREATION GUILDMASTER.
- 
+
 &RSEE ALSO&w: HELP SIZE
           HELP <race>
           HELP EQ_RESTRICTIONS
@@ -6346,40 +6342,40 @@ in turn gives them no armor restrictions of any types.
 &WWarriors are permitted to use any type of armor (unless magically enchanted
 specifically against his/her class).
 &z_______________________________________________________________________________
- 
+
 &RNote&w: Some exceptions may apply at the discretion of the builder and by
       the acceptance of the CREATION GUILDMASTER.
- 
+
 &RSEE ALSO&w: HELP SIZE
           HELP <race>
           HELP EQ_RESTRICTIONS
 ~
 1 PURIFY~
 Purify
- 
+
 Purify will remove all anti class and anti race flags on a piece of
 equipment. Anti alignment flags still remain.
 ~
 1 FLIP~
 Flip
- 
+
 Syntax:
 Flip <target>
 Flip <target> <direction>
- 
+
 Flip will backflip your target out of the room during a fight. The fight
 will stop and you may possibly damage and/or stun your opponent (by knocking
 the wind out of him).
 ~
 1 SILENCE~
 Silence
- 
+
 Silence is a spell that will prevent the victim it is
 cast upon from casting spells until it wears off.
 ~
 1 IMAGE~
 Image
- 
+
 Image surrounds the caster with multiple illusory images,
 confusing any potential attackers. There is a chance that
 the attacker will attack one of the caster's images instead
@@ -6390,11 +6386,11 @@ to attacking the attacker instead.
 The Kreen are an insectoid race usually standing about four feet tall.
 The Kreen have four arms and two legs. Because of their extra appendages
 they are able to wield three weapons.
- 
+
 Size: MEDIUM
 Racial Abilities:
 &w* Triple Wield: Able to wield three weapons.
- 
+
 Stat Modifications:
 &cStr: &w-1, &cInt: &w-1, &cDex &w+2
 ~
@@ -6403,13 +6399,13 @@ By far the race with the most practices, Angels are the most
 skillful players in the game. Their only downfall is their lack
 of constitution, therefore they have the least hit points in the
 game. In fact, they are the total opposite of Demons.
- 
+
 Size: MANSIZED
 Racial Abilites:
 &w* Improved Healing: &WAngels are natural Clerics, therefore
 when using a Cleric healing spell, it will heal at twice the
 normal rate.
- 
+
 Stat Modifications:
 &cWis: &w+4, &cCon: &w-4
 ~
@@ -6417,7 +6413,7 @@ Stat Modifications:
 Lure is a combat only skill. The user of lure is so
 adept at fighting that he can 'lure' his opponent into
 a vulnerable position, leaving them open for attack.
- 
+
 Lure does not make the next round of attacks completely
 unblockable, but greatly decreases the victims chances of
 doing so.
@@ -6427,11 +6423,11 @@ ManaBomb is an extremely useful skill for very powerful
 high level mages. It's affect is greatly diminished when
 used by anyone else, in particular vampires (since they use
 opposing sources for the power behind their magic).
- 
+
 ManaBomb turns the caster into a living bomb of magical
 energy. The explosion's damage and range is based on the
 players ammount of mana and level.
- 
+
 Blowing yourself up with ManaBomb of course, kills you.
 ~
 
