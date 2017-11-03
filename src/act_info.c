@@ -3688,41 +3688,45 @@ void do_pagelen ( CHAR_DATA *ch, char *argument )
 	return;
 }
 
-/* Do_prompt from Morgenes from Aldara Mud */
-void do_prompt( CHAR_DATA *ch, char *argument )
-{
+void do_prompt( CHAR_DATA *ch, char *argument ) {
 	char buf [ MAX_STRING_LENGTH ];
 
 	buf[0] = '\0';
 	ch = ( ch->desc->original ? ch->desc->original : ch->desc->character );
 
-	if ( argument[0] == '\0' )
-	{
-		( IS_SET ( ch->act, PLR_PROMPT )
-		  ? sprintf( buf, "-prompt" )
-		  : sprintf( buf, "+prompt" ) );
+	if ( argument[0] == '\0' ) {
+		sprintf( buf, "%sprompt", IS_SET ( ch->act, PLR_PROMPT ) ? "-" : "+" );
 
 		do_config( ch, buf );
 
 		return;
 	}
 
-	if( !strcmp( argument, "all" ) )
-		strcat( buf, "<%hhp %mm %vmv> ");
-	else
-	{
-		if ( strlen( argument ) > 50 )
+	if( !strcmp( argument, "all" ) ) {
+		if ( IS_IMMORTAL(ch) ) {
+			strcat( buf, "&r[ &c%R in &r| &c%C %c &r| &c%z &r] ");
+		} else {
+			strcat( buf, "&r[ &c%h&r/&c%Hhp &r| &c%m&r/&c%Mm &r| &c%v&r/&c%Vmv &r| &c%Xtnl &r] ");
+		}
+	} else {
+		if ( strlen( argument ) > 50 ) {
 			argument[50] = '\0';
+		}
+
 		smash_tilde( argument );
-		if ( strlen( argument ) < 2 )
+
+		if ( strlen( argument ) < 2 ) {
 			sprintf( buf, "%s ", argument );
-		else
+		} else {
 			strcat( buf, argument );
+		}
 	}
 
 	free_string( ch->prompt );
 	ch->prompt = str_dup( buf );
+
 	send_to_char(C_DEFAULT, "Ok.\n\r", ch );
+
 	return;
 }
 
