@@ -1855,453 +1855,329 @@ void do_help( CHAR_DATA *ch, char *argument )
 /*
  * New 'who' command originally by Alander of Rivers of Mud.
  */
-void do_who( CHAR_DATA *ch, char *argument )
-{
+void do_who( CHAR_DATA *ch, char *argument ) {
 	DESCRIPTOR_DATA *d;
+	CLAN_DATA       *tClan;
 	char             arg1[ MAX_STRING_LENGTH ];
-	char             buf      [ MAX_STRING_LENGTH*3 ];
-	char             buf2     [ MAX_STRING_LENGTH   ];
-	CLAN_DATA *      tClan;
+	char             buf[ MAX_STRING_LENGTH*3 ];
 	int              iClass;
-	int              iLevelLower;
-	int              iLevelUpper;
-	int              nNumber;
-	int              nMatch;
-	bool             rgfClass [ MAX_CLASS ];
-	bool             fClassRestrict;
-	bool 	     fClanRestrict;
-	bool             fImmortalOnly;
-	bool             fHeroOnly;
-	bool	     fRaceRestrict;
-	bool	     fNameRestrict;
-	bool         lng = FALSE;
-	int		     iRace;
-	int	   	     iClan;
-	bool	     rgfClan [ MAX_CLAN ];
-	bool	     rgfRace [ MAX_RACE ];
+	int              iRace;
+	int              iClan;
+	int              iLevel;
+	int              iLevelLower = 0;
+	int              iLevelUpper = L_IMP;
+	int              nNumber = 0;
+	int              nMatch = 0;
 	int              num_of_imm = 0;
-	int              noclass[MAX_CLASS];
-	int			remorts = 0;
-	int			incrs;
+	int              remorts = 0;
+	bool             rgfClass[ MAX_CLASS ] = { FALSE };
+	bool             rgfClan[ MAX_CLAN ] = { FALSE };
+	bool             rgfRace[ MAX_RACE ] = { FALSE };
+	bool             fClassRestrict = FALSE;
+	bool             fClanRestrict = FALSE;
+	bool             fRaceRestrict = FALSE;
+	bool             fNameRestrict = FALSE;
 
-	/*
-	 * Set default arguments.
-	 */
-	iLevelLower    = 0;
-	iLevelUpper    = L_IMP; /*Used to be Max_level */
-	fClassRestrict = FALSE;
-	fImmortalOnly  = FALSE;
-	fHeroOnly      = FALSE;
-	fRaceRestrict  = FALSE;
-	fNameRestrict  = FALSE;
-	fClanRestrict  = FALSE;
-	tClan          = NULL;
-
-	send_to_char(C_DEFAULT, "&W\n\r==================================================================\n\r",ch );
-	send_to_char(C_DEFAULT, "&W===                          Maelstrom                         ===\n\r",ch);
-	send_to_char(C_DEFAULT, "&W==================================================================\n\r \n\r",ch);
-
-	for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
-		noclass[iClass] = 0;
-	for ( iClan = 0; iClan < MAX_CLAN; iClan++ )
-		rgfClan[iClan] = FALSE;
-	for ( iRace = 0; iRace < MAX_RACE; iRace++ )
-		rgfRace[iRace] = FALSE;
-	for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
-		rgfClass[iClass] = FALSE;
-
-	/*
-	 * Parse arguments.
-	 */
-	nNumber = 0;
-	for ( ;; )
-	{
+	// parse arguments
+	for ( ;; ) {
 		char arg [ MAX_STRING_LENGTH ];
+		bool lng = FALSE;
 
 		argument = one_argument( argument, arg );
-		if ( arg[0] == '\0' )
+
+		if ( arg[0] == '\0' ) {
 			break;
+		}
+
 		strcpy( arg1, arg );
 
-		if ( is_number( arg ) )
-		{
-			switch ( ++nNumber )
-			{
-				case 1: iLevelLower = atoi( arg ); break;
-				case 2: iLevelUpper = atoi( arg ); break;
+		if ( is_number( arg ) ) {
+			switch ( ++nNumber ) {
+				case 1:
+					iLevelLower = atoi( arg );
+					break;
+				case 2:
+					iLevelUpper = atoi( arg );
+					break;
 				default:
-						send_to_char(AT_DGREEN, "Only two level numbers allowed.\n\r", ch );
-						return;
+					send_to_char(AT_DGREEN, "Only two level numbers allowed.\n\r", ch );
+					return;
 			}
-		}
-		else
-		{
-			int iClass;
-
-			if ( strlen( arg ) < 3 )
-			{
-				send_to_char(AT_DGREEN, "Classes must be longer than that.\n\r", ch );
+		} else {
+			if ( strlen( arg ) < 3 ) {
+				send_to_char(AT_DGREEN, "Arguments must be at least three characters.\n\r", ch );
 				return;
+			} else if ( strlen( arg ) > 3 ) {
+				lng = TRUE;
 			}
 
-			if ( strlen( arg ) > 3 )
-				lng = TRUE;
-
-			/*
-			 * Look for classes to turn on.
-			 */
+			// apply filters
 			arg[3]    = '\0';
 
-			if ( !str_cmp( arg, "imm" ) )
-			{
-				fImmortalOnly = TRUE;
-			}
-			else
-				if ( !str_cmp( arg, "chm" ) )
-				{
-					fHeroOnly = TRUE;
+			if ( !str_cmp( arg, "imm" ) ) {
+				iLevelLower = L_APP;
+				iLevelUpper = L_IMP;
+			} else if ( !str_cmp( arg, "chm" ) ) {
+				iLevelLower = LEVEL_HERO;
+				iLevelUpper = L_CHAMP5;
+			} else {
+				fClassRestrict = TRUE;
+
+				for ( iClass = 0; iClass < MAX_CLASS; iClass++ ) {
+					if ( ( !str_cmp( arg, class_table[iClass].who_name ) && !lng ) || ( !str_cmp( arg1, class_table[iClass].who_long ) && lng ) ) {
+						rgfClass[iClass] = TRUE;
+						break;
+					}
 				}
-				else
-				{
-					fClassRestrict = TRUE;
-					for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
-					{
-						if ( ( !str_cmp( arg, class_table[iClass].who_name )
-									&& !lng )
-								|| ( !str_cmp( arg1, class_table[iClass].who_long )
-									&& lng ) )
-						{
-							rgfClass[iClass] = TRUE;
+
+				if ( iClass == MAX_CLASS ) {
+					fRaceRestrict = TRUE;
+
+					for ( iRace = 0; iRace < MAX_RACE; iRace++ ) {
+						if ( ( !str_cmp( arg, race_table[iRace].race_name ) && !lng ) || ( !str_cmp( arg1, race_table[iRace].race_full ) ) ) {
+							rgfRace[iRace] = TRUE;
 							break;
 						}
 					}
 
-					if ( iClass == MAX_CLASS )
-					{
-						fClassRestrict = FALSE;
-						fRaceRestrict = TRUE;
-						for ( iRace = 0; iRace < MAX_RACE; iRace++ )
-						{
-							if ( ( !str_cmp( arg, race_table[iRace].race_name ) && !lng )
-									|| ( !str_cmp( arg1, race_table[iRace].race_full ) ) )
-							{
-								rgfRace[iRace] = TRUE;
+					if ( iRace == MAX_RACE ) {
+						fClanRestrict = TRUE;
+
+						for ( iClan = 1; iClan < MAX_CLAN; iClan++ ) {
+							tClan = get_clan_index( iClan );
+
+							if ( !tClan ) {
+								continue;
+							}
+
+							if ( !str_cmp( arg1, strip_color(tClan->name) ) ) {
+								rgfClan[iClan] = TRUE;
 								break;
 							}
 						}
 
-						if ( iRace == MAX_RACE )
-						{
-							fRaceRestrict = FALSE;
-							fClanRestrict = TRUE;
-							for ( iClan = 0; iClan < MAX_CLAN; iClan++ )
-							{
-								tClan = get_clan_index( iClan );
-								if ( !(tClan) )
-									continue;
-
-								if ( !str_cmp( arg1, strip_color(tClan->name) ) )
-								{
-									rgfClan[iClan] = TRUE;
-									break;
-								}
-							}
-							if ( iClan >= MAX_CLAN )
-							{
-								fClanRestrict = FALSE;
-								fNameRestrict = TRUE;
-							}
+						if ( iClan == MAX_CLAN ) {
+							fNameRestrict = TRUE;
 						}
 					}
-
 				}
+			}
 		}
 	}
+
+	send_to_char(C_DEFAULT, "&W\n\r==================================================================\n\r",ch );
+	send_to_char(C_DEFAULT, "&z===                          &WMaelstrom                         &z===\n\r",ch);
+	send_to_char(C_DEFAULT, "&W==================================================================\n\r\n\r",ch);
 
 	/*
 	 * Now show matching chars.
 	 */
-	nMatch = 0;
 	buf[0] = '\0';
-	rgfClan[0] = FALSE;
-	if ( fNameRestrict )
-		send_to_char( C_DEFAULT,
-				"\n\r\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\"
-				"/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\n\r", ch );
-	for ( d = descriptor_list; d; d = d->next )
-	{
-		CHAR_DATA       *wch;
-		CLAN_DATA       *pClan;
-		char      const *class;
-		char      const *race;
-		char             clan[MAX_STRING_LENGTH];
 
-		wch   = ( d->original ) ? d->original : d->character;
+	for ( iLevel = 1; iLevel <= L_IMP; iLevel++ ) {
+		for ( d = descriptor_list; d; d = d->next ) {
+			CHAR_DATA       *wch;
+			CLAN_DATA       *pClan;
+			char      const *class;
+			char      const *race;
 
-		/*
-		 * Check for match against restrictions.
-		 * Don't use trust as that exposes trusted mortals.
-		 */
-		if ( d->connected != CON_PLAYING || !can_see( ch, wch ) )
-			continue;
+			wch = ( d->original ) ? d->original : d->character;
 
-		if (   wch->level < iLevelLower
-				|| wch->level > iLevelUpper
-				|| ( fImmortalOnly  && wch->level < LEVEL_IMMORTAL )
-				|| ( fHeroOnly      && wch->level < LEVEL_HERO )
-				|| ( fHeroOnly      && wch->level > L_CHAMP5 )
-				|| ( fClassRestrict && !rgfClass[prime_class(wch)] )
-				|| ( fRaceRestrict  && !rgfRace[wch->race] )
-				|| ( fNameRestrict  && str_prefix( arg1, wch->name ) )
-				|| ( fClanRestrict  && !rgfClan[wch->clan] ) )
-			continue;
-
-		nMatch++;
-
-		if ( wch->level >= LEVEL_IMMORTAL )
-			num_of_imm++;
-
-		noclass[prime_class(wch)]++;
-
-		/*
-		 * Figure out what to print for class.
-		 */
-		class = class_short( wch );
-		if ( wch->level >= LEVEL_HERO )
-			switch ( wch->level )
-			{
-				default: break;
-				case L_IMP: class = wch->sex == 2 ? "&PSTORM LADY&W"
-							: "&RSTORM LORD&W"; break;
-				case L_CON: class = "CODER"; break;
-				case L_DIR: class = "COUNCIL"; break;
-				case L_GOD: class = "GUARDIAN"; break;
-				case L_SEN: class = wch->sex == 2 ? "GODDESS"
-							: "GOD"; break;
-				case L_DEM: class = "BUILDER";break;
-				case L_JUN: class = "IMMORTAL"; break;
-				case L_APP: class = "AVATAR"; break;
-				case L_CHAMP5:
-				case L_CHAMP4:
-				case L_CHAMP3:
-				case L_CHAMP2:
-				case L_CHAMP1:
-				case LEVEL_HERO:
-							switch ( prime_class( wch ) )
-							{
-								default: class = "CHAMPION"; break;
-								case 0:  class = "&BARCH MAGUS&W"; break;
-								case 1:  class = wch->sex == 2 ? "&CMATRIARCH&W"
-										 : "&CPATRIARCH&W"; break;
-								case 2:  class = "&zBLACKGUARD&W"; break;
-								case 3:  class = "&wKNIGHT&W"; break;
-								case 4:  class = "&GMINDBENDER&W"; break;
-								case 5:  class = "&gHIEROPHANT&W"; break;
-								case 6:  class = wch->sex == 2 ? "&gLADYRANGER&W"
-										 : "&gLORDRANGER&W"; break;
-								case 7:  class = "&wCRUSADER&W"; break;
-								case 8:  class = "&PLOREMASTER&W"; break;
-								case 9:  class = "&rKINDRED&W"; break;
-								case 10: class = "&cLICHMASTER&W "; break;
-								case 11: class = "&OLYCANTHROPE&W"; break;
-								case 12: class = "&cSENSEI"; break;
-
-							}
+			// check for match against restrictions
+			if ( d->connected != CON_PLAYING || !can_see( ch, wch ) ) {
+				continue;
+			} else if ( wch->level != iLevel ) {
+				// implement rudimentary sort order
+				continue;
+			} else if ( wch->level < iLevelLower || wch->level > iLevelUpper ) {
+				// player not within level range
+				// NOTE: don't use "trust" as that exposes trusted mortals
+				continue;
+			} else if ( fClassRestrict && !rgfClass[prime_class(wch)] ) {
+				// filter by class
+				continue;
+			} else if ( fRaceRestrict && !rgfRace[wch->race] ) {
+				// filter by race
+				continue;
+			} else if ( fClanRestrict && !rgfClan[wch->clan] ) {
+				// filter by clan
+				continue;
+			} else if ( fNameRestrict && str_prefix( arg1, wch->name ) ) {
+				// filter by name
+				continue;
 			}
-		if ( wch->level >= L_APP
-				&& wch->pcdata->whotype
-				&& str_cmp( wch->pcdata->whotype, "!!!!!!!!!!!!" ) )
-			class = wch->pcdata->whotype;
-		/*
-		 * Figure out what to print for race.
-		 */
-		race = race_table[wch->race].race_name;
-		/* Clan Stuff */
-		if (wch->clan != 0)
-		{
-			pClan = get_clan_index(wch->clan);
-			if ( IS_SET(pClan->settings, CLAN_PKILL) )
-				switch ( wch->clev )
-				{
-					default:
-						sprintf( clan, "-<%s>-", pClan->name ); break;
-					case 0:
-						sprintf( clan, "-<%s>-", pClan->name ); break;
-					case 1:
-						sprintf( clan, "-<Centurion of %s>-", pClan->name ); break;
-					case 2:
-						sprintf( clan, "-<Council of %s>-", pClan->name ); break;
-					case 3:
-						sprintf( clan, "-<Leader of %s>-", pClan->name ); break;
-					case 4:
-						sprintf( clan, "-<Champion of %s>-", pClan->name ); break;
-					case 5:
-						sprintf( clan, "-<Deity of %s>-", pClan->name ); break;
+
+			nMatch++;
+
+			if ( wch->level >= LEVEL_IMMORTAL ) {
+				num_of_imm++;
+
+				if ( nMatch > 1 && num_of_imm == 1 ) {
+					send_to_char(C_DEFAULT, "&Y------------------------------------------------------------------\n\r",ch);
 				}
-			else
-				switch ( wch->clev )
-				{
-					default:
-						sprintf( clan, "(%s&C)", pClan->name ); break;
-					case 0:
-						sprintf( clan, "(%s&C)", pClan->name ); break;
-					case 1:
-						sprintf( clan, "(Centurion of %s&C)", pClan->name ); break;
-					case 2:
-						sprintf( clan, "(Council of %s&C)", pClan->name ); break;
-					case 3:
-						sprintf( clan, "(Leader of %s&C)", pClan->name ); break;
-					case 4:
-						sprintf( clan, "(Champion of %s&C)", pClan->name ); break;
-					case 5:
-						sprintf( clan, "(Deity of %s&C)", pClan->name ); break;
+			}
+
+			/*
+			 * Figure out what to print for class.
+			 */
+			class = class_short( wch );
+
+			if ( wch->level >= LEVEL_HERO ) {
+				switch ( wch->level ) {
+					case L_IMP: class = "&PIMPLEMENTOR"; break;
+					case L_CON: class = "CODER"; break;
+					case L_DIR: class = "COUNCIL"; break;
+					case L_GOD: class = "GUARDIAN"; break;
+					case L_SEN: class = "DEITY"; break;
+					case L_DEM: class = "BUILDER"; break;
+					case L_JUN: class = "IMMORTAL"; break;
+					case L_APP: class = "AVATAR"; break;
+					case L_CHAMP5:
+					case L_CHAMP4:
+					case L_CHAMP3:
+					case L_CHAMP2:
+					case L_CHAMP1:
+					case LEVEL_HERO:
+						class = class_table[prime_class( wch )].whotype;
+						break;
 				}
-		}
-		/*
-		 * Format it up.
-		 */
-		if ( wch->level < (LEVEL_HERO + 1) )
-		{
-			sprintf( buf + strlen( buf ), "[%-11s %s %d] ",
-					class, race, wch->level );
-		}
-		else if ( wch->level > LEVEL_HERO
-				&& wch->pcdata->whotype
-				&& !strcmp( class, wch->pcdata->whotype ) )
-		{
-			int len = strlen_wo_col(wch->pcdata->whotype);
-			int len2 = len;
-			len = 6 - ( len/2 + ( len % 2 != 0 ) );
-			len2 = ( len2 %2 == 0 ) ? len - 1 : len;
-			sprintf( buf + strlen(buf), "[    %*s%-s%*s&W   ] ",
-					len, "", class, len2, "" );
-		}
-		else
-		{
-			int len = strlen_wo_col((char *)class);
-			int len2 = len;
-			len = 9 - ( len/2 + ( len % 2 != 0 ) );
-			len2 = ( len2 %2 == 0 ) ? len - 1 : len;
-			sprintf( buf + strlen(buf), "[    %*s%-s%*s&W   ] ",
-					len, "", class, len2, "" );
-		}
-		send_to_char( AT_WHITE, buf, ch );
-		if ( ( IS_SET( wch->act, PLR_SILENCE ) ) && ( ch->level >= L_DIR ) ) {
-			send_to_char( AT_WHITE, "&z[&rSILENCED&z] ", ch );
-		}
-		if ( IS_SET( wch->act, PLR_QUEST ) )
-		{
-			send_to_char( AT_RED, "<QUEST> ", ch );
-		}
-		if ( IS_SET( wch->act, PLR_QUESTOR ) )
-			send_to_char( AT_BLUE, "&z(&YQ&z) ", ch );
+			}
 
-		if ( IS_SET( wch->act, PLR_AFK ) )
-			send_to_char( AT_YELLOW, "&z[&PA&z] ", ch );
-		buf[0] = '\0';
-		if ( IS_SET( wch->act, PLR_PKILLER ) )
-			send_to_char( C_DEFAULT, "&z[&RPK&z] ", ch );
-		buf[0] = '\0';
+			// take custom whotypes into account
+			if ( wch->level >= LEVEL_IMMORTAL && wch->pcdata->whotype && str_cmp( wch->pcdata->whotype, "!!!!!!!!!!!!" ) ) {
+				class = wch->pcdata->whotype;
+			}
 
-		if ( IS_SET( wch->act, PLR_WIZINVIS ) )
-		{
-			sprintf( buf, "%s %d%s", "&w[&zWizin", wch->wizinvis, "&w] ");
+			// figure out what to print for race
+			race = race_table[wch->race].race_name;
+
+			// format it up
+			if ( wch->level < LEVEL_HERO ) {
+				sprintf( buf, "[ %-7s %3s %3d ] ", class, race, wch->level );
+			} else {
+				int len = strlen_wo_col((char *)class);
+				int len2 = len;
+
+				len = 8 - ( len/2 + ( len % 2 != 0 ) );
+				len2 = ( len2 %2 == 0 ) ? len - 1 : len;
+
+				sprintf( buf, "[ %*s%-s%*s&W ] ", len, "", class, len2, "" );
+			}
+
 			send_to_char( AT_WHITE, buf, ch );
+
+			if ( ( IS_SET( wch->act, PLR_SILENCE ) ) && ( ch->level >= L_DIR ) ) {
+				send_to_char( AT_WHITE, "&z[&rSILENCED&z] ", ch );
+			}
+
+			if ( IS_SET( wch->act, PLR_QUEST ) ) {
+				send_to_char( AT_RED, "<QUEST> ", ch );
+			}
+
+			if ( IS_SET( wch->act, PLR_QUESTOR ) ) {
+				send_to_char( AT_BLUE, "&z(&YQ&z) ", ch );
+			}
+
+			if ( IS_SET( wch->act, PLR_AFK ) ) {
+				send_to_char( AT_YELLOW, "&z[&PA&z] ", ch );
+			}
+
+			if ( IS_SET( wch->act, PLR_PKILLER ) ) {
+				send_to_char( C_DEFAULT, "&z[&RPK&z] ", ch );
+			}
+
+			if ( IS_SET( wch->act, PLR_WIZINVIS ) ) {
+				sprintf( buf, "%s %d%s", "&w[&zWizin", wch->wizinvis, "&w] ");
+				send_to_char( AT_WHITE, buf, ch );
+			}
+
+			if ( IS_SET( wch->act, PLR_CLOAKED ) ) {
+				sprintf( buf, "%s %d%s", "&w[&zCloak", wch->cloaked, "&w] ");
+				send_to_char( AT_WHITE, buf, ch );
+			}
+
+			if ( wch->desc && wch->desc->editor != 0 ) {
+				if ( wch->desc->editor == 13 ) {
+					send_to_char( AT_DGREY, "&z[&OForging&z] ", ch );
+				} else {
+					send_to_char( AT_WHITE, "&z[&CB&z] ", ch );
+				}
+			}
+
+			if ( IS_SET( wch->act, PLR_THIEF ) ) {
+				send_to_char( AT_DGREY, "[&GT&z] ", ch );
+			}
+
+			if ( IS_SET( wch->act2, PLR_REMORT ) ) {
+				for ( remorts = 0; remorts < wch->incarnations; remorts++ ) {
+					send_to_char( AT_RED, "*", ch );
+				}
+			}
+
+			if ( wch->pcdata->lname ) {
+				sprintf( buf, "%s%s%s%s ", wch->name, ( wch->pcdata->lname[0] != '\0' ) ? " " : "", wch->pcdata->lname, wch->pcdata->title );
+			} else {
+				sprintf( buf, "%s%s ", wch->name, wch->pcdata->title );
+			}
+
+			send_to_char( AT_WHITE, buf, ch);
+
+			// clan stuff
+			if ( wch->clan != 0 ) {
+				pClan = get_clan_index(wch->clan);
+
+				if ( IS_SET(pClan->settings, CLAN_PKILL) ) {
+					switch ( wch->clev ) {
+						default: sprintf( buf, "&R-<&W%s&R>-", pClan->name ); break;
+						case 0:  sprintf( buf, "&R-<&W%s&R>-", pClan->name ); break;
+						case 1:  sprintf( buf, "&R-<&WCenturion of %s&R>-", pClan->name ); break;
+						case 2:  sprintf( buf, "&R-<&WCouncil of %s&R>-", pClan->name ); break;
+						case 3:  sprintf( buf, "&R-<&WLeader of %s&R>-", pClan->name ); break;
+						case 4:  sprintf( buf, "&R-<&WChampion of %s&R>-", pClan->name ); break;
+						case 5:  sprintf( buf, "&R-<&WDeity of %s&R>-", pClan->name ); break;
+					}
+				} else {
+					switch ( wch->clev ) {
+						default: sprintf( buf, "&C(&W%s&C)", pClan->name ); break;
+						case 0:  sprintf( buf, "&C(&W%s&C)", pClan->name ); break;
+						case 1:  sprintf( buf, "&C(&WCenturion of %s&C)", pClan->name ); break;
+						case 2:  sprintf( buf, "&C(&WCouncil of %s&C)", pClan->name ); break;
+						case 3:  sprintf( buf, "&C(&WLeader of %s&C)", pClan->name ); break;
+						case 4:  sprintf( buf, "&C(&WChampion of %s&C)", pClan->name ); break;
+						case 5:  sprintf( buf, "&C(&WDeity of %s&C)", pClan->name ); break;
+					}
+				}
+
+				send_to_char( AT_WHITE, buf, ch );
+			}
+
+			send_to_char(C_DEFAULT, "\n\r", ch );
+
+			if ( fNameRestrict && !str_cmp( arg1, wch->name ) ) {
+				break;
+			}
 		}
-		if ( IS_SET( wch->act, PLR_CLOAKED ) )
-		{
-			sprintf( buf, "%s %d%s", "&w[&zCloak", wch->cloaked, "&w] ");
-			send_to_char( AT_WHITE, buf, ch );
-		}
-
-		if ( wch->desc && wch->desc->editor != 0 )
-		{
-			if ( wch->desc->editor == 13 ) /* forging eq */
-				send_to_char( AT_DGREY, "&z[&OForging&z] ", ch );
-			else
-				send_to_char( AT_WHITE, "&z[&CB&z] ", ch );
-		}
-
-		if ( IS_SET( wch->act, PLR_THIEF ) )
-			send_to_char( AT_DGREY, "[&GT&z] ", ch );
-
-		/* booger */
-		incrs = wch->incarnations;
-		if ( IS_SET( wch->act2, PLR_REMORT ) )
-		{
-			for ( remorts = 0; remorts < incrs ; remorts++ )
-				send_to_char( AT_RED, "*", ch );
-		}
-
-		buf[0] = '\0';
-
-		if ( wch->pcdata->lname )
-			sprintf( buf + strlen( buf ), "%s%s%s%s ",
-					wch->name, ( wch->pcdata->lname[0] != '\0' ) ? " " : "",
-					/*	  wch->name, ( *wch->pcdata->lname != 39 ) ? " " : "",  */
-					wch->pcdata->lname, wch->pcdata->title );
-		else
-			sprintf( buf + strlen( buf ), "%s%s ",
-					wch->name, wch->pcdata->title );
-		send_to_char( AT_WHITE, buf, ch);
-		buf[0] = '\0';
-		if (wch->clan != 0)
-			sprintf( buf + strlen( buf ), "%s\n\r", clan );
-		else sprintf( buf, "\n\r" );
-		if (wch->clan != 0)
-		{
-			pClan=get_clan_index(wch->clan);
-			if IS_SET(pClan->settings,CLAN_PKILL)
-				send_to_char( AT_RED, buf, ch );
-			else
-				send_to_char( AT_LBLUE, buf, ch );
-		}
-		else
-			send_to_char(C_DEFAULT, buf, ch );
-		buf[0] = '\0';
-		if ( fNameRestrict && !str_cmp( arg1, wch->name ) )
-			break;
-
 	}
 
-	if ( nMatch > 0 )
-
-	{
-		if ( fNameRestrict )
-			send_to_char( C_DEFAULT,
-					"\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/"
-					"\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\n\r", ch );
-		/*    sprintf( buf2, "Mag&g[&G%d&g]&G Cle&g[&G%d&g]&G Thi&g[&G%d&g]&G "
-			  "War&g[&G%d&g]&G Psi&g[&G%d&g]&G Dru&g[&G%d&g]&G Rng&g[&G%d&g]&G "
-			  "Pal&g[&G%d&g]&G Brd&g[&G%d&g]&G Vam&g[&G%d&g]&G Nec&g[&G%d&g]&G\n\r",
-			  noclass[0], noclass[1], noclass[2], noclass[3], noclass[4],
-			  noclass[5], noclass[6], noclass[7], noclass[8], noclass[9],
-			  noclass[10] );
-			  strcat( buf, buf2 );
-			  send_to_char( AT_GREEN, buf, ch );
-			  buf[0]=buf2[0]='\0';
-			  sprintf( buf, "Wwf&g[&G%d&g] &GMnk&g[&G%d&g] ", noclass[11], noclass[12] ); */
-		send_to_char( AT_WHITE, buf, ch );
-		buf[0]=buf2[0]='\0';
-
-		send_to_char(C_DEFAULT ,
-				"\n\r&W==================================================================\n\r",ch );
-		send_to_char(C_DEFAULT,
-				"&z======     &z[&PA&z]&Wfk &z[&RPK&z]&Willer &z[&GT&z]&Whief &z[&CB&z]&Wuilding &z[&YQ&z]&Wuesting    &z======\n\r",ch);
-		send_to_char(C_DEFAULT,"&W==================================================================\n\r \n\r",ch);
-
-		sprintf( buf, "&O[&z%d&O]&z &OImm&zo&Ortals.\n\r", num_of_imm );
-		sprintf( buf2, "&z[&O%d&z]&O &zTot&Oa&zl Player%s.\n\r",
-				nMatch, nMatch == 1 ? "" : "s" );
-		strcat( buf, buf2 );
-		send_to_char(AT_GREEN, buf, ch );
-		if ( doubleexp() == TRUE) {
-			sprintf( buf2, "&BExperience Boost &Xis &YON!\n\r" );
-			send_to_char(AT_GREEN, buf2, ch );
-		}
+	if ( nMatch <= 0 ) {
+		send_to_char( AT_GREEN, "There is no class, race, clan, or character by that name in the game.\n\r", ch );
 	}
-	else
-		send_to_char( AT_GREEN, "There is no class/race/clan/person by that name in the game.\n\r", ch );
+
+	send_to_char(C_DEFAULT, "\n\r&W==================================================================\n\r",ch );
+	send_to_char(C_DEFAULT, "&z======     &z[&PA&z]&Wfk &z[&RPK&z]&Willer &z[&GT&z]&Whief &z[&CB&z]&Wuilding &z[&YQ&z]&Wuesting    &z======\n\r",ch);
+	send_to_char(C_DEFAULT, "&W==================================================================\n\r \n\r",ch);
+
+	sprintf( buf, "&z[&c%d&z]&W Immortal%s\n\r", num_of_imm, num_of_imm == 1 ? "" : "s" );
+	send_to_char(C_DEFAULT, buf, ch );
+
+	sprintf( buf, "&z[&c%d&z]&W %sPlayer%s\n\r", nMatch, nMatch == 1 ? "" : "Total ", nMatch == 1 ? "" : "s" );
+	send_to_char(C_DEFAULT, buf, ch );
+
+	if ( doubleexp() == TRUE) {
+		sprintf( buf, "\n\r&BExperience Boost &Wis &YON&W!\n\r" );
+		send_to_char(C_DEFAULT, buf, ch );
+	}
+
 	return;
 }
 
@@ -2311,8 +2187,6 @@ void do_inventory( CHAR_DATA *ch, char *argument )
 	show_list_to_char( ch->carrying, ch, TRUE, TRUE );
 	return;
 }
-
-
 
 void do_equipment( CHAR_DATA *ch, char *argument )
 {
