@@ -132,14 +132,14 @@ typedef void SPELL_FUN                  args( ( int sn, int level, CHAR_DATA *ch
 
 #define STUN_MAX                   5
 
-#define L_IMP                      MAX_LEVEL
-#define L_CON                     ( L_IMP - 1 )
-#define L_DIR             ( L_CON - 1 )
-#define L_SEN             ( L_DIR - 1 )
-#define L_GOD                     ( L_SEN - 1 )
-#define L_DEM                     ( L_GOD - 1 )
-#define L_JUN             ( L_DEM - 1 )
-#define L_APP                     ( L_JUN - 1 )
+#define L_IMP          MAX_LEVEL
+#define L_CON         ( L_IMP - 1 )
+#define L_DIR         ( L_CON - 1 )
+#define L_SEN         ( L_DIR - 1 )
+#define L_GOD         ( L_SEN - 1 )
+#define L_DEM         ( L_GOD - 1 )
+#define L_JUN         ( L_DEM - 1 )
+#define L_APP         ( L_JUN - 1 )
 #define L_CHAMP5      ( L_APP - 1 )
 #define L_CHAMP4      ( L_CHAMP5 - 1 )
 #define L_CHAMP3      ( L_CHAMP4 - 1 )
@@ -147,8 +147,8 @@ typedef void SPELL_FUN                  args( ( int sn, int level, CHAR_DATA *ch
 #define L_CHAMP1      ( L_CHAMP2 - 1 )
 #define LEVEL_HERO      100
 
-#define LEVEL_IMMORTAL      106
-#define LEVEL_MORTAL      105
+#define LEVEL_IMMORTAL  106
+#define LEVEL_MORTAL    105
 
 #define PULSE_PER_SECOND      6
 #define PULSE_VIOLENCE      (  3 * PULSE_PER_SECOND )
@@ -512,6 +512,7 @@ struct  class_type {
   int   hitdice;            // Hit Dice
   int   d6gold;             // Number of starting d6 to roll for starting gold
   bool  spellcaster;        // Class is a spellcaster
+  char  whotype[ 15 ];      // Class whotype
 };
 
 /*
