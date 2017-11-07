@@ -251,7 +251,7 @@ ROOM_INDEX_DATA *new_room_index( void )
 	pRoom->extra_descr      =   NULL;
 	pRoom->area             =   NULL;
 
-	for ( door=0; door < MAX_DIR; door++ )
+	for ( door=0; door <= DIR_MAX; door++ )
 		pRoom->exit[door]   =   NULL;
 
 	pRoom->reset_first	    = 	NULL;
@@ -386,7 +386,7 @@ void free_room_index( ROOM_INDEX_DATA *pRoom )
 		free_trap_data( pTrap );
 	}
 
-	for ( door = 0; door < MAX_DIR; door++ )
+	for ( door = 0; door <= DIR_MAX; door++ )
 	{
 		if ( pRoom->exit[door] )
 			free_exit( pRoom->exit[door] );

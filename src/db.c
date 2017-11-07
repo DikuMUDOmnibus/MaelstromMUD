@@ -2419,7 +2419,7 @@ void reset_room( ROOM_INDEX_DATA *pRoom )
 	pMob	= NULL;
 	last	= FALSE;
 
-	for ( iExit = 0;  iExit < MAX_DIR;  iExit++ )
+	for ( iExit = 0;  iExit <= DIR_MAX;  iExit++ )
 	{
 		EXIT_DATA *pExit;
 		if ( ( pExit = pRoom->exit[iExit] )

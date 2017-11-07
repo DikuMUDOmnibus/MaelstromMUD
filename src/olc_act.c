@@ -56,7 +56,7 @@ bool show_version( CHAR_DATA *ch, char *argument )
 	send_to_char(C_DEFAULT, "\n\r", ch );
 
 	return FALSE;
-}    
+}
 
 /*
  * This table contains help commands and a brief description of each.
@@ -328,7 +328,7 @@ bool redit_proglist( CHAR_DATA *ch, char *argument )
 		{
 			if ( ( pObjIndex = get_obj_index( vnum ) ) )
 			{
-				if ( pObjIndex->traptypes ) 
+				if ( pObjIndex->traptypes )
 				{
 					sprintf( buf, "&z[&R%5d&z] &w%-17.16s",
 							pObjIndex->vnum,
@@ -444,7 +444,7 @@ bool redit_mlist( CHAR_DATA *ch, char *argument )
 	{
 		if ( ( pMobIndex = get_mob_index( vnum ) ) )
 		{
-			if ( fAll || is_name( ch, arg, pMobIndex->player_name ) 
+			if ( fAll || is_name( ch, arg, pMobIndex->player_name )
 					|| (pMobIndex->level == atoi(arg)) )
 			{
 				found = TRUE;
@@ -506,7 +506,7 @@ bool redit_olist( CHAR_DATA *ch, char *argument )
 			{
 				found = TRUE;
 				sprintf( buf, "&z[&R%5d&z] &w%-17.16s",
-						pObjIndex->vnum, 
+						pObjIndex->vnum,
 						capitalize( strip_color(pObjIndex->short_descr) ) );
 				strcat( buf1, buf );
 				if ( ++col % 3 == 0 )
@@ -548,7 +548,7 @@ bool redit_rlist( CHAR_DATA *ch, char *argument )
 		{
 			found = TRUE;
 			sprintf( buf, "&z[&R%5d&z] &w%-17.16s",
-					pRoomIndex->vnum, 
+					pRoomIndex->vnum,
 					capitalize( strip_color(pRoomIndex->name) ) );
 			strcat( buf1, buf );
 			if ( ++col % 3 == 0 )
@@ -596,7 +596,7 @@ bool redit_mshow( CHAR_DATA *ch, char *argument )
 
 	medit_show( ch, argument );
 	ch->desc->pEdit = (void *)ch->in_room;
-	return FALSE; 
+	return FALSE;
 }
 
 
@@ -626,7 +626,7 @@ bool redit_oshow( CHAR_DATA *ch, char *argument )
 
 	oedit_show( ch, argument );
 	ch->desc->pEdit = (void *)ch->in_room;
-	return FALSE; 
+	return FALSE;
 }
 
 
@@ -754,7 +754,7 @@ bool aedit_links( CHAR_DATA *ch, char *argument )
 	char buf  [MAX_STRING_LENGTH];
 	int vnum;
 	int nMatch = 0;
-	int DIR;   
+	int DIR;
 
 	EDIT_AREA(ch, pArea);
 
@@ -764,14 +764,14 @@ bool aedit_links( CHAR_DATA *ch, char *argument )
 		if ( ( pRoomIndex = get_room_index( vnum ) ) )
 		{
 			nMatch++;
-			if ( pRoomIndex->area != pArea )  
+			if ( pRoomIndex->area != pArea )
 				for ( DIR = 0; DIR <= DIR_MAX; DIR++ )
 				{
 					if ( pRoomIndex->exit[DIR] )
 					{
 						if (pRoomIndex->exit[DIR]->to_room)
 						{
-							if (    pRoomIndex->exit[DIR]->to_room->vnum >= pArea->lvnum 
+							if (    pRoomIndex->exit[DIR]->to_room->vnum >= pArea->lvnum
 									&& pRoomIndex->exit[DIR]->to_room->vnum <= pArea->uvnum )
 							{
 								sprintf( buf, "&z[&W%5d&z] &w%s\n\r",
@@ -796,7 +796,7 @@ bool aedit_links( CHAR_DATA *ch, char *argument )
 			{
 				if ( pRoomIndex->exit[DIR] )
 					if (pRoomIndex->exit[DIR]->to_room)
-						if (    pRoomIndex->exit[DIR]->to_room->vnum < pArea->lvnum 
+						if (    pRoomIndex->exit[DIR]->to_room->vnum < pArea->lvnum
 								|| pRoomIndex->exit[DIR]->to_room->vnum > pArea->uvnum )
 						{
 							sprintf( buf, "&z[&W%5d&z] &w%s\n\r",
@@ -805,7 +805,7 @@ bool aedit_links( CHAR_DATA *ch, char *argument )
 						}
 			}
 		}
-	}  
+	}
 
 	return FALSE;
 }
@@ -904,7 +904,7 @@ bool aedit_file( CHAR_DATA *ch, char *argument )
 			send_to_char(C_DEFAULT, "Only letters and numbers are valid.\n\r", ch );
 			return FALSE;
 		}
-	}    
+	}
 
 	free_string( pArea->filename );
 	strcat( file, ".are" );
@@ -1054,7 +1054,7 @@ bool aedit_noquest( CHAR_DATA *ch, char *argument )
 	EDIT_AREA( ch, pArea );
 
 	if ( get_trust( ch ) >= L_CON )
-	{   
+	{
 		TOGGLE_BIT( pArea->area_flags, AREA_NO_QUEST );
 		send_to_char(C_DEFAULT, "Ok.\n\r", ch );
 		return TRUE;
@@ -1079,7 +1079,7 @@ bool aedit_mudschool( CHAR_DATA *ch, char *argument )
 	if ( get_trust( ch ) >= L_CON )
 	{
 		TOGGLE_BIT( pArea->area_flags, AREA_MUDSCHOOL );
-		send_to_char(C_DEFAULT, "Ok.\n\r", ch );  
+		send_to_char(C_DEFAULT, "Ok.\n\r", ch );
 		return TRUE;
 	}
 	else
@@ -1119,7 +1119,7 @@ bool aedit_color( CHAR_DATA *ch, char *argument )
 		send_to_char(C_DEFAULT, "Color choices are from 1-15 only.\n\r", ch );
 		send_to_char(C_DEFAULT, "&WType &Rhelp AT_COLOR&W for list of colors.\n\r", ch);
 		return FALSE;
-	}    
+	}
 	pArea->def_color = i;
 
 	return TRUE;
@@ -1523,7 +1523,7 @@ bool redit_show( CHAR_DATA *ch, char *argument )
 	else
 		strcat( buf1, "none&z]&g\n\r" );
 
-	for ( door = 0; door < MAX_DIR; door++ )
+	for ( door = 0; door <= DIR_MAX; door++ )
 	{
 		EXIT_DATA *pexit;
 
@@ -1820,7 +1820,7 @@ bool change_exit( CHAR_DATA *ch, char *argument, int door )
 		if ( !str_cmp( argument, "key" ) )
 		{
 			pRoom->exit[door]->key = 0;
-			send_to_char(C_DEFAULT, "Exit key removed.\n\r", ch );                        
+			send_to_char(C_DEFAULT, "Exit key removed.\n\r", ch );
 			return TRUE;
 		}
 
@@ -1828,7 +1828,7 @@ bool change_exit( CHAR_DATA *ch, char *argument, int door )
 		{
 			free_string( pRoom->exit[door]->keyword );
 			pRoom->exit[door]->keyword = &str_empty[0];
-			send_to_char(C_DEFAULT, "Exit name removed.\n\r", ch );                        
+			send_to_char(C_DEFAULT, "Exit name removed.\n\r", ch );
 			return TRUE;
 		}
 
@@ -1836,7 +1836,7 @@ bool change_exit( CHAR_DATA *ch, char *argument, int door )
 		{
 			free_string( pRoom->exit[door]->description );
 			pRoom->exit[door]->description = &str_empty[0];
-			send_to_char(C_DEFAULT, "Exit description removed.\n\r", ch );                        
+			send_to_char(C_DEFAULT, "Exit description removed.\n\r", ch );
 			return TRUE;
 		}
 
@@ -2037,7 +2037,7 @@ bool redit_ed( CHAR_DATA *ch, char *argument )
 
 	if ( !str_cmp( command, "add" ) )
 	{
-		if ( /*keyword*/ argument[0] == '\0' )  
+		if ( /*keyword*/ argument[0] == '\0' )
 		{
 			send_to_char(C_DEFAULT, "Syntax:  ed add [keyword]\n\r", ch );
 			return FALSE;
@@ -2057,7 +2057,7 @@ bool redit_ed( CHAR_DATA *ch, char *argument )
 
 	if ( !str_cmp( command, "edit" ) )
 	{
-		if ( /*keyword*/ argument[0] == '\0' ) 
+		if ( /*keyword*/ argument[0] == '\0' )
 		{
 			send_to_char(C_DEFAULT, "Syntax:  ed edit [keyword]\n\r", ch );
 			return FALSE;
@@ -2435,9 +2435,9 @@ bool redit_mreset( CHAR_DATA *ch, char *argument )
 		return FALSE;
 	}
 
-	if ( pMobIndex->area != pRoom->area ) 
+	if ( pMobIndex->area != pRoom->area )
 		/*&& get_trust( ch ) < L_CON ) */
-		/* && !IS_CODER( ch )*/ 
+		/* && !IS_CODER( ch )*/
 	{
 		send_to_char(C_DEFAULT, "REdit: No such mobile in this area.\n\r", ch );
 		return FALSE;
@@ -2587,9 +2587,9 @@ bool redit_oreset( CHAR_DATA *ch, char *argument )
 		return FALSE;
 	}
 
-	if ( pObjIndex->area != pRoom->area ) 
+	if ( pObjIndex->area != pRoom->area )
 		/* && get_trust( ch ) < L_CON ) */
-		/* && !IS_CODER( ch ) */ 
+		/* && !IS_CODER( ch ) */
 	{
 		send_to_char(C_DEFAULT, "REdit: No such object in this area.\n\r", ch );
 		return FALSE;
@@ -2867,11 +2867,11 @@ void show_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *obj )
 						obj->value[0],
 						obj->value[3] != -1 ? skill_table[obj->value[3]].name
 						: "none" );
-			else        
+			else
 				sprintf( buf,
 						"&z[&Wv0&z] &cLevel&w:          &z[&R%d&z]\n\r"
 						"&z[&Wv1&z] &cCharges Total&w:  &z[&R%d&z]\n\r"
-						"&z[&Wv2&z] &cCharges Left&w:   &z[&R%d&z]\n\r" 
+						"&z[&Wv2&z] &cCharges Left&w:   &z[&R%d&z]\n\r"
 						"&z[&Wv3&z] &cSpell&w:          &z[&W%s&z]\n\r",
 						obj->value[0],
 						obj->value[1],
@@ -2923,7 +2923,7 @@ void show_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *obj )
 					"&z[&Wv0&z] &cDecoder item&w:        &z[&R%d&z] [&W%s&z]\n\r"
 					"&z[&Wv1&z] &cMinimum read level&w:  &z[&R%d&z]\n\r"
 					"&z[&Wv2&z] &cMinimum write level&w: &z[&R%d&z]\n\r",
-					obj->value[0], 
+					obj->value[0],
 					get_obj_index(obj->value[0])
 					? get_obj_index(obj->value[0])->short_descr
 					: "none",
@@ -2985,7 +2985,7 @@ void show_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *obj )
 
 
 bool set_ac_type ( CHAR_DATA *ch, char *argument )
-{    
+{
 
 	OBJ_INDEX_DATA *pObj;
 
@@ -3014,7 +3014,7 @@ bool set_ac_type ( CHAR_DATA *ch, char *argument )
 }
 
 bool set_ac_vnum ( CHAR_DATA *ch, char *argument )
-{    
+{
 
 	OBJ_INDEX_DATA *pObj;
 	int value;
@@ -3030,7 +3030,7 @@ bool set_ac_vnum ( CHAR_DATA *ch, char *argument )
 	switch( pObj->ac_type )
 	{
 		default: return FALSE;
-		case 0: 
+		case 0:
 				 send_to_char( AT_GREY, "Obj ac_type does not require a vnum.\n\r", ch );
 				 return FALSE;
 		case 1:
@@ -3073,7 +3073,7 @@ bool set_ac_vnum ( CHAR_DATA *ch, char *argument )
 }
 
 bool set_ac_v1 ( CHAR_DATA *ch, char *argument )
-{    
+{
 
 	OBJ_INDEX_DATA *pObj;
 
@@ -3093,7 +3093,7 @@ bool set_ac_v1 ( CHAR_DATA *ch, char *argument )
 }
 
 bool set_ac_v2 ( CHAR_DATA *ch, char *argument )
-{    
+{
 
 	OBJ_INDEX_DATA *pObj;
 	int value;
@@ -3115,7 +3115,7 @@ bool set_ac_v2 ( CHAR_DATA *ch, char *argument )
 
 
 bool set_ac_setspell ( CHAR_DATA *ch, char *argument )
-{    
+{
 
 	OBJ_INDEX_DATA *pObj;
 	int            spn;
@@ -3125,7 +3125,7 @@ bool set_ac_setspell ( CHAR_DATA *ch, char *argument )
 	spn = skill_lookup( argument );
 
 	if ( argument[0] == '\0'
-			|| spn == -1 
+			|| spn == -1
 			|| (*skill_table[spn].spell_fun) == (*spell_null) )
 	{
 		send_to_char(AT_WHITE, "Syntax:  ac_setspell [ valid spell name ]\n\r", ch );
@@ -3463,7 +3463,7 @@ bool oedit_show( CHAR_DATA *ch, char *argument )
 	{
 		pJoinObj = get_obj_index( pObj->join );
 		sprintf( buf, "&cJoins to create&w: &z[&R%d&z] "
-				"[&W%s&z]\n\r", pObj->join, 
+				"[&W%s&z]\n\r", pObj->join,
 				pJoinObj ? pJoinObj->short_descr : "&RError: No such object."  );
 		send_to_char( C_DEFAULT, buf, ch );
 	}
@@ -3471,7 +3471,7 @@ bool oedit_show( CHAR_DATA *ch, char *argument )
 	{
 		pJoinObj = get_obj_index( pObj->sep_one );
 		sprintf( buf, "&cFirst seperated vnum is&w: &z[&R%d&z] "
-				"[&W%s&z]\n\r", pObj->sep_one, 
+				"[&W%s&z]\n\r", pObj->sep_one,
 				pJoinObj ? pJoinObj->short_descr : "&RError: No such object."  );
 		send_to_char( C_DEFAULT, buf, ch );
 	}
@@ -3484,7 +3484,7 @@ bool oedit_show( CHAR_DATA *ch, char *argument )
 		send_to_char( C_DEFAULT, buf, ch );
 	}
 	sprintf( buf, "&cInvoke Type&w:&z [&R%d&z]  "
-			"&c Invoke Vnum&w:&z [&R%d&z]\n\r", 
+			"&c Invoke Vnum&w:&z [&R%d&z]\n\r",
 			pObj->ac_type, pObj->ac_vnum );
 	send_to_char(C_DEFAULT, buf, ch );
 	if ( pObj->ac_charge[1] == -1 )
@@ -4249,7 +4249,7 @@ bool cedit_show( CHAR_DATA *ch, char *argument )
 	sprintf( buf, "&PCenturion:&Y   [%10s]&Y%s&R%s\n\r",  pClan->second, IS_SET(pClan->settings, CLAN_SECOND_INDUCT) ? " Can induct." : "", pClan->issecond ? "" : " Position open." );
 	send_to_char( C_DEFAULT, buf, ch );
 	sprintf( buf, "&PChampion:&Y    [%10s]&Y%s&R%s\n\r", pClan->champ, IS_SET(pClan->settings, CLAN_CHAMP_INDUCT) ? " Can induct." : "", pClan->ischamp ? "" : " Position open." );
-	send_to_char( C_DEFAULT, buf, ch );  
+	send_to_char( C_DEFAULT, buf, ch );
 	sprintf ( buf, "&PObjects:\n\r" );
 	send_to_char(C_DEFAULT, buf, ch);
 
@@ -5508,7 +5508,7 @@ bool medit_mpremove( CHAR_DATA *ch, char *argument )
 			send_to_char( C_DEFAULT, "No such MobProg.\n\r", ch );
 			return FALSE;
 		}
-	} 
+	}
 
 	/* so we don't crash deleting nonexisting progs */
 	if ( !pMProg )
@@ -6026,7 +6026,7 @@ bool sedit_show(CHAR_DATA *ch, char *argument)
 
 	sprintf( buf, "&YKeyword: &W%s\n\r", pSocial->name );
 	send_to_char( C_DEFAULT, buf, ch );
-	sprintf( buf, 
+	sprintf( buf,
 			"&Y(1) Char_no_arg:    &B<social>          &wYou see.\n\r&W%s\n\r",
 			pSocial->char_no_arg );
 	send_to_char( C_DEFAULT, buf, ch );
@@ -6047,7 +6047,7 @@ bool sedit_show(CHAR_DATA *ch, char *argument)
 			pSocial->vict_found );
 	send_to_char( C_DEFAULT, buf, ch );
 	sprintf( buf,
-			"&Y(6) Char_auto:      &B<social> self     &wYou see.\n\r&W%s\n\r", 
+			"&Y(6) Char_auto:      &B<social> self     &wYou see.\n\r&W%s\n\r",
 			pSocial->char_auto );
 	send_to_char( C_DEFAULT, buf, ch );
 	sprintf( buf,
@@ -6515,7 +6515,7 @@ bool forge_show(CHAR_DATA *ch, char *argument)
 	send_to_char( AT_DGREY, buf, ch );
 	sprintf( buf, "[&WHit Points&w: &R+%d&z] [&WMana&w:        &R+%d&z] [&WArmor Class&w:  &R%d&z]",
 			max_hp, max_mana, max_ac );
-	send_to_char( AT_DGREY, buf, ch ); 
+	send_to_char( AT_DGREY, buf, ch );
 	if ( pObj->level >= 40 )
 	{
 		sprintf( buf,  "[&WSaving-Spell&w: &R%d&z] [&WSaving-Breath&w: &R%d&z]\n\r",
@@ -6614,7 +6614,7 @@ bool forge_addaffect( CHAR_DATA *ch, char *argument )
 		strcpy( loc, "intelligence" );
 		if ( (Mod=atoi( mod )) > max_stat )
 		{
-			sprintf( buf, "You may not add more than %d to %s.\n\r", 
+			sprintf( buf, "You may not add more than %d to %s.\n\r",
 					Mod, loc );
 			send_to_char( AT_GREY, buf, ch );
 			return FALSE;
@@ -6627,7 +6627,7 @@ bool forge_addaffect( CHAR_DATA *ch, char *argument )
 		strcpy( loc, "wisdom" );
 		if ( (Mod=atoi( mod )) > max_stat )
 		{
-			sprintf( buf, "You may not add more than %d to %s.\n\r", 
+			sprintf( buf, "You may not add more than %d to %s.\n\r",
 					max_stat, loc );
 			send_to_char( AT_GREY, buf, ch );
 			return FALSE;
@@ -6640,7 +6640,7 @@ bool forge_addaffect( CHAR_DATA *ch, char *argument )
 		strcpy( loc, "dexterity" );
 		if ( (Mod=atoi( mod )) > max_stat )
 		{
-			sprintf( buf, "You may not add more than %d to %s.\n\r", 
+			sprintf( buf, "You may not add more than %d to %s.\n\r",
 					max_stat, loc );
 			send_to_char( AT_GREY, buf, ch );
 			return FALSE;
@@ -6653,7 +6653,7 @@ bool forge_addaffect( CHAR_DATA *ch, char *argument )
 		strcpy( loc, "constitution" );
 		if ( (Mod=atoi( mod )) > max_stat )
 		{
-			sprintf( buf, "You may not add more than %d to %s.\n\r", 
+			sprintf( buf, "You may not add more than %d to %s.\n\r",
 					max_stat, loc );
 			send_to_char( AT_GREY, buf, ch );
 			return FALSE;
@@ -6666,7 +6666,7 @@ bool forge_addaffect( CHAR_DATA *ch, char *argument )
 		strcpy( loc, "charisma" );
 		if ( (Mod=atoi( mod )) > max_stat )
 		{
-			sprintf( buf, "You may not add more than %d to %s.\n\r", 
+			sprintf( buf, "You may not add more than %d to %s.\n\r",
 					max_stat, loc );
 			send_to_char( AT_GREY, buf, ch );
 			return FALSE;
@@ -6679,7 +6679,7 @@ bool forge_addaffect( CHAR_DATA *ch, char *argument )
 		strcpy( loc, "damroll" );
 		if ( (Mod=atoi( mod )) > max_dam )
 		{
-			sprintf( buf, "You may not add more than %d %s.\n\r", 
+			sprintf( buf, "You may not add more than %d %s.\n\r",
 					max_dam, loc );
 			send_to_char( AT_GREY, buf, ch );
 			return FALSE;
@@ -6692,7 +6692,7 @@ bool forge_addaffect( CHAR_DATA *ch, char *argument )
 		strcpy( loc, "hitroll" );
 		if ( (Mod=atoi( mod )) > max_hit )
 		{
-			sprintf( buf, "You may not add more than %d %s.\n\r", 
+			sprintf( buf, "You may not add more than %d %s.\n\r",
 					max_hit, loc );
 			send_to_char( AT_GREY, buf, ch );
 			return FALSE;
@@ -6705,7 +6705,7 @@ bool forge_addaffect( CHAR_DATA *ch, char *argument )
 		strcpy( loc, "hp" );
 		if ( (Mod=atoi( mod )) > max_hp )
 		{
-			sprintf( buf, "You may not add more than %d %ss.\n\r", 
+			sprintf( buf, "You may not add more than %d %ss.\n\r",
 					max_hp, loc );
 			send_to_char( AT_GREY, buf, ch );
 			return FALSE;
@@ -6718,7 +6718,7 @@ bool forge_addaffect( CHAR_DATA *ch, char *argument )
 		strcpy( loc, "ac" );
 		if ( (Mod=atoi( mod )) < max_ac )
 		{
-			sprintf( buf, "You may not add more than %d %ss.\n\r", 
+			sprintf( buf, "You may not add more than %d %ss.\n\r",
 					max_ac, loc );
 			send_to_char( AT_GREY, buf, ch );
 			return FALSE;
@@ -6731,7 +6731,7 @@ bool forge_addaffect( CHAR_DATA *ch, char *argument )
 		strcpy( loc, "mana" );
 		if ( (Mod=atoi( mod )) > max_mana )
 		{
-			sprintf( buf, "You may not add more than %d %s.\n\r", 
+			sprintf( buf, "You may not add more than %d %s.\n\r",
 					max_mana, loc );
 			send_to_char( AT_GREY, buf, ch );
 			return FALSE;
@@ -6744,7 +6744,7 @@ bool forge_addaffect( CHAR_DATA *ch, char *argument )
 		strcpy( loc, "anti-disarm" );
 		if ( (Mod=atoi( mod )) > max_ad )
 		{
-			sprintf( buf, "You may not add more than %d %s.\n\r", 
+			sprintf( buf, "You may not add more than %d %s.\n\r",
 					max_ad, loc );
 			send_to_char( AT_GREY, buf, ch );
 			return FALSE;
@@ -6757,7 +6757,7 @@ bool forge_addaffect( CHAR_DATA *ch, char *argument )
 		strcpy( loc, "saving-spell" );
 		if ( (Mod=atoi( mod )) < max_saves )
 		{
-			sprintf( buf, "You may not add more than %d %s.\n\r", 
+			sprintf( buf, "You may not add more than %d %s.\n\r",
 					max_saves, loc );
 			send_to_char( AT_GREY, buf, ch );
 			return FALSE;
@@ -6770,7 +6770,7 @@ bool forge_addaffect( CHAR_DATA *ch, char *argument )
 		strcpy( loc, "saving-breath" );
 		if ( (Mod=atoi( mod )) < max_saveb )
 		{
-			sprintf( buf, "You may not add more than %d %s.\n\r", 
+			sprintf( buf, "You may not add more than %d %s.\n\r",
 					max_saveb, loc );
 			send_to_char( AT_GREY, buf, ch );
 			return FALSE;
@@ -6819,7 +6819,7 @@ bool forge_addaffect( CHAR_DATA *ch, char *argument )
 			send_to_char( AT_GREY, "You have already added the maximum number of stats possible for your experience.\n\r", ch );
 			return FALSE;
 		}
-	}	
+	}
 	pAf             =   new_affect();
 	pAf->location   =   flag_value( apply_flags, loc );
 	pAf->modifier   =   Mod;
@@ -6857,8 +6857,8 @@ bool forge_type( CHAR_DATA *ch, char *argument )
 		send_to_char( AT_GREY, buf, ch );
 		return FALSE;
 	}
-	if ( !str_cmp( 
-				flag_string( weapon_flags, flag_value( weapon_flags, argument ) ), 
+	if ( !str_cmp(
+				flag_string( weapon_flags, flag_value( weapon_flags, argument ) ),
 				"none" ) )
 	{
 		forge_type( ch, "" );
@@ -6875,7 +6875,7 @@ bool forge_type( CHAR_DATA *ch, char *argument )
 
 void do_rpstat( CHAR_DATA *ch, char *argument )
 {
-	TRAP_DATA *pTrap; 
+	TRAP_DATA *pTrap;
 	ROOM_INDEX_DATA *location;
 	char             buf  [ MAX_STRING_LENGTH ];
 	char             arg  [ MAX_INPUT_LENGTH  ];
@@ -6951,7 +6951,7 @@ void do_opstat( CHAR_DATA *ch, char *argument )
 	for ( pTrap = obj->pIndexData->traps; pTrap != NULL; pTrap = pTrap->next_here )
 	{
 		sprintf( buf, ">%s %s\n\r%s\n\r\n\r",
-				flag_string(oprog_types, pTrap->type), 
+				flag_string(oprog_types, pTrap->type),
 				pTrap->arglist, pTrap->comlist );
 		send_to_char(C_DEFAULT, buf, ch );
 	}
@@ -6979,13 +6979,13 @@ bool mreset_show(CHAR_DATA *ch, char *argument)
 		if ( pReset->command == 'M' )
 		{
 			pMobIndex = get_mob_index( pReset->arg1 );
-			sprintf( buf, "&z[&G%2d&z] [&R%5d&z] [&Y%3d&z] &B%s\n\r", 
+			sprintf( buf, "&z[&G%2d&z] [&R%5d&z] [&Y%3d&z] &B%s\n\r",
 					count++, pReset->arg1, pReset->arg2,
 					pMobIndex ? pMobIndex->short_descr : "&RMob does not exist!!");
 			send_to_char( C_DEFAULT, buf, ch );
 		}
 	}
-	return FALSE;  
+	return FALSE;
 }
 
 bool spedit_show( CHAR_DATA *ch, char *argument )

@@ -463,7 +463,7 @@ void save_rooms( FILE *fp, AREA_DATA *pArea )
 							fix_string( pEd->description ) );
 				}
 
-				for( door = 0; door < MAX_DIR; door++ )
+				for( door = 0; door <= DIR_MAX; door++ )
 				{
 					if ( ( pExit = pRoomIndex->exit[door] ) )
 					{

@@ -3453,7 +3453,6 @@ struct flag_type
 #define   AREA_NO_QUEST  64   /* No quests allowed */
 #define   AREA_MUDSCHOOL 128  /* Used for mudschool only */
 
-#define MAX_DIR   6
 #define NO_FLAG -99 /* Must not be used in flags or stats. */
 
 /*
