@@ -1261,7 +1261,7 @@ struct  kill_data
  * Directions.
  * Used in #ROOMS.
  */
-#define MAX_DIR           6
+#define MAX_DIR          10
 
 #define DIR_NORTH         0
 #define DIR_EAST          1
@@ -1269,7 +1269,10 @@ struct  kill_data
 #define DIR_WEST          3
 #define DIR_UP            4
 #define DIR_DOWN          5
-
+#define DIR_NORTHWEST     6
+#define DIR_NORTHEAST     7
+#define DIR_SOUTHWEST     8
+#define DIR_SOUTHEAST     9
 
 /*
  * Exit flags.
@@ -1278,12 +1281,12 @@ struct  kill_data
 #define EX_ISDOOR         1
 #define EX_CLOSED         2
 #define EX_LOCKED         4
-#define EX_BASHED                     8
-#define EX_BASHPROOF                 16
-#define EX_PICKPROOF         32
-#define EX_PASSPROOF                 64
-#define EX_RANDOM                   128
-#define EX_MAGICLOCK        256
+#define EX_BASHED         8
+#define EX_BASHPROOF     16
+#define EX_PICKPROOF     32
+#define EX_PASSPROOF     64
+#define EX_RANDOM       128
+#define EX_MAGICLOCK    256
 
 /*
  * Sector types.
@@ -2058,7 +2061,7 @@ struct  room_index_data
   OBJ_DATA *    contents;
   EXTRA_DESCR_DATA *  extra_descr;
   AREA_DATA *   area;
-  EXIT_DATA *   exit  [ 6 ];
+  EXIT_DATA *   exit  [ MAX_DIR ];
   RESET_DATA *  reset_first;  /* OLC */
   RESET_DATA *  reset_last; /* OLC */
   TRAP_DATA *         traps;
@@ -2614,6 +2617,8 @@ DECLARE_DO_FUN( do_newcorpse  );
 DECLARE_DO_FUN( do_newlock  );
 DECLARE_DO_FUN( do_noemote  );
 DECLARE_DO_FUN( do_north  );
+DECLARE_DO_FUN( do_northwest  );
+DECLARE_DO_FUN( do_northeast  );
 DECLARE_DO_FUN( do_note   );
 DECLARE_DO_FUN( do_notell );
 DECLARE_DO_FUN( do_nukerep  );
@@ -2700,6 +2705,8 @@ DECLARE_DO_FUN( do_snoop  );
 DECLARE_DO_FUN( do_socials  );
 DECLARE_DO_FUN( do_soulstrike   );
 DECLARE_DO_FUN( do_south  );
+DECLARE_DO_FUN( do_southwest  );
+DECLARE_DO_FUN( do_southeast  );
 DECLARE_DO_FUN( do_spells       );
 DECLARE_DO_FUN( do_spin_kick  );
 DECLARE_DO_FUN( do_split  );

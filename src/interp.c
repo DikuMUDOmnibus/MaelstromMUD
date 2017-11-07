@@ -70,14 +70,22 @@ struct	cmd_type	cmd_table	[ ] =
 	/*
 	 * Common movement commands.
 	 */
-	{ "north",		do_north,	POS_STANDING,	 0,  LOG_NORMAL	},
-	{ "east",		do_east,	POS_STANDING,	 0,  LOG_NORMAL	},
-	{ "south",		do_south,	POS_STANDING,	 0,  LOG_NORMAL	},
-	{ "west",		do_west,	POS_STANDING,	 0,  LOG_NORMAL },
-	{ "up",		do_up,		POS_STANDING,	 0,  LOG_NORMAL },
-	{ "down",		do_down,	POS_STANDING,	 0,  LOG_NORMAL },
-	{ "push",		do_push,	POS_STANDING,	 0,  LOG_NORMAL },
-	{ "drag",		do_drag,	POS_STANDING,	 0,  LOG_NORMAL },
+	{ "north",     do_north,     POS_STANDING, 0, LOG_NORMAL },
+	{ "east",      do_east,      POS_STANDING, 0, LOG_NORMAL },
+	{ "south",     do_south,     POS_STANDING, 0, LOG_NORMAL },
+	{ "west",      do_west,      POS_STANDING, 0, LOG_NORMAL },
+	{ "up",        do_up,        POS_STANDING, 0, LOG_NORMAL },
+	{ "down",      do_down,      POS_STANDING, 0, LOG_NORMAL },
+	{ "northwest", do_northwest, POS_STANDING, 0, LOG_NORMAL },
+	{ "northeast", do_northeast, POS_STANDING, 0, LOG_NORMAL },
+	{ "southwest", do_southwest, POS_STANDING, 0, LOG_NORMAL },
+	{ "southeast", do_southeast, POS_STANDING, 0, LOG_NORMAL },
+	{ "nw",        do_northwest, POS_STANDING, 0, LOG_NORMAL },
+	{ "ne",        do_northeast, POS_STANDING, 0, LOG_NORMAL },
+	{ "sw",        do_southwest, POS_STANDING, 0, LOG_NORMAL },
+	{ "se",        do_southeast, POS_STANDING, 0, LOG_NORMAL },
+	{ "push",      do_push,      POS_STANDING, 0, LOG_NORMAL },
+	{ "drag",      do_drag,      POS_STANDING, 0, LOG_NORMAL },
 
 	/*
 	 * Common other commands.

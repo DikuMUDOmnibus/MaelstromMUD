@@ -25,13 +25,17 @@
 #include "merc.h"
 
 const struct direction_type direction_table[MAX_DIR] = {
-//{ "name",  "noun",      "navigation",   "descriptive", "abbr", "blood", reverse   }
-	{ "north", "the north", "to the north", "northern", "n",    "north", DIR_SOUTH },
-	{ "east",  "the east",  "to the east",  "eastern",  "e",    "east",  DIR_WEST  },
-	{ "south", "the south", "to the south", "southern", "s",    "south", DIR_NORTH },
-	{ "west",  "the west",  "to the west",  "western",  "w",    "west",  DIR_EAST  },
-	{ "up",    "above",     "above",        "roof",     "u",    "above", DIR_DOWN  },
-	{ "down",  "below",     "below",        "ground",   "d",    "below", DIR_UP    }
+//{ "name",      "noun",          "navigation",       "descriptive",  "abbr", "blood",     reverse       }
+	{ "north",     "the north",     "to the north",     "northern",     "n",    "north",     DIR_SOUTH     },
+	{ "east",      "the east",      "to the east",      "eastern",      "e",    "east",      DIR_WEST      },
+	{ "south",     "the south",     "to the south",     "southern",     "s",    "south",     DIR_NORTH     },
+	{ "west",      "the west",      "to the west",      "western",      "w",    "west",      DIR_EAST      },
+	{ "up",        "above",         "above",            "roof",         "u",    "above",     DIR_DOWN      },
+	{ "down",      "below",         "below",            "ground",       "d",    "below",     DIR_UP        },
+	{ "northwest", "the northwest", "to the northwest", "northwestern", "nw",   "northwest", DIR_SOUTHEAST },
+	{ "northeast", "the northeast", "to the northeast", "northeastern", "ne",   "northeast", DIR_SOUTHWEST },
+	{ "southwest", "the southwest", "to the southwest", "southwestern", "sw",   "southwest", DIR_NORTHEAST },
+	{ "southeast", "the southeast", "to the southeast", "southeastern", "se",   "southeast", DIR_NORTHWEST }
 };
 
 const struct quest_data quest_table[] = {

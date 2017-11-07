@@ -254,7 +254,7 @@ void move_char( CHAR_DATA *ch, int door, bool Fall )
 	}
 
 	if ( IS_SET( to_room->room_flags, ROOM_NOFLOOR ) &&
-			!IS_AFFECTED( ch, AFF_FLYING ) && ( ( pexit = to_room->exit[5] ) != NULL )
+			!IS_AFFECTED( ch, AFF_FLYING ) && ( ( pexit = to_room->exit[DIR_DOWN] ) != NULL )
 			&& ( ( to_room = pexit->to_room ) != NULL ) )
 	{
 		act( AT_WHITE, "$n falls down to the room below.\n\r", ch,
@@ -266,7 +266,7 @@ void move_char( CHAR_DATA *ch, int door, bool Fall )
 		   char_to_room( ch, to_room );
 		   do_look( ch, "auto" );
 		   */
-		move_char( ch, 5, TRUE );
+		move_char( ch, DIR_DOWN, TRUE );
 		/*      act( AT_WHITE, "$n falls down from above.", ch, NULL, NULL, TO_ROOM );   */
 		damage( ch, ch, 5, TYPE_UNDEFINED );
 	}
@@ -333,6 +333,29 @@ void do_down( CHAR_DATA *ch, char *argument )
 	return;
 }
 
+void do_northwest( CHAR_DATA *ch, char *argument )
+{
+	move_char( ch, DIR_NORTHWEST, FALSE );
+	return;
+}
+
+void do_northeast( CHAR_DATA *ch, char *argument )
+{
+	move_char( ch, DIR_NORTHEAST, FALSE );
+	return;
+}
+
+void do_southwest( CHAR_DATA *ch, char *argument )
+{
+	move_char( ch, DIR_SOUTHWEST, FALSE );
+	return;
+}
+
+void do_southeast( CHAR_DATA *ch, char *argument )
+{
+	move_char( ch, DIR_SOUTHEAST, FALSE );
+	return;
+}
 
 
 int find_door( CHAR_DATA *ch, char *arg, bool pMsg )
@@ -1989,7 +2012,7 @@ void check_nofloor( CHAR_DATA *ch )
 	ROOM_INDEX_DATA *to_room;
 
 	if ( IS_SET( ch->in_room->room_flags, ROOM_NOFLOOR )
-			&& ( ( pexit = ch->in_room->exit[5] ) != NULL )
+			&& ( ( pexit = ch->in_room->exit[DIR_DOWN] ) != NULL )
 			&& ( ( to_room = pexit->to_room )  != NULL ) )
 		/*      && ( !IS_AFFECTED( ch, AFF_FLYING ) ) )  */
 	{
@@ -2003,7 +2026,7 @@ void check_nofloor( CHAR_DATA *ch )
 		  char_to_room( ch, to_room );
 		  do_look( ch, "auto" );
 		  */
-		move_char( ch, 5, TRUE );
+		move_char( ch, DIR_DOWN, TRUE );
 		/*    act( AT_WHITE, "$n falls down from above.", ch, NULL, NULL, TO_ROOM ); */
 	}
 	return;

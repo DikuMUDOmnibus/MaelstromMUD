@@ -407,6 +407,10 @@ const struct olc_cmd_type redit_table[] =
 	{   "up",		redit_up		},
 	{   "down",		redit_down		},
 	{   "walk",		redit_move		},
+	{   "northwest",	redit_northwest		},
+	{   "northeast",	redit_northeast		},
+	{   "southwest",	redit_southwest		},
+	{   "southeast",	redit_southeast		},
 
 	/* New reset commands. */
 	{	"mreset",	redit_mreset		},

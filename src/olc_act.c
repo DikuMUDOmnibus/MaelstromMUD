@@ -1945,62 +1945,82 @@ bool change_exit( CHAR_DATA *ch, char *argument, int door )
 	return FALSE;
 }
 
-
-
-bool redit_north( CHAR_DATA *ch, char *argument )
-{
-	if ( change_exit( ch, argument, DIR_NORTH ) )
+bool redit_north( CHAR_DATA *ch, char *argument ) {
+	if ( change_exit( ch, argument, DIR_NORTH ) ) {
 		return TRUE;
+	}
 
 	return FALSE;
 }
 
-
-
-bool redit_south( CHAR_DATA *ch, char *argument )
-{
-	if ( change_exit( ch, argument, DIR_SOUTH ) )
+bool redit_south( CHAR_DATA *ch, char *argument ) {
+	if ( change_exit( ch, argument, DIR_SOUTH ) ) {
 		return TRUE;
+	}
 
 	return FALSE;
 }
 
-
-
-bool redit_east( CHAR_DATA *ch, char *argument )
-{
-	if ( change_exit( ch, argument, DIR_EAST ) )
+bool redit_east( CHAR_DATA *ch, char *argument ) {
+	if ( change_exit( ch, argument, DIR_EAST ) ) {
 		return TRUE;
+	}
 
 	return FALSE;
 }
 
-
-
-bool redit_west( CHAR_DATA *ch, char *argument )
-{
-	if ( change_exit( ch, argument, DIR_WEST ) )
+bool redit_west( CHAR_DATA *ch, char *argument ) {
+	if ( change_exit( ch, argument, DIR_WEST ) ) {
 		return TRUE;
+	}
 
 	return FALSE;
 }
 
-
-
-bool redit_up( CHAR_DATA *ch, char *argument )
-{
-	if ( change_exit( ch, argument, DIR_UP ) )
+bool redit_up( CHAR_DATA *ch, char *argument ) {
+	if ( change_exit( ch, argument, DIR_UP ) ) {
 		return TRUE;
+	}
 
 	return FALSE;
 }
 
-
-
-bool redit_down( CHAR_DATA *ch, char *argument )
-{
-	if ( change_exit( ch, argument, DIR_DOWN ) )
+bool redit_down( CHAR_DATA *ch, char *argument ) {
+	if ( change_exit( ch, argument, DIR_DOWN ) ) {
 		return TRUE;
+	}
+
+	return FALSE;
+}
+
+bool redit_northwest( CHAR_DATA *ch, char *argument ) {
+	if ( change_exit( ch, argument, DIR_NORTHWEST ) ) {
+		return TRUE;
+	}
+
+	return FALSE;
+}
+
+bool redit_northeast( CHAR_DATA *ch, char *argument ) {
+	if ( change_exit( ch, argument, DIR_NORTHEAST ) ) {
+		return TRUE;
+	}
+
+	return FALSE;
+}
+
+bool redit_southwest( CHAR_DATA *ch, char *argument ) {
+	if ( change_exit( ch, argument, DIR_SOUTHWEST ) ) {
+		return TRUE;
+	}
+
+	return FALSE;
+}
+
+bool redit_southeast( CHAR_DATA *ch, char *argument ) {
+	if ( change_exit( ch, argument, DIR_SOUTHEAST ) ) {
+		return TRUE;
+	}
 
 	return FALSE;
 }
@@ -5458,7 +5478,7 @@ bool redit_eplist( CHAR_DATA *ch, char *argument )
 	EDIT_ROOM(ch, pRoom);
 
 	for ( dir = 0; dir < MAX_DIR; dir++ ) {
-		if ( !str_prefix( argument, direction_table[dir].name ) && (pExit = pRoom->exit[dir]) ) {
+		if ( ( !str_prefix(argument, direction_table[dir].name) || !str_cmp(argument, direction_table[dir].abbreviation) ) && (pExit = pRoom->exit[dir]) ) {
 			break;
 		}
 	}
@@ -5660,7 +5680,7 @@ bool redit_epremove( CHAR_DATA *ch, char *argument )
 	EDIT_ROOM(ch, pRoom);
 
 	for ( dir = 0; dir < MAX_DIR; dir++ ) {
-		if ( !str_prefix(arg, direction_table[dir].name) && (pExit = pRoom->exit[dir]) ) {
+		if ( ( !str_prefix(arg, direction_table[dir].name) || !str_cmp(arg, direction_table[dir].abbreviation) ) && (pExit = pRoom->exit[dir]) ) {
 			break;
 		}
 	}
@@ -5863,7 +5883,7 @@ bool tedit_create( CHAR_DATA *ch, char *argument )
 		argument = one_argument(argument, arg);
 
 		for ( dir = 0; dir < MAX_DIR; dir++ ) {
-			if ( !str_prefix(arg, direction_table[dir].name) && (pExit = pRoom->exit[dir]) ) {
+			if ( ( !str_prefix(arg, direction_table[dir].name) || !str_cmp(arg, direction_table[dir].abbreviation) ) && (pExit = pRoom->exit[dir]) ) {
 				break;
 			}
 		}
