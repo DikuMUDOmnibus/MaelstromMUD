@@ -28,21 +28,6 @@
 
 
 
-char *  const   dir_noun        [ ]             =
-{
-	"the north", "the east", "the south", "the west", "above", "below"
-};
-
-char *	const	dir_name	[ ]		=
-{
-	"north", "east", "south", "west", "up", "down"
-};
-
-const	int	rev_dir		[ ]		=
-{
-	2, 3, 0, 1, 5, 4
-};
-
 const	int	movement_loss	[ SECT_MAX ]	=
 {
 	1, 2, 2, 3, 4, 5, 4, 1, 6, 10, 6
@@ -57,7 +42,7 @@ int	find_door	args( ( CHAR_DATA *ch, char *arg, bool pMsg ) );
 OBJ_DATA *has_key	args( ( CHAR_DATA *ch, int key ) );
 
 
-void move_char( CHAR_DATA *ch, int door, bool Fall ) 
+void move_char( CHAR_DATA *ch, int door, bool Fall )
 	/* void move_char( CHAR_DATA *ch, int door ) */
 {
 	CHAR_DATA       *fch;
@@ -74,7 +59,7 @@ void move_char( CHAR_DATA *ch, int door, bool Fall )
 			send_to_char(AT_WHITE, "You cannot move.\n\r", ch);
 		return;
 	}
-	if ( door < 0 || door > 5 )
+	if ( door < 0 || door >= MAX_DIR )
 	{
 		bug( "Do_move: bad door %d.", door );
 		return;
@@ -142,7 +127,7 @@ void move_char( CHAR_DATA *ch, int door, bool Fall )
 		if ( ( in_room->sector_type == SECT_AIR
 					|| to_room->sector_type == SECT_AIR ) && ( !Fall ) )
 		{
-			if ( !IS_AFFECTED( ch, AFF_FLYING ) ) 
+			if ( !IS_AFFECTED( ch, AFF_FLYING ) )
 			{
 				send_to_char(AT_GREY, "You can't fly.\n\r", ch );
 				return;
@@ -200,23 +185,13 @@ void move_char( CHAR_DATA *ch, int door, bool Fall )
 	}
 
 	if ( !IS_AFFECTED( ch, AFF_SNEAK )
-			&& ( IS_NPC( ch ) || !IS_SET( ch->act, PLR_WIZINVIS ) ) 
+			&& ( IS_NPC( ch ) || !IS_SET( ch->act, PLR_WIZINVIS ) )
 			&& ( ch->race != RACE_HALFLING ) )
 	{
 		if ( ch->hit < MAX_HIT(ch) /2 )
 		{
 			OBJ_DATA *obj;
 			char      buf[MAX_STRING_LENGTH];
-
-			char *	const	dir_blood[ ] =
-			{
-				"north",
-				"east",
-				"south",
-				"west",
-				"above",
-				"below"
-			};
 
 			/* Blood trickles from your wounds.\n\r */
 
@@ -226,7 +201,7 @@ void move_char( CHAR_DATA *ch, int door, bool Fall )
 			obj		= create_object(get_obj_index( OBJ_VNUM_BLOOD ), 0 );
 			obj->timer	= number_range( 2, 4 );
 
-			sprintf( buf , obj->description, dir_blood[door] );
+			sprintf( buf , obj->description, direction_table[door].blood );
 			free_string( obj->description );
 			obj->description = str_dup( buf );
 
@@ -235,9 +210,9 @@ void move_char( CHAR_DATA *ch, int door, bool Fall )
 		if ( !Fall )
 		{
 			if ( ( !IS_AFFECTED( ch, AFF_FLYING ) ) )
-				act(AT_GREY, "&B$n&w leaves $T.", ch, NULL, dir_name[door], TO_ROOM );
+				act(AT_GREY, "&B$n&w leaves $T.", ch, NULL, direction_table[door].name, TO_ROOM );
 			else
-				act(AT_GREY, "&B$n&w flies $T.", ch, NULL, dir_name[door], TO_ROOM );
+				act(AT_GREY, "&B$n&w flies $T.", ch, NULL, direction_table[door].name, TO_ROOM );
 		}
 	}
 	eprog_enter_trigger( pexit, ch->in_room, ch );
@@ -251,16 +226,16 @@ void move_char( CHAR_DATA *ch, int door, bool Fall )
 			&& ( IS_NPC( ch ) || !IS_SET( ch->act, PLR_WIZINVIS ) )
 			&& ( ch->race != RACE_HALFLING ) && ( !Fall ) )
 		act(AT_GREY, "&B$n&w arrives from $T.", ch, NULL,
-				dir_noun[rev_dir[door]], TO_ROOM );
+				direction_table[direction_table[door].reverse].noun, TO_ROOM );
 
 	do_look( ch, "auto" );
 
 	if ( Fall )
-		act( AT_WHITE, "$n falls down from above.", ch, NULL, NULL, TO_ROOM ); 
+		act( AT_WHITE, "$n falls down from above.", ch, NULL, NULL, TO_ROOM );
 
-	if ( to_room->exit[rev_dir[door]] &&
-			to_room->exit[rev_dir[door]]->to_room == in_room )
-		eprog_exit_trigger( to_room->exit[rev_dir[door]], ch->in_room, ch );
+	if ( to_room->exit[direction_table[door].reverse] &&
+			to_room->exit[direction_table[door].reverse]->to_room == in_room )
+		eprog_exit_trigger( to_room->exit[direction_table[door].reverse], ch->in_room, ch );
 	else
 		rprog_enter_trigger( ch->in_room, ch );
 
@@ -280,7 +255,7 @@ void move_char( CHAR_DATA *ch, int door, bool Fall )
 
 	if ( IS_SET( to_room->room_flags, ROOM_NOFLOOR ) &&
 			!IS_AFFECTED( ch, AFF_FLYING ) && ( ( pexit = to_room->exit[5] ) != NULL )
-			&& ( ( to_room = pexit->to_room ) != NULL ) ) 
+			&& ( ( to_room = pexit->to_room ) != NULL ) )
 	{
 		act( AT_WHITE, "$n falls down to the room below.\n\r", ch,
 				NULL, NULL, TO_ROOM );
@@ -289,12 +264,12 @@ void move_char( CHAR_DATA *ch, int door, bool Fall )
 		/*
 		   char_from_room( ch );
 		   char_to_room( ch, to_room );
-		   do_look( ch, "auto" ); 
+		   do_look( ch, "auto" );
 		   */
-		move_char( ch, 5, TRUE ); 
+		move_char( ch, 5, TRUE );
 		/*      act( AT_WHITE, "$n falls down from above.", ch, NULL, NULL, TO_ROOM );   */
 		damage( ch, ch, 5, TYPE_UNDEFINED );
-	} 
+	}
 
 	if ( !IS_NPC( ch ) ) {
 		if ( !IS_SET( ch->act, PLR_WIZINVIS ) ) {
@@ -365,38 +340,33 @@ int find_door( CHAR_DATA *ch, char *arg, bool pMsg )
 	EXIT_DATA *pexit;
 	int        door;
 
-	if ( !str_prefix( arg, "north" ) ) door = 0;
-	else if ( !str_prefix( arg, "east"  ) ) door = 1;
-	else if ( !str_prefix( arg, "south" ) ) door = 2;
-	else if ( !str_prefix( arg, "west"  ) ) door = 3;
-	else if ( !str_prefix( arg, "up"    ) ) door = 4;
-	else if ( !str_prefix( arg, "down"  ) ) door = 5;
-	else
-	{
-		for ( door = 0; door <= 5; door++ )
-		{
-			if ( ( pexit = ch->in_room->exit[door] )
-					&& IS_SET( pexit->exit_info, EX_ISDOOR )
-					&& pexit->keyword
-					&& is_name( ch, arg, pexit->keyword ) )
+	if ( (door = get_direction(arg)) == -1 ) {
+		for ( door = 0; door < MAX_DIR; door++ ) {
+			if ( ( pexit = ch->in_room->exit[door] ) && IS_SET( pexit->exit_info, EX_ISDOOR ) && pexit->keyword && is_name( ch, arg, pexit->keyword ) ) {
 				return door;
+			}
 		}
-		if ( pMsg )
+
+		if ( pMsg ) {
 			act(AT_GREY, "I see no $T here.", ch, NULL, arg, TO_CHAR );
+		}
+
 		return -1;
 	}
 
-	if ( !( pexit = ch->in_room->exit[door] ) )
-	{
-		if ( pMsg )
+	if ( !( pexit = ch->in_room->exit[door] ) ) {
+		if ( pMsg ) {
 			act(AT_GREY, "I see no door $T here.", ch, NULL, arg, TO_CHAR );
+		}
+
 		return -1;
 	}
 
-	if ( !IS_SET( pexit->exit_info, EX_ISDOOR ) )
-	{
-		if ( pMsg )
+	if ( !IS_SET( pexit->exit_info, EX_ISDOOR ) ) {
+		if ( pMsg ) {
 			send_to_char(AT_GREY, "You can't do that.\n\r", ch );
+		}
+
 		return -1;
 	}
 
@@ -458,7 +428,7 @@ void do_open( CHAR_DATA *ch, char *argument )
 
 		/* open the other side */
 		if (   ( to_room   = pexit->to_room               )
-				&& ( pexit_rev = to_room->exit[rev_dir[door]] )
+				&& ( pexit_rev = to_room->exit[direction_table[door].reverse] )
 				&& pexit_rev->to_room == ch->in_room )
 		{
 			CHAR_DATA *rch;
@@ -520,7 +490,7 @@ void do_close( CHAR_DATA *ch, char *argument )
 
 		/* close the other side */
 		if (   ( to_room   = pexit->to_room               )
-				&& ( pexit_rev = to_room->exit[rev_dir[door]] )
+				&& ( pexit_rev = to_room->exit[direction_table[door].reverse] )
 				&& pexit_rev->to_room == ch->in_room )
 		{
 			CHAR_DATA *rch;
@@ -609,7 +579,7 @@ void do_lock( CHAR_DATA *ch, char *argument )
 
 		/* lock the other side */
 		if (   ( to_room   = pexit->to_room               )
-				&& ( pexit_rev = to_room->exit[rev_dir[door]] )
+				&& ( pexit_rev = to_room->exit[direction_table[door].reverse] )
 				&& pexit_rev->to_room == ch->in_room )
 		{
 			SET_BIT( pexit_rev->exit_info, EX_LOCKED );
@@ -679,7 +649,7 @@ void do_unlock( CHAR_DATA *ch, char *argument )
 
 		/* unlock the other side */
 		if (   ( to_room   = pexit->to_room               )
-				&& ( pexit_rev = to_room->exit[rev_dir[door]] )
+				&& ( pexit_rev = to_room->exit[direction_table[door].reverse] )
 				&& pexit_rev->to_room == ch->in_room )
 		{
 			REMOVE_BIT( pexit_rev->exit_info, EX_LOCKED );
@@ -771,7 +741,7 @@ void do_pick( CHAR_DATA *ch, char *argument )
 
 		/* pick the other side */
 		if (   ( to_room   = pexit->to_room               )
-				&& ( pexit_rev = to_room->exit[rev_dir[door]] )
+				&& ( pexit_rev = to_room->exit[direction_table[door].reverse] )
 				&& pexit_rev->to_room == ch->in_room )
 		{
 			REMOVE_BIT( pexit_rev->exit_info, EX_LOCKED );
@@ -885,7 +855,7 @@ void do_sleep( CHAR_DATA *ch, char *argument )
 			break;
 
 		case POS_RESTING:
-		case POS_STANDING: 
+		case POS_STANDING:
 			send_to_char(AT_CYAN, "You sleep.\n\r", ch );
 			if ( !IS_AFFECTED(ch,AFF_HIDE) )
 				act(AT_CYAN, "$n sleeps.", ch, NULL, NULL, TO_ROOM );
@@ -1025,7 +995,7 @@ void do_lowrecall( CHAR_DATA *ch, char *argument )
 	else
 		send_to_char( AT_GREY, "Huh?\n\r", ch );
 
-} 
+}
 
 void do_recall( CHAR_DATA *ch, char *argument )
 {
@@ -1155,7 +1125,7 @@ void do_train( CHAR_DATA *ch, char *argument )
 	if ( IS_NPC( ch ) )
 		return;
 
-	argument = one_argument( argument, arg );  
+	argument = one_argument( argument, arg );
 	argument = one_argument( argument, arg1 );
 
 	/*
@@ -1335,7 +1305,7 @@ void do_raise( CHAR_DATA *ch, char *argument )
 	char      *pOutput;
 	char       buf [ MAX_STRING_LENGTH ];
 	int       *pAbility = NULL;
-	int        bone_flag = 0; 
+	int        bone_flag = 0;
 
 	if ( IS_NPC( ch ) )
 		return;
@@ -1724,7 +1694,7 @@ void do_bash ( CHAR_DATA *ch, char *argument )
 
 			/* Bash through the other side */
 			if (   ( to_room   = pexit->to_room               )
-					&& ( pexit_rev = to_room->exit[rev_dir[door]] )
+					&& ( pexit_rev = to_room->exit[direction_table[door].reverse] )
 					&& pexit_rev->to_room == ch->in_room        )
 			{
 				CHAR_DATA *rch;
@@ -1804,11 +1774,11 @@ void do_push(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (    ( victim->level >= LEVEL_IMMORTAL )                        
-			|| (    IS_NPC( victim )                                      
-				&& (    ( victim->pIndexData->pShop )                  
+	if (    ( victim->level >= LEVEL_IMMORTAL )
+			|| (    IS_NPC( victim )
+				&& (    ( victim->pIndexData->pShop )
 					|| IS_SET( ch->in_room->room_flags, ROOM_SMITHY )
-					|| IS_SET( ch->in_room->room_flags, ROOM_BANK )   
+					|| IS_SET( ch->in_room->room_flags, ROOM_BANK )
 					|| IS_SET( victim->act, ACT_NOPUSH )
 				   )
 			   )
@@ -1839,13 +1809,10 @@ void do_push(CHAR_DATA *ch, char *argument)
 		send_to_char(AT_BLUE, "This room is safe from the likes of you.\n\r", ch);
 		return;
 		}*/
-	if ( !str_cmp( arg2, "n" ) || !str_cmp( arg2, "north" ) ) door = 0;
-	else if ( !str_cmp( arg2, "e" ) || !str_cmp( arg2, "east"  ) ) door = 1;
-	else if ( !str_cmp( arg2, "s" ) || !str_cmp( arg2, "south" ) ) door = 2;
-	else if ( !str_cmp( arg2, "w" ) || !str_cmp( arg2, "west"  ) ) door = 3;
-	else if ( !str_cmp( arg2, "u" ) || !str_cmp( arg2, "up"    ) ) door = 4;
-	else if ( !str_cmp( arg2, "d" ) || !str_cmp( arg2, "down"  ) ) door = 5;
-	else door = dice(1,6) - 1;
+
+	if ( (door = get_direction(arg2)) == -1 ) {
+		door = number_door();
+	}
 
 	if(ch == victim)
 	{
@@ -1873,9 +1840,9 @@ void do_push(CHAR_DATA *ch, char *argument)
 		act(AT_BLUE, "$n slams into you, but you bounce off a force field.", ch, NULL, victim, TO_VICT );
 		return;
 	}
-	sprintf(buf1, "You slam into $N, pushing $M %s.", dir_name[door]);
-	sprintf(buf2, "$n slams into $N, pushing $M %s.", dir_name[door]);
-	sprintf(buf3, "$n slams into you, pushing you %s.", dir_name[door]);
+	sprintf(buf1, "You slam into $N, pushing $M %s.", direction_table[door].name);
+	sprintf(buf2, "$n slams into $N, pushing $M %s.", direction_table[door].name);
+	sprintf(buf3, "$n slams into you, pushing you %s.", direction_table[door].name);
 	act(AT_BLUE, buf2, ch, NULL, victim, TO_NOTVICT );
 	act(AT_BLUE, buf1, ch, NULL, victim, TO_CHAR );
 	act(AT_BLUE, buf3, ch, NULL, victim, TO_VICT );
@@ -1885,7 +1852,7 @@ void do_push(CHAR_DATA *ch, char *argument)
 	char_to_room(victim, pexit->to_room);
 
 	act(AT_BLUE, "$n comes flying into the room.", victim, NULL, NULL, TO_ROOM);
-	if ( (pexit = pexit->to_room->exit[rev_dir[door]]) &&
+	if ( (pexit = pexit->to_room->exit[direction_table[door].reverse]) &&
 			pexit->to_room == from_room )
 		eprog_exit_trigger( pexit, victim->in_room, victim );
 	else
@@ -1954,13 +1921,10 @@ void do_drag(CHAR_DATA *ch, char *argument)
 		send_to_char(AT_BLUE, "This room is safe from the likes of you.\n\r", ch);
 		return;
 		}*/
-	if ( !str_cmp( arg2, "n" ) || !str_cmp( arg2, "north" ) ) door = 0;
-	else if ( !str_cmp( arg2, "e" ) || !str_cmp( arg2, "east"  ) ) door = 1;
-	else if ( !str_cmp( arg2, "s" ) || !str_cmp( arg2, "south" ) ) door = 2;
-	else if ( !str_cmp( arg2, "w" ) || !str_cmp( arg2, "west"  ) ) door = 3;
-	else if ( !str_cmp( arg2, "u" ) || !str_cmp( arg2, "up"    ) ) door = 4;
-	else if ( !str_cmp( arg2, "d" ) || !str_cmp( arg2, "down"  ) ) door = 5;
-	else door = dice(1,6) - 1;
+
+	if ( (door = get_direction(arg2)) == -1 ) {
+		door = number_door();
+	}
 
 	if(ch == victim)
 	{
@@ -1988,9 +1952,9 @@ void do_drag(CHAR_DATA *ch, char *argument)
 		act(AT_BLUE, "$n attempts to drag you into the smithy, but a force field stops $m.", ch, NULL, victim, TO_VICT );
 		return;
 	}
-	sprintf(buf1, "You get ahold of $N, dragging $M %s.", dir_name[door]);
-	sprintf(buf2, "$n gets ahold of $N, dragging $M %s.", dir_name[door]);
-	sprintf(buf3, "$n gets ahold of you, dragging you %s.", dir_name[door]);
+	sprintf(buf1, "You get ahold of $N, dragging $M %s.", direction_table[door].name);
+	sprintf(buf2, "$n gets ahold of $N, dragging $M %s.", direction_table[door].name);
+	sprintf(buf3, "$n gets ahold of you, dragging you %s.", direction_table[door].name);
 	act(AT_BLUE, buf2, ch, NULL, victim, TO_NOTVICT);
 	act(AT_BLUE, buf1, ch, NULL, victim, TO_CHAR);
 	act(AT_BLUE, buf3, ch, NULL, victim, TO_VICT);
@@ -2003,7 +1967,7 @@ void do_drag(CHAR_DATA *ch, char *argument)
 	act(AT_BLUE, "$N arrives, dragging $n with $M.", victim, NULL, ch, TO_ROOM);
 	char_from_room(ch);
 	char_to_room(ch, victim->in_room);
-	if ( (pexit = pexit->to_room->exit[rev_dir[door]]) &&
+	if ( (pexit = pexit->to_room->exit[direction_table[door].reverse]) &&
 			pexit->to_room == from_room )
 	{
 		eprog_exit_trigger( pexit, ch->in_room, ch );
@@ -2024,7 +1988,7 @@ void check_nofloor( CHAR_DATA *ch )
 	EXIT_DATA *pexit;
 	ROOM_INDEX_DATA *to_room;
 
-	if ( IS_SET( ch->in_room->room_flags, ROOM_NOFLOOR ) 
+	if ( IS_SET( ch->in_room->room_flags, ROOM_NOFLOOR )
 			&& ( ( pexit = ch->in_room->exit[5] ) != NULL )
 			&& ( ( to_room = pexit->to_room )  != NULL ) )
 		/*      && ( !IS_AFFECTED( ch, AFF_FLYING ) ) )  */
@@ -2039,7 +2003,7 @@ void check_nofloor( CHAR_DATA *ch )
 		  char_to_room( ch, to_room );
 		  do_look( ch, "auto" );
 		  */
-		move_char( ch, 5, TRUE ); 
+		move_char( ch, 5, TRUE );
 		/*    act( AT_WHITE, "$n falls down from above.", ch, NULL, NULL, TO_ROOM ); */
 	}
 	return;
@@ -2129,13 +2093,6 @@ void do_shadow_walk( CHAR_DATA *ch, char *argument )
 
 void do_scent( CHAR_DATA *ch, char *argument )
 {
-	static const char *dir_table [ ] =
-	{ "to the north",
-		"to the east",
-		"to the south",
-		"to the west",
-		"above",
-		"below" };
 	static const char *dis_table [ ] =
 	{ "close by",
 		"not far off" };
@@ -2152,7 +2109,7 @@ void do_scent( CHAR_DATA *ch, char *argument )
 		return;
 	if ( !can_use_skpell( ch, gsn_scent ) )
 	{
-		send_to_char( C_DEFAULT, "Your sense of smell is not keen enough.\n\r", 
+		send_to_char( C_DEFAULT, "Your sense of smell is not keen enough.\n\r",
 				ch );
 		return;
 	}
@@ -2163,9 +2120,9 @@ void do_scent( CHAR_DATA *ch, char *argument )
 		return;
 	}
 	in_room = ch->in_room;
-	for ( dir = 0; dir <= 5; dir++ )
+	for ( dir = 0; dir < MAX_DIR; dir++ )
 	{
-		if ( !( pexit = in_room->exit[dir] ) 
+		if ( !( pexit = in_room->exit[dir] )
 				|| !( next_room = pexit->to_room ) )
 			continue;
 		for ( dis = 0; dis <= 1; dis++ )
@@ -2183,13 +2140,13 @@ void do_scent( CHAR_DATA *ch, char *argument )
 					send_to_char( C_DEFAULT, "You pick up the scent of:\n\r", ch );
 					found = TRUE;
 				}
-				dir_message = dir_table[dir];
+				dir_message = direction_table[dir].navigation;
 				dis_message = dis_table[dis];
 				sprintf( buf, "%s &w%s %s.\n\r", capitalize (PERS( sch, ch )),
 						dis_message, dir_message );
 				send_to_char( C_DEFAULT, buf, ch );
 			}
-			if ( !( pexit = next_room->exit[dir] ) 
+			if ( !( pexit = next_room->exit[dir] )
 					|| !( next_room = pexit->to_room ) )
 				break;
 		}
@@ -2208,13 +2165,10 @@ void do_retreat( CHAR_DATA *ch, char *argument )
 	OBJ_DATA *smokebomb;
 	ROOM_INDEX_DATA *in_room;
 	EXIT_DATA *pexit;
-	static const char *dir_verb [ ] =
-	{ "north", "east", "south",
-		"west", "up", "down" };
 	int dir;
 	const char *sdir;
 	char buf[ MAX_INPUT_LENGTH ];
-	if ( !can_use_skpell( ch, gsn_retreat ) 
+	if ( !can_use_skpell( ch, gsn_retreat )
 			|| IS_NPC( ch ) )
 	{
 		send_to_char( AT_GREY, "Huh?\n\r", ch );
@@ -2253,24 +2207,17 @@ void do_retreat( CHAR_DATA *ch, char *argument )
 			NULL, TO_ROOM );
 	if ( number_percent( ) < ch->pcdata->learned[gsn_retreat] )
 	{
-		update_skpell( ch, gsn_retreat ); 
+		update_skpell( ch, gsn_retreat );
 		extract_obj( smokebomb );
-		switch( UPPER( argument[0] ) )
-		{
-			case 'N': dir = 0; break;
-			case 'S': dir = 2; break;
-			case 'E': dir = 1; break;
-			case 'W': dir = 3; break;
-			case 'U': dir = 4; break;
-			case 'D': dir = 5; break;
-			default: dir  = number_range( 0, 5 );
-		};
-		sdir = dir_verb[dir];
+		if ( (dir = get_direction(argument)) == -1 ) {
+			dir  = number_door();
+		}
+		sdir = direction_table[dir].name;
 		in_room = ch->in_room;
-		if ( !(pexit=in_room->exit[dir] ) 
+		if ( !(pexit=in_room->exit[dir] )
 				|| !pexit->to_room )
 		{
-			send_to_char( AT_GREY, "Wham!  Ouch! Retreated straight into a wall!\n\r", ch );   
+			send_to_char( AT_GREY, "Wham!  Ouch! Retreated straight into a wall!\n\r", ch );
 			STUN_CHAR( ch, 1, STUN_TOTAL );
 			ch->position = POS_STUNNED;
 			return;
@@ -2290,8 +2237,8 @@ void do_retreat( CHAR_DATA *ch, char *argument )
 			{
 				sprintf( buf, "You retreat %s before the smoke clears.\n\r", sdir );
 				send_to_char( AT_DGREY, buf, ch );
-				act(AT_DGREY, 
-						"Smoke rises from the bomb... when it clears, $n is gone!", 
+				act(AT_DGREY,
+						"Smoke rises from the bomb... when it clears, $n is gone!",
 						ch, NULL, NULL, TO_ROOM );
 				move_char( ch, dir, FALSE );
 				return;
@@ -2307,4 +2254,4 @@ void do_retreat( CHAR_DATA *ch, char *argument )
 		WAIT_STATE( ch, skill_table[gsn_retreat].beats );
 		return;
 	}
-}    
+}

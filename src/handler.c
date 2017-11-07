@@ -238,13 +238,39 @@ int can_carry_w( CHAR_DATA *ch ) {
 	return max_weight;
 }
 
+/*
+ * See if a string is a known direction
+ */
+bool is_direction( char *str ) {
+	int dir = 0;
 
+	for ( dir = 0; dir < MAX_DIR; dir++ ) {
+		if ( !str_prefix(str, direction_table[dir].name) || !str_cmp(str, direction_table[dir].abbreviation) ) {
+			return TRUE;
+		}
+	}
+
+	return FALSE;
+}
+
+/*
+ * Actually get the direction based on the search string
+ */
+int get_direction( char *str ) {
+	int dir = 0;
+
+	for ( dir = 0; dir < MAX_DIR; dir++ ) {
+		if ( !str_prefix(str, direction_table[dir].name) || !str_cmp(str, direction_table[dir].abbreviation) ) {
+			return dir;
+		}
+	}
+
+	return -1;
+}
 
 /*
  * See if a string is one of the names of an object.
- * New is_name by Alander.
  */
-
 bool is_name ( CHAR_DATA *ch, char *str, char *namelist )
 {
 	char name[MAX_INPUT_LENGTH], part[MAX_INPUT_LENGTH];
@@ -433,7 +459,7 @@ void affect_modify( CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd )
 								  {
 									  affect_strip(ch, sn);
 									  af.type     = sn;
-									  af.level     = ch->level;          
+									  af.level     = ch->level;
 									  af.duration  = mod;
 									  af.location  = APPLY_NONE;
 									  af.modifier  = 0;
@@ -483,7 +509,7 @@ void affect_modify( CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd )
 								  {
 									  if(IS_AFFECTED(ch, AFF_HIDE))
 										  REMOVE_BIT(ch->affected_by, AFF_HIDE);
-									  SET_BIT(ch->affected_by, AFF_HIDE); 
+									  SET_BIT(ch->affected_by, AFF_HIDE);
 									  act(AT_BLUE, "$n blends into the shadows.\n\r", ch, NULL, NULL, TO_ROOM);
 									  send_to_char(AT_BLUE, "You blend into the shadows.\n\r", ch);
 								  }
@@ -777,10 +803,10 @@ void affect_remove( CHAR_DATA *ch, AFFECT_DATA *paf )
 		return;
 	}
 
-	if ( paf->bitvector == AFF_FLYING ) 
+	if ( paf->bitvector == AFF_FLYING )
 	{
 		affect_modify( ch, paf, FALSE );
-		check_nofloor( ch ); 
+		check_nofloor( ch );
 	}
 	else
 		affect_modify( ch, paf, FALSE );
@@ -1633,7 +1659,7 @@ CHAR_DATA *get_pc_world( CHAR_DATA *ch, char *argument )
 	for ( d = descriptor_list; d; d = d->next )
 	{
 		if ( d->connected == CON_PLAYING
-				&& is_name( ch, argument, d->character->name ) 
+				&& is_name( ch, argument, d->character->name )
 				&& can_see( ch, d->character ) )
 			return d->character;
 	}
@@ -1841,20 +1867,20 @@ OBJ_DATA *create_money( MONEY_DATA *amount )
 	}
 	if ( ( amount->gold == 1 ) && ( amount->silver <= 0 ) && ( amount->copper <= 0 ) )
 		obj = create_object( get_obj_index( OBJ_VNUM_MONEY_ONE  ), 0 );
-	else 
+	else
 		if ( ( amount->silver == 1 ) && ( amount->gold <= 0 ) && ( amount->copper <= 0 ) )
 			obj = create_object( get_obj_index( OBJ_VNUM_MONEY_ONE  ), 0 );
 		else
 			if ( ( amount->copper == 1 ) && ( amount->gold <= 0 ) && ( amount->silver <= 0 ) )
 				obj = create_object( get_obj_index( OBJ_VNUM_MONEY_ONE  ), 0 );
 			else
-				obj = create_object( get_obj_index( OBJ_VNUM_MONEY_SOME ), 0 );    
+				obj = create_object( get_obj_index( OBJ_VNUM_MONEY_SOME ), 0 );
 
 	obj->value[0]               = amount->gold;
 	obj->value[1]		= amount->silver;
 	obj->value[2]		= amount->copper;
 
-	return obj;  
+	return obj;
 
 }
 
@@ -1913,7 +1939,7 @@ bool room_is_dark( ROOM_INDEX_DATA *pRoomIndex )
 	if ( pRoomIndex == NULL )
 	{
 		bug( "pRoomIndex equal to NULL", 0 );
-		return TRUE; 
+		return TRUE;
 	}
 
 	if ( pRoomIndex->light > 0 )
@@ -1992,7 +2018,7 @@ bool can_see( CHAR_DATA *ch, CHAR_DATA *victim )
 
 	if ( !IS_NPC( victim )
 			&& IS_SET( victim->act, PLR_CLOAKED )
-			&& get_trust( ch ) < victim->cloaked 
+			&& get_trust( ch ) < victim->cloaked
 			&& ( ch->in_room->vnum != victim->in_room->vnum )
 	   )
 		return FALSE;
@@ -2002,11 +2028,11 @@ bool can_see( CHAR_DATA *ch, CHAR_DATA *victim )
 	if ( is_raffected( ch->in_room, gsn_globedark ) )
 		return FALSE;
 
-	if ( IS_AFFECTED( ch, AFF_BLIND ) 
+	if ( IS_AFFECTED( ch, AFF_BLIND )
 			&& !IS_AFFECTED2( ch, AFF_TRUESIGHT ) )
 		return FALSE;
 
-	if ( room_is_dark( ch->in_room ) 
+	if ( room_is_dark( ch->in_room )
 			&& !IS_AFFECTED( ch, AFF_INFRARED )
 			&& !IS_AFFECTED2( ch, AFF_TRUESIGHT )
 			&& ( ch->race != RACE_ELF   )
@@ -2020,7 +2046,7 @@ bool can_see( CHAR_DATA *ch, CHAR_DATA *victim )
 			&& (!IS_AFFECTED2(ch, AFF_TRUESIGHT )
 				|| (IS_NPC(ch)
 					&& ch->level < 50) ))
-		return FALSE; 
+		return FALSE;
 
 
 	if ( IS_AFFECTED( victim, AFF_INVISIBLE )
@@ -2053,7 +2079,7 @@ bool can_see_obj( CHAR_DATA *ch, OBJ_DATA *obj )
 	if ( !IS_NPC( ch ) && IS_SET( ch->act, PLR_HOLYLIGHT ) )
 		return TRUE;
 
-	if ( IS_AFFECTED( ch, AFF_BLIND ) 
+	if ( IS_AFFECTED( ch, AFF_BLIND )
 			&& !IS_AFFECTED2( ch, AFF_TRUESIGHT ) )
 		return FALSE;
 	if ( is_raffected( ch->in_room, gsn_globedark )  )
@@ -2064,7 +2090,7 @@ bool can_see_obj( CHAR_DATA *ch, OBJ_DATA *obj )
 	if ( obj->item_type == ITEM_LIGHT && obj->value[2] != 0 )
 		return TRUE;
 
-	if ( room_is_dark( ch->in_room ) 
+	if ( room_is_dark( ch->in_room )
 			&& !IS_AFFECTED( ch, AFF_INFRARED )
 			&& !IS_AFFECTED2( ch, AFF_TRUESIGHT )
 			&& ( ch->race != RACE_ELF )
@@ -2204,7 +2230,7 @@ char *affect_loc_name( int location )
 		case APPLY_HASTE:		return "'haste'";
 		case APPLY_FIRESHIELD:    return "'fireshield'";
 		case APPLY_SHOCKSHIELD:   return "'shockshield'";
-		case APPLY_ICESHIELD:     return "'iceshield'";  
+		case APPLY_ICESHIELD:     return "'iceshield'";
 		case APPLY_CHAOS:         return "'chaos field'";
 		case APPLY_SCRY:          return "'scry'";
 		case APPLY_BLESS:		return "'bless'";
@@ -2329,7 +2355,7 @@ char *anticlass_bit_name( int anticlass )
 char *antirace_bit_name( int antirace )
 {
 	static char buf [ 512 ];
-	buf[0] = '\0';  
+	buf[0] = '\0';
 	if ( antirace & ITEM_ANTI_HUMAN     ) strcat( buf, " anti-human"    );
 	if ( antirace & ITEM_ANTI_ELF       ) strcat( buf, " anti-elf"      );
 	if ( antirace & ITEM_ANTI_DWARF     ) strcat( buf, " anti-dwarf"    );
@@ -2344,7 +2370,7 @@ char *act_bit_name( int act )
 	static char buf [ 512 ];
 
 	buf[0] = '\0';
-	if ( act & 1 ) 
+	if ( act & 1 )
 	{
 		strcat( buf, " npc" );
 		if ( act & ACT_PROTOTYPE )      strcat( buf, " prototype" );
@@ -2471,9 +2497,9 @@ char *imm_bit_name(int imm_flags)
 	if (imm_flags & VULN_IRON		) strcat(buf, " iron");
 	if (imm_flags & VULN_WOOD		) strcat(buf, " wood");
 	if (imm_flags & VULN_SILVER		) strcat(buf, " silver");
-	if (imm_flags & IMM_NERVE		) strcat(buf, " nerve");  
+	if (imm_flags & IMM_NERVE		) strcat(buf, " nerve");
 
-	return ( buf[0] != '\0' ) ? buf+1 : "none" ; 
+	return ( buf[0] != '\0' ) ? buf+1 : "none" ;
 }
 
 /* for immunity, vulnerabiltiy, and resistant
@@ -2501,7 +2527,7 @@ int check_immune(CHAR_DATA *ch, int dam_type)
 			def = IS_VULNERABLE;
 	}
 	else /* magical attack */
-	{	
+	{
 		if (IS_SET(ch->imm_flags,IMM_MAGIC))
 			def = IS_IMMUNE;
 		else if (IS_SET(ch->res_flags,RES_MAGIC))
@@ -2554,8 +2580,8 @@ int check_immune(CHAR_DATA *ch, int dam_type)
 }
 /* END */
 
-/* 
- * Returns a flag for wiznet 
+/*
+ * Returns a flag for wiznet
  */
 long wiznet_lookup (const char *name)
 {
@@ -2635,13 +2661,13 @@ bool is_colcode( char code )
 			|| code == 'O'
 			|| code == 'c'
 			|| code == 'C'
-			|| code == 'z' 
+			|| code == 'z'
 			|| code == '.' )
 		return TRUE;
 	return FALSE;
 }
 
-int xp_tolvl( CHAR_DATA *ch ) 
+int xp_tolvl( CHAR_DATA *ch )
 {
 	int xp_tolvl;
 	int level = ch->level + 1;
@@ -2739,4 +2765,3 @@ OBJ_INDEX_DATA *rand_figment_obj( CHAR_DATA *ch )
 
 	return figmentobj;
 }
-

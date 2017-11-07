@@ -125,7 +125,7 @@ void do_mpstat( CHAR_DATA *ch, char *argument )
 	send_to_char(C_DEFAULT, buf, ch );
 	sprintf( buf, "Gold: %d   Silver: %d   Copper: %d.\n\r",
 			victim->money.gold, victim->money.silver, victim->money.copper );
-	send_to_char(C_DEFAULT, buf, ch ); 
+	send_to_char(C_DEFAULT, buf, ch );
 	for ( mprg = victim->pIndexData->mobprogs; mprg != NULL;
 			mprg = mprg->next )
 	{
@@ -168,7 +168,7 @@ void do_mpasound( CHAR_DATA *ch, char *argument )
 	}
 
 	was_in_room = ch->in_room;
-	for ( door = 0; door <= 5; door++ )
+	for ( door = 0; door < MAX_DIR; door++ )
 	{
 		EXIT_DATA       *pexit;
 
@@ -245,7 +245,7 @@ void do_mpkill( CHAR_DATA *ch, char *argument )
 	}
 
 	if ( ch->position == POS_FIGHTING )
-	{	
+	{
 		/*bug( "MpKill - Already fighting: vnum %d",
 		  ch->pIndexData->vnum );*/
 		sprintf( log_buf, "MpKill - Already fighting: vnum %d name %s short %s.",
@@ -260,7 +260,7 @@ void do_mpkill( CHAR_DATA *ch, char *argument )
 
 
 /* lets the mobile destroy an object in its inventory
-   it can also destroy a worn object and it can destroy 
+   it can also destroy a worn object and it can destroy
    items using all.xxxxx or just plain all of them */
 
 void do_mpjunk( CHAR_DATA *ch, char *argument )
@@ -298,7 +298,7 @@ void do_mpjunk( CHAR_DATA *ch, char *argument )
 			return;
 		}
 		if ( ( obj = get_obj_carry( ch, arg ) ) == NULL )
-			return; 
+			return;
 		extract_obj( obj );
 	}
 	else
@@ -310,7 +310,7 @@ void do_mpjunk( CHAR_DATA *ch, char *argument )
 				if ( obj->wear_loc != WEAR_NONE)
 					unequip_char( ch, obj );
 				extract_obj( obj );
-			} 
+			}
 		}
 
 	return;
@@ -736,7 +736,7 @@ void do_mpat( CHAR_DATA *ch, char *argument )
 }
 
 /* lets the mobile transfer people.  the all argument transfers
-   everyone in the current room to the specified location 
+   everyone in the current room to the specified location
 CORRECTION: ALL transfers all in game */
 
 void do_mptransfer( CHAR_DATA *ch, char *argument )
@@ -792,7 +792,7 @@ void do_mptransfer( CHAR_DATA *ch, char *argument )
 			if ( d->connected == CON_PLAYING
 					&&   d->character != ch
 					&&   d->character->in_room != NULL
-					&&   can_see( ch, d->character ) 
+					&&   can_see( ch, d->character )
 					&&   d->character->in_room == ch->in_room )
 			{
 				char buf[MAX_STRING_LENGTH];
@@ -902,7 +902,7 @@ void do_mpforce( CHAR_DATA *ch, char *argument )
 			vch_next = vch->next;
 
 			if ( vch->in_room == ch->in_room
-					&& get_trust( vch ) < get_trust( ch ) 
+					&& get_trust( vch ) < get_trust( ch )
 					&& can_see( ch, vch ) )
 			{
 				interpret( vch, argument );
@@ -915,7 +915,7 @@ void do_mpforce( CHAR_DATA *ch, char *argument )
 
 		if ( ( victim = get_char_room( ch, arg ) ) == NULL )
 		{
-			/*bug( "Mpforce - No such victim: vnum %d.", 
+			/*bug( "Mpforce - No such victim: vnum %d.",
 			  ch->pIndexData->vnum );*/
 			sprintf( log_buf, "Mpforce - No such victim: vnum %d name %s short %s.",
 					ch->pIndexData->vnum, ch->name, ch->short_descr );
@@ -984,4 +984,3 @@ void do_mpteleport( CHAR_DATA *ch, char *argument )
 	char_to_room(ch, to_room);
 	return;
 }
-

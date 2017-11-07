@@ -1579,7 +1579,7 @@ void load_resets( FILE *fp )
 				break;
 
 			case 'R':
-				if ( pReset->arg2 < 0 || pReset->arg2 > 6 )	/* Last Door. */
+				if ( pReset->arg2 < 0 || pReset->arg2 >= MAX_DIR )	/* Last Door. */
 				{
 					bug( "Load_resets: 'R': bad exit %d.", pReset->arg2 );
 					exit( 1 );
@@ -1647,7 +1647,7 @@ void load_rooms( FILE *fp )
 		pRoomIndex->room_flags		= fread_number( fp );
 		pRoomIndex->sector_type		= fread_number( fp );
 		pRoomIndex->light		= 0;
-		for ( door = 0; door <= 5; door++ )
+		for ( door = 0; door < MAX_DIR; door++ )
 			pRoomIndex->exit[door] = NULL;
 
 		for ( ; ; )
@@ -1668,7 +1668,7 @@ void load_rooms( FILE *fp )
 				char       tLetter;
 
 				door = fread_number( fp );
-				if ( door < 0 || door > 5 )
+				if ( door < 0 || door >= MAX_DIR )
 				{
 					bug( "Fread_rooms: vnum %d has bad door number.", vnum );
 					exit( 1 );
@@ -1804,7 +1804,7 @@ void new_load_rooms( FILE *fp )
 		pRoomIndex->light		= 0;
 		pRoomIndex->rd                  = 0;
 
-		for ( door = 0; door <= 5; door++ )
+		for ( door = 0; door < MAX_DIR; door++ )
 			pRoomIndex->exit[door] = NULL;
 
 		for ( ; ; )
@@ -1845,7 +1845,7 @@ void new_load_rooms( FILE *fp )
 				char       tLetter;
 
 				door = fread_number( fp );
-				if ( door < 0 || door > 5 )
+				if ( door < 0 || door >= MAX_DIR )
 				{
 					bug( "Fread_rooms: vnum %d has bad door number.", vnum );
 					exit( 1 );
@@ -2275,8 +2275,6 @@ void fix_exits( void )
 	EXIT_DATA       *pexit_rev;
 	ROOM_INDEX_DATA *pRoomIndex;
 	ROOM_INDEX_DATA *to_room;
-	/*                 char             buf     [ MAX_STRING_LENGTH ];*/
-	extern const int              rev_dir [ ];
 	int              iHash;
 	int              door;
 
@@ -2289,7 +2287,7 @@ void fix_exits( void )
 			bool fexit;
 
 			fexit = FALSE;
-			for ( door = 0; door <= 5; door++ )
+			for ( door = 0; door < MAX_DIR; door++ )
 			{
 				if ( ( pexit = pRoomIndex->exit[door] ) )
 				{
@@ -2312,17 +2310,17 @@ void fix_exits( void )
 				pRoomIndex;
 				pRoomIndex  = pRoomIndex->next )
 		{
-			for ( door = 0; door <= 5; door++ )
+			for ( door = 0; door < MAX_DIR; door++ )
 			{
 				if (   ( pexit     = pRoomIndex->exit[door]       )
 						&& ( to_room   = pexit->to_room               )
-						&& ( pexit_rev = to_room->exit[rev_dir[door]] )
+						&& ( pexit_rev = to_room->exit[direction_table[door].reverse] )
 						&&   pexit_rev->to_room != pRoomIndex )
 				{
 					/* commented out... too many
 					   sprintf( buf, "Fix_exits: %d:%d -> %d:%d -> %d.",
 					   pRoomIndex->vnum, door,
-					   to_room->vnum,    rev_dir[door],
+					   to_room->vnum,    direction_table[door].reverse,
 					   ( !pexit_rev->to_room ) ? 0
 					   :  pexit_rev->to_room->vnum );
 					   bug( buf, 0 );
@@ -2419,7 +2417,7 @@ void reset_room( ROOM_INDEX_DATA *pRoom )
 	pMob	= NULL;
 	last	= FALSE;
 
-	for ( iExit = 0;  iExit <= DIR_MAX;  iExit++ )
+	for ( iExit = 0;  iExit < MAX_DIR;  iExit++ )
 	{
 		EXIT_DATA *pExit;
 		if ( ( pExit = pRoom->exit[iExit] )
@@ -2427,7 +2425,7 @@ void reset_room( ROOM_INDEX_DATA *pRoom )
 		{
 			pExit->exit_info = pExit->rs_flags;
 			if ( ( pExit->to_room != NULL )
-					&& ( ( pExit = pExit->to_room->exit[rev_dir[iExit]] ) ) )
+					&& ( ( pExit = pExit->to_room->exit[direction_table[iExit].reverse] ) ) )
 			{
 				/* nail the other side */
 				pExit->exit_info = pExit->rs_flags;
@@ -3821,7 +3819,7 @@ int number_percent( void )
  */
 int number_door( void )
 {
-	return number_mm() % 6;
+	return dice(1, MAX_DIR) - 1;
 }
 
 
@@ -4399,7 +4397,7 @@ void wind_update( AREA_DATA *pArea )
 		if ( ( nwd != pArea->winddir ) && ( nws != pArea->windstr ) )
 		{
 		sprintf( buf, "The wind shifts directions and begins blowing %s from the %s.\n\r",
-		wind_str( nws ), dir_name[rev_dir[nwd]] );
+		wind_str( nws ), direction_table[direction_table[nwd].reverse].name );
 		send_to_area( pArea, buf );
 		pArea->winddir = nwd;
 		pArea->windstr = nws;
@@ -4409,7 +4407,7 @@ void wind_update( AREA_DATA *pArea )
 		if ( ( nwd != pArea->winddir ) && ( nws == pArea->windstr ) )
 		{
 		sprintf( buf, "The wind begins blowing from the %s at the same strength as before.\n\r",
-		dir_name[rev_dir[nwd]] );
+		direction_table[direction_table[nwd].reverse].name );
 		send_to_area( pArea, buf );
 	pArea->winddir = nwd;
 	return;
@@ -4418,7 +4416,7 @@ void wind_update( AREA_DATA *pArea )
 if ( ( nwd == pArea->winddir )  && ( nws != pArea->windstr ) )
 {
 	sprintf( buf, "The wind begins blowing %s, still from the %s.\n\r",
-			wind_str( nws ), dir_name[rev_dir[nwd]] );
+			wind_str( nws ), direction_table[direction_table[nwd].reverse].name );
 	send_to_area( pArea, buf );
 	pArea->windstr = nws;
 	return;

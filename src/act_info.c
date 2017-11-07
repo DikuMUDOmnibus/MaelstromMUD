@@ -1074,14 +1074,9 @@ void do_look( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-	if ( !str_prefix( arg1, "north" ) ) door = 0;
-	else if ( !str_prefix( arg1, "east"  ) ) door = 1;
-	else if ( !str_prefix( arg1, "south" ) ) door = 2;
-	else if ( !str_prefix( arg1, "west"  ) ) door = 3;
-	else if ( !str_prefix( arg1, "up"    ) ) door = 4;
-	else if ( !str_prefix( arg1, "down"  ) ) door = 5;
-	else if ( !str_prefix( arg1, "auction" ) )
-	{
+  if ( is_direction(arg1) ) {
+		door = get_direction(arg1);
+  }  else if ( !str_prefix( arg1, "auction" ) ) {
 		char buf[MAX_STRING_LENGTH];
 
 		if ( !auc_obj )
@@ -1098,9 +1093,7 @@ void do_look( CHAR_DATA *ch, char *argument )
 				money_string( &auc_cost ) );
 		send_to_char( AT_WHITE, buf, ch );
 		return;
-	}
-	else if ( !str_prefix( arg1, "arena" ) && !IS_ARENA(ch) )
-	{
+	} else if ( !str_prefix( arg1, "arena" ) && !IS_ARENA(ch) ) {
 		char buf[MAX_STRING_LENGTH];
 
 		if ( !arena.cch && !(arena.fch || arena.sch) )
@@ -1150,9 +1143,7 @@ void do_look( CHAR_DATA *ch, char *argument )
 		}
 		send_to_char(AT_WHITE, buf, ch);
 		return;
-	}
-	else
-	{
+	} else {
 		send_to_char(AT_GREY, "You do not see that here.\n\r", ch );
 		return;
 	}
@@ -1177,7 +1168,7 @@ void do_look( CHAR_DATA *ch, char *argument )
 			send_to_char( AT_BLUE, "You failed.\n\r", ch );
 			return;
 		}
-		act( AT_BLUE, "You scry to the $T.", ch, NULL, dir_name[door], TO_CHAR );
+		act( AT_BLUE, "You scry to the $T.", ch, NULL, direction_table[door].name, TO_CHAR );
 		/*	send_to_char(AT_WHITE, pexit->to_room->name, ch );
 			send_to_char(AT_WHITE, "\n\r", ch );
 
@@ -1296,7 +1287,6 @@ void do_examine( CHAR_DATA *ch, char *argument )
 void do_scry_exits( CHAR_DATA *ch, ROOM_INDEX_DATA  *scryer )
 {
 	EXIT_DATA       *pexit;
-	extern char *    const  dir_name [ ];
 	char             buf      [ MAX_STRING_LENGTH ];
 	int              door;
 	bool             found;
@@ -1305,7 +1295,7 @@ void do_scry_exits( CHAR_DATA *ch, ROOM_INDEX_DATA  *scryer )
 	fAuto = TRUE;
 	strcpy( buf, "&z[&RExits&w:" );
 	found = FALSE;
-	for ( door = 0; door <= 5; door++ )
+	for ( door = 0; door < MAX_DIR; door++ )
 	{
 		if ( ( pexit = scryer->exit[door] )
 				&& pexit->to_room
@@ -1315,7 +1305,7 @@ void do_scry_exits( CHAR_DATA *ch, ROOM_INDEX_DATA  *scryer )
 			if ( fAuto )
 			{
 				strcat( buf, "&W " );
-				strcat( buf, dir_name[door] );
+				strcat( buf, direction_table[door].name );
 			}
 		}
 	}
@@ -1332,7 +1322,6 @@ void do_scry_exits( CHAR_DATA *ch, ROOM_INDEX_DATA  *scryer )
 void do_exits( CHAR_DATA *ch, char *argument )
 {
 	EXIT_DATA       *pexit;
-	extern char *    const  dir_name [ ];
 	char             buf      [ MAX_STRING_LENGTH ];
 	int              door;
 	bool             found;
@@ -1347,7 +1336,7 @@ void do_exits( CHAR_DATA *ch, char *argument )
 	strcpy( buf, fAuto ? "&z[&RExits&w:" : "&cObvious exits&w:\n\r" );
 
 	found = FALSE;
-	for ( door = 0; door <= 5; door++ )
+	for ( door = 0; door < MAX_DIR; door++ )
 	{
 		if ( ( pexit = ch->in_room->exit[door] ) && pexit->to_room ) {
 			found = TRUE;
@@ -1355,15 +1344,15 @@ void do_exits( CHAR_DATA *ch, char *argument )
 			if ( fAuto ) {
 				if ( !IS_SET( pexit->exit_info, EX_CLOSED ) ) {
 					strcat( buf, "&W " );
-					strcat( buf, dir_name[door] );
+					strcat( buf, direction_table[door].name );
 				} else {
 					strcat( buf, "&W &z[&w" );
-					strcat( buf, dir_name[door] );
+					strcat( buf, direction_table[door].name );
 					strcat( buf, "&z]&W" );
 				}
 			} else {
 				sprintf( buf + strlen( buf ), "&W%-5s&w - &W%s\n\r",
-						capitalize( dir_name[door] ),
+						capitalize( direction_table[door].name ),
 						room_is_dark( pexit->to_room )
 						?  "&zToo dark to tell"
 						: (IS_SET( pexit->exit_info, EX_CLOSED )

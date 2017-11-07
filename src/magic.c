@@ -7647,7 +7647,7 @@ void spell_manabomb( int sn, int level, CHAR_DATA *ch, void *vo )
 	original = ch->in_room;
 	send_to_char( AT_WHITE,
 			"You explode in a massive ball of magical energy!\n\r", ch );
-	for (dir = 0; dir < 6; dir++) /* look in every direction */
+	for (dir = 0; dir < MAX_DIR; dir++) /* look in every direction */
 	{
 		char_from_room( ch );
 		char_to_room( ch, original );

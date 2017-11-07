@@ -205,7 +205,7 @@ char *olc_ed_vnum( CHAR_DATA *ch )
 
 				pRoom = ch->in_room;
 
-				for ( dir = 0; dir < 6; dir++ ) {
+				for ( dir = 0; dir < MAX_DIR; dir++ ) {
 					if ( (pExit = pRoom->exit[dir]) )
 					{
 						TRAP_DATA *pTrap;
@@ -218,8 +218,8 @@ char *olc_ed_vnum( CHAR_DATA *ch )
 					}
 				}
 
-				if ( dir < 6 ) {
-					sprintf( buf, "%s", capitalize( dir_name[dir] ) );
+				if ( dir < MAX_DIR ) {
+					sprintf( buf, "%s", capitalize( direction_table[dir].name ) );
 				} else {
 					sprintf( buf, "Unknown" );
 				}
@@ -1320,7 +1320,7 @@ void tedit( CHAR_DATA *ch, char *argument )
 			{
 				int dir;
 
-				for ( dir = 0; dir < 6; dir++ )
+				for ( dir = 0; dir < MAX_DIR; dir++ )
 					if ( (pExit = ch->in_room->exit[dir]) )
 					{
 						TRAP_DATA *trap = (TRAP_DATA *)ch->desc->pEdit;
@@ -1333,7 +1333,7 @@ void tedit( CHAR_DATA *ch, char *argument )
 						if ( trap->on_exit == pExit )
 							break;
 					}
-				if ( dir == 6 )
+				if ( dir == MAX_DIR )
 				{
 					send_to_char(C_DEFAULT, "Room changed.  Returning to REditor.\n\r",ch);
 					edit_done( ch );
@@ -1840,10 +1840,14 @@ bool redit_epedit( CHAR_DATA *ch, char *argument )
 	int dir;
 
 	argument = one_argument( argument, command );
-	for ( dir = 0; dir < 6; dir++ )
-		if ( !str_prefix( command, dir_name[dir] ) && ch->in_room->exit[dir] )
+
+	for ( dir = 0; dir < MAX_DIR; dir++ ) {
+		if ( !str_prefix( command, direction_table[dir].name ) && ch->in_room->exit[dir] ) {
 			break;
-	if ( dir == 6 )
+		}
+	}
+
+	if ( dir == MAX_DIR )
 	{
 		send_to_char(C_DEFAULT, "EPEdit:  Room has no such exit.\n\r", ch);
 		return FALSE;
@@ -1872,7 +1876,7 @@ bool redit_epedit( CHAR_DATA *ch, char *argument )
 
 		ch->desc->editin = ch->desc->editor;
 		ch->desc->editor = ED_EPROG;
-		strcpy( buf, dir_name[dir] );
+		strcpy( buf, direction_table[dir].name );
 		if ( tedit_create( ch, buf ) )
 		{
 			tedit_show( ch, "" );
@@ -2066,7 +2070,7 @@ void display_resets( CHAR_DATA *ch )
 				 pRoomIndex = get_room_index( pReset->arg1 );
 				 sprintf( buf, "R[%5d] %s door of %-19.19s reset to %s\n\r",
 				 pReset->arg1,
-				 capitalize( dir_name[ pReset->arg2 ] ),
+				 capitalize( direction_table[ pReset->arg2 ].name ),
 				 pRoomIndex->name,
 				 flag_string( door_resets, pReset->arg3 ) );
 				 strcat( final, buf );

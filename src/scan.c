@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "merc.h"  
+#include "merc.h"
 
 int scan_room (CHAR_DATA *ch, const ROOM_INDEX_DATA *room,char *buf)
 {
@@ -31,36 +31,33 @@ void do_scan (CHAR_DATA *ch, char *argument)
 {
 	EXIT_DATA * pexit;
 	ROOM_INDEX_DATA * room;
-	extern char * const dir_name[];
 	char buf[MAX_STRING_LENGTH];
 	int dir;
 	int distance;
 
 	sprintf (buf, "Right here you see:\n\r");
-	if (scan_room(ch,ch->in_room,buf) == 0)
-		strcat (buf, "Noone\n\r");
+
+	if ( scan_room(ch, ch->in_room, buf) == 0) {
+		strcat(buf, "Nobody\n\r");
+	}
+
 	send_to_char (AT_BLUE, buf,ch);
 
-	for (dir = 0; dir < 6; dir++) /* look in every direction */
-	{
-		room = ch->in_room; /* starting point */
+	for (dir = 0; dir < MAX_DIR; dir++) {
+		room = ch->in_room;
 
-		for (distance = 1 ; distance < 4; distance++)
-		{
-			pexit = room->exit[dir]; /* find the door to the next room */
-			if ((pexit == NULL) || (pexit->to_room == NULL) ||
-					(IS_SET(pexit->exit_info, EX_CLOSED)))
-				break; /* exit not there OR points to nothing OR is closed
-				*/
+		for (distance = 1 ; distance < 4; distance++) {
+			pexit = room->exit[dir];
+			if ((pexit == NULL) || (pexit->to_room == NULL) || (IS_SET(pexit->exit_info, EX_CLOSED))) {
+				break;
+			}
 
-			/* char can see the room */
-			sprintf (buf, "%d %s from here you see:\n\r", distance,
-					dir_name[dir]);
-			if (scan_room(ch,pexit->to_room,buf)) /* if there is something
-													 there */
+			if (scan_room(ch,pexit->to_room,buf)) {
+				sprintf (buf, "%d %s from here you see:\n\r", distance, direction_table[dir].name);
 				send_to_char (AT_WHITE,buf,ch);
+			}
 
-			room = pexit->to_room; /* go to the next room */
-		} /* for distance */
-	} /* for dir */
+			room = pexit->to_room;
+		}
+	}
 }

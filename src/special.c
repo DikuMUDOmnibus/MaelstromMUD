@@ -416,7 +416,7 @@ bool spec_cast_cleric( CHAR_DATA *ch )
 			case  5: min_level = 12; spell = "curse";          break;
 			case  6: min_level = 12; spell = "change sex";     break;
 			case  7: min_level = 13; spell = "flamestrike";    break;
-			case  8: 
+			case  8:
 			case  9:
 			case 10: min_level = 15; spell = "harm";           break;
 			default: min_level = 16; spell = "dispel magic";   break;
@@ -590,7 +590,7 @@ bool spec_executioner( CHAR_DATA *ch )
 			victim->name, crime, victim->name );
 	do_yell( ch, buf );
 	/*    if ( crime != "THIEF" )
-		  { */ 
+		  { */
 	multi_hit( ch, victim, TYPE_UNDEFINED );
 
 	guard = create_mobile( get_mob_index( MOB_VNUM_CITYGUARD ) );
@@ -978,7 +978,7 @@ bool spec_summon_demon( CHAR_DATA *ch )
 	int        sn;
 
 	if ( ( ch->position == POS_FIGHTING )
-			&& ( number_bits(2)==0 ) )	
+			&& ( number_bits(2)==0 ) )
 	{
 		pMob = get_mob_index(10212);
 		demon = create_mobile(pMob);
@@ -991,7 +991,7 @@ bool spec_summon_demon( CHAR_DATA *ch )
 		demon->position = POS_FIGHTING;
 		demon->summon_timer = 15;
 		return TRUE;
-	}        
+	}
 
 	if ( ch->fighting )
 		return spec_cast_mage ( ch );
@@ -1027,7 +1027,7 @@ bool spec_summon_light( CHAR_DATA *ch )
 	int        sn;
 
 	if ( ( ch->position == POS_FIGHTING )
-			&& ( number_bits(2)==0 ) )	
+			&& ( number_bits(2)==0 ) )
 	{
 		pMob = get_mob_index(20019);
 		light = create_mobile(pMob);
@@ -1040,7 +1040,7 @@ bool spec_summon_light( CHAR_DATA *ch )
 		light->position = POS_FIGHTING;
 		light->summon_timer = 15;
 		return TRUE;
-	}        
+	}
 
 	if ( ch->fighting )
 
@@ -1199,15 +1199,14 @@ bool spec_repairman( CHAR_DATA *ch )
 	EXIT_DATA       *pexit;
 	EXIT_DATA       *pexit_rev;
 	ROOM_INDEX_DATA *to_room;
-	extern const int              rev_dir [ ];
 	int              door;
 
 	if ( !IS_AWAKE( ch ) )
 		return FALSE;
 
-	door = number_range( 0, 5 );
+	door = dice( 1, MAX_DIR ) - 1;
 	/*
-	 *  Could search through all doors randomly, but deathtraps would 
+	 *  Could search through all doors randomly, but deathtraps would
 	 *  freeze the game!  And I'd prefer not to go through from 1 to 6...
 	 *  too boring.  Instead, just check one direction at a time.  There's
 	 *  a 51% chance they'll find the door within 4 tries anyway.
@@ -1224,7 +1223,7 @@ bool spec_repairman( CHAR_DATA *ch )
 
 		/* Don't forget the other side! */
 		if (   ( to_room   = pexit->to_room               )
-				&& ( pexit_rev = to_room->exit[rev_dir[door]] )
+				&& ( pexit_rev = to_room->exit[direction_table[door].reverse] )
 				&& pexit_rev->to_room == ch->in_room )
 		{
 			CHAR_DATA *rch;

@@ -765,7 +765,7 @@ bool aedit_links( CHAR_DATA *ch, char *argument )
 		{
 			nMatch++;
 			if ( pRoomIndex->area != pArea )
-				for ( DIR = 0; DIR <= DIR_MAX; DIR++ )
+				for ( DIR = 0; DIR < MAX_DIR; DIR++ )
 				{
 					if ( pRoomIndex->exit[DIR] )
 					{
@@ -792,7 +792,7 @@ bool aedit_links( CHAR_DATA *ch, char *argument )
 	{
 		if ( ( pRoomIndex = get_room_index( vnum ) ) )
 		{
-			for ( DIR = 0; DIR <= DIR_MAX; DIR++ )
+			for ( DIR = 0; DIR < MAX_DIR; DIR++ )
 			{
 				if ( pRoomIndex->exit[DIR] )
 					if (pRoomIndex->exit[DIR]->to_room)
@@ -1523,7 +1523,7 @@ bool redit_show( CHAR_DATA *ch, char *argument )
 	else
 		strcat( buf1, "none&z]&g\n\r" );
 
-	for ( door = 0; door <= DIR_MAX; door++ )
+	for ( door = 0; door < MAX_DIR; door++ )
 	{
 		EXIT_DATA *pexit;
 
@@ -1535,7 +1535,7 @@ bool redit_show( CHAR_DATA *ch, char *argument )
 			int i, length;
 
 			sprintf( buf, "&W-%-5s to &z[&W%5d&z] &WKey: &z[&W%5d&z]",
-					capitalize(dir_name[door]),
+					capitalize(direction_table[door].name),
 					pexit->to_room ? pexit->to_room->vnum : 0,
 					pexit->key );
 			strcat( buf1, buf );
@@ -1634,7 +1634,7 @@ bool change_exit( CHAR_DATA *ch, char *argument, int door )
 	EDIT_ROOM(ch, pRoom);
 
 	/* Often used data. */
-	rev = rev_dir[door];
+	rev = direction_table[door].reverse;
 
 	if ( argument[0] == '\0' )
 	{
@@ -2322,7 +2322,7 @@ bool redit_delete( CHAR_DATA *ch, char *argument )
 					pRoomIndex;
 					pRoomIndex = pRoomIndex->next )
 			{
-				for ( DIR = 0; DIR <= DIR_MAX; DIR++ )
+				for ( DIR = 0; DIR < MAX_DIR; DIR++ )
 				{
 					if ( pRoomIndex->exit[DIR] )
 						if ( pRoomIndex->exit[DIR]->to_room == pRoom )
@@ -2787,9 +2787,6 @@ bool redit_oreset( CHAR_DATA *ch, char *argument )
  */
 bool redit_rreset( CHAR_DATA *ch, char *argument )
 {
-	static const char * dir_name[6] =
-	{ "North\0", "East\0", "South\0", "West\0", "Up\0", "Down\0" };
-
 	char arg[MAX_STRING_LENGTH];
 	char output[MAX_STRING_LENGTH];
 	RESET_DATA *pReset;
@@ -2805,15 +2802,13 @@ bool redit_rreset( CHAR_DATA *ch, char *argument )
 		return FALSE;
 	}
 
-	if ( is_number( arg ) )
+	if ( is_number( arg ) ) {
 		direc = atoi(arg);
-	else
-	{
-		for ( direc = 0; direc < 6; direc++ )
-			if ( UPPER(arg[0]) == dir_name[direc][0] ) break;
+	} else {
+		direc = get_direction(arg);
 	}
 
-	if ( direc < 0 || direc > 5 )
+	if ( direc < 0 || direc >= MAX_DIR )
 	{
 		send_to_char( C_DEFAULT, "That is not a direction.\n\r", ch );
 		return FALSE;
@@ -2825,8 +2820,7 @@ bool redit_rreset( CHAR_DATA *ch, char *argument )
 	pReset->arg2      = direc;
 	add_reset( pRoom, pReset, 0/* Last slot*/ );
 
-	sprintf( output, "Exits North (0) to %s (%d) randomized.\n\r",
-			dir_name[direc], direc );
+	sprintf( output, "Exits north (0) to %s (%d) randomized.\n\r", direction_table[direc].name, direc );
 	send_to_char( C_DEFAULT, output, ch );
 	return TRUE;
 }
@@ -5463,12 +5457,13 @@ bool redit_eplist( CHAR_DATA *ch, char *argument )
 
 	EDIT_ROOM(ch, pRoom);
 
-	for ( dir = 0; dir < 6; dir++ )
-		if ( !str_prefix( argument, dir_name[dir] ) &&
-				(pExit = pRoom->exit[dir]) )
+	for ( dir = 0; dir < MAX_DIR; dir++ ) {
+		if ( !str_prefix( argument, direction_table[dir].name ) && (pExit = pRoom->exit[dir]) ) {
 			break;
-	if ( dir == 6 )
-	{
+		}
+	}
+
+	if ( dir == MAX_DIR ) {
 		send_to_char(C_DEFAULT, "Exit does not exist in this room.\n\r",ch);
 		return FALSE;
 	}
@@ -5664,10 +5659,13 @@ bool redit_epremove( CHAR_DATA *ch, char *argument )
 
 	EDIT_ROOM(ch, pRoom);
 
-	for ( dir = 0; dir < 6; dir++ )
-		if ( !str_prefix(arg, dir_name[dir]) && (pExit = pRoom->exit[dir]) )
+	for ( dir = 0; dir < MAX_DIR; dir++ ) {
+		if ( !str_prefix(arg, direction_table[dir].name) && (pExit = pRoom->exit[dir]) ) {
 			break;
-	if ( dir == 6 )
+		}
+	}
+
+	if ( dir == MAX_DIR )
 	{
 		send_to_char(C_DEFAULT, "Exit does not exist in this room.\n\r", ch);
 		return FALSE;
@@ -5761,7 +5759,7 @@ bool tedit_show( CHAR_DATA *ch, char *argument )
 		EXIT_DATA *pExit;
 		TRAP_DATA *trap;
 
-		for ( dir = 0; dir < 6; dir++ )
+		for ( dir = 0; dir < MAX_DIR; dir++ )
 			if ( (pExit = ch->in_room->exit[dir]) )
 			{
 				for ( trap = pExit->traps; trap; trap = trap->next_here )
@@ -5771,8 +5769,7 @@ bool tedit_show( CHAR_DATA *ch, char *argument )
 					break;
 			}
 
-		sprintf(buf, "Exit: [%5s] %s\n\r", (dir == 6 ? "none" : dir_name[dir]),
-				(dir == 6 ? "Not found in room" : pExit->description));
+		sprintf(buf, "Exit: [%5s] %s\n\r", (dir == MAX_DIR ? "none" : direction_table[dir].name), (dir == MAX_DIR ? "Not found in room" : pExit->description));
 		send_to_char(C_DEFAULT, buf, ch);
 	}
 
@@ -5864,10 +5861,14 @@ bool tedit_create( CHAR_DATA *ch, char *argument )
 		pExit = NULL;
 		EDIT_ROOM(ch, pRoom);
 		argument = one_argument(argument, arg);
-		for ( dir = 0; dir < 6; dir++ )
-			if ( !str_prefix(arg, dir_name[dir]) && (pExit = pRoom->exit[dir]) )
+
+		for ( dir = 0; dir < MAX_DIR; dir++ ) {
+			if ( !str_prefix(arg, direction_table[dir].name) && (pExit = pRoom->exit[dir]) ) {
 				break;
-		if ( dir == 6 )
+			}
+		}
+
+		if ( dir == MAX_DIR )
 		{
 			bug("Tedit_create: No exit",0);
 			return FALSE;

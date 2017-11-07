@@ -1529,7 +1529,7 @@ void do_rstat( CHAR_DATA *ch, char *argument )
 	}
 	send_to_char(AT_RED, "&W ]\n\r", ch);
 
-	for ( door = 0; door <= 5; door++ )
+	for ( door = 0; door < MAX_DIR; door++ )
 	{
 		EXIT_DATA *pexit;
 

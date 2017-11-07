@@ -27,7 +27,7 @@
 
 /*
  * Externals
- */ 
+ */
 extern  char *  const   month_name[];
 extern  char *  const   day_name[];
 extern  bool            merc_down;
@@ -102,7 +102,7 @@ void advance_level( CHAR_DATA *ch )
 		REMOVE_BIT( ch->act, PLR_BOUGHT_PET );
 	}
 
-	sprintf( buf, 
+	sprintf( buf,
 			"Your gain is: %d/%d hp, %d/%d m, %d/%d mv %d/%d prac.\n\r",
 			add_hp,		MAX_HIT( ch ),
 			add_mana,	MAX_MANA( ch ),
@@ -110,16 +110,16 @@ void advance_level( CHAR_DATA *ch )
 			add_prac,	ch->practice );
 
 	send_to_char(AT_WHITE, buf, ch );
-	
+
 	if (IS_SET(ch->act2, PLR_REMORT)) {
 		sprintf( buf, "You receive %d raise points.\n\r", raisepoints );
-		send_to_char( AT_BLUE, buf, ch ); 
+		send_to_char( AT_BLUE, buf, ch );
 	}
 
 	save_char_obj( ch );
 
 	return;
-}   
+}
 
 
 
@@ -134,7 +134,7 @@ void gain_exp( CHAR_DATA *ch, int gain )
 	   || ( ch->level < L_CHAMP1 && ch->exp >= 400000 )
 	   || ( ch->level < L_CHAMP2 && ch->exp >= 1000000 )
 	   || ( ch->level < L_CHAMP3 && ch->exp >= 2000000 ) ) */
-	while ( ch->exp >= xp_tolvl( ch ) ) 
+	while ( ch->exp >= xp_tolvl( ch ) )
 	{
 		send_to_char(AT_BLUE, "You raise a level!!  ", ch );
 		ch->level += 1;
@@ -197,11 +197,11 @@ int hit_gain( CHAR_DATA *ch )
 			gain /= 2;
 
 		if ( ch->pcdata->condition[COND_THIRST] == 0 )
-			gain /= 2;  
+			gain /= 2;
 
 	}
 	if ( (IS_AFFECTED( ch, AFF_POISON ) || IS_AFFECTED2( ch, AFF_PLAGUE))
-			&& gain > 0 ) 
+			&& gain > 0 )
 		gain /= 10;
 
 	/* Ward of Healing */
@@ -374,8 +374,8 @@ void mobile_update( void )
 		if ( ch->position < POS_STANDING )
 			continue;
 
-		if ( ch->in_room->area->nplayer > 0 ) 
-		{ 
+		if ( ch->in_room->area->nplayer > 0 )
+		{
 			mprog_random_trigger( ch );
 			if ( ch->position < POS_STANDING )
 				continue;
@@ -396,7 +396,7 @@ void mobile_update( void )
 			obj_best    = 0;
 			for ( obj = ch->in_room->contents; obj; obj = obj->next_content )
 			{
-				if ( CAN_WEAR( obj, ITEM_TAKE ) && 
+				if ( CAN_WEAR( obj, ITEM_TAKE ) &&
 						( ( (obj->cost.gold*C_PER_G) + (obj->cost.silver*S_PER_G) +
 							(obj->cost.copper) ) > max ) && can_see_obj(ch, obj) )
 				{
@@ -416,7 +416,7 @@ void mobile_update( void )
 
 		/* Wander */
 		if ( !IS_SET( ch->act, ACT_SENTINEL )
-				&& ( door = number_bits( 5 ) ) <= 5
+				&& ( door = number_bits( 5 ) ) < MAX_DIR
 				&& ( pexit = ch->in_room->exit[door] )
 				&&   pexit->to_room
 				&&   !IS_SET( pexit->exit_info, EX_CLOSED )
@@ -432,7 +432,7 @@ void mobile_update( void )
 
 		/* Flee */
 		if ( ch->hit < ( MAX_HIT(ch) / 2 )
-				&& ( door = number_bits( 3 ) ) <= 5
+				&& ( door = number_bits( 3 ) ) < MAX_DIR
 				&& ( pexit = ch->in_room->exit[door] )
 				&&   pexit->to_room
 				&&   !IS_SET( pexit->exit_info, EX_CLOSED )
@@ -458,7 +458,7 @@ void mobile_update( void )
 				move_char( ch, door, FALSE );
 		}
 		if ( ch->hunting )
-			hunt_victim( ch ); 
+			hunt_victim( ch );
 	}
 	MOBtrigger = TRUE;
 	return;
@@ -569,7 +569,7 @@ void weather_update( void )
 
 	switch ( weather_info.sky )
 	{
-		default: 
+		default:
 			bug( "Weather_update: bad sky %d.", weather_info.sky );
 			weather_info.sky = SKY_CLOUDLESS;
 			break;
@@ -646,7 +646,7 @@ void weather_update( void )
  * This function is performance sensitive.
  */
 void char_update( void )
-{   
+{
 	CHAR_DATA *ch;
 	CHAR_DATA *ch_save;
 	CHAR_DATA *ch_quit;
@@ -690,8 +690,8 @@ void char_update( void )
 			if ( ch->move < MAX_MOVE(ch) )
 				ch->move += move_gain( ch );
 			if ( ch->position == POS_STUNNED )
-			{ 
-				ch->position = POS_STANDING; 
+			{
+				ch->position = POS_STANDING;
 				update_pos( ch );
 			}
 		}
@@ -778,7 +778,7 @@ void char_update( void )
 				}
 
 				affect_remove( ch, paf );
-				/*		if ( paf->bitvector == AFF_FLYING ) 
+				/*		if ( paf->bitvector == AFF_FLYING )
 						check_nofloor( ch ); --Angi */
 			}
 		}
@@ -892,51 +892,13 @@ void char_update( void )
 						}
 						send_to_char( AT_YELLOW, figbuf, ch ); break;
 					case 3:
-						switch( dice( 1, 6 ) )
-						{
-							case 1: sprintf( figbuf, "%s leaves east.\n\r",
-											figment->name );
-									break;
-							case 2: sprintf( figbuf, "%s leaves west.\n\r",
-											figment->name );
-									break;
-							case 3: sprintf( figbuf, "%s leaves south.\n\r",
-											figment->name );
-									break;
-							case 4: sprintf( figbuf, "%s leaves north.\n\r",
-											figment->name );
-									break;
-							case 5: sprintf( figbuf, "%s leaves up.\n\r",
-											figment->name );
-									break;
-							case 6: sprintf( figbuf, "%s leaves down.\n\r",
-											figment->name );
-									break;
-						}
-						send_to_char( AT_GREY, figbuf, ch ); break;
+						sprintf( figbuf, "%s leaves %s.\n\r", figment->name, direction_table[dice( 1, MAX_DIR ) - 1].name );
+						send_to_char( AT_GREY, figbuf, ch );
+						break;
 					case 4:
-						switch( dice( 1, 6 ) )
-						{
-							case 1: sprintf( figbuf, "%s arrives from the east.\n\r",
-											figment->name );
-									break;
-							case 2: sprintf( figbuf, "%s arrives from the west.\n\r",
-											figment->name );
-									break;
-							case 3: sprintf( figbuf, "%s arrives from the south.\n\r",
-											figment->name );
-									break;
-							case 4: sprintf( figbuf, "%s arrives from the north.\n\r",
-											figment->name );
-									break;
-							case 5: sprintf( figbuf, "%s arrives from above.\n\r",
-											figment->name );
-									break;
-							case 6: sprintf( figbuf, "%s arrives from below.\n\r",
-											figment->name );
-									break;
-						}
-						send_to_char( AT_GREY, figbuf, ch ); break;
+						sprintf( figbuf, "%s arrives from %s.\n\r", figment->name, direction_table[dice( 1, MAX_DIR ) - 1].noun );
+						send_to_char( AT_GREY, figbuf, ch );
+						break;
 					case 5:
 						switch( dice( 1, 3 ) )
 						{
@@ -1017,51 +979,13 @@ void char_update( void )
 						}
 						send_to_char( AT_YELLOW, figbuf, ch ); break;
 					case 3:
-						switch( dice( 1, 6 ) )
-						{
-							case 1: sprintf( figbuf, "%s leaves east.\n\r",
-											figmentmob->short_descr );
-									break;
-							case 2: sprintf( figbuf, "%s leaves west.\n\r",
-											figmentmob->short_descr );
-									break;
-							case 3: sprintf( figbuf, "%s leaves south.\n\r",
-											figmentmob->short_descr );
-									break;
-							case 4: sprintf( figbuf, "%s leaves north.\n\r",
-											figmentmob->short_descr );
-									break;
-							case 5: sprintf( figbuf, "%s leaves up.\n\r",
-											figmentmob->short_descr );
-									break;
-							case 6: sprintf( figbuf, "%s leaves down.\n\r",
-											figmentmob->short_descr );
-									break;
-						}
-						send_to_char( AT_GREY, figbuf, ch ); break;
+						sprintf( figbuf, "%s leaves %s.\n\r", figmentmob->short_descr, direction_table[dice( 1, MAX_DIR ) - 1].name );
+						send_to_char( AT_GREY, figbuf, ch );
+						break;
 					case 4:
-						switch( dice( 1, 6 ) )
-						{
-							case 1: sprintf( figbuf, "%s arrives from the east.\n\r",
-											figmentmob->short_descr );
-									break;
-							case 2: sprintf( figbuf, "%s arrives from the west.\n\r",
-											figmentmob->short_descr );
-									break;
-							case 3: sprintf( figbuf, "%s arrives from the south.\n\r",
-											figmentmob->short_descr );
-									break;
-							case 4: sprintf( figbuf, "%s arrives from the north.\n\r",
-											figmentmob->short_descr );
-									break;
-							case 5: sprintf( figbuf, "%s arrives from above.\n\r",
-											figmentmob->short_descr );
-									break;
-							case 6: sprintf( figbuf, "%s arrives from below.\n\r",
-											figmentmob->short_descr );
-									break;
-						}
-						send_to_char( AT_GREY, figbuf, ch ); break;
+						sprintf( figbuf, "%s arrives from %s.\n\r", figmentmob->short_descr, direction_table[dice( 1, MAX_DIR ) - 1].noun );
+						send_to_char( AT_GREY, figbuf, ch );
+						break;
 					case 5:
 						switch( dice( 1, 2 ) )
 						{
@@ -1184,7 +1108,7 @@ void char_update( void )
 			ch->summon_timer--;
 		if(IS_NPC(ch) && ch->summon_timer == 0)
 		{
-			act(AT_BLUE, "$n is consumed by a swirling vortex.", 
+			act(AT_BLUE, "$n is consumed by a swirling vortex.",
 					ch, NULL, NULL, TO_ROOM);
 			extract_char(ch, TRUE);
 		}
@@ -1200,7 +1124,7 @@ void char_update( void )
  * This function is performance sensitive.
  */
 void obj_update( void )
-{   
+{
 	OBJ_DATA *obj;
 	OBJ_DATA *obj_next;
 
@@ -1859,7 +1783,7 @@ void arena_update()
 				challenge(buf, 0, 0);
 			}
 			else
-				challenge("&C%s &coffering challenge for &W%d &ccoins.", 
+				challenge("&C%s &coffering challenge for &W%d &ccoins.",
 						(int)(arena.cch->name), arena.award);
 			return;
 	}
@@ -1922,7 +1846,7 @@ void auc_update()
 
 	if ( auc_bid && ( ( (auc_bid->money.gold*C_PER_G) + (auc_bid->money.silver*S_PER_G) +
 					(auc_bid->money.copper) ) > ( (auc_cost.gold*C_PER_G) + (auc_cost.silver*S_PER_G) +
-						(auc_cost.copper) ) ) ) 
+						(auc_cost.copper) ) ) )
 	{
 		sprintf( buf, "%s SOLD! to %s for %s", auc_obj->short_descr, auc_bid->name,
 				money_string( &auc_cost ) );
@@ -1987,7 +1911,7 @@ void auc_update()
 		return;
 	}
 
-	/* This does the damage for vampiers when there out during the day 
+	/* This does the damage for vampiers when there out during the day
 	   basicaly a rip off of rdam_update.  -Decklarean*/
 	/*
 	   void vamdam_update( )
@@ -2008,7 +1932,7 @@ void auc_update()
 	   {
 	   if ( time_info.hour > 5 && time_info.hour < 18 )
 	   {
-	   send_to_char( AT_RED, 
+	   send_to_char( AT_RED,
 	   "Intense pain washes through your body under the light of the sun.\n\r", ch );
 	   act( AT_RED, "Smoke rises from $n under the glarying light of the sun.", ch,
 	   NULL, NULL, TO_ROOM );
@@ -2027,9 +1951,9 @@ void auc_update()
 
 
 	/* Wind timer routines.. needs updates for weather stuff.. -- Altrag */
+	/*
 	const char *dir_wind [] = {"north", "northeast", "east", "southeast",
 		"south", "southwest", "west", "northwest"};
-	/*
 	   const char *wind_str [] = {"almost no", "a little bit of", "a strong"};
 
 	   void wind_update( void )
@@ -2039,7 +1963,7 @@ void auc_update()
 
 	   for ( pArea = area_first; pArea; pArea = pArea->next )
 	   {
-	   pArea->windstr += number_range( UMIN(pArea->windstr - 5, -15), 
+	   pArea->windstr += number_range( UMIN(pArea->windstr - 5, -15),
 	   UMAX(pArea->windstr + 5, 15) );
 	   if ( pArea->windstr < 0 )
 	   {
@@ -2072,7 +1996,7 @@ void auc_update()
 	   }
 	   return;
 	   }
-	   */		
+	   */
 	/* END */
 
 	void strew_corpse( OBJ_DATA *obj, AREA_DATA *inarea )
@@ -2186,4 +2110,3 @@ void auc_update()
 
 		return;
 	}
-

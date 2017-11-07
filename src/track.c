@@ -119,7 +119,7 @@ void track_dequeue(void)
 }
 
 
-void track_clear_queue(void) 
+void track_clear_queue(void)
 {
 	while (queue_head)
 		track_dequeue();
@@ -159,7 +159,7 @@ int find_first_step(ROOM_INDEX_DATA *src, ROOM_INDEX_DATA *target)
 	MARK(src);
 
 	/* first, enqueue the first steps, saving which direction we're going. */
-	for (curr_dir = 0; curr_dir < 6; curr_dir++)
+	for (curr_dir = 0; curr_dir < MAX_DIR; curr_dir++)
 		if (VALID_EDGE(src, curr_dir))
 		{
 			MARK(TOROOM(src, curr_dir));
@@ -177,7 +177,7 @@ int find_first_step(ROOM_INDEX_DATA *src, ROOM_INDEX_DATA *target)
 		}
 		else
 		{
-			for (curr_dir = 0; curr_dir < 6; curr_dir++)
+			for (curr_dir = 0; curr_dir < MAX_DIR; curr_dir++)
 				if (VALID_EDGE(queue_head->room, curr_dir))
 				{
 					MARK(TOROOM(queue_head->room, curr_dir));
@@ -313,7 +313,7 @@ void do_track( CHAR_DATA *ch, char *argument )
 
 			if ( !IS_NPC(vict) )
 			{
-				sprintf(buf, "You sense a trail %s from here!\n\r", dir_name[dir]);
+				sprintf(buf, "You sense a trail %s from here!\n\r", direction_table[dir].name);
 				send_to_char(AT_RED, buf, ch);
 			}
 			else
@@ -380,14 +380,14 @@ void hunt_victim(CHAR_DATA *ch)
 		{
 			move_char(ch, dir, FALSE);
 			sprintf( log_buf, "%s hunting %s at %d.", ch->short_descr,
-					( IS_NPC( ch->hunting ) ) ? ch->hunting->short_descr : 
+					( IS_NPC( ch->hunting ) ) ? ch->hunting->short_descr :
 					ch->hunting->name, ch->hunting->in_room->vnum );
 			log_string( log_buf, 1 , -1 );
 		}
 		else
 		{
 			sprintf(log_buf,"\n\r&rTrack: &RYou sense a trail %s of here!",
-					dir_name[dir]);
+					direction_table[dir].name);
 			write_to_buffer(ch->desc, log_buf, 0);
 		}
 		if (ch->in_room == ch->hunting->in_room)
@@ -401,10 +401,7 @@ void hunt_victim(CHAR_DATA *ch)
 				write_to_buffer(ch->desc,
 						"\n\r&rTrack: &RAhh.. you have found your prey.",0);
 			ch->hunting = NULL;
-		}	 
+		}
 		return;
 	}
 }
-
-
-

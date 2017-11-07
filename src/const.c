@@ -24,42 +24,51 @@
 #include <time.h>
 #include "merc.h"
 
-const   struct  quest_data      quest_table     []              =
-{
-//{     "name",                         "full name",                                    vnum,          qp,     level }
-  {     "practice",                     "&PP&practic&Pe&X",                                0,          10,         1 },
-  {     "bamboo training sword",        "&YB&Oa&Ym&Ob&Yo&Oo &cTraining Sword&X",        2426,         100,         1 },
-  {     "tassled leather leggings",     "&cTassled &zL&We&za&Wt&zh&We&zr&c Leggings&X", 2427,         200,         5 },
-  {     "ivory-cerved anklets",         "&WIvory&w-&WCarved &cAnklets&X",               2428,         300,        10 },
-  {     "golwing bauble",               "&WGlow&wing &CBauble&X",                       2429,         100,        11 },
-  {     "blazing flameshield",          "&RBl&raz&Oin&Yg &RFla&rmes&Ohie&Yld&X",        2430,         200,        15 },
-  {     "scaly vambraces",              "&CScaly &cVambraces&X",                        2431,         300,        20 },
-  {     "steel visor",                  "&zSteel &cVisor&X",                            2432,         100,        21 },
-  {     "taloned gauntlets",            "&cTaloned Gauntlets&X",                        2433,         200,        25 },
-  {     "brass scope",                  "&OBrass &cScope&X",                            2434,         300,        30 },
-  {     "silver ear clasp",             "&wSilver &cEar Clasp&X",                       2435,         100,        31 },
-  {     "heavy leather boots",          "&OHeavy Leather &cBoots&X",                    2436,         200,        35 },
-  {     "wreath of illusions",          "&GW&gr&Ge&ga&Gt&gh &cof &CIllusions&X",        2437,         300,        40 },
-  {     "long hafted spear",            "&OLong Hafted &zSpear&X",                      2438,         100,        41 },
-  {     "arch sorcerers robe",          "&zArch Sorcerer's &cRobe&X",                   2439,         200,        45 },
-  {     "engraved golden breastplate",  "&cEngraved &YGolden &cBreastplate&X",          2440,         300,        50 },
-  {     "ankle sheathed dagger",        "&cAnkle-Sheathed Dagger&X",                    2441,         150,        51 },
-  {     "band of winds",                "&OBand &cof &CWinds&X",                        2442,         250,        55 },
-  {     "dark stormcloud",              "&zDark Stormcloud&X",                          2443,         350,        60 },
-  {     "winter fur cloak",             "&WWinter Fur &cCloak&X",                       2444,         150,        61 },
-  {     "travellers cloak",             "&cTraveller's Cloak&X",                        2445,         250,        65 },
-  {     "demons fiery glare",           "&zDemon's &RFi&re&Or&Yy &rGlare&X",            2446,         350,        70 },
-  {     "golden band of energy",        "&YGolden &cBand of &PE&Cn&Pe&Cr&Pg&Cy&X",      2447,         150,        71 },
-  {     "dragon carved belt buckle",    "&RDragon-Carved &cBelt Buckle&X",              2448,         250,        75 },
-  {     "elbow bladed sleeves",         "&cElbow-Bladed Sleeves&X",                     2449,         350,        80 },
-  {     "heavy dwarven chainmail",      "&cHeavy Dwarven Chainmail&X",                  2450,         150,        81 },
-  {     "dagger of light",              "&BD&bagge&Br &Yof &CL&ci&Cg&ch&Ct&X",          2457,        1200,       205 },
-  {     "platinum platemail leggings",  "&YPlatinum Platemail &cLeggings&X",            2452,         350,        90 },
-  {     "book of arcane arts",          "&OBook &cof &BArcane &RArts&X",                2453,         150,        91 },
-  {     "hovering sphere of light",     "&cHovering &CSphere &cof &WLight&X",           2454,         250,        95 },
-  {     "helms earguard",               "&cHelm's &BE&wa&Br&wg&Bu&wa&Br&wd&X",          2455,         350,       100 },
-  {     "ivory carved mask",            "&WIvory&w-&WCarved &cMask&X",                  2456,         150,       101 },
-  {     "",                              "",                                               0,           0,         0 }
+const struct direction_type direction_table[MAX_DIR] = {
+//{ "name",  "noun",      "navigation",   "descriptive", "abbr", "blood", reverse   }
+	{ "north", "the north", "to the north", "northern", "n",    "north", DIR_SOUTH },
+	{ "east",  "the east",  "to the east",  "eastern",  "e",    "east",  DIR_WEST  },
+	{ "south", "the south", "to the south", "southern", "s",    "south", DIR_NORTH },
+	{ "west",  "the west",  "to the west",  "western",  "w",    "west",  DIR_EAST  },
+	{ "up",    "above",     "above",        "roof",     "u",    "above", DIR_DOWN  },
+	{ "down",  "below",     "below",        "ground",   "d",    "below", DIR_UP    }
+};
+
+const struct quest_data quest_table[] = {
+//{ "name",                         "full name",                                    vnum,          qp,     level }
+  { "practice",                     "&PP&practic&Pe&X",                                0,          10,         1 },
+  { "bamboo training sword",        "&YB&Oa&Ym&Ob&Yo&Oo &cTraining Sword&X",        2426,         100,         1 },
+  { "tassled leather leggings",     "&cTassled &zL&We&za&Wt&zh&We&zr&c Leggings&X", 2427,         200,         5 },
+  { "ivory-cerved anklets",         "&WIvory&w-&WCarved &cAnklets&X",               2428,         300,        10 },
+  { "golwing bauble",               "&WGlow&wing &CBauble&X",                       2429,         100,        11 },
+  { "blazing flameshield",          "&RBl&raz&Oin&Yg &RFla&rmes&Ohie&Yld&X",        2430,         200,        15 },
+  { "scaly vambraces",              "&CScaly &cVambraces&X",                        2431,         300,        20 },
+  { "steel visor",                  "&zSteel &cVisor&X",                            2432,         100,        21 },
+  { "taloned gauntlets",            "&cTaloned Gauntlets&X",                        2433,         200,        25 },
+  { "brass scope",                  "&OBrass &cScope&X",                            2434,         300,        30 },
+  { "silver ear clasp",             "&wSilver &cEar Clasp&X",                       2435,         100,        31 },
+  { "heavy leather boots",          "&OHeavy Leather &cBoots&X",                    2436,         200,        35 },
+  { "wreath of illusions",          "&GW&gr&Ge&ga&Gt&gh &cof &CIllusions&X",        2437,         300,        40 },
+  { "long hafted spear",            "&OLong Hafted &zSpear&X",                      2438,         100,        41 },
+  { "arch sorcerers robe",          "&zArch Sorcerer's &cRobe&X",                   2439,         200,        45 },
+  { "engraved golden breastplate",  "&cEngraved &YGolden &cBreastplate&X",          2440,         300,        50 },
+  { "ankle sheathed dagger",        "&cAnkle-Sheathed Dagger&X",                    2441,         150,        51 },
+  { "band of winds",                "&OBand &cof &CWinds&X",                        2442,         250,        55 },
+  { "dark stormcloud",              "&zDark Stormcloud&X",                          2443,         350,        60 },
+  { "winter fur cloak",             "&WWinter Fur &cCloak&X",                       2444,         150,        61 },
+  { "travellers cloak",             "&cTraveller's Cloak&X",                        2445,         250,        65 },
+  { "demons fiery glare",           "&zDemon's &RFi&re&Or&Yy &rGlare&X",            2446,         350,        70 },
+  { "golden band of energy",        "&YGolden &cBand of &PE&Cn&Pe&Cr&Pg&Cy&X",      2447,         150,        71 },
+  { "dragon carved belt buckle",    "&RDragon-Carved &cBelt Buckle&X",              2448,         250,        75 },
+  { "elbow bladed sleeves",         "&cElbow-Bladed Sleeves&X",                     2449,         350,        80 },
+  { "heavy dwarven chainmail",      "&cHeavy Dwarven Chainmail&X",                  2450,         150,        81 },
+  { "dagger of light",              "&BD&bagge&Br &Yof &CL&ci&Cg&ch&Ct&X",          2457,        1200,       205 },
+  { "platinum platemail leggings",  "&YPlatinum Platemail &cLeggings&X",            2452,         350,        90 },
+  { "book of arcane arts",          "&OBook &cof &BArcane &RArts&X",                2453,         150,        91 },
+  { "hovering sphere of light",     "&cHovering &CSphere &cof &WLight&X",           2454,         250,        95 },
+  { "helms earguard",               "&cHelm's &BE&wa&Br&wg&Bu&wa&Br&wd&X",          2455,         350,       100 },
+  { "ivory carved mask",            "&WIvory&w-&WCarved &cMask&X",                  2456,         150,       101 },
+  { "",                              "",                                               0,           0,         0 }
 };
 
 const struct race_type race_table[MAX_RACE] = {

@@ -650,38 +650,32 @@ void interpret( CHAR_DATA *ch, char *argument )
 				str_cmp( cmd_table[cmd].name, "tell"     ) &&
 				str_cmp( cmd_table[cmd].name, "score"    )    )
 				{
-					/*If you are sneaking you can move these directions while hiding*/
-					if ( IS_AFFECTED(ch,AFF_SNEAK) &&
-							( !str_cmp( cmd_table[cmd].name, "north" ) ||
-							  !str_cmp( cmd_table[cmd].name, "east"  ) ||
-							  !str_cmp( cmd_table[cmd].name, "south" ) ||
-							  !str_cmp( cmd_table[cmd].name, "west"  ) ||
-							  !str_cmp( cmd_table[cmd].name, "up"    ) ||
-							  !str_cmp( cmd_table[cmd].name, "down"  )    ) )
-					{
+					/*If you are sneaking you can move while hiding*/
+					if ( IS_AFFECTED(ch,AFF_SNEAK) ) {
 						/* check and see if they are chameleon and remove it if they
 						   are trying to move*/
-						if ( is_affected(ch, gsn_chameleon) )
-						{
+						if ( is_affected(ch, gsn_chameleon) ) {
 							send_to_char(AT_BLUE, "You return to your normal coloration.\n\r", ch );
 							affect_strip ( ch, gsn_chameleon );
 						}
+
 						/* If they aren't hidding remove the hide bit */
-						if ( !is_affected(ch, gsn_hide ) )
+						if ( !is_affected(ch, gsn_hide ) ) {
 							REMOVE_BIT( ch->affected_by, AFF_HIDE );
-					}
-					else
-					{  /* remove all the hidding stuff */
-						if ( is_affected(ch, gsn_chameleon) )
-						{
+						}
+					} else {
+						/* remove all the hidding stuff */
+
+						if ( is_affected(ch, gsn_chameleon) ) {
 							send_to_char(AT_BLUE, "You return to your normal coloration.\n\r", ch );
 							affect_strip ( ch, gsn_chameleon);
 						}
-						if ( is_affected(ch, gsn_hide) )
-						{
+
+						if ( is_affected(ch, gsn_hide) ) {
 							send_to_char(AT_BLUE, "You stop hiding.\n\r", ch);
 							affect_strip ( ch, gsn_hide );
 						}
+
 						REMOVE_BIT( ch->affected_by, AFF_HIDE );
 					}
 				}

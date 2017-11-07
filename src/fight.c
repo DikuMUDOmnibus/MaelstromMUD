@@ -1966,7 +1966,7 @@ void death_cry( CHAR_DATA *ch )
 		msg = "You hear someone's death cry.";
 
 	was_in_room = ch->in_room;
-	for ( door = 0; door <= 5; door++ )
+	for ( door = 0; door < MAX_DIR; door++ )
 	{
 		EXIT_DATA *pexit;
 
@@ -4024,7 +4024,6 @@ void do_throw( CHAR_DATA *ch, char *argument )
 	int dir = 0;
 	int dist = 0;
 	int MAX_DIST = 2;
-	extern char *dir_noun [];
 
 	argument = one_argument( argument, arg1 );
 	argument = one_argument( argument, arg2 );
@@ -4087,12 +4086,12 @@ void do_throw( CHAR_DATA *ch, char *argument )
 					MAX_DIST = 4;
 			}
 
-			for ( dir = 0; dir < 6; dir++ )
-				if ( arg2[0] == dir_name[dir][0] && !str_prefix( arg2,
-							dir_name[dir] ) )
+			for ( dir = 0; dir < MAX_DIR; dir++ )
+				if ( arg2[0] == direction_table[dir].name[0] && !str_prefix( arg2,
+							direction_table[dir].name ) )
 					break;
 
-			if ( dir == 6 )
+			if ( dir == MAX_DIR )
 			{
 				send_to_char( C_DEFAULT, "Throw in which direction?\n\r", ch );
 				return;
@@ -4124,11 +4123,11 @@ void do_throw( CHAR_DATA *ch, char *argument )
 						IS_SET( pexit->exit_info, EX_CLOSED ) )
 				{
 					sprintf( buf, "A $p flys in from $T and hits the %s wall.",
-							dir_name[dir] );
-					act( AT_WHITE, buf, ch, Obj, dir_noun[rev_dir[dir]], TO_ROOM );
+							direction_table[dir].name );
+					act( AT_WHITE, buf, ch, Obj, direction_table[direction_table[dir].reverse].noun, TO_ROOM );
 					sprintf( buf, "You throw your $p %d room%s $T, where it hits a wall.",
 							dist, dist > 1 ? "s" : "" );
-					act( AT_WHITE, buf, ch, Obj, dir_name[dir], TO_CHAR );
+					act( AT_WHITE, buf, ch, Obj, direction_table[dir].name, TO_CHAR );
 					char_from_room( ch );
 					char_to_room( ch, in_room );
 					oprog_throw_trigger( Obj, ch );
@@ -4143,11 +4142,11 @@ void do_throw( CHAR_DATA *ch, char *argument )
 			{
 				act( AT_WHITE,
 						"A $p flies in from $T and falls harmlessly to the ground.",
-						ch, Obj, dir_noun[rev_dir[dir]], TO_ROOM );
+						ch, Obj, direction_table[direction_table[dir].reverse].noun, TO_ROOM );
 				sprintf( buf,
 						"Your $p falls harmlessly to the ground %d room%s $T of here.",
 						dist, dist > 1 ? "s" : "" );
-				act( AT_WHITE, buf, ch, Obj, dir_name[dir], TO_CHAR );
+				act( AT_WHITE, buf, ch, Obj, direction_table[dir].name, TO_CHAR );
 				char_from_room( ch );
 				char_to_room( ch, in_room );
 				oprog_throw_trigger( Obj, ch );
@@ -4162,11 +4161,11 @@ void do_throw( CHAR_DATA *ch, char *argument )
 			char_from_room( ch );
 			char_to_room( ch, in_room );
 			act( AT_WHITE, "A $p flys in from $T and hits $n!", victim, Obj,
-					dir_noun[rev_dir[dir]], TO_NOTVICT );
+					direction_table[direction_table[dir].reverse].noun, TO_NOTVICT );
 			act( AT_WHITE, "A $p flys in from $T and hits you!", victim, Obj,
-					dir_noun[rev_dir[dir]], TO_CHAR );
+					direction_table[direction_table[dir].reverse].noun, TO_CHAR );
 			sprintf( buf, "Your $p flew %d rooms %s and hit $N!", dist,
-					dir_name[dir] );
+					direction_table[dir].name );
 			act( AT_WHITE, buf, ch, Obj, victim, TO_CHAR );
 			oprog_throw_trigger( Obj, ch );
 			unequip_char( ch, Obj );
@@ -4195,73 +4194,6 @@ void do_throw( CHAR_DATA *ch, char *argument )
 	return;
 }
 
-
-/*
-   void do_track( CHAR_DATA *ch, char *argument )
-   {
-   ROOM_INDEX_DATA *room[30];
-   ROOM_INDEX_DATA *to_room;
-   ROOM_INDEX_DATA *in_room;
-   EXIT_DATA *pexit[30];
-   char arg[MAX_STRING_LENGTH];
-   int vnums[30];
-   int dist[30];
-   int sdir[30];
-   int dir[6];
-   int nsdir;
-
-   nsdir = 1;
-
-   argument = one_argument( argument, arg );
-
-   if ( is_number( arg ) || arg[0] == \0' )
-   {
-   send_to_char( AT_WHITE, "Track what?\n\r", ch );
-   return;
-   }
-
-   in_room = ch->in_room;
-   to_room = ch->in_room;
-
-   for ( dir = 0; dir != -1; dir++ )
-   {
-   if ( !( pexit[nsdir] = ch->in_room->exit[dir] )
-   || ( !( to_room = pexit[nsdir]->to_room ) ) )
-   {
-   if ( dir == 6 )
-   dir = -1;
-   continue;
-
-   char_from_room( ch );
-   char_to_room( ch, to_room );
-
-   if ( get_char_room( ch, arg ) )
-   break;
-
-
-   }
-
-   }
-
-   if ( dir != -1 )
-   {
-   sprintf( log_buf, "You sense the trail of %s to the %s.\n\r",
-   arg, dir_name[dir] );
-   send_to_char( AT_WHITE, log_buf, ch );
-   char_from_room( ch );
-   char_to_room( ch, in_room );
-   }
-
-   if ( dir == -1 )
-   {
-   sprintf( log_buf, "You can't sense any %s from here.\n\r", arg );
-   send_to_char( AT_WHITE, log_buf, ch );
-   return;
-   }
-
-   return;
-   }
-   */
 
 void do_drain_life(CHAR_DATA *ch, char *argument)
 {
@@ -5652,13 +5584,9 @@ void do_challenge(CHAR_DATA *ch, char *argument)
 
 		}
 
-		if ( !str_cmp( arg2, "n" ) || !str_cmp( arg2, "north" ) ) door = 0;
-		else if ( !str_cmp( arg2, "e" ) || !str_cmp( arg2, "east"  ) ) door = 1;
-		else if ( !str_cmp( arg2, "s" ) || !str_cmp( arg2, "south" ) ) door = 2;
-		else if ( !str_cmp( arg2, "w" ) || !str_cmp( arg2, "west"  ) ) door = 3;
-		else if ( !str_cmp( arg2, "u" ) || !str_cmp( arg2, "up"    ) ) door = 4;
-		else if ( !str_cmp( arg2, "d" ) || !str_cmp( arg2, "down"  ) ) door = 5;
-		else door = dice(1,6) - 1;
+		if ( (door = get_direction(arg2)) == -1 ) {
+			door = number_door();
+		}
 
 		if(ch == victim)
 		{
@@ -5690,9 +5618,9 @@ void do_challenge(CHAR_DATA *ch, char *argument)
 			return;
 		}
 		if ( number_percent( ) < ch->pcdata->learned[gsn_flip] ){
-			sprintf(buf1, "You flip $N, sending $M %s.", dir_name[door]);
-			sprintf(buf2, "$n flips $N, sending $M %s.", dir_name[door]);
-			sprintf(buf3, "$n flips you, sending you %s.", dir_name[door]);
+			sprintf(buf1, "You flip $N, sending $M %s.", direction_table[door].name);
+			sprintf(buf2, "$n flips $N, sending $M %s.", direction_table[door].name);
+			sprintf(buf3, "$n flips you, sending you %s.", direction_table[door].name);
 			act(AT_BLUE, buf2, ch, NULL, victim, TO_NOTVICT );
 			act(AT_BLUE, buf1, ch, NULL, victim, TO_CHAR );
 			act(AT_BLUE, buf3, ch, NULL, victim, TO_VICT );
@@ -5703,7 +5631,7 @@ void do_challenge(CHAR_DATA *ch, char *argument)
 
 			act(AT_BLUE, "$n comes flying into the room.", victim, NULL, NULL,
 					TO_ROOM);
-			if ( (pexit = pexit->to_room->exit[rev_dir[door]]) &&
+			if ( (pexit = pexit->to_room->exit[direction_table[door].reverse]) &&
 					pexit->to_room == from_room )
 				eprog_exit_trigger( pexit, victim->in_room, victim );
 			else

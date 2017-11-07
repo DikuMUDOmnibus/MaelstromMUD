@@ -201,7 +201,7 @@ bool tprog_percent_check( CHAR_DATA *actor, OBJ_DATA *obj, void *vo,
 				&& ( number_percent( ) < atoi( tprg->arglist ) ) )
 		{
 			/*       sprintf( log_buf, "Room: %d", tprg->in_room->vnum );
-					 log_string( log_buf, CHANNEL_CODER, -1 ); 
+					 log_string( log_buf, CHANNEL_CODER, -1 );
 					 log_string( tprg->comlist, CHANNEL_CODER, -1 );   */
 			mprog_driver( tprg->comlist, smob, actor, obj, vo );
 			return TRUE;
@@ -286,10 +286,13 @@ void eprog_mob( EXIT_DATA *pExit, ROOM_INDEX_DATA *room )
 	{
 		int door;
 
-		for ( door = 0; door < 6; door++ )
-			if ( pExit == room->exit[door] )
+		for ( door = 0; door < MAX_DIR; door++ ) {
+			if ( pExit == room->exit[door] ) {
 				break;
-		if ( door == 6 )
+			}
+		}
+
+		if ( door == MAX_DIR )
 		{
 			bug( "EProg_mob:  Door not in room %d", room->vnum );
 			smob->name = str_dup( "door" );
@@ -297,11 +300,8 @@ void eprog_mob( EXIT_DATA *pExit, ROOM_INDEX_DATA *room )
 		}
 		else
 		{
-			const char *new_dir[] = {"northern", "eastern", "southern", "western",
-				"roof", "ground"};
-
-			smob->name = str_dup( dir_name[door] );
-			sprintf(buf, "The %s exit", new_dir[door] );
+			smob->name = str_dup( direction_table[door].name );
+			sprintf(buf, "The %s exit", direction_table[door].descriptive );
 		}
 	}
 	smob->short_descr = str_dup(buf);

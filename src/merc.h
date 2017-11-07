@@ -543,6 +543,19 @@ struct size_type {
   float  mcarry;              // Carrying capacity modifier
 };
 
+/**
+ * Direction Structure
+ */
+struct direction_type {
+  char * name;
+  char * noun;
+  char * navigation;
+  char * descriptive;
+  char * abbreviation;
+  char * blood;
+  int    reverse;
+};
+
 /*
  * Data structure for notes.
  */
@@ -1248,7 +1261,7 @@ struct  kill_data
  * Directions.
  * Used in #ROOMS.
  */
-#define DIR_MAX           5
+#define MAX_DIR           6
 
 #define DIR_NORTH         0
 #define DIR_EAST          1
@@ -2345,12 +2358,13 @@ extern  const struct  wis_app_type  wis_app   [ 31 ];
 extern  const struct  dex_app_type  dex_app   [ 31 ];
 extern  const struct  con_app_type  con_app   [ 31 ];
 
-extern  const struct  class_type    class_table [ MAX_CLASS   ];
-extern  const struct  race_type     race_table  [ MAX_RACE    ];
-extern  const struct  size_type     size_table  [ MAX_SIZE    ];
+extern  const struct  class_type     class_table     [ MAX_CLASS ];
+extern  const struct  race_type      race_table      [ MAX_RACE  ];
+extern  const struct  size_type      size_table      [ MAX_SIZE  ];
+extern  const struct  direction_type direction_table [ MAX_DIR   ];
 
-extern  const struct  wiznet_type   wiznet_table  [ ];
-extern  const struct  quest_data    quest_table   [ ];
+extern  const struct  wiznet_type    wiznet_table    [ ];
+extern  const struct  quest_data     quest_table     [ ];
 
 extern  struct  cmd_type  cmd_table [ ];
 extern  const struct  liq_type  liq_table [ LIQ_MAX     ];
@@ -3170,6 +3184,8 @@ int get_curr_cha  args( ( CHAR_DATA *ch ) );
 int can_carry_n args( ( CHAR_DATA *ch ) );
 int can_carry_w args( ( CHAR_DATA *ch ) );
 int xp_tolvl  args( ( CHAR_DATA *ch ) );
+bool is_direction args( ( char *str ) );
+int get_direction args( ( char *str ) );
 bool  is_name   args( (  CHAR_DATA *ch, char *str, char *namelist) );
 bool    is_exact_name   args( ( char *str, char *namelist ) );
 void  affect_to_char  args( ( CHAR_DATA *ch, AFFECT_DATA *paf ) );
@@ -3481,8 +3497,6 @@ DECLARE_DO_FUN( do_clear        );  /* Angi */
 /*
  * Global Constants
  */
-extern  char *  const dir_name        [];
-extern  const int rev_dir         [];
 extern  const struct  spec_type spec_table  [];
 
 /*
