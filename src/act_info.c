@@ -4562,94 +4562,21 @@ void do_worth( CHAR_DATA *ch, char *argument )
 /*
  * Finger routine written by Dman.
  */
-void do_finger( CHAR_DATA *ch, char *argument )
-{
-	char buf[MAX_STRING_LENGTH];
+void do_finger( CHAR_DATA *ch, char *argument ) {
 	char arg[MAX_INPUT_LENGTH];
-	CHAR_DATA *victim;
-	char      const *class;
-	char      const *race;
 
 	one_argument( argument, arg );
-	/*
-	   if (get_trust(ch) < 215)
-	   {
-	   send_to_char(C_DEFAULT,"Finger is temporarily disabled.\n\r",ch);
-	   return;
-	   }
-	   */
-	if ( arg[0] == '\0' )
-	{
+
+	if  ( IS_NPC( ch ) ) {
+		return;
+	}
+
+	if ( arg[0] == '\0' ) {
 		send_to_char( AT_WHITE, "Finger whom?\n\r", ch );
 		return;
 	}
 
-	if ( !(victim = get_char_world(ch, arg)))
-	{
-		read_finger( ch, argument );
-		return;
-	}
-
-	if ( !can_see( ch, victim ) )
-	{
-		send_to_char( AT_WHITE, "They aren't here.\n\r", ch );
-		return;
-	}
-
-	if  ( IS_NPC( victim ) )
-	{
-		send_to_char( AT_WHITE, "Not on NPC's.\n\r", ch );
-		return;
-	}
-
-
-
-	sprintf( buf, "          Finger Info\n\r" );
-	send_to_char( AT_WHITE, buf, ch );
-
-	sprintf( buf, "          ------ ----\n\r\n\r" );
-	send_to_char( AT_WHITE, buf, ch );
-
-	sprintf( buf, "&CName: &W%-12s\n\r", victim->name);
-	send_to_char( AT_WHITE, buf, ch );
-
-	sprintf( buf, "&CMud Age: &W%2d           &CClan: &W%s\n\r",
-			get_age( victim ), get_clan_index( victim->clan )->name );
-	send_to_char( AT_WHITE, buf, ch );
-
-	sprintf( buf, "&CLevel: &W%2d             &CSex: &W%s\n\r",
-			victim->level,
-			victim->sex == SEX_MALE   ? "male"   :
-			victim->sex == SEX_FEMALE ? "female" : "neutral" );
-	send_to_char( AT_WHITE, buf, ch );
-
-	class = class_short( victim );
-	race = race_table[victim->race].race_name;
-	sprintf( buf, "&CClass: &W%-10s     &CRace: &W%s\n\r", class,race );
-	send_to_char( AT_WHITE, buf, ch );
-
-	sprintf( buf, "&CThief: &W%s\n\r", IS_SET( victim->act, PLR_THIEF ) ? "Yes" : "No" );
-
-	if ( is_class( victim, CLASS_ROGUE ) ) {
-		send_to_char( AT_WHITE, buf, ch );
-	}
-
-	sprintf( buf, "&CTitle: &W%s\n\r", victim->pcdata->title );
-	send_to_char( AT_WHITE, buf, ch );
-
-	sprintf( buf, "&CEmail: &W%s\n\r", victim->pcdata->email );
-	send_to_char( AT_WHITE, buf, ch );
-	sprintf( buf, "&CPlan: &W%s.\n\r", victim->pcdata->plan );
-	send_to_char( AT_WHITE, buf, ch );
-	sprintf( buf, "&CPkills: &W%-15d  &CPkilled: &W%d.\n\r", victim->pkills, victim->pkilled );
-	send_to_char( AT_WHITE, buf, ch );
-	sprintf( buf, "&CArena Wins: &W%-11d  &CArena Losses: &W%d.\n\r", victim->arenawon, victim->arenalost );
-	send_to_char( AT_WHITE, buf, ch );
-	sprintf( buf, "&CWar Kills: &W%-12d  &CWar Deaths: &W%-11d &CWar Points &W%d.\n\r",
-			victim->warkills, victim->wardeaths, victim->warpts );
-	send_to_char( AT_WHITE, buf, ch );
-	sprintf( buf, "&CLast on: &W%s\n\r", (char *) ctime( &ch->logon ) );
-	send_to_char( AT_WHITE, buf, ch );
+	read_finger( ch, argument );
 	return;
 }
 

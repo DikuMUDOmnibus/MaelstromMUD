@@ -145,7 +145,7 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
 	fprintf( fp, "#%s\n", IS_NPC( ch ) ? "MOB" : "PLAYER"	);
 
 	fprintf( fp, "Nm          %s~\n",	ch->name		);
-	if ( ch->pcdata->lname && ch->pcdata->lname[0] != '\0' ) 
+	if ( ch->pcdata->lname && ch->pcdata->lname[0] != '\0' )
 		fprintf( fp, "Lnm         %s~\n",   ch->pcdata->lname       );
 	fprintf( fp, "ShtDsc      %s~\n",	ch->short_descr		);
 	fprintf( fp, "LngDsc      %s~\n",	ch->long_descr		);
@@ -187,7 +187,7 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
 	fprintf( fp, "Act         %d\n",    ch->act				);
 	fprintf( fp, "Act2        %d\n",    ch->act2			);
 	fprintf( fp, "AffdBy      %ld\n",	ch->affected_by		);
-	fprintf( fp, "AffdBy2     %ld\n",    ch->affected_by2        ); 
+	fprintf( fp, "AffdBy2     %ld\n",    ch->affected_by2        );
 	fprintf( fp, "ImmBits     %ld\n",    ch->imm_flags		);
 	fprintf( fp, "ResBits     %ld\n",	ch->res_flags		);
 	fprintf( fp, "VulBits     %ld\n",	ch->vul_flags		);
@@ -198,7 +198,7 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
 	fprintf( fp, "Prac        %d\n",	ch->practice		);
 	fprintf( fp, "SavThr      %d\n",	ch->saving_throw	);
 	fprintf( fp, "Align       %d\n",	ch->alignment		);
-	fprintf( fp, "SAlign      %c\n",	ch->start_align		); 
+	fprintf( fp, "SAlign      %c\n",	ch->start_align		);
 	fprintf( fp, "Hit         %d\n",	ch->hitroll		);
 	fprintf( fp, "Dam         %d\n",	ch->damroll		);
 	fprintf( fp, "Armr        %d\n",	ch->armor		);
@@ -213,7 +213,7 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
 	if ( ch->questpoints != 0 )
 		fprintf( fp, "QuestPnts   %d\n",        ch->questpoints         );
 	if ( ch->nextquest != 0 )
-		fprintf( fp, "QuestNext   %d\n",        ch->nextquest           );  
+		fprintf( fp, "QuestNext   %d\n",        ch->nextquest           );
 	else if ( ch->countdown != 0 )
 		fprintf( fp, "QuestNext   %d\n",        30                    );
 	/* 30 */
@@ -245,7 +245,7 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
 		fprintf( fp, "Incarnations %d\n",		ch->incarnations		);
 		fprintf( fp, "Raisepts    %d\n",		ch->raisepts				);
 
-		fprintf( fp, "Bank   	  %d %d %d\n",	
+		fprintf( fp, "Bank   	  %d %d %d\n",
 				ch->pcdata->bankaccount.gold,
 				ch->pcdata->bankaccount.silver,
 				ch->pcdata->bankaccount.copper );
@@ -260,10 +260,10 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
 				ch->pcdata->perm_cha );
 
 		fprintf( fp, "AtrMd       %d %d %d %d %d %d\n",
-				ch->pcdata->mod_str, 
-				ch->pcdata->mod_int, 
+				ch->pcdata->mod_str,
+				ch->pcdata->mod_int,
 				ch->pcdata->mod_wis,
-				ch->pcdata->mod_dex, 
+				ch->pcdata->mod_dex,
 				ch->pcdata->mod_con,
 				ch->pcdata->mod_cha );
 
@@ -274,7 +274,7 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
 
 		fprintf( fp, "Pglen       %d\n",   ch->pcdata->pagelen     );
 		fprintf( fp, "Empower     %s~\n",  ch->pcdata->empowerments);
-		fprintf( fp, "Detract     %s~\n",  ch->pcdata->detractments);	
+		fprintf( fp, "Detract     %s~\n",  ch->pcdata->detractments);
 		for ( sn = 0; skill_table[sn].name[0] != '\0'; sn++ )
 		{
 			if ( skill_table[sn].name && ch->pcdata->learned[sn] > 0 )
@@ -382,19 +382,19 @@ void fwrite_obj( CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest,
 		case ITEM_SCROLL:
 			if ( obj->value[1] > 0 )
 			{
-				fprintf( fp, "Spell 1      '%s'\n", 
+				fprintf( fp, "Spell 1      '%s'\n",
 						skill_table[obj->value[1]].name );
 			}
 
 			if ( obj->value[2] > 0 )
 			{
-				fprintf( fp, "Spell 2      '%s'\n", 
+				fprintf( fp, "Spell 2      '%s'\n",
 						skill_table[obj->value[2]].name );
 			}
 
 			if ( obj->value[3] > 0 )
 			{
-				fprintf( fp, "Spell 3      '%s'\n", 
+				fprintf( fp, "Spell 3      '%s'\n",
 						skill_table[obj->value[3]].name );
 			}
 
@@ -406,7 +406,7 @@ void fwrite_obj( CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest,
 		case ITEM_WAND:
 			if ( obj->value[3] > 0 )
 			{
-				fprintf( fp, "Spell 3      '%s'\n", 
+				fprintf( fp, "Spell 3      '%s'\n",
 						skill_table[obj->value[3]].name );
 			}
 
@@ -486,7 +486,7 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name )
 		| PLR_PROMPT
 		| PLR_ANSI
 		| PLR_COMBAT;
-	ch->pcdata->lname			= NULL;        /* str_dup( "" );   &str_empty[0]; */ 
+	ch->pcdata->lname			= NULL;        /* str_dup( "" );   &str_empty[0]; */
 	ch->pcdata->pwd			= str_dup( "" );
 	ch->pcdata->bamfin			= str_dup( "" );
 	ch->pcdata->bamfout			= str_dup( "" );
@@ -500,7 +500,7 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name )
 	ch->pcdata->afkchar                 = str_dup( "" );
 	ch->pcdata->title			= str_dup( "" );
 	ch->pcdata->perm_str		= 13;
-	ch->pcdata->perm_int		= 13; 
+	ch->pcdata->perm_int		= 13;
 	ch->pcdata->perm_wis		= 13;
 	ch->pcdata->perm_dex		= 13;
 	ch->pcdata->perm_con		= 13;
@@ -616,7 +616,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp )
 
 			case 'A':
 				KEY( "Act",		ch->act,		fread_number( fp ) );
-				KEY( "Act2",	ch->act2,		fread_number( fp ) ); 
+				KEY( "Act2",	ch->act2,		fread_number( fp ) );
 				KEY( "AffdBy",	ch->affected_by,	fread_number( fp ) );
 				KEY( "AffdBy2",     ch->affected_by2,       fread_number( fp ) );
 				KEY( "Afkmes",      ch->pcdata->afkchar,    fread_string( fp ) );
@@ -764,7 +764,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp )
 					}
 				}
 				KEY( "ClkLev",      ch->cloaked,            fread_number( fp ) );
-				KEY( "Cquestpnts",  ch->cquestpnts,         fread_number( fp ) );            
+				KEY( "Cquestpnts",  ch->cquestpnts,         fread_number( fp ) );
 
 				if ( !str_cmp( word, "Cond" ) )
 				{
@@ -1036,7 +1036,7 @@ void fread_obj( CHAR_DATA *ch, FILE *fp, bool storage )
 				KEY( "AntiClassF",	obj->anti_class_flags,	fread_number( fp ) );
 				KEY( "AntiRaceF",	obj->anti_race_flags,	fread_number( fp ) );
 				if ( !str_cmp( word, "Activates") )
-				{	
+				{
 					obj->ac_type	  = fread_number( fp );
 					obj->ac_vnum	  = fread_number( fp );
 					obj->ac_charge[0] = fread_number( fp );
@@ -1047,7 +1047,7 @@ void fread_obj( CHAR_DATA *ch, FILE *fp, bool storage )
 
 				if ( !str_cmp( word, "AcSpell" ) )
 				{
-					obj->ac_spell     = fread_string( fp ); 
+					obj->ac_spell     = fread_string( fp );
 					fMatch            = TRUE;
 					break;
 				}
@@ -1079,7 +1079,7 @@ void fread_obj( CHAR_DATA *ch, FILE *fp, bool storage )
 				break;
 
 			case 'C':
-				KEY( "Copper", 	obj->cost.copper,	fread_number( fp ) ); 
+				KEY( "Copper", 	obj->cost.copper,	fread_number( fp ) );
 				KEY( "Cost",	obj->cost.copper,	fread_number( fp ) );
 				break;
 
@@ -1148,7 +1148,7 @@ void fread_obj( CHAR_DATA *ch, FILE *fp, bool storage )
 				break;
 			case 'G':
 				KEY( "Gold",	obj->cost.gold,		fread_number( fp ) );
-				break; 
+				break;
 			case 'I':
 				KEY( "ItemType",	obj->item_type,		fread_number( fp ) );
 				break;
@@ -1178,7 +1178,7 @@ void fread_obj( CHAR_DATA *ch, FILE *fp, bool storage )
 
 			case 'S':
 				KEY( "ShortDescr",	obj->short_descr,	fread_string( fp ) );
-				KEY( "Silver", 	obj->cost.silver,	fread_number( fp ) ); 
+				KEY( "Silver", 	obj->cost.silver,	fread_number( fp ) );
 				if ( !str_cmp( word, "Spell" ) )
 				{
 					int iValue;
@@ -1254,9 +1254,9 @@ void save_pet( CHAR_DATA *ch, FILE *fp, CHAR_DATA *pet )
 {
 	AFFECT_DATA  *paf;
 	fprintf( fp, "#PET\n" );
-	fprintf( fp, "%d %d %d %d %d %ld %ld %d %s~ %s~\n", pet->pIndexData->vnum, 
+	fprintf( fp, "%d %d %d %d %d %ld %ld %d %s~ %s~\n", pet->pIndexData->vnum,
 			pet->hit, pet->perm_hit, pet->mod_hit, pet->act, pet->affected_by,pet->affected_by2,
-			pet->level, pet->short_descr, pet->long_descr );  
+			pet->level, pet->short_descr, pet->long_descr );
 
 	for ( paf = pet->affected; paf; paf = paf->next )
 	{
@@ -1289,14 +1289,14 @@ void save_pet( CHAR_DATA *ch, FILE *fp, CHAR_DATA *pet )
 
 	fprintf( fp, "\n" );
 	return;
-}  
+}
 
 void fread_pet( CHAR_DATA *ch, FILE *fp )
 {
 	MOB_INDEX_DATA *pMob;
 	CHAR_DATA *pet;
 	int vnum;
-	char * word;  
+	char * word;
 	vnum = fread_number( fp );
 	if ( ( pMob = get_mob_index( vnum ) ) == NULL ||
 			( pet = create_mobile( pMob ) ) == NULL )
@@ -1314,7 +1314,7 @@ void fread_pet( CHAR_DATA *ch, FILE *fp )
 	pet->affected_by = fread_number( fp ) | AFF_CHARM;
 	pet->affected_by2 = fread_number( fp );
 	pet->level = fread_number( fp );
-	free_string(pet->short_descr); 
+	free_string(pet->short_descr);
 	pet->short_descr = str_dup(fread_string( fp ));
 	free_string(pet->long_descr);
 	pet->long_descr = str_dup(fread_string( fp ));
@@ -1440,14 +1440,14 @@ void fwrite_alias( CHAR_DATA *ch, FILE *fp )
  */
 void corpse_back( CHAR_DATA *ch, OBJ_DATA *corpse )
 {
-	FILE      *fp; 	
+	FILE      *fp;
 	OBJ_DATA  *obj, *obj_next;
 	OBJ_DATA  *obj_nest,  *objn_next;
 	char       strsave[MAX_INPUT_LENGTH ];
-	char       buf    [MAX_STRING_LENGTH]; 	 	
+	char       buf    [MAX_STRING_LENGTH];
 	int        corpse_cont[1024];
 	int        item_level [1024];
-	int        c =1; 
+	int        c =1;
 	int        checksum1 =0;
 	int        checksum2 =0;
 
@@ -1456,10 +1456,10 @@ void corpse_back( CHAR_DATA *ch, OBJ_DATA *corpse )
 		return;
 
 	if ( IS_NPC( ch ) )
-		return;         
+		return;
 
-	/* Ok, it isn't empty determine the # of items in the corpse. 
-	 * Store the items in the LAST number of the array to  write 
+	/* Ok, it isn't empty determine the # of items in the corpse.
+	 * Store the items in the LAST number of the array to  write
 	 * it backwards.  Easiest way to do it.
 	 */
 	for ( obj = corpse->contains; obj; obj = obj_next )
@@ -1469,8 +1469,8 @@ void corpse_back( CHAR_DATA *ch, OBJ_DATA *corpse )
 			continue;
 		corpse_cont[c] = obj->pIndexData->vnum;
 		item_level[c] = obj->level;
-		checksum1 += corpse_cont[c];        
-		checksum2 +=  item_level[c];        
+		checksum1 += corpse_cont[c];
+		checksum2 +=  item_level[c];
 		++c;
 		if ( obj->contains) /* get stuff in containers */
 		{
@@ -1481,16 +1481,16 @@ void corpse_back( CHAR_DATA *ch, OBJ_DATA *corpse )
 					continue;
 				corpse_cont[c] = obj_nest->pIndexData->vnum;
 				item_level[c] = obj_nest->level;
-				checksum1 += corpse_cont[c];        
-				checksum2 +=  item_level[c];        
+				checksum1 += corpse_cont[c];
+				checksum2 +=  item_level[c];
 				++c;
-			}     
+			}
 		}
 	}
 	/* Check the corpse for only one item. Assumes if true the the player
 	 * died trying to retrieve their corpse. Change it if you like.
 	 */
-	if (c <= 2 ) 
+	if (c <= 2 )
 		return;
 
 	/* Add in the number of items and checksum for validation check */
@@ -1520,10 +1520,10 @@ void corpse_back( CHAR_DATA *ch, OBJ_DATA *corpse )
 			fprintf( fp, "%d ", corpse_cont[i] );
 			fprintf( fp, "%d ",  item_level[i] );
 		}
-		fprintf( fp, "%d ",  corpse_cont[i+1] );      
-		fprintf( fp, "%d\n",  item_level[i+1] );      
+		fprintf( fp, "%d ",  corpse_cont[i+1] );
+		fprintf( fp, "%d\n",  item_level[i+1] );
 	}
-	fclose( fp );        
+	fclose( fp );
 	fpReserve = fopen( NULL_FILE, "r" );
 	ch->pcdata->corpses = 1;
 	return;
@@ -1549,9 +1549,9 @@ void corpse_back( CHAR_DATA *ch, OBJ_DATA *corpse )
 	   break;
 
 	   for ( c = 1 ; c < corpse_cont[i][0] +2 ; c++ )
-	   {    
-	   corpse_cont[i][c] = fread_number ( fp );            
-	   item_level[i][c]  = fread_number ( fp );        
+	   {
+	   corpse_cont[i][c] = fread_number ( fp );
+	   item_level[i][c]  = fread_number ( fp );
 	   }
 	   }
 
@@ -1578,8 +1578,8 @@ void corpse_back( CHAR_DATA *ch, OBJ_DATA *corpse )
 	   checksum2 = 0;
 
 	   for ( c = 1 ; c < corpse_cont[i][0] +1 ; c++ )
-	   {    
-	   fprintf( fp, "%d " , corpse_cont[i][c]  );            
+	   {
+	   fprintf( fp, "%d " , corpse_cont[i][c]  );
 	   fprintf( fp, "%d " ,  item_level[i][c]  );
 	   checksum1 += corpse_cont[i][c];
 	   checksum2 +=  item_level[i][c];
@@ -1587,142 +1587,90 @@ void corpse_back( CHAR_DATA *ch, OBJ_DATA *corpse )
 	   fprintf( fp, "%d ", checksum1  );
 	   fprintf( fp, "%d\n", checksum2 );
 	   }
-	   fprintf( fp, "99 99" );      
+	   fprintf( fp, "99 99" );
 
 	   }
 	   fclose( fp );
 	   fpReserve = fopen( NULL_FILE, "r" );
 	   return;
 	   */
-}            
+}
 
-
-void save_finger ( CHAR_DATA *ch )
-{
-	// busted, disabling for now -- Ristowe
-	return;
-
+void save_finger( CHAR_DATA *ch ) {
 	FILE *fp;
 	char buf      [ MAX_STRING_LENGTH ];
 	char fingsave [ MAX_INPUT_LENGTH  ];
 
-	if ( IS_NPC( ch ) || ch->level < 2 )
+	if ( IS_NPC( ch ) || ch->level < 2 ) {
 		return;
+	}
 
-	if ( ch->desc && ch->desc->original )
+	if ( ch->desc && ch->desc->original ) {
 		ch = ch->desc->original;
+	}
 
 	sprintf( fingsave, "%s%c/%s.fng", PLAYER_DIR, LOWER(ch->name[0]), capitalize( ch->name ) );
 
 	fclose(fpReserve);
-	if ( !( fp = fopen ( fingsave, "w" ) ) )
-	{
+
+	if ( !( fp = fopen ( fingsave, "w" ) ) ) {
 		sprintf( buf, "Save_finger_Info: fopen %s ", ch->name );
 		bug( buf, 0 );
 		perror( fingsave );
-	}
-	else
+	} else {
 		fwrite_finger( ch, fp );
+	}
 
 	fclose( fp );
+
 	fpReserve = fopen( NULL_FILE, "r" );
+
 	return;
 }
 
-void fwrite_finger( CHAR_DATA *ch, FILE *fp )
-{
-
-	fprintf( fp, "&CName: &W%s\n",		ch->name	);
-	fprintf( fp, "&CMud Age: &W%-13d",		get_age( ch )	);
+void fwrite_finger( CHAR_DATA *ch, FILE *fp ) {
+	fprintf( fp, "&CName: &W%s\n", ch->name	);
+	fprintf( fp, "&CMud Age: &W%-13d", get_age( ch )	);
 	fprintf( fp, "&CClan: &W%s\n", get_clan_index( ch->clan )->name );
-	fprintf( fp, "&CLevel: &W%-16d",		ch->level	);
-	fprintf( fp, "&CSex: &W%s\n",	  ch->sex == SEX_MALE ? "male" :
-			ch->sex == SEX_FEMALE ? "female" : "neutral" );
-	fprintf( fp, "&CClass: &W%-15s",	class_short( ch ) );
-	fprintf( fp, "&CRace: &W%s\n",	race_table[ch->race].race_name );
+	fprintf( fp, "&CLevel: &W%-16d", ch->level	);
+	fprintf( fp, "&CSex: &W%s\n", ch->sex == SEX_MALE ? "male" : ch->sex == SEX_FEMALE ? "female" : "neutral" );
+	fprintf( fp, "&CClass: &W%-15s", class_short( ch ) );
+	fprintf( fp, "&CRace: &W%s\n", race_table[ch->race].race_name );
 
 	if ( is_class( ch, CLASS_ROGUE ) ) {
-		fprintf( fp, "&CThief: &W%s\n", ( IS_SET( ch->act, PLR_THIEF ) ) ? "Yes" : "No" ); 
+		fprintf( fp, "&CThief: &W%s\n", ( IS_SET( ch->act, PLR_THIEF ) ) ? "Yes" : "No" );
 	}
 
-	/*  fprintf( fp, "Mobs Killed: %-10d",   ch->pcdata->kills	);
-		fprintf( fp, "Deaths: %d\n\n", 	   ch->pcdata->died	); */
-	fprintf( fp, "&CTitle: &W%s\n",			ch->pcdata->title );
-	fprintf( fp, "&CEmail: &W%s\n",			ch->pcdata->email );
-	fprintf( fp, "&CPlan: &W%s\n",			ch->pcdata->plan );
-	fprintf( fp, "&CPkills: &W%-15d",			ch->pkills );
-	fprintf( fp, "&CPkilled: &W%d\n",			ch->pkilled );
-	fprintf( fp, "&CArena Wins: &W%-11d",		ch->arenawon );
-	fprintf( fp, "&CArena Losses: &W%d\n",	ch->arenalost );
-	fprintf( fp, "&CWar Kills: &W%-12d",			ch->warkills );
-	fprintf( fp, "&CWar Deaths: &W%-11d",			ch->wardeaths );
-	fprintf( fp, "&CWar Points: &W%d\n",			ch->warpts );
-	fprintf( fp, "&CLast On: &W%s~\n", 		(char * ) ctime(&ch->logon) );
+	// fprintf( fp, "Mobs Killed: %-10d", ch->pcdata->kills	);
+	// fprintf( fp, "Deaths: %d\n\n", ch->pcdata->died	);
+	fprintf( fp, "&CTitle: &W%s\n", ch->pcdata->title );
+	fprintf( fp, "&CEmail: &W%s\n", ch->pcdata->email );
+	fprintf( fp, "&CPlan: &W%s\n", ch->pcdata->plan );
+	fprintf( fp, "&CPkills: &W%-15d", ch->pkills );
+	fprintf( fp, "&CPkilled: &W%d\n", ch->pkilled );
+	fprintf( fp, "&CArena Wins: &W%-11d", ch->arenawon );
+	fprintf( fp, "&CArena Losses: &W%d\n", ch->arenalost );
+	fprintf( fp, "&CWar Kills: &W%-12d", ch->warkills );
+	fprintf( fp, "&CWar Deaths: &W%-11d", ch->wardeaths );
+	fprintf( fp, "&CWar Points: &W%d\n", ch->warpts );
+	fprintf( fp, "&CLast On: &W%s~\n", (char * ) ctime(&ch->logon) );
 	return;
 }
-/*
-   void read_finger ( CHAR_DATA *ch, char *argument )
-   {
-   FILE *fp;
-   char buf [ MAX_STRING_LENGTH ];
-   char fingload [ MAX_INPUT_LENGTH ];
-   char arg [ MAX_INPUT_LENGTH ];
-   char arg2 [ MAX_INPUT_LENGTH ];
 
-   argument = one_argument( argument, arg );
-   argument = one_argument( argument, arg2 );
-
-   sprintf( fingload, "%s%c/%s.fng", PLAYER_DIR, LOWER(arg[0]),
-   capitalize( arg ) );
-
-   fclose(fpReserve);
-   if ( !( fp = fopen ( fingload, "r" ) ) )
-   {
-   sprintf( buf, "Load_finger_Info: fopen %s ", arg );
-   bug( buf, 0 );
-   perror( fingload );
-   sprintf( buf, "The character %s doesn't exist.\n\r", arg );
-   send_to_char( AT_WHITE, buf, ch );
-   }
-   else
-   fread_finger ( ch, fp );
-
-   fclose( fp );
-   fpReserve = fopen( NULL_FILE, "r" );
-   return;
-   }
-
-   void fread_finger ( CHAR_DATA *ch, FILE *fp )
-   {
-   char *finger;
-   char  buf[MAX_STRING_LENGTH];
-
-   sprintf( buf, "          Finger Info             \n\r" );
-   send_to_char( AT_WHITE, buf, ch );
-
-   sprintf( buf, "          ------ ----\n\r\n\r" );
-   send_to_char( AT_WHITE, buf, ch );
-
-   finger = fread_string( fp );
-   sprintf( buf, "%s", finger );
-   send_to_char( AT_WHITE, buf, ch );
-   send_to_char( AT_WHITE, "\n\r", ch );
-   return;
-   } 
-   */
-void read_finger ( CHAR_DATA *ch, char *argument )
-{
+void read_finger ( CHAR_DATA *ch, char *argument ) {
 	FILE *fp;
-	char buf [ MAX_STRING_LENGTH ];
-	char fingload [ MAX_INPUT_LENGTH ];
-	char arg [ MAX_INPUT_LENGTH ];
-	char arg2 [ MAX_INPUT_LENGTH ];
+	char  buf[ MAX_STRING_LENGTH ];
+	char  fingload[ MAX_INPUT_LENGTH ];
+	char  arg[ MAX_INPUT_LENGTH ];
+	char  arg2[ MAX_INPUT_LENGTH ];
+
 	argument = one_argument( argument, arg );
-	argument = one_argument(argument, arg2 );
+	argument = one_argument( argument, arg2 );
+
 	sprintf( fingload, "%s%c/%s.fng", PLAYER_DIR, LOWER(arg[0]), capitalize( arg ) );
 	fclose(fpReserve);
-	if ( !( fp = fopen ( fingload, "r" ) ) )
-	{
+
+	if ( !( fp = fopen ( fingload, "r" ) ) ) {
 		sprintf( buf, "Load_finger_Info: fopen %s ", arg );
 		bug( buf, 0 );
 		perror( fingload );
@@ -1732,30 +1680,32 @@ void read_finger ( CHAR_DATA *ch, char *argument )
 		sprintf( buf, "%s", capitalize( arg ) );
 		fread_finger ( ch, fp, buf );
 	}
-	if(fp)
+
+	if(fp) {
 		fclose( fp );
+	}
+
 	fpReserve = fopen( NULL_FILE, "r" );
-	return;
-}
-void fread_finger ( CHAR_DATA *ch, FILE *fp, char *name )
-{
-	char     *finger;
-	char  buf[MAX_STRING_LENGTH];
-	/*CHAR_DATA  *wch;*/
-	/*CHAR_DATA *victim;*/
-	/* sprintf( buf, "          Finger Info\n\r" );
-	   send_to_char( AT_WHITE, buf, ch );
-	   sprintf( buf,
-	   "          ------ ----\n\r\n\r" );  send_to_char( AT_WHITE, buf, ch );  */
-	sprintf( buf, "\n\r      &CInfo on &W%s\n\r\n\r", name);
-	send_to_char( AT_WHITE, buf, ch );
-	finger = fread_string( fp );
-	sprintf( buf, "%s", finger );
-	send_to_char( AT_WHITE, buf, ch );
-	send_to_char( AT_WHITE, "\n\r", ch );
+
 	return;
 }
 
+void fread_finger ( CHAR_DATA *ch, FILE *fp, char *name ) {
+	char     *finger;
+	char  buf[MAX_STRING_LENGTH];
+
+	sprintf( buf, "\n\r      &CInfo on &W%s\n\r\n\r", name);
+	send_to_char( AT_WHITE, buf, ch );
+
+	finger = fread_string( fp );
+
+	sprintf( buf, "%s", finger );
+	send_to_char( AT_WHITE, buf, ch );
+
+	send_to_char( AT_WHITE, "\n\r", ch );
+
+	return;
+}
 
 void save_banlist( BAN_DATA *banlist )
 {
