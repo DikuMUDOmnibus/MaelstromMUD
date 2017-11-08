@@ -2726,67 +2726,6 @@ void do_backstab( CHAR_DATA *ch, char *argument )
 
 	return;
 }
-void do_assasinate( CHAR_DATA *ch, char *argument )
-{
-	OBJ_DATA  *obj;
-	CHAR_DATA *victim;
-	char       arg [ MAX_INPUT_LENGTH ];
-
-	if (ch->clan != 4)
-	{
-		send_to_char( C_DEFAULT, "Huh?\n\r", ch );
-		return;
-	}
-
-	one_argument( argument, arg );
-
-	if ( arg[0] == '\0' )
-	{
-		send_to_char(C_DEFAULT, "Assasinate whom?\n\r", ch );
-		return;
-	}
-
-	if ( !( victim = get_char_room( ch, arg ) ) )
-	{
-		send_to_char(C_DEFAULT, "They aren't here.\n\r", ch );
-		return;
-	}
-
-	if ( victim == ch )
-	{
-		send_to_char(C_DEFAULT, "How can you sneak up on yourself?\n\r", ch );
-		return;
-	}
-
-	if ( is_safe( ch, victim ) )
-		return;
-
-	if ( !( obj = get_eq_char( ch, WEAR_WIELD ) )
-			|| obj->value[3] != 11 )
-	{
-		send_to_char(C_DEFAULT, "You need to wield a piercing weapon.\n\r", ch );
-		return;
-	}
-
-	if ( victim->fighting )
-	{
-		send_to_char(C_DEFAULT, "You can't assasinate a fighting person.\n\r", ch );
-		return;
-	}
-
-	if ( victim->hit < (MAX_HIT(victim)-50) )
-	{
-		act(C_DEFAULT, "$N is hurt and suspicious ... you can't sneak up.",
-				ch, NULL, victim, TO_CHAR );
-		return;
-	}
-
-	WAIT_STATE( ch, skill_table[gsn_backstab].beats );
-	multi_hit( ch, victim, gsn_backstab );
-
-	return;
-}
-
 
 
 void do_flee( CHAR_DATA *ch, char *argument )

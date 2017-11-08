@@ -105,11 +105,6 @@ const struct size_type size_table[MAX_SIZE] = {
 };
 
 /*
- * Immort Levels
- */
-#define L_HER            LEVEL_HERO
-
-/*
  * Wiznet table and prototype for future flag setting
  */
 const struct wiznet_type wiznet_table[] = {

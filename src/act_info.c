@@ -4267,54 +4267,6 @@ void do_cinfo( CHAR_DATA *ch, char *argument )
 	return;
 }
 
-void do_questflag( CHAR_DATA *ch, char *argument )
-{
-	if (IS_NPC( ch ) )
-	{
-		send_to_char( AT_WHITE, "Only PCs may do this.\n\r", ch );
-		return;
-	}
-
-	if (quest)
-	{
-		if ( ch->level < qmin )
-		{
-			send_to_char( AT_WHITE, "You are too low of level for this quest.\n\r", ch );
-			return;
-		}
-		if ( ch->level > qmax )
-		{
-			send_to_char( AT_WHITE, "You are too high of level for this quest.\n\r", ch );
-			return;
-		}
-	}
-
-	if (!(quest) && !IS_SET( ch->act, PLR_QUESTOR ) )
-	{
-		send_to_char( AT_WHITE, "There is currently no quest.\n\r", ch );
-		return;
-	}
-
-	if ( IS_SET( ch->act, PLR_QUEST ) && (quest) )
-	{
-		send_to_char( AT_WHITE, "You must wait for an immortal to remove you from the quest.\n\r", ch );
-		return;
-	}
-	else if ( IS_SET( ch->act, PLR_QUEST ) )
-	{
-		REMOVE_BIT( ch->act, PLR_QUEST );
-		send_to_char( AT_WHITE, "Ok, you are no longer questing.\n\r", ch );
-		return;
-	}
-	else
-	{
-		SET_BIT( ch->act, PLR_QUEST );
-		send_to_char( AT_WHITE, "Ok, you are now questing.\n\r", ch );
-		return;
-	}
-	return;
-}
-
 void do_autocoins( CHAR_DATA *ch, char *argument )
 	/*void do_autogold( CHAR_DATA *ch, char *argument ) */
 {
@@ -4483,44 +4435,6 @@ return;
    }
    */
 
-void do_farsight( CHAR_DATA *ch, char *argument )
-{
-	CHAR_DATA       *victim;
-	char             target_name[MAX_STRING_LENGTH];
-	ROOM_INDEX_DATA *from_room;
-
-	if (IS_NPC(ch))
-		return;
-	if (ch->clan != 7 )
-	{
-		send_to_char(C_DEFAULT, "Huh?\n\r", ch );
-		return;
-	}
-	one_argument( argument, target_name );
-
-	if ( !( victim = get_char_world( ch, target_name ) )
-			|| IS_SET( victim->in_room->room_flags, ROOM_PRIVATE   )
-			|| IS_SET( victim->in_room->room_flags, ROOM_SOLITARY  )
-			|| IS_SET( victim->in_room->area->area_flags, AREA_PROTOTYPE )
-			|| IS_AFFECTED( victim, AFF_NOASTRAL ) )
-	{
-		send_to_char(AT_BLUE, "You failed.\n\r", ch );
-		return;
-	}
-	from_room = ch->in_room;
-	if ( ch != victim )
-	{
-		char_from_room( ch );
-		char_to_room( ch, victim->in_room );
-	}
-	do_look( ch, "auto" );
-	if ( ch != victim )
-	{
-		char_from_room( ch );
-		char_to_room( ch, from_room );
-	}
-	return;
-}
 
 void do_worth( CHAR_DATA *ch, char *argument )
 {

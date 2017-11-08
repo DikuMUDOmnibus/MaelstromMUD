@@ -2343,13 +2343,13 @@ int mmlvl_mana  args( ( CHAR_DATA *ch, int sn ) );
 /*
  * Structure for a command in the command lookup table.
  */
-struct  cmd_type
-{
+struct  cmd_type {
   char * const  name;
-  DO_FUN *    do_fun;
-  int     position;
-  int     level;
-  int     log;
+  DO_FUN * do_fun;
+  int position;
+  int level;
+  int log;
+  bool npc;
 };
 
 /*
@@ -2444,7 +2444,6 @@ DECLARE_DO_FUN( do_clanquest    );
 DECLARE_DO_FUN( do_quest        );
 DECLARE_DO_FUN( do_qecho        );
 DECLARE_DO_FUN( do_qset         );
-DECLARE_DO_FUN( do_questflag    );
 DECLARE_DO_FUN( do_mpasound     );
 DECLARE_DO_FUN( do_mpat         );
 DECLARE_DO_FUN( do_mpecho       );
@@ -2475,7 +2474,6 @@ DECLARE_DO_FUN( do_ansi         );
 DECLARE_DO_FUN( do_answer );
 DECLARE_DO_FUN( do_antidote );
 DECLARE_DO_FUN( do_areas  );
-DECLARE_DO_FUN( do_assasinate   );
 DECLARE_DO_FUN( do_astat        );
 DECLARE_DO_FUN( do_astrip       );
 DECLARE_DO_FUN( do_at   );
@@ -2488,8 +2486,6 @@ DECLARE_DO_FUN( do_autosac      );
 DECLARE_DO_FUN( do_autosplit    );
 DECLARE_DO_FUN( do_backstab );
 DECLARE_DO_FUN( do_bamf   );
-/*DECLARE_DO_FUN( do_bamfin );
-  DECLARE_DO_FUN( do_bamfout  ); */
 DECLARE_DO_FUN( do_bash   );
 DECLARE_DO_FUN( do_berserk      );
 DECLARE_DO_FUN( do_bid          );
@@ -2553,8 +2549,6 @@ DECLARE_DO_FUN( do_enter        );
 DECLARE_DO_FUN( do_equipment  );
 DECLARE_DO_FUN( do_examine  );
 DECLARE_DO_FUN( do_exits  );
-DECLARE_DO_FUN( do_farsight     );
-DECLARE_DO_FUN( do_fighting );
 DECLARE_DO_FUN( do_fill   );
 DECLARE_DO_FUN( do_finger       );
 DECLARE_DO_FUN( do_flee   );
@@ -2644,14 +2638,12 @@ DECLARE_DO_FUN( do_plan   );
 DECLARE_DO_FUN( do_playerlist   );
 DECLARE_DO_FUN( do_pload        );
 DECLARE_DO_FUN( do_poison_weapon);
-DECLARE_DO_FUN( do_pose   );
 DECLARE_DO_FUN( do_practice );
 DECLARE_DO_FUN( do_pray         );
 DECLARE_DO_FUN( do_prompt       );
 DECLARE_DO_FUN( do_punch        );
 DECLARE_DO_FUN( do_purge  );
 DECLARE_DO_FUN( do_put    );
-DECLARE_DO_FUN( do_pwhere       );
 DECLARE_DO_FUN( do_quaff  );
 DECLARE_DO_FUN( do_question );
 DECLARE_DO_FUN( do_qui    );
@@ -2763,8 +2755,6 @@ DECLARE_DO_FUN( do_yell   );
 DECLARE_DO_FUN( do_zap    );
 DECLARE_DO_FUN( do_stare        );
 /* XOR */
-/*DECLARE_DO_FUN( do_vnum   );*/
-DECLARE_DO_FUN( do_load   );
 DECLARE_DO_FUN( do_push   );
 DECLARE_DO_FUN( do_drag   );
 DECLARE_DO_FUN( do_authorize  );

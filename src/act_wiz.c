@@ -449,76 +449,6 @@ void do_detract(CHAR_DATA *ch, char *argument)
 	return;
 }
 
-void do_load(CHAR_DATA *ch, char *argument )
-{
-	char arg[MAX_INPUT_LENGTH];
-
-	argument = one_argument(argument,arg);
-
-	if (arg[0] == '\0')
-	{
-		send_to_char(AT_BLUE, "Syntax:\n\r",ch);
-		send_to_char(AT_BLUE, "  load mob <vnum>\n\r",ch);
-		send_to_char(AT_BLUE, "  load obj <vnum> <level>\n\r",ch);
-		return;
-	}
-
-	if (!str_cmp(arg,"mob") || !str_cmp(arg,"char"))
-	{
-		do_mload(ch,argument);
-		return;
-	}
-
-	if (!str_cmp(arg,"obj"))
-	{
-		do_oload(ch,argument);
-		return;
-	}
-	/* echo syntax */
-	do_load(ch,"");
-}
-
-#if 0
-/* taken out for lack of use */
-void do_vnum(CHAR_DATA *ch, char *argument)
-{
-	char arg[MAX_INPUT_LENGTH];
-	char *string;
-
-	string = one_argument(argument,arg);
-
-	if (arg[0] == '\0')
-	{
-		send_to_char(AT_BLUE, "Syntax:\n\r",ch);
-		send_to_char(AT_BLUE, "  vnum obj <name>\n\r",ch);
-		send_to_char(AT_BLUE, "  vnum mob <name>\n\r",ch);
-		send_to_char(AT_BLUE, "  vnum skill <skill or spell>\n\r",ch);
-		return;
-	}
-
-	if (!str_cmp(arg,"obj"))
-	{
-		do_ofind(ch,string);
-		return;
-	}
-
-	if (!str_cmp(arg,"mob") || !str_cmp(arg,"char"))
-	{
-		do_mfind(ch,string);
-		return;
-	}
-
-	if (!str_cmp(arg,"skill") || !str_cmp(arg,"spell"))
-	{
-		do_slookup(ch,string);
-		return;
-	}
-	/* do both */
-	do_mfind(ch,argument);
-	do_ofind(ch,argument);
-}
-#endif
-
 void do_wizhelp( CHAR_DATA *ch, char *argument )
 {
 	char		buf[MAX_STRING_LENGTH];
@@ -557,41 +487,7 @@ void do_wizhelp( CHAR_DATA *ch, char *argument )
 		send_to_char(AT_GREY, "\n\r", ch);
 	return;
 }
-#if 0
-/* taken out because it was replaced */
-void do_bamfin( CHAR_DATA *ch, char *argument )
-{
-	if ( !IS_NPC( ch ) )
-	{
-		if ( longstring( ch, argument ) )
-			return;
 
-		smash_tilde( argument );
-		free_string( ch->pcdata->bamfin );
-		ch->pcdata->bamfin = str_dup( argument );
-		send_to_char(AT_GREY, "Ok.\n\r", ch );
-	}
-	return;
-}
-#endif
-
-#if 0
-/* Taken out because it was replaced */
-void do_bamfout( CHAR_DATA *ch, char *argument )
-{
-	if ( !IS_NPC( ch ) )
-	{
-		if ( longstring( ch, argument ) )
-			return;
-
-		smash_tilde( argument );
-		free_string( ch->pcdata->bamfout );
-		ch->pcdata->bamfout = str_dup( argument );
-		send_to_char(C_DEFAULT, "Ok.\n\r", ch );
-	}
-	return;
-}
-#endif
 void do_slaymes(CHAR_DATA *ch, char *argument )
 {
 	char arg[MAX_INPUT_LENGTH];
@@ -3296,27 +3192,6 @@ void do_silence( CHAR_DATA *ch, char *argument )
 	return;
 }
 
-/*
-   void do_fighting( CHAR_DATA *ch, char *argument )
-   {
-   char buf[MAX_STRING_LENGTH];
-   DESCRIPTOR_DATA *d;
-
-   for ( d = descriptor_list; d != NULL; d = d->next )
-   {
-   if (d->connected == CON_PLAYING)
-   {
-   CHAR_DATA *victim;
-
-   victim = d->original ? d->original : d->character;
-
-   sprintf(buf, "%s is fighting: %s\n\r", victim->name,
-   victim->fighting ? victim ->fighting->name : "(none)" );
-   send_to_char(AT_WHITE, buf, ch);
-   }
-   }
-   }
-   */
 void do_peace( CHAR_DATA *ch, char *argument )
 {
 	CHAR_DATA *rch;
