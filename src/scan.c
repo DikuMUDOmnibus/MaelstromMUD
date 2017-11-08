@@ -5,59 +5,57 @@
 #include <string.h>
 #include "merc.h"
 
-int scan_room (CHAR_DATA *ch, const ROOM_INDEX_DATA *room,char *buf)
-{
-	CHAR_DATA *target = room->people;
-	int number_found = 0;
+int scan_room( CHAR_DATA * ch, const ROOM_INDEX_DATA * room, char * buf ) {
+  CHAR_DATA * target       = room->people;
+  int         number_found = 0;
 
-	while (target != NULL) /* repeat as long more peple in the room */
-	{
-		if (can_see(ch,target)) /* show only if the character can see the
-								   target */
-		{
-			strcat (buf, " - ");
-			strcat (buf, IS_NPC(target) ? target->short_descr :
-					target->name);
-			strcat (buf, "\n\r");
-			number_found++;
-		}
-		target = target->next_in_room;
-	}
+  while ( target != NULL ) {       /* repeat as long more peple in the room */
+    if ( can_see( ch, target ) ) { /* show only if the character can see the
+                                      target */
+      strcat( buf, " - " );
+      strcat( buf, IS_NPC( target ) ? target->short_descr :
+              target->name );
+      strcat( buf, "\n\r" );
+      number_found++;
+    }
 
-	return number_found;
+    target = target->next_in_room;
+  }
+
+  return number_found;
 }
 
-void do_scan (CHAR_DATA *ch, char *argument)
-{
-	EXIT_DATA * pexit;
-	ROOM_INDEX_DATA * room;
-	char buf[MAX_STRING_LENGTH];
-	int dir;
-	int distance;
+void do_scan( CHAR_DATA * ch, char * argument ) {
+  EXIT_DATA       * pexit;
+  ROOM_INDEX_DATA * room;
+  char              buf[ MAX_STRING_LENGTH ];
+  int               dir;
+  int               distance;
 
-	sprintf (buf, "Right here you see:\n\r");
+  sprintf( buf, "Right here you see:\n\r" );
 
-	if ( scan_room(ch, ch->in_room, buf) == 0) {
-		strcat(buf, "Nobody\n\r");
-	}
+  if ( scan_room( ch, ch->in_room, buf ) == 0 ) {
+    strcat( buf, "Nobody\n\r" );
+  }
 
-	send_to_char (AT_BLUE, buf,ch);
+  send_to_char( AT_BLUE, buf, ch );
 
-	for (dir = 0; dir < MAX_DIR; dir++) {
-		room = ch->in_room;
+  for ( dir = 0; dir < MAX_DIR; dir++ ) {
+    room = ch->in_room;
 
-		for (distance = 1 ; distance < 4; distance++) {
-			pexit = room->exit[dir];
-			if ((pexit == NULL) || (pexit->to_room == NULL) || (IS_SET(pexit->exit_info, EX_CLOSED))) {
-				break;
-			}
+    for ( distance = 1; distance < 4; distance++ ) {
+      pexit = room->exit[ dir ];
 
-			if (scan_room(ch,pexit->to_room,buf)) {
-				sprintf (buf, "%d %s from here you see:\n\r", distance, direction_table[dir].name);
-				send_to_char (AT_WHITE,buf,ch);
-			}
+      if ( ( pexit == NULL ) || ( pexit->to_room == NULL ) || ( IS_SET( pexit->exit_info, EX_CLOSED ) ) ) {
+        break;
+      }
 
-			room = pexit->to_room;
-		}
-	}
+      if ( scan_room( ch, pexit->to_room, buf ) ) {
+        sprintf( buf, "%d %s from here you see:\n\r", distance, direction_table[ dir ].name );
+        send_to_char( AT_WHITE, buf, ch );
+      }
+
+      room = pexit->to_room;
+    }
+  }
 }
