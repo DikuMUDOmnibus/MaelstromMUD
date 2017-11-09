@@ -18,9 +18,7 @@
 *  around, comes around.                                                  *
 ***************************************************************************/
 
-/*
- * The current version of Maelstrom
- */
+// the current version of maelstrom
 #define VERSION "2.0.0"
 
 #include <jansson.h>
@@ -655,10 +653,9 @@ struct  kill_data {
  * ACT bits for mobs.
  * Used in #MOBILES.
  */
-#define ACT_IS_NPC    BV00   // Auto set for mobs
-#define ACT_SENTINEL  BV01   // Stays in one room
-#define ACT_SCAVENGER BV02   // Picks up objects
-
+#define ACT_IS_NPC      BV00 // Auto set for mobs
+#define ACT_SENTINEL    BV01 // Stays in one room
+#define ACT_SCAVENGER   BV02 // Picks up objects
 #define ACT_AGGRESSIVE  BV05 // Attacks PC's
 #define ACT_STAY_AREA   BV06 // Won't leave area
 #define ACT_WIMPY       BV07 // Flees when hurt

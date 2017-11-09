@@ -1138,6 +1138,22 @@ void bust_a_prompt( DESCRIPTOR_DATA * d ) {
         sprintf( buf2, "%d", MAX_MOVE( ch ) );
         i = buf2;
         break;
+      case 'w':
+        sprintf( buf2, "%d", ch->carry_weight );
+        i = buf2;
+        break;
+      case 'W':
+        sprintf( buf2, "%d", can_carry_w( ch ) );
+        i = buf2;
+        break;
+      case 'i':
+        sprintf( buf2, "%d", ch->carry_number );
+        i = buf2;
+        break;
+      case 'I':
+        sprintf( buf2, "%d", can_carry_n( ch ) );
+        i = buf2;
+        break;
       case 'x':
         sprintf( buf2, "%d", ch->exp );
         i = buf2;

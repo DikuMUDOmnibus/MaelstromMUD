@@ -1394,6 +1394,10 @@ yourself.
         &W%M :  &YDisplay your maximum mana
         &W%v :  &YDisplay your current moves
         &W%V :  &YDisplay your maximum moves
+        &W%w :  &YDisplay the total weight of items you are carrying
+        &W%W :  &YDisplay the maximum weight you can carry
+        &W%i :  &YDisplay the number of items you are carrying
+        &W%I :  &YDisplay the maximum number of items you can carry
         &W%x :  &YDisplay your current experience
         &W%X :  &YDisplay experience needed to level
         &W%G :  &YDisplay your gold held
