@@ -1,5 +1,5 @@
 #AREADATA
-Name        { EVIL } Town of Ravenwood   Grunt~
+Name        Town of Ravenwood~
 Levels      0 105
 Builders    Grunt Dolguard~
 VNUMs       1300 1499
@@ -21,7 +21,7 @@ Belaf, the Oracle of Doom stands here in a reddish mist.
 Belaf is the voice of the gods of destruction, acting as a channel to
 communicate their wishes upon their fanatic followers.  He stands proudly in
 a flowing black robe covered in red arcane symbols, and has many tattoos
-lining his bald head, and running along his arms down to his fingertips.  
+lining his bald head, and running along his arms down to his fingertips.
 ~
 1441795 33554600 16 -1000 S
 110 0 0 75000d0+0 0d0+0
@@ -48,7 +48,7 @@ Laikahra, Mistress of the Dark stands guard over her beloved temple.
 Laikahra stands around 5 feet 5 inches tall, and looks to be posessed by
 pure evil.  Her jet black hair falls gently over her shoulders, and she
 glares at you with eyes as cold as sharpened steel.  She will stop at
-nothing to protect her temple, or any who worship there.  
+nothing to protect her temple, or any who worship there.
 ~
 1441795 369115264 0 -1000 S
 103 0 0 14500d0+0 0d0+0
@@ -93,7 +93,7 @@ Arlise, Rahim's secretary is busy keeping track of the appointment log.
 ~
 Arlise is a plain looking young woman, constantly busy keeping track of
 the various students who come to Rahim to train their bodies and minds to
-the highest standards.  
+the highest standards.
 ~
 67 33554560 0 -1000 S
 103 0 0 41000d0+0 0d0+0
@@ -115,9 +115,9 @@ Rahim~
 Rahim~
 Rahim stands here prepared to train your body and mind.
 ~
-Rahim is a tall well-built man with long black hair and steel grey eyes. 
+Rahim is a tall well-built man with long black hair and steel grey eyes.
 He looks you over pondering the potential heights he can raise your physical
-and mental abilities to.  
+and mental abilities to.
 ~
 515 33554560 0 -1000 S
 110 0 0 75000d0+0 0d0+0
@@ -143,7 +143,7 @@ Tiala is here rummaging through her desk.
 ~
 Tiala is a short and sort of ugly young girl, who right now looks
 somewhat overwhelmed with her work.  She continuously rummages through her
-desk, looking at times like she wants to scream out loud.  
+desk, looking at times like she wants to scream out loud.
 ~
 67 33554560 0 0 S
 103 0 0 41000d0+0 0d0+0
@@ -167,7 +167,7 @@ Jalil waits patiently here to better your adventuring skills.
 Jalil is a wise old man, who has seen many a battle, and posesses the
 scars along his face and body to prove it.  Nobody questions his bizarre
 training techniques, as they have worked wonders for many a clumsy oaf of an
-adventurer.  
+adventurer.
 ~
 1091 33554560 0 -1000 S
 110 0 0 75000d0+0 0d0+0
@@ -175,13 +175,13 @@ adventurer.
 0 0 1
 15 0 0
 >all_greet_prog 100~
-look $n 
+look $n
 Say Hey there, $n.
 say watch this..
 emote juggles a few daggers in the air.
 emote catches a dagger in each hand, and the third in his mouth.
 emote puts the daggers away.
-say I assume you're here to learn something besides 
+say I assume you're here to learn something besides
 say that neat party trick..
 say Well, let's get to it!
 ~
@@ -194,7 +194,7 @@ The sheriff is here standing guard over the jail cell.
 The sheriff is a large half-ogre who actually posesses some reasonable
 intelligence.  He has sworn to uphold the laws of the town, even at the
 expense of his own life.  He glances at you as if to figure out what your
-business with him might be.  
+business with him might be.
 ~
 3 8424 0 0 S
 103 0 0 41000d0+0 0d0+0
@@ -260,7 +260,7 @@ Morkos stands guard over the treasures of Ravenwood.
 ~
 Morkos is a slender dark-haired elf with gleaming pale eyes.  He
 appraises your worth with one quick glance, and smiles, wondering what your
-money pouch may hold.  
+money pouch may hold.
 ~
 1441795 33554560 0 -1000 S
 110 0 0 7500d0+0 0d0+0
@@ -294,7 +294,7 @@ Gaeran stands here, busy repairing a piece of armor.
 Gaeran is a huge demon, with a broad grin, that can catch even the most
 hostile enemy offguard.  He is well known for his talents, and is rumored to
 be able to piece together a full suit of plate armor from the tiniest of
-scraps.  
+scraps.
 ~
 1441795 33554432 0 -1000 S
 105 0 0 88888d0+0 0d0+0
@@ -315,7 +315,7 @@ A tall half-ogre stands guard over the guild.
 ~
 The warrior is a huge half-ogre, completely bald except for a short
 stubbly beard which covers most of his face.  He glances at you with a
-lopsided sneer and raises an eyebrow.  
+lopsided sneer and raises an eyebrow.
 ~
 3 335544320 0 -500 S
 103 0 0 30000d0+0 0d0+0
@@ -355,7 +355,7 @@ A tall Elven female stands guard here.
 ~
 The woman is somewhat slender, with blonde hair and blue eyes.  Judging
 by her appearance, she is obviously a master of the arts of magic.  She
-sizes you up with a cold stare and smirks slightly.  
+sizes you up with a cold stare and smirks slightly.
 ~
 1048643 100663864 0 0 S
 103 0 0 88888d0+0 0d0+0
@@ -398,7 +398,7 @@ The Mayor of Ravenwood~
 The Mayor is standing here greeting all who approach.
 ~
 The mayor is an ancient looking dwarf, who bears the scars of many
-battles.  He smiles at you pleasantly and waits for you to speak.  
+battles.  He smiles at you pleasantly and waits for you to speak.
 ~
 393219 369115264 0 -1000 S
 103 0 0 88888d0+0 0d0+0
@@ -421,7 +421,7 @@ endif
 >bribe_prog 50~
 if isgood($n)
 say Sorry, I don't take bribes.
-say ...but this qualifies as a gift. Thanks. 
+say ...but this qualifies as a gift. Thanks.
 say Now LEAVE!!
 else
 mpoload 1305
@@ -438,7 +438,7 @@ Gonthar, the shopkeeper is busy stocking some fresh vegetables.
 ~
 Gonthar is an aged human with a slight hunchback.  His hands look like
 that of a farmer who has always worked hard.  He greets your gaze with a
-smile and a nod as he goes about his work.  
+smile and a nod as he goes about his work.
 ~
 3 128 0 -300 S
 103 0 0 88888d0+0 0d0+0
@@ -457,7 +457,7 @@ An iguana~
 &GA small iguana flicks its tongue at you.
 ~
 &GThe iguana is a small lizard around 3 feet long with leathery skin, and a
-long tail.  
+long tail.
 ~
 257 0 0 0 S
 3 0 0 30d0+0 0d0+0
@@ -470,7 +470,7 @@ A raven~
 A raven is perched here.
 ~
 &bThe raven is a large black bird, with a wingspan of about 4 feet.  The
-foreteller of doom, the raven is a feared omen by many people.  
+foreteller of doom, the raven is a feared omen by many people.
 ~
 257 0 0 0 S
 5 0 0 100d0+0 0d0+0
@@ -483,7 +483,7 @@ A wolverine~
 &OA ferocious canine growls at the passersby.
 ~
 &OThe wolverine is a fierce fighter, and its savagery is well known by any
-who have encountered a pack of them on a walk through the woods.  
+who have encountered a pack of them on a walk through the woods.
 ~
 257 0 0 0 S
 8 0 0 150d0+0 0d0+0
@@ -510,7 +510,7 @@ An exotic looking man is here tending to the animals.
 ~
 Balul has travelled the world seeking new animals to add to his
 collection.  He hunts only to capture and train the animals, and frowns on
-the killing of them for anything but food.  
+the killing of them for anything but food.
 ~
 3 128 0 -1000 S
 103 0 0 88888d0+0 0d0+0
@@ -549,7 +549,7 @@ A wise old druid stands guard over the entrance.
 ~
 The druid is an ancient half-elven female, who appears to be as one with
 nature.  She wears a crown of leaves upon her head, and a dress woven from
-flax.  
+flax.
 ~
 393219 134217856 0 -1000 S
 103 0 0 30001d0+0 0d0+0
@@ -588,7 +588,7 @@ A tall slender man is here playing a small guitar and humming to himself.
 The bard is assigned the duty of keeping outsiders away from the bards
 guild, allowing fellow bards to drink, and practice in peace.  He is around
 6 feet 1 inch tall and rather thin for a human, but seems to be friendly
-enough.  
+enough.
 ~
 1048579 268435584 0 -1000 S
 103 0 0 30000d0+0 0d0+0
@@ -626,9 +626,9 @@ A Paladin of Ravenwood~
 A paladin of the evil gods stands guard here.
 ~
 This paladin is one who follows a path of evil in everything he does,
-trust in in his chosen deities to keep him safe, and protect him from harm. 
+trust in in his chosen deities to keep him safe, and protect him from harm.
 He bears the scars of many battles and looks like he could put many a sharp
-tongued adventurer in the ground permanently. 
+tongued adventurer in the ground permanently.
 ~
 67 33554560 0 -1000 S
 103 0 0 80000d0+0 0d0+0
@@ -638,10 +638,10 @@ tongued adventurer in the ground permanently.
 >act_prog p arrives from the south.~
 if ispc($n)
 look $n
-else 
+else
 say No pets are allowed in here!
 mptransfer $n 1376
-break 
+break
 endif
 if class($n)== 7
 say Welcome $n
@@ -665,7 +665,7 @@ A female paladin tends to the bar here.
 ~
 She tends bar pretty well, serving each customer promptly, and with a
 smile, yet still looks as though she could shred the toughest opponent to
-ribbons.  
+ribbons.
 ~
 1441795 128 0 -1000 S
 106 0 0 50000d0+0 0d0+0
@@ -686,7 +686,7 @@ A seedy looking thief stands guard in the shadows here.
 ~
 The man is difficult to get a decent description of, as most of his face
 is covered by a leather hood.  His hand runs back and forth along his dagger
-as he sizes you up.  
+as he sizes you up.
 ~
 1048579 98432 0 -1000 S
 103 0 0 30000d0+0 0d0+0
@@ -724,7 +724,7 @@ An old man stands here practicing telekinesis.
 ~
 The psionicist appears to be older than the town itself, and has an air
 of great intelligence about him.  As his gaze meets yours, you feel a
-presence enter your mind, and then fade away.  
+presence enter your mind, and then fade away.
 ~
 1048579 16384 0 -1000 S
 109 0 0 80000d0+0 0d0+0
@@ -746,7 +746,7 @@ else
 if isimmort($n)
 Say Immortals are welcome regardless of class.
 else
-Say I sense that you are not a Psionicist. 
+Say I sense that you are not a Psionicist.
 say I order you to leave, Now.
 emote forces $n to leave.
 mptransfer $n 1372
@@ -761,7 +761,7 @@ A cleric stands here guarding the hall.
 ~
 The cleric has an unholy fire within her eyes, and smells of a sulfurous
 smoke.  She stares at you and for an instant you swear you can see hell in
-her eyes.  
+her eyes.
 ~
 3 33554560 0 -1000 S
 109 0 0 80000d0+0 0d0+0
@@ -797,7 +797,7 @@ A priest stand here tending to the bar.
 ~
 While many priests deal with the spirit of the person, this priest deals
 in selling food to go with the free spirits that are served at this bar.  He
-looks to be a calm gentleman who is in touch with his unholy god.  
+looks to be a calm gentleman who is in touch with his unholy god.
 ~
 3 33554560 0 -1000 S
 -106 0 0 99999d0+0 0d0+0
@@ -816,7 +816,7 @@ The bartender~
 A hefty looking warrior is tending bar here.
 ~
 The bartender is an older warrior, long since retired, who seems to hold
-a grudge about hanging up his sword and shield for an apron.  
+a grudge about hanging up his sword and shield for an apron.
 ~
 3 0 0 -1000 S
 103 0 0 33000d0+0 0d0+0
@@ -841,7 +841,7 @@ A wine loving druid tends bar here.
 This druid is one who has decided to focus his worship on the nature of
 the many grains and fruits which make up some of the finest alcoholic
 beverages available in the realm.  She is regarded by her peers as an expert
-in her field, and only uses the finest ingredients in her concoctions.  
+in her field, and only uses the finest ingredients in her concoctions.
 ~
 3 0 0 -1000 S
 109 0 0 30000d0+0 0d0+0
@@ -869,7 +869,7 @@ A one handed man in black garb tends bar here.
 The bartender looks to be a bit on the older side, and the most prominent
 feature on him is the fact that his right hand is missing.  Obviously he was
 caught stealing some time ago, and forced into retirement by both the lack
-of his good hand, and the shame of being caught.  
+of his good hand, and the shame of being caught.
 ~
 3 0 0 -1000 S
 109 0 0 30000d0+0 0d0+0
@@ -897,7 +897,7 @@ A being made of stone tends to the bar here.
 ~
 The golem was created to make sure that the mage's bar would always be
 open.  Fueled by the power of the ten sorcerers it took to create it, the
-golem serves as both servant, and peacekeeper within these walls.  
+golem serves as both servant, and peacekeeper within these walls.
 ~
 262147 16384 0 -1000 S
 109 0 0 75000d0+0 0d0+0
@@ -922,7 +922,7 @@ A pale skinned female is tending bar here.
 ~
 The bartender looks to be somewhat young to be working in an
 establishment such as this.  She hums a little song to herself, and
-continues about her work keeping the bar well stocked for the patrons.  
+continues about her work keeping the bar well stocked for the patrons.
 ~
 3 0 0 -1000 S
 109 0 0 30000d0+0 0d0+0
@@ -938,7 +938,7 @@ giggle
 Say Hi there, $n.
 say Gonna sing a song for us?
 giggle
-say Ale is on the house, and food is ordered and prepared by me. 
+say Ale is on the house, and food is ordered and prepared by me.
 smile
 ~
 |
@@ -950,7 +950,7 @@ A highly intellectual looking man stands here tending bar.
 The bartender looks to be busy figuring out the density of a bottle of
 wine, using a piece of straw with a string attached to it.  Though he
 appears to be missing a few marbles, he gives off an air of superior
-intelligence.  
+intelligence.
 ~
 3 0 0 -1000 S
 110 0 0 99999d0+0 0d0+0
@@ -972,7 +972,7 @@ A ranger stands guard over the guild entrance.
 ~
 This ranger is a warrior of the natural forces which surround you
 wherever you go.  Due to his evil nature, he manipulates them to serve his
-own selfish needs, yet still will die to defend them.  
+own selfish needs, yet still will die to defend them.
 ~
 1441795 33554560 0 -1000 S
 110 0 0 99999d0+0 0d0+0
@@ -1011,7 +1011,7 @@ A young ranger takes care of the bar, serving food to all.
 ~
 She has the look of both innocence and mischief.  Her ears and facial
 structure give the impression that she is a half elf, yet there is some
-other feature about her that you cannot quite place.  
+other feature about her that you cannot quite place.
 ~
 1441795 33554560 0 -1000 S
 103 0 0 80000d0+0 0d0+0
@@ -1031,7 +1031,7 @@ An ancient looking vampire stnads guard over the Guild hall.
 ~
 He looks to be as old as the dirt upon which he stands, and eyes you with
 a bloodlust never before seen.  Something within his eyes makes contact with
-your senses temporarily overwhelming you.  
+your senses temporarily overwhelming you.
 ~
 1048579 33554560 0 -1000 S
 109 0 0 75000d0+0 0d0+0
@@ -1072,7 +1072,7 @@ An undead bartender stands ready for the next patron.
 The bartender looks to be one of the unwilling members of the vampire
 society, who has gradually come to accept her existance as a member of the
 undead.  She patiently waits on those who approach her, and gathers up the
-empty bowls on her own.  
+empty bowls on her own.
 ~
 3 128 0 -1000 S
 110 0 0 90000d0+0 0d0+0
@@ -1081,7 +1081,7 @@ empty bowls on her own.
 15 0 0
 >all_greet_prog 100~
 say Welcome to my bar $n.
-say Ale is free, 
+say Ale is free,
 say ...but if it's blood you crave, order it through me,
 say ... and I will serve it to you.
 ~
@@ -1093,7 +1093,7 @@ A warrior for hire stands here.
 ~
 The warrior henchman serves his master until his death, or until his
 master can no longer pay him, whichever comes first.  He appears well
-trained in the combative arts, and makes a fine ally.  
+trained in the combative arts, and makes a fine ally.
 ~
 257 0 0 -1000 S
 15 0 0 400d0+0 0d0+0
@@ -1107,7 +1107,7 @@ A mage of the dark arts awaits his orders.
 ~
 The dark warlock is a spell book for hire, more or less.  If the money is
 good, he will join in on any adventure you go on, if the money runs out, he
-may just switch his alliance when the time is right.  
+may just switch his alliance when the time is right.
 ~
 257 0 0 -1000 S
 20 0 0 600d0+0 0d0+0
@@ -1121,7 +1121,7 @@ A travelling priest of doom stands ready here.
 ~
 The priest is dressed in blackened robes, with a hood that covers most of
 his face.  Twisting the dark forces of the evil gods to his needs, he makes
-a fine addition to any adventuring party.  
+a fine addition to any adventuring party.
 ~
 257 0 0 -1000 S
 20 0 0 2001d0+0 0d0+0
@@ -1135,7 +1135,7 @@ Dargh, the head of the mercenaries guild, stands here.
 ~
 Dargh is old and battlescarred from head to toe, and posesses an air of
 nobility about him.  His mercenaries are known to be some of the best
-companions in the realms, and their service is extraordinary.  
+companions in the realms, and their service is extraordinary.
 ~
 1441795 0 0 -1000 S
 110 0 0 75000d0+0 0d0+0
@@ -1163,7 +1163,7 @@ Sabin the furniture dealer stands here polishing his wares.
 Sabin is an older gentleman with a very shrewd look about him.  Rumor has
 it that he built his fortune as a young adventurer, and then gave it up to
 live a more tranquil life within the city walls.  He looks you over to see
-what he may convince you to sell to him.  
+what he may convince you to sell to him.
 ~
 1441795 0 0 -1000 S
 110 0 0 75000d0+0 0d0+0
@@ -1177,7 +1177,7 @@ Kaegh the junk dealer awaits someone to bargain with.
 ~
 Not exactly the best smelling halfling in the region, Kaegh is a
 businessman often scoffed at for his chosen line of trade, however he is
-such a stingy bargainer, that he often makes a good profit on his deals.  
+such a stingy bargainer, that he often makes a good profit on his deals.
 ~
 3 33554560 0 -1000 S
 110 0 0 75000d0+0 0d0+0
@@ -1192,7 +1192,7 @@ Pollaf stands ready to sell you some supplies.
 Pollaf is a retired dwarven warrior who has decided to settle down and
 take up shopkeeping.  She stocks the best items she can find, as she has
 been out adventuring before, and has a keen eye for what someone may be in
-need of.  
+need of.
 ~
 3 128 0 -1000 S
 110 0 0 75000d0+0 0d0+0
@@ -1206,7 +1206,7 @@ Velain is here keeping track of her collection of treasures.
 ~
 Velain is a young woman who appears to have a keen eye for the finest
 precious stones.  She has a haughty air about her, and a condescending look
-in her eye, yet is always fair in her prices.  
+in her eye, yet is always fair in her prices.
 ~
 3 128 0 -1000 S
 -106 0 0 75000d0+0 0d0+0
@@ -1220,7 +1220,7 @@ Kylar is here brewing up a fresh batch of potions.
 ~
 Kylar is a very odd looking old woman.  Something about her eyes gives
 the impression that she might be a little bit on the loony side.  She
-bumbles about mixing up potions and mumbling to herself.  
+bumbles about mixing up potions and mumbling to herself.
 ~
 3 33554432 0 -1000 S
 110 0 0 75000d0+0 0d0+0
@@ -1228,7 +1228,7 @@ bumbles about mixing up potions and mumbling to herself.
 0 0 2
 15 0 0
 >all_greet_prog 100~
-Say Ahh! Welcome to my shop.. 
+Say Ahh! Welcome to my shop..
 say If it's potions you be needing, I have them here.
 emote grins a toothless grin.
 ~
@@ -1254,7 +1254,7 @@ Olyst is polishing a blade to ready it for sale here.
 ~
 Olyst is a mighty looking half-ogre with a keen sense of weaponry.  He
 buys and sells only the best in the land, as he is proud of his reputation,
-and values each customer who comes to him.  
+and values each customer who comes to him.
 ~
 1441795 33554560 0 -1000 S
 110 0 0 75000d0+0 0d0+0
@@ -1273,7 +1273,7 @@ Gwilth is sitting here repairing some scale armor.
 Gwilth is a dwarf who has long since retired from the fields of combat,
 and has decided to make his living protecting his fellow citizens in another
 way, by selling them armor.  He keeps himself busy selling only the finest,
-and buying that rare piece which catches his eye.  
+and buying that rare piece which catches his eye.
 ~
 1441795 33554560 0 -1000 S
 110 0 0 75000d0+0 0d0+0
@@ -1292,9 +1292,9 @@ Fiorthe~
 Her nose buried in a book, Fiorthe transcribes spell to parchment.
 ~
 Fiorthe is a very intelligent looking elf who seems to enjoy spending her
-time making scrolls for sale to the adventurers who pass through this town. 
+time making scrolls for sale to the adventurers who pass through this town.
 Her brow is furrowed in thought as she concentrates on making every word
-legible and correct.  
+legible and correct.
 ~
 3 33554560 0 -1000 S
 110 0 0 75000d0+0 0d0+0
@@ -1314,7 +1314,7 @@ A guard of Ravenwood~
 One of Ravenwood's guards stands at his post.
 ~
 The guard stands staring blankly back at you, with no expression
-whatsoever, yet prepared to defend the town against any attack.  
+whatsoever, yet prepared to defend the town against any attack.
 ~
 67 0 0 -1000 S
 40 0 0 2500d0+0 0d0+0
@@ -1340,7 +1340,7 @@ A Ravenwood guard patrols the streets here.
 ~
 The guard has been well trained to watch for trouble within the town, and
 extinguish it before it gets out of hand, either peacefully, or if need be,
-with violence.  
+with violence.
 ~
 65 302006408 0 -1000 S
 100 0 0 12000d0+0 0d0+0
@@ -1392,7 +1392,7 @@ A bloodrider~
 A soldier of the Bloodrider Army walks along here.
 ~
 A lanky soldier appears to be very young of age, but the look in his face
-tells you that he has seen many things and experienced much.  
+tells you that he has seen many things and experienced much.
 ~
 3 0 0 0 S
 8 0 0 160d0+0 0d0+0
@@ -1421,7 +1421,7 @@ large pouch of gold attached securely at his hip.  The price to get out of
 prison is 100 gold coins, and unless someone makes it to the sheriff
 to bail you out, you'd best have the cash on you now.  Give him the 100
 coins, and he will set you free to safety, a strange and rare bit of
-justice in this town.  
+justice in this town.
 ~
 1441795 33554560 0 -1000 S
 103 0 0 41000d0+0 0d0+0
@@ -1440,7 +1440,7 @@ say Now begone from this town, and do not return!
 mpechoat $n You find yourself elsewhere!
 mptransfer $n 25002
 else
-say Rethink your actions, $n 
+say Rethink your actions, $n
 say and respect the laws of this town, or leave forever.
 mpechoat $n You find yourself elsewhere!
 mptransfer $n 1307
@@ -1471,7 +1471,7 @@ E
 altar~
 The altar has several grooves running across the top surface, for
 catching the blood of sacrifices made to the gods of the underworld, by
-those who worship the dark arts of death and destruction.  
+those who worship the dark arts of death and destruction.
 ~
 #1301
 sword underworld~
@@ -1586,21 +1586,21 @@ E
 five~
 &YThis book was designed and written for the citizens of &zRaven&Owood
 &Yby the founder of the town, &CGrunt U.  Neanderthal&Y.  Do not allow it to
-fall into the wrong hands.  
+fall into the wrong hands.
 ~
 E
 four~
 &PIn the case of an attack on Ravenwood, we have set up an underground
 tunnel system, designed to allow lower levels a place to hide, or to allow
 travel from one point in the town to another without detection.  The
-manholes are set in the following locations: 
- 
+manholes are set in the following locations:
+
 &WBefore the Temple Stairs
 Ravenwood Center
 Gateway Plaza
 At the western and eastern ends of Hangmans Way
 All 4 corners of the city.
- 
+
 &PThis gives a total of 9 manholes. Use them wisely.
 Also note, at the Southeast and Southwest corners of the city lies a secret passage through the walls to the outside of the town gates. Use this to help reinforce the gates in case of an attack.
 ~
@@ -1609,7 +1609,7 @@ three~
 &CWithin Ravenwood we have provided a guild hall for each of the known
 classes.  Useful for gathering with your fellow warrior/mage/whatever for a
 drink and to discuss class business.  Other classes are prohibited from
-these areas, please respect the code of honor we have set forth.  
+these areas, please respect the code of honor we have set forth.
 ~
 E
 one~
@@ -1618,21 +1618,21 @@ of us who wish to live the so-called life of evil a place where we may be
 welcome by all.  Our purpose is to build our forces and eventually wipe out
 the desecrators who inhabit Bethaven.  You citizenship requires that you
 assist in defending the town at all costs.  The forces of good must be
-stopped before they control the entire world!  
+stopped before they control the entire world!
 ~
 E
 guide~
 The guide contains a table of contents, with the chapter title following.
 To read a chapter type look and the number (eg: look one to read chapter
-one) 
- 
+one)
+
 &CChapter   &PTitle
 &COne       &PLiving in Ravenwood
 &CTwo       &PMap of Ravenwood
 &CThree     &PGuilds
 &CFour      &PEmergency Procedures
 &CFive      &PRegarding This Book
- 
+
 ~
 #1306
 shield might~
@@ -1715,7 +1715,7 @@ reserved~
 E
 bulletin~
 A small sign reads: For the posting of rewards for the killing of the
-good, or to brag of victories achieved.  
+good, or to brag of victories achieved.
 ~
 #1311
 painting~
@@ -1732,7 +1732,7 @@ reserved~
 E
 painting~
 The painting depicts several monks dressed in black robes throwing an old
-man dressed in white into a pit of fire and smoke.  
+man dressed in white into a pit of fire and smoke.
 ~
 #1312
 statue~
@@ -1749,7 +1749,7 @@ reserved~
 E
 statue~
 The statue is that of a tall powerful looking demon, holding a large
-sword in each hand, standing over a badly crushed body.  
+sword in each hand, standing over a badly crushed body.
 The plaque reads: Grunt Neanderthal defeats King Belkar in battle
 ~
 #1313
@@ -2052,7 +2052,7 @@ ivory handle.
 E
 hunting~
 You cast your eyes upon a mistreated, but thick-bladed knife with an
-ivory handle.  
+ivory handle.
 ~
 #1332
 warhammer war hammer~
@@ -2114,7 +2114,7 @@ reserved~
 E
 iron breastplate plate~
 A breastplate made of some sturdy iron is in very good shape and is large
-in size.  
+in size.
 ~
 #1335
 scroll recall~
@@ -2340,7 +2340,7 @@ The temple is the center of activity for the town of Ravenwood, for here
 is where people can come to communicate to their gods through the almighty
 Oracle, Belaf The black stone which makes up the walls, ceiling, and floor
 could us a good washing, yet the temple still retains an air of elegance and
-unholiness.  
+unholiness.
 ~
 0 2491404 0
 Rd     0
@@ -2354,7 +2354,7 @@ The Temple Foyer~
 There is a dark purple carpet lining the floor here, which feels soft
 beneath your feet.  You can also see an arched doorway set into the northern
 wall.  You can enter the doorway to the north, or exit the temple to the
-south.  
+south.
 ~
 0 393229 0
 Rd     0
@@ -2373,10 +2373,10 @@ D4
 S
 #1302
 A Hallway Above the Temple~
-You are within a small hallway which branches off to the east and west. 
+You are within a small hallway which branches off to the east and west.
 From the west you can hear the sounds of a mock battle, while to the east
 you can hear a faint groaning sound, followed by some cheering.  You may
-follow the hallway in either direction or travel down the stairs.  
+follow the hallway in either direction or travel down the stairs.
 ~
 0 132104 0
 Rd     0
@@ -2398,7 +2398,7 @@ Rahim's Waiting Room~
 You are in a small room, with a door on the east wall.  This is where the
 many students who come to Rahim for training await their turn at receiving
 the many health tips, along with physical and mental enhancements, that he
-provides.  
+provides.
 ~
 0 132104 0
 Rd     0
@@ -2418,7 +2418,7 @@ This small office is somewhat messy and cluttered with various scraps of
 paper, which are grouped into small piles here and there.  Jalil is a very
 busy man, and is constantly overwhelmed by the number of students he
 receives.  However, he still trains each one as if they were his only student
-in the world.  
+in the world.
 ~
 0 132104 0
 Rd     0
@@ -2437,7 +2437,7 @@ Jalil's College of the Combative Arts~
 The room is set up with several practice dummies, along with various
 pieces of padded armor, and padded weapons.  Several of the dummies look
 scorched or decayed, due to the spells which some students need to practice
-in order to gain the full power of the magic involved.  
+in order to gain the full power of the magic involved.
 ~
 0 132104 0
 Rd     0
@@ -2452,7 +2452,7 @@ Rahim's School of Physical Superiority~
 In this small and musty-smelling room, Rahim trains students of all ages
 to reach their full physical and mental potentials.  There are various sets
 of weights, instruction books, and other paraphenilia strewn about the room,
-which resembles a cross between a gymnasium and a library.  
+which resembles a cross between a gymnasium and a library.
 ~
 0 132104 0
 Rd     0
@@ -2468,14 +2468,14 @@ To the north of you, there is a wide set of steps leading up to the
 temple doors, which are thrust wide open, allowing you to hear the chants
 coming from the inside.  On the ground in front of you, you notice a manhole
 set into the center of the paved street.  Unholy Road continues to the east
-and west from here, and Tombstone Avenue runs to the south.  
+and west from here, and Tombstone Avenue runs to the south.
 ~
 0 0 0
 Rd     0
 E
 manhole~
 The manhole is a flat circular piece of iron about 3 feet in diameter,
-with a handle allowing you to open it.  
+with a handle allowing you to open it.
 ~
 D0
 A wide set of steps lead up to the temple doors.
@@ -2505,7 +2505,7 @@ E. Unholy Road~
 From where you are standing on Unholy Road, you can see the entrance to
 the Ravenwood Temple off to the west.  North of you is a section of the
 thick city wall which barricades the town from the outside world.  You may
-continue to the east or west.  
+continue to the east or west.
 ~
 0 0 0
 Rd     0
@@ -2522,7 +2522,7 @@ S
 E. Unholy Road~
 South of you stands the back end of a small building which looks to be
 some type of shop.  Your only choice of travel is east or west along Unholy
-Road, as passage north is blocked by the city wall.  
+Road, as passage north is blocked by the city wall.
 ~
 0 0 0
 Rd     0
@@ -2539,7 +2539,7 @@ S
 E. Unholy Road~
 The road here is kept very clean, and the cobblestones look to be quite
 new.  The wall which is north of you continues it's path here, as it
-encompasses the city.  You may travel east and west.  
+encompasses the city.  You may travel east and west.
 ~
 0 0 0
 Rd     0
@@ -2557,7 +2557,7 @@ E. Unholy Road~
 As you take a glance around, you notice a heavily reinforced building to
 the south, which appears to be protected by some sort of magical aura.  The
 ever-present city wall continues along here, blocking your passage to the
-north, and allowing east and west as your only choice of exits.  
+north, and allowing east and west as your only choice of exits.
 ~
 0 0 0
 Rd     0
@@ -2575,7 +2575,7 @@ E. Unholy Road~
 Off to the east, you can see a junction where Unholy Road meets up with
 Blackstone Street, forming the northeast corner of the city.  Due to the
 wall of the city which lies north of you, as well as the back of a building
-to the south, your only passage is to the east and west.  
+to the south, your only passage is to the east and west.
 ~
 0 0 0
 Rd     0
@@ -2593,7 +2593,7 @@ Junction of Unholy Road and Blackstone Street~
 At this point where two streets meet and end, there is a small manhole
 set into the ground.  Passage to the north and east is blocked by the city
 walls which join together forming the northeast corner of the town.  Unholy
-Road runs to the west, while Blackstone Street runs south from here.  
+Road runs to the west, while Blackstone Street runs south from here.
 ~
 0 0 0
 Rd     0
@@ -2607,7 +2607,7 @@ D3
 0 0 1312
 D5
 There is a manhole here in the ground leading to the depths beneath the
-Town of Ravenwood.  
+Town of Ravenwood.
 ~
 manhole~
 3 0 1452
@@ -2616,7 +2616,7 @@ S
 W. Unholy Road~
 Unholy Road continues to the east and west here, with the temple stairs
 in plain view off to the east.  There is a building which blocks southern
-passage, while a wall prohibits travel to the north.  
+passage, while a wall prohibits travel to the north.
 ~
 0 0 0
 Rd     0
@@ -2633,7 +2633,7 @@ S
 W. Unholy Road~
 The road is well paved, with stones that appear to be quite new.  Due to
 a large wall to the north of you, and a building directly south, your only
-choice of exits are east or west along Unholy Road.  
+choice of exits are east or west along Unholy Road.
 ~
 0 0 0
 Rd     0
@@ -2650,7 +2650,7 @@ S
 W. Unholy Road~
 While the road continues east and west from here, you are left to choose
 only those two directions, as there is a building south of you and a wall to
-the north, neither with any exits showing.  
+the north, neither with any exits showing.
 ~
 0 0 0
 Rd     0
@@ -2667,7 +2667,7 @@ S
 W. Unholy Road~
 There is a slight crack in the pavement here, as though something very
 heavy was dropped with great force upon the ground.  The road continues east
-and west, allowing travel in either direction.  
+and west, allowing travel in either direction.
 ~
 0 0 0
 Rd     0
@@ -2680,7 +2680,7 @@ army of tiny little ants have made their home here.
 E
 ants home anthill~
 Ants skitter in and out of the crack beneath your feet.  A few little
-sandhills have been built all along the crack.  
+sandhills have been built all along the crack.
 ~
 D1
 ~
@@ -2695,7 +2695,7 @@ S
 W. Unholy Road~
 A thick stone wall protects the city from attacks, and prevents you from
 passing to the north.  The road continues east and west, allowing you to
-follow Unholy Road in either direction.  
+follow Unholy Road in either direction.
 ~
 0 0 0
 Rd     0
@@ -2713,7 +2713,7 @@ Junction of Unholy Road and Damnation Avenue~
 Here at the northwest corner of the town, there is a manhole set into the
 ground.  Unholy Road runs east from here, while Damnation Avenue runs to the
 south.  North and west passage is blocked by the junction of two of the
-city's massive stone walls.  
+city's massive stone walls.
 ~
 0 0 0
 Rd     0
@@ -2727,7 +2727,7 @@ D2
 0 0 1320
 D5
 There is a manhole here beneath your feet that leads into the depths
-under the Town of Ravenwood.  
+under the Town of Ravenwood.
 ~
 manhole~
 3 0 1440
@@ -2737,7 +2737,7 @@ N. Damnation Avenue~
 The road is well paved, with many different types of stones, forming an
 intricate pattern of cobblestones.  Passage to the east is impossible due to
 a building in the way, while western travel is blocked by the wall of the
-city.  Your only choice of travel is north or south along Damnation Avenue. 
+city.  Your only choice of travel is north or south along Damnation Avenue.
 ~
 0 0 0
 Rd     0
@@ -2755,7 +2755,7 @@ Intersection of Damnation Avenue and Deathspawn Alley~
 While Damnation Avenue continues north and south from here, a small
 sidestreet runs off to the east, known as Deathspawn Alley.  To your west,
 passage is blocked by an immense wall, used to fortify the city against an
-outside attack, and protect the inhabitants.  
+outside attack, and protect the inhabitants.
 ~
 0 0 0
 Rd     0
@@ -2776,7 +2776,7 @@ S
 N. Damnation Avenue~
 Damnation Avenue runs north and south here, with passage to the east
 blocked by the side of a building, and west blocked by a large reinforced
-wall.  You may contine north and south.  
+wall.  You may contine north and south.
 ~
 0 0 0
 Rd     0
@@ -2794,7 +2794,7 @@ Intersection of Damnation Avenue and Hangman's Way~
 There is a manhole set into the center of the road here, but there is no
 clue as to what purpose it serves.  The protective wall of the city prevents
 western passage, and Damnation Avenue continues north and south.  To the
-east, Hangman's Way begins it's path across the city.  
+east, Hangman's Way begins it's path across the city.
 ~
 0 0 0
 Rd     0
@@ -2820,7 +2820,7 @@ S
 S. Damnation Avenue~
 A small, yet majestic building stands to the east, covered with ivy which
 has grown up along the side.  To the west, a large wall blocks your passage,
-while Damnation Avenue continues to the north and south.  
+while Damnation Avenue continues to the north and south.
 ~
 0 0 0
 Rd     0
@@ -2837,7 +2837,7 @@ S
 Intersection of Damnation Avenue and Hellfire Street~
 Damnation Avenue continues north and south from this point, while
 Hellfire Street runs to the east.  West of you stands the protective wall of
-the city, providing safety and a line of defense to the citizens.  
+the city, providing safety and a line of defense to the citizens.
 ~
 0 0 0
 Rd     0
@@ -2858,7 +2858,7 @@ S
 S. Damnation Avenue~
 A large wall towers to the west of you here, while the side of a building
 blocks passage to the east.  Damnation Avenue continues north and south,
-with a junction to the south, and an intersection to the north.  
+with a junction to the south, and an intersection to the north.
 ~
 0 0 0
 Rd     0
@@ -2873,9 +2873,9 @@ D2
 S
 #1327
 Junction of Damnation Avenue and Brimstone Road~
-There are two walls here, which form the southwest corner of the city. 
+There are two walls here, which form the southwest corner of the city.
 Damnation Avenue runs to the north from this point, while Brimstone Road is
-to the east.  You observe a small manhole set into the ground here.  
+to the east.  You observe a small manhole set into the ground here.
 ~
 0 16 0
 Rd     0
@@ -2903,7 +2903,7 @@ W. Brimstone Road~
 To your west, you can see a junction where Brimstone Road meets up with
 another street which runs to the north.  Due to a building standing north of
 you, and the impenetrable wall of the city to your south, east and west are
-your only choices for travel.  
+your only choices for travel.
 ~
 0 0 0
 Rd     0
@@ -2920,7 +2920,7 @@ S
 W. Brimstone Road~
 Whoever built this road must have put some sort of magical spell over the
 bricks, for they smoke and spark slightly, giving off a strange impression
-of a life of their own.  The roadway continues on to the east and west.  
+of a life of their own.  The roadway continues on to the east and west.
 ~
 0 0 0
 Rd     0
@@ -2939,7 +2939,7 @@ The smoke rising up from the ground here is not very thick, but has
 enough substance to it to give a hazy view to your surroundings.  A building
 blocks northern travel from this point, while passage to the south is
 prevented by a large wall, leaving your only choice of which way to go as
-east or west.  
+east or west.
 ~
 0 0 0
 Rd     0
@@ -2957,7 +2957,7 @@ W. Brimstone Road~
 The road is paved with bricks that are giving off their own wisps of
 smoke, which appears magical in nature.  The smell of brimstone is quite
 strong here, hence the name of the street.  The road continues on to the
-east and west.  
+east and west.
 ~
 0 0 0
 Rd     0
@@ -2974,7 +2974,7 @@ S
 W. Brimstone Road~
 To your east, you can see the Gateway Plaza, where the merchants entering
 the city check their wagons in with the guards that are posted there.  The
-road continues on to the east and west.  
+road continues on to the east and west.
 ~
 0 0 0
 Rd     0
@@ -2993,7 +2993,7 @@ The city gates lie to the south of you, while Tombstone Avenue runs to
 the north.  This plaza stands in the center of Brimstone Road which runs to
 the east and west.  You may travel along Tombstone Avenue, leave the city to
 the south, or take a walk on Brimstone Road.  On the ground in front of you,
-you spy a small manhole.  
+you spy a small manhole.
 ~
 0 0 0
 Rd     0
@@ -3025,7 +3025,7 @@ E. Brimstone Road~
 The ground here is paved with reddish colored blocks which have bits of
 obsidian inside of them.  South of you lies the wall of the city, while to
 the north is the back of a building.  You may continue to the east and west
-from this point.  
+from this point.
 ~
 0 0 0
 Rd     0
@@ -3042,7 +3042,7 @@ S
 E. Brimstone Road~
 A small building blocks passage to the north here, while the city wall
 prevents travel to the south.  The road continues to the east and west, and
-seems to give off a heat of it's own.  
+seems to give off a heat of it's own.
 ~
 0 0 0
 Rd     0
@@ -3060,7 +3060,7 @@ E. Brimstone Road~
 The bricks are definately giving off some sort of heat, as you can see
 small bits of steam or smoke rising up from them.  Your only choice of
 travel is east or west, as passage to the north and south is blocked by a
-building, and the city wall, respectively.  
+building, and the city wall, respectively.
 ~
 0 0 0
 Rd     0
@@ -3077,7 +3077,7 @@ S
 E. Brimstone Road~
 To your south there is a city wall, which looks as though it has been
 collecting soot from the thin wisps of smoke which waft up from between the
-bricks.  The road continues on to the east and west.  
+bricks.  The road continues on to the east and west.
 ~
 0 0 0
 Rd     0
@@ -3112,7 +3112,7 @@ Junction of Blackstone Street and Brimstone Road~
 There is a small manhole set into the center of the ground here, but the
 purpose it serves is a mystery.  At this corner of the city, the southern
 and eastern walls meet, preventing passage in those directions.  Blackstone
-Street is to the north, while Brimstone Road is to the west.  
+Street is to the north, while Brimstone Road is to the west.
 ~
 0 0 0
 Rd     0
@@ -3138,9 +3138,9 @@ S
 #1340
 S. Blackstone Street~
 The city wall looms to the east, near impenetrable, and impossible to
-climb.  To the west, a small black building glows with an unholy aura. 
+climb.  To the west, a small black building glows with an unholy aura.
 Blackstone Street continues to the north and south, allowing passage in both
-directions.  
+directions.
 ~
 0 0 0
 Rd     0
@@ -3158,7 +3158,7 @@ Intersection of Blackstone Street and Cutthroat Alley~
 Blackstone Stree continues to the north and south from this point, with
 a small, filthy looking alleyway running off to the west.  To the east your
 passage is blocked by the massive wall of the city which appears almost
-impenetrable.  
+impenetrable.
 ~
 0 0 0
 Rd     0
@@ -3180,7 +3180,7 @@ S. Blackstone Street~
 To the north of you, there is an intersection of two streets, while a
 similar intersection lies to the south.  East of you, the city wall
 continues, and west there is a freshly painted building, with no windows or
-doors visible from this side.  
+doors visible from this side.
 ~
 0 0 0
 Rd     0
@@ -3200,7 +3200,7 @@ known as Hangman's Way.  Dreaded for the miscarriages of justice which often
 occur there, one should move cautiously along the street, and never travel
 alone.  Blackstone Street runs north and south from here, allowing passage
 in any direction except for east, which is blocked by a large fortified
-wall.  On the ground, you catch sight of a small manhole.  
+wall.  On the ground, you catch sight of a small manhole.
 ~
 0 0 0
 Rd     0
@@ -3227,7 +3227,7 @@ N. Blackstone Street~
 A large wall looms over you to the east, too high to see the top very
 clearly from this vantage point.  A small strange looking building lies to
 the west, but there is no door on this side of the structure.  Blackstone
-Street continues north and south from this spot.  
+Street continues north and south from this spot.
 ~
 0 0 0
 Rd     0
@@ -3244,7 +3244,7 @@ S
 Intersection of Blackstone Street and Bloodfang Avenue~
 Blackstone Street runs to the north and south from this point, while to
 the west is the eastern end of Bloodfang Avenue.  East of you stands the
-heavily reinforced wall which protects the town from attacks.  
+heavily reinforced wall which protects the town from attacks.
 ~
 0 0 0
 Rd     0
@@ -3266,7 +3266,7 @@ N. Blackstone Street~
 Blackstone Street runs north and south from this point, allowing for
 passage in those two directions.  To the west is the side of a small
 building, which appears to be one of Ravenwood's many shops, while to the
-east the eastern wall of Ravenwood towers over you.  
+east the eastern wall of Ravenwood towers over you.
 ~
 0 0 0
 Rd     0
@@ -3283,7 +3283,7 @@ S
 E. Hangman's Way~
 To your east, you can see an intersection where Hangman's Way joins up
 with another street running north and south.  Due to buildings blocking your
-passage to the north and south, you may only go east or west.  
+passage to the north and south, you may only go east or west.
 ~
 0 0 0
 Rd     0
@@ -3301,7 +3301,7 @@ E. Hangman's Way~
 Buildings continue to line the street to your north and south here,
 leaving east and west as your only choice of travel.  Perhaps there are
 entrances to these buildings on the other side of them, for on this side,
-they are devoid of both door and window.  
+they are devoid of both door and window.
 ~
 0 0 0
 Rd     0
@@ -3318,7 +3318,7 @@ S
 E. Hangman's Way~
 The roadway is somewhat wide, to allow for the travel of wagons which
 stop in occasionally to drop off shipments of weapons, armor, and other
-various assorted goods.  You may continue to the east and west.  
+various assorted goods.  You may continue to the east and west.
 ~
 0 0 0
 Rd     0
@@ -3335,7 +3335,7 @@ S
 E. Hangman's Way~
 There are buildings to the north and south of you, but you cannot see any
 doors from where you are standing.  Hangman's Way continues on to the east
-and west from here.  
+and west from here.
 ~
 0 0 0
 Rd     0
@@ -3353,7 +3353,7 @@ E. Hangman's Way~
 To your west, you can see Ravenwood Center, which is the exact center of
 the town.  It is there where public executions take place, as well as public
 readings of new laws, as set forth by the mayor of Ravenwood.  The road
-continues to the east and west.  
+continues to the east and west.
 ~
 0 0 0
 Rd     0
@@ -3371,7 +3371,7 @@ Ravenwood Center~
 You are in the exact center of the town of Ravenwood.  Tombstone Avenue
 runs along to the north and south from here, while Hangman's Way runs to the
 east and west.  On the ground in front of you, you spy a small closed
-manhole.  
+manhole.
 ~
 0 0 0
 Rd     0
@@ -3401,7 +3401,7 @@ S
 W. Hangman's Way~
 To your east, you can see Ravenwood Center, the main Square of the town,
 which is usually busy at any time, day or night.  The road continues on to
-the east or west, allowing travel in either direction.  
+the east or west, allowing travel in either direction.
 ~
 0 0 0
 Rd     0
@@ -3419,7 +3419,7 @@ W. Hangman's Way~
 Two small buildings block your passage to the north and south at this
 point, allowing you to go only east and west.  The road is rather wide, and
 has many carefully placed stones set into the surface, allowing for a smooth
-walk, or ride.  
+walk, or ride.
 ~
 0 0 0
 Rd     0
@@ -3438,7 +3438,7 @@ There is a sensation of pure evil hovering throughout this town, no
 matter where you go.  Many an adventurer of good intentions has stepped
 within the town walls, only to be driven out by the inhabitants, and some
 have even been slaughtered before they made it through the gates.  The road
-continues on to the east and west.  
+continues on to the east and west.
 ~
 0 0 0
 Rd     0
@@ -3456,7 +3456,7 @@ W. Hangman's Way~
 The buildings which line these streets don't appear to have any doors
 facing Hangman's Way at all.  This, coupled with the lack of any windows,
 gives a sort of 'ghost town' feeling to the area as you move along.  The
-road continues to the east and west.  
+road continues to the east and west.
 ~
 0 0 0
 Rd     0
@@ -3473,7 +3473,7 @@ S
 W. Hangman's Way~
 To your west, there is an intersection where Hangman's Way meets up with
 Damnation Avenue, which runs north to south.  You may travel west to this
-intersection, or continue east along Hangman's Way.  
+intersection, or continue east along Hangman's Way.
 ~
 0 0 0
 Rd     0
@@ -3491,7 +3491,7 @@ Deathspawn Alley~
 To your south you can see a somewhat rundown store which has many pieces
 of junk and various trinkets on display.  North of you is the famous
 Ravenwood Weaponry Shop, which has a variety of weapons to suit any
-adventurer.  Deathspawn Alley continues to the east and west.  
+adventurer.  Deathspawn Alley continues to the east and west.
 ~
 0 0 0
 Rd     0
@@ -3517,7 +3517,7 @@ Deathspawn Alley~
 Deathspawn Alley continues off to the east and west at this point, with
 what looks to be an Armory to the north of you, while to the south is a
 furniture shop, perfect for purchasing or selling household type items.  You
-may enter either one of the shops, or continue along the alley.  
+may enter either one of the shops, or continue along the alley.
 ~
 0 0 0
 Rd     0
@@ -3593,7 +3593,7 @@ Deathspawn Alley is a slightly dingy looking street, which runs to the
 east and west from this point.  To the north is a boarded up building, while
 south of you lies the entrance to the Ravenwood Guild of Warriors.  You may
 enter the guild to the south, travel Deathspawn Alley to the west, or go
-east to Assassin's Square.  
+east to Assassin's Square.
 ~
 0 0 0
 Rd     0
@@ -3617,7 +3617,7 @@ land was murdered as he wandered around town.  Because of all the small
 buildings which surround you, an assailant would have a good place to hide
 and wait out an attack, or attempt an escape.  Tombstone Avenue continues to
 the north and south, while Bloodfang Avenue and Deathspawn Alley are to the
-east and west respectively.  
+east and west respectively.
 ~
 0 0 0
 Rd     0
@@ -3644,7 +3644,7 @@ You are in the middle of Bloodfang Avenue, which runs to the east and
 west from here.  To the north is a boarded up warehouse, while to the south,
 you can see the entrance to the Guild of Mages, where many of Ravenwoods
 sorcerers gather to swap spells and tales of adventure, while quaffing an
-ale or two.  
+ale or two.
 ~
 0 0 0
 Rd     0
@@ -3665,7 +3665,7 @@ S
 Bloodfang Avenue~
 As you stand in the middle of Bloodfang Avenue, you see a small shop to
 the north which houses mercenaries for hire.  Passage to the south is
-blocked by the wall of a building, and the road runs to the east and west.  
+blocked by the wall of a building, and the road runs to the east and west.
 ~
 0 0 0
 Rd     0
@@ -3684,10 +3684,10 @@ D3
 S
 #1366
 Bloodfang Avenue~
-There are two buildings facing each other here to the north and south. 
+There are two buildings facing each other here to the north and south.
 The north building boasts of the best potions in the land, while the
 southern building advertises a special on wands and staves.  Bloodfang
-Avenue continues to the east and west from here.  
+Avenue continues to the east and west from here.
 ~
 0 0 0
 Rd     0
@@ -3738,7 +3738,7 @@ Bloodfang Avenue~
 The wide road which is Bloodfang Avenue runs to the east and west here,
 with an intersection within sight to the east.  North of you is the
 Ravenwood House of Scrolls, while to the south is the ever-important spell
-components shop.  
+components shop.
 ~
 0 0 0
 Rd     0
@@ -3764,7 +3764,7 @@ Hellfire Street~
 Off to the west, you can see an intersection where Hellfire Street meets
 up with Damnation Avenue.  South of you is a rundown building which houses
 the Ravenwood Guild of Thieves, while a building to the north is home to the
-House of Druids.  
+House of Druids.
 ~
 0 0 0
 Rd     0
@@ -3789,7 +3789,7 @@ S
 Hellfire Street~
 The sides of two buildings prevent passage to the north and south from
 this point.  Hellfire Street continues east and west from here, allowing for
-passage in either of those directions.  
+passage in either of those directions.
 ~
 0 0 0
 Rd     0
@@ -3807,7 +3807,7 @@ Hellfire Street~
 A small stone building stands to the north of you, but there is no
 visible entrance as far as you can see.  To the south is another similar
 building, also with no visible entrance.  The street continues on to the
-east and west.  
+east and west.
 ~
 0 0 0
 Rd     0
@@ -3826,8 +3826,8 @@ To the north, you catch the faint sounds of someone tuning up a musical
 instrument.  The sign on the door proclaims the building as the Bard's
 Guild, where the bards of the land gather to exchange stories, poems, and
 songs of adventure.  To the south of you lies the Psionicists Bar, where the
-great intellects gather to relax, and participate in a mind game or two. 
-Hellfire Street continues to the east and west.  
+great intellects gather to relax, and participate in a mind game or two.
+Hellfire Street continues to the east and west.
 ~
 0 0 0
 Rd     0
@@ -3853,7 +3853,7 @@ Hellfire Street~
 Up ahead to the east, you can make out some sort of square, which looks
 to be quite busy.  To the north is a grocery store, while to the south is
 the town hall.  You may enter either of the buildings, or continue to the
-east or west.  
+east or west.
 ~
 0 0 0
 Rd     0
@@ -3877,9 +3877,9 @@ S
 #1374
 Chaos Plaza~
 You are in the center of Chaos Plaza, which holds true to it's name, as
-people bustle back and forth running errands and selling their wares. 
+people bustle back and forth running errands and selling their wares.
 Tombstone Avenue continues to the north and south, while Hellfire Street is
-to the west, and the aptly named Cutthroat Alley lies to the east.  
+to the west, and the aptly named Cutthroat Alley lies to the east.
 ~
 0 0 0
 Rd     0
@@ -3905,7 +3905,7 @@ Cutthroat Alley~
 The alley is somewhat overrun with garbage and debris, carried along the
 street by the breezes which flow through here occasionally.  To the north
 you can see the Ravenwood Museum of History, while to the south is the
-Sheriff's office.  The alleyway continues to the east and west from here.  
+Sheriff's office.  The alleyway continues to the east and west from here.
 ~
 0 0 0
 Rd     0
@@ -3930,8 +3930,8 @@ S
 Cutthroat Alley~
 As you move along, you find yourself stumbling over the occasional
 loosened cobblestone, or stepping into a pothole or two.  To the north you
-can see the Paladin's guild, while to the south lies the Clerics Guild. 
-Cutthroat Alley continues to the east and west from here.  
+can see the Paladin's guild, while to the south lies the Clerics Guild.
+Cutthroat Alley continues to the east and west from here.
 ~
 0 0 0
 Rd     0
@@ -3958,7 +3958,7 @@ It would appear that sanitation is not a priority in this section of the
 town, since there is an abundance of garbage and debris piled alongside the
 buildings here.  The cracked and misshapen road is in extremely poor
 condition with many missing cobblestones and weeds pushing up through the
-cracks.  
+cracks.
 ~
 0 0 0
 Rd     0
@@ -3977,7 +3977,7 @@ There is a large hole in the middle of the road here, as though it was
 struck by lightning, vaporizing the cobblestones in that area, and scorching
 the earth underneath.  The junction of buildings to the north and south
 prevent passage in those directions, leaving east and west as your only
-choices of travel.  
+choices of travel.
 ~
 0 0 0
 Rd     0
@@ -3998,7 +3998,7 @@ S
 Cutthroat Alley~
 South of you is the famous Ravenwood Vampires Guild, while to the north
 is the Guild of Rangers.  The road continues to the west, and to the east,
-where you can see an intersection with another street.  
+where you can see an intersection with another street.
 ~
 0 0 0
 Rd     0
@@ -4025,7 +4025,7 @@ Looking south, you can see the Gateway Plaza, and the massive city gates
 which lie to the south of the plaza.  To the east and west of you are two
 buildings with the eastern building resembling a jailhouse, while the
 western building seems to be the office of a city offical.  You may continue
-to the north and south.  
+to the north and south.
 ~
 0 0 0
 Rd     0
@@ -4044,7 +4044,7 @@ The street here is very wide, running between two plazas which lie to the
 north and south.  North of you is the Center of Ravenwood, while south of
 you is Chaos Plaza.  Passage to the east and west is prevented by the
 presence of two small buildings, the western one appearing as a shop, while
-the eastern one looks like some sort of art museum.  
+the eastern one looks like some sort of art museum.
 ~
 0 0 0
 Rd     0
@@ -4062,7 +4062,7 @@ N. Tombstone Avenue~
 Tombstone Avenue runs to the north and south here, while passage to the
 east and west is blocked by the sides of buildings.  Due to a lack of
 windows on the buildings, you can't get a glimpse of what lies inside of
-them.  You may continue on the road to the north and south.  
+them.  You may continue on the road to the north and south.
 ~
 0 0 0
 Rd     0
@@ -4079,7 +4079,7 @@ S
 N. Tombstone Avenue~
 Buildings block your passage to the east and west here, while to the
 north, you can see a plaza with some sort of large temple.  To the south you
-catch a glimpse of another smaller plaza with a crossing of streets.  
+catch a glimpse of another smaller plaza with a crossing of streets.
 ~
 0 0 0
 Rd     0
@@ -4095,8 +4095,8 @@ S
 #1384
 Secret Passage~
 You are within a secret passage which was built long ago to help defend
-the city against outside attacks, without having to open the city gates. 
-The secret passage runs to the south, which is the only obvious exit here.  
+the city against outside attacks, without having to open the city gates.
+The secret passage runs to the south, which is the only obvious exit here.
 ~
 0 8 0
 Rd     0
@@ -4114,7 +4114,7 @@ S
 Secret Passage~
 The secret passage makes a turn here, allowing passage to the north and
 east.  Though dimly lit, you can make out many sets of footprints made by
-those who have travelled along this hall before you.  
+those who have travelled along this hall before you.
 ~
 0 8 0
 Rd     0
@@ -4132,7 +4132,7 @@ Secret Passage~
 As you glance around you, you catch the faint sound of water lapping
 against the wall to the north.  This is where Ravenwood stores it's fresh
 water supply which cycles throughout the city through a vast series of
-fountains and aqueducts.  The passage continues east and west.  
+fountains and aqueducts.  The passage continues east and west.
 ~
 0 8 0
 Rd     0
@@ -4148,9 +4148,9 @@ S
 #1387
 Secret Passage~
 The wall tot he north feels very cool to the touch, due to the massive
-amount of water which is stored within, and accumulated through rainfall. 
+amount of water which is stored within, and accumulated through rainfall.
 The stone corridor continues on to the east and west, allowing travel in
-either direction.  
+either direction.
 ~
 0 8 0
 Rd     0
@@ -4167,7 +4167,7 @@ S
 Secret Passage~
 This secret passage is wide enough to fit several people at once,
 allowing for reinforcements to quickly move from one point to another
-safely, and without detection.  The corridor continues east and west.  
+safely, and without detection.  The corridor continues east and west.
 ~
 0 8 0
 Rd     0
@@ -4184,7 +4184,7 @@ S
 Secret Passage~
 There is a passage leading off to the west here, a guarded secret of the
 protectors of Ravenwood.  Footprints line the floor here, belonging to the
-many who have passed before you, defending the city against attacks.  
+many who have passed before you, defending the city against attacks.
 ~
 0 0 0
 Rd     0
@@ -4203,7 +4203,7 @@ Within a Guard Outpost~
 From this vantage point a guard can safely observe who comes in and out
 of the town, or sit back and take a brief break from his duties.  There is a
 small doorway leading out to the main gate to the east, which is the only
-obvious exit.  
+obvious exit.
 ~
 0 8 0
 Rd     0
@@ -4222,7 +4222,7 @@ At the Town Gates of Ravenwood~
 The town gates stand tall before you to the north, allowing entrance into
 the city beyond.  To the east and west stand two small guardsmans posts,
 allowing for protection from invaders.  You may enter the town to the north,
-examine the shacks to the east and west or leave to the south.  
+examine the shacks to the east and west or leave to the south.
 ~
 0 0 0
 Rd     0
@@ -4249,7 +4249,7 @@ Inside a Guardhouse~
 This small stone enclosure is used by guards to either relax and have a
 lunch break, or to observe the comings and goings of visitors while being
 sheltered from the weather outside.  The doorway to the west appears to be
-your only choice of exits.  
+your only choice of exits.
 ~
 0 8 0
 Rd     0
@@ -4268,7 +4268,7 @@ Secret Passage~
 The passage is somewhat darkened and damp, with walls made of a rough
 stone.  The only obvious exit you can see is to the east from here.  There
 are several sets of footprints running directly up to the western wall, and
-some returning from that direction.  
+some returning from that direction.
 ~
 0 8 0
 Rd     0
@@ -4286,7 +4286,7 @@ S
 Secret Passage~
 The walls drip with water here, forming tiny puddles long the floor.  The
 air is somewhat damp, and a bit difficult to breathe.  The passage runs to
-the east and west.  
+the east and west.
 ~
 0 8 0
 Rd     0
@@ -4304,7 +4304,7 @@ Secret Passage~
 You are within a cramped passageway, which is extremely damp, and
 difficult to move through.  Footprints line the floor travelleing back and
 forth to the east and west, which are the only directions of travel from
-here.  
+here.
 ~
 0 8 0
 Rd     0
@@ -4321,7 +4321,7 @@ S
 Secret Passage~
 The passage runs east to west here, and is crudely cut from the stone,
 making travel somewhat tight and difficult.  You can hear the sounds of
-dripping water, but cannot tell where it is coming from.  
+dripping water, but cannot tell where it is coming from.
 ~
 0 134217736 0
 Rd     0
@@ -4338,7 +4338,7 @@ S
 Secret Passage~
 The secret passage makes a sharp turn here, forming a junction of
 passages leading to the north and west.  There are footprints travelling
-back and forth along the floor, and the walls drip with water.  
+back and forth along the floor, and the walls drip with water.
 ~
 0 8 0
 Rd     0
@@ -4356,7 +4356,7 @@ Secret Passage~
 There is some dirt piled against the wall which lies to the north here,
 and some footprints leading directly up to it.  The passage continues off to
 the south, where you can hear the sound of dripping water echoing along the
-hall.  
+hall.
 ~
 0 8 0
 Rd     0
@@ -4377,7 +4377,7 @@ There are two sets of gates here, one lying to the north, while the other
 stands to the south, which help form this inner bailey.  From here, a guard
 posted on the wall could catch a glimpse of who was entering the city, and
 weed out possible threats to the safety of the citizens, while preventing
-the undesirables from escaping.  
+the undesirables from escaping.
 ~
 0 0 0
 Rd     0
@@ -4397,7 +4397,7 @@ Ravenwood House of Weapons~
 Dozens of types of weapons are set up for sale in this shop, each with
 it's own advantages, based upon the skill of whomever wields it.  Many a
 tool of destruction has been both bought and sold here, and the prices are
-well worth the quality of the purchase.  
+well worth the quality of the purchase.
 ~
 0 132108 0
 Rd     0
@@ -4411,7 +4411,7 @@ Ravenwood Armory~
 The armory is awash in various pieces of gear, some new, some a bit
 dented, and some almost toally destroyed.  The armor which is bought here by
 the shopkeeper is repaired and sold if it meets up to his standards, and
-usually nets him a good profit.  You may exit the shop to the south.  
+usually nets him a good profit.  You may exit the shop to the south.
 ~
 0 132108 0
 Rd     0
@@ -4422,10 +4422,10 @@ D2
 S
 #1402
 Ravenwood Treasures~
-This is one of the finer establishments within the town of Ravenwood. 
+This is one of the finer establishments within the town of Ravenwood.
 Many exotic gems and and jewels are both bought and sold here, and it's a
 great place to pawn off that diamond or emerald you happened upon on your
-last adventure.  You may exit the shop to the south.  
+last adventure.  You may exit the shop to the south.
 ~
 0 132108 0
 Rd     0
@@ -4438,7 +4438,7 @@ S
 Pet shop~
 The pet shop has several different companions for sale here, for a fair
 price.  All of the pets have been trained to obey verbal commands, and are
-quite intelligent.  Only the finest animals are accepted for sale here.  
+quite intelligent.  Only the finest animals are accepted for sale here.
 ~
 0 136204 0
 Rd     0
@@ -4455,10 +4455,10 @@ Rd     0
 S
 #1405
 Ravenwood House of Junk~
-The walls are lined with various trinkets and other such paraphenelia. 
+The walls are lined with various trinkets and other such paraphenelia.
 This shop buys only the strangest of items, most of them ones that have been
 rejected by every other shop in town.  Perhaps you have something of value
-to sell?  
+to sell?
 ~
 0 132108 0
 Rd     0
@@ -4472,7 +4472,7 @@ The Ravenwood Furniture Pawnshop~
 Here is where the citizens of Ravenwood can sell off an extra chair,
 table or various other pieces of furniture to help raise money for the needs
 of their families.  Though it is a good business, many of the pieces of
-furniture pawned off here are never sold back to the original owners.  
+furniture pawned off here are never sold back to the original owners.
 ~
 0 132108 0
 Rd     0
@@ -4485,7 +4485,7 @@ S
 General Store~
 You are standing within the Ravenwood General Store.  All around you
 various adventuring supplies are stacked neatly upon their shelves waiting
-to be sold.  You may exit the shop to the north.  
+to be sold.  You may exit the shop to the north.
 ~
 0 132108 0
 Rd     0
@@ -4498,7 +4498,7 @@ S
 Warrior Bar~
 The bar is dimly lit, and somewhat filthy.  There are tables and chairs
 set in the corners of the room, and a large bar where you can order
-something for yourself.  You may exit the bar to the west.  
+something for yourself.  You may exit the bar to the west.
 ~
 0 132108 0
 Rd     0
@@ -4512,7 +4512,7 @@ Warrior Bar Entrance~
 You are standing within the entranceway of the fabled Warriors Guild &
 Bar.  Many a great master of the combative arts has stopped in for a cold
 drink, and to share a tale or two of high adventure.  You may enter the bar
-to the west or exit the building to the north.  
+to the west or exit the building to the north.
 ~
 0 132108 0
 Rd     0
@@ -4528,9 +4528,9 @@ S
 #1410
 Mercenary Shop~
 The Mercenary Shop is a great place to find that companion to help you in
-killing off a few people, or to assist you in burning an entire village. 
+killing off a few people, or to assist you in burning an entire village.
 Only the most highly skilled adventurers in the respective classes will be
-hired out, and their work is well known.  
+hired out, and their work is well known.
 ~
 0 136204 0
 Rd     0
@@ -4550,7 +4550,7 @@ Ravenwood Apothecary~
 The scent of something brewing is quite strong here, as you glance around
 the shop taking in all that surrounds you.  Several different colored
 potions are set up for sale here, each labelled with a price.  You may exit
-the shop to the south.  
+the shop to the south.
 ~
 0 132108 0
 Rd     0
@@ -4563,9 +4563,9 @@ S
 Ravenwood Bank~
 The bank is guarded by some sort of magical aura, which prevents people
 from gaining access to other people's stores of money and items.  Many small
-safes line the walls here, each inscribed with the name of the depositor. 
+safes line the walls here, each inscribed with the name of the depositor.
 Morkos, who owns and runs the bank, keeps accurate records, and makes sure
-everyone is accounted for every last piece of gold.  
+everyone is accounted for every last piece of gold.
 ~
 0 16909324 0
 Rd     0
@@ -4579,7 +4579,7 @@ Ravenwood Scroll Shop~
 Empty bottles of ink and scraps of tattered parchment lie strewn about
 the floor here, along with several broken quills.  Shelves upon the wall are
 stocked full of various scrolls, each one carefully closed with the wax seal
-of Ravenwood.  You may exit the shop to the south.  
+of Ravenwood.  You may exit the shop to the south.
 ~
 0 132108 0
 Rd     0
@@ -4593,7 +4593,7 @@ Mage Bar Entrance~
 The entranceway here is usually manned by a guard, to keep out the
 unwanted non-mage types.  It is rumored that inside the finest ales are
 served, and you may pick up a tidbit or two to help with your spellcasting.
-There is a sign upon the wall here that beckons your due attention.  
+There is a sign upon the wall here that beckons your due attention.
 ~
 0 132108 0
 Rd     0
@@ -4617,7 +4617,7 @@ S
 Mage Bar~
 The Mage's bar is a respectable establishment, frequented by the great
 spellcasters of Ravenwood.  Several small tables line the walls here, some
-slightly singed from the last mage to try his fire throwing stunts.  
+slightly singed from the last mage to try his fire throwing stunts.
 ~
 0 132108 0
 Rd     0
@@ -4631,7 +4631,7 @@ Ravenwood Staff and Wand Emporium~
 Several staves and wands are on display here, each one emitting a
 different type of magical glow.  Over in the corner, you can see different
 pieces of exotic looking wood waiting to have spells cast into them.  You
-may exit the shop to the North.  
+may exit the shop to the North.
 ~
 0 132108 0
 Rd     0
@@ -4646,7 +4646,7 @@ The air in this shop is heavy with the scent of sulfur, and smoke.  On
 one side of the room lies a box filled with destroyed pieces of equipment,
 and another holds equipment that can be salvaged and repaired.  Gaeran, the
 proprieter, is one of the best blacksmiths available, and has been known to
-repair even the most tattered piece of armor.  
+repair even the most tattered piece of armor.
 ~
 0 67240972 0
 Rd     0
@@ -4659,7 +4659,7 @@ S
 Before A large Town~
 There is a giant wall just ahead of you to the north, and you can see two
 guard outposts just to the sides of the gate.  You may travel north to the
-city, or south along a path.  
+city, or south along a path.
 ~
 0 1028 0
 Rd     0
@@ -4677,7 +4677,7 @@ Druid Bar Entrance~
 You are standing within the entranceway to the Druid's Guild.  To the
 east, you catch the sounds of a bar room, and smell some sort of incense
 burning.  You may enter the bar to the east, or exit the building to the
-south.  
+south.
 ~
 0 132108 0
 Rd     0
@@ -4695,7 +4695,7 @@ Druid Bar~
 The bar is filled with a smoky haze given off by the bowls filled with
 incense which are set on each table.  Many druids gather here to discuss the
 prophetic messages of the weather, or to ponder the future of an
-increasingly industrial world which endangers their beloved forests.  
+increasingly industrial world which endangers their beloved forests.
 ~
 0 132108 0
 Rd     0
@@ -4709,7 +4709,7 @@ Bards Bar~
 A small stage is set up here, to allow a travelling bard a place to
 perform his latest work for his colleagues.  The room is brightly lit by the
 many candles which line the walls, though they give off a strange
-sweet-smelling scent.  
+sweet-smelling scent.
 ~
 0 132108 0
 Rd     0
@@ -4722,7 +4722,7 @@ S
 Bard Bar Entrance~
 The Bard's Guild is famous for the many songs which are both written and
 performed by the patrons who flock there.  Trading of tales of triumph and
-tragedy abound here, as does information about the goings on of the world.  
+tragedy abound here, as does information about the goings on of the world.
 ~
 0 132108 0
 Rd     0
@@ -4740,7 +4740,7 @@ Grocer's Market~
 This small store sells a variety of food and drink for the hungry
 adventurer to feed themself with, or to take with them on that long
 adventure.  The finest meats, cheeses and vegetables are bought and sold
-here, giving quite a selection.  You may exit the store to the south.  
+here, giving quite a selection.  You may exit the store to the south.
 ~
 0 132108 0
 Rd     0
@@ -4753,7 +4753,7 @@ S
 Thief Bar Entrance~
 The room is somewhat strange smelling, and filled with shadows, which
 dance in the flickering light.  East of you is the main bar of the Thieve's
-Guild, while north of you is the exit to the street outside.  
+Guild, while north of you is the exit to the street outside.
 ~
 0 132108 0
 Rd     0
@@ -4771,7 +4771,7 @@ Thief Bar~
 The walls of the bar are stained with a greasy black smoke, which rises
 from the dimly lit chandelier.  Here is where thieves gather to plan a major
 heist, or to pawn off stolen goods amongst themselves, for a small profit of
-course.  
+course.
 ~
 0 132108 0
 Rd     0
@@ -4785,7 +4785,7 @@ Within the Psionicist Bar~
 The lights dancing upon the walls appear to contain a life all their own,
 as some of the patrons decide to have some fun making the candles dance,
 literally.  The bar is well stocked and rather neat, with several tables for
-you to hold your conversations at.  
+you to hold your conversations at.
 ~
 0 132108 0
 Rd     0
@@ -4800,7 +4800,7 @@ You are standing within the entranceway to the Hall of Higher Intellect,
 also known as the Psionicist's Guild.  To your west is the main hall,
 equipped with a bar and plenty of good ale to complement the discussions
 which are had within.  You may enter the bar to the west, or leave the guild
-hall to the north.  
+hall to the north.
 ~
 0 132108 0
 Rd     0
@@ -4815,9 +4815,9 @@ D3
 S
 #1429
 Town Hall~
-The Town Hall is lavishly furnished with fine furniture and artwork. 
+The Town Hall is lavishly furnished with fine furniture and artwork.
 This is where the mayor of the town works and greets his visitors from.  The
-only exit is a doorway to the north.  
+only exit is a doorway to the north.
 ~
 0 132108 0
 Rd     0
@@ -4831,7 +4831,7 @@ Ravenwood Museum of History~
 The museum contains the collective artworks of many of ravenwoods finest
 artists.  There is a soft carpet lining the floor, and the museum is very
 quiet and somewhat cold.  Magical barriers keep anyone from getting close
-enough to the artwork to cause any harm, or attempt to steal them.  
+enough to the artwork to cause any harm, or attempt to steal them.
 ~
 0 132108 0
 Rd     0
@@ -4846,7 +4846,7 @@ The entranceway to the Hall of Paladins is decorated with various
 trophies donated by these unholy warriors of the realm.  The evil paladins
 follow their deities' orders to the letter, and do not hesitate to shed
 blood while doing it.  You may enter the bar to the east, or leave the hall
-to the south.  
+to the south.
 ~
 0 132108 0
 Rd     0
@@ -4864,7 +4864,7 @@ Paladin Bar~
 You are standing within a somewhat large room that smells of ale and
 cooked food.  A large round table made of onyx and brass stands in the
 center of the room, with several empty seats still available.  Here is the
-place to tell of great deeds done and challenges triumphed.  
+place to tell of great deeds done and challenges triumphed.
 ~
 0 132104 0
 Rd     0
@@ -4877,7 +4877,7 @@ S
 Ranger Bar~
 The bar is adorned with several animals which have been stuffed and
 preserved after death and posed in life-like positions.  To your east is the
-entrance hall which leads to the street outside.  
+entrance hall which leads to the street outside.
 ~
 0 132108 0
 Rd     0
@@ -4890,7 +4890,7 @@ S
 Ranger Bar Entrance~
 To your west, you can see a small bar room dimly lit by several candles
 on the wall, while to the south is the road known as Cutthroat Alley.  The
-bar is for ranger's only, and only they are welcomed there.  
+bar is for ranger's only, and only they are welcomed there.
 ~
 0 132108 0
 Rd     0
@@ -4907,7 +4907,7 @@ S
 Sheriff's office~
 The office is pretty plain looking, with the only thing of notice being a
 large trapdoor set into the floor, with a small sign that says "To the Jail
-Cells" on it.  The only other exit is to the north through the doorway.  
+Cells" on it.  The only other exit is to the north through the doorway.
 ~
 0 132108 0
 Rd     0
@@ -4925,7 +4925,7 @@ S
 Cleric Bar Entrance~
 There is an aura of unholiness about this place, as though the evil gods
 have been looking over it favorably for some time now.  Clerics gather here
-to join in group prayers and tell of their latest adventure.  
+to join in group prayers and tell of their latest adventure.
 ~
 0 132108 0
 Rd     0
@@ -4942,7 +4942,7 @@ S
 Cleric Bar~
 The room is somewhat quiet for a bar, and has several small tables where
 clerics can sit in solitude, or very small groups to talk and pray.  Candles
-line the walls casting shimmering lights which dance about the room.  
+line the walls casting shimmering lights which dance about the room.
 ~
 0 132108 0
 Rd     0
@@ -4956,7 +4956,7 @@ Within the Vampire Sanctuary~
 There is fresh dirt upon the floor here which feels soft and soothing
 beneath your feet.  The smell of blood is overwhelmingly powerful and seems
 to beg for your indulgence.  You may exit the sanctuary to the east or hang
-around for a while with the other vampires who frequent the bar.  
+around for a while with the other vampires who frequent the bar.
 ~
 0 132108 0
 Rd     0
@@ -4971,7 +4971,7 @@ This small rooms is barely lit, with only a few sparse candles set into
 exotic looking sconces on the wall.  The smell of fresh blood is very
 powerful here, as is the feeling of somthing evil lurking within the next
 room.  You may exit the guild hall to the north, or enter the main hall to
-the west.  
+the west.
 ~
 0 132108 0
 Rd     0
@@ -4988,7 +4988,7 @@ S
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
 is very stale, and somewhat difficult to breathe.  Looking above you, you
-spy a manhole set into the ceiling.  
+spy a manhole set into the ceiling.
 ~
 0 12 0
 Rd     0
@@ -5009,7 +5009,7 @@ S
 #1441
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5025,7 +5025,7 @@ S
 #1442
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5041,7 +5041,7 @@ S
 #1443
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5057,7 +5057,7 @@ S
 #1444
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5073,7 +5073,7 @@ S
 #1445
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5090,7 +5090,7 @@ S
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
 is very stale, and somewhat difficult to breathe.  Looking above you, you
-spy a manhole set into the ceiling.  
+spy a manhole set into the ceiling.
 ~
 0 12 0
 Rd     0
@@ -5116,7 +5116,7 @@ S
 #1447
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5132,7 +5132,7 @@ S
 #1448
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5148,7 +5148,7 @@ S
 #1449
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5164,7 +5164,7 @@ S
 #1450
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5180,7 +5180,7 @@ S
 #1451
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5197,7 +5197,7 @@ S
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
 is very stale, and somewhat difficult to breathe.  Looking above you, you
-spy a manhole set into the ceiling.  
+spy a manhole set into the ceiling.
 ~
 0 12 0
 Rd     0
@@ -5218,7 +5218,7 @@ S
 #1453
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5234,7 +5234,7 @@ S
 #1454
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5250,7 +5250,7 @@ S
 #1455
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5267,7 +5267,7 @@ S
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
 is very stale, and somewhat difficult to breathe.  Looking above you, you
-spy a manhole set into the ceiling.  
+spy a manhole set into the ceiling.
 ~
 0 12 0
 Rd     0
@@ -5292,7 +5292,7 @@ S
 #1457
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5308,7 +5308,7 @@ S
 #1458
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5324,7 +5324,7 @@ S
 #1459
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5341,7 +5341,7 @@ S
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
 is very stale, and somewhat difficult to breathe.  Looking above you, you
-spy a manhole set into the ceiling.  
+spy a manhole set into the ceiling.
 ~
 0 12 0
 Rd     0
@@ -5362,7 +5362,7 @@ S
 #1461
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5378,7 +5378,7 @@ S
 #1462
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5394,7 +5394,7 @@ S
 #1463
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5410,7 +5410,7 @@ S
 #1464
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5426,7 +5426,7 @@ S
 #1465
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5443,7 +5443,7 @@ S
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
 is very stale, and somewhat difficult to breathe.  Looking above you, you
-spy a manhole set into the ceiling.  
+spy a manhole set into the ceiling.
 ~
 0 12 0
 Rd     0
@@ -5468,7 +5468,7 @@ S
 #1467
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5484,7 +5484,7 @@ S
 #1468
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5500,7 +5500,7 @@ S
 #1469
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5516,7 +5516,7 @@ S
 #1470
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5532,7 +5532,7 @@ S
 #1471
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5549,7 +5549,7 @@ S
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
 is very stale, and somewhat difficult to breathe.  Looking above you, you
-spy a manhole set into the ceiling.  
+spy a manhole set into the ceiling.
 ~
 0 12 0
 Rd     0
@@ -5570,7 +5570,7 @@ S
 #1473
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5586,7 +5586,7 @@ S
 #1474
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5602,7 +5602,7 @@ S
 #1475
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5619,7 +5619,7 @@ S
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
 is very stale, and somewhat difficult to breathe.  Looking above you, you
-spy a manhole set into the ceiling.  
+spy a manhole set into the ceiling.
 ~
 0 12 0
 Rd     0
@@ -5644,7 +5644,7 @@ S
 #1477
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5660,7 +5660,7 @@ S
 #1478
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5676,7 +5676,7 @@ S
 #1479
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5692,7 +5692,7 @@ S
 #1480
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5708,7 +5708,7 @@ S
 #1481
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5724,7 +5724,7 @@ S
 #1482
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5740,7 +5740,7 @@ S
 #1483
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5756,7 +5756,7 @@ S
 #1484
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5773,7 +5773,7 @@ S
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
 is very stale, and somewhat difficult to breathe.  Looking above you, you
-spy a manhole set into the ceiling.  
+spy a manhole set into the ceiling.
 ~
 0 12 0
 Rd     0
@@ -5802,7 +5802,7 @@ S
 #1486
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5818,7 +5818,7 @@ S
 #1487
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5834,7 +5834,7 @@ S
 #1488
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5850,7 +5850,7 @@ S
 #1489
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5866,7 +5866,7 @@ S
 #1490
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5882,7 +5882,7 @@ S
 #1491
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5898,7 +5898,7 @@ S
 #1492
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5914,7 +5914,7 @@ S
 #1493
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5930,7 +5930,7 @@ S
 #1494
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5946,7 +5946,7 @@ S
 #1495
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5962,7 +5962,7 @@ S
 #1496
 Underneath the Town~
 You are standing in one of the underground tunnels of Ravenwood.  The air
-is very stale, and somewhat difficult to breathe.  
+is very stale, and somewhat difficult to breathe.
 ~
 0 8 0
 Rd     0
@@ -5980,7 +5980,7 @@ Within a Jail Cell~
 Chains and shackles line the walls here, in this prison set under the
 ground.  The only exit is a trapdoor which is set above a small ladder.  The
 trapdoor is heavily locked and appears as thought it could only be opened
-from above.  
+from above.
 ~
 0 -2012830691 0
 Rd     0
@@ -5994,7 +5994,7 @@ S
 Spell Components Shop~
 Within this shop, there are many items for sale to aid spellcasters in
 completing their more complex spells.  Different chemicals, flasks,
-parchments, and other oddities are arranged neatly along the shelves.  
+parchments, and other oddities are arranged neatly along the shelves.
 ~
 0 1036 0
 Rd     0

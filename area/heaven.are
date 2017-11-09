@@ -1,7 +1,7 @@
 #AREADATA
-Name        {95-103} Heaven              Keirkan~
+Name        Heaven~
 Levels      95 103
-Builders    Reklar~
+Builders    Keirkan Reklar~
 VNUMs       8200 8299
 Security    100
 Recall      25001
@@ -29,7 +29,7 @@ Perhaps its time you did something about that!
 0 0 2
 303111 0 0
 >greet_prog 100~
-if ispc($n) 
+if ispc($n)
 say Welcome to the after life $n.
 say The living have no place here so please make your visit brief.
 bow $n
@@ -229,7 +229,7 @@ if ispc($n)
   say You have done well so far $n! Now face instant Death!
   c 'fireball' $n
 endif
- 
+
 ~
 >fight_prog 30~
 if ispc($n)
@@ -300,7 +300,7 @@ if ispc($n)
   stun $n
   gouge $n
 endif
- 
+
 ~
 >death_prog 100~
 if ispc($n)
@@ -504,7 +504,7 @@ endif
 ~
 >speech_prog yes~
 if isgood ($n)
- say Excellent $n! I shall be happy to let you into heaven    
+ say Excellent $n! I shall be happy to let you into heaven
   say for your soul is pure as snow!
   emote waves good-bye to you!
   mptrans $n 8228
@@ -688,7 +688,7 @@ form of recruitment was not what you expected!
 c 'gas breath'
 ~
 >fight_prog 40~
-c 'stench of decay' 
+c 'stench of decay'
 ~
 |
 #8264
@@ -720,7 +720,7 @@ say Shall it be hell or death $n?
 emote nocks her head in $n's direction.
 endif
 endif
-mppurge  
+mppurge
 ~
 >speech_prog death~
 if isgood($n)
@@ -843,7 +843,7 @@ drop portal
 >greet_prog 100~
 &Wif ispc($n)
 mpechoat $n HELLO $N!!! YOU HAVE PASSED MANY TRIALS TO REACH THIS FAR IN YOUR
-mpechoat $n JOURNEYS! NOW YOU STAND BEFORE *ME*, THE CREATOR OF THE WORLD. 
+mpechoat $n JOURNEYS! NOW YOU STAND BEFORE *ME*, THE CREATOR OF THE WORLD.
 mpechoat $n WHAT SHALL YOU DO NOW THAT YOU ARE HERE? SHALL YOU LEARN THE SECRETS
 mpechoat $n OF THE WORLD? LEARN THE MEANING OF LIFE? SUCH IGNORANCE TO SUCH
 mpechoat $n JUVENILLE QUESTIONS I FIND QUITE AMUSING. OR PERHAPS YOUR VISIT HERE
@@ -856,7 +856,7 @@ if ispc($n)
 mpechoat $n AHH YOU WISH TO KNOW THE PURPOSE OF DEATH! SUCH A SIMPLE QUESTION.
 mpechoat $n DEATH IS SIMPLE THE TIME I DECIDE THAT YOUR PRESENCE IN THE MORTAL
 mpechoat $n IS NO LONGER NECESSARY. YOU SEE IF EVERYONE LIVED FOREVER, THE
-mpechoat $n AMOUNT OF STAGNATION AND BOREDOM WOULD BE TOO MUCH TO BEAR.  MY 
+mpechoat $n AMOUNT OF STAGNATION AND BOREDOM WOULD BE TOO MUCH TO BEAR.  MY
 mpechoat $n GIFT OF DEATH GIVES YOU MORTALS A LARGER CAPACTIY TO ENJOY LIFE,
 mpechoat $n TO EXPERIENCE WILD THRILLS AND ALL AND ALL MAKE MORE OF YOUR LIFE
 mpechoat $n THEN YOU OTHERWISE WOULD.
@@ -866,7 +866,7 @@ endif
 if ispc($n)
 mpechoat $n THE MEANING OF LIFE YOU WISH TO KNOW DO YOU. LIFE IS AS YOU SEE IT
 mpechoat $n IS SOMETHING LIKE A DREAM WHERE THE BOUNDARIES OF THE DREAM
-mpechoat $n ARE SET BY THE DREAMER. LIFE IS REALLY A FIGURATIVE TERM SINCE 
+mpechoat $n ARE SET BY THE DREAMER. LIFE IS REALLY A FIGURATIVE TERM SINCE
 mpechoat $n REALLY YOUR REAL ESSENCE HAS AND SHALL CONTINUE TO EXIST EVEN
 mpechoat $n BEYOND WHAT IT IS YOU CALL 'LIFE'.
 ruffle $n
@@ -874,9 +874,9 @@ endif
 ~
 >speech_prog power~
 if ispc($n)
-mpechoat $n SO YOU WISH TO KNOW WHAT TRUE POWER IS? LET IT BE KNOWN THAT THE 
+mpechoat $n SO YOU WISH TO KNOW WHAT TRUE POWER IS? LET IT BE KNOWN THAT THE
 mpechoat $n ONLY *TRUE* POWER LIES IN THE ABILITY TO MAKE SOMETHING REAL OUT
-mpechoat $n OF SOMETHING THAT PREVIOUSLY WAS NOT. THE POWER OF CREATION, TO 
+mpechoat $n OF SOMETHING THAT PREVIOUSLY WAS NOT. THE POWER OF CREATION, TO
 mpechoat $n MOLD SOMETHING TO YOUR VERY WILL AND FOR IT TO BECOME A PART OF YOU
 mpechoat $n IS AN EXAMPLE OF REAL POWER $n
 chuckle
@@ -2337,7 +2337,7 @@ The Incarnation of Death~
 The Incarnation of Death, Thanatos, at last!  Unfortunately for you, if
 you thought the horseman were hard, it would not comfort you to hear how
 Thanatos gained their loyalty.  A black scythe in hand a hood as dark as
-night, Thanatos advances towards you to claim your soul...  
+night, Thanatos advances towards you to claim your soul...
 ~
 0 1078337552 9
 Rd     0
@@ -2433,7 +2433,7 @@ up how formidable a warrior you could be.  You look upon her lightly green
 skin and her wise face and wonder if you could ever harm such a magnificant
 creature!  She could be no more harmful then a bug under your boot by the
 looks of it, however you are much more clever then that to underestimate an
-Incarnation!  
+Incarnation!
 ~
 0 4595728 9
 Rd     0
@@ -2930,7 +2930,7 @@ Arch-Angel Gabriel's Home~
 The home of Gabriel is very neat and particular as everything has its
 proper place.  The label 'the executioner' has been put on this angel for
 the very fact that he is God's own angel of death!  Tread carefully mortals
-for the very breath from Gabriel's mouth means death!  
+for the very breath from Gabriel's mouth means death!
 ~
 0 4595728 9
 Rd     0
@@ -3195,7 +3195,7 @@ S
 #8264
 The Office of Good~
 The belt of divinity is the insignia of power here in heaven.  Whomever
-wears the belt controls the fate of the world!  
+wears the belt controls the fate of the world!
 ~
 0 1078337556 9
 Rd     0
@@ -3321,7 +3321,7 @@ S
 #8274
 The Hall Before God~
 You have been transported to the hallway before God! Wondering where the
-rest of your companions could be you prepare yourself to meet your maker. You 
+rest of your companions could be you prepare yourself to meet your maker. You
 wonder what sort of fate lies beyond the next room as it quivers with some kind
 of divinely power. Nonetheless your fate lies in that direction and you have no choice except to take it.
 ~

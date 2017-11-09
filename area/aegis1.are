@@ -1,5 +1,5 @@
 #AREADATA
-Name        {??-???} Proto Area          Aegis~
+Name        Proto Area~
 Levels      0 0
 Builders    Aegis~
 VNUMs       26001 26100
@@ -17,10 +17,10 @@ Kyrax~
 Kyrax, Guardian of the Demon Temple, looks down on you with a sneer.
 ~
 Kyrax stands seven feet tall, looking down on intruders with an air of
-supreme confidence.  He appears to be a normal, although huge, human being. 
+supreme confidence.  He appears to be a normal, although huge, human being.
 But as you take a closer look at him, you see that his eyes glimmer with an
 unhealthy shade of red.  Lurking behind those eyes seems to be an evil
-intelligence that you have never encountered before.  
+intelligence that you have never encountered before.
 ~
 67 33554432 0 -100 S
 50 0 0 4800d0+0 0d0+0
@@ -34,7 +34,7 @@ A dark acolyte shuffles by you, mumbling under his breath.
 ~
 You see before you an acolyte of the Demon Temple.  He is hooded in a
 long black robe, keeping his face hidden from view.  You can barely pick out
-some of his insane ramblings: "Asmodeus...  Fire...  Blood...  Death..."  
+some of his insane ramblings: "Asmodeus...  Fire...  Blood...  Death..."
 ~
 65 0 0 -50 S
 55 0 0 8000d0+0 0d0+0
@@ -50,7 +50,7 @@ An ugly guard stands here guarding the doorway.  At first glance he
 appears to be nothing but an abnormally huge human.  But as you look closer
 at him, you see fangs poking out from his lips, and no human you ever met
 had dark, glowing red skin.  Are those jets of steam coming out of his
-nostrils?  
+nostrils?
 ~
 71 134217728 0 -400 S
 55 0 0 6400d0+0 0d0+0
@@ -66,7 +66,7 @@ An ugly guard stands here guarding the doorway.  At first glance he
 appears to be nothing but an abnormally huge human.  But as you look closer
 at him, you see fangs poking out from his lips, and no human you ever met
 had dark, glowing red skin.  Are those jets of steam coming out of his
-nostrils?  
+nostrils?
 ~
 71 33554432 0 -400 S
 55 0 0 6400d0+0 0d0+0
@@ -79,7 +79,7 @@ A red priest~
 A red priest stands here, bathing in blood.
 ~
 You see before you a priest glorifying in the evil blood that abounds on
-this step.  He is completely covered in blood, and completely mad.  
+this step.  He is completely covered in blood, and completely mad.
 ~
 67 0 0 -500 S
 60 0 0 10000d0+0 0d0+0
@@ -91,11 +91,11 @@ black priest~
 A black priest~
 A black priest stands here, staring at you with eyes darker than night.
 ~
-You feel a chill steal over your skin as you gaze at this dark creature. 
+You feel a chill steal over your skin as you gaze at this dark creature.
 He is clad in a pitch black robe that looks as wispy as silk yet hard as
 stone.  His eyes are the purest black, and you can see no white in those
 dark orbs.  The faintest gleam of dark red emanates from the very center of
-each eye.  
+each eye.
 ~
 67 0 0 -500 S
 60 0 0 10000d0+0 0d0+0
@@ -110,7 +110,7 @@ A priest stands here, worshipping the ice and revelling in the cold.
 You see before you a being that worships cold and ice.  He is no doubt
 skilled in the magical arts, and will defend himself with the powers of cold
 and ice at his command.  You start to shiver if you look into his dark blue
-eyes for too long.  
+eyes for too long.
 ~
 67 134217728 0 -500 S
 60 0 0 8000d0+0 0d0+0
@@ -125,7 +125,7 @@ A priest clothed in living flame stands here, glaring at you with fiery hatred.
 You see before you a being that worships fire and heat.  He is no doubt
 skilled in the magical arts, and will defend himself with the powers of fire
 and heat at his command.  He is clad in armor apparently made of burning
-embers, but appears to suffer no ill effects.  
+embers, but appears to suffer no ill effects.
 ~
 67 33554432 0 -600 S
 60 0 0 8000d0+0 0d0+0
@@ -140,7 +140,7 @@ A gigantic demon guard stands here, guarding the shrine from intruders.
 You see before you an absolutely humongous guard.  His face appears to be
 more demon than human, with large fangs and a distinct reddish hue to his
 skin.  He grips his weapon with a huge, clawlike hand, and you wouldn't be
-surprised to see wings growing out of his back.  
+surprised to see wings growing out of his back.
 ~
 99 167772328 0 -700 S
 60 0 0 5120d0+0 0d0+0
@@ -154,7 +154,7 @@ A High Priest of the Demon Temple stands here, torturing a lost soul.
 ~
 You see before you a being who worships demons with all his soul, and
 will do anything for his unholy masters.  You can see that he is completely
-mad, as his mind has been ripped apart by forces far beyond his powers.  
+mad, as his mind has been ripped apart by forces far beyond his powers.
 ~
 67 33554560 0 -1000 S
 65 0 0 8000d0+0 0d0+0
@@ -169,7 +169,7 @@ A demonic priestess wanders about, searching for fresh blood.
 You see before you a priestess entirely devoted to the worship of demons,
 and to their future ascendance to power.  Unlike other inhabitants of this
 temple, she seems quite sane, and goes about her duties, like searching for
-innocent victims, in a calm and rational manner.  
+innocent victims, in a calm and rational manner.
 ~
 65 0 0 -700 S
 60 0 0 10000d0+0 0d0+0
@@ -183,7 +183,7 @@ A tortured soul lies upon the table, screaming in mortal agony.
 ~
 You see before you a being that you can barely recognize as human.  He
 has been tortured beyond the bounds of pain, and continually shrieks with
-mindless agony.  You can only hope he will be put out of his misery soon.  
+mindless agony.  You can only hope he will be put out of his misery soon.
 ~
 67 4096 0 300 S
 50 0 0 6000d0+0 0d0+0
@@ -845,13 +845,13 @@ A
 #26001
 Path to The Temple~
 You see before you a massive temple that looks ancient beyond belief.  It
-is shaped like a pyramid, yet its color is like nothing you have ever seen. 
+is shaped like a pyramid, yet its color is like nothing you have ever seen.
 The sides seem to be drenched in dark, glistening blood that pulses with
 power and overwhelming evil.  As you take a closer look at the huge
 structure in front of you, you notice that the temple is not made of stones,
 but rather seem to consist of overlapping scales, perhaps of some extinct
 species of dragon.  The light of the sun seems to dim noticeably around the
-temple, and you feel a chill as you step into the darkened clearing.  
+temple, and you feel a chill as you step into the darkened clearing.
 ~
 0 0 0
 Rd     0
@@ -867,7 +867,7 @@ blood-red and made of the massive scales of a dragon, blocks your way into
 the temple.  You can now faintly hear screams of fear and pain even through
 that thick door, although it is not clear if those awful sounds are made by
 humans or animals.  Also barring your way into the temple is a towering
-guard clad in blood-red, scaly armor.  
+guard clad in blood-red, scaly armor.
 ~
 0 4 0
 Rd     0
@@ -882,13 +882,13 @@ D2
 S
 #26003
 Temple Foyer~
-Your senses are assaulted as you step into the darkened temple. 
+Your senses are assaulted as you step into the darkened temple.
 Guttering torches set in the walls cast flickering lights across the foyer,
 yet the corners remain dark and hidden.  You smell the combined stench of
 rotting and burning flesh, and the agonized cries of unfortunate souls ring
 in your ears.  The ceiling seems to be literally dripping with blood, and as
 you watch a drop of dark blood falls onto you, burning a small hole into
-your armor.  
+your armor.
 ~
 0 0 0
 Rd     0
@@ -915,7 +915,7 @@ You stand at the southeast corner of the temple foyer.  Somehow it seems
 much darker here, and some strange sounds seem to be coming from the
 blackness of the deepest corner.  A distinct chill steals over your skin as
 you enter this area, and deepens as you approach the north.  To the west you
-can see the entrance to the temple, and to the north lies a black door.  
+can see the entrance to the temple, and to the north lies a black door.
 ~
 0 0 0
 Rd     0
@@ -934,7 +934,7 @@ You stand in the southwest corner of the temple foyer.  A sickly red
 flame burns atop a blackened torch in this corner, casting a red glare
 across the surroundings.  As you come closer to the torch, you start to hear
 insane giggling and howls of mad laughter.  It might be a good idea to stay
-away from that torch...  
+away from that torch...
 ~
 0 0 0
 Rd     0
@@ -954,7 +954,7 @@ brighter here, but you feel a malevolently evil force to the north.  The
 agonized shriek of a dying soul pierces your ears before being suddenly cut
 off.  To the east you can see a black door, and a chilly draft wafts across
 your skin as you peer over there.  To the west lies a red door, and the
-blood dripping from the ceiling seems to emanate from that direction.  
+blood dripping from the ceiling seems to emanate from that direction.
 ~
 0 0 0
 Rd     0
@@ -980,7 +980,7 @@ reflection whatsoever.  As you come closer to the door, the temperature of
 the room seems to drop below freezing, as the pulsing blackness of the door
 seems to absorb any heat around it.  Standing before the door is a monstrous
 guard who looks less than human, and bars your passage with a huge black
-battle-axe.  
+battle-axe.
 ~
 0 12 0
 Rd     0
@@ -1005,7 +1005,7 @@ spreads out over the ceiling.  A dark black keyhole seems to float in the
 moving river of blood that makes up this unholy door, and you feel the
 presence of dark magics at work.  Standing before the door is a monstrous
 guard who looks more than human, and bars your passage with an axe made of
-living blood.  
+living blood.
 ~
 0 12 0
 Rd     0
@@ -1028,7 +1028,7 @@ You stand in the bend of a dark hallway.  There are fewer torches along
 the wall here, and they barely throw enough light for you to see the
 blood-red walls.  To the east you can barely make out what looks like a huge
 staircase.  The inhuman screams that you hear now make an unceasing chorus
-that drives into your brain like an icy spike.  
+that drives into your brain like an icy spike.
 ~
 0 0 0
 Rd     0
@@ -1048,7 +1048,7 @@ beings far larger than you.  You cannot see the top of the stairs in the
 shrouded darkness, although the screams of agonizing terror seem to be
 coming from that direction.  The step in front of you is made of a rough
 stone, and is covered in glistening, warm blood.  You might be able to pull
-yourself up onto the first step if you can find a grip on the slick stone.  
+yourself up onto the first step if you can find a grip on the slick stone.
 ~
 0 0 0
 Rd     0
@@ -1071,7 +1071,7 @@ You stand in the bend of a dark hallway.  There are fewer torches along
 the wall here, and they barely throw enough light for you to see the
 blood-red walls.  To the west you can barely make out what looks like a huge
 staircase.  The inhuman screams that you hear now make an unceasing chorus
-that drives into your brain like an icy spike.  
+that drives into your brain like an icy spike.
 ~
 0 0 0
 Rd     0
@@ -1089,7 +1089,7 @@ The Step of &RBlood~
 You stand on a step that glistens with dark blood.  The liquid seems to
 be actually seeping out from the dark stone underneath, and your feet begin
 to feel uncomfortably warm.  It might be a good idea to get off this step
-before the blood finds its way to your skin.  
+before the blood finds its way to your skin.
 ~
 0 0 0
 Rd     0
@@ -1110,7 +1110,7 @@ arise from where droplets spatter against your armor.  You can almost hear
 demonic whispers and the insane babbling of lost souls above the sounds of
 the sloshing blood, but it is probably better that you cannot hear those
 voices clearly.  Ahead of you stands a sleek black step made of pure
-obsidian.  
+obsidian.
 ~
 0 0 0
 Rd     0
@@ -1129,7 +1129,7 @@ As you haul yourself up onto this step, you can feel the eerie coldness
 that seems to emanate from this pitch black stone.  The floor and walls seem
 to suck all the heat from your body, and it seems darker on this step, even
 though the torches seem just as plentiful up here.  The screaming from up
-above seems to be getting even louder.  
+above seems to be getting even louder.
 ~
 0 0 0
 Rd     0
@@ -1145,11 +1145,11 @@ S
 #26015
 The Step of &zObsidian~
 As you walk across the huge, seamless block of obsidian that makes up
-this step, you can see two priests cloaked in black standing before you. 
+this step, you can see two priests cloaked in black standing before you.
 The temperature seems to be steadily dropping as you make your way across
 the surface of the step.  You cannot tell if the deep chill emanates from
 these two stolid figures, or from the massive block of black ice that makes
-up the next step.  
+up the next step.
 ~
 0 0 0
 Rd     0
@@ -1167,7 +1167,7 @@ The Step of &bBlack Ice~
 The chill you felt on the step below has deepened to a mindnumbing
 temperature.  The step you stand upon is made of slick ice, clear and with
 no apparent flaws.  You are about halfway up this huge staircase, and now
-you can see neither the top nor the bottom in the darkness of the temple.  
+you can see neither the top nor the bottom in the darkness of the temple.
 ~
 0 0 0
 Rd     0
@@ -1186,7 +1186,7 @@ It might be a good idea to watch your step as you move across the slick
 surface of the step.  You can feel the cold beginning to work its way
 through your boots and into your toes.  Before you stands a step apparently
 made of burning embers, yet you feel no heat from that direction.  Before
-you also stands two priests, giving you a chilly stare of their own.  
+you also stands two priests, giving you a chilly stare of their own.
 ~
 0 0 0
 Rd     0
@@ -1202,9 +1202,9 @@ S
 #26018
 The Step of &RBurning &rEmbers~
 The cold burns away from your feet as you climb up to this step.  The
-surface of this step appears to be a solid, packed mass of fiery hot coals. 
+surface of this step appears to be a solid, packed mass of fiery hot coals.
 Somehow you don't burn yourself when you touch the floor, but the
-temperature in here is uncomfortably warm.  
+temperature in here is uncomfortably warm.
 ~
 0 0 0
 Rd     0
@@ -1219,10 +1219,10 @@ D5
 S
 #26019
 The Step of &RBurning &rEmbers~
-The temperature grows from warm to hot as you move across the step. 
+The temperature grows from warm to hot as you move across the step.
 Before you stand two priests clad in the same strange substance that the
 step is made of.  The screams you hear have grown ear-piercingly loud, and
-you can finally see the top of the staircase.  
+you can finally see the top of the staircase.
 ~
 0 0 0
 Rd     0
@@ -1242,7 +1242,7 @@ this corner of the shrine.  It collects into a pool of dark, viscous red
 fluid, and an unpleasant warmth seems to emanate from this source.  The
 blood ripples and seethes in the corner, seeming to take on a life of its
 own.  The blood also flows up the walls from this corner in defiance of
-gravity, spreading out over the ceiling and the rest of the temple.  
+gravity, spreading out over the ceiling and the rest of the temple.
 ~
 0 0 0
 Rd     0
@@ -1259,11 +1259,11 @@ S
 Entrance to the Shrine~
 You stand on the top floor of the temple, before a huge bloody altar that
 stands in the center of this room.  The ceiling rises toward the sky in the
-shape of a thin knife, far beyond the reach of the torches' illumination. 
+shape of a thin knife, far beyond the reach of the torches' illumination.
 Although you can see no windows, small wisps of wind caress your skin,
 seeming to whisper of madness and lost souls.  Ahead you can finally see the
 source of the screams, as a dark figure prepares to sacrifice his next
-victim.  
+victim.
 ~
 0 0 0
 Rd     0
@@ -1286,12 +1286,12 @@ D3
 S
 #26022
 The &zObsidian &WCorner~
-This corner of the demonic shrine is strewn with black obsidian rubble. 
+This corner of the demonic shrine is strewn with black obsidian rubble.
 If you do not watch your step you are likely to twist an ankle or scrape a
 leg on the sharp, irregularly shaped rocks.  As you take a closer look into
-the corner, you can see what looks to be a huge outgrowth of pure obsidian. 
+the corner, you can see what looks to be a huge outgrowth of pure obsidian.
 It appears that the stone is slowly emerging from the walls, and has
-gradually taken over this corner of the shrine over many long years.  
+gradually taken over this corner of the shrine over many long years.
 ~
 0 0 0
 Rd     0
@@ -1312,7 +1312,7 @@ glistening with the color of fresh blood.  Even in the uneven, flickering
 light of the torches, you can make out depictions of the unspeakable actions
 of the demons.  Here you can see hordes of people enslaved by demon masters,
 demons mutilating and torturing humans while wearing inhuman grins of
-gleeful madness, and other visions that make you turn your eyes away.  
+gleeful madness, and other visions that make you turn your eyes away.
 ~
 0 0 0
 Rd     0
@@ -1333,11 +1333,11 @@ S
 &RTemple Altar~
 You stand in the middle of this demonic shrine, before a huge ornate
 altar that is dripping with blood.  Dominating this room is a sacrificial
-table that looks like it has seen ages of use and thousands of victims. 
+table that looks like it has seen ages of use and thousands of victims.
 Blood drips from a hole in the table down into a wide gulley, where the red
 liquid flows into the southwest corner of the shrine.  Beside the table
 stands the High Priest of this Temple, preparing to sacrifice his next
-screaming victim.  
+screaming victim.
 ~
 0 0 0
 Rd     0
@@ -1370,7 +1370,7 @@ glistening with the color of fresh blood.  Even in the uneven, flickering
 light of the torches, you can make out depictions of the unspeakable actions
 of the demons.  Here you can see hordes of people enslaved by demon masters,
 demons mutilating and torturing humans while wearing inhuman grins of
-gleeful madness, and other visions that make you turn your eyes away.  
+gleeful madness, and other visions that make you turn your eyes away.
 ~
 0 0 0
 Rd     0
@@ -1392,7 +1392,7 @@ The &bBlack Ice &WCorner~
 As you walk into this corner of the shrine, a deep chill settles into
 your bones are the temperature seems to drop to arctic-like coldness.  This
 entire corner seems to be made of a single block of black ice, as if some
-huge sculptor carved it out of a mountain made of flawless ice.  
+huge sculptor carved it out of a mountain made of flawless ice.
 ~
 0 0 0
 Rd     0
@@ -1413,7 +1413,7 @@ glistening with the color of fresh blood.  Even in the uneven, flickering
 light of the torches, you can make out depictions of the unspeakable actions
 of the demons.  Here you can see hordes of people enslaved by demon masters,
 demons mutilating and torturing humans while wearing inhuman grins of
-gleeful madness, and other visions that make you turn your eyes away.  
+gleeful madness, and other visions that make you turn your eyes away.
 ~
 0 0 0
 Rd     0
@@ -1436,7 +1436,7 @@ The heat emanates from this corner like a shockwave.  Every tile and
 every stone in this part of the shrine seems to be a piece of living fire,
 shaped into squares and blocks and octagons.  Pure red flames seems to be
 dancing in the very corner as you step across the burning embers, and you
-are sure you can hear maniacal laughter coming from those very flames.  
+are sure you can hear maniacal laughter coming from those very flames.
 ~
 0 0 0
 Rd     0
@@ -1457,7 +1457,7 @@ to be many thousands of feet below.  Before you lies the shrine of this
 demonic temple, and the dark evil emanating from the altar is almost
 palpable.  The shrieks of agony you heard on the staircase now seems to be
 coming from directly ahead, but your vision is fogged by a misty darkness
-and a strange red glare.  
+and a strange red glare.
 ~
 0 12 0
 Rd     0
@@ -1476,7 +1476,7 @@ You are floating above black nothingness.  Above you can see the faint,
 flickering light of torches, but below is nothing but impenetrable
 blackness.  You can hear faint groanings and growlings below you, and soft
 scratches and scribbling of movement.  Whatever is moving below you is
-definitely not human.  
+definitely not human.
 ~
 0 33554440 0
 Rd     0
@@ -1494,7 +1494,7 @@ The &zAbyss~
 You are floating in absolute pitch black nothingness.  Your light
 illuminates a sphere of perhaps five feet in every direction, but you can
 see nothing around you.  The sounds below have gotten louder, and you sense
-that the floor on which those creatures reside is not far below.  
+that the floor on which those creatures reside is not far below.
 ~
 0 33554440 0
 Rd     0
@@ -1510,7 +1510,7 @@ S
 #26032
 The First Level of the &zAbyss~
 You land on a black-green surface that feels cold and gooey.  Your feet
-stick in the goop, and it is hard to walk around.  
+stick in the goop, and it is hard to walk around.
 ~
 0 8 0
 Rd     0

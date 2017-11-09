@@ -1,7 +1,7 @@
 #AREADATA
-Name        { GOOD } Alor Raharo         Aegean~
+Name        Alor Raharo~
 Levels      1 105
-Builders    Dolguard Flint~
+Builders    Dolguard Flint Aegean~
 VNUMs       7400 7599
 Security    100
 Recall      7445
@@ -21,7 +21,7 @@ Weiyrna, the local innkeeper, stands here cleaning a mug out.
 Beaming back at you with a cheerful face, this aging lady walks in your
 direction, absent-mindedly dry-washing her hands with her apron.  Taking a
 second to blow a whisp of greying hair from her face, Weiyrna curties
-formally for you, asking you how may she be of service.  
+formally for you, asking you how may she be of service.
 ~
 67 16777216 16 1000 S
 100 0 0 30000d0+0 0d0+0
@@ -38,7 +38,7 @@ feet in a pool of fabric on the ground.  Crystal blue eyes regard you
 curiously from beneath a shaggy wealth of grey hair.  Turning away from you
 for a moment, he whispers a few words with his hand hovering over a small
 object that looks like some form of pill as a blue aura surrounds the
-object.  
+object.
 ~
 67 16777216 16 1000 S
 100 0 0 30000d0+0 0d0+0
@@ -54,7 +54,7 @@ Setting down his latest piece of work, he reaches out to shake your hand
 in greeting and you notice just how much work in this forge has increased
 his strength as his arm retracts.  Cloaked in a simple leather vest, pair of
 pants and wrapped about in a hole-filled apron, he can even now give an air
-of knowing how to defend himself.  
+of knowing how to defend himself.
 ~
 67 16777216 16 1000 S
 100 0 0 30000d0+0 0d0+0
@@ -71,7 +71,7 @@ eyebrow slightly in question.  Even as his eyes lock on your's, his hands
 keep working at the dough before him professionally, without needing to even
 watch his creation.  A large white apron is tied about his heavy bulk,
 covering the local garb common to most citizens in dried up dough and caked
-on flour.  
+on flour.
 ~
 67 16777216 16 1000 S
 100 0 0 30000d0+0 0d0+0
@@ -86,7 +86,7 @@ Rechecking his supplies, Brear, head of the general store stands here.
 Absently brushing aside the greying handles of his mustache, Brear turns
 his face towards you with mild curiousity.  Grey hair cloaks the top of his
 head, highlighting his crystal blue eyes, the common trait of those in this
-realm.  
+realm.
 ~
 67 16777216 16 1000 S
 100 0 0 30000d0+0 0d0+0
@@ -103,7 +103,7 @@ penatrating gaze as he takes in your appearance, mentally accessing your
 skill in using your weapons.  A slight nod from his head seems the only
 indication of his acknowledgement of your experience or in the promise you
 hold.  Long black hair extends backwards behind his head into a tight tail
-at the nape of his neck that trails down the middle of his back.  
+at the nape of his neck that trails down the middle of his back.
 ~
 67 16777216 16 1000 S
 100 0 0 30000d0+0 0d0+0
@@ -118,7 +118,7 @@ The local jewelry appraiser, Aleis, stands here.
 Seems not to have even truely noticed your existance yet as she studies a
 small sapphire gem in her hand through a glass eye-piece.  Raven black hair
 spills down across her shoulders, giving her a matching look to the majority
-of the rest of the Alor Raharo citizens you've seen so far.  
+of the rest of the Alor Raharo citizens you've seen so far.
 ~
 67 16777216 16 1000 S
 100 0 0 30000d0+0 0d0+0
@@ -135,7 +135,7 @@ blue eyes sparkle with interest at a new customer as you enter as he
 carefully marks a place in a black ledger of accounts before looking up to
 greet you.  Judging by the ink stains on the sleeves of his clothing and at
 the tip of his nose you wonder begin to wonder just how much time this man
-spends around his records.  
+spends around his records.
 ~
 67 16777216 16 1000 S
 100 0 0 30000d0+0 0d0+0
@@ -151,7 +151,7 @@ Craddling a puppy in the nook of one arm, while another gently feeds it,
 Nemari seems almost totally lost in her work, barely glancing up at your
 enterance as you peruse the various cages within the shop.  The small puppy
 stubbornly fights her attention, trying to bury it's nose beneath her long
-glistening black hair, whimpering softly to itself.  
+glistening black hair, whimpering softly to itself.
 ~
 67 16777216 16 1000 S
 100 0 0 30000d0+0 0d0+0
@@ -506,8 +506,8 @@ answer your question.  Also know that most immortals are busy doing something
 even if it may not be immediately appearant so if they don't answer right away
 give them time.  And if you ask for their attention and get it, don't tell them
 "just a sec" if it's something you could have taken care of before calling their
-attention.  These are just general notes of "etiquette" in dealing with 
-immortals.  They're happy to help you out if you give them the chance and don't 
+attention.  These are just general notes of "etiquette" in dealing with
+immortals.  They're happy to help you out if you give them the chance and don't
 disrespect them.
 &z--------------------------------------------------------------------------------
 ~
@@ -533,8 +533,8 @@ E
 &z*&w cheating will not be tolerated.  This includes accepting favors from gods
   and exploiting bugs. If you find a bug, report it, then do not use it.
 &B
-&z*&w Absolutely NO summonsing any mobs to Bethaven, Ravenwood or Alor Raharo.  
-  I do NOT wish newbies jeopardized.  There's plenty of room outside those 
+&z*&w Absolutely NO summonsing any mobs to Bethaven, Ravenwood or Alor Raharo.
+  I do NOT wish newbies jeopardized.  There's plenty of room outside those
   towns, use them.
 &z--------------------------------------------------------------------------------
 ~
@@ -743,7 +743,7 @@ move.  To do training you use "practices" that you receive each level based on
 your Wisdom.  The higher your Wisdom the more practices you're able to get per
 level.  To train a stat, like Str, it costs 5 practices per train, but to train
 HP, mana or movement it costs only 1 practice.  Note: You can't train a statisti
-c like Str past 18 regardless of class.  To train a stat you simply type: 
+c like Str past 18 regardless of class.  To train a stat you simply type:
 &wtrain <item> &R#  &C(&R#&C is for how many practices to use.  Ie: train hp 50)
 &cPracticing is a bit more indepth where training deals with statistics,
 practicing is how you aquire new skills and spells.  It only takes one
@@ -1787,7 +1787,7 @@ map~
 along the shores of it's banks by the fierce currents in the rapids.  Not
 far south the ground turns into a &Wdeep ice&O leading out into the &CArctic
 Wastelands&O.  Why the &Wice&O has receded here is mystery though.  Off a
-ways to the northwest lies a medium-sized city's outer walls.  
+ways to the northwest lies a medium-sized city's outer walls.
 ~
 0 393233 4
 Rd     0
@@ -1803,7 +1803,7 @@ the &WArctic Wastelands&O, although not a single trace of that area's
 &Bi&bc&Cy chill&O seems to effect this strip of &Briver &Obank.  A lond
 distance to the west the Averillen Mountains rise up into the &Wclouds&O and
 at their feet give birth to the swift &CValari river&O.  To the east the
-shoreline continues.  
+shoreline continues.
 ~
 0 393233 4
 Rd     0
@@ -1822,7 +1822,7 @@ S
 in your direction until it bends back eastward to pass beneath a long wooden
 bridge a little to the east.  Not far south the ground lies in a permanent
 state of &Cfrost&O with little or no ground showing beneath the deep mounds
-of &Wsnow&O.  
+of &Wsnow&O.
 ~
 0 393233 4
 Rd     0
@@ -1844,7 +1844,7 @@ area's deep &Cchill&O seems to reach into this valley enterance.  A long
 wooden bridge, showing signs of heavy rot, runs off to the north traversing
 over the top of a rapid torn &Briver&O that banks sharply off to the north
 after passing beneath the bridge.  The shoreline of the &Briver&O continues
-to the east and west.  
+to the east and west.
 ~
 0 393233 4
 Rd     0
@@ -1866,7 +1866,7 @@ S
 &OThe Arackier Peaks tower up abruptly just to the east blocking view of
 the &BValari river's &Oeastward trek from here.  Far off to the north you're
 able to see the opposite bank of the &Briver&O as well as a long wooden
-bridge standing over the &Bwater's&O surface just to the northwest.  
+bridge standing over the &Bwater's&O surface just to the northwest.
 ~
 0 393233 4
 Rd     0
@@ -1883,7 +1883,7 @@ between the wooden planks.  Upon closer examination of the wood's condition
 you notice several of the planks heavily warped and nearly all of them
 thoroughly rotted through.  Perhaps continuing on as soon as possible would
 be a good idea.  The idea of crashing through to the swift rapids just below
-doesn't seem quite as appealing as the sandy shore a ways off to the north. 
+doesn't seem quite as appealing as the sandy shore a ways off to the north.
 ~
 0 393233 4
 Rd     0
@@ -1904,7 +1904,7 @@ between the wooden planks.  Upon closer examination of the wood's condition
 you notice several of the planks heavily warped and nearly all of them
 thoroughly rotted through.  Perhaps continuing on as soon as possible would
 be a good idea.  The idea of crashing through to the swift rapids below
-doesn't seem quite as appealing as the sandy shore just off to the north.  
+doesn't seem quite as appealing as the sandy shore just off to the north.
 ~
 0 393233 4
 Rd     0
@@ -1923,7 +1923,7 @@ S
 length of this muddy beach.  The &Briver&O seems to be receeding at the
 moment leaving the section of ground you stand upon a strip of foot-deep
 dark mud.  Passage to the east is immediately blocked by the towering
-mountains of the Arackier Peaks.  
+mountains of the Arackier Peaks.
 ~
 0 393233 4
 Rd     0
@@ -1938,7 +1938,7 @@ S
 the foot-deep mud and press on along the shoreline.  Directly to the north
 the tall walls of a medium-sized city open up at a large steel gate,
 currently lying open.  Running off southward is a long wooden bridge showing
-considerable signs of rot in it's long floorboards.  
+considerable signs of rot in it's long floorboards.
 ~
 0 393233 4
 Rd     0
@@ -1967,7 +1967,7 @@ free.  Running off westward is a long stone bridge with wooden floorboards
 covering it's floor above the stone.  To the north lies a small patch of
 &Gleaf crowned trees&O.  The swift &BValari river&O rages between it's
 shorelines to the south banking southward for a bit before disappearing
-beneath another bridge off to the east.  
+beneath another bridge off to the east.
 ~
 0 393233 4
 Rd     0
@@ -2005,7 +2005,7 @@ S
 easily wide enough to support a large wagon or at least five men horseback
 abreast to cross.  A faint creaking sound follows your movement along the
 &Owooden boards&w as you head along your way.  The bridge continues to the
-west or exits to the east.  
+west or exits to the east.
 ~
 0 393233 4
 Rd     0
@@ -2025,7 +2025,7 @@ S
 &Wstonework&w underneath seems to have eluded even dust, but then again the
 &BValari river's &wswift currents bring the &Bwater&w to lap up lazily
 against the side of the bridge.  The bridge continues to the east or exits
-to the west.  
+to the west.
 ~
 0 393233 4
 Rd     0
@@ -2044,7 +2044,7 @@ S
 to form a &Ygolden &wpainted steel gate.  The &Osand-covered wooden
 floorboards&w of the &Wwhite stone&w bridge to the east turns into a pathway
 of finely crushed gravel making travel a bit more pleasant if louder.  A
-street leads off from the south on into the west.  
+street leads off from the south on into the west.
 ~
 0 131092 1
 Rd     0
@@ -2062,8 +2062,8 @@ S
 &wThe crushed gravel of the street beneath you crunches lightly as you
 make your way along Esiser Avenue.  The street heads off westward for some
 distance or bends north becoming the mouth of Alor Raharo's eastern city
-gate.  
- 
+gate.
+
 &BNorth &w- &CEast Gate of Alor Raharo
 ~
 0 131072 1
@@ -2082,7 +2082,7 @@ S
 &wGlancing around gives you little clue to your surroundings with a
 simple-designed &Wwhite&w wall of a private home to the north and the closed
 &Ooak&w door of another private residence to the south.  The avenue itself
-continues on to the east and the west.  
+continues on to the east and the west.
 ~
 0 131072 1
 Rd     0
@@ -2105,7 +2105,7 @@ S
 enter one of the many private homes spread about the city.  A plain &Owooden
 table&w lies in the center of the room with a collection of small chairs
 spread around it.  Over to one corner lies a couple sets of cots laided out
-in a row for the family's beds.  
+in a row for the family's beds.
 ~
 0 262156 0
 Rd     0
@@ -2122,7 +2122,7 @@ past you on this busy road, leaving you to dodge the various farmer's carts
 and merchant's wagons passing through.  Attempting to block out the sounds
 of a city bursting at the seems you climb up on a parked cart's side to look
 down the street.  To the north, Aim'is leads on a ways before bending east
-out of sight.  
+out of sight.
 ~
 0 131072 1
 Rd     0
@@ -2142,7 +2142,7 @@ Biting off a few muttered curses you dodge stealthily around those carts
 that don't care whether you move out of the way or not.  Several groups of
 people mill about standing along the sides speaking in quiet voices or even
 laughing aloud, while others move briskly through the crowd about their
-daily chores.  Aim'is Avenue contines to the north and south.  
+daily chores.  Aim'is Avenue contines to the north and south.
 ~
 0 131072 1
 Rd     0
@@ -2165,7 +2165,7 @@ S
 enter one of the many private homes spread about the city.  A plain &Owooden
 table&w lies in the center of the room with a collection of small chairs
 spread around it.  Over to one corner lies a couple sets of cots laided out
-in a row for the family's beds.  
+in a row for the family's beds.
 ~
 0 131084 0
 Rd     0
@@ -2182,7 +2182,7 @@ top of each other behind the shopkeeper's counter.  Empty flasks lay neatly
 laid out in rows along the shelves to your right while thick stacks of
 parchment paper lies on the shelf to your left.  A standup rack lies on the
 counter holding numerous bottles of ink with a cup full of feathered quills
-sticking point down into it.  
+sticking point down into it.
 ~
 0 394252 0
 Rd     0
@@ -2196,7 +2196,7 @@ S
 &wHere Aim'is Avenue bends east if you're heading northward or bends west
 if you're traveling south along it's length.  The side of one of Alor
 Raharo's numerous shops looms above your head directly to the north and a
-large &Owooden &wdoor lies to the west.  
+large &Owooden &wdoor lies to the west.
 &B
 &BWest &W- &CDagra's Magical Supply Store
 ~
@@ -2221,7 +2221,7 @@ S
 Avenue on their way either to the west or north.  The side of some building
 lies directly to the east and another building side to the south.  Shuffling
 through the milling masses of people you step on a small ledge to get a
-better look down the street in the direction you're heading.  
+better look down the street in the direction you're heading.
 ~
 0 131072 1
 Rd     0
@@ -2241,7 +2241,7 @@ its stationary position in front of a store directly to the west.  Aim'is
 Avenue itself continues to the north for as far as your eye is able to make
 out and to the south before bending westward.  The side of a building lies
 to the east while to the west lies the &Owooden&w sign of a jeweller's shop
-hanging above its door.  
+hanging above its door.
 &C
 &BWest &w- &CAleis' Rare Gems
 ~
@@ -2266,7 +2266,7 @@ S
 fanciful &Pvelvet cushions&w which have small gems of all types lying upon
 them.  &bDark blue sapphires&w, &Obronzish topaz gems&w, &Gbright emeralds&w
 & &Rbright rubies &wline the various cushions sending off colored streams of
-light as they reflect what little sunlight that seeps inside.  
+light as they reflect what little sunlight that seeps inside.
 ~
 0 394252 0
 Rd     0
@@ -2282,7 +2282,7 @@ to get by.  An air of distance lies between the people of this valley and
 those outsiders like yourself, not quite dislike, but a feeling of nearly
 tangable caution and curiosity.  The back side of what appears to be the
 village's armor shop lies to your west, while to the east lies the front of
-Alor Raharo's bank.  Aim'is Avenue continues to the north and the south.  
+Alor Raharo's bank.  Aim'is Avenue continues to the north and the south.
 &B
 &BEast &w- &CAlor Raharo City Vault
 ~
@@ -2308,7 +2308,7 @@ City Vault.  A long counter runs across one end of the building, marking the
 teller's workstation.  Beyond the counter to the right of the room lies a
 thick steel door with a large spoked wheel balanced in it's center.  Somehow
 you get the feeling little short of the most powerful of magics could break
-through such a device.  
+through such a device.
 ~
 0 17171468 0
 Rd     0
@@ -2324,7 +2324,7 @@ as these two streets cross one another's paths.  Far to the north you're
 able to see the very southern end of the Searnian Valley's Sarvis Lake with
 it's crystal clear waters glistening in the sunlight while to the west where
 Fevnn street leads off you're able to make out the eastern end of the
-Averillen Mountains.  Aim'is Avenue continues to the north and the south.  
+Averillen Mountains.  Aim'is Avenue continues to the north and the south.
 ~
 0 131072 1
 Rd     0
@@ -2346,7 +2346,7 @@ S
 &wYou stand in the middle of a small side street in Alor Raharo just to
 the west of the grand Aim'is Avenue, Raharo's main road.  North of you lies
 the town petstore while to the south lies the side of what you believe is
-the town's armor shop.  Fevnn Street continues to the west and east.  
+the town's armor shop.  Fevnn Street continues to the west and east.
 &B
 &BNorth &W- &CNemari's Pet Store
 ~
@@ -2370,9 +2370,9 @@ S
 &wThe small backroad of Fevnn Street intermeshes into Alor Raharo's main
 northern road, Calane Road.  Leading southward from you lies a section of
 several stores, while to the north you can just make out the deep green
-grasses of the town's Village Green and the northern gate beyond that. 
+grasses of the town's Village Green and the northern gate beyond that.
 Fevnn Street continues to the west and east, Calane Road continues to the
-north and south.  
+north and south.
 ~
 0 131072 1
 Rd     0
@@ -2398,7 +2398,7 @@ S
 &wYou stand in the northern half of a small grouping of this town's
 stores, with the local weaponsmithy to the west and village armoury to the
 east.  Leading off north runs Calane Road heading up through the center of
-town.  Calane Road continues to the north and south.  
+town.  Calane Road continues to the north and south.
 &B
 &BWest &W- &CGladeral's Weaponsmithy
 &BEast &W- &CBlais' Armoury
@@ -2429,7 +2429,7 @@ assortments of sword, broadswords, halberds, spears, quarterstaffs or axes
 of varying size.  A forge's heat comes from behind a closed door to the
 back, along with the sounds of hammering.  Walking in a bit further you come
 to a counter containing various daggers and throwing knives set on their
-sides with the tip facing outward.  
+sides with the tip facing outward.
 ~
 0 394252 0
 Rd     0
@@ -2444,7 +2444,7 @@ S
 against the wall along each side of this store.  A smell of faint rust and
 metal clings heavily to the air as you use the edge of your cloak to filter
 it out some.  To the back lies a long counter holding assortments of various
-sized helms, visors, and face guards.  
+sized helms, visors, and face guards.
 ~
 0 394248 0
 Rd     0
@@ -2459,7 +2459,7 @@ S
 side of a village store's wall.  Walls surround you to the south and east,
 while a closed door to a shop lies to the west.  A bright reddish light
 eminates from beneath the door along with an intense amount of heat.  Calane
-Road continues to the north.  
+Road continues to the north.
 &B
 &BWest &W- &CCavon's Blacksmithy
 ~
@@ -2482,7 +2482,7 @@ the forge's fire hot, while another man works steadily bringing down a heavy
 blacksmith's hammer upon a piece of metal resting on a black anvil.  Bits
 and pieces of armor hang up along the walls all across the store, except for
 a section to the back that holds tools ranging from tongs to chippers of all
-sorts.  
+sorts.
 ~
 0 67503116 0
 Rd     0
@@ -2497,7 +2497,7 @@ S
 your way down the street.  To the east a bit lies the intersection between
 this street and Calane Road, one of Alor Raharo's main streets.  North and
 south of you lies the back or side of one of the town's various shops, while
-to the west continues this street.  
+to the west continues this street.
 ~
 0 131072 1
 Rd     0
@@ -2515,7 +2515,7 @@ S
 &wHere Fevnn Street bends northward turning into the smaller Ixzan Road
 of west Alor Raharo.  The glistening white walls of Raharo tower in all
 their glory directly to the west as well as a ways off to the north at the
-end of Ixzan Road.  Ixzan road continues to the north.  
+end of Ixzan Road.  Ixzan road continues to the north.
 ~
 0 131072 1
 Rd     0
@@ -2535,7 +2535,7 @@ north as well as to the west behind a small shop.  The people in this
 section of the city seem to be drunk as an average and nearly every one of
 them armed with some form of weapon as well as carrying themselves as
 soldiers well aware of how to use those weapons.  Ixzan Road continues to
-the north and south.  
+the north and south.
 &B
 &BWest &w- &CThe Local Adventurer's Guild
 ~
@@ -2562,7 +2562,7 @@ strikes you as a little odd, although that could be so more space could be
 made for shelves and cupboards like the ones that cover the walls in all
 directions.  A cauldron sits over a small fire surrounded by cobblestones to
 make a firepit.  Beneath the cupboards runs a long counter running the
-length of the west wall and bending down the south one some.  
+length of the west wall and bending down the south one some.
 ~
 0 394252 0
 Rd     0
@@ -2578,7 +2578,7 @@ of all classes and races to rent as companions on dangerous adventures.  The
 cost is not cheap, but the service is well worth any cost.  These
 mercenaries are willing to lay down their lives for the person who rents
 their services.  They have little choice, for failing a client means a
-lifetime of indentured servitude for the Adventurer's Guild.  
+lifetime of indentured servitude for the Adventurer's Guild.
 ~
 0 398348 0
 Rd     0
@@ -2600,7 +2600,7 @@ massive golden doors of Raharo's Western Gate directly to the west.  The
 average number of village guards seems to be higher here, leading you to
 wonder until you notice the small wooden sign hanging above the door to the
 north, labeled as the town garrison.  Marsim Way continues to the west and
-east.  
+east.
 &B
 &BNorth &w- &CCity Garrison
 &BWest  &w- &CWest Gate of Alor Raharo
@@ -2609,9 +2609,9 @@ east.
 Rd     0
 D0
 &wA massive door made of the finest solid oak stands before you,
-glistening in the light as the sun's rays shine off it's polished surface. 
+glistening in the light as the sun's rays shine off it's polished surface.
 A small wooden sign hangs from it's top reading, &C"&OGarrison of Alor
-Raharo, Office of Lord Captain Reanir Tyaren.  &C" 
+Raharo, Office of Lord Captain Reanir Tyaren.  &C"
 ~
 door~
 3 0 7442
@@ -2635,14 +2635,14 @@ covered with papers.  A large broadsword lies tip-down in the ground resting
 with it's hilt up against the side of the desk.  Written in small black
 lettering is a small wooden sign bearing the words, &C"&zReanir, Captain of
 the Alor Raharo Garrison, Defender of the Eastern Valley, High Lord of House
-Tyaren.&C"&w.  
+Tyaren.&C"&w.
 ~
 0 393224 0
 Rd     0
 D2
 &wThe inner side of a massive oaken door, finely polished to the point of
 having a glass-smooth surface stands here closing off Lord Captain Reanir
-Tyaren's office.  
+Tyaren's office.
 ~
 door~
 3 0 7441
@@ -2653,7 +2653,7 @@ S
 of the village.  A little ways to the west lies the massive golden gates of
 Alor Raharo's west gate, flanked to the sides by the majestic, white walls
 of the town.  Ixzan Road branches off to the south from Marsim Way, Alor
-Raharo's main cross street.  
+Raharo's main cross street.
 ~
 0 131072 1
 Rd     0
@@ -2677,7 +2677,7 @@ breaking in openings for the numerous carts and wagons making their way
 along the road.  A small section of the towering northern walls of Alor
 Raharo branches off in front of you to the north blocking off the town
 Oracle's room.  The only wagon not moving lies in front of a store to the
-south.  
+south.
 &B
 &CSouth &w- &BEldvain's Bakery
 ~
@@ -2698,11 +2698,11 @@ D3
 S
 #7445
 &GVillage Green&W~
-&gA large fountain springs out of the middle of this grassy town square. 
+&gA large fountain springs out of the middle of this grassy town square.
 Calane Road and Marsim Way both meet here bending into a paved circle around
 the Green's fountain with branches for each end of the road in the four
 compass directions with Marsim Way heading from the west to the east and
-Calane Road from the north to the south.  
+Calane Road from the north to the south.
 ~
 0 131072 1
 Rd     0
@@ -2729,7 +2729,7 @@ S
 of the town's various shops to unload it's cargo.  The sides of two stores
 craddle this section of Calane Road between them connecting the larger
 intersection of Calane Road and Marsim Way to the north with the smaller
-intersection of Calane Road and Fevnn Street to the south.  
+intersection of Calane Road and Fevnn Street to the south.
 ~
 0 0 0
 Rd     0
@@ -2749,7 +2749,7 @@ actions casually to avoid offense, but watching you the same.  There doesn't
 seem to be a feeling of dislike, but rather sharp curiousity and
 apprehension at one of the recent travellers who's found the small break
 through the ice of the Wastelands to the south.  Marsim Way continues to the
-west and east.  
+west and east.
 ~
 0 131072 1
 Rd     0
@@ -2770,7 +2770,7 @@ converge upon one another.  The southside of Alor Raharo's majestic northern
 wall glistens brightly in the sunlight behind the massing mob of citizens
 passing along on their individual tasks of the day.  Aim'is Avenue branches
 off to the south while Marsim Way continues east over the Valari River via
-the North Bridge and west on through western Alor Raharo.  
+the North Bridge and west on through western Alor Raharo.
 ~
 0 131072 1
 Rd     0
@@ -2793,7 +2793,7 @@ S
 to the intersection of Aim'is Avenue and Marsim Way, Alor Raharo's busiest
 section of roadway.  A set of heavy oak doors lie to the east marking the
 training building of Lord Adain's school on the arts of combat.  Aim'is
-Avenue continues to the north and south.  
+Avenue continues to the north and south.
 &B
 &BEast &w- &CLord Adain's School in the Arts of War
 ~
@@ -2818,7 +2818,7 @@ S
 towards the eastern wall of this room.  All across the south and a good
 portion of the west walls hang weapons of various types and sizes giving
 this room the feel of a cross between a library and training dojo as you
-enter it.  
+enter it.
 ~
 0 4 0
 Rd     0
@@ -2834,7 +2834,7 @@ playfully at your presense.  Cages line all of the walls, except for the
 back one from the door, stacked upon one another and nearly every one of
 them housing a rodent or animal of some sort.  From exotic looking birds to
 vicious looking wolves, dozens of pairs of eyes watch your every move
-intently with a hope they might be set free of their encagement.  
+intently with a hope they might be set free of their encagement.
 ~
 0 398348 0
 Rd     0
@@ -2858,7 +2858,7 @@ it it's shine and ability to completely resist the elements.  Examining the
 stonework a bit closer you can't even find one nick in the stone or even a
 scratch to mar it's surface.  The water from the rushing Valari river
 beneath sprays against it's outer sides, sliding rapidly back down into the
-river across the smooth bridge's texture.  
+river across the smooth bridge's texture.
 ~
 0 131072 1
 Rd     0
@@ -2880,7 +2880,7 @@ direction searching your soul for the pureness in your heart.  Your mind
 immediately strays a bit searching for any moment of your past in which you
 fell from the grace of good nervously before his face softens a bit and his
 arms spread in welcome.  Within his sanctuary you may find the answers your
-troubled heart seeks.  
+troubled heart seeks.
 ~
 0 394244 1
 Rd     0
@@ -2896,7 +2896,7 @@ northern golden gates joining the majestic white walls of the village to
 form a barrier of protection for the citizens of the town.  West lies the
 famous Oracle of Alor Raharo, Daran, one of the eldest of the elder
 creatures in the realm.  The enterance to the Icy Rapids Inn lies to the
-east and to the south continues Calane Road.  
+east and to the south continues Calane Road.
 &B
 &BWest &w- &CTemple of Alor Raharo
 &BEast &w- &CThe Common Room of the &B"I&bc&Cy &BRa&bp&ci&Cds&B" &CTavern&W
@@ -2930,7 +2930,7 @@ few women sit in chairs around various tables either talking with companions
 or simply content to peer into the depths of their mugs.  Serving girls rush
 about with trays of mugs held balanced upon an arm with an air of experience
 as they meander between tables collecting money from patrons or setting a
-mug before one of them.  
+mug before one of them.
 ~
 0 394252 0
 Rd     0
@@ -2944,7 +2944,7 @@ S
 &wAlor Raharo's impressively towering, outer walls arch upward a bit here
 to form a golden painted steel gate.  The branch-covered forest floor of the
 north turns into a pathway of finely crushed gravel making travel a bit more
-pleasant if louder.  A street leads off towards the south.  
+pleasant if louder.  A street leads off towards the south.
 ~
 0 131092 1
 Rd     0
@@ -2959,7 +2959,7 @@ S
 enter one of the many private homes spread about the city.  A plain wooden
 table lies in the center of the room with a collection of small chairs
 spread around it.  Over to one corner lies a couple sets of cots laided out
-in a row for the family's beds.  
+in a row for the family's beds.
 ~
 0 131084 0
 Rd     0
@@ -2973,7 +2973,7 @@ S
 &wThe gleaming white walls of Alor Raharo stand all around you as you
 walk through this bend of Geisa Street.  To the east lies the private
 resident of a Alor Raharo citizen, while to the street continues on to the
-south to the distance before turning east.  
+south to the distance before turning east.
 ~
 0 131072 1
 Rd     0
@@ -2991,7 +2991,7 @@ S
 &wWagons lurch by as they come off of the crowded Marsim Way into this
 length of road known as Geisa Street.  Here the crowds seem to have lessened
 a great deal making travel quite a bit easier.  Geisa Street continues to
-the north and south.  
+the north and south.
 ~
 0 131072 1
 Rd     0
@@ -3013,7 +3013,7 @@ S
 &wThe loud squeeling of wagon wheels cry out aloud as each cart makes the
 sharp turn along Geisa Street here to continue on south towards the south
 gate of the town.  A set of citizen's homes lie off to the east just after
-where the road bends southward.  
+where the road bends southward.
 ~
 0 131072 1
 Rd     0
@@ -3054,7 +3054,7 @@ S
 enter one of the many private homes spread about the city.  A plain wooden
 table lies in the center of the room with a collection of small chairs
 spread around it.  Over to one corner lies a couple sets of cots laided out
-in a row for the family's beds.  
+in a row for the family's beds.
 ~
 0 131076 0
 Rd     0
@@ -3069,7 +3069,7 @@ S
 enter one of the many private homes spread about the city.  A plain wooden
 table lies in the center of the room with a collection of small chairs
 spread around it.  Over to one corner lies a couple sets of cots laided out
-in a row for the family's beds.  
+in a row for the family's beds.
 ~
 0 131080 0
 Rd     0
@@ -3085,7 +3085,7 @@ citizens talking about trivial matters such as the weather and even more
 common the recent arrival of these "outlanders" from the southern realms of
 the world.  A few in one particular group turn and look in your direction,
 absent mindedly chatting over their shoulder to their group.  Ramlyr Avenue
-continues to the north and south.  
+continues to the north and south.
 &B
 &BWest &w- &CBrear's Supply Store
 ~
@@ -3110,7 +3110,7 @@ S
 assortments of containers covering them from their fronts to the wall backs.
 A large counter built with large glass planes connected at the edges by
 glossily waxed oak wood comprises the main piece of furniture in the entire
-store.  
+store.
 ~
 0 394252 0
 Rd     0
@@ -3124,7 +3124,7 @@ S
 &wHere the avenue bends from it's north and south direction on into the
 east before bending back south again.  A side of a large watchtower lies
 directly to the south blocking passage in that direction.  The oaken door of
-a local shop stands to the west.  
+a local shop stands to the west.
 &B
 &BWest &w- &CAssair's Magical Supplies
 ~
@@ -3150,7 +3150,7 @@ shelves in this medium sized room.  A rack of tubes fastened together hang
 braced against a wall with dozens of yellow pieces of parchment containing
 spells of all sorts rolled up and placed within them.  A simple oak counter
 lies in the back of the store with trays of vials and pills with a blend of
-near rainbow scattered color.  
+near rainbow scattered color.
 ~
 0 394252 0
 Rd     0
@@ -3163,7 +3163,7 @@ S
 &CA bend in Ramlyr Avenue&W~
 &wThe road sharply bends southward again here, completeling the S-bend
 started to the west, leading on south towards the massive golden doors of
-Alor Raharo's south gate.  A private residence lies directly to the north.  
+Alor Raharo's south gate.  A private residence lies directly to the north.
 ~
 0 131072 1
 Rd     0
@@ -3186,7 +3186,7 @@ S
 enter one of the many private homes spread about the city.  A plain wooden
 table lies in the center of the room with a collection of small chairs
 spread around it.  Over to one corner lies a couple sets of cots laided out
-in a row for the family's beds.  
+in a row for the family's beds.
 ~
 0 131084 0
 Rd     0
@@ -3200,7 +3200,7 @@ S
 &wJust south of here lies the massive golden southern gates of Alor
 Raharo, shining majesticly in the sunlight, a symbol of the sanctuary this
 town offers to those in need.  The closed door to a private residence lies
-directly to the east, just before the south gate.  
+directly to the east, just before the south gate.
 &B
 &BSouth &w- &CAlor Raharo's South Gate
 ~
@@ -3225,7 +3225,7 @@ S
 enter one of the many private homes spread about the city.  A plain wooden
 table lies in the center of the room with a collection of small chairs
 spread around it.  Over to one corner lies a couple sets of cots laided out
-in a row for the family's beds.  
+in a row for the family's beds.
 ~
 0 131084 0
 Rd     0
@@ -3239,7 +3239,7 @@ S
 &wAlor Raharo's impressively towering, outer walls arch upward a bit here
 to form a golden painted steel gate.  The sandy orange coloured beach of the
 south turns into a pathway of finely crushed gravel making travel a bit more
-pleasant if louder.  A street leads off towards the north.  
+pleasant if louder.  A street leads off towards the north.
 ~
 0 393236 1
 Rd     0
@@ -3255,10 +3255,10 @@ S
 #7474
 &CMarsim Way&W~
 &wContinuing your journey across the northern section of Alor Raharo, you
-pause for a moment to stare in awe at the massive white bridge to the east. 
+pause for a moment to stare in awe at the massive white bridge to the east.
 The famous North Bridge of Alor Raharo has often been remarked as one of the
 world's greatest wonders, having been created with as much magic as physical
-labor.  It's said not even the elements can ruin it's smooth surface.  
+labor.  It's said not even the elements can ruin it's smooth surface.
 ~
 0 131072 1
 Rd     0
@@ -3276,7 +3276,7 @@ S
 &wAlor Raharo's impressively towering, outer walls arch upward a bit here
 to form a golden painted steel gate.  The branch-covered forest floor of the
 west turns into a pathway of finely crushed gravel making travel a bit more
-pleasant if louder.  A street leads off towards the east.  
+pleasant if louder.  A street leads off towards the east.
 ~
 0 131092 1
 Rd     0

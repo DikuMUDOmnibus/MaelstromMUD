@@ -1,5 +1,5 @@
 #AREADATA
-Name        { 20-40} The Bandit Caves    Kadyr~
+Name        The Bandit Caves~
 Levels      20 40
 Builders    Kadyr Penance~
 VNUMs       500 599
@@ -19,7 +19,7 @@ A wirey man is here surveying his riches.
 Wiry but possessing a fierce inner strength, Lars has held his band of
 cutthroats through guile and brute force.  He wears simple dark leathers,
 but is armed with an elegant axe that glows with power.  His eyes float over
-you, briefly sizing you up.  
+you, briefly sizing you up.
 ~
 3 168 0 -500 S
 45 0 0 3400d0+0 0d0+0
@@ -60,7 +60,7 @@ Kekh~
 An enormous burly ogre is here picking at some meat.
 ~
 Kekh is simply the largest ogre that you have ever seen.  Easily towering
-over you, he swings an enormous hammer at your head!  
+over you, he swings an enormous hammer at your head!
 ~
 3 0 0 -750 S
 42 0 0 3200d0+0 0d0+0
@@ -90,7 +90,7 @@ A young red dragon swings quickly towards you as you enter.
 Young among his kind, Balefire is nonetheless a powerful creature in his
 own right.  His bright crimson scales have only recently begun to turn to a
 darker shade, and his hide is still relatively soft and supple.  He glares
-at you as he slashes at you with razor sharp claws.  
+at you as he slashes at you with razor sharp claws.
 ~
 3 33554600 0 -750 S
 65 0 0 8125d0+0 0d0+0
@@ -115,10 +115,10 @@ Anton~
 The bandit raiding leader looks at you with dislike.
 ~
 A large imposing figure looms before you.  His helm covers most of his
-face, and is carved in the likeness of a curled dragon, wings outspread. 
+face, and is carved in the likeness of a curled dragon, wings outspread.
 His cloak almost conceals his armor, allowing him to blend into the shadows.
 Steely gray eyes glare at you from beneath his visor, laden with animosity
-and contempt.  
+and contempt.
 ~
 65 65576 0 -750 S
 40 0 0 2500d0+0 0d0+0
@@ -132,7 +132,7 @@ A large ogre bandit snorts and hefts his axe.
 ~
 A huge orge with a fowl temper and even worse breath stands here.  There
 is drool running from his mouth, and it appears as if he just ate, or is
-getting ready too.  Hope your not on the menu!  
+getting ready too.  Hope your not on the menu!
 ~
 35 0 0 -800 S
 37 0 0 2200d0+0 0d0+0
@@ -146,7 +146,7 @@ A large smelly ogre is here picking at her toes.
 ~
 A huge female ogre stands here picking at her toes.  It looks as if she
 has something caught between them.  It looks like some unfortunate pixie
-wasn't paying attention and was steped on.  Gross!  
+wasn't paying attention and was steped on.  Gross!
 ~
 65 0 0 -750 S
 36 0 0 2100d0+0 0d0+0
@@ -160,7 +160,7 @@ A human bandit is here keeping watch.
 ~
 A fowl looking human with dirty rags for cloths.  He eyes your money bag
 and then grins at you with a wicked smile.  You almost have to laugh since
-he is missing half of his teeth.  
+he is missing half of his teeth.
 ~
 35 0 0 -750 S
 35 0 0 2000d0+0 0d0+0
@@ -174,8 +174,8 @@ A human bandit is wandering around in search of a victim.
 ~
 A small human banit lurks in the shadows watching your every move.  He
 seems to be sizing you up to be his next victim.  He draws his weapon as
-your approach. 
- 
+your approach.
+
 ~
 65 0 0 -500 S
 34 0 0 1900d0+0 0d0+0
@@ -189,7 +189,7 @@ A wiry bandit with an eyepatch glares at you.
 ~
 One-Eye lost his left eye a long time ago in a raid.  Since then, he has
 been used as the bandits' thief and assassin.  Advancing in years, One-Eye
-is nonetheless still a capable warrior.  
+is nonetheless still a capable warrior.
 ~
 65 65576 0 -800 S
 35 0 0 2000d0+0 0d0+0
@@ -216,7 +216,7 @@ A hobgoblin sees your approach and bares his teeth.
 ~
 A small hobgoblin lurks in front of you.  He seems to be hiding from your
 light.  Don't be fooled by his small size, he seems very quick and probably
-has a trick or two up his sleeves.  
+has a trick or two up his sleeves.
 ~
 193 0 0 -750 S
 32 0 0 1700d0+0 0d0+0
@@ -229,7 +229,7 @@ A goblin slave~
 A goblin slave is here cowering in the corner.
 ~
 A small goblin with many cuts and bruises.  He appears to have been
-beaten numerous times.  As he sees you he fless to a corner and huddles.  
+beaten numerous times.  As he sees you he fless to a corner and huddles.
 ~
 197 0 0 -500 S
 25 0 0 1050d0+0 0d0+0
@@ -242,8 +242,8 @@ A human slave~
 A human slave is here cleaning up the room.
 ~
 A bruised and battered human stands with his eyes to the floor.  He
-appears to have merchants cloths on, but they have long since been whole. 
-He also seems to have a pair of shackles around his ankles.  
+appears to have merchants cloths on, but they have long since been whole.
+He also seems to have a pair of shackles around his ankles.
 ~
 197 0 0 0 S
 27 0 0 1230d0+0 0d0+0
@@ -257,7 +257,7 @@ The cook is here terrorizing the scullery boys.
 ~
 A crazy looking man wielding a large knife!  He looks at you and screams,
 but your not exactly sure why.  I looks like he long ago lost his sanity,
-but not his ability to cook.  
+but not his ability to cook.
 ~
 131 0 0 -250 S
 25 0 0 1000d0+0 0d0+0
@@ -271,7 +271,7 @@ A large horse is tied in a stall.
 ~
 This is indeed a large horse.  It stands almost seven feet tall and it
 looks like it is in very good shape.  It must be kept in top shape with lots
-of work.  It looks like it could pull a house right off its foundation.  
+of work.  It looks like it could pull a house right off its foundation.
 ~
 3 0 0 0 S
 21 0 0 690d0+0 0d0+0
@@ -285,7 +285,7 @@ A human prisoner is here languishing in the cell.
 ~
 The abnormally skinny man looks as if he hasn't been fed it weeks.  There
 is a blank look on his face.  He probably has long since lost any traces of
-humanity.  It might not be a good idea to show him food.  
+humanity.  It might not be a good idea to show him food.
 ~
 131 0 0 250 S
 24 0 0 900d0+0 0d0+0
@@ -299,7 +299,7 @@ An imprisoned caravan guard is here shouting curses at his captors.
 ~
 A large guard stands newly imprisoned.  His armor and cloths still look
 new, and he is still in good health and spirit.  He yells out to his
-captures; he curses and wails to them to fight him face to face.  
+captures; he curses and wails to them to fight him face to face.
 ~
 131 0 0 500 S
 36 0 0 2100d0+0 0d0+0
@@ -324,9 +324,9 @@ A dungeon guard~
 A dungeon guard is here playing cards.
 ~
 He is a very fat guard that looks ready to fall asleep.  He is playing a
-cardgame with himself to try to stay awake.  He even seems to be cheating. 
+cardgame with himself to try to stay awake.  He even seems to be cheating.
 Despite his lack-luster look he could be quite a challenge if he smells
-food.  
+food.
 ~
 3 0 0 -800 S
 31 0 0 1600d0+0 0d0+0
@@ -340,7 +340,7 @@ A scullery boy is here trying to avoid the eye of the cook.
 ~
 He looks like he is ready to cry.  Years of working with an insane cook
 has pushed his sanity to the limits.  He has cuts and bruises all over his
-body, and just a glance from you makes him run to a corner.  
+body, and just a glance from you makes him run to a corner.
 ~
 193 0 0 0 S
 20 0 0 550d0+0 0d0+0
@@ -354,7 +354,7 @@ A goblin sentry is keeping his beady eyes riveted on you.
 ~
 A small goblin with a keen eye watches his post carefully.  True he is
 just a small goblin, but something tells you from the way he looks not to
-take his statue for granted.  
+take his statue for granted.
 ~
 193 0 0 -750 S
 26 0 0 950d0+0 0d0+0
@@ -368,7 +368,7 @@ A human sentry is here keeping an eye out for intruders.
 ~
 A large and very strudy looking man stands on his watch.  He keeps a
 close watch on his post.  He is wearing large and bulky armor which gives
-him a very forboding look about him.  
+him a very forboding look about him.
 ~
 193 65536 0 -750 S
 35 0 0 2000d0+0 0d0+0
@@ -382,7 +382,7 @@ A small fire drake is here crawling along the walls.
 ~
 The Fire Drake is almost a mature dragon.  He looks much like a red
 dragon, but is much too small to swallow you whole.  To grow to full size
-though, he must eat plenty...  And you look just about the right size!  
+though, he must eat plenty...  And you look just about the right size!
 ~
 225 33554432 0 -800 S
 40 0 0 2000d0+0 0d0+0
@@ -396,7 +396,7 @@ A large ogre snorts and hefts his axe.
 ~
 A huge orge with a fowl temper and even worse breath stands here.  There
 is drool running from his mouth, and it appears as if he just ate, or is
-getting ready too.  Hope your not on the menu!  
+getting ready too.  Hope your not on the menu!
 ~
 35 0 0 -800 S
 35 0 0 2000d0+0 0d0+0
@@ -410,7 +410,7 @@ A hobgoblin sees your approach and bares his teeth.
 ~
 A small hobgoblin lurks in front of you.  He seems to be hiding from your
 light.  Don't be fooled by his small size, he seems very quick and probably
-has a trick or two up his sleeves.  
+has a trick or two up his sleeves.
 ~
 193 0 0 -750 S
 30 0 0 1450d0+0 0d0+0
@@ -424,7 +424,7 @@ A human bandit is here looking for a victim.
 ~
 A small human banit lurks in the shadows watching your every move.  He
 seems to be sizing you up to be his next victim.  He draws his weapon as
-your approach.                                                              
+your approach.
 ~
 65 0 0 -500 S
 32 0 0 1700d0+0 0d0+0
@@ -438,7 +438,7 @@ A hideous monstrosity rises from the garbage and attacks!
 ~
 A huge pile of trash.  A mixture of decaying food, bile, and other types
 of paper.  There are giant rats that are walking up and down and all around.
-Occassionaly the pile seems to open up and swallow one of the rats.  
+Occassionaly the pile seems to open up and swallow one of the rats.
 ~
 35 65576 0 -500 S
 30 0 0 1500d0+0 0d0+0
@@ -452,7 +452,7 @@ A human bandit is here keeping watch.
 ~
 A small human banit lurks in the shadows watching your every move.  He
 seems to be sizing you up to be his next victim.  He draws his weapon as
-your approach.                                                              
+your approach.
 ~
 35 0 0 -750 S
 33 0 0 1800d0+0 0d0+0
@@ -466,7 +466,7 @@ A really bored hobgoblin bandit jumps at your entrance and attacks!
 ~
 A small hobgoblin lurks in front of you.  He seems to be hiding from your
 light.  Don't be fooled by his small size, he seems very quick and probably
-has a trick or two up his sleeves.                                           
+has a trick or two up his sleeves.
 ~
 35 0 0 -800 S
 30 0 0 1450d0+0 0d0+0
@@ -494,7 +494,7 @@ A reindeer with a huge laser up his nose is here eating presents.
 ~
 Rudolph is the biggest buffest reindeer you've ever seen.  If there was a
 Rambo Reindeer, Rudolph would be him.  An enormous pulse laser has been
-shoved up his nose and he disintegrates people with impunity.  
+shoved up his nose and he disintegrates people with impunity.
 ~
 1 0 0 1000 S
 105 0 0 100000d0+0 0d0+0
@@ -507,7 +507,7 @@ an otter~
 A cute river otter sits here, romping around playfully.
 ~
 With a little mew and a wiggle of his rear, the cute otter romps around
-your feet.  
+your feet.
 ~
 1 8360 0 1000 S
 101 0 0 15001d0+0 0d0+0
@@ -1316,7 +1316,7 @@ Ahead of you stretches a dark expanse of forest.  Large and ancient trees
 grow over the path in front of you, allowing only a few rays of light to
 illuminate the forest floor.  The smells and sounds of the ancient forest
 beckon to you and warn you at the same time of the mysteries contained deep
-in its leafy canopy.  
+in its leafy canopy.
 ~
 0 4 2
 Rd     0
@@ -1335,7 +1335,7 @@ Precious few rays of sunlight pierce the thick ceiling of overhanging
 trees and leaves above your head.  Through this gloom, a simple dirt path
 stretches in front of you, covered by a thick carpet of molding leaves on
 all sides.  As you go further on the path, the darkness becomes heavier and
-the air presses on you from all sides.  
+the air presses on you from all sides.
 ~
 0 0 3
 Rd     0
@@ -1350,12 +1350,12 @@ D3
 S
 #502
 Intersection in the Path~
-The shadows have formed an impenetrable wall of darkness around you. 
+The shadows have formed an impenetrable wall of darkness around you.
 From deep within the forest you hear the rustling of leaves as one of the
 wood's denizens shuffles across the leafy floor.  The slightest snap of a
 twig breaks the strange silence that seems to dominate this area of the
 forest.  To make things worse, you are posed with a choice, since the path
-splits here.  
+splits here.
 ~
 0 1 3
 Rd     0
@@ -1378,7 +1378,7 @@ Stumbling and swearing, you continue along the dark path.  The thick
 canopy above your head completely blocks all sunlight, plunging you into
 darkness.  The air here seems moist and thick, making it difficult to
 breathe.  The carpet of leaves here is thick and soft, and you can't see any
-sign of the dirt beneath.  The path splits to the west, east, and south.  
+sign of the dirt beneath.  The path splits to the west, east, and south.
 ~
 0 1 3
 Rd     0
@@ -1405,7 +1405,7 @@ some of the burned hulks.  Ironically, the rest of the clearing is the very
 model of sylvan beauty.  Great trees spread their leafy branches over your
 head, serving as the home to numerous singing birds.  The grass beneath your
 feet is green and soft, but much of it has been burnt towards the center of
-the clearing.  The only exit is the path to the west.  
+the clearing.  The only exit is the path to the west.
 ~
 0 0 3
 Rd     0
@@ -1421,7 +1421,7 @@ are truly enormous, the only thing able to grow beneath their stifling
 canopy is a green moss covering their trunks and the ground.  Dead leaves
 form a thick carpet beneath your feet, muffling the sounds of your passing
 and softening your step.  The path stretches before you to the east and
-west.  
+west.
 ~
 0 1 3
 Rd     0
@@ -1439,7 +1439,7 @@ Path in the Dark Forest~
 You have arrived at a bend in the path where the ancient way continues to
 the east and to the north.  A faint mist clings to the ground and the air is
 heavy with moisture.  From high above the canopy you hear a rushing of air
-as something enormous flies over.  
+as something enormous flies over.
 ~
 0 1 3
 Rd     0
@@ -1457,7 +1457,7 @@ Intersection in the Path~
 The forest path becomes a T-intersection here, with paths leading to the
 east, west, and south.  Through the thick wall of tree trunks you can see
 what appears to be a cliff face to the north.  The path to the east and
-south look noticeably more well used than the one to the west.  
+south look noticeably more well used than the one to the west.
 ~
 0 1 0
 Rd     0
@@ -1479,7 +1479,7 @@ Path in the Dark Forest~
 The shuffling noise of your feet through the leaves below is the
 only sound that penetrates this wood, each footstep seeming to ring in your
 ears.  The moldering layer of leaves beneath your feet mark the ancient path
-as it runs to the east and west.  
+as it runs to the east and west.
 ~
 0 1 3
 Rd     0
@@ -1498,7 +1498,7 @@ A slight wind stirs the heavy air around you, and you look to the north
 to discover an opening in the trees.  An old path covered in over a
 century's worth of leaves runs to the west from here, the trees growing
 thickly on either side.  Suddenly, from off in the distance, you hear the
-faint noise of some guttural voices.  
+faint noise of some guttural voices.
 ~
 0 0 3
 Rd     0
@@ -1516,7 +1516,7 @@ Along the Base of a Cliff~
 Spreading like a vast impenetrable wall to the south, an ancient and dark
 forest sprawls off into the distance.  Rising to the north is a tremendous
 cliff face of rock, weathered and gouged by time and the elements.  The only
-obvious paths lead to the south and to the west.  
+obvious paths lead to the south and to the west.
 ~
 0 0 4
 Rd     0
@@ -1536,12 +1536,12 @@ wall of trees rises to the east and south.  An enormous cliff face rises to
 the north, stretching upwards like an enormous vertical plain.  A
 combination of bushes and clinging vines grow along the base of the cliff,
 a stark contrast against the cold stone.  The only obvious exit is to the
-east.  
+east.
 ~
 0 0 4
 Rd     0
 D0
-The vines here seem to be hiding some sort of hidden cave.  
+The vines here seem to be hiding some sort of hidden cave.
 ~
 vines~
 3 0 512
@@ -1556,7 +1556,7 @@ Hollowed out by the passage of wind and underground water, this natural
 cave extends deep into the cliff face.  The sounds of dripping water echoes
 from afar and the air is damp and heavy.  From even farther in the tunnels,
 you hear a dull roaring sound, faint and elusive.  The cave extends further
-north into the earth, while the entrance to the cave is to the south.  
+north into the earth, while the entrance to the cave is to the south.
 ~
 0 12 0
 Rd     0
@@ -1571,13 +1571,13 @@ D2
 S
 #513
 Grim Warning~
-Just as you enter this room, you behold the macabre scene in front of you. 
+Just as you enter this room, you behold the macabre scene in front of you.
 Splayed across the walls, tied by ropes to iron spikes in the wall, are the
 remains of some poor humanoids, their race no longer discernable.  Dark
 rusty patches stain the walls and floor, and the faces of the corpses are
 frozen in the agony of their final moments.  To the north, you hear the
 sound of wind whistling as if through some gigantic tube.  Passages also
-lead to the east and south.  
+lead to the east and south.
 ~
 0 9 0
 Rd     0
@@ -1599,7 +1599,7 @@ Side Passage~
 A small stream runs through the passage that you find yourself in,
 evidence of the tunnel's origins.  A heavy moisture hangs in the air, and a
 faint odour fills the tunnel.  The smell seems to be stronger down the
-passage to the east.  In addition, another passage leads west.  
+passage to the east.  In addition, another passage leads west.
 ~
 0 8 0
 Rd     0
@@ -1620,7 +1620,7 @@ across the ground.  The smell of manure is magnified by the lack of air
 movement, making the room almost unbearable to be in.  A trough with food
 and water stands against one wall, but the contents don't look like they've
 been changed for ages.  You may leave west, or investigate the tunnel to the
-south which has an unbelievable stench wafting from it.  
+south which has an unbelievable stench wafting from it.
 ~
 0 8 0
 Rd     0
@@ -1639,7 +1639,7 @@ You emerge onto a shaft in the middle of a large shaft deep within the
 cliff.  A brisk wind whistles through the shaft, creating an eerie wailing
 sound and a small waterfall tumbles down the far wall.  The sides of the
 shaft are smooth, but simple rope ladders allow you to go up or down.  In
-addition, a passage leads to the south.  
+addition, a passage leads to the south.
 ~
 0 8 0
 Rd     0
@@ -1663,7 +1663,7 @@ darkness below.  A small waterfall plunges through a hole in the ceiling,
 cascading into the rumbling depths below.  Wooden walkways cross over the
 shaft, allowing access to passages at different sides of the shaft.  A
 simple rope ladder allows you to go downwards, and paths lead to the north,
-east, and south.  
+east, and south.
 ~
 0 8 0
 Rd     0
@@ -1689,7 +1689,7 @@ Messy Armory~
 A myriad of mismatched armor and weapons lie around upon the tables and
 floor of this room.  A torch lights the room, staining the wall with a
 greasy streak.  From the north you hear the faint sound of swirling wind and
-falling water.  
+falling water.
 ~
 0 8 0
 Rd     0
@@ -1705,7 +1705,7 @@ crystals along the walls.  Bending the light from the few torches in the
 wall, the crystals create a rainbow of colors across the tunnel.  The water
 that once ran through this tunnel has long since been diverted and dust
 floats in the air, catching beams of light.  To the west you see a large
-chamber and the crystal tunnel continues to the east.  
+chamber and the crystal tunnel continues to the east.
 ~
 0 8 0
 Rd     0
@@ -1724,7 +1724,7 @@ You have arrived at a bend in the crystal encrusted tunnel, exits leading
 to the north and west.  Large chunks of crystals protrude from the walls,
 catching the rays of light from the rest of the tunnel.  In places, it looks
 like someone has hacked at some of the formations with an axe, breaking off
-large chunks.  Where and why the people took the crystals is unknown.  
+large chunks.  Where and why the people took the crystals is unknown.
 ~
 0 8 0
 Rd     0
@@ -1743,7 +1743,7 @@ Brilliant rays of colored light are refracted by large crystal formations
 on the walls, casting little rainbows in the dust laden air.  Simple torches
 line the wall, brightening the tunnel and casting flickering shadows among
 the colors.  A loud roaring sound can be heard to the chamber to the north
-and the tunnel continues to the south.  
+and the tunnel continues to the south.
 ~
 0 8 0
 Rd     0
@@ -1766,7 +1766,7 @@ a small pool on the cave floor, filling the room with the soft murmur of
 water.  Delicate crystal formations along the walls glitter and sparkle,
 making the cave look as if encrusted by radiant gemstones.  A makeshift
 wooden stairway leads to a ledge high above the cave floor, and tunnels lead
-to the west and south.  
+to the west and south.
 ~
 0 8 0
 Rd     0
@@ -1785,12 +1785,12 @@ D4
 S
 #523
 Damp Passage~
-The walls here glisten with moisture and the air is heavy and clammy. 
+The walls here glisten with moisture and the air is heavy and clammy.
 Small drops of water run down the walls, feeding small streams that run
 through the passage.  Torches set in the wall do a little to drive away the
-damp, filling the area with cheerful light and warming the air somewhat. 
+damp, filling the area with cheerful light and warming the air somewhat.
 The passage continues to the north, while small doors lie to the east and
-west.  From the south, you hear the faint sounds of wind.  
+west.  From the south, you hear the faint sounds of wind.
 ~
 0 8 0
 Rd     0
@@ -1817,7 +1817,7 @@ A four way intersection cuts its way through the rock.  The floors, wall,
 and ceiling are all solid rock carved by small underground streams through
 the years.  The main passage continues to the south and to the west.  To the
 east, you spot a small tunnel filled with the sounds of running water.  A
-doorway to some sort of room lies to the north.  
+doorway to some sort of room lies to the north.
 ~
 0 8 0
 Rd     0
@@ -1845,7 +1845,7 @@ caves.  Confining and cramped, the room is filled with beds, tables, chairs,
 and sleeping mats, all haphazardly arranged.  A few simple oil lamps lend
 illumination, and various mismatched boots and other clothing lie scattered
 on the ground.  Ventilation is poor, making the air heavy and musky
-smelling.  The only exit is to the east.  
+smelling.  The only exit is to the east.
 ~
 0 0 0
 Rd     0
@@ -1861,7 +1861,7 @@ caves.  Confining and cramped, the room is filled with beds, tables, chairs,
 and sleeping mats, all haphazardly arranged.  A few simple oil lamps lend
 illumination, and various mismatched boots and other clothing lie scattered
 on the ground.  Ventilation is poor, making the air heavy and musky
-smelling.  The only exit is to the west.  
+smelling.  The only exit is to the west.
 ~
 0 0 0
 Rd     0
@@ -1877,7 +1877,7 @@ passage.  The sounds of dripping water surround you and begin to grate on
 your senses, and the tunnel is covered with a thin film of moisture.  A
 small trickling stream runs down the passage, reflecting the light of the
 torches set in the wall.  Humid and musty, the passage is far from
-comfortable.  Exits lie to the west and east.  
+comfortable.  Exits lie to the west and east.
 ~
 0 8 0
 Rd     0
@@ -1899,7 +1899,7 @@ enormous war axes lie propped against the wall.  A bright fire burns in a
 simple ringed pit in the center of the room, providing the room's only light
 and revealing crude drawings scribbled on the walls.  Around the fire pit, a
 collection of bones and torn pieces of cloth have been discarded.  The only
-exit is to the south.  
+exit is to the south.
 ~
 0 0 0
 Rd     0
@@ -1914,7 +1914,7 @@ You have arrived at a T-intersection.  A small swiftly flowing stream
 runs from the north to the south, intersecting with small run-offs from the
 tunnel to the east.  The tunnel rumbles with the sounds of running water,
 and you feel a light spray hit your cheeks from the tunnel to the north.  In
-addition, paths lead to the east and south.  
+addition, paths lead to the east and south.
 ~
 0 8 0
 Rd     0
@@ -1940,7 +1940,7 @@ is crisp and clear, and a small cistern has been created by piling rocks to
 form a small pool at the base of the waterfall.  Small ladles and spoons are
 hooked to the walls here, and numerous muddy footprints gives you the
 feeling that this room sees a lot of traffic.  A small swift moving stream
-goes down the only exit to the south.  
+goes down the only exit to the south.
 ~
 0 8 0
 Rd     0
@@ -1955,7 +1955,7 @@ The stream here is murky, having picked up algae and mud kicked up by
 passing feet.  A small path leads along the stream, paved with stones and
 damp with moisture.  The walls are smooth, worn by this small stream over
 the course of many years.  The only obvious exits are to the north and
-south.  
+south.
 ~
 0 8 0
 Rd     0
@@ -1974,7 +1974,7 @@ You stand at the top of a murky waterfall as the stream from the north
 plunges swiftly into the darkness below.  The water is cloudy and dirty,
 almost resembling a mudslide as it glides past you.  A rope, slick with
 moss, is the only easy way down to the dark cavern below.  A torch lit
-passage way ends here and continues to the north.  
+passage way ends here and continues to the north.
 ~
 0 8 0
 Rd     0
@@ -1994,7 +1994,7 @@ moisture.  A large dirty waterfall spills over a ledge far above and empties
 into a pool of water that resembles an enormous mud puddle.  Beyond the
 sound of the roaring waterfall and the dripping of water, the cavern is
 silent and your footsteps echo harshly in your ear.  A small shadowy tunnel
-leads to the east and a rope slick with moss allows you to go up.  
+leads to the east and a rope slick with moss allows you to go up.
 ~
 0 9 0
 Rd     0
@@ -2014,7 +2014,7 @@ the weight of the blackness around you pressing on your skin.  The sounds of
 a sizeable waterfall can be heard down the passage to the west The walls
 here are rough and appear to have been hewn from the rock rather than formed
 by the natural passage of water.  The passage leads to the south and to the
-west.  
+west.
 ~
 0 9 0
 Rd     0
@@ -2033,7 +2033,7 @@ The passage here practically shakes as the noise of a large waterfall to
 the north assails your ears.  The loud crash of water almost blocks out your
 own thoughts.  The noise coupled with the darkness makes it very hard to
 concentrate here.  The dark passage goes north towards a large cavern and
-also continues south.  
+also continues south.
 ~
 0 32777 0
 Rd     0
@@ -2050,14 +2050,14 @@ S
 Base of the Black Waterfall~
 You find yourself in an enormous cavern whose ceiling is lost in the
 gloom above you.  An enormous waterfall empties into a small lake of water
-at the north end of the room, creating a sound that is almost unbearable. 
+at the north end of the room, creating a sound that is almost unbearable.
 Your ears begin to pound with the sheer force of sound and your face is
 delicately sprayed with a watery mist.  You wipe the water from your face
 and realize that the water is amazingly warm, almost the water temperature
 of the ocean shallows on a hot day.  You look closer at the waterfall and
 notice that the water seems to be black!  A primitive rope ladder leads up
 the side of the waterfall into the darkness above you.  A small roughly hewn
-passage leads to the south.  
+passage leads to the south.
 ~
 0 9 0
 Rd     0
@@ -2077,7 +2077,7 @@ impenetrable see of darkness.  A large waterfall, it's water black with some
 foreign substance, cascades to the floor below, creating a terribly loud
 roar as it plunges to the depths.  The wall by the ladder is wet and sticky,
 and the rock is smoothed and rounded from the action of the water.  The only
-ways from here are up and down.  
+ways from here are up and down.
 ~
 0 9 0
 Rd     0
@@ -2097,7 +2097,7 @@ forest below you.  Somewhere to the south, you see what looks like some old
 stone ruins rising from a clearing.  Suddenly, a wind gust tears your eyes
 away from the forest and back to the cliff face before you, as you struggle
 to keep from falling.  You manage to make out the outlines of a ledge above
-you.  
+you.
 ~
 0 0 5
 Rd     0
@@ -2112,14 +2112,14 @@ D5
 S
 #539
 Ledge Above the Crystal Cave~
-You find yourself on a ledge high above a beautiful crystalline cave. 
+You find yourself on a ledge high above a beautiful crystalline cave.
 Large crystal formations protrude from the walls and the ceiling, refracting
 the light of torches to create shimmering patterns and rainbows.  A small
 waterfall tumbles to the cave floor, creating a soft and soothing sounds as
 it splashes into a small pool below.  You are transfixed with the scene
 spread below you, mesmerized by the twinkling of light and the natural
 beauty of this place.  A small makeshift wooden stairway leads down to the
-cave floor and a tunnel winds its way to the north 
+cave floor and a tunnel winds its way to the north
 ~
 0 8 0
 Rd     0
@@ -2138,7 +2138,7 @@ Natural crystals glimmer from the walls and ceiling of this tunnel,
 glittering in shades from deep purple to pristine white.  A small stream
 runs down the middle of the passage and you stand on a stone ledge along its
 bank, as glimmering reflections play across the surface.  The tunnel
-continues to the south and west.  
+continues to the south and west.
 ~
 0 8 0
 Rd     0
@@ -2159,7 +2159,7 @@ small stream trickles next to the ledge that you are one, running down the
 tunnels to the south and east.  The sounds of falling water filter lightly
 through the crisp air and a light spray of mist cools your face.  The tunnel
 opens to caverns to the north and west, while the crystalline tunnel runs to
-the east 
+the east
 ~
 0 8 0
 Rd     0
@@ -2183,7 +2183,7 @@ few crystal formations are scattered along the edge of the waterfall, and
 the water looks clear and fresh.  Torches have been set into the walls,
 casting flickering light that makes the waterfall sparkle and dance like
 some beautiful phantom.  A simple but well constructed stairway leads down
-to the bottom of the cavern.  
+to the bottom of the cavern.
 ~
 0 0 0
 Rd     0
@@ -2199,12 +2199,12 @@ S
 #543
 Bright Chamber~
 You are temporarily blinded as you enter this chamber, and as your eyes
-slowly grow used to the light, you marvel at the spectacle before you. 
+slowly grow used to the light, you marvel at the spectacle before you.
 Great crystals in the walls seem to perfectly bend and redirect the light,
 magnifying it so that the cavern seems to glow.  A small stream runs from a
 spring in the corner of the chamber, flowing through the cavern and down a
 passage to the south.  Small delicate crystals resembling flowers have
-formed along the edge of the spring.  The only exit is to the south.  
+formed along the edge of the spring.  The only exit is to the south.
 ~
 0 8 0
 Rd     0
@@ -2219,7 +2219,7 @@ You find yourself on a stone ledge high above the forest floor.  The wind
 gusts strongly about you, threatening to rip you off your feet and send you
 tumbling to the ground below.  Small scrawny weeds grow out of some cracks
 along the ledge and a large bush grows against the cliff wall.  The only
-obvious exit is down to the forest below.  
+obvious exit is down to the forest below.
 ~
 0 0 5
 Rd     0
@@ -2234,11 +2234,11 @@ D5
 S
 #545
 Loud Cave~
-This cave is filled with the rumble of a large waterfall to the north. 
+This cave is filled with the rumble of a large waterfall to the north.
 The rock beneath your feet seems to faintly shake with the tremendous force,
 and your ears begin to throb with the sound.  The walls here seem to have
 been formed naturally, but the remnants of what was once a large gate tell
-you that someone lives or once dwelled here.  
+you that someone lives or once dwelled here.
 ~
 0 8 0
 Rd     0
@@ -2259,7 +2259,7 @@ unknown craftsman around the ledge of the pit, down into which the water
 plunges.  The water itself is black , and it only takes a look at the walls
 in this cavern to discern why.  Ash and soot forms a thick layer over the
 walls and floors, staining the water as it flows past.  A large gate of some
-sort lies to the east while passages lead south and west.  
+sort lies to the east while passages lead south and west.
 ~
 0 13 0
 Rd     0
@@ -2286,7 +2286,7 @@ The air in this tunnel is unusually warm and dry, and you cannot spot a
 single bit of moisture on the walls.  It is quite apparent by the angles and
 smoothness of the rock that this passage is artificial in nature, probably
 built by some ancient craftsmen long ago.  The dull rumble of a waterfall
-can be heard down the passage to the west.  
+can be heard down the passage to the west.
 ~
 0 131081 0
 Rd     0
@@ -2301,11 +2301,11 @@ D3
 S
 #548
 The Dark Tunnel~
-You find yourself in an artificially created passage through the rock. 
+You find yourself in an artificially created passage through the rock.
 The air is dry and warm, and there seems to be a slight breeze from the
 passage to the west.  A thick layer of dust lies on the ground, revealing
 the trails of some traveller in boots up and down this tunnel.  It seems
-that the heat originates from farther down the passage to the east.  
+that the heat originates from farther down the passage to the east.
 ~
 0 131081 0
 Rd     0
@@ -2324,7 +2324,7 @@ The heat here is almost unbearable as a hot, dry breeze blows in from the
 vast cavern to the north.  A glitter of metal from the north catches your
 eye and you begin to move towards it when you hear a low rumbling sound, as
 if some large beast was snoring.  The passage leading to the east seems
-slightly cooler.  
+slightly cooler.
 ~
 0 131081 0
 Rd     0
@@ -2346,7 +2346,7 @@ the room has been melted.  The ceiling above you is lost in darkness and you
 can only barely make out the far wall.  You feel yourself begin to sweat in
 the heat of this room and the faint smell of sulfur stings your nose.  A
 large passage seems to have been melted from the rock to the west and a
-smaller passage leads to the south.  
+smaller passage leads to the south.
 ~
 0 131081 0
 Rd     0
@@ -2366,7 +2366,7 @@ over the ledge above.  Emptying into a small pool of water, the falls in
 front of you is framed by small crystal formations, making the waterfall
 look like a sheet of small diamonds.  The air here is crisp and clean, and a
 light mist cools your face.  A simple but sturdy wooden stairway leads up to
-a ledge above the cave and a small passage leads to the south.  
+a ledge above the cave and a small passage leads to the south.
 ~
 0 8 0
 Rd     0
@@ -2386,7 +2386,7 @@ smoothed by craftsmens' hands.  Cheery torches cast light through the tunnel
 and warm the air, making this tunnel very liveable.  The floor beneath your
 feet is smoothed stone with patches of old carpets laid down over it.  You
 hear the sound of water from the cavern to the north and the tunnel leads to
-the west.  
+the west.
 ~
 0 8 0
 Rd     0
@@ -2406,7 +2406,7 @@ been smoothed, and old tattered carpets and rugs have been thrown on the
 ground.  Despite the liveability of this tunnel, it looks as if it doesn't
 see a great deal of traffic.  The air is still and quiet, and a faint spicy
 smell drifts at the edge of your senses.  The tunnel continues to the south
-and east.  
+and east.
 ~
 0 8 0
 Rd     0
@@ -2425,7 +2425,7 @@ You are near the rooms of the leaders of the bandits who reside in these
 caves.  Tattered old carpets and rugs lie on the ground, and torches flicker
 from their places on the walls.  A large and sturdy oak door lies to the
 east, while another large door lies to the west.  The tunnel also continues
-to the north and opens into a cave to the south.  
+to the north and opens into a cave to the south.
 ~
 0 8 0
 Rd     0
@@ -2455,7 +2455,7 @@ large bed with silk sheets is set against the wall.  A large and expensive
 water clock sits in a far corner, and expensive lamps burn some fragrant
 oil.  Beautiful oil paintings and colorful tapestries hang on the walls,
 lending color and class to the room.  A wooden door lies to the west and a
-secure looking solid wood door lies to the south.  
+secure looking solid wood door lies to the south.
 ~
 0 131088 0
 Rd     0
@@ -2476,7 +2476,7 @@ spring.  Maps are posted on the walls, giving evidence that this room is
 used by the bandits of these caves as a planning room of some kind.  A small
 desk against one wall also contains a number of rolled parchments and
 writing utensils.  A small door lies to the east, and a bright tunnel opens
-to the north.  
+to the north.
 ~
 0 8 0
 Rd     0
@@ -2495,7 +2495,7 @@ This secure little room serves as the storage for the ill-gotten wealth
 of the bandits.  Small and large chests line the walls, and wooden tables
 support all manners of other booty.  A few simple oil lanterns provide
 light, reflecting off of the treasure to cast dancing golden lights on the
-walls and ceiling.  Solid wooden doors lie to the north and west.  
+walls and ceiling.  Solid wooden doors lie to the north and west.
 ~
 0 8 0
 Rd     0
@@ -2515,7 +2515,7 @@ the bandits who live in these caves.  A large sleeping pallet dominates the
 room, constructed of furs and thick blankets.  Tattered old rugs lie on the
 ground, and a large table sits against one wall.  Oil lamps give dim light,
 and there is the slight musky smell of sweat in the air.  The only exit is
-through the door to the east.  
+through the door to the east.
 ~
 0 131080 0
 Rd     0
@@ -2530,7 +2530,7 @@ Enormous ancient trees rise around you, creating a thick impenetrable
 canopy of leaves and branches above your head.  Patches of moss grow on the
 ground and the trunks of trees, making you wonder how long it has been since
 sunlight was last seen here.  The path you trudge upon is blanketed with
-leaves and seems seldom used, stretching to the east and to the west.  
+leaves and seems seldom used, stretching to the east and to the west.
 ~
 0 1 3
 Rd     0
@@ -2548,7 +2548,7 @@ Path in the Dark Forest~
 From the floor of the forest, a miniature forest of mushrooms sprout from
 the thick mat of dead leaves on the ground.  The gloom has begun to weigh
 heavily on your senses, making it hard to concentrate on the path running to
-the east and west.  
+the east and west.
 ~
 0 1 3
 Rd     0
@@ -2568,7 +2568,7 @@ dim light to the area.  Enormous trees, ancient and solemn, grow all around
 an a path so choked with leaves that you cannot see the ground.  Here and
 there, moss grows on the trees, the only vegetation to exist beneath the
 great roof of leaves and branches.  The path continues to the east and west
-while a small clearing along a cliff face is to the north.  
+while a small clearing along a cliff face is to the north.
 ~
 0 1 3
 Rd     0
@@ -2589,10 +2589,10 @@ S
 Along the Base of a Cliff~
 A large cliff face rises out of the ground before you, stretching up to
 the sky.  All around, a dense and dark forest of ancient trees grows.  To
-the south, a path choked with leaves leads under the canopy into the gloom. 
+the south, a path choked with leaves leads under the canopy into the gloom.
 Upon close inspection of the cliff face, you notice some niches that would
 be ideal for climbing.  From the west, you can hear the sounds of running
-water, just beyond a small clearing in the trees.  
+water, just beyond a small clearing in the trees.
 ~
 0 0 0
 Rd     0
@@ -2614,7 +2614,7 @@ Small Stream~
 You find yourself walking on a ledge alongside a small stream that runs
 through this tunnel.  Bright torches set in the walls drives away shadows
 and warms the way.  To the east, you see a brightly lit chamber and hear the
-soft murmuring of water.  The path also continues to the east.  
+soft murmuring of water.  The path also continues to the east.
 ~
 0 8 0
 Rd     0
@@ -2634,7 +2634,7 @@ The wind rushes through some unseen entrance above you, whistling and
 periodically rising to a keening wail as it swirls through the shaft.  The
 sides of the shaft are smooth, with no outcrops or handholds.  A simple rope
 ladder is the only way up the shaft.  You see the openning of a simple
-tunnel to the south.  
+tunnel to the south.
 ~
 0 8 0
 Rd     0
@@ -2655,7 +2655,7 @@ places, creating this dry tunnel through the rock.  The walls have been
 smoothed and simple torches line the passage to provide light.  The floor
 has been chipped a little to prevent someone from slipping.  A large shaft
 leading upwards can be seen to the north and the passage continues to the
-east.  
+east.
 ~
 0 8 0
 Rd     0
@@ -2674,7 +2674,7 @@ The sound of dripping water and cooking meat wafts over your senses from
 the passage to the south.  Bright torches create flickering shadows and
 allowing you to examine the tunnel that you are in.  Solid rock surrounds
 you, openning into passage to the north, west, and south.  The whistling
-sound of wind can be heard from the tunnel to the west.  
+sound of wind can be heard from the tunnel to the west.
 ~
 0 8 0
 Rd     0
@@ -2698,7 +2698,7 @@ collected into a small pond in this cave.  Small fish and amphibians swim in
 the shallow water, darting from rock to rock.  Mud from the boots of the
 many inhabitants of this network of caves dirties the water.  Doors lie to
 your east and west, and you manage to detect a faint oily smell from the
-door to the west.  
+door to the west.
 ~
 0 8 0
 Rd     0
@@ -2722,7 +2722,7 @@ workers affiliated with the bandits of the caves.  Sleeping mats, old beds,
 and even pallets of straw are scattered haphazardly around the room, mixing
 with discarded old articles of clothes.  The smell of grime and sweat is
 thick in the uncirculated air, almost making you gag.  The only obvious exit
-is a door to the west.  
+is a door to the west.
 ~
 0 8 0
 Rd     0
@@ -2739,7 +2739,7 @@ table manners of the denizens of this place, while bones and bits of food
 litter the floor.  Rickety wooden tables and benches are arranged with no
 particular order aroudn the room, adorned with cracked clay remains and
 liquid stains.  The only exits are a door to the east and an archway to the
-west.  
+west.
 ~
 0 8 0
 Rd     0
@@ -2760,7 +2760,7 @@ laying around you.  Unfortuneately, the room is not well ventilated and
 greasy smoke hangs in the air, permeating your skin and clothing.  Discarded
 pieces of animals and other food lie thrown on the ground, most of it long
 since flattened by the passing feet of the cooks.  The dining room lies to
-the east and a small door leads to the north.  
+the east and a small door leads to the north.
 ~
 0 8 0
 Rd     0
@@ -2779,7 +2779,7 @@ This room can only be called some sort of pantry.  Sacks of flour, wheat,
 and other grains lie stacked haphazardly against the walls, while meat of
 varying conditions hang from hooks.  Large casks of liquor, no doubt stolen
 from merchant wagons, are shoved against the far wall with a few bottles of
-fine wine.  The only obvious exit is a door to the south.  
+fine wine.  The only obvious exit is a door to the south.
 ~
 0 8 0
 Rd     0
@@ -2795,7 +2795,7 @@ the rock to the north and south.  Bright torches lend a cheery light to the
 passage, but the air seems a little stuffy and still.  The sound of dripping
 water echoes hollowly and rhythmically from somewhere within the network of
 tunnels, but, other than that, the air is silent.  A large cave lies to the
-north and you see the reflection of light off of water from within.  
+north and you see the reflection of light off of water from within.
 ~
 0 8 0
 Rd     0
@@ -2814,8 +2814,8 @@ The cavern you find yourself in is cold and clammy.  Torches flicker from
 the walls, trying in vain to dispel the chill and moisture.  Small puddles
 collect on the smooth and worn stones of the cavern floor, relfecting the
 torchlight crazily across the walls.  A large ledge can be seen about ten
-feet above the floor, accessible by a simple stairway carved from the rock. 
-You can see a solid wood door up upon the ledge, adorned with carvings.  
+feet above the floor, accessible by a simple stairway carved from the rock.
+You can see a solid wood door up upon the ledge, adorned with carvings.
 ~
 0 8 0
 Rd     0
@@ -2833,9 +2833,9 @@ A Small Worn Ledge~
 You stand on a ledge about a dozen feet off of the cave floor.  A simple
 stone stairway cut from the rock leads downwards, worn by the passage of
 time.  It looks as if a wooden railing had been set up once around this
-ledge for safety, but it has long since succumbed to the damp and termites. 
+ledge for safety, but it has long since succumbed to the damp and termites.
 A large and solid looking door blocks your passage to the north.  It seems
-as if someone has carved some crude lettering into the door.  
+as if someone has carved some crude lettering into the door.
 ~
 0 8 0
 Rd     0
@@ -2860,7 +2860,7 @@ through the use of picks and other crude instruments.  The musky smell of
 sweat mingles with the odor of bodily fluids, prompting you to cover you
 nose.  A solid door lies to the south, while the passage continues to the
 north.  In addition, there are archways leading out of the passage to the
-east and west.  
+east and west.
 ~
 0 8 0
 Rd     0
@@ -2885,9 +2885,9 @@ S
 Old Tunnel~
 The darkness of this passage is broken only by the dim flickering of some
 old torches, sputtering from their places along the walls.  The cells around
-you reek of excrement and probably have not been cleaned much in the past. 
+you reek of excrement and probably have not been cleaned much in the past.
 Small wooden doors with barred windows lie to the east and west.  The tunnel
-continues to the north and south.  
+continues to the north and south.
 ~
 0 0 0
 Rd     0
@@ -2915,7 +2915,7 @@ dungeon of the bandits.  The smell of sweat and waste is almost
 overpowering, emnating from the door to the west.  The torches
 on the walls only barely provide enough light to see by, and your footing is
 precarious on the smooth and wet stones beneath you.  The passage continues
-to the south.  
+to the south.
 ~
 0 8 0
 Rd     0
@@ -2941,7 +2941,7 @@ torches set in the walls.  The smell of unwashed bodies and excrement waft
 up from a dark looking pit in the center of the room, the only feature of
 this cave.  A coil of rope sits at the edge of the pit, secured to a metal
 ring set in the stone wall.  You can either descend into the dark pit or
-leave through the arch to the west.  
+leave through the arch to the west.
 ~
 0 8 0
 Rd     0
@@ -2961,7 +2961,7 @@ and a few old chairs.  An old oil burning lamp is the room's only source of
 light, making it hard to judge the exact dimensions of the chamber.  A few
 old and crude weapons lean against the walls.  The table shows the signs of
 wittling, probably the work of bored guards.  The only exit is the archway
-to the east.  
+to the east.
 ~
 0 8 0
 Rd     0
@@ -2972,12 +2972,12 @@ D1
 S
 #581
 Damp Cell~
-An overpowering stench assails your senses as you enter the dim cell. 
+An overpowering stench assails your senses as you enter the dim cell.
 Moisture sticks to your skin, making you feel slimy and unclean.  Someone
 has thrown some straw on the floor, but you can still hear your feet slosh
 through some slimy liquid beneath you.  Rusty chains and some blood stains
 are all that adorn the walls and the only light is provided by the window in
-the door to the east.  
+the door to the east.
 ~
 0 9 0
 Rd     0
@@ -2991,9 +2991,9 @@ Damp Cell~
 The smell from the passage is almost overwhelming in this damp little
 cubicle.  The smell of rotting straw mingles with the smell of humanoid
 waste, burning your nostrils and sending you reeling.  Dim light filters
-through the door to the west, providing the only illumination in this room. 
+through the door to the west, providing the only illumination in this room.
 It looks as if some old rusty chains were once fastened to the walls but
-have been broken off by some powerful creature.  
+have been broken off by some powerful creature.
 ~
 0 9 0
 Rd     0
@@ -3010,7 +3010,7 @@ the floor, but it does nothing to make this smelly and damp prison liveable.
 The stench almost overpowers you, and your stomach turns as you notice the
 slimy liquid that lies beneath your feet.  Old rusty chains have been driven
 into the walls to detain the prisoners, and you also notice some old blood
-stains on the walls.  
+stains on the walls.
 ~
 0 9 0
 Rd     0
@@ -3025,7 +3025,7 @@ Your nostrils burn as an unbelievable stench rises from the pit in the
 center of this cave.  Pieces of garbage are strewn around its edges, and
 strange liquids stain the stones.  Messy bones, broken pots, and banana
 peels lie beneath your feet.  The only exits are down into the pit and to
-the north.  
+the north.
 ~
 0 0 0
 Rd     0
@@ -3040,11 +3040,11 @@ D5
 S
 #585
 Garbage Pit~
-Your eyes water as you find yourself knee deep in garbage and refuse. 
+Your eyes water as you find yourself knee deep in garbage and refuse.
 Bones, skulls, bottles, papers, wood, and all other manner of garbage has
 been dumped here by the inhabitants of these caves.  In addition, the stench
 gives you the feeling that they also use this as their cess pit.  A rotting
-hemp rope leads out of the pit.  
+hemp rope leads out of the pit.
 ~
 0 9 0
 Rd     0
@@ -3057,10 +3057,10 @@ S
 Beside a Large Stream~
 Cutting through the mountain over the centuries, a large stream rushes
 past you and flows down the tunnel to the east.  A simple walkway has been
-hewn on the side of the river, allowing you to safely travel through here. 
+hewn on the side of the river, allowing you to safely travel through here.
 The walls appear to have been shaped by the hands of craftsmen to enhance
 the beauty and curve of the stones.  A dull roaring sound tells you that the
-stream hurtles toward a waterfall to the east.  
+stream hurtles toward a waterfall to the east.
 ~
 0 9 0
 Rd     0
@@ -3077,10 +3077,10 @@ S
 Large Cavern~
 This cavern appears to have been a large entry hall of some kind.  A pile
 of rubble to the north blocks any further passage north, however.  The
-stream seems to run from under the rocks down the passage to the south. 
+stream seems to run from under the rocks down the passage to the south.
 Large angular dwarven runes are carved into the walls, and a large symbol of
 a hammer laid over and anvil is emblazoned above the blocked passage.  The
-only apparent exit is to the south.  
+only apparent exit is to the south.
 ~
 0 9 0
 Rd     0
@@ -3093,10 +3093,10 @@ S
 Base of the Wide Shaft~
 A large open shaft pushes its way up through the rock, and a faint breeze
 leads you to believe that there is an open exit somewhere above you.  The
-shaft seems to have been dug out of the rock, smoothed by tremendous heat. 
+shaft seems to have been dug out of the rock, smoothed by tremendous heat.
 The shaft and the tunnel to the west must be at least thirty feet in
 diameter.  Upon close inspection, you notice that the roughly hewn rock
-affords you some decent handholds for a climb upwards.  
+affords you some decent handholds for a climb upwards.
 ~
 0 131081 0
 Rd     0
@@ -3115,7 +3115,7 @@ You stand on the lip of a wide shaft that leads down into the depths of
 the rock.  A cool breeze wafts in from an openning to the west, whistling
 through this cave and streaming down the shaft.  You can feel that the air
 in the shaft is noticeably warmer than the rest of the cavern.  A very
-sturdy metal door inscribed with glowing runes lies to the north.  
+sturdy metal door inscribed with glowing runes lies to the north.
 ~
 0 131081 0
 Rd     0
@@ -3139,7 +3139,7 @@ Balefire.  Works of art, suits of armor, piles of coins, and various other
 items of value lie heaped around the room.  The walls are solid rock, carved
 and smoothed to an almost mirror-like shine in which you can swear you see
 your reflection.  To your south, a stout metal door is the only exit from
-this room.  
+this room.
 ~
 0 9 0
 Rd     0
@@ -3151,11 +3151,11 @@ S
 #591
 High Windy Ledge~
 You find yourself on a windy ledge high above the surrounding land.  From
-here you are granted a commanding view for miles in almost every direction. 
+here you are granted a commanding view for miles in almost every direction.
 Unfortuneately, the wind is very strong and threatens to throw you off the
 ledge to the rocks below.  There is a noticeable lack of vegetation at this
 altitude, and the air has a sharp cold bite to it.  However, you feel a warm
-breeze coming from the large cave to the west.  
+breeze coming from the large cave to the west.
 ~
 0 131072 5
 Rd     0
@@ -3170,7 +3170,7 @@ The path bends here, leading to the east and to the south.  An eerie
 disconcerting silence has settled upon this part of the forest, raising the
 hair on your neck.  The great ancient trees around you form an almost solid
 wall, but you swear you can see small flashes of movement out of the corner
-of your eye.  
+of your eye.
 ~
 0 1 3
 Rd     0
@@ -3188,7 +3188,7 @@ Path in the Dark Forest~
 You find yourself deep inside of the ancient forest.  Incredibly ancient
 trees wider than a man is tall grow all around you, obscuring your vision
 and blocking the sunlight.  The trail ventures deeper into the trail to the
-north and to the east you see a large clearing with some type of ruins.  
+north and to the east you see a large clearing with some type of ruins.
 ~
 0 0 3
 Rd     0
@@ -3208,7 +3208,7 @@ forlorn.  In times gone by, this church saw droves of devout pilgrims
 travelling through its wide doors.  Now, only birds and forest animals visit
 it.  How long it has been standing here alone in this clearing is unknown to
 you, but the stone remains are worn and etched by time.  The only obvious
-exit is back into the forest to the east.  
+exit is back into the forest to the east.
 ~
 0 1540 2
 Rd     0
@@ -3246,7 +3246,7 @@ your soul.  A large packed bookcase teems with books ranging from "The
 Dragonbone Chair" to "Twelfth Night", all bound in soft leather and lovingly
 arranged.  The final wall is dominated by a large window through which you
 see a beautiful forest teeming with trees.  Small furry lemmings prance
-around the tree trunks playfully.  
+around the tree trunks playfully.
 ~
 0 131596 0
 Rd     0

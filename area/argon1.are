@@ -1,7 +1,7 @@
 #AREADATA
-Name        {80-100} Stone Caverns       Argonath~
+Name        Stone Caverns~
 Levels      80 100
-Builders    None~
+Builders    Argonath~
 VNUMs       30500 30599
 Security    99
 Recall      25001
@@ -36,7 +36,7 @@ stun
 if isimmort($n) == 1
    bow $n
 else
-if ispc($n) ==1 
+if ispc($n) ==1
     flex
 else
 endif
@@ -72,12 +72,12 @@ Lord Aslond~
 Lord Aslond~
 Lord Aslond stares at you in deep thought.
 ~
-Lord Aslond king of the stone people sits here proudly on his throne. 
+Lord Aslond king of the stone people sits here proudly on his throne.
 You can see the scars of many wars and battles on his armour, you sense he
 is a man of infinate wisdom.  He stands at about 8 feet tall and is just
 about as wide a very lard warrior and one you hope you will never have to
 fight.  He carries the sword of the ancients, a very old sword from people
-that no longer bless this world..  
+that no longer bless this world..
 ~
 67 234897576 0 1000 S
 109 0 0 20650d0+0 0d0+0
@@ -138,7 +138,7 @@ Say $r, have you found my lost visor? or the gem that joins with my visor?
 ~
 >speech_prog p visor~
 say Yes, long ago attempting to trap Lyron into the dungeon I had a visor.  This visor helped me win many battles by greatly enhancing my defensive abilities.
-say One day in one of my great battles against the mighty dragon, Lyron took my visor, broke the visor in two using his magic and spread it across my kingdom.  
+say One day in one of my great battles against the mighty dragon, Lyron took my visor, broke the visor in two using his magic and spread it across my kingdom.
 say and I've been looking for it ever since.
 sigh
 ~
@@ -200,8 +200,8 @@ A Retired Weaponsmith.~
 Gry the retired weaponsmith stands here.
 ~
 Gry is covered in scars from his duties as blacksmith here.  He is one of
-the few humans you have seen in this area and you wonder why he is here. 
-Although he is getting on in age he looks a formidable opponent.  
+the few humans you have seen in this area and you wonder why he is here.
+Although he is getting on in age he looks a formidable opponent.
 ~
 67 12 0 1000 S
 93 0 0 26500d0+0 0d0+0
@@ -282,7 +282,7 @@ Raxnon the military advisor is here considering strategies
 ~
 A very tall stone figure.  You can see that he has been thru many
 battles.  He looks very strong and although probably not as fast as he might
-have been, he would still make a formidable foe. 
+have been, he would still make a formidable foe.
 ~
 67 16600 0 700 S
 99 0 0 15500d0+0 0d0+0
@@ -314,7 +314,7 @@ else
 if isimmort($n) == 1
    bow $n
 else
-if ispc($n) ==1 
+if ispc($n) ==1
      say &RAHHHHHHHHHHH!!!! FRESH MEAT!!!
 else
 endif
@@ -983,7 +983,7 @@ Cavern Entrance~
 seventy feet high.  The stone work of the walls is of incredible quality and
 looks like it has been here since the beginning of time.  Although the hall
 is lit by a few lanterns on the walls, it is still rather dim.  The great
-hall continues to the North 
+hall continues to the North
 ~
 0 131084 0
 Rd     0
@@ -1001,7 +1001,7 @@ Grand Hall~
 &w&cLike the entrance you feel overwhelmed by the sheer height and vastness
 of this undergound hall.  You notice it is getting lighter and you think you
 can hear the faint sound of a fountain to the North.  You can see the
-entrance to the South.  
+entrance to the South.
 ~
 0 131080 0
 Rd     0
@@ -1018,7 +1018,7 @@ S
 Fountain Room~
 &w&cThis room is dominated by a fountain in the center.  A huge stone statue
 marks the middle of the fountain.  You can make out a room to the West, and
-the hall continues to the North.  
+the hall continues to the North.
 ~
 0 131080 0
 Rd     0
@@ -1040,7 +1040,7 @@ Old Guard Room~
 &OYou can tell by the old armour lying around that this room was
 obviously at one stage a guard room.  The armour looks of fine quality but
 sadly it is now to old and broken to be of any use to you.  You see a
-trapdoor leading down.  
+trapdoor leading down.
 ~
 0 131080 0
 Rd     0
@@ -1066,7 +1066,7 @@ E
 sign~
 We welcome all those that come in peace.  Those that seek trouble will be
 dealt with severely and quickly.  Maleechan - Captain of the Guards,
-Protector of the mighty stone lord Aslond.  
+Protector of the mighty stone lord Aslond.
 ~
 D0
 ~
@@ -1081,7 +1081,7 @@ S
 Junction Hall~
 &w&cYou stand in the middle of some sort of intersection.  To the North you
 see lights shining strong.  To the South you see the entrance gate, while
-long halls leads East and West of here.  
+long halls leads East and West of here.
 ~
 0 131080 0
 Rd     0
@@ -1107,7 +1107,7 @@ Aslonds Waiting Room~
 &w&cYou stand outside the throne room of Aslond.  There is a beautiful red
 carpet under your feet that leads into the next room.  The room is is lit by
 skillfully crafted lanterns The walls have been painted with many battle
-scenes in which Aslond is seen as a great hero.  
+scenes in which Aslond is seen as a great hero.
 ~
 0 131080 0
 Rd     0
@@ -1123,10 +1123,10 @@ S
 #30507
 Throne Room~
 &z You are in the throne room of Lord Aslond.  You see that the room is
-not like other throne rooms you have visited in that it seems rather dull. 
+not like other throne rooms you have visited in that it seems rather dull.
 The only sign that this is the throne room is the red carpet leading to the
 large stone chair which obviously Aslond sits on when he is here.  The room
-is not even that well lit.  
+is not even that well lit.
 ~
 0 131080 0
 Rd     0
@@ -1144,7 +1144,7 @@ Main Hall~
 &CYou are standing in the main hall.  It stretches as far as the eye can
 see to the west and east.  It is well lit by large lanterns hanging from the
 walls it is easy to see the skillful work of the artists who have decorated
-the walls..  
+the walls..
 ~
 0 131080 0
 Rd     0
@@ -1162,7 +1162,7 @@ Main Hall~
 &CYou are standing in the main hall.  It stretches as far as the eye can
 see to the west and east.  It is well lit by large lanterns hanging from the
 walls it is easy to see the skillful work of the artists who have decorated
-the walls..  
+the walls..
 ~
 0 131080 0
 Rd     0
@@ -1180,7 +1180,7 @@ Main Hall~
 &CYou are standing in the main hall.  It stretches as far as the eye can
 see to the west and east.  It is well lit by large lanterns hanging from the
 walls it is easy to see the skillful work of the artists who have decorated
-the walls..  
+the walls..
 You see what looks like to be a weapon shop to the north
 ~
 0 131080 0
@@ -1205,8 +1205,8 @@ S
 #30511
 Old Weapon Shop~
 &wYou stand in the old weapon shop.  You see all sorts of old weapons lying
-around but they are covered in rust and are of no use to anyone now. 
-Weapons have obviously not been made here in a long time.  
+around but they are covered in rust and are of no use to anyone now.
+Weapons have obviously not been made here in a long time.
 ~
 0 131080 0
 Rd     0
@@ -1220,7 +1220,7 @@ Quarters~
 &wYou are in what seems to be some sleeping quarters.  Some dirty shirts
 and pants are scattered about the floor.  Tossed in a corner you see a pair
 of worn out boots, the bunks have seen better days.  A smell of sleep hangs
-in the air.  
+in the air.
 ~
 0 131080 0
 Rd     0
@@ -1234,7 +1234,7 @@ Western Hall~
 &CYou are standing in the western part of the main hall.  It stretches as
 far as the eye can see to the west and east.  It is well lit by large
 lanterns hanging from the walls it is easy to see the skillful work of the
-artists who have decorated the walls..  
+artists who have decorated the walls..
 ~
 0 131080 0
 Rd     0
@@ -1252,7 +1252,7 @@ Western Hall~
 &CYou are standing in the western part of the main hall.  It stretches as
 far as the eye can see to the west and east.  It is well lit by large
 lanterns hanging from the walls it is easy to see the skillful work of the
-artists who have decorated the walls..  
+artists who have decorated the walls..
 You can see a small corridor off to the south.
 ~
 0 131080 0
@@ -1275,7 +1275,7 @@ Western Hall~
 &CYou are standing in the far western part of the main hall.  It stretches
 as far as the eye can see to the east.  It is well lit by large lanterns
 hanging from the walls it is easy to see the skillful work of the artists
-who have decorated the walls..  
+who have decorated the walls..
 To the west you see what looks like a wine makers shop.
 ~
 0 131080 0
@@ -1293,7 +1293,7 @@ S
 Wine Makers Shop~
 &rYou stand inside a wine makers shop.  You can see various sorts of
 equipment lying around and a long table from which the shopkeeper obviously
-sells his wines.  There looks to be a few bottles of wine lying around.  
+sells his wines.  There looks to be a few bottles of wine lying around.
 ~
 0 71467016 0
 Rd     0
@@ -1305,7 +1305,7 @@ S
 #30517
 Southern Hallway~
 &OYou stand in the Southern hall.  You notice that this hall has no
-lights at all.  You hear a voice booming orders to someone to the South.  
+lights at all.  You hear a voice booming orders to someone to the South.
 ~
 0 131081 0
 Rd     0
@@ -1322,7 +1322,7 @@ S
 Southern Hallway~
 &OThis corridor is dark, no torches or lanterns on the wall.  The floor
 looks somewhat worn out, and sometimes you hear the roaring voice of an
-officer to the South.  
+officer to the South.
 ~
 0 131081 0
 Rd     0
@@ -1340,7 +1340,7 @@ Strategy Room~
 &w&OYou see a large old wooden table in the middle of the room.  The table
 has a lot of maps on it and lists of armies.  Obviously this is where the
 generals meet to decide on strategies for offensives.  There are some
-paintings around the room of what looks like some warriors.  
+paintings around the room of what looks like some warriors.
 ~
 0 131080 0
 Rd     0
@@ -1352,7 +1352,7 @@ S
 #30520
 Eastern Hallway~
 &w&R&zYou are in the eastern part of the great hall.  To the West you can see
-the main junction.  The hall continues to the East.  
+the main junction.  The hall continues to the East.
 ~
 0 131080 0
 Rd     0
@@ -1369,7 +1369,7 @@ S
 Eastern Hallway~
 &w&zYou are in the eastern part of the great hall, and to the West you can
 see the main hall stretching out as far as the eye can see.  The hall looks
-to be running into a dead end to the East.  
+to be running into a dead end to the East.
 ~
 0 131080 0
 Rd     0
@@ -1386,7 +1386,7 @@ S
 Eastern Hallway~
 &w&zThis is the end of the eastern hallway.  A pile of bones is laying in
 the corner, some of them still have chains on them.  In the dim light you
-can see an exit to the North.  
+can see an exit to the North.
 ~
 0 131080 0
 Rd     0
@@ -1404,7 +1404,7 @@ Wine Cellar~
 &OThis is a wine cellar.  Racks of ancient wine bottles are stacked up
 against the wall, but all the bottles are empty.  Some bottles are scattered
 about the floor, and you see a pile of vine labes in a corner.  The dust
-tickles your nose, along with the smell of old vinegar.  
+tickles your nose, along with the smell of old vinegar.
 ~
 0 9 0
 Rd     0
@@ -1417,7 +1417,7 @@ S
 Stairs to Dungeon~
 &w&zYou are standing at the top of some stairs.  Looking down you can see the
 stairs descending down into what looks like a dark dark dungeon.  You can
-see a sign hanging on the wall.  
+see a sign hanging on the wall.
 ~
 0 131080 0
 Rd     0
@@ -1427,7 +1427,7 @@ Dungeons are off limits to all citizens.
 Guards must only enter in groups of no less than four.
 This is due to prisoners having escaped from their cells.
 Aggressive prisoners are at loose.
- 
+
 Maleechan - Captain of the Guards.
 ~
 D2
@@ -1460,8 +1460,8 @@ S
 #30535
 A Small Passage~
 Your body brushes against the walls, this passage is narrow.  You hear
-strange noises from the East, and a cold draft blows through the passage. 
-To the West you can make out some stairs.  
+strange noises from the East, and a cold draft blows through the passage.
+To the West you can make out some stairs.
 ~
 0 131081 0
 Rd     0
@@ -1494,7 +1494,7 @@ S
 Dungeon Intersection~
 You are in at some sort of t-intersection.  The small passage continues
 to the West and East.  There is what looks like a main passage to the South
-and you think you can make out cells in the distance....  
+and you think you can make out cells in the distance....
 ~
 0 131081 0
 Rd     0
@@ -1576,7 +1576,7 @@ S
 A Cell~
 &rYou are in a dark damp smelly cell.  It's not that big at all...  There is
 a wooden plank that runs along the wall that is meant to be a bed..  Even
-with your light you have to struggle to see anything.  
+with your light you have to struggle to see anything.
 ~
 0 131081 0
 Rd     0
@@ -1589,7 +1589,7 @@ S
 A Cell~
 &rYou are in a dark damp smelly cell.  It's not that big at all...  There is
 a wooden plank that runs along the wall that is meant to be a bed..  Even
-with your light you have to struggle to see anything.  
+with your light you have to struggle to see anything.
 ~
 0 9 0
 Rd     0
@@ -1627,7 +1627,7 @@ S
 A Cell~
 &rYou are in a dark damp smelly cell.  It's not that big at all...  There is
 a wooden plank that runs along the wall that is meant to be a bed..  Even
-with your light you have to struggle to see anything.  
+with your light you have to struggle to see anything.
 ~
 0 9 0
 Rd     0
@@ -1640,7 +1640,7 @@ S
 A Cell~
 &rYou are in a dark damp smelly cell.  It's not that big at all...  There is
 a wooden plank that runs along the wall that is meant to be a bed..  Even
-with your light you have to struggle to see anything.  
+with your light you have to struggle to see anything.
 ~
 0 9 0
 Rd     0
@@ -1677,7 +1677,7 @@ S
 A Cell~
 &rYou are in a dark damp smelly cell.  It's not that big at all...  There is
 a wooden plank that runs along the wall that is meant to be a bed..  Even
-with your light you have to struggle to see anything.  
+with your light you have to struggle to see anything.
 ~
 0 9 0
 Rd     0
@@ -1690,7 +1690,7 @@ S
 A Cell~
 &rYou are in a dark damp smelly cell.  It's not that big at all...  There is
 a wooden plank that runs along the wall that is meant to be a bed..  Even
-with your light you have to struggle to see anything.  
+with your light you have to struggle to see anything.
 
 ~
 0 9 0
@@ -1704,7 +1704,7 @@ S
 Southern Main Passage~
 You are near the southern end of the main passage.  Rubble lies
 everywhere, looks like the dungeon creation was interupted by something and
-has never been completed.  
+has never been completed.
 ~
 0 131081 0
 Rd     0
@@ -1781,7 +1781,7 @@ S
 Start of Lyron's Hall~
 This hall is beautiful, maybe even more so than the entrance and main
 hall to the stone caverns far above..  This is probably due to this part of
-the dungeon being under the control of Lyron the mighty dragon 
+the dungeon being under the control of Lyron the mighty dragon
 To the south you can see the lair of the dragon himself.
 ~
 0 131081 0
@@ -1800,7 +1800,7 @@ Lyron's Hall~
 This hall is beautiful...  Maybe even more so than the entrance and main
 hall to the stone caverns far above.  This is probably due to this part of
 the dungeon being under the control of Lyron the mighty dragon To the south
-you can see the lair of the dragon himself.  
+you can see the lair of the dragon himself.
 ~
 0 131081 0
 Rd     0
@@ -1817,7 +1817,7 @@ S
 Lyron's Hall~
 This hall is beautiful, maybe even more so than the entrance and main
 hall to the stone caverns far above..  This is probably due to this part of
-the dungeon being under the control of Lyron the mighty dragon 
+the dungeon being under the control of Lyron the mighty dragon
 To the south you can see the lair of the dragon himself.
 ~
 0 131081 0
@@ -1836,7 +1836,7 @@ Lyron's Hall~
 This hall is beautiful, maybe even more so than the entrance and main
 hall to the stone caverns far above..  This is probably due to this part of
 the dungeon being under the control of Lyron the mighty dragon To the south
-you can see the lair of the dragon himself.  
+you can see the lair of the dragon himself.
 ~
 0 131081 0
 Rd     0
@@ -1853,7 +1853,7 @@ S
 Lyron's Hall~
 This hall is beautiful, maybe even more so than the entrance and main
 hall to the stone caverns far above..  This is probably due to this part of
-the dungeon being under the control of lrong the mighty dragon 
+the dungeon being under the control of lrong the mighty dragon
 To the south you can see the lair of the dragon himself.
 To the east a passage wanders off to another part of the dungeon.
 ~
@@ -1875,7 +1875,7 @@ S
 #30559
 Hot Passage~
 &RThis passage seems rather hot for some reason....  Otherwise its prettu
-much just like the rest of the dungeon.  
+much just like the rest of the dungeon.
 To the west you can see lyrons hall.
 ~
 0 131081 0
@@ -1892,7 +1892,7 @@ S
 #30560
 Hot Passage~
 &RThis passage seems rather hot for some reason....  Otherwise its prettu
-much just like the rest of the dungeon.  
+much just like the rest of the dungeon.
 To the west you can see lyrons hall.
 ~
 0 131081 0
@@ -1956,7 +1956,7 @@ S
 Lyron's Hall~
 This hall is beautiful, maybe even more so than the entrance and main
 hall to the stone caverns far above..  This is probably due to this part of
-the dungeon being under the control of lrong the mighty dragon 
+the dungeon being under the control of lrong the mighty dragon
 You can see the lair immediately to the south.
 ~
 0 131081 0
@@ -1975,7 +1975,7 @@ Lyrons Lair~
 You stand in the lair of Lyron.  A massive room but then again it would
 have to be, to fit the mighty dragon Lyron.  You wonder how even the mighty
 stone people of Lord Aslond managed to capture such a powerfull dragon as
-Lyron.  
+Lyron.
 ~
 0 393225 0
 Rd     0
@@ -2008,7 +2008,7 @@ S
 The northern river bank~
 You find youself standing upon the northern river bank.  To the north of
 you, you see a large cavern cut into the base of an immense mountain.  As
-there is no other place to go, you may as well see what's inside.  
+there is no other place to go, you may as well see what's inside.
 ~
 0 131072 4
 Rd     0
@@ -2019,10 +2019,10 @@ D0
 S
 #30599
 Edge of Rylacs river~
-You are standing at the very edge of a huge and perilous looking river. 
+You are standing at the very edge of a huge and perilous looking river.
 Looking across, you can't quite see what's on the other side, perhaps the
 ferryman would be able to enlighten you about what's across the way, and how
-to get there.  
+to get there.
 ~
 0 6423556 4
 Rd     0

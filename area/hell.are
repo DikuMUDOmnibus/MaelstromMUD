@@ -1,5 +1,5 @@
 #AREADATA
-Name        {??-???} Pits of Hell        Sherf~
+Name        Pits of Hell~
 Levels      0 0
 Builders    Sherf~
 VNUMs       600 666
@@ -19,19 +19,19 @@ The Three Fates~
 Three beautiful women are floating here in pouring white gowns...
 ~
 &YThe Three women are equally endowed in physical beauty.
- 
+
 &rOn your left, floats a woman with eyes of the darkest chocolate and hair
 of the blackest raven. Her oval face smiles at you, as her lips part into
 a grin and her eyes turn up into a sneer.
- 
+
 &Y&OStraight ahead, a woman floats carelessly as her copper-tone hair flows
 wickedly about her. Eyes of emerald green shine back at you, reflecting
 the image of yourself in a frame of perfect lashes.
- 
-&wAt your right hand, there floats a woman bestowing locks of the purest 
+
+&wAt your right hand, there floats a woman bestowing locks of the purest
 silver and eyes of the bluest lagoon. A suffusion of rose appears slightly
 on her lovely cheeks as you gaze upon her.
- 
+
 &GThe choice is yours to make. Choose it wisely, for it IS your Fate.
 ~
 67 8216 524304 0 S
@@ -194,7 +194,7 @@ A wandering soul~
 current of wind... looking carefully though, you see a faint outline of a
 ghostly figure (with no feet) floating above the ground. It moans slightly,
 sending a chill up your spine.
- 
+
 ~
 67 1654840 32788 0 S
 100 0 0 25000d0+0 0d0+0
@@ -207,7 +207,7 @@ mpechoat $n &wThe temperature changes drastically as a piercing chill floods the
 endif
 ~
 >rand_prog 30~
-cast 'chi shield' 
+cast 'chi shield'
 ~
 >fight_prog 10~
 mpecho &BYou feel a piercing chill briefly.
@@ -291,7 +291,7 @@ The Bullywug~
 A forked tongue droops casually out of a frog-like mouth. Her huge bulbous
 eyes are also like that of a frog, and are on each side of her amphibian
 head. Two tiny little holes in the middle of her face make a nose.
- 
+
 Huge feet and hands branch off of a human-looking body (except for the fact
 that her skin is a greenish yellow in colour) that is very moist and almost
 looks slippery to the touch.
@@ -323,7 +323,7 @@ The Death Knight~
 &wA blackened paladin approaches you slowly in a challenge to fight...
 ~
 &wThe death knight resembles a hulking knight, standing at just over 6 feet
-tall and weighing a good 300 pounds. A blackened skull covered with shards of 
+tall and weighing a good 300 pounds. A blackened skull covered with shards of
 shriveled, rotting flesh stares back at you from within its horned helmet.
 Two tiny orange-red pinpoints for eyes glow brightly from its eye sockets
 piercing you with fear.
@@ -438,18 +438,18 @@ There is no mistaking that Satan himself stands before you.
 ~
 &RGod of the Underworld, God of Evil, God of Sin, God of Darkness... by any
 name you could give to him from any religion or belief... this is Satan.
- 
+
 You look upon the foulest creature in all The Realms. Foul, as in horrid by
 appearance... foul, as in the most evil aura you could ever have faced in a
 thousand lifetimes. A feeling of fear comes over you that you have never
 felt before.
- 
+
 Skin that burns the hottest jalepeno-red sets the make-up of this foul beast.
 Three-foot long horns, as thick as the average humans' leg coil outward from
 his massive head. Goat-like hooves as black as the darkest night support him
 as he towers over you. A human torso sprouts leathery bat-like wings that
 look to span out at seven feet.
- 
+
 ~
 67 369115704 20 -1000 S
 105 0 0 35000d0+0 0d0+0
@@ -641,7 +641,7 @@ is a very good quality helm, despite this.
 E
 horned~
 &wA rounded black helm is tipped with a small horn in the middle-top of
-it, and a horn on each side of the helm as well. 
+it, and a horn on each side of the helm as well.
 ~
 #606
 sword dancing 666~
@@ -777,7 +777,7 @@ horrid and most terrifying sound you have ever heard.  It's as if all the
 lost souls from everywhere -and nowhere- are invading your mind, calling out
 to you in pain.  Although it has no physical "body", you know it's there by
 the magical emanation that glows from it (which is a constantly shifting
-abstract shape) even without the aid of spells.  
+abstract shape) even without the aid of spells.
 ~
 #611
 steel plate bracer 666~
@@ -815,7 +815,7 @@ plate~
 &wA large plate bracer is made of raw black steel. A larger plate made to go
 around the arm is adjustable by means of two leather straps at each end of
 the plate. Another ovular shaped plate has been welded atop this to provide
-more protection along with some design. The ovular plate is framed with a 
+more protection along with some design. The ovular plate is framed with a
 corregated edge.
 ~
 E
@@ -884,15 +884,15 @@ S
 &rYou now appear in what is most likely the hottest climate you have ever
 known (and most likely the last). You begin to perspire slightly as you
 stand here looking over your surroundings.
- 
+
 A rugged wall of rock makes for a barrier all around you, save to the north
 which is barracaded with two very large doors that make a gate larger than
 you have ever seen.
- 
+
 Other molten materials are all around you and under your feet. Some of it
 seems to be leftovers of weapons and armour that have long since their
 usage become part of the foundation itself.
- 
+
 &wA light mist looms in from beneath the gate to the north.
 ~
 0 134619160 0
@@ -906,7 +906,7 @@ E
 gates~
 &wTwo very large and heavy gates make a door here. You try to peer through
 them but you cannot see anything beyond.
- 
+
 Examining the gates carefully, you know that you have never seen a material
 such as this before. Just by looking at it you can see that it is quite
 indestructable. A hot breeze rises up from the small crack beneath them
@@ -934,7 +934,7 @@ E
 gate~
 Two very large and heavy doors make a gate here. You try to peer through
 them but you cannot see anything beyond.
- 
+
 Examining the gate carefully, you know that you have never seen a material
 such as this before. Just by lookig at it you can see that it is quite
 indestructable. A hot breeze rises up from the small crack beneath them
@@ -984,8 +984,8 @@ E
 gates~
 &wYou look to the south, to see that the gates have all but disappeared. You
 can feel a slight breeze come in from that direction and you know that that
-is where you entered from. 
- 
+is where you entered from.
+
 You can attempt to pry open the gates, but to no avail.
 ~
 E
@@ -1009,12 +1009,12 @@ S
 #603
 &rA Cliff?&W~
 &r'How can there be a cliff here... could it possibly go even further down?'
- 
+
 As you think to yourself, you stare down into a pit of molten rock as it
 bubbles and gurgles up at you threatening to burn you from existence.
- 
+
 'What could possibly live down here... how will I ever make it through?'
- 
+
 Snapping back to reality as a sploosh of hot lava tweaks your hand, you know
 that you must continue on.
 ~
@@ -1057,19 +1057,19 @@ S
 #604
 &r A Cliff?&W~
 &r'Will this madness ever end... how much farther down could it possibly go?'
- 
+
 You stare down into a pit of molten rock as it bubbles and gurgles up at you
 threatening to burn your frail humanoid body. You begin to day dream...
- 
+
 &CYou say 'I will mommy! Don't worry!'
 &PMommy pecks you lightly on the cheek and gently cups a coin into your hands.
 &CMommy says 'Now hurry back, dear. Back in time for dinner.'
 &PYour cheeks are burning.
 &CYou say 'Awwww, mom!'
 &PYou sigh.
- 
+
 &rYou are suddenly awoken as a large boulder falls from above you and into
-the molten lava below. You blink rapidly as you watch it quickly disintegrate  
+the molten lava below. You blink rapidly as you watch it quickly disintegrate
 before your eyes.
 ~
 0 134619160 0
@@ -1109,9 +1109,9 @@ S
 heavily, making any sort of armor or even regular attire unbearable to wear.
 Come to think of it, you've never been this uncomfortable in your life. But
 then again, this could very well be the end of it.
- 
+
 'Perhaps I'm already dead. Perhaps this is where we go when we die...'
- 
+
 You trudge on for some glimpse of hope... somewhere.
 ~
 0 134619160 0
@@ -1154,10 +1154,10 @@ S
 &rThe mist seems to get thicker here, and you feel as though that is what you
 are walking on or wading through. You wonder if you would be falling, if it
 were not for the mist.
- 
+
 Over towards the northerly direction (at least you hope that's still north),
 you catch a glimpse of a dark figure moving about. You hear a faint clicking
-sound and what sounds like voices up that way as well. If you keep going, 
+sound and what sounds like voices up that way as well. If you keep going,
 maybe you'll bump into something... or someone that can help you find your way.
 ~
 0 134619160 0
@@ -1201,7 +1201,7 @@ S
 &rThe mist continues to linger here as you move ahead... however, you come
 to a point where the mist is barely there at all. In fact, you can see things
 quite clearly at this point. What appears to be a Checkpoint.
- 
+
 There is a large slab of stone with many very small tablets atop it. The
 ground, you notice (because you can actually see it clearly now) isn't solid
 stone or rock, but sort of a dirt pathway that heads back to the south... and
@@ -1274,12 +1274,12 @@ S
 &rThe walls are crumbling here and even now, a few bits of rock tumble down at
 your feet. You look up in hopes that an opening of some sort may come out of
 all the wreckage above you... but no, no hint of the ceiling giving way.
- 
+
 Looking around you, you can see that there is a path leading to the south.
 Taking a step that way, you glance back at the ceiling behind you as a
 bigger piece of it tumbles down. No such luck though, the way up above you
 is still fully intact.
- 
+
 ~
 0 134619160 0
 Rd     0
@@ -1296,7 +1296,7 @@ are walking, your feet make a scratching sound with each step you take. A
 smell wafts through the air that perks up your nose-hairs and makes you
 breath as if getting ready for a sneeze. You can attempt to go back to the
 north, but you will find that it is to no avail.
- 
+
 ~
 0 134619160 0
 Rd     0
@@ -1324,7 +1324,7 @@ balance and falling to your doom. You can see that every so often the flames
 whip up past the level that you are on, presumably to the level that you had
 already visited. You continue to wonder how much further down this place
 could possibly go.
- 
+
 ~
 0 134619160 0
 Rd     0
@@ -1355,9 +1355,9 @@ S
 &rHere from the cliff, you attempt to peek over the edge almost falling over
 into the flames below. You catch your balance luckily, learning that looking
 down is not a very good idea. Your safest option is to go back east of here.
- 
+
 &RA whip of flame lashes out at you nearly singeing your armour!
- 
+
 ~
 0 134619160 0
 Rd     0
@@ -1372,13 +1372,13 @@ S
 throughout the area. Flames burst out from beneath you to the level above.
 Peering over the edge you see a quick flash of light, and then you feel a
 burning sensation momentarily afterward.
- 
+
 &PYou look down.
 &RYour armour is on fire!
 &PYou stop, drop and roll.
 &P&wYou get up to find yourself giving off smoke.
 &PYou sigh with relief.
- 
+
 ~
 0 134619160 0
 Rd     0
@@ -1392,7 +1392,7 @@ S
 &rAs soon as you enter this small cavern, you can feel yourself slowly slipping
 downward. You look up to see the exit behind you disappear. Your only exit
 from here... is down.
- 
+
 ~
 0 168173592 0
 Rd     0
@@ -1406,7 +1406,7 @@ S
 &rYou look up with desperation, and see no exit. Somehow the exits are being
 closed off from behind you, with no option for you to go back. Your only way
 out from here is to the north, that you can see.
- 
+
 ~
 0 134619160 0
 Rd     0
@@ -1438,7 +1438,7 @@ S
 bits and pieces of loose rock here and there, but the majority of the
 pile is made from rock that has been melted into place. You might just
 make it through the opening to see what's inside.
- 
+
 ~
 0 134619160 0
 Rd     0
@@ -1490,9 +1490,9 @@ get bigger going to the north and smaller going to the south. It seems
 to be a little trail left from others who have fallen down that same
 rock-slide. Some of the smaller pebbles of loose rock go flying over the
 edge of the pathway and down into the pits of lava below.
- 
+
 &RYou can hear a faint hissing sound briefly.
- 
+
 ~
 0 134619160 0
 Rd     0
@@ -1556,9 +1556,9 @@ every so often a bubble of hot air bursts a few feet in front of you and
 you can feel the heat come off. A ragged rocky wall can be seen far off to
 the north, but you know there is no way to get there over the molten pit
 below.
- 
+
 &RYou feel a searing heat on your face as you peer over the edge...
- 
+
 ~
 0 134619160 0
 Rd     0
@@ -1588,12 +1588,12 @@ After reaching the bottom of the stairway that led you down here, you
 look back to see that it is gone. Perhaps you expected this to happen,
 perhaps not. None-the-less, it has disappeared with no hopes of ever
 ascending them back up to where you came from.
- 
+
 The beginning of this floor is not unlike that of any of the others you
 have seen. The pathway here is somewhat larger, and you have more space
 to walk on without worry of falling over the edge. You can feel the heat
 of the lava pits below, and it only gets hotter from herein.
- 
+
 ~
 0 134619160 0
 Rd     0
@@ -1609,7 +1609,7 @@ The faint smell of brimstone wafts through the air here. You look up to see
 stalagtites piercing down upon you and all around you stalagmites poke up
 from every direction. You almost have to squeeze your way through them to
 get anywhere. You can see a dim light not far off from the north.
- 
+
 ~
 0 134619160 0
 Rd     0
@@ -1630,7 +1630,7 @@ you can maneuver around them a little easier here. The scent of brimstone
 continues to assault you as you move closer to the north. A bright light
 shines in from the north making everything you look at seem orange as
 though you are looking through tinted glass.
- 
+
 ~
 0 134619160 0
 Rd     0
@@ -1660,7 +1660,7 @@ centre of the place, also contains many stalagmites and stalagtites. You find
 it hard to move around here, and are very cautious so as not to fall into
 the fire-pit. You look around some more for another way out, but it seems
 that down into the fiery light is your only exit.
- 
+
 ~
 0 168173592 0
 Rd     0

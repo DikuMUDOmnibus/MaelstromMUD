@@ -1,5 +1,5 @@
 #AREADATA
-Name        {??-???} PROTO AREA          Lacey/Grim~
+Name        PROTO AREA~
 Levels      0 0
 Builders    Lacey Grimfang~
 VNUMs       4300 4399
@@ -29,7 +29,7 @@ ghost~
 a ghost~
 A ghost is here guarding the treasure.
 ~
-This apparition floats menacingly towards you.  
+This apparition floats menacingly towards you.
 ~
 67 0 0 1000 S
 0 0 0 0d0+0 0d0+0
@@ -84,8 +84,8 @@ Wench the Barmaid is here, ready to please you.
 ~
 This buxom lass looks as if she knows her trade very well, and it's
 certainly not serving drinks in this dump.  Perhaps you might want to ask
-her about her services.  
- 
+her about her services.
+
 ~
 3 0 0 0 S
 0 0 0 0d0+0 0d0+0
@@ -124,8 +124,8 @@ Malrok is here waiting to serve you the local specialty.
 Malrok is a weather-beaten looking man.  With a scruffy beard, and a
 tired look in his eyes, he looks as if he's seen it all.  The lines on his
 face tell you he has.  He seems reluctant to talk, but if you press him,
-maybe he will.  
- 
+maybe he will.
+
 ~
 3 0 0 0 S
 0 0 0 0d0+0 0d0+0
@@ -154,7 +154,7 @@ A beggar looks at you forlornly.
 ~
 This poor victim of society looks like he could use a bit of help, maybe
 some spare change.  He's been around a long time, and may recall things that
-may have happened long ago.  
+may have happened long ago.
 ~
 3 0 0 0 S
 0 0 0 0d0+0 0d0+0
@@ -230,7 +230,7 @@ Johann stands here ready to soothe your wounds.
 ~
 Before you stands a man of powerful magic.  He has pouches of many sizes
 and shapes hanging from his belt.  He stands well over six feet tall, with
-shoulders that fill a doorway, a chest that looks as if no armor could 
+shoulders that fill a doorway, a chest that looks as if no armor could
 contain it, and arms as thick as tree trunks.  He smiles down upon you
 in a kindly manner.
 ~
@@ -253,8 +253,8 @@ Igor is ready to serve you.
 ~
 This hunchbacked man seems intimidating but he looks at you and gives you
 a smile and a wink.  He seems intent on dusting his wares and keeping
-this cramped room spotlessly clean.  
- 
+this cramped room spotlessly clean.
+
 ~
 1 0 0 0 S
 0 0 0 0d0+0 0d0+0
@@ -273,7 +273,7 @@ shoulders, and thighs as strong as tree trunks.  His upper arms are rippling
 with muscles, and his hands look as if they could snap your neck in two.  He
 emits an aura of mental unstability, but that's just to throw you off the
 track, for he's as cunning as a fox.  With a wink of his eye and a sweep of
-his massive arm, he shows you his selection of wares.  
+his massive arm, he shows you his selection of wares.
 ~
 67 128 0 -1000 S
 100 0 0 10000d0+0 0d0+0
@@ -293,7 +293,7 @@ Mitch the Snitch is here with a shifty look in his eyes.
 This shifty-looking character appears to be a spy of some sort.  Mitch
 stands over 6 feet tall and his eyes glow red.  His skin is pale, and the
 fresh blood dripping from his fangs onto his chin glistens brightly.  He
-looks at you with hunger in his eyes.  
+looks at you with hunger in his eyes.
 ~
 3 16384 0 -1000 S
 47 0 0 4000d0+0 0d0+0
@@ -354,7 +354,7 @@ The remains of Thortan, still shackled to the wall, lie here.  The
 torture he endured must have been horrid.  The jawbone is locked in a wide
 open position, indicative of screams of horror and pain.  He is long past
 any aid a mortal can give him, all one can do for him now is pray.  You
-notice a glitter of something in one of his wounds.  
+notice a glitter of something in one of his wounds.
 ~
 3 0 0 1000 S
 60 0 0 10000d0+0 0d0+0
@@ -367,11 +367,11 @@ Marcus the Undying~
 Marcus the Undying sits here upon his throne smirking at you.
 ~
 Before you stands the vilest creature in the land.  His eyes burn through
-your soul as he attempts to suck the very life from you with just a glance. 
+your soul as he attempts to suck the very life from you with just a glance.
 His fangs drip fresh blood from his latest victim, yet he appears still
 unsatisfied.  A man of massive proportions, his very presence fills the room
 with evil.  He smirks at you as if you were nothing but a mere insect
-buzzing about his head.  
+buzzing about his head.
 ~
 67 268460104 4 -1000 S
 70 0 0 15000d0+0 0d0+0
@@ -402,7 +402,7 @@ A blue healing ring~
 ~
 Upon closer examination you see a glowing circle here.  It vibrates ever
 so slightly before it draws you closer and casts some type of spell upon
-you.  
+you.
 ~
 3 16384 0 0 S
 0 0 0 0d0+0 0d0+0
@@ -784,7 +784,7 @@ Husband of Lacey Bloodstone.
 Born 571 - Died 596.
 Missing, presumed dead in battle while trying
 to save the good people of Bellville.
- 
+
 Here lies Lacey Bloodstone.
 Deity of Curators.
 Wife of Grimfang Bloodstone.
@@ -866,7 +866,7 @@ rumored that Vampires inhabited this old town, but all perished in the
 earthquake, or so everyone thought, until a treasure seeker came along and
 awoke them with his lootings.  Now you've heard that an evil Vampire King
 now terrorizes the town, with the help of his minions.  You've heard of
-great riches here and decide to risk death to aquire some.  
+great riches here and decide to risk death to aquire some.
 ~
 0 0 0
 Rd     0
@@ -966,8 +966,8 @@ S
 #4305
 Dusk Street~
 For a place named Dawn Street, it's sure dark here.  As a matter of fact,
-this whole area has a gloomy pallor about it.  What a depressing place.... 
-And it looks no better to the west.  
+this whole area has a gloomy pallor about it.  What a depressing place....
+And it looks no better to the west.
 ~
 0 0 0
 Rd     0
@@ -999,7 +999,7 @@ D1
 0 0 4305
 D2
 The door here has been smashed in by what appears to be a super natural
-force.  You cringe at the thought of the beast that did it.  
+force.  You cringe at the thought of the beast that did it.
 ~
 "smashed door" smashed door~
 0 0 4307
@@ -1012,7 +1012,7 @@ S
 Ruins~
 Piles of rusted wrought iron are strewn all around.  This appears
 to once have been a gate to the city, but is now nothing more than
-heaps of twisted rusty metal.  
+heaps of twisted rusty metal.
 ~
 0 0 0
 Rd     0
@@ -1040,8 +1040,8 @@ D2
 S
 #4309
 Dusk Street~
-This appears to be a dead end, but then again all is not what it 
-appears to be in this evil town.  Perhaps you should look carefully 
+This appears to be a dead end, but then again all is not what it
+appears to be in this evil town.  Perhaps you should look carefully
 at each exit...  Who knows what you might find.
 ~
 0 0 0
@@ -1059,9 +1059,9 @@ Could it still be inside?
 S
 #4310
 A Dark Room~
-This dark room has a aura as if some foul deed has happened here. 
+This dark room has a aura as if some foul deed has happened here.
 Murder, perversion, perhaps a combination of both.  What foul act could have
-happened here to board up this room?  The only exit is to the east.  
+happened here to board up this room?  The only exit is to the east.
 ~
 0 4 0
 Rd     0
@@ -1079,7 +1079,7 @@ S
 Dusk Street~
 This street is aptly named because it is so dark and dismal here.  The
 road is pitted with ruts and potholes, making traveling trecherous.  You can
-make out a faint outline of the road continuing east and west.  
+make out a faint outline of the road continuing east and west.
 ~
 0 0 0
 Rd     0
@@ -1097,7 +1097,7 @@ Dusk Street~
 Darkness fills this area making it even moor gloomy than it seems.  The
 road is in deplorable condition, so take heed where you step.  Water fills
 ditches in the road, disguising their depth and width.  One might become
-engulfed in a pool of muck here.  The road continues to the east and west.  
+engulfed in a pool of muck here.  The road continues to the east and west.
 ~
 0 0 0
 Rd     0
@@ -1143,7 +1143,7 @@ The smells that fill this room are not those of dishes any mother you've
 ever known used to make.  It's almost impossible to distinguish where the
 smells of food stop and the smells of unwashed bodies begin.  They seem to
 mesh into one another.  Perhaps dining here would not be a joy to your taste
-buds.  
+buds.
 ~
 0 1024 0
 Rd     0
@@ -1203,7 +1203,7 @@ almost the entire area.  If you look closely at it, you can still make out
 some of the fine craftsmanship that was used to create such a splendid
 piece.  It looks so real that if you stare at it closely, you can almost
 detect a gleam in the Gargoyle's eye.  Strange, you could almost swear that
-the gargoyle moved positions a bit.  
+the gargoyle moved positions a bit.
 ~
 0 0 0
 Rd     0
@@ -1270,7 +1270,7 @@ Sheriff's Office~
 You look around you in complete horror!  Judging from the amount of
 blood, the battle that took place here was more like a massacre.  It looks
 like a butcher shop, with blood splattered all over the walls, ceiling, and
-floor.  
+floor.
 There is a&R Cell&Y to the west, and a&R Door&Y to the south.
 ~
 0 8 0
@@ -1325,7 +1325,7 @@ Dawn Ave.~
 The area here is much like the same as the rest of the town, rather
 nondescript.  Abandoned stores line both sides of the road, gone so long now
 that you can only guess as to what they used to be.  The road continues east
-and you can make out what appears to be a building in the distance.  
+and you can make out what appears to be a building in the distance.
 ~
 0 0 0
 Rd     0
@@ -1358,7 +1358,7 @@ Main Street~
 Darkness settles over this area like a blanket.  It looks as if the town
 has absorbed unto it's self the horror it's seen.  The road continues to the
 north, without any hope of lifting this blanket of horror.  You've come too
-far now to turn back.  
+far now to turn back.
 ~
 0 0 0
 Rd     0
@@ -1375,7 +1375,7 @@ S
 Main Street~
 More horror and destruction line the street here.  Death and destruction
 abound, and the stench of decay gags you.  What unforseen force could have
-wreaked such havok?  Whatever it was, it was pure evil.  
+wreaked such havok?  Whatever it was, it was pure evil.
 ~
 0 0 0
 Rd     0
@@ -1460,7 +1460,7 @@ This well worn path abruptly ends to the east in front of a large stone
 structure.  Upon closer examination you can see stained glass windows high
 up set in the walls, thick wooden doors that are closed, and a set of stone
 steps leading up to them.  This building looks out of place here, the only
-unharmed building in the midst of utter chaos and destruction.  
+unharmed building in the midst of utter chaos and destruction.
 ~
 0 4 0
 Rd     0
@@ -1483,7 +1483,7 @@ victoriously for the side of good.  Stone pillars are adorned with intricate
 carvings of gods and godesses.  The air has a slight hint of some type of
 incense, and the light from the candles make it appear as if shadows are
 dancing upon the walls.  This is a quiet and serene place that seems
-untouched by evil.  
+untouched by evil.
 ~
 0 4 0
 Rd     0
@@ -1533,7 +1533,7 @@ Main Street~
 This poor excuse for a road streches to the north and south.  Mud filled
 ruts and crater sized potholes line this roadway making any travel a
 treacherous one.  Step carefully adventurer, for you never know what lies
-ahead.  
+ahead.
 ~
 0 4 0
 Rd     0
@@ -1550,7 +1550,7 @@ S
 Dead End~
 This dead end once was a gateway to the outside world, but is now nothing
 more than a bunch of twisted metal blocking any further passage to the
-north.  The road continues to the east, west, and south.  
+north.  The road continues to the east, west, and south.
 ~
 0 4 0
 Rd     0
@@ -1572,7 +1572,7 @@ Beggar's Path~
 Poverty and desperation line the area here.  Remnants of ramshackled
 domiciles are still evident.  This once prosperous area had been reduced to
 desolation before whatever disaster overtook it.  A dim light shines to the
-south, and a flicker of movement passes by the window.  
+south, and a flicker of movement passes by the window.
 ~
 0 4 0
 Rd     0
@@ -1594,7 +1594,7 @@ Derf's Flea Market~
 Shelves line the three walls here, crammed full of all kinds of curious
 items.  Some things you've never seen before.  The shop has an eccentric
 look about it, and the proprietor, Derf, looks right at home here amidst the
-clutter.  
+clutter.
 ~
 0 4 0
 Rd     0
@@ -1608,7 +1608,7 @@ Collapsed Road ~
 The road is in deplorable condition here with so many sinkholes, some
 large enough to hide several bodies in.  One of the sinkholes has a strange
 appearance, more like a dark, forbidding pit.  Upon closer examination, it
-appears to be an entryway of some kind.  
+appears to be an entryway of some kind.
 ~
 0 0 0
 Rd     0
@@ -1625,7 +1625,7 @@ S
 Path To Tower~
 You find yourself at a four-way intersection.  To the north is a
 building, the facade only slightly decayed, to the east, what looks like a
-tower of some sort, and to the west and south, darkness.  
+tower of some sort, and to the west and south, darkness.
 ~
 0 0 0
 Rd     0
@@ -1670,7 +1670,7 @@ Large stones lie upon the ground here, remnants of this once majestic
 tower.  You see large, gaping holes along it's length, and open areas where
 windows once were.  A heavy, wooden door is to your east, still almost
 intact.  The lock upon it looks fairly new and is open and hanging from the
-hasp.  
+hasp.
 ~
 0 0 0
 Rd     0
@@ -1691,7 +1691,7 @@ overhead.  Trash and rubble litter the area here up to your ankles.  There's
 a heavy door to the west, keeping out all the elements, and to the south,
 faintly showing through, is another door.  This one appears to not want to
 be opened, for it looks as if the rubble was placed there and made to look
-as if it got there by natural means.  
+as if it got there by natural means.
 ~
 0 8 0
 Rd     0
@@ -1709,7 +1709,7 @@ Top of Staircase~
 Finally...  The top of the spiral staircase.  The walls here are
 crumbling all around you.  There's a rusty trap door over your head, and
 through the gaps of it's frame bits of dirt rain down upon your head, as if
-something was alive up there.  Bones and bits of trash litter the area.  
+something was alive up there.  Bones and bits of trash litter the area.
 ~
 0 8 0
 Rd     0
@@ -1734,7 +1734,7 @@ This apex of a once secured guard post is in shambles now.  Most of the
 roof is gone now, allowing a trickling of mist to filter in.  The crumbles
 walls give a clear view of the countryside, and it looks no better from this
 point of view than it did up close.  Even at this altitude, the stench of
-death and decay cannot escape you.  
+death and decay cannot escape you.
 ~
 0 8 0
 Rd     0
@@ -1752,7 +1752,7 @@ warriors.  What was once a splendorous place has now fallen to ruins.  One
 can only imagine the splendor that was once here, but from looking at it
 now, you cannot imagine what havoc has been wreaked here.  Well, at least
 there's what appear to be rooms here.  You are a bit tired from all this
-travelling and what better place to sleep than at an inn.  
+travelling and what better place to sleep than at an inn.
 ~
 0 0 0
 Rd     0
@@ -1896,8 +1896,8 @@ furnishings are of an extravagant nature.  The walls and floor are ruined
 now, but you can just picture how they looked when new.  Off in the corner,
 you see a large bed, with bed curtains covering three sides.  The bed is in
 fairly good shape, a bit musty, but still servicable.  A wave of exhaustion
-comes over you...  And that bed looks like a great place to indulge it. 
-Besides, you've traveled a long way on too little sleep.  
+comes over you...  And that bed looks like a great place to indulge it.
+Besides, you've traveled a long way on too little sleep.
 ~
 0 0 0
 Rd     0
@@ -2012,7 +2012,7 @@ A Metallic-Smelling Corridor~
 This dark, dank corridor has a familiar-smelling sharp tinge to it.  It's
 a metallic smell not unlike that of blood.  Upon closer inspection, you see
 the walls and floor are covered with dark red stains, some which appear
-fresher than others, and all have the sharp, pungent odor of blood.  
+fresher than others, and all have the sharp, pungent odor of blood.
 ~
 0 9 0
 Rd     0
@@ -2029,9 +2029,9 @@ S
 An Intersection of Caverns~
 This underground maze is dark and damp, chilling you to the bone.  Exits
 lead in every direction, but are too dark to see beyond the entryways.  The
-occasional scrapings of some kind of vermin echo faintly all around you. 
+occasional scrapings of some kind of vermin echo faintly all around you.
 Water drips down from the ceiling and the sounds resonate off the walls
-almost like some archaic torture chamber.  
+almost like some archaic torture chamber.
 ~
 0 8 0
 Rd     0
@@ -2058,7 +2058,7 @@ This section was once an intrical part of the roadway through these
 parts, but the ceiling of this underground labrynth has since colapsed and
 has rendered it useless.  What appears to be a door of some kind is set into
 the east wall.  Upon closer examination, you can make out deep gouges and
-stains of some dark substance, perhaps blood.  
+stains of some dark substance, perhaps blood.
 ~
 0 0 0
 Rd     0
@@ -2078,7 +2078,7 @@ This room is barren, save for a huge crystal in the center, and what
 appears to be the faint outline of a door on the west wall.  A shimmer of
 light fills the room, it's origin is from the strange crystal.  The crystal
 seems to be pulsating with a life of it's own, and the strange light seems
-to be a drawing presence.  
+to be a drawing presence.
 ~
 0 8 0
 Rd     0
@@ -2116,7 +2116,7 @@ A Narrow Passageway~
 This narrow room looks as if some type of cave-in occured here.  Rubble
 completely covers the east wall making further passage impossible.  The
 dank, musty smell here makes one want to gag, and water drips in a steady,
-monotonous beat.  The only exit here is to the west.  
+monotonous beat.  The only exit here is to the west.
 ~
 0 0 0
 Rd     0
@@ -2129,7 +2129,7 @@ S
 A Darkened Area~
 Darkness envelops you here, so that all you can make out is your hand
 in front of your face.  In the shadows piles of rubble surround you.
-Vermin of some type seen to scramble out from beneath the rubble at 
+Vermin of some type seen to scramble out from beneath the rubble at
 your entrance here.  The room looks as if it hasn't been tounched in
 cneturies.  Off to the west, a faint blue light emits.
 ~
@@ -2154,7 +2154,7 @@ The faint smell of incense assails your nostrils, not unpleasantly.  This
 room appears to be a healing room.  A circle is in the ground here,
 radiating a warm, glowing, white aura, apparently a healing power of some
 kind.  The ring begins to glow blue, and a warmth washes over you, healing
-your wounds and relieving your pain.  
+your wounds and relieving your pain.
 ~
 0 8 0
 Rd     0
@@ -2167,7 +2167,7 @@ S
 Damp Corridor~
 The ground is damp, the area poorly lit.  A film of mold covers the
 ground here, and a decaying smell fills your nostrils.  The faint sounds of
-some type of animal scurrying past can be heard.  
+some type of animal scurrying past can be heard.
 ~
 0 0 0
 Rd     0
@@ -2186,7 +2186,7 @@ This cavern appears to have once been an old road intersection.  It was
 covered over when the new town was built.  As a result, the ground shifted
 and sank down forming this abyss.  Cobwebs decorate the walls, and the
 feeling of dread permeates the air.  The squeaking of bats in the distance
-can be heard.  
+can be heard.
 ~
 0 0 0
 Rd     0
@@ -2224,10 +2224,10 @@ S
 #4374
 Piles of Bones~
 This room looks as if it was used as a slaughterhouse.  Judging from the
-quantity of bones on the ground, at least 50 or so were massacred here. 
+quantity of bones on the ground, at least 50 or so were massacred here.
 Skulls of various sizes litter the ground, indicating no one escaped the
 wrath of the madman who committed this act.  Towards the north wall there is
-a sliver of light showing through one of the larger piles of bones.  
+a sliver of light showing through one of the larger piles of bones.
 ~
 0 0 0
 Rd     0
@@ -2246,7 +2246,7 @@ This room is nothing more than a breeding ground for rats.  Everwhere
 you look are rats, and more rats.  Shiny objects show through the dim light
 here, in between the piles of rat droppings.  The objects are worthless to
 all but the rats.  The squeaking of the rats fills the air, and it sounds as
-if they are starving.  
+if they are starving.
 ~
 0 0 0
 Rd     0
@@ -2302,7 +2302,7 @@ A Dark Road~
 The road here is dreary with the smell of stagnant water assailing one's
 senses.  Off in the distance to the west, a set of wrought iron gates can
 just barely be made out, and to the south what looks like the crumbling
-remains of some type of structure can be seen in the shadows.  
+remains of some type of structure can be seen in the shadows.
 ~
 0 8 0
 Rd     0
@@ -2336,7 +2336,7 @@ what appears to have once been the caretaker's building is barely visable
 through this damp mist that hangs heavy over the area.  A pair of wrought
 iron gates to the west south at first glance look as though they haven't
 been touched in years.  Upon closer examination, you can see fresh scratches
-where the locks are.  
+where the locks are.
 ~
 0 0 0
 Rd     0
@@ -2367,7 +2367,7 @@ Judging from the dates on the headstones here, this part of the graveyard
 appears to be the oldest section.  The stones are so old they're almost
 disintegrated, save a few, and those few are hard to read.  The earth here
 has settled in an uneven pattern, and sinkholes, so deep that portions of
-coffins are showing through the soil.  
+coffins are showing through the soil.
 ~
 0 0 0
 Rd     0
@@ -2390,7 +2390,7 @@ door set in it's center.  The door is half torn off it's hinges, with
 freshly splintered wood on the ground at it's base.  The wind catches the
 door, making it bang against the rough doorframe, and the noise echos
 through the area, the only other noise you can hear besides your heart
-hammering in your chest.  
+hammering in your chest.
 ~
 0 0 0
 Rd     0
@@ -2427,7 +2427,7 @@ superhuman strength was on a tirage.  Bodies, or what's left of them, hang
 half out of their chambers, and have all been defiled in some manner.  The
 stench of decay hangs heavily here due to the lack of air circulating
 through here.  Deep, dark stains are everywhere, and the metallic smell of
-blood fills your nostrils.  
+blood fills your nostrils.
 ~
 0 0 0
 Rd     0
@@ -2439,11 +2439,11 @@ S
 #4385
 Haunted Graveyard~
 The tombstones are cracked and lying in crumbled heaps everywhere.  There
-are a few still somewhat in tact, those belonging to the Bloodstone family. 
+are a few still somewhat in tact, those belonging to the Bloodstone family.
 A few crypts and tombs line the area, which is in utter chaos.  Weeds choke
 the area, and what used to be lush grass is now no more than straw.  A mist
 forms around your ankles giving the appearance of clutching you, drawing you
-nearer to the evil that lies within.  
+nearer to the evil that lies within.
 ~
 0 0 0
 Rd     0
@@ -2468,8 +2468,8 @@ dank, musty smell that has permeated every other area in this dismal town
 seems to have seeped into here also.  The most noticible feature of this
 room is the bone-chilling coldness that seems to cut right through armor,
 making any inhabitant here feel, well, almost dead.  Upon closer inspection,
-it seems the pile of debris on the north wall has been recently disturbed. 
-The cobwebs are broken and the dust a bit scattered.  
+it seems the pile of debris on the north wall has been recently disturbed.
+The cobwebs are broken and the dust a bit scattered.
 ~
 0 0 0
 Rd     0
@@ -2499,7 +2499,7 @@ if the records of those buried in secret were stored here besides some
 trinkets of some value.  The remains of crude boxes line 2 walls, filled
 with what used to be scrolls and are now nothing more than tatters.  Maybe
 some information can be obtained if one wanted to take the time to comb
-through the remains.  
+through the remains.
 ~
 0 0 0
 Rd     0
@@ -2531,7 +2531,7 @@ A set of roughly cut granite steps are here, cracked from the elements
 and age.  They are uneven, indicating a shifting of their foundation.  A
 dark substance stains them in places.  Before you to the north are a set of
 dark wooden doors with large brass rings in the center of each.  Deep gouges
-adorn both doors, some look freshly made.  
+adorn both doors, some look freshly made.
 ~
 0 0 0
 Rd     0
@@ -2546,11 +2546,11 @@ D2
 S
 #4390
 Church Vestibule~
-The vestibule appears to have been violated by some sort of a madman. 
+The vestibule appears to have been violated by some sort of a madman.
 The fonts which once contained holy water have been ripped from their moors
 and smashed upon the floor.  Strange words of a different tongue are
 scrawled upon the walls in what appears to be blood.  Large holes in the
-ceiling allow some light to enter in, and give this room an eerie glow.  
+ceiling allow some light to enter in, and give this room an eerie glow.
 ~
 0 131072 0
 Rd     0
@@ -2573,11 +2573,11 @@ D3
 S
 #4391
 Meditation Room~
-A twin to the other meditation room here, this place is in total bedlam. 
+A twin to the other meditation room here, this place is in total bedlam.
 Some maniacal being has seen fit to utterly destroy any and all furnishings
 and religious matter.  Words not from any tongue in these lands are scrawled
 upon the walls, perhaps a warning of some sort.  An evil pall settles over
-the area, and a cold breeze filters through the holes in the ceiling.  
+the area, and a cold breeze filters through the holes in the ceiling.
 ~
 0 131072 0
 Rd     0
@@ -2588,7 +2588,7 @@ D1
 S
 #4392
 Meditation Room~
-This is one of two small rooms in the church used for meditatiing and 
+This is one of two small rooms in the church used for meditatiing and
 reflecting on one's inner self.  It is unadorned and the rough pews that
 were once in place have been ripped up and smashed.  More strange words are
 scrawled upon the walls, and any religious references smashed to bits.
@@ -2674,7 +2674,7 @@ This is where the priests of this church hid all the holy relics and
 valuable treasures to protect them from the carnage that has over taken this
 place.  Everything is just stacked carelessly, as though tossed here in a
 hurry.  At least these valuables made it through the violent acts that
-occured here.  
+occured here.
 ~
 0 8 0
 Rd     0
@@ -2691,7 +2691,7 @@ still shackled to the wall, is here.  Judging from the remains of his garb,
 it appears to be the priest at the time of this twisted carnage.  How long
 he has been here is a mystery, for the bones are blanched, not a trace of
 muscle or sinew remain attached to them.  The jawbone is extended wide open,
-indicating perhaps screams of utter horror at his fate.  
+indicating perhaps screams of utter horror at his fate.
 ~
 0 131080 0
 Rd     0
@@ -2708,7 +2708,7 @@ everywhere, and the walls are decorated with unholy crosses.  It looks like
 some sort of bloody carnage has occured here.  On the northern side of the
 room sits a throne, simply adorned with a few blood red rubies and crystal
 clear diamonds.  Upon this throne sits Marcus.  His eyes appear to glow in
-the dim light provided here.  
+the dim light provided here.
 ~
 0 134619145 0
 Rd     0
@@ -2726,7 +2726,7 @@ room is dark and dusty.  Bats hang from the rafters waiting to swoop down
 upon you.  In the center of the room, upon a pedestal of some sort, is a
 coffin.  It's made out of some type of dark wood, with a layer of dust on it
 an inch thick.  Brass fittings adorn the coffin, green now with tarnish, and
-it appears this coffin hasn't been opened in centuries.  
+it appears this coffin hasn't been opened in centuries.
 ~
 0 393216 0
 Rd     0

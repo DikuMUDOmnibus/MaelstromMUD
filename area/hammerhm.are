@@ -1,7 +1,7 @@
 #AREADATA
-Name        {60-100} Hammerheim          Nosferatu~
+Name        Hammerheim~
 Levels      60 100
-Builders    Reklar~
+Builders    Reklar Nosferatu~
 VNUMs       10201 10300
 Security    98
 Recall      10210
@@ -20,7 +20,7 @@ Rodgaar the Healer
 ~
 Rodgar is an old man of smaller statue but he radiates a trememdous power.
 This power must come from the Shrine behind him. Rodgaar has guarded the
-Shrine for many years, and he has healt many adventurers in need. 
+Shrine for many years, and he has healt many adventurers in need.
 He smiles at you and tends to your wounds...
 ~
 67 16777896 0 0 S
@@ -45,7 +45,7 @@ Nyrmaal the Gym Mistress cracks her whip...
 ~
 Nyrmaal is a huge woman!  Her arms are like tree trunks and her body is
 packed with muscles all over.  She looks sternly at you and nods....  You
-may train here.  
+may train here.
 ~
 579 268444328 0 0 S
 106 0 0 16000d0+0 0d0+0
@@ -64,7 +64,7 @@ Tygaar~
 Tygaar the Wise studies an old scroll...
 ~
 Tygaar is a typical scholar. Slightly hunched over, spectacles and a little
-absent minded. The only item that does not fit is that huge club stuck 
+absent minded. The only item that does not fit is that huge club stuck
 in his belt...well, he is wise but a Barbarian afterall.
 ~
 1091 134226600 0 0 S
@@ -106,8 +106,8 @@ Headman~
 The Headman~
 The Headman of Hammerheim stands here...
 ~
-The Headman is a middle aged man with silver hair and a stern look. 
-Those many scars that cover his body are witness to the great combat 
+The Headman is a middle aged man with silver hair and a stern look.
+Those many scars that cover his body are witness to the great combat
 experience this man has. As tradition dictates, the office of Headman is
 always held by the strongest and bravest barbarian.
 ~
@@ -157,7 +157,7 @@ The Shaman~
 The Shaman of Hammerheim is consumed by dark magics...
 ~
 The Shaman is clad in the traditional barbarian furs, but that is the only
-that reminds of a mortal humanoid. This woman is much closer to a demon 
+that reminds of a mortal humanoid. This woman is much closer to a demon
 than any mortal creature you have ever seen. Her eyes glow evilly red and
 she screams earthshakingly as she becomes aware of your presence..
 ~
@@ -177,8 +177,8 @@ The Archbishop~
 The Archbishop of Hammerheim blesses you...
 ~
 The Archbishop is a devoted man. But his title does not really reflect the
-true nature of his occupation. The Overlord has put him in charge of all 
-spiritual matters in Hammerheim, but he is also a Warrior Priest with 
+true nature of his occupation. The Overlord has put him in charge of all
+spiritual matters in Hammerheim, but he is also a Warrior Priest with
 considerable combat experience.
 ~
 67 234889896 80 1000 S
@@ -255,8 +255,8 @@ demon~
 A Fire Demon~
 A Demon from the fires of hell gnarles on your bones!
 ~
-A lesser demon has been summoned from the pits of hell! This one is a 
-fire demon, one of the more vicious kind! 
+A lesser demon has been summoned from the pits of hell! This one is a
+fire demon, one of the more vicious kind!
 The fire demon houls and attacks you immediately!
 ~
 99 306709032 0 -100 S
@@ -316,9 +316,9 @@ A creature surrounded by fire strikes at you!
 ~
 This creature is not a natural mutation of a salamander. Someone has made
 a monster here, someone very demented and evil!
-The creature howls in rage apparently from the pain of its own fire. 
+The creature howls in rage apparently from the pain of its own fire.
 The tormented animal becomes aware of your presence and attacks!
- 
+
 ~
 33 34611752 0 0 S
 70 0 0 6500d0+0 0d0+0
@@ -364,10 +364,10 @@ Jadgaar~
 Jadgaar, the Jeweler~
 Jadgaar has a fine selection of jewels here...
 ~
-Jadgaar is a small, old man. His eyes sparkle as much as the jewels he 
+Jadgaar is a small, old man. His eyes sparkle as much as the jewels he
 displays in his shop. He greets you friendly and is eager to see your
 treasures.
- 
+
 ~
 67 16786088 0 0 S
 106 0 0 16000d0+0 0d0+0
@@ -406,7 +406,7 @@ Dermaal, the Potionmaker~
 Dermaal presents a fine selection of potions here...
 ~
 Dergaal does not look like your typical barbarian female. She is a rather
-petite and graceful lady. She has rather chilling expression in her 
+petite and graceful lady. She has rather chilling expression in her
 pleasant features...why?
 ~
 67 8872 0 0 S
@@ -488,7 +488,7 @@ Gutt, the Ogre~
 Gutt, the Ogre has plenty of good weapons here...
 ~
 Gutt is Klutz' twin brother. Not that you would be able to tell one Ogre
-apart from another even if they were not related. 
+apart from another even if they were not related.
 Gutt grunts friendly at you and shows you his collection of weapons.
 ~
 67 8872 0 0 S
@@ -509,7 +509,7 @@ Klutz, the Ogre displays Hammerheim's finest armors...
 ~
 Klutz is an Ogre. He is very tall, very strong, very dirty and very dumb.
 The Barbarians found him and his twin brother Gutt before their gates many
-years ago. They nutured and raised them and to everyone's surprise, both 
+years ago. They nutured and raised them and to everyone's surprise, both
 Ogres became pretty sucessful business men in Hammerheim.
 ~
 67 8872 0 0 S
@@ -571,8 +571,8 @@ Druid~
 A Druid~
 A Druid mutters some incarnations...
 ~
-This female barbarian is neither pretty nor ugly. She wears a strange 
-headdress of leaves, almost like a crown. 
+This female barbarian is neither pretty nor ugly. She wears a strange
+headdress of leaves, almost like a crown.
 Even though barbarian druids are illiterate, they have great knowlegde
 of nature and its hidden magic.
 ~
@@ -588,7 +588,7 @@ A Barbarian walks this way...
 ~
 This Barbarian seems to be on his way home from work. He is dressed in
 a rather filthy fur tunic and wields the traditional stone hammer.
-These hammers are weapon, tool and symbol as well. They have given 
+These hammers are weapon, tool and symbol as well. They have given
 Hammerheim its name.
 ~
 1 8704 0 200 S
@@ -603,7 +603,7 @@ An Axe-man patrols the streets of Hammerheim...
 ~
 This Barbarian has a double duty as a cityguard and a policeman.  He has
 a stern, proud look in his face.  He carries the traditional short-axe which
-gave his profession the name Axe-men.  
+gave his profession the name Axe-men.
 ~
 1 134226472 0 500 S
 75 0 0 11375d0+0 0d0+0
@@ -645,7 +645,7 @@ Lodgaar travels to other regions of the realm...
 ~
 Lodgaar is a typical Barbarian. He is dressed in the traditional furs and
 carries a bronze sword as well as the traditional stone hammer.
-Lodgaar is on his way to explore the other parts of the Storm World, 
+Lodgaar is on his way to explore the other parts of the Storm World,
 whistling a happy tune...
 ~
 67 8873 0 0 S
@@ -670,7 +670,7 @@ Ogre Prisoner~
 An Ogre Prisoner~
 An Ogre Prisoner awaits execution...
 ~
-This unwashed Ogre has been sentenced to death for stealing and killing 
+This unwashed Ogre has been sentenced to death for stealing and killing
 citizens of Hammerheim. He will be executed at dawn tomorrow morning.
 However, he seems to be completely oblivious to his death. He still tries
 to snatch your coin purse...hmm, maybe you can predate the execution by
@@ -875,7 +875,7 @@ A
 14 -30
 E
 bloody axe war~
-This huge barbarian axe of war is dripping with its deadly poison 
+This huge barbarian axe of war is dripping with its deadly poison
 ~
 #10207
 chain mail~
@@ -1858,7 +1858,7 @@ A Mountain Trail~
 The mountain trail is well traveled and deeply worn, but it is difficult
 going nonetheless.  A bitter north wind blasts down the trail, freezing
 everything in sight.  The few other travelers on the trail are heavily clad
-in furs and other winter garb.  
+in furs and other winter garb.
 ~
 0 401412 5
 Rd     0
@@ -1876,7 +1876,7 @@ A Mountain Trail~
 The trail becomes narrower as the mountains become steeper.  Ice and
 sleet make the footing slippery, and the cold wind makes the going even more
 miserable.  The beauty of the mountains is stunning, with their snow-capped
-and craggy peaks.  Unfortunately, the weather makes it impossible to enjoy. 
+and craggy peaks.  Unfortunately, the weather makes it impossible to enjoy.
 ~
 0 401408 5
 Rd     0
@@ -1891,10 +1891,10 @@ D2
 S
 #10203
 The Road to Hammerheim~
-The trail broadens out into a proper road here, high in the mountains. 
+The trail broadens out into a proper road here, high in the mountains.
 Just over the horizon, you think you can see the gates to a city.  It
 appears to be solidly made, with a sturdy wall around it to protect from
-intruders.  Hopefully, it keeps out the elements, as well.  
+intruders.  Hopefully, it keeps out the elements, as well.
 ~
 0 401408 4
 Rd     0
@@ -1912,7 +1912,7 @@ Before the South Gate~
 The road ends at the gateway to Hammerheim.  A large gate made of stone
 is barred and locked, preventing travel to the north.  The absence of guards
 is noticeable, but with such solid gates they are really uneccesary.  There
-is a very large keyhole in the gate.  
+is a very large keyhole in the gate.
 ~
 0 401408 0
 Rd     0
@@ -1931,7 +1931,7 @@ Here inside the south gate of Hammerheim, the bitter cold and wind seem
 less harsh.  The residents of this city, both male and female, are heavily
 muscled and well-clad against the elements with heavy furs and solid winter
 boots.  Most seem to carry at least a light weapon, as well.  This explains
-the lack of guards at the gate.  
+the lack of guards at the gate.
 ~
 0 393216 1
 Rd     0
@@ -1950,7 +1950,7 @@ Uraag's Road is a main thoroughfair of Hammerheim.  To the east, Holy Way
 stretches out to the Cathedral.  The chanting of religious fanatics can be
 heard even here.  The road itself is well-made with tightly fitting
 cobblestones.  There is a loud clanging of metal on metal coming from the
-road to the west of you.  
+road to the west of you.
 ~
 0 393216 1
 Rd     0
@@ -1977,7 +1977,7 @@ The other traveleres on Uraag's Road are mostly the barbarian inhabitants
 of Hammerheim.  Their fierce demeanors are a bit discomforting, and the
 weapons they carry look menacing.  The cold is incredibly intense, and the
 wind whips through your garments.  The faint sound of a hammer on an anvil
-can be heard clanging in the distance.  
+can be heard clanging in the distance.
 ~
 0 393216 1
 Rd     0
@@ -1995,7 +1995,7 @@ Main Intersection~
 The intersection of Uraag's Road and Groog's Way appears to be one of the
 busiest in Hammerheim.  Set on a pedestal is the huge hammer which is the
 symbol of the city.  On the ground is a very large grate, which, by the
-smell, must lead to the city's dark and dangerous sewers.  
+smell, must lead to the city's dark and dangerous sewers.
 ~
 0 393216 1
 Rd     0
@@ -2025,7 +2025,7 @@ Icy Way~
 Uraag's Road lies to the south, while Icy Way leaves to the west and
 east.  The roads are made of the same tight-fitting cobblestones as the rest
 of Hammerheim Icy Way is a very busy thoroughfair, with many citizens taking
-their problems to the Headman to be resolved.  
+their problems to the Headman to be resolved.
 ~
 0 393216 1
 Rd     0
@@ -2052,7 +2052,7 @@ The Hammerheim shrine looms to the north.  The seat of the real power in
 Hammerheim, the shrine is the home of the Overlord.  Her rule is absolute,
 and her decisions are heavy-handed but just.  The shrine is also a quiet
 place of worship for the masses, and also serves as an academy where people
-can go to receive special training.  
+can go to receive special training.
 ~
 0 262148 1
 Rd     0
@@ -2071,7 +2071,7 @@ The shrine of Hammerheim is immense yet simple.  A donation horn for the
 needy of Hammerheim is here.  Milling about are citizens of the town which
 are deeply involved in their own thoughts.  Some seek an audience with the
 Overlord.  Others wish to quietly worship their gods by providing for the
-needy.  Still others seek the knowledge of the academics.  
+needy.  Still others seek the knowledge of the academics.
 ~
 0 2491400 0
 Rd     0
@@ -2098,7 +2098,7 @@ The chamber of the Overlord is a very lavishly decorated room.  That is,
 lavish for a barbarian.  The stout furniture in the room is covered with
 very fine velvet, and the thick walls keep out the cold winds blowing
 outside.  The look on the Overlord's face makes you wonder if you should
-have scheduled an appointment.  
+have scheduled an appointment.
 ~
 0 401416 0
 Rd     0
@@ -2118,7 +2118,7 @@ the trainer, really knows how to provide a workout.  The thoroughness of her
 teaching pays off, however.  At least it seems that way by the looks of
 these barbarians.  The heat generated by the warm bodies makes this room one
 of the most pleasent in Hammerheim.  The smell of the people working out
-isn't so pleasant, however.  
+isn't so pleasant, however.
 ~
 0 2491400 0
 Rd     0
@@ -2147,7 +2147,7 @@ Icy Way~
 Icy Way leads off to the east toward the village hall and the
 office of the Headman.  Although it is difficult to obtain an audience with
 this man, it is often very important.  His decisions are just, and he is
-often involved in settling petty disputes.  
+often involved in settling petty disputes.
 ~
 0 393216 1
 Rd     0
@@ -2166,7 +2166,7 @@ Icy Way leads to the Village Hall to the east, and the city gate
 down the alley to the north.  It is rumored that terrible beasts and giant
 men live to the north, and you are thankful of the protective city walls.  A
 fountain which stands in the road provides fresh, clear water to any that
-would like to drink.  
+would like to drink.
 ~
 0 393216 1
 Rd     0
@@ -2186,10 +2186,10 @@ S
 #10217
 At Village Hall~
 The Village Hall is a large and sturdy building which provides protection
-from the outdoors, as well as serving as a meeting place for the citizens. 
+from the outdoors, as well as serving as a meeting place for the citizens.
 Although the members of the town do not rule over themselves, important
 policies are discussed here.  The citizens then appoint a representative to
-take their views to the Headman.  
+take their views to the Headman.
 ~
 0 393216 1
 Rd     0
@@ -2207,7 +2207,7 @@ Snow Covered Road~
 The alley runs between some houses in the residential section of
 Hammerheim.  A cold north wind whips down the alley, swirling snow around
 your feet.  The solid stone houses look inviting, with glows coming out of
-their windows from the warmth within.  
+their windows from the warmth within.
 ~
 0 393216 1
 Rd     0
@@ -2225,7 +2225,7 @@ Snow Covered Road~
 Just ahead is the north gate.  More mountains can be seen beyond the city
 walls, their snow-capped peaks glistening in the sun.  The city behind you,
 even with its cold and stone-faced inhabitants looks more welcoming than the
-terrain ahead.  
+terrain ahead.
 ~
 0 393216 1
 Rd     0
@@ -2242,9 +2242,9 @@ S
 Inside the North Gate~
 The north gate is barred and locked securely.  Just like the south gate
 of Hammerheim, no guards are posted to keep out unwelcome intruders.  By the
-looks of the citizens and the weapons they carry, however, it is no wonder. 
+looks of the citizens and the weapons they carry, however, it is no wonder.
 A good smack from one of the stone clubs would knock a person senseless at
-the least.  
+the least.
 ~
 0 393216 1
 Rd     0
@@ -2262,7 +2262,7 @@ Before the North Gate~
 The north gate of Hammerheim is firmly barred against any intrusion.  The
 lack of guards for the gate is noticeable and puzzling, however.  The city
 walls appear to be impenetrable, and the gate has a very large keyhole in
-it.  To the north, the immense mountains of the giants can be seen.  
+it.  To the north, the immense mountains of the giants can be seen.
 ~
 0 401408 4
 Rd     0
@@ -2280,7 +2280,7 @@ The Road to Hammerheim~
 The road to Hammerheim is very rough but passable.  Not many people enter
 from the north, because not many people live to tell about the giants which
 dwell in the mountains to the north.  To the south, the gates of Hammerheim
-loom up.  
+loom up.
 ~
 0 401408 4
 Rd     0
@@ -2298,7 +2298,7 @@ The Road to Hammerheim~
 The cold chill of the wind is incredible here.  The tendrils of cold
 creep through every layer of clothing, picking at the flesh like many tiny
 barbs of a bramble bush.  Even the thickest fur cloak does nothing against
-this incredible wind.  
+this incredible wind.
 ~
 0 401412 4
 Rd     0
@@ -2315,7 +2315,7 @@ S
 The Ice Portal~
 You are in a large snow covered clearing! A trail to the south leads to the
 famous city of Hammerheim. In the middle of all the show and ice, you see
-the large Ice Portal through which you have arrived here. 
+the large Ice Portal through which you have arrived here.
 Just now, you notice that you are not alone here. A Barbarian is heading
 from the south right towards the portal...
 ~
@@ -2332,9 +2332,9 @@ D2
 S
 #10225
 The Village Hall~
-You have entered a plain, sturdy building that serves as the Village Hall 
-of Hammerheim. The Headman, who has authority comparable to a mayor, 
-is apparently studying the latest reports from the city guards. When he 
+You have entered a plain, sturdy building that serves as the Village Hall
+of Hammerheim. The Headman, who has authority comparable to a mayor,
+is apparently studying the latest reports from the city guards. When he
 becomes aware of your presence, he just gives you a hard look and continues
 his work.
 ~
@@ -2353,7 +2353,7 @@ S
 Icy Way~
 Icy Way seems strangely deserted.  You still see the occasional
 barbarian, but there are not nearly as many of them as in the other parts of
-the city.  Maybe there is a reason for this...  
+the city.  Maybe there is a reason for this...
 ~
 0 393216 1
 Rd     0
@@ -2368,10 +2368,10 @@ D3
 S
 #10227
 Icy Way~
-The town seems strangely empty the further you walk down Icy Way. 
+The town seems strangely empty the further you walk down Icy Way.
 The few barbarians you do see seem to be walking awfully quickly, and none
 of them meet your gaze.  To the west, you see a strange building and a
-portal of some sort.  
+portal of some sort.
 ~
 0 393216 1
 Rd     0
@@ -2394,7 +2394,7 @@ A strange mansion stands to the west.  Twisted and gnarled strees stand
 sentinel around it, and weird, flickering lights come from inside.  The door
 is locked, and there doesn't seem to be a key anywhere around.  Perhaps
 there is another way in.  There is also a very large portal here, in which
-you can see the Oracle of Bethaven.  
+you can see the Oracle of Bethaven.
 ~
 0 133124 1
 Rd     0
@@ -2414,7 +2414,7 @@ whom you have disturbed in a secret ritual is not very happy to see you.  A
 quick survey of the room reveals all matter of arcane items.  Candles are
 arranged in the shape of a pentagram, and runes have been drawn from fresh
 blood.  On the floor is a trapdoor, and the only other exit is a locked door
-to the east.  
+to the east.
 ~
 0 401417 0
 Rd     0
@@ -2432,7 +2432,7 @@ Holy Way~
 The people you meet on Holy Way have a wild look in their eyes.  They
 mutter prayers under their breath and scurry along their way.  Only the
 upper echelon goes to the immense Cathedral to pray.  The rest pray at the
-Shrine of Hammerheim.  
+Shrine of Hammerheim.
 ~
 0 393216 1
 Rd     0
@@ -2451,7 +2451,7 @@ In the distance, you see the Cathedral of Hammerheim.  It is a most
 impressive building, and by the looks of it, is the most expensive building
 in all of Hammerheim.  Religion must play an important role in these
 people's lives.  Screams of agony can be heard coming from afar...  Possibly
-from the Cathedral.  
+from the Cathedral.
 ~
 0 393216 1
 Rd     0
@@ -2473,7 +2473,7 @@ Before the Cathedral~
 The Cathedral is a very impressive building.  Ornately carved gargoyles
 perch on the edges of the building which soars high into the sky.  A
 fountain of blood fills the courtyard, a tribute to Groog, the god of death.
-The blood of fresh sacrifices is added to it on a daily basis.  
+The blood of fresh sacrifices is added to it on a daily basis.
 ~
 0 393216 1
 Rd     0
@@ -2488,10 +2488,10 @@ D3
 S
 #10233
 The Cathedral of Hammerheim~
-The Cathedral of Hammerheim is a very immense and impressive building. 
+The Cathedral of Hammerheim is a very immense and impressive building.
 Vaulted ceilings rise high above you, proof that the church is an important
 infuence in the daily lives of the citizens, as well as being influential
-politically.  
+politically.
 ~
 0 4595721 0
 Rd     0
@@ -2509,7 +2509,7 @@ Fire Alley~
 The wind whips down Fire Alley...  A wind so chilling it blows through
 any garment and chills you to the bone.  In the distance, a flickering and
 comforting glow from a large bonfire can be seen.  Crowds of people huddle
-around the bonfire, warming their numb fingers.  
+around the bonfire, warming their numb fingers.
 ~
 0 393216 1
 Rd     0
@@ -2527,7 +2527,7 @@ Fire Alley~
 The glow from the distant fire is bright here, but no warmth can be felt.
 The weather is almost always cruel here in Hammerheim, and it is apparent in
 the attitude of its residents.  No children can be seen playing in the
-street, and the adults are only out so long as they need be.  
+street, and the adults are only out so long as they need be.
 ~
 0 393216 1
 Rd     0
@@ -2543,9 +2543,9 @@ S
 #10236
 Bonfire Plaza~
 The aptly named Bonfire Plaza provides some respite from the cold.  A
-glowing bonfire cheers your mood and warms your hands as you look around. 
+glowing bonfire cheers your mood and warms your hands as you look around.
 To the south is the smithy, to the west are the stables, and to the north is
-a warehouse.  
+a warehouse.
 ~
 0 393216 1
 Rd     0
@@ -2572,7 +2572,7 @@ By the looks of the warehouse, it must be abandoned.  It is sealed
 tightly, and the windows are boarded up.  The wind seems especially chill
 here, and the noises coming from within the warehouse are very spooky.  The
 glow from the bonfire behind you seems much more welcoming than the
-warehouse.  
+warehouse.
 ~
 0 393216 1
 Rd     0
@@ -2591,7 +2591,7 @@ The smithy is a very loud and chaotic place.  A large, muscle-bound woman
 takes the orders and gives them to Kormaal.  A bench along the wall provides
 a place for the more impatient customers to sit and wait for their orders to
 be finished.  The heat from the fire is a welcome change from the bitter
-outdoors.  
+outdoors.
 ~
 0 69608456 0
 Rd     0
@@ -2604,7 +2604,7 @@ S
 Empty Stables~
 The stables are completely empty, unless you want to count the rats that
 have made nests in the smelly old hay.  Pieces of tack hang from the boards
-of the ceiling, and the musty smell of old hay assails your nostrils.  
+of the ceiling, and the musty smell of old hay assails your nostrils.
 ~
 0 393225 0
 Rd     0
@@ -2619,7 +2619,7 @@ The warehouse is empty and appears to be long abandoned.  A few pieces of
 old junk lie strewn about the floor, and the occasional rat scrabbles across
 the toes of your boots.  The dilapidated building looks like it could
 collapse at any moment, which is not a very comforting thought to those that
-might otherwise find shelter here.  
+might otherwise find shelter here.
 ~
 0 393225 0
 Rd     0
@@ -2657,10 +2657,10 @@ S
 #10242
 Groog's Way~
 The clatter of metal can be heard to the north and to the south.  The
-Hammerheim weapon shop is to the north, and the armor shop is to the south. 
+Hammerheim weapon shop is to the north, and the armor shop is to the south.
 These shops are by far the most popular in the town, and one glance at the
 citizens can tell you why.  Every man, woman, and child is at least lightly
-armored, and everyone carries some sort of weapon.  
+armored, and everyone carries some sort of weapon.
 ~
 0 393216 1
 Rd     0
@@ -2686,7 +2686,7 @@ Before the East Tower~
 Groog's Way ends here at the East Tower of Hammerheim.  Although not very
 threatened from the outside, the practical people of Hammerheim still
 provide for their defenses.  The Axe-men that wander by give you a stern
-look of warning.  It is obviously not a good idea to climb into the tower.  
+look of warning.  It is obviously not a good idea to climb into the tower.
 ~
 0 393220 1
 Rd     0
@@ -2704,7 +2704,7 @@ Inside the East Tower~
 The east tower is made entirely of granite which is 5 feet thick.  No
 furnishings whatsoever can be found inside the tower, but a sturdy staircase
 winds up to the top of the tower.  It is probably not a good idea to be
-inside the guard tower if you are not a citizen of Hammerheim.  
+inside the guard tower if you are not a citizen of Hammerheim.
 ~
 0 393225 0
 Rd     0
@@ -2719,10 +2719,10 @@ D4
 S
 #10245
 Large Staircase~
-The large staircase looks like it could support an army of barbarians. 
+The large staircase looks like it could support an army of barbarians.
 Given the function of the tower, this fact is not very surprising.  A
 strange animal-like sound can be heard above you.  The cold granite of the
-tower looks like it defend even a barrage of solid stone.  
+tower looks like it defend even a barrage of solid stone.
 ~
 0 393225 0
 Rd     0
@@ -2740,7 +2740,7 @@ East Tower Overlook~
 The top of the tower opens up into an overlook which provides a splendid
 view of the lands surrounding Hammerheim.  Not much opportunity is provided
 for sightseeing, however, as there is also a very large and very angry
-chimaera on the top of the tower.  
+chimaera on the top of the tower.
 ~
 0 4595712 1
 Rd     0
@@ -2755,7 +2755,7 @@ The people coming out from the shop to the north have sparkles in their
 eyes, and sparkling jewelry on their bodies.  It must be the famous jewelry
 shop of Hammerheim.  To the south, the clattering of silverware on plates
 and the din of meal-time conversation can be heard.  The restaurant is
-rumored to be among the best in the realm.  
+rumored to be among the best in the realm.
 ~
 0 1074135040 1
 Rd     0
@@ -2780,7 +2780,7 @@ S
 Groog's Way~
 To the north of you stands a potions shop, which sells the necessary
 extra protection an adventurer of your caliber may require to survive.  The
-road continues east and west from here.  
+road continues east and west from here.
 ~
 0 1074135040 1
 Rd     0
@@ -2800,10 +2800,10 @@ S
 #10249
 Before the West Tower~
 Groog's Way ends at one of the lookout towers of Hammerheim.  Jutting out
-from the stone wall, the tower provides a formidable defense for the city. 
+from the stone wall, the tower provides a formidable defense for the city.
 It probably would not be a good idea to trespass here.  The barbarians are
 very careful about their defenses and might not take kindly to an outsider
-in their watch tower.  
+in their watch tower.
 ~
 0 1074135040 1
 Rd     0
@@ -2822,7 +2822,7 @@ The inside of the western tower is very spartan in appearance.  Only a
 large staircase winding up to the top of the tower can be seen.  The thick
 granite walls provide a strong defense for the citizens of Hammerheim.  In
 case of dire emergency, the entire population can run to the two lookout
-towers to find safety and to help defend the city.  
+towers to find safety and to help defend the city.
 ~
 0 393229 0
 Rd     0
@@ -2840,7 +2840,7 @@ Large Staircase~
 The large granite staircase looks as if it could support an army of
 barbarians.  In times of war, this is very necessary.  All of the capable
 men are employed in the city defenses during times of trouble, and the watch
-towers provide the perfect position to defend the city.  
+towers provide the perfect position to defend the city.
 ~
 0 393225 0
 Rd     0
@@ -2858,7 +2858,7 @@ West Tower Overlook~
 The lookout tower has an incredible view of the lands surrounding
 Hammerheim.  It also provides a very strategic position on which to defend
 the city.  The chimaera which guards the tower in times of peace does not
-look very happy to have visitors.  
+look very happy to have visitors.
 ~
 0 4595712 1
 Rd     0
@@ -2872,7 +2872,7 @@ A Dark Shaft~
 You are in a very dark and very smelly shaft.  No top or bottom can be
 seen to the shaft; merely darkness.  Groping around, you feel a cold metal
 pipe which is covered in some sort of smelly goo.  You pull back your hand,
-disgusted at the sensation.  
+disgusted at the sensation.
 ~
 0 401421 9
 Rd     0
@@ -2889,7 +2889,7 @@ S
 A Dark Shaft~
 You are in a very smell and very disgusting shaft.  No sense of direction
 can be determined; only darkness and stench.  The slick surface of the metal
-shaft you are in is repulsive.  
+shaft you are in is repulsive.
 ~
 0 401417 9
 Rd     0
@@ -2906,7 +2906,7 @@ S
 The Sewer System~
 You stand in the sewer system of Hammerheim.  The trickling and dripping
 of water can be heard, and the cold, smelly dampness of the system seeps
-through all of your clothing.  
+through all of your clothing.
 ~
 0 401417 0
 Rd     0
@@ -2937,10 +2937,10 @@ D5
 S
 #10256
 A Large Pipe~
-You are in a very large sewer pipe underneath the town of Hammerheim. 
+You are in a very large sewer pipe underneath the town of Hammerheim.
 The stench here is disgusting, and every step splashes through sludge.  A
 dripping sound can be heard coming from somewhere, and the cold metal of the
-pipe feels disgusting under your outstretched hand.  
+pipe feels disgusting under your outstretched hand.
 ~
 0 401417 0
 Rd     0
@@ -2959,10 +2959,10 @@ D3
 S
 #10257
 A Large Pipe~
-You are in a very large sewer pipe underneath the town of Hammerheim. 
+You are in a very large sewer pipe underneath the town of Hammerheim.
 The stench here is disgusting, and every step splashes through sludge.  A
 dripping sound can be heard coming from somewhere, and the cold metal of the
-pipe feels disgusting under your outstretched hand.  
+pipe feels disgusting under your outstretched hand.
 ~
 0 401417 0
 Rd     0
@@ -2979,7 +2979,7 @@ S
 The Sewer System~
 You stand in the sewer system of Hammerheim.  The trickling and dripping
 of water can be heard, and the cold, smelly dampness of the system seeps
-through all of your clothing.  
+through all of your clothing.
 ~
 0 401417 0
 Rd     0
@@ -3012,7 +3012,7 @@ S
 A Dark Shaft~
 You are in a very smell and very disgusting shaft.  No sense of direction
 can be determined; only darkness and stench.  The slick surface of the metal
-shaft you are in is repulsive.  
+shaft you are in is repulsive.
 ~
 0 401417 9
 Rd     0
@@ -3030,7 +3030,7 @@ A Dark Shaft~
 You are in a very dark and very smelly shaft.  No top or bottom can be
 seen to the shaft; merely darkness.  Groping around, you feel a cold metal
 pipe which is covered in some sort of smelly goo.  You pull back your hand,
-disgusted at the sensation.  
+disgusted at the sensation.
 ~
 0 401421 9
 Rd     0
@@ -3045,10 +3045,10 @@ D5
 S
 #10261
 A Large Pipe~
-You are in a very large sewer pipe underneath the town of Hammerheim. 
+You are in a very large sewer pipe underneath the town of Hammerheim.
 The stench here is disgusting, and every step splashes through sludge.  A
 dripping sound can be heard coming from somewhere, and the cold metal of the
-pipe feels disgusting under your outstretched hand.  
+pipe feels disgusting under your outstretched hand.
 ~
 0 401417 0
 Rd     0
@@ -3067,10 +3067,10 @@ D2
 S
 #10262
 A Large Pipe~
-You are in a very large sewer pipe underneath the town of Hammerheim. 
+You are in a very large sewer pipe underneath the town of Hammerheim.
 The stench here is disgusting, and every step splashes through sludge.  A
 dripping sound can be heard coming from somewhere, and the cold metal of the
-pipe feels disgusting under your outstretched hand.  
+pipe feels disgusting under your outstretched hand.
 ~
 0 401417 0
 Rd     0
@@ -3087,7 +3087,7 @@ S
 The Sewer System~
 You stand in the sewer system of Hammerheim.  The trickling and dripping
 of water can be heard, and the cold, smelly dampness of the system seeps
-through all of your clothing.  
+through all of your clothing.
 ~
 0 401417 0
 Rd     0
@@ -3120,7 +3120,7 @@ S
 A Dark Shaft~
 You are in a very smell and very disgusting shaft.  No sense of direction
 can be determined; only darkness and stench.  The slick surface of the metal
-shaft you are in is repulsive.  
+shaft you are in is repulsive.
 ~
 0 401417 9
 Rd     0
@@ -3138,7 +3138,7 @@ A Dark Shaft~
 You are in a very dark and very smelly shaft.  No top or bottom can be
 seen to the shaft; merely darkness.  Groping around, you feel a cold metal
 pipe which is covered in some sort of smelly goo.  You pull back your hand,
-disgusted at the sensation.  
+disgusted at the sensation.
 ~
 0 401421 0
 Rd     0
@@ -3153,10 +3153,10 @@ D5
 S
 #10266
 A Large Pipe~
-You are in a very large sewer pipe underneath the town of Hammerheim. 
+You are in a very large sewer pipe underneath the town of Hammerheim.
 The stench here is disgusting, and every step splashes through sludge.  A
 dripping sound can be heard coming from somewhere, and the cold metal of the
-pipe feels disgusting under your outstretched hand.  
+pipe feels disgusting under your outstretched hand.
 ~
 0 401417 0
 Rd     0
@@ -3171,10 +3171,10 @@ D3
 S
 #10267
 A Large Pipe~
-You are in a very large sewer pipe underneath the town of Hammerheim. 
+You are in a very large sewer pipe underneath the town of Hammerheim.
 The stench here is disgusting, and every step splashes through sludge.  A
 dripping sound can be heard coming from somewhere, and the cold metal of the
-pipe feels disgusting under your outstretched hand.  
+pipe feels disgusting under your outstretched hand.
 ~
 0 401417 0
 Rd     0
@@ -3195,7 +3195,7 @@ S
 The Sewer System~
 You stand in the sewer system of Hammerheim.  The trickling and dripping
 of water can be heard, and the cold, smelly dampness of the system seeps
-through all of your clothing.  
+through all of your clothing.
 ~
 0 401417 0
 Rd     0
@@ -3228,7 +3228,7 @@ S
 A Dark Shaft~
 You are in a very smell and very disgusting shaft.  No sense of direction
 can be determined; only darkness and stench.  The slick surface of the metal
-shaft you are in is repulsive.  
+shaft you are in is repulsive.
 ~
 0 401417 9
 Rd     0
@@ -3246,7 +3246,7 @@ A Dark Shaft~
 You are in a very dark and very smelly shaft.  No top or bottom can be
 seen to the shaft; merely darkness.  Groping around, you feel a cold metal
 pipe which is covered in some sort of smelly goo.  You pull back your hand,
-disgusted at the sensation.  
+disgusted at the sensation.
 ~
 0 401421 9
 Rd     0
@@ -3261,10 +3261,10 @@ D5
 S
 #10271
 A Large Pipe~
-You are in a very large sewer pipe underneath the town of Hammerheim. 
+You are in a very large sewer pipe underneath the town of Hammerheim.
 The stench here is disgusting, and every step splashes through sludge.  A
 dripping sound can be heard coming from somewhere, and the cold metal of the
-pipe feels disgusting under your outstretched hand.  
+pipe feels disgusting under your outstretched hand.
 ~
 0 401417 0
 Rd     0
@@ -3279,10 +3279,10 @@ D3
 S
 #10272
 A Large Pipe~
-You are in a very large sewer pipe underneath the town of Hammerheim. 
+You are in a very large sewer pipe underneath the town of Hammerheim.
 The stench here is disgusting, and every step splashes through sludge.  A
 dripping sound can be heard coming from somewhere, and the cold metal of the
-pipe feels disgusting under your outstretched hand.  
+pipe feels disgusting under your outstretched hand.
 ~
 0 401417 0
 Rd     0
@@ -3303,7 +3303,7 @@ S
 The Sewer System~
 You stand in the sewer system of Hammerheim.  The trickling and dripping
 of water can be heard, and the cold, smelly dampness of the system seeps
-through all of your clothing.  
+through all of your clothing.
 ~
 0 401417 0
 Rd     0
@@ -3332,7 +3332,7 @@ S
 A Dark Shaft~
 You are in a very smell and very disgusting shaft.  No sense of direction
 can be determined; only darkness and stench.  The slick surface of the metal
-shaft you are in is repulsive.  
+shaft you are in is repulsive.
 ~
 0 401417 9
 Rd     0
@@ -3350,7 +3350,7 @@ A Dark Shaft~
 You are in a very dark and very smelly shaft.  No top or bottom can be
 seen to the shaft; merely darkness.  Groping around, you feel a cold metal
 pipe which is covered in some sort of smelly goo.  You pull back your hand,
-disgusted at the sensation.  
+disgusted at the sensation.
 ~
 0 401421 0
 Rd     0
@@ -3367,7 +3367,7 @@ S
 A Narrow Pipe~
 You stand in a small pipe in the sewer system of Hammerheim.  The space
 is cramped here, and there is no way to escape touching some part of the
-disgusting pipe.  The stench is unbearable and makes you want to gag.  
+disgusting pipe.  The stench is unbearable and makes you want to gag.
 ~
 0 401417 0
 Rd     0
@@ -3380,7 +3380,7 @@ S
 A Narrow Pipe~
 You stand in a small pipe in the sewer system of Hammerheim.  The space
 is cramped here, and there is no way to escape touching some part of the
-disgusting pipe.  The stench is unbearable and makes you want to gag.  
+disgusting pipe.  The stench is unbearable and makes you want to gag.
 ~
 0 401417 0
 Rd     0
@@ -3393,7 +3393,7 @@ S
 A Narrow Pipe~
 You stand in a small pipe in the sewer system of Hammerheim.  The space
 is cramped here, and there is no way to escape touching some part of the
-disgusting pipe.  The stench is unbearable and makes you want to gag.  
+disgusting pipe.  The stench is unbearable and makes you want to gag.
 ~
 0 401417 0
 Rd     0
@@ -3406,7 +3406,7 @@ S
 A Narrow Pipe~
 You stand in a small pipe in the sewer system of Hammerheim.  The space
 is cramped here, and there is no way to escape touching some part of the
-disgusting pipe.  The stench is unbearable and makes you want to gag.  
+disgusting pipe.  The stench is unbearable and makes you want to gag.
 ~
 0 401417 0
 Rd     0
@@ -3420,7 +3420,7 @@ Hammerheim Treasures~
 The Hammerheim jewelry shop is magnificent.  All sizes of gemstones in
 various settings can be seen.  Rings, necklaces, and pins glitter under the
 artificial light of the shop.  Like the rest of the Hammerheim shops, guards
-are nowhere to be seen.  
+are nowhere to be seen.
 ~
 0 2499592 0
 Rd     0
@@ -3431,10 +3431,10 @@ D2
 S
 #10281
 Hammerheim Restaurant~
-The Hammerheim restaurant is very crowded with barbarian men and women. 
+The Hammerheim restaurant is very crowded with barbarian men and women.
 It seems to be a very popular place to eat, and the warm fire in the hearth
 adds to its charm.  Stout tables are laden with steaming food, and the
-establishment is kept very clean.  
+establishment is kept very clean.
 ~
 0 2499592 0
 Rd     0
@@ -3448,7 +3448,7 @@ Hammerheim Secrets~
 Lining the shelves of this store are all manner of bottles and a few
 parchments.  Dermaal the potion maker is a renowned herbalist, and her brews
 are guaranteed to put hair on the chest.  It would be a good idea to take a
-few of the healing potions with you on your travels...  
+few of the healing potions with you on your travels...
 ~
 0 1076241416 0
 Rd     0
@@ -3462,7 +3462,7 @@ Hammerheim Supplies~
 The supply shop is well-stocked in goods needed by city residents and
 adventurers alike.  Stout torches and solid chests seem to be the most
 popular item, and they look like they are finely made.  Behind the counter
-is a barbarian shopkeeper.  
+is a barbarian shopkeeper.
 ~
 0 1076241416 0
 Rd     0
@@ -3475,7 +3475,7 @@ S
 The Golden Hammer~
 The atmosphere in the bar is boisterous, and the people are much more
 congenial with a few beers in them than they are out on the street.  A warm
-fire in the hearth keeps out the chill of the outdoors.  
+fire in the hearth keeps out the chill of the outdoors.
 ~
 0 2499592 0
 Rd     0
@@ -3489,7 +3489,7 @@ Hammerheim Petshop~
 The smell of animals is very strong in this shop.  All around are cages
 with various critters in them, waiting to be sold.  The reactions of the
 animals is varied; some of them are looking as cute as possible, and others
-are baring their fangs and raging against the cage trying to get out.  
+are baring their fangs and raging against the cage trying to get out.
 ~
 0 2503688 0
 Rd     0
@@ -3509,7 +3509,7 @@ Hammerheim Armoury~
 On racks behind the storekeeper are all matter of armor.  Helmets,
 bracers, leggings, and boots are just a few of the items you see on display.
 The quality appears to be high at first glance, and the prices are very
-reasonable.  
+reasonable.
 ~
 0 2499592 0
 Rd     0
@@ -3525,7 +3525,7 @@ which is stained deeply with blood awaits its next head, and the Executioner
 of Hammerheim waits as well.  Not a sound can be heard except the wind,
 which rustles debris through the square.  Below the square is a holding cell
 for those people unlucky enough to be awating execution.  Above the square
-is an alcove which leads to the Quest Portal.  
+is an alcove which leads to the Quest Portal.
 ~
 0 2531328 1
 Rd     0
@@ -3548,7 +3548,7 @@ The stream of people is pretty steady here on Uraag's Road.  Everyone is
 preoccupied with their own problems and pay little attention to everyone
 else.  Their grim faces and harsh demeanors contribute to the lack of bantor
 as well.  The bone-numbing chill is lessened a bit by the many bodies and
-the close proximity of buildings.  
+the close proximity of buildings.
 ~
 0 393216 1
 Rd     0
@@ -3567,8 +3567,8 @@ People bustle by you on their way to do business at the Hammerheim shops.
 The street is very wide and made to accomodate the heavy traffic that can be
 found on market days.  The Axe-men are very busy watching for anyone that
 might be stealing from the stores.  If they are lucky, they will only lose
-their hands.  If they are not lucky, they will be meeting the executioner. 
-A plain looking shop lies to the south of you.  
+their hands.  If they are not lucky, they will be meeting the executioner.
+A plain looking shop lies to the south of you.
 ~
 0 1074135040 1
 Rd     0
@@ -3590,7 +3590,7 @@ Hammerheim Weapons~
 The deadly-looking weapons in this shop are some of the best in the
 realm.  Guaranteed to be sharp and to last for years, Gutt's equipment
 glimmers in the lamplight of the shop.  If Hammerheim were ever to be
-invaded, the members of the city would be well-armed.  
+invaded, the members of the city would be well-armed.
 ~
 0 2499592 0
 Rd     0
@@ -3601,11 +3601,11 @@ D2
 S
 #10292
 Groog's Way~
-The people on Groog's Way are the happiest you have seen in Hammerheim. 
+The people on Groog's Way are the happiest you have seen in Hammerheim.
 The new wares they carry around probably have something to do with this
 uncharacteristic cheer.  New weapons and armor can be seen wrapped in loose
 animal skins, and all manner of bottles from the potion shop can be seen
-sticking out from other packages.  
+sticking out from other packages.
 ~
 0 393216 1
 Rd     0
@@ -3631,7 +3631,7 @@ Executioner's Cage~
 This smelly and dark cage is used by prisoners during their final days as
 they await their fate at the hands of the Executioner of Hammerheim.  The
 reek of fear and stale urine pervades the little area, and the littering of
-straw on the floor is old, moldy, and full of feces.  
+straw on the floor is old, moldy, and full of feces.
 ~
 0 393228 0
 Rd     0
@@ -3646,7 +3646,7 @@ As you step below the bridge, everything seems to waver and shift around
 you.  You feel the aura of the strange, ice covered portal, which glistens
 with tendrils of frost.  The shadows here below the bridge keep this strange
 pocket of magic steeped in gloom, and the portal itself calls you to enter
-and begin a strange and wonderous journey.  
+and begin a strange and wonderous journey.
 ~
 0 8196 4
 Rd     0
@@ -3657,7 +3657,7 @@ D4
 S
 #10296
 Hammerheim Bank~
-You have entered a large stone building. The entrance is guarded by two 
+You have entered a large stone building. The entrance is guarded by two
 axe-men. Behind a rather crude marble counter stands Brugaar, the Banker.
 Hammerheim may be a barbarian city, but it is not backwards.
 ~
@@ -3670,7 +3670,7 @@ D2
 S
 #10297
 Hammerheim Library~
-This is the Hammerheim Library. Zynmaal will gladly rent you any book 
+This is the Hammerheim Library. Zynmaal will gladly rent you any book
 available for just a small fee. Upon your leaving the realm of Storm, the
 book will automatically be returned to this Library, so no late charges may
 apply.
@@ -3687,7 +3687,7 @@ A Mountain Trail~
 The trail continues its desolate journey north and south from this point,
 leaving you with only two choices of which way to carry your weatherbeaten
 body.  The cold winds pick up and die down so often, it is as though someone
-is playing some sort of cruel game with you.  
+is playing some sort of cruel game with you.
 ~
 0 0 0
 Rd     0

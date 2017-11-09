@@ -1,7 +1,7 @@
 #AREADATA
-Name        { ALL }  The Grand Arena     Keirkan~
+Name        The Grand Arena~
 Levels      1 105
-Builders    None~
+Builders    Keirkan~
 VNUMs       7350 7399
 Security    100
 Recall      25001
@@ -69,7 +69,7 @@ Sataer, the Arena Champion is here.
 Sataer is the reigning champion of this grand arena and has decided to
 make his home below it.  His lair is full of loot and plunder from his
 conquests and you marvel at the beauty of it.  Sataer however does not seem
-to appreciate your arrival here...  
+to appreciate your arrival here...
 ~
 35 234889408 0 0 S
 110 0 0 31000d0+0 0d0+0
@@ -92,7 +92,7 @@ The terrain at this part of the arena has become treacherously difficult
 to pass.  You are certain that it would be impossible to engage any enemy
 here, the terrain just would not allow it.  You can't help but feel the
 strain that this room puts on your constitution...  It would probably be
-best if you left as quickly as possible.  
+best if you left as quickly as possible.
 ~
 0 1074144256 0
 Rd     0
@@ -395,7 +395,7 @@ as though a part of you has been shielded away from something?!?  It is
 difficult to put a finger on what exactly has been withheld from you so you
 decide not to worry about it and to put your full concentration on hunting
 your opponent.  You're sure that whatever it is that is bothering you will
-work itself out later..  
+work itself out later..
 ~
 0 1611046912 0
 Rd     0

@@ -1,7 +1,7 @@
 #AREADATA
-Name        { 25-40} Fortuna's Carnival  Sherf~
+Name        Fortuna's Carnival~
 Levels      25 40
-Builders    Dolguard~
+Builders    Dolguard Sherf~
 VNUMs       6600 6999
 Security    99
 Recall      25001
@@ -45,7 +45,7 @@ The Daern's personal Smithy stands here.
 Krotz is a burly dwarven man. His beard reaches to his mid-belly and his
 eyes reflect the fires of the forge. Beneath his eyes are dark rings which
 you assume are either from the soot on his hands, or from lack of sleep due
-to his long hours at the anvil.  
+to his long hours at the anvil.
 ~
 3 0 0 800 S
 54 0 0 5400d0+0 0d0+0
@@ -87,7 +87,7 @@ Standing at about 5'7" tall, Zal'oubri's scarlet ringlets spiral down to
 her thin waist.  Her eyes as deep as the deepest, darkest earth; framed with
 long and thick lashes.  She is built thin but not brittle, and voluptuous
 where it counts.  Heart-shaped lips part slightly with a grin, making her
-more deceiving than you'd hope to think.  
+more deceiving than you'd hope to think.
 ~
 1441795 167772312 0 -1000 S
 60 0 0 6500d0+0 0d0+0
@@ -149,7 +149,7 @@ A large puma-looking beast watches your every breath.
 ~
 This very puma-like creature is bluish black in color, and wields itself with
 two large tentacles (one on each shoulder-blade), enormous claws and a bite.
-The many suctions on each tentacle are a brownish yellow, and its eyes glow a 
+The many suctions on each tentacle are a brownish yellow, and its eyes glow a
 hellish green.
 ~
 3 0 0 -930 S
@@ -244,7 +244,7 @@ A large woman stands here quietly singing a simple tune.
 ~
 This woman is definately not starving here, trapped in this maze of a garden!
 She is a very portly woman, with a couple of chins and a cheerful smile. Her
-voice is friendly and strong as she sings. Her long hair is tied up into a 
+voice is friendly and strong as she sings. Her long hair is tied up into a
 loose knot at the top of her head and small strands hang down in front of her
 eyes causing her to squint when she looks at you.
 ~
@@ -425,7 +425,7 @@ endif
 >act_prog p reports:~
 if ispc($n)
 emote nods at you.
-say Can I aid you with any of my curing spells? 
+say Can I aid you with any of my curing spells?
 say Do inform me if you are poisoned or blinded.
 cast 'healing hands' $n
 endif
@@ -518,7 +518,7 @@ Mommy~
 A woman stands here looking for something or someone.
 ~
 Mommy is a beautiful woman... despite the fact that her eyes tell you she has
-seen many years. She looks experienced, but not aged... and she has been able 
+seen many years. She looks experienced, but not aged... and she has been able
 to maintain her figure and her body is well toned.
 ~
 3 1049212 0 700 S
@@ -539,7 +539,7 @@ A small child~
 A small child sits here singing to herself.
 ~
 A cute little thing in braids and a flowery smock.  She has blonde hair,
-like sunshine, and the bluest little eyes.  
+like sunshine, and the bluest little eyes.
 ~
 3 0 0 1000 S
 62 0 0 6000d0+0 0d0+0
@@ -673,7 +673,7 @@ Willoo~
 A little fairy fluts her wings about your head.
 ~
 She is about 6 inches in height and has the cutest little face with blonde hair
-cut as short as short can be. She is also wearing her birthday suit! 
+cut as short as short can be. She is also wearing her birthday suit!
 ~
 65 1572906 0 600 S
 70 0 0 15000d0+0 0d0+0
@@ -811,9 +811,9 @@ A weasel~
 A large furball is curled up here shaking with fear.
 ~
 A slender-bodied mammal (for its large size) is covered in a soft silky
-fur which is now matted with thorns, burrs and other related components. 
+fur which is now matted with thorns, burrs and other related components.
 She looks as though she may have taken a wrong turn to get in here, and is
-now like yourself, perhaps lost.  
+now like yourself, perhaps lost.
 ~
 65 1081344 0 0 S
 60 0 0 8500d0+0 0d0+0
@@ -922,7 +922,7 @@ A very tall, grey man stands here.
 ~
 This man is sort of grey in colour when you first look at him, but with a
 second glance...  You are shocked to see that you are looking at an exact
-duplicate of yourself!  Clothes and all.  
+duplicate of yourself!  Clothes and all.
 ~
 67 98304 0 0 S
 34 0 0 1900d0+0 0d0+0
@@ -1180,9 +1180,9 @@ A beautiful Unicorn, white as the purest snow.
 ~
 A Unicorn is the most breathtaking creature in all the land... and the most
 good. Although the rare beast may look like a well-bred mare, it is not in
-the least comparable. A white body, white as the purest snow and a cornsilk 
+the least comparable. A white body, white as the purest snow and a cornsilk
 mane and tail... split hooves on all four, and a cornsilk beard at its chin...
-The Unicorn's horn spirals up to the heavens from its forehead with a blue 
+The Unicorn's horn spirals up to the heavens from its forehead with a blue
 glow, and its innocence beguiles even the vilest of evil.
 ~
 67 150995132 0 1000 S
@@ -1267,12 +1267,12 @@ A
 E
 halberd~
 A beautifully forged axe-like blade at the top of a 4.5 foot staff that
-ends with an abstract-shaped spear head.  
+ends with an abstract-shaped spear head.
 ~
 E
 polearm~
 A beautifully forged axe-like blade at the top of a 4.5 foot staff that
-ends with an abstract-shaped spear head.  
+ends with an abstract-shaped spear head.
 ~
 E
 weapon~
@@ -1330,13 +1330,13 @@ board~
 The chess board is one of the nicest you have ever seen... Made of wood,
 and ceramic tiles for each of the squares. Someone seems to be in the
 middle of a checkers game as the pieces are laid out in various squares on
-the board. Perhaps the Chess pieces are inside.  
+the board. Perhaps the Chess pieces are inside.
 ~
 E
 chess~
 The chess board is made of wood, and the squares are each made of a
 hand-cut piece of ceramic. On the board there are some checkers pieces
-seemingly in the middle of a game. Perhaps the Chess pieces are inside.  
+seemingly in the middle of a game. Perhaps the Chess pieces are inside.
 ~
 #6604
 rook~
@@ -1430,19 +1430,19 @@ hide~
 The apron is made of a rough leather hide, and is perfect for using when
 working the forge. A strap at the neck buckles up to adjust size at will
 (although the apron is quite short and wide to begin with). A small pocket
-in front looks useless.  
+in front looks useless.
 ~
 E
 apron~
 The apron is made of a rough leather hide, and is perfect for using when
 working the forge. A strap at the neck buckles up to adjust size at will
 (although the apron is quite short and wide to begin with). A small pocket
-in front looks useless.  
+in front looks useless.
 ~
 E
 pocket~
 A small pocket contains a powder of some sort... seemingly from the
-chalk a Smithy might use to make notes and mark things with.  
+chalk a Smithy might use to make notes and mark things with.
 ~
 #6608
 boots steel-toed steel~
@@ -1465,7 +1465,7 @@ A
 E
 steel~
 On the right boot, the toe is worn showing a bit of the steel peering
-through the leather which binds it. 
+through the leather which binds it.
 ~
 E
 steel-toed~
@@ -1734,7 +1734,7 @@ the ground with the foot. A spade shaped gardening instrument.
 E
 spade~
 A digging implement heavier than a shovel and adapted for being pushed
-into the ground with the foot. A spade shaped gardening instrument.  
+into the ground with the foot. A spade shaped gardening instrument.
 ~
 #6621
 petals flower handful pill~
@@ -1836,8 +1836,8 @@ It must be an heirloom.
 E
 window~
 A beautifully crafted stained-glass window depicts a sunset over a body
-of water... Someone went through alot of effort and expense to make this. 
-It must be an heirloom.  
+of water... Someone went through alot of effort and expense to make this.
+It must be an heirloom.
 ~
 #6625
 basin china water~
@@ -1916,7 +1916,7 @@ different from all that you have ever seen. What is the hour?
 ~
 E
 darkness~
-The darkness is strange tonight, the stars seem to waver from time to time 
+The darkness is strange tonight, the stars seem to waver from time to time
 leaving tracers behind them, like tails on a comet. Perhaps this night is
 different from all that you have ever seen. What is the hour?
 ~
@@ -2216,7 +2216,7 @@ large in size.
 E
 pollen~
 This stuff looks like your typical pollen... a sticky powder-like substance
-that is yellow in colour, only these particular pollen particles are quite 
+that is yellow in colour, only these particular pollen particles are quite
 large in size.
 ~
 #6642
@@ -2236,7 +2236,7 @@ apparatus~
 This strange looking contraption consists of a closed cylindrical "bowl" as
 the base. The bowl is a translucent orange coloured glass. From the top of
 the bowl a few reeds stick straight out vertically, and are tied together by
-some small vines of some sort. At the top of the tallest reed, there is 
+some small vines of some sort. At the top of the tallest reed, there is
 another "bowl" which is much smaller in size than its counterpart. The
 smaller bowl is transparent, and inside it you can see there are a few small
 sticks of cinnamon. Ah ha!
@@ -2246,8 +2246,8 @@ narghile~
 This strange looking contraption consists of a closed cylindrical "bowl" as
 the base. The bowl is a translucent orange coloured glass. From the top of
 the bowl a few reeds stick straight out vertically, and are tied together by
-some small vines of some sort. At the top of the tallest reed, there is 
-another "bowl" which is much smaller in size than its counterpart. The 
+some small vines of some sort. At the top of the tallest reed, there is
+another "bowl" which is much smaller in size than its counterpart. The
 smaller bowl is transparent, and inside it you can see there are a few small
 sticks of cinnamon. Ah ha!
 ~
@@ -2713,7 +2713,7 @@ and a few large leaves of lettuce. They're fresh and crispy.
 E
 vegetables~
 A variety of vegetables consists of a tomato, a corn cob, some pea pods
-and a few large leaves of lettuce.  They're fresh and crispy.  
+and a few large leaves of lettuce.  They're fresh and crispy.
 ~
 #6664
 rolls gatha fresh-baked~
@@ -3120,7 +3120,7 @@ E
 exit~
 The tent is made of canvas and is held up by a few wooden poles dug into
 the ground.  Inside it are things such as a bedroll, a lantern (which is
-currently lit) and a few articles of clothing.  
+currently lit) and a few articles of clothing.
 ~
 #6797
 tent~
@@ -3600,7 +3600,7 @@ spirals up and around to make a somewhat pointed hat.
 The Forge~
 The forge is surrounded with a few different hammers, and various other
 forging tools... it is scarcely lit here because of it's non-usage of
-late.  
+late.
 ~
 0 8 0
 Rd     0
@@ -3616,9 +3616,9 @@ D2
 S
 #6601
 A Room for the Smithy~
-A few lounging chairs and a coffee tables are all that are in this room. 
+A few lounging chairs and a coffee tables are all that are in this room.
 There is a bowl of nuts on the table, and two empty goblets that are
-half full. At this, you assume the Smithy gets company from time to time.  
+half full. At this, you assume the Smithy gets company from time to time.
 ~
 0 8 0
 Rd     0
@@ -3650,7 +3650,7 @@ S
 The Smithy's Quarters~
 A small comfortable bed (that has not been made) is here. There is a
 table in the centre of the room, with a chair on either side. A chess board
-sits on the table, and it seems that someone was in the middle of a game... 
+sits on the table, and it seems that someone was in the middle of a game...
 ~
 0 8 0
 Rd     0
@@ -3714,7 +3714,7 @@ D2
 S
 #6607
 Servant's Passage in the Basement~
-A small, but convenient passage for the servants to get through the house 
+A small, but convenient passage for the servants to get through the house
 without having to be seen.
 ~
 0 8 0
@@ -3763,7 +3763,7 @@ S
 #6610
 A Wood Stove~
 A large cast iron wood stove dominates the room here. There are several
-pokers about, and a pile of wood along the south wall.  
+pokers about, and a pile of wood along the south wall.
 ~
 0 12 0
 Rd     0
@@ -3851,9 +3851,9 @@ S
 #6613
 A large room in the basement~
 This large room contains a few serving carts, and serving trays. Piled
-up on a shelf on the east wall there are towels, table cloths, and napkins. 
+up on a shelf on the east wall there are towels, table cloths, and napkins.
 This seems to be the room where the servants might prepare to bring dinner
-to the main floor.  
+to the main floor.
 ~
 0 8 0
 Rd     0
@@ -3873,7 +3873,7 @@ S
 #6614
 Between two rooms in the basement~
 This little room has shelves on each wall holding pitchers, flagons, serving
-trays, utensils, soup bowls and the like. 
+trays, utensils, soup bowls and the like.
 ~
 0 8 0
 Rd     0
@@ -3919,8 +3919,8 @@ S
 #6616
 Storage Cubby #19~
 This room is empty, save the layer of dust... Curiously though, a
-large odd-shaped part of the floor hasn't a speck of dust on it at all. 
-Someone must have taken something from here recently.  
+large odd-shaped part of the floor hasn't a speck of dust on it at all.
+Someone must have taken something from here recently.
 ~
 0 8 0
 Rd     0
@@ -3941,7 +3941,7 @@ S
 A small sitting room in the basement~
 Lounging chairs and couches clutter the room here. This seems to be the
 place that meetings might be held for the servants and the Lord and Lady of
-the House.  
+the House.
 ~
 0 8 0
 Rd     0
@@ -3977,7 +3977,7 @@ D3
 S
 #6619
 Storage Cubby #17~
-Walking into the room, you find dozens upon dozens of little, and big eyes 
+Walking into the room, you find dozens upon dozens of little, and big eyes
 peering back at you. The room is filled with all sorts of stuffed animals.
 No doubt, Bahl or Fazoul's prized hunting trophies.
 ~
@@ -4016,7 +4016,7 @@ D2
 S
 #6621
 Storage Cubby #15~
-The floor here is piled up with books, and there are some pages that have 
+The floor here is piled up with books, and there are some pages that have
 fallen out and gotten scattered around the room. You can feel a slight draft
 standing here... coming from the west.
 ~
@@ -4055,7 +4055,7 @@ D3
 S
 #6623
 Storage Cubby #13~
-This room is stored to the hilt with a bunch of various items. You catch a   
+This room is stored to the hilt with a bunch of various items. You catch a
 glimpse of something in the corner that might be of interest.
 ~
 0 8 0
@@ -4117,7 +4117,7 @@ D1
 S
 #6627
 Storage Cubby #9~
-Shelves line every wall here. Each shelf has a different set of bottles, and   
+Shelves line every wall here. Each shelf has a different set of bottles, and
 jars on it. There is also a large pot here.
 ~
 0 8 0
@@ -4133,7 +4133,7 @@ D2
 S
 #6628
 Storage Cubby #8~
-Some saddles, reins, and horse shoes are contained in this cubby. There is 
+Some saddles, reins, and horse shoes are contained in this cubby. There is
 also one wagon wheel set along the north wall.
 ~
 0 8 0
@@ -4211,7 +4211,7 @@ D2
 S
 #6632
 Storage Cubby #4~
-Office supplies fill the shelves here... ink, blank parchments (and lots OF 
+Office supplies fill the shelves here... ink, blank parchments (and lots OF
 them), quill pens, chalk and even a few small filing cabinets.
 ~
 0 8 0
@@ -4231,7 +4231,7 @@ D2
 S
 #6633
 Storage Cubby #3~
-This little room is full of odd shaped items, covered in white blankets. If 
+This little room is full of odd shaped items, covered in white blankets. If
 you look around for a minute you might see that one of them has been lifted
 just so you can see the back of a wooden rocking chair. This is the old
 furniture storage!
@@ -4250,7 +4250,7 @@ S
 #6634
 Storage Cubby #2~
 This storage space contains lavatory supplies. The shelves are lined
-with linen, pillows, a few water basins, and a large block of soap.  
+with linen, pillows, a few water basins, and a large block of soap.
 ~
 0 8 0
 Rd     0
@@ -4271,7 +4271,7 @@ S
 Storage Cubby #1~
 A storage area used most likely by one of the many members of the Daern
 Household. Boxes, baskets, burlap bags, and other storage containers line
-the walls. A thin layer of dust covers everything you see.  
+the walls. A thin layer of dust covers everything you see.
 ~
 0 8 0
 Rd     0
@@ -4315,7 +4315,7 @@ S
 #6637
 More Storage Space~
 The attic is surrounded in wooden beams, and floorboards. You notice
-that most rooms are unfinished, as this floor is used only for storage.  
+that most rooms are unfinished, as this floor is used only for storage.
 ~
 0 8 0
 Rd     0
@@ -4361,7 +4361,7 @@ D3
 S
 #6639
 The Attic~
-A film of dust covers everything here, and cobwebs hang from each corner. The 
+A film of dust covers everything here, and cobwebs hang from each corner. The
 only sounds you hear are the creaking of the floorboards.
 ~
 0 8 0
@@ -4381,7 +4381,7 @@ D3
 S
 #6640
 The Attic~
-A film of dust covers everything here, and cobwebs hang drom each corner. The 
+A film of dust covers everything here, and cobwebs hang drom each corner. The
 only sounds you hear are the creaking of the floorboards.
 ~
 0 8 0
@@ -4479,7 +4479,7 @@ D3
 S
 #6645
 The Attic~
-You hear the creaking of the floorboards all around you, and some cobwebs 
+You hear the creaking of the floorboards all around you, and some cobwebs
 brush onto your clothing as you go past.
 ~
 0 8 0
@@ -4554,7 +4554,7 @@ The Centre of the Attic~
 This room is quite noticeably larger than the rest on this floor. Wooden
 beams stick out from the ceiling and the familiar creaking of the
 floorboards lingers on. Looking up, you see a covered lantern hanging from
-the ceiling... You can try to light it but to no avail.  
+the ceiling... You can try to light it but to no avail.
 ~
 0 8 0
 Rd     0
@@ -4578,7 +4578,7 @@ S
 #6649
 The Attic~
 You hear the creaking of the floorboards all around you, and there are cobwebs
-in every possible place. 
+in every possible place.
 ~
 0 8 0
 Rd     0
@@ -4661,7 +4661,7 @@ S
 A HUGE Mousetrap~
 OH NO! NOT NOW! YOU'VE BEEN TRAPPED.
 The Daerns must get some pretty large rats up here, because all this
-room contains is one giant mousetrap. The place smells of old cheese, but 
+room contains is one giant mousetrap. The place smells of old cheese, but
 there is none... apparently, those rats are a teensy bit smarter than you!
 ~
 0 2098188 0
@@ -4669,7 +4669,7 @@ Rd     0
 S
 #6654
 Entryway to the Garden~
-Such a beautiful sight! The colours are fantastic here, and to the north you 
+Such a beautiful sight! The colours are fantastic here, and to the north you
 can see different types of vegetation growing in every which way. The sweet
 scent of honeysuckle comes over you, and is so alluring...
 ~
@@ -4809,8 +4809,8 @@ D3
 S
 #6662
 Along a Path of Rose Bushes~
-The rustling of the leaves and flowers can be heard through the wind, and as   
-they grow rapidly with you looking on. Thorns gleam menacingly as you 
+The rustling of the leaves and flowers can be heard through the wind, and as
+they grow rapidly with you looking on. Thorns gleam menacingly as you
 consider cutting them down. Exits take you east and west from here.
 ~
 0 134619152 0
@@ -4899,7 +4899,7 @@ S
 #6667
 Along a Path of Rose Bushes~
 The rustling of the leaves continues, and glancing at the bushes you see
-them moving slightly as they grow. Exits take you north and to the west.  
+them moving slightly as they grow. Exits take you north and to the west.
 ~
 0 134619152 0
 Rd     0
@@ -4952,7 +4952,7 @@ D2
 S
 #6670
 Hedges and Roses~
-A hedge path is here on either side of you and the rose bushes continue to 
+A hedge path is here on either side of you and the rose bushes continue to
 grow over them at a rapid pace. Although they are not dense here, they still
 pose as a threat to your escape. Thorns pierce out from between branches
 menacingly. Your exits are to the east and west.
@@ -4970,7 +4970,7 @@ D3
 S
 #6671
 Hedges and Roses~
-The hedges have begun to thin out a little here, and the rose bushes have 
+The hedges have begun to thin out a little here, and the rose bushes have
 almost completely taken over this area. Branches stick out in hopes to get the
 sunlight they need to strengthen them again.
 ~
@@ -4989,7 +4989,7 @@ S
 Roses and Hedges~
 The hedges have thinned out quite a bit here, and the roses have all but
 completely taken over. Brittle branches reach out for the sun in their last
-attempt at strength, and life.  
+attempt at strength, and life.
 ~
 0 134619152 0
 Rd     0
@@ -5021,7 +5021,7 @@ D1
 S
 #6674
 Roses and Hedges~
-The hedges have thinned out quite a bit here, and the roses have almost 
+The hedges have thinned out quite a bit here, and the roses have almost
 completely taken over. Branches reach out in hopes to get the little bit of
 sunlight they need to strengthen them just enough to stay alive.
 ~
@@ -5036,7 +5036,7 @@ S
 Hedges and Roses~
 Rose bushes cover the hedges on either side of your path here. Although the
 bushes are not very dense they seem to have no problem keeping guard of what
-comes in and what goes out. Familiar thorns pierce out from the hedges 
+comes in and what goes out. Familiar thorns pierce out from the hedges
 threatening you to stay back. Exits lead north and to the south.
 ~
 0 134619152 0
@@ -5072,7 +5072,7 @@ S
 Hedges and Roses~
 Rose bushes cover the hedges on either side of your path here. Although the
 bushes are not very dense they seem to have no problem keeping guard of what
-comes in and what goes out. Familiar thorns pierce out from the hedges 
+comes in and what goes out. Familiar thorns pierce out from the hedges
 threatening you to stay back a fair distance. Exits lead north and south.
 ~
 0 134619152 0
@@ -5089,7 +5089,7 @@ S
 #6678
 Hedges and Roses~
 The hedges have begun to thin out a little here, and the rose bushes have
-started to take over the area. Although the branches are still green with 
+started to take over the area. Although the branches are still green with
 life, the hedges will soon be no more.
 ~
 0 134619152 0
@@ -5144,7 +5144,7 @@ D3
 S
 #6681
 Roses and Hedges~
-The hedges have thinned out quite a bit here, and the roses have almost 
+The hedges have thinned out quite a bit here, and the roses have almost
 completely taken over. Branches reach out in hopes to get the little bit of
 sunlight they need to strengthen them just enough to stay alive. You can go
 north and south of here.
@@ -5216,7 +5216,7 @@ Roses and Hedges~
 Rose bushes covere the hedges on either side of your path here. Although
 the bushes are not very dense they seem to have no problem keeping guard of
 what comes in and what goes out. Annoying thorns poke out at you, catching
-onto your armor as you go past.  
+onto your armor as you go past.
 ~
 0 134619152 0
 Rd     0
@@ -5238,7 +5238,7 @@ Roses and Hedges~
 Rose bushes cover the hedges on either side of your path here. Although
 the bushes are not very dense they seem to have no problem keeping guard of
 what comes in and what goes out. Familiar thorns pierce out from the hedges
-threatening you to stay back a fair distance. The only exit is east.  
+threatening you to stay back a fair distance. The only exit is east.
 ~
 0 134619152 0
 Rd     0
@@ -5251,7 +5251,7 @@ S
 A Dead End~
 A dead end! All of that to end up here. Again, this area is covered
 with rose bushes and you can see the occasional branch of a hedge peeking
-through, most likely brittle and dry. The only exit is south.  
+through, most likely brittle and dry. The only exit is south.
 ~
 0 134619152 0
 Rd     0
@@ -5265,7 +5265,7 @@ Roses and Hedges~
 Rose bushes cover the hedges on either side of your path here. Although the
 bushes are not very dense they seem to have no problem keeping guard of what
 comes in and what goes out. Familiar thorns pierce out from the hedges
-threatening you to stay back. 
+threatening you to stay back.
 ~
 0 134619152 0
 Rd     0
@@ -5298,7 +5298,7 @@ D3
 S
 #6690
 A Dead End~
-Rose bushes almost fully engulf the area once again, leaving only the 
+Rose bushes almost fully engulf the area once again, leaving only the
 occasional branch of the hedges visible. Thorns gleam menacingly forcing you
 to stay a fair distance back. The only exit from here is east.
 ~
@@ -5335,7 +5335,7 @@ S
 A Crevasse~
 A small niche opens up here in the path... to your demise, it is a dead end.
 The rose bushes continue to grow before your eyes, making a rustling sound
-with their leaves and thorns poke out menacingly. The only exit is to the 
+with their leaves and thorns poke out menacingly. The only exit is to the
 north.
 ~
 0 134619152 0
@@ -5381,7 +5381,7 @@ D1
 S
 #6695
 A Path of Wildflowers~
-The rose bushes are dense here but a path of wildflowers has been allowed to 
+The rose bushes are dense here but a path of wildflowers has been allowed to
 grow on either side of the road. They sway in the breeze, and their bright
 colours of all varieties make a rainbow in the path.
 ~
@@ -5416,7 +5416,7 @@ S
 #6697
 A Bend in the Path~
 Though the rose bushes are dense here, a path of wildflowers has been allowed
-to grow on either side of the road. They sway through the breeze as if in a 
+to grow on either side of the road. They sway through the breeze as if in a
 dance, and their bright colours make a rainbow in the path. Exits take you to
 the east and to the south.
 ~
@@ -5471,7 +5471,7 @@ S
 #6700
 A Bend in the Path~
 Though the rose bushes are dense here, a path of wildflowers has been allowed
-to grow on either side of the road. They sway through the breeze as if in a 
+to grow on either side of the road. They sway through the breeze as if in a
 dance, and their bright colours make a rainbow in the path. Exits take you to
 the east and to the south.
 ~
@@ -5539,7 +5539,7 @@ S
 #6704
 A Tiny Shack~
 This tiny little shack is made of sticks, and contains mostly gardening tools
-and food items. On the east side of the shack grows several little rows of 
+and food items. On the east side of the shack grows several little rows of
 vegetables, and on the west side a pear tree is filled to the brim with fresh
 ripe pears.
 ~
@@ -5700,7 +5700,7 @@ D2
 S
 #6714
 A Bend in the Path~
-You can hear the rustling of the leaves as they grow with fantastic speed 
+You can hear the rustling of the leaves as they grow with fantastic speed
 before your very eyes. The sweet aroma that fills the air is deceiving though,
 as the thorns poke out from the bushes menacingly.
 ~
@@ -5927,7 +5927,7 @@ S
 Hedges and Roses~
 Rose bushes cover the hedges on either side of your path here. Although the
 bushes are not very dense they seem to have no problem keeping guard of what
-comes in and what goes out. Thorns pierce out from the hedges threatening you 
+comes in and what goes out. Thorns pierce out from the hedges threatening you
 to stay back.
 ~
 0 134619152 0
@@ -6031,7 +6031,7 @@ D1
 S
 #6733
 Roses and Hedges~
-The hedges have thinned out quite a bit here, and the roses have all but 
+The hedges have thinned out quite a bit here, and the roses have all but
 completely taken over. Brittle branches reach out from the sun in their last
 attempt at strength, and life.
 ~
@@ -6063,7 +6063,7 @@ S
 A Path of Rose Bushes~
 The hedges have thinned out considerably, and the rose bushes have almost
 all but taken over the area.  Branches reach out in one last attempt at the
-sunlight they need to stay alive.  You can go north and south of here.  
+sunlight they need to stay alive.  You can go north and south of here.
 ~
 0 134619152 0
 Rd     0
@@ -6163,7 +6163,7 @@ Sunflower Way~
 Sunflowers line each side of the path here, towering over the rose bushes
 but not taking over. You can hear the rustling of the leaves as the roses
 continue to grow rapidly with you looking on. The sunflowers seem to watch
-you as they sway in the breeze.  
+you as they sway in the breeze.
 ~
 0 134619152 0
 Rd     0
@@ -6186,7 +6186,7 @@ This pathway is again surrounded in the familiar rose bushes that grow to
 make your path, and to keep you inside the grounds of the garden. However,
 little trees also line your path here, they're trunks rise up to about five
 feet and weeping branches droop out from the tops. Each trunk of each weeping
-fig has been braided at youth, and thus they all have a different trunk 
+fig has been braided at youth, and thus they all have a different trunk
 pattern. The path takes you to the north and to the south.
 ~
 0 134619152 0
@@ -6206,7 +6206,7 @@ D3
 S
 #6742
 Sunflower Way~
-A sunflower path leads the way north and south here. The ground looks as 
+A sunflower path leads the way north and south here. The ground looks as
 though it may be used from time to time, as there are little scuff marks in
 parts of the dirt path. Wildflower beds grow on each the east and west side
 of the road here, and they seem to be smiling back up at you.
@@ -6228,7 +6228,7 @@ The familiar rose bushes and towering sunflowers begins to bend to the
 east here. In this grassy area, there are wildflowers on the west side of
 the path, and to the south grows a small vegetable garden... Above it hangs
 someone's laundry off of a string tied to different ends of the roses. You
-are at someone's front door! You can hear a faint tune being sung.  
+are at someone's front door! You can hear a faint tune being sung.
 ~
 0 134619152 0
 Rd     0
@@ -6282,7 +6282,7 @@ D2
 S
 #6746
 Weeping Fig Lane~
-Looking down to the ground here, you notice that the path is much more 
+Looking down to the ground here, you notice that the path is much more
 trodden than anywhere else in this area. Perhaps there is someone ahead of
 you and you can still catch up to them... maybe they know of a way out! But
 they could also be an enemy waiting for you to follow them to your doom. The
@@ -6306,7 +6306,7 @@ Weeping Fig Lane~
 The weeping figs sway above, and you can hear the rustling of the leaves
 as the rose bushes continue to grow. The path here is trodden with recent
 footsteps of all sorts of sizes and shapes. You can smell a familiar scent
-coming from the north, is that cinnamon?  
+coming from the north, is that cinnamon?
 ~
 0 134619152 0
 Rd     0
@@ -6328,7 +6328,7 @@ mpechoat $n &OThe strong smell of cinnamon wafts through the air.
 Weeping Fig Lane~
 The weeping fig trees are more dense here, however the rose bushes still
 control the area. You can hear the rustling of the leaves as the roses grow
-and as the fig trees sway through the breeze. You hear some sounds coming 
+and as the fig trees sway through the breeze. You hear some sounds coming
 from the north, and the familiar smell of cinnamon comes over you.
 ~
 0 134619152 0
@@ -6351,13 +6351,13 @@ little shelves on each of the east and west walls. The smell of cinnamon
 lingers on here very strongly, perhaps too strongly for your liking. If you
 are larger than four and a half feet you have to crouch or squeeze your
 front end in through the door to catch a peek. A little window carved out
-in the south east wall allows the natural light to shine in.  
+in the south east wall allows the natural light to shine in.
 ~
 0 134620184 0
 Rd     0
 E
 window~
-You can see the path of Weeping Fig Lane out of the south window. You've 
+You can see the path of Weeping Fig Lane out of the south window. You've
 been there before.
 ~
 D2
@@ -6401,7 +6401,7 @@ S
 #6752
 Sunflower Way~
 Rose bushes line the path that leads to the north and south directions. Happy
-wildflowers line the path at your feet, and they seem to be smiling back at 
+wildflowers line the path at your feet, and they seem to be smiling back at
 you despite the roses that hold them within the grounds of the garden. Tall
 sunflowers look down on you from above and they stand guard for as far as you
 can see to the south. You can see a bend in the way to the north.
@@ -6437,7 +6437,7 @@ D3
 S
 #6754
 A Path of Rose Bushes~
-The rose bushes are thicker here, much like the entrance which brought you 
+The rose bushes are thicker here, much like the entrance which brought you
 into the garden. You can hear the familiar rustling of the leaves as they grow
 before your eyes, and the thorns poke out menacingly at you with a gleam. The
 occasional wildflower can be seen along the path, and the sunflowers sway in
@@ -6462,7 +6462,7 @@ S
 Raspberry Corner~
 The rose bushes are thicker here, yet they have allowed a bit of a raspberry
 bush to grow in around them. You can hear the rustling of the leaves as the
-roses go on growing, and the buzzing of insects flying around the fruit 
+roses go on growing, and the buzzing of insects flying around the fruit
 bushes. Thorns peek out from behind the raspberries to scare off any pickers.
 ~
 0 134619156 0
@@ -6478,7 +6478,7 @@ D2
 S
 #6756
 Raspberry Corner~
-The rose bushes are thick here, yet they have allowed a bit of a raspberry 
+The rose bushes are thick here, yet they have allowed a bit of a raspberry
 bush to grow in around them. You can hear the rustling of the leaves as the
 roses go on growing, and the buzzing of the insects flying around the fruit
 bushes. Thorns peek out from behind the raspberries to scare off any pickers.
@@ -6515,7 +6515,7 @@ S
 #6758
 A Path of Rose Bushes~
 The rose bushes are all that you can see here, aside from the little bits of
-raspberry bushes peeking in from the west. You can still hear the slight 
+raspberry bushes peeking in from the west. You can still hear the slight
 buzzing of insects as they buzz around the berries. The thorns pierce out from
 the bushes warning you to keep clear.
 ~
@@ -6532,8 +6532,8 @@ D3
 S
 #6759
 A Dead End~
-Your path comes to an end here. The rose bushes surround the area keeping guard 
-of what comes in and what goes out. Thorns poke out from every angle in the 
+Your path comes to an end here. The rose bushes surround the area keeping guard
+of what comes in and what goes out. Thorns poke out from every angle in the
 bushes threatening you to stay back... and the familiar rustling of the leaves
 lingers on.
 ~
@@ -6549,7 +6549,7 @@ A Bend in Fern Square~
 The rose bushes line the outside of the path here, a row of ferns growing from
 their roots. The occasional bunch of wildflowers can be seen within the ferns,
 and they seem to be smiling back up at you. A fern branch stretches out onto
-the path here and there, and you step cautiously around them as you go past 
+the path here and there, and you step cautiously around them as you go past
 being careful not to crush them.
 ~
 0 134619156 0
@@ -6721,9 +6721,9 @@ D0
 S
 #6769
 A Path of Rose Bushes~
-The rose bushes are thick here, much like the entrance which brought you 
+The rose bushes are thick here, much like the entrance which brought you
 into the garden. You can hear the familiar rustling of the leaves as they grow
-before your eyes, and the thorns pierce out menacingly at you with a gleam. 
+before your eyes, and the thorns pierce out menacingly at you with a gleam.
 The occasional wildflower can be seen along the path, and they seem to be
 smiling back up at you.
 ~
@@ -6892,7 +6892,7 @@ S
 A Path of Rose Bushes~
 The rose bushes are thick here, much like the entrance which brought you into
 the garden. You can hear the familiar rustling of the leaves as they grow before
-your eyes, and the thorns pierce out menacinly at you with a gleam. The 
+your eyes, and the thorns pierce out menacinly at you with a gleam. The
 occasional wildflower can be seen along the path, and they seem to be smiling
 back up at you.
 ~
@@ -7020,7 +7020,7 @@ considering vegetarianism, you can't help but bask in the glory of this
 beautiful scene.  The hedges are cut splendidly here into shapes of various
 animals of the continent, and even one in the likeness of Bethaven's own
 Oracle.  The rose bushes have all but disappeared in this area, almost as if
-they had no power in this part of the garden.  
+they had no power in this part of the garden.
 ~
 0 134219268 0
 Rd     0
@@ -7031,7 +7031,7 @@ You float upward, not knowing where you are going or what will be at the
 end of your journey... if there is an end. However, regardless of your
 situation, you feel safe somehow. The darkness lingers on around you, but
 the stars are no longer there... an illusion perhaps?  Could this be a
-dream?  
+dream?
 ~
 0 134620181 0
 Rd     0
@@ -7058,7 +7058,7 @@ S
 Floating...~
 You float upwards still, and wonder when it will come to an end... whatever
 it might be. You may begin to think of adventures once sought, loved ones and
-friends from the past... treasures gained, treasures lost, humiliation and 
+friends from the past... treasures gained, treasures lost, humiliation and
 victory. At this, you feel yourself being pulled to your destiny...
 ~
 0 134620181 0
@@ -7073,7 +7073,7 @@ Room of Warding~
 This large room is bare, save the spiral staircase going up in the north
 east wall. Different symbols have been drawn on all four walls, perhaps
 runes of warding to discourage trespassers. Maybe there is a way out of
-here. After all, why have runes of warding if there is no where to run?  
+here. After all, why have runes of warding if there is no where to run?
 ~
 0 134217728 0
 Rd     0
@@ -7091,7 +7091,7 @@ sizes of glass bottles and flasks filled with odd-coloured liquids. A large
 black cauldron sits over a hearth along the east wall, and from the ceiling
 above there are different animal carcasses hanging from a thin piece of
 rope. It is quite dismal in here, because the only lighting is severeal
-large candles floating about the room.  
+large candles floating about the room.
 ~
 0 134356992 0
 Rd     0
@@ -7111,9 +7111,9 @@ keyhole window cut out in the stone wall.  Beside it lay several blankets,
 assumingly for a very large beast of a pet.  Several dressers and a couple
 night tables line the east and south wall.  Various items rest on each
 table, such as make-up, a hairbrush, mirrors of all sizes and odd things
-like dried bats wings, incense, different herbs and other such oddities. 
+like dried bats wings, incense, different herbs and other such oddities.
 A bit of light shines in from the little window casting shadows here and
-there.  
+there.
 ~
 0 131072 0
 Rd     0
@@ -7123,7 +7123,7 @@ Looking out the window you can see a very large garden, which looks like
 a maze from this angle.  Another garden within the garden can be seen almost
 directly in the centre of the maze surrounding a large statued fountain
 which seems to move from time to time.  It might be worth investigating
-once you get out of this place.  
+once you get out of this place.
 ~
 D5
 ~
@@ -7136,7 +7136,7 @@ The path is dark here, and your light source does little to brighten up
 the dreariness of your surroundings.  The trees around you are gnarly and
 twisted, not a sign of green vegetation about.  What you are able to see in
 the shadows of the available light are trees with menacing faces, and they
-seem to glare down at you as you pass through.  
+seem to glare down at you as you pass through.
 ~
 0 134217733 3
 Rd     0
@@ -7146,7 +7146,7 @@ A Dark Path~
 The path is dark here, and your light source (if you have one) does little to
 brighten up the dreariness of your surroundings. The trees around you are gnarly
 and twisted, not a sign of green vegetation about. What you are able to see
-in the shadows of the available light are trees with menacing faces, and they 
+in the shadows of the available light are trees with menacing faces, and they
 seem to glare down at you as you pass through.
 ~
 0 134217729 3
@@ -7190,7 +7190,7 @@ S
 An Unused Part of the Path~
 The path seems to end here because of the overgrown trees... although looking
 carefully to the north you can see that it did continue that way at one point
-in time. The ground here is dry and the leftovers of various paw prints have 
+in time. The ground here is dry and the leftovers of various paw prints have
 been marked in the dirt by the passage of rabbits, deer and some undecipherable
 others. This leaves you only to assume that there is a way through. The only
 Obvious exit is south.
@@ -7237,7 +7237,7 @@ S
 A Dimly Lit Path~
 The path is not well lit here, however a tinge of light from the sun or moon
 shines in through the canopy of trees above. The gnarly things glare down at
-you as you pass through, and a path of the giants lead you to the north and to 
+you as you pass through, and a path of the giants lead you to the north and to
 the west.
 ~
 0 134217728 3
@@ -7564,8 +7564,8 @@ S
 #6814
 North End of the Clearing~
 It is brighter here as the torch light shines in from the north, east and west
-cages. You can hear the occasional scream from either your left or right, a 
-grunt now and then, and what might be a slight hissing sound. Despite all of 
+cages. You can hear the occasional scream from either your left or right, a
+grunt now and then, and what might be a slight hissing sound. Despite all of
 this... there is a sense of comfort as you stand here.
 ~
 0 0 3
@@ -7610,7 +7610,7 @@ S
 #6816
 Northeast Side of the Clearing~
 This area is dark, as the cage here is empty save the entrails of something
-undiscernable. No torches are lit here, and all you hear are the sounds of 
+undiscernable. No torches are lit here, and all you hear are the sounds of
 people gawking at the beasts that Mommy Fortuna has managed to capture and
 imprison.
 ~
@@ -7653,7 +7653,7 @@ articles of clothing are scattered about the place.
 Rd     0
 E
 clothing~
-Soiled shirts, pants and socks have been scattered about the room. They are 
+Soiled shirts, pants and socks have been scattered about the room. They are
 all small in size, and probably belong to a man.
 ~
 E
@@ -7718,7 +7718,7 @@ S
 #6822
 The Beholder's Cage~
 The cage is dark and you can barely see your hand in front of your face, despite
-the bright torch light outside. The hissing sound is loud here and it's source 
+the bright torch light outside. The hissing sound is loud here and it's source
 changes positions as you stand inside.
 ~
 0 131077 0
@@ -7726,7 +7726,7 @@ Rd     0
 S
 #6823
 The Chimera's Cage~
-The cage is dark despite the bright torch light coming from the outside. The 
+The cage is dark despite the bright torch light coming from the outside. The
 place smells of feces, and you might guess that a cage this big would contain a
 very large creature. You can hear a rather loud purr, or soft growl.
 ~
@@ -7750,7 +7750,7 @@ S
 #6825
 &R**NOTE**&W>~
 &RThe following vnums are going to be used by Sherf for renovating
-purposes (of this area) Please &rDO NOT&R use.  
+purposes (of this area) Please &rDO NOT&R use.
 ~
 0 136709140 0
 Rd     0

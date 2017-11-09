@@ -1,5 +1,5 @@
 #AREADATA
-Name        {??-???} QuestMaster Items   Lacey~
+Name        QuestMaster Items~
 Levels      0 0
 Builders    Grimfang Lacey Angi~
 VNUMs       2426 2499
@@ -20,7 +20,7 @@ zenza woman~
 &W Your eyes gaze upon a &psensuous, voluptuous&W creature...  Her
 &wsilvery&W eyes glitter with evil intent, making you cringe with fear as
 you wonder what is in store for your future.  Zenza is a &Rwild one&W, here
-to please your every command.  
+to please your every command.
 ~
 2129985 100679680 0 1000 S
 113 0 0 30000d0+0 0d0+0
@@ -52,8 +52,8 @@ else
         endif
     endif
 endif
- 
- 
+
+
 ~
 >act_prog p bows before you.~
 if name ($n) == xavier
@@ -133,7 +133,7 @@ endif
 >speech_prog help~
 if name ($n) == xavier
     say &WThe answer, my Lord, lies within your soul.
-    say &WOnce spoken, a tiny locket you shall hold, and you must bind 
+    say &WOnce spoken, a tiny locket you shall hold, and you must bind
     say &W&Wit with the symbol to make it whole.  This, Lord &wDar&WkBl&wade&W,
     say &Wyou must give to the one you love, for only then will your true
     say &Wquest be fulfilled...
@@ -897,7 +897,7 @@ reserved~
 2495 0 0
 E
 riddle~
-&W    
+&W
 &W    This symbol of &Rlove&W that I give to thee
 &W    Is filled with &wmagic&W, as you shall see.
 &W    Its' overwhelming power and ability to heal
@@ -922,7 +922,7 @@ reserved~
 E
 band~
 &WTo my love, Xavier, these few words my heart speaks to thee...
- 
+
 &R        Infinite are the flakes of &Wsnow&R
 &R        That lie upon the ground..
 &R        Infinite are the many children

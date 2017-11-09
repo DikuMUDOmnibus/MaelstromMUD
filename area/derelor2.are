@@ -1,5 +1,5 @@
 #AREADATA
-Name        {??-???} PROTO AREA          Derelor~
+Name        PROTO AREA~
 Levels      0 0
 Builders    Derelor Hannibal~
 VNUMs       1900 1999
@@ -203,7 +203,7 @@ The King Of This Glorious Civilisation Looks Upon His People.
 As Rules of this advanced goblin civilisation, this king looks at his
 people with remendous pride and joy.  To bring a band of goblin to such an
 organised facility is quite an achievement.  You look at him with a new
-found respect.  
+found respect.
 ~
 3 268452032 262144 -100 S
 70 0 0 9000d0+0 0d0+0
@@ -277,7 +277,7 @@ The Master Of Creation.
 0 0 1
 12428 0 0
 >fight_prog 35~
-c 'blindness' 
+c 'blindness'
 c 'dispel magic'
 c fireball
 ~
@@ -623,7 +623,7 @@ the outside, this outpost seems pretty big.  As you approach the gate, you
 notice what you thought was a wooden fence is actually a row of pikes with
 skulls on them.  A closer look at the skulls tells you they are elven in
 origin.  These goblins must be pretty organized for having built such an
-outpost.  Maybe you should leave before they find you here?  
+outpost.  Maybe you should leave before they find you here?
 ~
 0 401412 0
 Rd     0
@@ -635,7 +635,7 @@ S
 #1901
 Main Walkway~
 You are walking down the main path in the outpost, you can continue
-onward to the north or exit this foul place through the gate to the south.  
+onward to the north or exit this foul place through the gate to the south.
 ~
 0 401408 0
 Rd     0
@@ -652,7 +652,7 @@ S
 Four Way Intersection~
 After walking a while, you come up to an intersection.  To the east and
 west, you can see smoke rising from small huts.  The walkway continues
-northward while you can escape by heading for the southern gate.  
+northward while you can escape by heading for the southern gate.
 ~
 0 401408 0
 Rd     0
@@ -677,7 +677,7 @@ S
 Path to Huts~
 You are walking down a small dirt path leading to a tiny grouping of
 huts.  The huts are farther to the west.  You can reach the main walkway by
-going east.  
+going east.
 ~
 0 401408 0
 Rd     0
@@ -694,7 +694,7 @@ S
 Before The Huts~
 The wall of the outpost prevents you from going further west.  The small
 huts you saw earlier are to the north and south.  You can go back to the
-main walkway by heading due east.  
+main walkway by heading due east.
 ~
 0 401408 0
 Rd     0
@@ -716,8 +716,8 @@ Goblin Hut~
 The stench that assaults your nostrils as you enter the hut nearly
 overwhelms you.  Although these goblins may be better organized, they sure
 aren't any cleaner than any other goblin tribe you've met before.  There is
-a small bed in a corner and a bunch of scattered garbage everywhere else. 
-Fresh air is to the north.  
+a small bed in a corner and a bunch of scattered garbage everywhere else.
+Fresh air is to the north.
 ~
 0 401416 0
 Rd     0
@@ -784,8 +784,8 @@ Goblin Hut~
 The stench that assaults your nostrils as you enter the hut nearly
 overwhelms you.  Although these goblins may be better organized, they sure
 aren't any cleaner than any other goblin tribe you've met before.  There is
-a small bed in a corner and a bunch of scattered garbage everywhere else. 
-Fresh air is to the south.  
+a small bed in a corner and a bunch of scattered garbage everywhere else.
+Fresh air is to the south.
 ~
 0 401416 0
 Rd     0
@@ -799,8 +799,8 @@ Goblin Hut~
 The stench that assaults your nostrils as you enter the hut nearly
 overwhelms you.  Although these goblins may be better organized, they sure
 aren't any cleaner than any other goblin tribe you've met before.  There is
-a small bed in a corner and a bunch of scattered garbage everywhere else. 
-Fresh air is to the north.  
+a small bed in a corner and a bunch of scattered garbage everywhere else.
+Fresh air is to the north.
 ~
 0 401416 0
 Rd     0
@@ -813,7 +813,7 @@ S
 Main Walkway~
 As you walk down the walkway, you begin to hear faint sounds of metal
 clanging and screams.  There is an intersection to the south while the
-walkway continues north.  
+walkway continues north.
 ~
 0 401412 0
 Rd     0
@@ -830,7 +830,7 @@ S
 Main Walkway~
 The farther north you go, the more apparent it is that the sounds you
 were hearing are those of fighting.  They seem to come from the north.
-Far off to the south is the only way out of here.  
+Far off to the south is the only way out of here.
 ~
 0 401408 0
 Rd     0
@@ -847,7 +847,7 @@ S
 A Four Way Intersection~
 At last, you can see what all the commotion is about, to the east and
 west, you can see goblins training in small fields.  You can also see a
-structure to the north.  
+structure to the north.
 ~
 0 401408 0
 Rd     0
@@ -872,7 +872,7 @@ S
 Main Walkway~
 Continuing down the walkway, you see a large tower before you.  It's
 already pretty high and you're not that close to it yet.  You can reach the
-tower by continuing you journey to the north or turn back to the south.  
+tower by continuing you journey to the north or turn back to the south.
 ~
 0 401412 0
 Rd     0
@@ -890,7 +890,7 @@ Road of Training~
 The road is littered with broken armor and weapons, you can see small
 puddles of blood drying in a few spots.  Decidedly, these goblins don't take
 too many precautions when training.  You can reach the western training
-grounds by continuing west or go back to the main walkway be heading east.  
+grounds by continuing west or go back to the main walkway be heading east.
 ~
 0 401408 0
 Rd     0
@@ -907,7 +907,7 @@ S
 Road Of Training~
 There is more blood, armor and weapons everywhere.  The entrance to the
 training grounds is close by to the west.  A short walk to the east will get
-you back to the walkway.  
+you back to the walkway.
 ~
 0 401408 0
 Rd     0
@@ -924,7 +924,7 @@ S
 Before the Training Grounds~
 You arrive at the entrance to the training grounds.  You can enter them
 by going north or leave east.  The outpost wall prevent continuing to the
-west.  
+west.
 ~
 0 401412 0
 Rd     0
@@ -940,7 +940,7 @@ S
 #1918
 Training Ground~
 Whoa!  There is blood everywhere!  How can there still be goblins
-standing?  Broken armor and weapons lie in heaps everywhere.  
+standing?  Broken armor and weapons lie in heaps everywhere.
 ~
 0 401408 0
 Rd     0
@@ -1010,7 +1010,7 @@ Road of Training~
 The road is littered with broken armor and weapons, you can see small
 puddles of blood drying in a few spots.  Decidedly, these goblins don't take
 too many precautions when training.  You can reach the eastern training
-grounds by continuing east or go back to the main walkway be heading west.  
+grounds by continuing east or go back to the main walkway be heading west.
 ~
 0 401408 0
 Rd     0
@@ -1027,7 +1027,7 @@ S
 Road of Training~
 There is more blood, armor and weapons everywhere.  The entrance to the
 training grounds is close by to the east.  A short walk to the west will get
-you back to the walkway.  
+you back to the walkway.
 ~
 0 401408 0
 Rd     0
@@ -1044,7 +1044,7 @@ S
 Before the Training Guards~
 You arrive at the entrance to the training grounds.  You can enter them
 by going north or leave west.  The outpost wall prevent continuing to the
-east.  
+east.
 ~
 0 401412 0
 Rd     0
@@ -1060,7 +1060,7 @@ S
 #1925
 Training Ground~
 Whoa!  There is blood everywhere!  How can there still be goblins
-standing?  Broken armor and weapons lie in heaps everywhere.  
+standing?  Broken armor and weapons lie in heaps everywhere.
 ~
 0 401420 0
 Rd     0
@@ -1131,7 +1131,7 @@ After stopping to admire the tower before you, you hear faint voices
 comming from below you.  You look down and notice you are standing on a
 gratting.  It's pretty obvious that this is some kind of cell to keep
 prisoners.  A little off north is the entrance to the tower, while you can
-just barely see the southern gate from here.  
+just barely see the southern gate from here.
 ~
 0 401408 0
 Rd     0
@@ -1153,7 +1153,7 @@ Base of the Tower~
 The many windows in this room make it so you can see pretty well even
 without a light.  There is a small trail in the dirt floor which leads to
 the rooms only object.  A ladder in the back of the room leads to the upper
-level of the tower.  You can exit the tower out the southern door.  
+level of the tower.  You can exit the tower out the southern door.
 ~
 0 401420 0
 Rd     0
@@ -1169,7 +1169,7 @@ S
 #1931
 Up the Ladder~
 You are on the ladder, climb on up or go back down.  The is nothing else
-to do in this shaft.  
+to do in this shaft.
 ~
 0 401416 0
 Rd     0
@@ -1185,7 +1185,7 @@ S
 #1932
 Up the Ladder~
 Again you are in a small ordinary shaft.  Looking up, you notice that the
-end of the ladder is close.  
+end of the ladder is close.
 ~
 0 401416 0
 Rd     0
@@ -1203,7 +1203,7 @@ Entrance to the Tower~
 You pull yourself up the last of the ladder and find yourself at the
 entrance to the tower.  Other than a desk on the left side of the room,
 there is nothing else here.  You can enter the tower by going south or leave
-back down the ladder.  
+back down the ladder.
 ~
 0 401416 0
 Rd     0
@@ -1220,9 +1220,9 @@ S
 Four Way Intersection~
 As soon as you enter the tower, you are faced with choosing a direction
 as the hallway splits in all directions.  From what you can see by looking
-east and west, there must be some kind of watchpoint in those directions. 
+east and west, there must be some kind of watchpoint in those directions.
 To the south the walkway continues on.  The exit to the tower is directly to
-the north.  
+the north.
 ~
 0 401416 0
 Rd     0
@@ -1246,7 +1246,7 @@ S
 #1935
 Path to Archer Tower~
 You are on the way to what appears to be an archer's tower.  Will you
-continue on your way or go back?  
+continue on your way or go back?
 ~
 0 401408 0
 Rd     0
@@ -1262,7 +1262,7 @@ S
 #1936
 Path To Archer Tower~
 You can clearly see the tower from here, and what appears to be movement.
-The path leads both east and north.  
+The path leads both east and north.
 ~
 0 401408 0
 Rd     0
@@ -1278,7 +1278,7 @@ S
 #1937
 Archer Tower~
 You have a clear view of the back of the outpost.  You think to yourself
-what kind of army would be needed to surmount such a wall.  
+what kind of army would be needed to surmount such a wall.
 ~
 0 401408 0
 Rd     0
@@ -1305,7 +1305,7 @@ S
 #1939
 Path To Archer Tower~
 You can clearly see the tower from here, and what seems to be movement,
-be on your guard.  
+be on your guard.
 ~
 0 401408 0
 Rd     0
@@ -1322,7 +1322,7 @@ S
 Archer Tower~
 You have a view of the rear of the outpost.  You think to yourself that
 an army of 500 soldier would have difficulty in climbing succesfully raiding
-this place.  
+this place.
 ~
 0 401408 0
 Rd     0
@@ -1335,7 +1335,7 @@ S
 Tower Walkway~
 A walkway in the tower, everything seems normal except the light comming
 from the ceiling, maybe you should invertigate?  The walkway continues North
-and South of here.  
+and South of here.
 ~
 0 401416 0
 Rd     0
@@ -1355,7 +1355,7 @@ S
 #1942
 Tower Walkway~
 It Appears to be a normal walkway, it continues on northwards and
-southwards.  
+southwards.
 ~
 0 401416 0
 Rd     0
@@ -1372,7 +1372,7 @@ S
 Four Way Intersection~
 You can see a huge vault door south of here, alot of energy seems to seep
 from the cracks.  East and west exits seem to lead to a tower window, the
-walkway lies south of here, maybe you should head back there right now?  
+walkway lies south of here, maybe you should head back there right now?
 ~
 0 401416 0
 Rd     0
@@ -1427,7 +1427,7 @@ S
 Archer Tower~
 You have an undisturbed view of nearly the whole outpost.  It seems well
 organised, every goblin seems to have his place in the structure and the
-order of this advanced goblin civilisation.  
+order of this advanced goblin civilisation.
 ~
 0 401408 0
 Rd     0
@@ -1453,7 +1453,7 @@ D3
 S
 #1948
 Path To Archer Tower~
-You're getting closer to it, you can see what appears to be an opening.  
+You're getting closer to it, you can see what appears to be an opening.
 ~
 0 401408 0
 Rd     0
@@ -1471,7 +1471,7 @@ Archer Tower~
 You can see all of the Goblin outpost from here.  It appears to be well
 protected against invasion as well as well organised, every goblin seems to
 know where he should be and what he should be doing.  The only exit lies
-north.  
+north.
 ~
 0 401408 0
 Rd     0
@@ -1484,7 +1484,7 @@ S
 Goblin Treasury~
 Here lies the chest of the acumulated riches of this civilisation.  It
 also serves as the alchemists quarters, he better not find you in here.  The
-only exit lies north.  
+only exit lies north.
 ~
 0 393244 0
 Rd     0
@@ -1496,7 +1496,7 @@ S
 #1952
 Top of the Tower~
 This place seems to be dangerous, be on your guard.  The exits lie down
-and south.  
+and south.
 ~
 0 401416 0
 Rd     0
@@ -1512,7 +1512,7 @@ S
 #1953
 Top of the Tower~
 This seem to be a great place for an ambush.  You move around cautiously.
-The path goes onwards towards the south and north.  
+The path goes onwards towards the south and north.
 ~
 0 401416 0
 Rd     0
@@ -1529,7 +1529,7 @@ S
 Before the Chamber~
 You can see the royal chamber from here.  You feel as though you don't
 belong here.  You might end up dead.  The numerous skulls on the door would
-indicate as much.  
+indicate as much.
 ~
 0 401416 0
 Rd     0
@@ -1547,7 +1547,7 @@ Royal Chamber~
 The king of the goblins has a real taste for exquisite material.  The
 Room is ornamented with all kinds of satin and silk tapestries.  There is
 also a great deal of object encrusted with gold.  You might want to leave
-everything as it is and go back to where you belong.  
+everything as it is and go back to where you belong.
 ~
 0 401424 0
 Rd     0
@@ -1560,7 +1560,7 @@ S
 Outpost Dungeon~
 A prison for the goblins most hated ennemy is here.  It usually serves
 for elves, as you can see by the skulls and the material on the floor,
-generally of elf kind.  
+generally of elf kind.
 ~
 0 401416 0
 Rd     0

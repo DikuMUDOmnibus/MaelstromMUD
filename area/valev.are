@@ -1,7 +1,7 @@
 #AREADATA
-Name        { 10-40} Vale Stronghold     Dwergen~
+Name        Vale Stronghold~
 Levels      10 40
-Builders    Aegis~
+Builders    Aegis Dwergen~
 VNUMs       5000 5049
 Security    100
 Recall      25001
@@ -18,7 +18,7 @@ harker the armorer~
 Harker is looking over a new blade.
 ~
 Harker stands before you a head taller.  His body shows the signs of a
-great number of hours swinging a hammer.  
+great number of hours swinging a hammer.
 ~
 3 0 0 1000 S
 40 0 0 2500d0+0 0d0+0
@@ -30,7 +30,7 @@ jeral shopkeeper valev~
 Jeral~
 The shopkeeper examines his inventory.
 ~
-The shopkeeper examines his inventory carefully.  
+The shopkeeper examines his inventory carefully.
 ~
 3 0 0 1000 S
 40 0 0 2500d0+0 0d0+0
@@ -43,7 +43,7 @@ the baker Yuralk~
 The baker Yuralk studies her recipes.
 ~
 The baker seems to take great pride in her work.  Therefore each recipe
-is done to perfection.  
+is done to perfection.
 ~
 3 0 0 1000 S
 40 0 0 2500d0+0 0d0+0
@@ -55,7 +55,7 @@ Porsa magician~
 the magician Porsa~
 The magician Porsa curses wildly.
 ~
-The magician is cursing at the mistakes he has made.  
+The magician is cursing at the mistakes he has made.
 ~
 3 33554560 0 -300 S
 40 0 0 1625d0+0 0d0+0
@@ -141,7 +141,7 @@ child valev~
 A child~
 A young child is standing here with an impish grin on his face.
 ~
-The child has muddy feet and a mischievous twinkle in his eye.  
+The child has muddy feet and a mischievous twinkle in his eye.
 ~
 3 0 0 -200 S
 10 0 0 200d0+0 0d0+0
@@ -153,7 +153,7 @@ dragon~
 a pet dragon~
 A pet dragon is here munching on a cookie.
 ~
-The dragon is very young and looks like he loves to play.  
+The dragon is very young and looks like he loves to play.
 ~
 3 0 0 -1000 S
 15 0 0 400d0+0 0d0+0
@@ -165,7 +165,7 @@ greter mistress valev~
 Mistress Greter~
 Mistress Greter is hard at work scrubbing the floor.
 ~
-This elderly woman looks very frail.  But looks can be deceiving.  
+This elderly woman looks very frail.  But looks can be deceiving.
 ~
 3 0 0 1000 S
 29 0 0 1410d0+0 0d0+0
@@ -177,7 +177,7 @@ kewkop mistress valev~
 Mistress Kewkop~
 Mistress Kewkop seems to have her hands full with the children.
 ~
-The constant battle with her children has definitely aged Mistress Kewkop.  
+The constant battle with her children has definitely aged Mistress Kewkop.
 ~
 3 0 0 1000 S
 29 0 0 1410d0+0 0d0+0
@@ -190,7 +190,7 @@ The Mayor's wife~
 A lovely lady is here fussing over her hair.
 ~
 The beautiful Mayor's wife is so worried about her appearance that she
-has no idea that you are in the room.  
+has no idea that you are in the room.
 ~
 3 0 0 1000 S
 37 0 0 2200d0+0 0d0+0
@@ -202,7 +202,7 @@ chef valev~
 The Mayor's personal chef~
 The Mayor's chef is feverishly preparing the next meal.
 ~
-The chef is busily making her next meal to satisfy the Mayor and his wife.  
+The chef is busily making her next meal to satisfy the Mayor and his wife.
 ~
 3 0 0 350 S
 37 0 0 2200d0+0 0d0+0
@@ -215,7 +215,7 @@ Jone~
 A gleeman entertains the villagers.
 ~
 Jone the gleeman looks to be a man with many talents.  From past
-experience you are aware that gleemen always have tricks up their sleeves.  
+experience you are aware that gleemen always have tricks up their sleeves.
 ~
 3 128 0 -200 S
 40 0 0 2000d0+0 0d0+0
@@ -253,7 +253,7 @@ guard captain~
 The vault guard~
 The vault guard is eyeing you carefully.
 ~
-The guard looks like he has been through many fights in his career.  
+The guard looks like he has been through many fights in his career.
 ~
 3 160 0 0 S
 40 0 0 2000d0+0 0d0+0
@@ -279,7 +279,7 @@ if ispc($n) == 1
   yell Begone, or I will be forced to kill you!
   break
 endif
- 
+
 ~
 |
 #5016
@@ -302,7 +302,7 @@ a child~
 A child is standing here with cookie crumbs on his face.
 ~
 The child looks like he spends his life finding trouble.  He has dirty
-hands, muddy feet and a smudge of cookie across his face.  
+hands, muddy feet and a smudge of cookie across his face.
 ~
 3 0 0 0 S
 15 0 0 400d0+0 0d0+0
@@ -333,12 +333,12 @@ A
 E
 leather~
 This is a hardy apron made from cured leather, creased and worn from long
-hours of use.  
+hours of use.
 ~
 E
 apron~
 This is a hardy apron made from cured leather, creased and worn from long
-hours of use.  
+hours of use.
 ~
 #5001
 blacksmith hammer~
@@ -359,12 +359,12 @@ A
 E
 blacksmith~
 This is a large blacksmith's hammer, with a heavy steel head that looks
-like it could cause bodily harm as easily as it forges metal.  
+like it could cause bodily harm as easily as it forges metal.
 ~
 E
 hammer~
 This is a large blacksmith's hammer, with a heavy steel head that looks
-like it could cause bodily harm as easily as it forges metal.  
+like it could cause bodily harm as easily as it forges metal.
 ~
 #5002
 hot poker~
@@ -386,13 +386,13 @@ E
 hot~
 This is a red hot poker, obviously used to handle the blacksmith's hot
 coals.  No doubt it could also cause great bodily harm if handled
-incorrectly.  
+incorrectly.
 ~
 E
 poker~
 This is a red hot poker, obviously used to handle the blacksmith's hot
 coals.  No doubt it could also cause great bodily harm if handled
-incorrectly.  
+incorrectly.
 ~
 #5003
 club valev~
@@ -434,12 +434,12 @@ A
 E
 rolling~
 This is a wooden rolling pin, covered in flour and obviously used by the
-baker to roll her dough.  
+baker to roll her dough.
 ~
 E
 pin~
 This is a wooden rolling pin, covered in flour and obviously used by the
-baker to roll her dough.  
+baker to roll her dough.
 ~
 #5005
 apron~
@@ -456,7 +456,7 @@ reserved~
 E
 apron~
 This is a thick white apron, smeared with a little butter and practically
-covered in flour.  
+covered in flour.
 ~
 #5006
 magical hat~
@@ -475,12 +475,12 @@ A
 E
 magical~
 This is a dark blue pointed hat.  You can see moons and stars and comets
-on the hat, although you cannot tell if they were painted or stitched on.  
+on the hat, although you cannot tell if they were painted or stitched on.
 ~
 E
 hat~
 This is a dark blue pointed hat.  You can see moons and stars and comets
-on the hat, although you cannot tell if they were painted or stitched on.  
+on the hat, although you cannot tell if they were painted or stitched on.
 ~
 #5007
 cloak~
@@ -499,7 +499,7 @@ A
 E
 cloak~
 This is a long, flowing blue cloak that seems to flutter about in an
-unfelt wind.  
+unfelt wind.
 ~
 #5008
 medallion mayor vale~
@@ -519,11 +519,11 @@ A
 5 1
 E
 mayor~
-This is a shiny silver medallion that seems to give off a glow of its own.  
+This is a shiny silver medallion that seems to give off a glow of its own.
 ~
 E
 medallion~
-This is a shiny silver medallion that seems to give off a glow of its own.  
+This is a shiny silver medallion that seems to give off a glow of its own.
 ~
 #5009
 helmet~
@@ -544,7 +544,7 @@ A
 E
 helmet~
 This is a sturdy steel helmet, although there seems to be a large dent on
-one side of it.  
+one side of it.
 ~
 #5010
 crossbow~
@@ -565,7 +565,7 @@ A
 E
 crossbow~
 This is a normal heavy crossbow, used by the guards to defend their
-fortress.  
+fortress.
 ~
 #5011
 vest metal~
@@ -586,12 +586,12 @@ A
 E
 metal~
 This is a vest made of chain links, providing protection from anything
-but the fiercest blow.  
+but the fiercest blow.
 ~
 E
 vest~
 This is a vest made of chain links, providing protection from anything
-but the fiercest blow.  
+but the fiercest blow.
 ~
 #5012
 cudgel~
@@ -612,7 +612,7 @@ A
 E
 cudgel~
 This is a stout cudgel made of old, sturdy wood.  No doubt this has been
-used many times over the years to ward off troublemakers.  
+used many times over the years to ward off troublemakers.
 ~
 #5013
 broad sword~
@@ -633,12 +633,12 @@ A
 E
 broad~
 This is a large broad sword, easily capable of slicing through flesh when
-put into the right hands.  
+put into the right hands.
 ~
 E
 sword~
 This is a large broad sword, easily capable of slicing through flesh when
-put into the right hands.  
+put into the right hands.
 ~
 #5014
 ruby charm~
@@ -658,11 +658,11 @@ A
 4 1
 E
 charm~
-This is a simple necklace with an ordinary red ruby set into a pendant.  
+This is a simple necklace with an ordinary red ruby set into a pendant.
 ~
 E
 ruby~
-This is a simple necklace with an ordinary red ruby set into a pendant.  
+This is a simple necklace with an ordinary red ruby set into a pendant.
 ~
 #5015
 brush scrub~
@@ -679,12 +679,12 @@ armor~
 E
 brush~
 This is a brush with hard bristles made of some kind of thick hair.  It
-has obviously seen much use by its owner.  
+has obviously seen much use by its owner.
 ~
 E
 scrub~
 This is a brush with hard bristles made of some kind of thick hair.  It
-has obviously seen much use by its owner.  
+has obviously seen much use by its owner.
 ~
 #5016
 boat toy valev~
@@ -705,12 +705,12 @@ A
 E
 toy~
 This is a small toy boat, made of crudely carved wood and bits of string
-and wool.  
+and wool.
 ~
 E
 boat~
 This is a small toy boat, made of crudely carved wood and bits of string
-and wool.  
+and wool.
 ~
 #5017
 toy spear~
@@ -730,13 +730,13 @@ A
 19 20
 E
 toy~
-This is a very small spear, made of flimsy wood and a crude stone blade. 
-It is obviously meant for a small child.  
+This is a very small spear, made of flimsy wood and a crude stone blade.
+It is obviously meant for a small child.
 ~
 E
 spear~
-This is a very small spear, made of flimsy wood and a crude stone blade. 
-It is obviously meant for a small child.  
+This is a very small spear, made of flimsy wood and a crude stone blade.
+It is obviously meant for a small child.
 ~
 #5018
 dress pastel~
@@ -761,7 +761,7 @@ A lovely blue dress with a flowery hem and neckline.
 E
 dress~
 This is a pretty but prim blue dress, with flowery embroidery along the
-hem and neckline.  
+hem and neckline.
 ~
 #5019
 lipstick red~
@@ -782,7 +782,7 @@ A
 E
 lipstick~
 This is a container of smooth red paste, no doubt for applying to the
-lips.  
+lips.
 ~
 #5020
 bed~
@@ -799,7 +799,7 @@ reserved~
 E
 bed~
 This is a large bed built for two people, complete with smooth linen
-sheets and a comfortable blanket.  
+sheets and a comfortable blanket.
 ~
 #5021
 pot iron valev~
@@ -816,12 +816,12 @@ reserved~
 E
 pot~
 This is a very heavy iron cauldron the cook often uses for the dishes he
-prepares.  
+prepares.
 ~
 E
 iron~
 This is a very heavy iron cauldron the cook often uses for the dishes he
-prepares.  
+prepares.
 ~
 #5022
 spoon valev~
@@ -846,7 +846,7 @@ A
 E
 spoon~
 This is a stout wooden spoon, no doubt used for spanking as well as
-cooking.  
+cooking.
 ~
 #5023
 cloak patched valev~
@@ -867,7 +867,7 @@ A
 E
 cloak~
 This is a cloak made of many multihued patches of cloth, designed to
-amaze the eye and draw more listeners.  
+amaze the eye and draw more listeners.
 ~
 #5024
 balls juggling valev~
@@ -903,7 +903,7 @@ A
 18 60
 E
 dagger~
-This is an ornate steel dagger, designed as much for show as function.  
+This is an ornate steel dagger, designed as much for show as function.
 ~
 #5026
 key copper valev~
@@ -919,11 +919,11 @@ reserved~
 0 0 0
 E
 key~
-This is a shiny new key made of copper.  
+This is a shiny new key made of copper.
 ~
 E
 copper~
-This is a shiny new key made of copper.  
+This is a shiny new key made of copper.
 ~
 #5027
 key ivory valev~
@@ -939,11 +939,11 @@ reserved~
 0 0 0
 E
 ivory~
-This is a solid ivory key.  
+This is a solid ivory key.
 ~
 E
 key~
-This is a solid ivory key.  
+This is a solid ivory key.
 ~
 #5028
 key gold~
@@ -959,11 +959,11 @@ reserved~
 0 0 0
 E
 gold~
-This is a bright key made of pure gold.  
+This is a bright key made of pure gold.
 ~
 E
 key~
-This is a bright key made of pure gold.  
+This is a bright key made of pure gold.
 ~
 #5029
 earring pearl~
@@ -983,11 +983,11 @@ A
 5 1
 E
 pearl~
-This is an earring made of silver, with a large pearl set into the middle.  
+This is an earring made of silver, with a large pearl set into the middle.
 ~
 E
 earring~
-This is an earring made of silver, with a large pearl set into the middle.  
+This is an earring made of silver, with a large pearl set into the middle.
 ~
 #5030
 fountain~
@@ -1039,11 +1039,11 @@ A
 17 -25
 E
 guard~
-This is a heavy piece of body armor, meant for a large person.  
+This is a heavy piece of body armor, meant for a large person.
 ~
 E
 armor~
-This is a heavy piece of body armor, meant for a large person.  
+This is a heavy piece of body armor, meant for a large person.
 ~
 #5033
 guard boots~
@@ -1064,12 +1064,12 @@ A
 E
 guard~
 This is a pair of heavy leather boots that looks tough enough to stop
-steel.  
+steel.
 ~
 E
 boots~
 This is a pair of heavy leather boots that looks tough enough to stop
-steel.  
+steel.
 ~
 #5034
 vault shield~
@@ -1151,13 +1151,13 @@ gate before you, you notice a great symbol etched on it.  You recognize the
 symbol as one that wards off evil spirits from entering beyond it.  Your
 studious gaze continues upward until it rests on the guards that are
 standing above the gate eyeing you carefully.  You must remember to behave
-yourself while in the confines of this village.  
+yourself while in the confines of this village.
 ~
 0 4 3
 Rd     0
 E
 symbol~
-The symbol is very intricately designed and used to ward off evil spirits.  
+The symbol is very intricately designed and used to ward off evil spirits.
 ~
 D0
 ~
@@ -1174,7 +1174,7 @@ Crossing of Main Street and Second Street~
 You are just inside the front gates of the Vale Stronghold.  A road to
 the south leads to what looks like the Village Square with many shops along
 the way there.  There seems to be a lot of activity there; you wonder what
-is going on.  
+is going on.
 ~
 0 0 1
 Rd     0
@@ -1203,11 +1203,11 @@ S
 #5002
 Main Street~
 The main street of the village seems to be well tended to.  The Vale
-people must take great pride in the looks of their quaint little village. 
+people must take great pride in the looks of their quaint little village.
 You notice a great deal of heat coming from the east as well as the sounds
 of metal hitting metal.  There is also the occasional curse after the
 clanging stops for a second or two.  That must be the village blacksmith
-hard at work in there.  There is a sign above the store.  
+hard at work in there.  There is a sign above the store.
 ~
 0 0 1
 Rd     0
@@ -1233,8 +1233,8 @@ Main Street~
 The hustle and bustle of the main street of the village is surprising to
 you.  From the outside, this looks to be a small, quiet place.  But in
 reality it is very large and very loud.  To the west you can hear the sounds
-of leather being beaten and large objects being dragged along the ground. 
-There is a sign above the door that reads 'The General Store'.  
+of leather being beaten and large objects being dragged along the ground.
+There is a sign above the door that reads 'The General Store'.
 ~
 0 0 1
 Rd     0
@@ -1257,12 +1257,12 @@ D3
 S
 #5004
 Main Street~
-The sounds of laughter from the village square is becoming much louder. 
+The sounds of laughter from the village square is becoming much louder.
 There is also the smell of freshly made pastries that is filling the air
 around you.  You notice that this wonderful smell is originating from a
 small store to the east of you.  You notice a sign above the door that reads
 'Bakers Store'.  With all of that noise coming from the village square you
-begin to wonder just what is going on.  
+begin to wonder just what is going on.
 ~
 0 0 1
 Rd     0
@@ -1317,7 +1317,7 @@ Second Street~
 The road ahead of you continues on to the west.  You see in the near
 distance a very large house with many guards situated about it.  It seems
 they are protecting a very important person.  These guards are as well
-armored as the guards situated above the main gate to the village.  
+armored as the guards situated above the main gate to the village.
 ~
 0 0 1
 Rd     0
@@ -1338,7 +1338,7 @@ great number of grand tapestries hanging from the walls, ranging from a
 simple garden scene to one of a great battle to one of two young lovers
 gazing into the stars.  As you gaze at the tapestries, you swear you can see
 the people in them moving about as if they are alive.  It seems that these
-are not just any normal tapestries.  
+are not just any normal tapestries.
 ~
 0 8 0
 Rd     0
@@ -1367,7 +1367,7 @@ the past.  There is a large bed with a beautiful canopy overhanging it.  The
 curtains that are draped over the sides are just thick enough so that you
 are not able to see the person inside clearly, but are thin enough to let
 even the slightest breeze waft through them.  There are numerous dressers
-lining the walls with many mirrors to match.  
+lining the walls with many mirrors to match.
 ~
 0 8 0
 Rd     0
@@ -1383,7 +1383,7 @@ desk before you with a great number of papers strewn about in a haphazard
 way.  Numerous paintings line the walls with the names of the past mayors
 inscribed in stone below them.  By the look of the quality of the paintings,
 you are able to ascertain that the people of this village hold the mayor in
-high regard.  
+high regard.
 ~
 0 8 0
 Rd     0
@@ -1402,7 +1402,7 @@ Kitchen~
 The kitchen of the mayor's house is very well equipped.  There is a chef
 hard at work preparing the next meal for the household.  The smell of fresh
 bread and spices mixed together for the main course causes your stomach to
-roll over in agony.  
+roll over in agony.
 ~
 0 8 0
 Rd     0
@@ -1416,7 +1416,7 @@ Second Street~
 This street seems to be a pretty common place.  You find nothing special
 about it other than the strange design of it.  You find that the center of
 it is higher than the outer edges.  You wonder to yourself why they would do
-such a thing.  You continue on thinking it is a mistake on their part.  
+such a thing.  You continue on thinking it is a mistake on their part.
 ~
 0 0 1
 Rd     0
@@ -1440,7 +1440,7 @@ center of the road slightly higher than the edges.  Further to the east you
 can hear the voices of women yelling at someone or something.  You also hear
 the clanging of dishes and the smell of food wafting through the air.  The
 sounds of the main street and the village square are faint here; this area
-looks to be more like the residential area of the village.  
+looks to be more like the residential area of the village.
 ~
 0 0 1
 Rd     0
@@ -1463,7 +1463,7 @@ As you come to Whitehorse Road, you see numerous houses to the east and
 to the south.  Little streams of smoke seem to be drifting out of their
 chimneys.  You examine the houses and notice their precise design.  The
 carpenters of this village are very gifted with their skills.  Above the
-door to the east it reads, 'House of Graknor'.  
+door to the east it reads, 'House of Graknor'.
 ~
 0 0 1
 Rd     0
@@ -1496,7 +1496,7 @@ S
 Whitehorse Road~
 Whitehorse Road is a quiet residential area of town.  Trees line the
 street and small flowerboxes add a splash of color to the area.  Somewhere
-off in the distance you hear a mother chastising her child.  
+off in the distance you hear a mother chastising her child.
 ~
 0 0 1
 Rd     0
@@ -1506,7 +1506,7 @@ Trees line both sides of the road providing a nice shady area.
 ~
 E
 flowerbox~
-Flowerboxes filled with flowers add a spray of color to the area.  
+Flowerboxes filled with flowers add a spray of color to the area.
 ~
 D0
 ~
@@ -1525,7 +1525,7 @@ S
 Whitehorse Road~
 The road runs north and south from here, leading through the residential
 area of town.  Small houses line the streets, most of them with beautiful
-gardens adding a vast array of colors to the area.  
+gardens adding a vast array of colors to the area.
 ~
 0 0 1
 Rd     0
@@ -1558,7 +1558,7 @@ are extremely clean compared to those of other villages you have seen
 before.  There is absolutely no overgrowth on the path from the grass
 growing nearby.  The grass in the yards of the houses are also free of weeds
 and finely cut.  You are amazed by the amount of work put into keeping the
-village a respectful place to visit.  
+village a respectful place to visit.
 ~
 0 0 1
 Rd     0
@@ -1582,9 +1582,9 @@ S
 #5018
 House of Greter~
 As you enter the House of Greter, you notice the wonderful decor of the
-room.  There are many pieces of furniture all set carefully in their place. 
+room.  There are many pieces of furniture all set carefully in their place.
 The floor is spotless and devoid of any sign of dirtiness.  The owner of
-this house must take great pride in it.  
+this house must take great pride in it.
 ~
 0 8 0
 Rd     0
@@ -1602,7 +1602,7 @@ A Small Path~
 You are following a well packed dirt trail.  Not far to the south you can
 see a huge keep rise up before you.  On top of the walls you can see guards
 patrolling the city perimater.  The trees that line the path prevent you
-from entering the forest at all from here.  
+from entering the forest at all from here.
 ~
 0 4 0
 Rd     0
@@ -1621,7 +1621,7 @@ You are in the House of Kewkop.  It seems that the main residents of this
 house are children judging by the toys lying all over the place.  The floor
 is sticky from some spill that no one has cleaned up and the sleeping area
 looks like a hurricane has swept through it.  Somewhere off in the distance
-you hear the mischievous laughter of a child.  
+you hear the mischievous laughter of a child.
 ~
 0 8 0
 Rd     0
@@ -1631,7 +1631,7 @@ Ewwww something sticky is on the floor.
 ~
 E
 toys~
-Toys lay about the floor everywhere. 
+Toys lay about the floor everywhere.
 ~
 E
 bed~
@@ -1648,7 +1648,7 @@ The path is very easy to travel on, it is in good repair and has been
 well cared for.  The trees of the forest around you form a barrier between
 you and the wild animals in its bowels.  You hear the odd scream of some
 animal being eaten by another and quickly continue on your way, even with
-the knowledge that you are safe.  
+the knowledge that you are safe.
 ~
 0 4 0
 Rd     0
@@ -1667,7 +1667,7 @@ As you enter the House of Barkfor, you see that this is not as well
 furnished as the other houses you have seen in the village.  There are two
 chairs, a table and a bed with a dresser.  You look around and see that
 there is a wedding dress lying across one of the chairs.  This must be the
-house of a newly married couple.  That would explain the lack of furniture. 
+house of a newly married couple.  That would explain the lack of furniture.
 ~
 0 8 0
 Rd     0
@@ -1693,7 +1693,7 @@ The wedding dress is white and layed with loving care across a chair.
 ~
 E
 dress~
-The wedding dress is white and layed with loving care across a chair.  
+The wedding dress is white and layed with loving care across a chair.
 ~
 D0
 ~
@@ -1705,8 +1705,8 @@ Main Street~
 The street continues on to the south towards all of the hustle and bustle
 of activity.  You notice decorations lining the entrance to the &CVillage
 Square&c.  It must be the time of year for their festival.  Over all of the
-sounds of the crowd, there is one man's voice that overshadows them all. 
-You wonder from whom it is coming from.  
+sounds of the crowd, there is one man's voice that overshadows them all.
+You wonder from whom it is coming from.
 ~
 0 0 1
 Rd     0
@@ -1725,7 +1725,7 @@ As you enter the &CVillage Square&c, it finally occurs to you what all of
 the excitement is about.  The square is filled with people bustling about
 their daily business.  A crowd has gathered in one section of the square,
 attentively listening to the gleeman telling his magickal stories.  The
-square itself is paved with black flagstone that is kept in perfect repair. 
+square itself is paved with black flagstone that is kept in perfect repair.
 ~
 0 0 1
 Rd     0
@@ -1760,7 +1760,7 @@ There are trees scattered throughout the village square which adds to the
 feeling of being out in the wilderness.  It helps the Vale people to forget
 about the great walls surrounding the village that protects them from the
 dangerous creatures of the outside world.  You begin to feel that same
-feeling of freedom.  
+feeling of freedom.
 ~
 0 0 1
 Rd     0
@@ -1784,7 +1784,7 @@ a nest so it can bear its young.  The bird is constantly flying to and fro
 bringing back suitable objects to build its home.  You find it very relaxing
 watching this creature go about its work.  But the cat at the base of the
 tree does not share the same feelings as you do.  It sees this tiny bird as
-a snack before dinner.  
+a snack before dinner.
 ~
 0 0 1
 Rd     0
@@ -1817,10 +1817,10 @@ S
 &CVillage Square&w~
 As you wander through the village square and try to get through all of
 the people watching the Gleeman, you are surprised to see three young boys
-who are paying absolutely no attention to the Gleeman and his stories. 
+who are paying absolutely no attention to the Gleeman and his stories.
 Instead they are kneeling on the ground playing &.marbles&c.  You are amazed
 that they, like the rest of the village, are not caught up in the Gleeman's
-tales.  
+tales.
 ~
 0 0 1
 Rd     0
@@ -1855,7 +1855,7 @@ There is a beautiful &.flower &ggarden&c on this side of the square.  You
 take time to take in the beauty of this carefully planted garden.  There are
 numerous insects flying around to gather &Ypollen&c or find some other food.
 The scent of the &.&.flowers&c is one that one does not experience very often
-due to the limited amount of these &.flowers&c.  
+due to the limited amount of these &.flowers&c.
 ~
 0 0 1
 Rd     0
@@ -1890,7 +1890,7 @@ The village square is lined with spectacular gardens and trees.  Tiny
 birds flutter from branch to branch adding their musical voices to those of
 the crowds that wander through the square.  The black flagstones underfoot
 are a natural contrast to the array of colors from the gardens.  In the
-middle of one of the gardens you notice a small plaque.  
+middle of one of the gardens you notice a small plaque.
 ~
 0 0 1
 Rd     0
@@ -1904,7 +1904,7 @@ bird~
 ~
 E
 trees~
-Trees line the square providing shade for those that use the area.  
+Trees line the square providing shade for those that use the area.
 ~
 E
 flowers~
@@ -1946,12 +1946,12 @@ E
 plaque~
 Here stands a memorial to the great Morgan Leah.  One of the first
 settlers of this great home of ours and one of the best warriors to
-originate from here.  
+originate from here.
 ~
 E
 statue~
 The statue is in the likeness of Morgan Leah, one of the first settlers
-and a great warrior.  
+and a great warrior.
 ~
 D0
 ~
@@ -1976,7 +1976,7 @@ The smell of leather mixed with the smell of sweat fills the air.  A pile
 of newly sewn leather pouches lies stacked haphazardly on a table and scraps
 of cut, unusable leather lay strewn about the floor under a long work table.
 Displays of leather pouches, jerkins and various other leather work line the
-shelves.  
+shelves.
 ~
 0 1036 0
 Rd     0
@@ -1986,15 +1986,15 @@ Leather pouches lay haphazardly on tables.
 ~
 E
 floor~
-The floor is covered with old scraps of leather.  
+The floor is covered with old scraps of leather.
 ~
 E
 leather~
-The floor is covered with old scraps of leather.  
+The floor is covered with old scraps of leather.
 ~
 E
 table~
-The floor under the table is covered with old scraps of leather.  
+The floor under the table is covered with old scraps of leather.
 ~
 E
 display~
@@ -2012,7 +2012,7 @@ As you enter the bakery, you are overcome by the sweet smell of freshly
 made pastries and other food.  Bins of freshly baked bread send up a mouth
 watering aroma to draw in shoppers that walk past on the street.  There are
 numerous amounts of fresh pastries and other products lining the shelves in
-full view of those that would peek in the door to tempt their taste buds.  
+full view of those that would peek in the door to tempt their taste buds.
 ~
 0 1036 0
 Rd     0
@@ -2026,7 +2026,7 @@ Bins of bread line the walls.
 ~
 E
 pastries~
-Every imaginable pastry lines the shelf, calling to those that pass by.  
+Every imaginable pastry lines the shelf, calling to those that pass by.
 ~
 D3
 ~
@@ -2039,7 +2039,7 @@ As you enter the store, you are overcome by a &wcloud&c of &zfoul
 smelling &psmoke&c. This must be the doings of the village &.Magician&c. He must
 be getting his potions mixed incorrectly.  You can hear curses coming from
 somewhere in the clouded room.  There are numerous amounts of vials and
-bottles of pills lining the walls on top of rows of shelves.  
+bottles of pills lining the walls on top of rows of shelves.
 ~
 0 12 0
 Rd     0
@@ -2066,7 +2066,7 @@ The path is well packed and easy to travel; it has obviously seen much
 travel over the years.  The forest around you is totally black and quite
 spooky looking.  You hear howls echoing through the trees and are very happy
 that there is a natural barrier of trees between you and whatever is making
-that noise.  
+that noise.
 ~
 0 0 0
 Rd     0
@@ -2085,7 +2085,7 @@ You are walking along a small trail through the dense forest.  The trail
 is packed hard beneath your feet and kept fairly clear of rubble.  You can
 hear the wildlife in the forest that lines both sides of the path, but find
 it impossible to squeeze through the trees to enter the forest.  Not that
-you would want to enter the utter blackness around you.  
+you would want to enter the utter blackness around you.
 ~
 0 0 0
 Rd     0
@@ -2103,7 +2103,7 @@ A Small Path~
 You are walking along a small trail through the dense forest.  The trail
 is packed hard beneath your feet and kept fairly clear of rubble.  You can
 hear the wildlife in the forest that lines both sides of the path, but find
-it impossible to squeeze through the trees to enter the forest.  
+it impossible to squeeze through the trees to enter the forest.
 ~
 0 0 0
 Rd     0
@@ -2121,7 +2121,7 @@ A Small Path~
 You are walking along a small trail through the woods, not far from the
 main road.  The trees grow very close together and it is almost impossible
 to leave the pathway.  The ground is well packed beneath your feet; it is
-obvious that this is a well used trail.  
+obvious that this is a well used trail.
 ~
 0 0 0
 Rd     0
@@ -2139,7 +2139,7 @@ S
 The village square is lined with spectacular gardens and trees.  Tiny
 birds flutter from branch to branch adding their musical voices to those of
 the crowds that wander through the square.  The black flagstones underfoot
-are a natural contrast to the array of colors from the gardens.  
+are a natural contrast to the array of colors from the gardens.
 ~
 0 0 1
 Rd     0
@@ -2157,7 +2157,7 @@ S
 The village square is lined with spectacular gardens and trees.  Tiny
 birds flutter from branch to branch adding their musical voices to those of
 the crowds that wander through the square.  The black flagstones underfoot
-are a natural contrast to the array of colors from the gardens.  
+are a natural contrast to the array of colors from the gardens.
 ~
 0 0 1
 Rd     0
@@ -2175,7 +2175,7 @@ The flowers add a splash of colors to the area.
 ~
 E
 trees~
-Trees line the square providing shade for those that use the area.  
+Trees line the square providing shade for those that use the area.
 ~
 E
 bird~
@@ -2196,13 +2196,13 @@ The path now takes a sharp turn to the east.  You notice that you are
 amongst a great number of trees growing in the area.  You wonder how they
 were able to build this village without sacrificing a great number of trees.
 It is a joy to be able to see so many trees in a village like this.  The
-shade on a hot day must be fabulous.  
+shade on a hot day must be fabulous.
 ~
 0 0 1
 Rd     0
 E
 path~
-The road way is well cared for.  
+The road way is well cared for.
 ~
 E
 trees~
@@ -2222,7 +2222,7 @@ Whitehorse Road~
 The road comes to a dead-end here, and you notice that there are houses
 to the east, north and south of you.  Each house has a sign above the door
 proclaiming the name of the family that resides at each place.  Trees circle
-the end of the road affording each house with a bit of privacy.  
+the end of the road affording each house with a bit of privacy.
 ~
 0 0 1
 Rd     0
@@ -2232,7 +2232,7 @@ Each house has a sign over its door with the owner's name on it.
 ~
 E
 tree~
-Trees line the roadway, providing some privacy for the homes.  
+Trees line the roadway, providing some privacy for the homes.
 ~
 D0
 ~
@@ -2258,7 +2258,7 @@ you notice a cookie jar toppled over and empty.  The floor is perfectly
 clean except for path of tiny muddy human footprints matched by a set of
 dragon prints.  The house is crowded but clean, with neatly made beds in the
 north end of the large room and chairs around a fireplace at the south end
-of the living area.  
+of the living area.
 ~
 0 8 0
 Rd     0
@@ -2276,7 +2276,7 @@ The counter holds a knocked over, empty cookie jar.
 ~
 E
 floor~
-Small human and dragon muddy footprints lead across the floor.  
+Small human and dragon muddy footprints lead across the floor.
 ~
 E
 fireplace~
@@ -2300,7 +2300,7 @@ House of Graknor~
 As you enter the house of Graknor, you notice that it is not just a house
 but an inn as well.  There are numerous amounts of people sitting in the
 common room eating and passing gossip back and forth.  Young girls wait on
-the customers, seeing to their every need.  
+the customers, seeing to their every need.
 ~
 0 8 0
 Rd     0
@@ -2323,14 +2323,14 @@ The heat of the blacksmith's workplace is almost unbearable.  The heat
 that is generated to change worthless pieces of metal into wonderful works
 of art is so extreme that you begin to feel streams of sweat trickling down
 your brow and onto your face.  There are numerous weapons and armor hanging
-on the wall for adventurers like yourself to choose from.  
+on the wall for adventurers like yourself to choose from.
 ~
 0 1036 0
 Rd     0
 E
 weapons~
 Daggers, swords and every other weapon imaginable is on display to be
-sold.  Most if them are intricately designed so as to make each unique.  
+sold.  Most if them are intricately designed so as to make each unique.
 ~
 D3
 ~
@@ -2339,10 +2339,10 @@ D3
 S
 #5045
 Lookout Tower~
-You are in what appears to be a stairway to the lookout tower above. 
+You are in what appears to be a stairway to the lookout tower above.
 There are a great many scratches on the walls due to the hasty movement of
 soldiers and their swords rubbing against the walls.  The stairway smells of
-dense sweat from the overworked gaurds.  
+dense sweat from the overworked gaurds.
 ~
 0 8 1
 Rd     0
@@ -2363,7 +2363,7 @@ through the forest if they even dared to try it.  The guards also have a
 good view of the village and the surrounding area.  It would be very easy
 for the guards to sound the alarm and have the rest of the village prepared
 for any type of danger.  By the looks of the arsenal here, the guards would
-be able to handle almost anything that tried to gain entry.  
+be able to handle almost anything that tried to gain entry.
 ~
 0 0 1
 Rd     0
@@ -2379,7 +2379,7 @@ appear to be made of a strange type of metal that you have never seen
 before.  You estimate that the walls are at least two paces thick.  You
 marvel at the great amount of trouble that the small village has gone to
 keep their valuables safe.  You see many different types of treasures lining
-the shelves on the walls around you.  
+the shelves on the walls around you.
 ~
 0 8 0
 Rd     0
@@ -2391,8 +2391,8 @@ S
 #5049
 The Entrance to the Village Treasury~
 You enter what appears to be the village vault.  There are numerous
-scrolls and piles of papers lining the shelves on either side of the vault. 
-You notice to the north there is a small strange metal door.  
+scrolls and piles of papers lining the shelves on either side of the vault.
+You notice to the north there is a small strange metal door.
 ~
 0 8 0
 Rd     0

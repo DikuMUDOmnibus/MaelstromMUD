@@ -1,5 +1,5 @@
 #AREADATA
-Name        { ALL }  Gegasean Camp       Decklarean~
+Name        Gegasean Camp~
 Levels      0 0
 Builders    Decklarean~
 VNUMs       6350 6499
@@ -18,9 +18,9 @@ the Gegasean Guard Dog~
 A Gegasean Guard Dog is here.
 ~
 The Gegasean Guard Dog glares at you with blood shot eyes.  Poisoned
-silavia drips from it's fangs.  It's fur is a sleek coat of dark blood red. 
+silavia drips from it's fangs.  It's fur is a sleek coat of dark blood red.
 It is a massive beast standing shoulder high to a humen, with dimond sharp
-claws.  
+claws.
 ~
 16481 505012970 0 0 S
 100 0 0 30000d0+0 0d0+0
@@ -40,7 +40,7 @@ The South Path Gegasean Guard is here.
 ~
 The Gegasean Guard is a stocky male elf covered in scars and missing his
 right ear.  His hair is pitch black and pulled back into a ponytail.  His
-dark green eyes have a sour expression.  
+dark green eyes have a sour expression.
 ~
 67 40 0 1000 S
 100 0 0 30000d0+0 0d0+0
@@ -66,7 +66,7 @@ Simara is here.
 Simara is a beutifull human women.  Her long red hair cascades down her
 back.  A little short of average hight she makes up for it a persence of
 personality.  There is a slight mischivous glint to here eyes and the faint
-smell of rose perfume wafting through the air.  
+smell of rose perfume wafting through the air.
 ~
 67 0 0 125 S
 100 0 0 30000d0+0 0d0+0
@@ -80,7 +80,7 @@ The East Path Gegasean Guard is here.
 ~
 The Gegasean Guard is a human women with short cropped black hair.  She
 has a scar running from here left jaw bone, up here cheek to here nose.  Her
-face is all hard and indeferent.  
+face is all hard and indeferent.
 ~
 67 0 0 500 S
 100 0 0 30000d0+0 0d0+0
@@ -105,7 +105,7 @@ The North Path Gegasean Guard is here.
 ~
 The Gegasean Guard is a tall lizard, its scales a fog grey.  Its tail
 constanly in motion refelct its mood.  A slight bone ridge runs from the top
-of its head down its back.  
+of its head down its back.
 ~
 67 0 0 150 S
 100 0 0 30000d0+0 0d0+0
@@ -129,7 +129,7 @@ the West Path Gegarean Guard~
 The West Path Gegarean Guard is here.
 ~
 The Gegarean Guard is a sour faced humen male.  He is completly bald and
-buldging with muscles.  
+buldging with muscles.
 ~
 67 0 0 0 S
 100 0 0 30000d0+0 0d0+0
@@ -190,18 +190,18 @@ reserved~
 0 0 0
 E
 copper~
-The copper vial has the mark of the Gegasean etched into the side of it. 
-There appears to be a slugish black fluid inside it.  
+The copper vial has the mark of the Gegasean etched into the side of it.
+There appears to be a slugish black fluid inside it.
 ~
 E
 vial~
-The copper vial has the mark of the Gegasean etched into the side of it. 
-There appears to be a slugish black fluid inside it.  
+The copper vial has the mark of the Gegasean etched into the side of it.
+There appears to be a slugish black fluid inside it.
 ~
 E
 gegasean~
-The copper vial has the mark of the Gegasean etched into the side of it. 
-There appears to be a slugish black fluid inside it.  
+The copper vial has the mark of the Gegasean etched into the side of it.
+There appears to be a slugish black fluid inside it.
 ~
 #6352
 gegasean giant vial potion~
@@ -266,17 +266,17 @@ reserved~
 E
 gegasean~
 The vial of potion has the gegasean mark on it.  In side it there is a
-slightly green humming potion.  
+slightly green humming potion.
 ~
 E
 humming~
 The vial of potion has the Gegasean mark on it.  In side it there is a
-slightly green humming potion.  
+slightly green humming potion.
 ~
 E
 potion~
 The vial of potion has the Gegasean mark on it.  In side it there is a
-slightly green humming potion.  
+slightly green humming potion.
 ~
 #6355
 alter~
@@ -294,7 +294,7 @@ E
 alter~
 The alter to Kristiana, Lady of Mortal Affairs, is made out of solid
 gold.  It glows with power, refelecting the raidating light from the pure
-soul of the Immortal it is dedicated to.  
+soul of the Immortal it is dedicated to.
 ~
 >rand_prog 5~
 0
@@ -353,10 +353,10 @@ cast 'cure critical' $r
 #ROOMDATA
 #6350
 South Path~
-&zTo the south the sounds of the world drift towards you on a faint wind. 
+&zTo the south the sounds of the world drift towards you on a faint wind.
 To the north the distent murmor of a different world calls.  The gravel path
 beneath you and the strange almost comftroble weather engulfing you.  You
-are surronded on all sides by a strangly glowing grey fog.  
+are surronded on all sides by a strangly glowing grey fog.
 ~
 0 434180 0
 Rd     0
@@ -372,7 +372,7 @@ life of it's own.  To the south the sounds of the world drifts to you on a
 faint breeze carresing you with a reminder of what you have left behind.  To
 the north the sounds of another world drifts through the grey.  Off the side
 of the gravel path you can see the fountain of Bethaven as almost a faint
-illusion beneith you when the fog thins for a moment.  
+illusion beneith you when the fog thins for a moment.
 ~
 0 176611853 0
 Rd     0
@@ -395,7 +395,7 @@ South Path~
 twists in strange patterns.  Looking down on the side of the gravel path you
 see the path again stretching through the fog directly under you.  The
 sounds of the world to the south is faint to your ears.  The sounds of a
-strange world drift to you on a breeze of mist, flowing from the north.  
+strange world drift to you on a breeze of mist, flowing from the north.
 ~
 0 176603661 0
 Rd     0
@@ -418,7 +418,7 @@ South Path~
 seems faint and indestinct from the south.  From the north the sounds of a
 different world grows louder and more consuming.  Off the side of the gravel
 path you walk on, you can see below you the path again.  In some strange way
-you are walking above the place you have just been without going up.  
+you are walking above the place you have just been without going up.
 ~
 0 176603661 0
 Rd     0
@@ -441,7 +441,7 @@ South Path~
 comes from the south.  To the north a strange world burst apon your senses
 as noise, smells, and feelings wash across you.  The sudden drop off at the
 edges of the gravel path leads down to the path again with a fall through
-the grey fog.  
+the grey fog.
 ~
 0 176603661 0
 Rd     0
@@ -465,7 +465,7 @@ battle within it.  From the north you can see the bright lights of fires and
 faint music and the murmer of people.  To the south the feel of the world
 you belong to tugs faintly at you.  The gravel path beneith you is a
 constant, strecthing north and south and appearing to some how be below you
-and behind you at the same time.  
+and behind you at the same time.
 ~
 0 176603661 0
 Rd     0
@@ -488,8 +488,8 @@ South Path~
 north.  The warm glow of campfires, the smell of cooking, and the familier
 murmer of people raidates from the other side of the arch.  To the south you
 can faintly feel the world you are from but it is like a fading memory on
-the edge of thought.  The glowing fog is almost a physical wall around you. 
-Off the side of the path you see the gravel path again below you.  
+the edge of thought.  The glowing fog is almost a physical wall around you.
+Off the side of the path you see the gravel path again below you.
 ~
 0 176611853 0
 Rd     0
@@ -888,9 +888,9 @@ Rd     0
 E
 bars~
 The bars are of a heavy magical material.  Through them you can see the
-Gegasean Guard Dogs flicker in and out of existence as they move about. 
+Gegasean Guard Dogs flicker in and out of existence as they move about.
 They are vishes animals that growl and snap at the bars when ever you move
-close.  
+close.
 ~
 D0
 ~
@@ -902,9 +902,9 @@ D1
 0 0 6403
 D3
 The bars are of a heavy magical material.  Through them you can see the
-Gegasean Guard Dogs flicker in and out of existence as they move about. 
+Gegasean Guard Dogs flicker in and out of existence as they move about.
 They are vishes animals that growl and snap at the bars when ever you move
-close.  
+close.
 ~
 bars~
 375 0 6401
@@ -1052,9 +1052,9 @@ Rd     0
 E
 bars~
 The bars are of a heavy magical material.  Through them you can see the
-Gegasean Guard Dogs flicker in and out of existence as they move about. 
+Gegasean Guard Dogs flicker in and out of existence as they move about.
 They are vishes animals that growl and snap at the bars when ever you move
-close.  
+close.
 ~
 D0
 ~
@@ -1066,9 +1066,9 @@ D1
 0 0 6412
 D2
 The bars are of a heavy magical material.  Through them you can see the
-Gegasean Guard Dogs flicker in and out of existence as they move about. 
+Gegasean Guard Dogs flicker in and out of existence as they move about.
 They are vishes animals that growl and snap at the bars when ever you move
-close.  
+close.
 ~
 bars~
 375 0 6401

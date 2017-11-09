@@ -1,5 +1,5 @@
 #AREADATA
-Name        {??-???} PROTO AREA          Arch~
+Name        PROTO AREA~
 Levels      0 0
 Builders    Isabo Dolguard~
 VNUMs       2300 2399
@@ -49,7 +49,7 @@ endif
 >speech_prog p kill~
 say &R Oh??  You want to fight?
 say &R Why don't you pick on me tough guy?
-say &R I'll kick your but so bad your gonna feel 
+say &R I'll kick your but so bad your gonna feel
 say &R it for years.
 mpoload 2307
 mpoload 2308
@@ -61,7 +61,7 @@ mpkill $n
 >speech_prog p peace~
 &C say &C Oh, sorry about losing control
 say &C I just go nuts when I hear
-say &C that word.  
+say &C that word.
 rem all
 mpjunk all
 ~
@@ -70,7 +70,7 @@ say &C
 say A long time ago, the criminal
 say system was a mess and banned
 say all females whom had created
-say a crime here.  Females from 
+say a crime here.  Females from
 say around the world were brought
 say here to complete their sentence
 say but as civilization advanced
@@ -81,12 +81,12 @@ say became.  One day a mysterious
 say mist travelling from the south
 say settled here.  Warriors, army's
 say were sent here to investigate
-say this strange phenomenon, and 
+say this strange phenomenon, and
 say once in never came back out.
 say and over the years the people
 say named this place Lairich the
 say Valley of Mist.  A place that
-say whoever ventures in it never 
+say whoever ventures in it never
 say comeout.
 ~
 >speech_prog p hello~
@@ -95,12 +95,12 @@ or name($n) == Dolguard
 worship $n
 salute $n
 endif
-say &C Hello, I am the guardian of 
-say &C this area.  
+say &C Hello, I am the guardian of
+say &C this area.
 say &G My name is Alreha
 ~
 >death_prog 100~
-say &G Ack!!  You have beaten me! 
+say &G Ack!!  You have beaten me!
 say &R I will use the rest of my energy
 say &R and go somewhere else to die.
 east
@@ -131,7 +131,7 @@ say and you don't want that.
 >speech_prog p bad~
 growl
 say &R I hate you, your always in a bad mood
-say &R i should kill you right now, just for 
+say &R i should kill you right now, just for
 say &R being so negative about life itself.
 say &R just say the word and your dead.
 ~
@@ -188,7 +188,7 @@ The Fat Turkey wonders around the room and cuddles Alreha.
 0 0 2
 0 0 0
 >rand_prog 20~
-say &R Cockledoodledue!!  
+say &R Cockledoodledue!!
 point $r
 rofl
 ~
@@ -201,7 +201,7 @@ A petite woman stands here rolling out dough.
 Lori almost resembles a halfling with her relatively small size and round
 face, but she's clearly human lacking several of the common physical
 characteristics of halflings.  She's wearing a dark blue apron covered with
-dough.  
+dough.
 ~
 67 40 0 650 S
 25 0 0 1415d0+0 0d0+0
@@ -216,7 +216,7 @@ Vareth stands here attempting you to buy one of his fine wares.
 Heavy-set and armed to the teeth this young storeowner doesn't seem to be
 one you want to mess with.  He has a sword belted across his waist and a
 dagger sheathed within his tunic also adding to your suspicion that this man
-knows how to sell and wield his weapons.  
+knows how to sell and wield his weapons.
 ~
 67 168 0 750 S
 30 0 0 1560d0+0 0d0+0
@@ -232,7 +232,7 @@ You size the guard up with your glance noticing his rather well trained
 stance, ready to handle any problems this town may incur.  One hand lies
 above his eyes shielding them from the sky's light while the other rests on
 the hilt of his sword.  His armor glistens with an almost glassy look while
-made of chain rings making you wonder if it's completely natural.  
+made of chain rings making you wonder if it's completely natural.
 ~
 67 40 0 1000 S
 25 0 0 1420d0+0 0d0+0
@@ -287,7 +287,7 @@ returning to his work.  A dagger is sheathed at his belt along with a sword
 on the opposite side.  His gauntlets are removed and lying beside him while
 he works making his armor look incomplete.  His dark eyes once again look up
 at you as he removes his axe from his place across his back.  Something
-makes you think now would be a good time to leave him be.  
+makes you think now would be a good time to leave him be.
 ~
 67 8360 0 1000 S
 35 0 0 1775d0+0 0d0+0
@@ -322,7 +322,7 @@ Arch's familar, a black lion, is here looking closely at you.
 A large lion with silken fur as black as a starless night stands proudly
 before you.  He looks at you with intelligent sky blue eyes and you feel as
 if he's looking into your very soul.  He casually unsheaths a razor sharp
-claw to remind you that he's more than capable of protecting his master.  
+claw to remind you that he's more than capable of protecting his master.
 ~
 323 268435466 0 1000 S
 1 0 0 100000d0+0 0d0+0
@@ -718,7 +718,7 @@ Commerce Road~
 Rd     0
 D0
 The words, "Talmes' Armor Shop & Blacksmity" are chisled into a rusted,
-metal sign fastened to the door.  
+metal sign fastened to the door.
 ~
 entrance~
 3 0 2314
@@ -764,7 +764,7 @@ D0
 0 0 2310
 D1
 The words, "Rhelien Town Barracks", are carved roughly within the deep
-set oak door guarding this two story building.  
+set oak door guarding this two story building.
 ~
 entrance~
 3 0 2307
@@ -779,8 +779,8 @@ Rhelien Barracks~
 0 0 0
 Rd     0
 D1
-The letters, "Captain's Office", are etched in the middle of the door. 
-Underneath that lies a smaller note reading, "Do not disturb."  .  
+The letters, "Captain's Office", are etched in the middle of the door.
+Underneath that lies a smaller note reading, "Do not disturb."  .
 ~
 entrance~
 3 0 2382
@@ -832,7 +832,7 @@ D2
 0 0 2306
 D3
 A large, ornate sign outlined in bright silver reading, "Aegean's Magic
-Supplies and Potions Store", hangs upon the door.  
+Supplies and Potions Store", hangs upon the door.
 ~
 entrance~
 3 0 2315
@@ -924,7 +924,7 @@ Further into Nairich~
 0 0 0
 Rd     0
 D0
-A large sign reading, "Vareth's Weaponery", hangs upon the door here.  
+A large sign reading, "Vareth's Weaponery", hangs upon the door here.
 ~
 entrance~
 3 0 2321
@@ -947,7 +947,7 @@ D1
 ~
 0 0 2301
 D2
-Carved in crude letters, "Lori's Bakery", adorns the center of the door.  
+Carved in crude letters, "Lori's Bakery", adorns the center of the door.
 ~
 entrance~
 3 0 2320
@@ -960,7 +960,7 @@ strikes you as a little odd, although that could be so more space could be
 made for shelves and cupboards like the ones that cover the walls in all
 directions.  A cauldron sits over a small fire surrounded by cobblestones to
 make a firepit.  Beneath the cupboards runs a long counter running the
-length of the west wall and bending down the south one some.  
+length of the west wall and bending down the south one some.
 ~
 0 0 0
 Rd     0
@@ -972,10 +972,10 @@ S
 #2321
 Vareth's Weaponery~
 The scent of rusty metal lays thick in the air of this small shop.  Along
-each wall weapons are set upon racks or pegs holding them up for display. 
+each wall weapons are set upon racks or pegs holding them up for display.
 The only organization to the pattern seems to be by type, with swords to the
 back of the room, axes to your west and assorted staffs or spears along the
-east wall.  A long tail stands at the back of the room.  
+east wall.  A long tail stands at the back of the room.
 ~
 0 0 0
 Rd     0
@@ -991,7 +991,7 @@ North Hollow Avenue~
 Rd     0
 D1
 A large, weather beatten sign reading, "Long Shade Inn", raps back and
-forth upon the surface of the door as wind nudges it about.  
+forth upon the surface of the door as wind nudges it about.
 ~
 entrance~
 3 0 2323
@@ -1373,9 +1373,9 @@ S
 #2350
 North of Entrance to the lairich~
 &b^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-&wYou have decided to brave the mist and the unknown and the unseen. As you 
+&wYou have decided to brave the mist and the unknown and the unseen. As you
 &w venture further in, you sense this eerie presence all around yet you cannot
-&wphathom the source nor can you see it. You only sense an awesome power. 
+&wphathom the source nor can you see it. You only sense an awesome power.
 &wYou can only see a few feet around you and then the &zgrey &wblanket that
 &wconsumes the rest. There are strange looking plants in hues of &Bblue &wand
 &Wwhite &wlying all around in a hazy blur.

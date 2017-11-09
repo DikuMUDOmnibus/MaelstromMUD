@@ -1,7 +1,7 @@
 #AREADATA
-Name        {  IMM } Hall of the Gods    Kadyr~
+Name        Hall of the Gods~
 Levels      0 0
-Builders    Sherf~
+Builders    Sherf Kadyr~
 VNUMs       2200 2299
 Security    0
 Recall      25001
@@ -55,7 +55,7 @@ manifested themselves upon the physical world.  Looking closely you see
 flashes of pain, fear, despair, and hate sweep across the faces which rise
 to the surface of this hovering mass.  To fight this abomination is useless,
 for only Grunt himself can release it from this world, and that is a
-difficult task, even for him.  
+difficult task, even for him.
 ~
 67 100679720 0 -1000 S
 115 0 0 999999d0+0 0d0+0
@@ -119,7 +119,7 @@ if name ($n) == Barlow
 say Thank you sir, may i have another.
 say I like it, I love it, I want more of it.
 emote bends over your knee.
-else 
+else
 smile $n
 say Spank your own monkey pervert!
 say this will teach you!
@@ -133,12 +133,12 @@ endif
 >speech_prog p go get me a woman!~
 if name ($n) == barlow
 emote twiddles his paws in the air.
-say a blond nympho tonight barlow? 
+say a blond nympho tonight barlow?
 mpmload 11898
 say She is hot and ready tonight barlow.
 emote rubs his paws all over the nympho.
 mpforce nymphette nasty barlow
-else 
+else
 cackle $n
 say go get your own woman, you ugly bum!
 laugh $n
@@ -169,7 +169,7 @@ endif
 ~
 >rand_prog 0~
 look cujo
-say darn, that Barlow is &.cool, eh? 
+say darn, that Barlow is &.cool, eh?
 emote looks around the room, man he sure loves &.Eos.
 endif
 ~
@@ -299,8 +299,8 @@ Artemis' Garden~
                                  %$$
               %%%%%%%%%ddsf%ffdss%$$%sdfgfd%%%%%%%
                       %%%%%%%%%%S$$`%%%%%%%%%%%%%%%%
- 
- 
+
+
 ~
 0 4 0
 Rd     0
@@ -324,7 +324,7 @@ S
 Phalse's Office~
 Welcome to Phalse's Drafting room.  Walking in you see plans tacked up
 everywhere.  In the center of the room is Phalse's Drafting Table (it too is
-covered with sketches, plans, etc.)  
+covered with sketches, plans, etc.)
 ~
 0 1028 0
 Rd     0
@@ -346,8 +346,8 @@ clouds~
 &WKnow ye that herein lie the rules that govern &BCREATION&W.  Out of the
 chaos of the premature destruction of &YThe Storm&W were we created, and out
 of this we must create order.  This is our duty and responsibility.  To this
-end, the following guidelines and procedures are to be met.  
- 
+end, the following guidelines and procedures are to be met.
+
 &B-&WIf an area is ready to be checked, it is your duty to make sure that it is
  complete and to inform &RThe Storm Lord&W and &BCreation Guildmaster&W.
 &B-&WIn doing this, you must state two(2) options of where you wish the area to be
@@ -374,7 +374,7 @@ end, the following guidelines and procedures are to be met.
 &B-&WAbove all, remember that we are here to serve &YThe Storm&W and are
  basically nothing more than glorified builders with administrative
  responsibilities.
- 
+
 ~
 E
 dreams~
@@ -386,7 +386,7 @@ need and where you will go with it. No idea is a bad idea, although
 modifications are often necessary. You all work very hard at what you
 do. We at The Storm appreciate you and send out our gratitude. Work
 hard, pace yourself and get things done right the first time.
- 
+
 A little ditty from Sherf. :)
 ~
 E
@@ -394,7 +394,7 @@ creation~
 &BCREATION is a team of kick-ass builders who strive on making their Mud
 a better and bigger Mud. Always looking to improve, improvise and add more
 exciting ways to enjoy your stay.
- 
+
 We rock.
 ~
 S
@@ -404,13 +404,13 @@ The room is very large and extremely cold, with no windows whatsoever as
 far as you can see.  The air is very damp and stale, and the dim light given
 off by a couple of flickering black candles is barely enough to see by.  The
 presence of some sort of dreary sorrow hangs about the room like a thick
-fog, enveloping you and attempting to suck you in.  
+fog, enveloping you and attempting to suck you in.
 ~
 0 84018712 0
 Rd     0
 E
 blah~
-Blah 
+Blah
 ~
 D5
 ~
@@ -420,19 +420,19 @@ S
 #2213
 REKLARS CAVE~
 &b&b&B&Y'' ' ' ''' ' '' ' ' '' ' ' ''' ' ' '' ' '' '' ' ' '' ' ' ' ''  ' ''''
-' ' ' ' '' ' '' ' ' '' ' ' ' '' ''' ''  '' ''''''''' ' '' ' ' ''''''' 
+' ' ' ' '' ' '' ' ' '' ' ' ' '' ''' ''  '' ''''''''' ' '' ' ' '''''''
 '''''' '' ' '      ' '' ' ' '     ' '' ' ' ' '' ' '  ' ' ''   ' '' ' '
-' ' ' ' '' ' '' ' ' '' ' ' ' '' ''' ''  '' ''''''''' ' '' ' ' ''''''' 
-' ' ' ' '' ' '' ' ' '' ' ' ' '' ''' ''  '' ''''''''' ' '' ' ' ''''''' 
-' ' ' ' '' ' '' ' ' '' ' ' ' '' ''' ''  '' ''''''''' ' '' ' ' ''''''' 
+' ' ' ' '' ' '' ' ' '' ' ' ' '' ''' ''  '' ''''''''' ' '' ' ' '''''''
+' ' ' ' '' ' '' ' ' '' ' ' ' '' ''' ''  '' ''''''''' ' '' ' ' '''''''
+' ' ' ' '' ' '' ' ' '' ' ' ' '' ''' ''  '' ''''''''' ' '' ' ' '''''''
 '''''' '' ' '      ' '' ' ' '     ' '' ' ' ' '' ' '  ' ' ''   ' '' ' '
 '''''' '' ' '      ' '' ' ' '     ' '' ' ' ' '' ' '  ' ' ''   ' '' ' '
-' ' ' ' '' ' '' ' ' '' ' ' ' '' ''' ''  '' ''''''''' ' '' ' ' ''''''' 
+' ' ' ' '' ' '' ' ' '' ' ' ' '' ''' ''  '' ''''''''' ' '' ' ' '''''''
 '''''' '' ' '      ' '' ' ' '     ' '' ' ' ' '' ' '  ' ' ''   ' '' ' '
-' ' ' ' '' ' '' ' ' '' ' ' ' '' ''' ''  '' ''''''''' ' '' ' ' ''''''' 
-' ' ' ' '' ' '' ' ' '' ' ' ' '' ''' ''  '' ''''''''' ' '' ' ' ''''''' 
+' ' ' ' '' ' '' ' ' '' ' ' ' '' ''' ''  '' ''''''''' ' '' ' ' '''''''
+' ' ' ' '' ' '' ' ' '' ' ' ' '' ''' ''  '' ''''''''' ' '' ' ' '''''''
 '''''' '' ' '      ' '' ' ' '     ' '' ' ' ' '' ' '  ' ' ''   ' '' ' '
-' ' ' ' '' ' '' ' ' '' ' ' ' '' ''' ''  '' ''''''''' ' '' ' ' ''''''' 
+' ' ' ' '' ' '' ' ' '' ' ' ' '' ''' ''  '' ''''''''' ' '' ' ' '''''''
 '''''' '' ' '      ' '' ' ' '     ' '' ' ' ' '' ' '  ' ' ''   ' '' ' '
 ~
 0 12 0
@@ -446,7 +446,7 @@ the only light in the room.  A deep plush couch seems to be Angi's favorite
 spot as it is where you can find her most nights.  Whether she is curled up,
 gazing into the romantic flames or sitting on the edge of the couch, working
 on the code, she's always here.  Feel privileged, and don't make a lot of
-noise.  This is Angi's special place.  
+noise.  This is Angi's special place.
 ~
 0 0 3
 Rd     0
@@ -470,7 +470,7 @@ picture~
 Setting your eyes on the wall, you are overcome with awe because of the
 beauty of the woman in the picture.  Her reddish hair is braided down her
 back, and just about touches the floor, attached to that hair is a beaming
-youthful face.  The picture is enscribed...  
+youthful face.  The picture is enscribed...
 &YMonique Dubeau, the Princess Ranger  87/02/18
 ~
 D0
@@ -483,7 +483,7 @@ Isabo's Room Of Strange Occurences~
 &CThis is Isabos playroom.  It is bright and cheerful with many toys to
 entertain you.  Only they are floating around of their own volition so
 beware of being hit.  A happy fireplace is in the center of the room with a
-cheerful &Yf&Ri&Or&Ye &Cblazing all around.  
+cheerful &Yf&Ri&Or&Ye &Cblazing all around.
 ~
 0 84289560 0
 Rd     0
@@ -502,7 +502,7 @@ ready for the next shift.  There are four desks piled high with papers,
 reports, empty take-out coffee mugs, junk food wrappers and the odd pair of
 handcufffs.  Xavier's desk is the largest and sits off to one side.  You can
 never tell if he is there or not, as it is impossible to see over the huge
-pile on his desk.  
+pile on his desk.
 ~
 0 12 0
 Rd     0
@@ -522,7 +522,7 @@ area over against the wall.  To your amazment, you realize that this place
 is what you finally deserve after all those years of battle, a nice quiet
 place to relax, swap lies about monsters you fought and complain about
 how today's warriors just don't seem as tough as in your day. Enjoy yourself
-here!  
+here!
 Look plaque for a list of fallen comrades and brothers-in-arms who we miss.
 ~
 0 4 0
@@ -533,7 +533,7 @@ Here is a list of fallen comrades whose passing we mourn:
 Belwar, KaLourin, Zleen, Kevin, Stargazer, Malabar, Misery, Tamarick, Galad,
 Insane, Annice, Aglovale, Narcissia, Nemesis, Brinna, Seryna, Trenz, Mik, Ozzy,
 Lance, Ishma, Sturm, Magius, Keirkan, Zalasta, Sin, Aldwin, Kalten, Muerte,
- 
+
 Any mistakes/others you'd like to see added, please send a note to Xavier.
 ~
 S
@@ -546,7 +546,7 @@ window, with a balcony where Flint can stretch out and relax.  Near the
 window, is a large wooden desk, that is covered with papers, books, and
 various implements of death.  Hanging over the doors, are a set of epees,
 crossed in the center of the blades.  A large slate pool table is sitting
-near the east wall.  
+near the east wall.
 ~
 0 4 0
 Rd     0

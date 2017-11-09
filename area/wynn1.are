@@ -1,5 +1,5 @@
 #AREADATA
-Name        {??-???} PROTO AREA          Wynn~
+Name        PROTO AREA~
 Levels      0 0
 Builders    Wynn~
 VNUMs       26201 26300
@@ -118,7 +118,7 @@ mirror reflection sensei~
 a reflection~
 A reflection of The Sensei stands before you.
 ~
-If you didn't know better you could swear that this reflection 
+If you didn't know better you could swear that this reflection
 is the real thing.  Every detail is exactly the same.
 ~
 67 34078848 16 1000 S
@@ -132,7 +132,7 @@ a student~
 A student stands here practicing a throw.
 ~
 The student is rather small, but you know that his size has no bases on
-his fighting ability.  All he wears are some white robes.  
+his fighting ability.  All he wears are some white robes.
 ~
 16449 134242336 16 750 S
 95 0 0 17600d0+0 0d0+0
@@ -144,9 +144,9 @@ trainer teacher~
 a trainer~
 A trainer is here showing a student a throw.
 ~
-As you look at this man you can tell he is very well suited for his job. 
+As you look at this man you can tell he is very well suited for his job.
 He's stout and well set, he needs no weapons, for his hands are deadlier
-than any weapon.  
+than any weapon.
 ~
 65 33579176 16 1000 S
 98 0 0 15000d0+0 0d0+0
@@ -333,7 +333,7 @@ The Training Yard~
 You stand in a giant training yard.  All arround you there are teachers
 showing various strikes to the less experianced students.  Off to the east
 and west you can see towers, to the north is the main entrance to the
-complex, and to the south is the gate.  
+complex, and to the south is the gate.
 ~
 0 0 0
 Rd     0
@@ -736,7 +736,7 @@ The Base of the Western Tower~
 You stand inside the base of a guard tower.  A set of stairs spirals
 upwards into the unknown.  You can hear yells comming from the east where
 thhe training yard lays.  Small squeeking sounds echo down the tower to
-register in your ears.  
+register in your ears.
 ~
 0 0 0
 Rd     0
@@ -754,7 +754,7 @@ The Training Yard~
 You stand in a giant training yard.  All arround you there are teachers
 showing various strikes to the less experianced students.  Off to the east
 and west you can see towers, and to the north is the main entrance to the
-main building.  
+main building.
 ~
 0 0 0
 Rd     0
@@ -775,7 +775,7 @@ S
 The Training Yard~
 You stand in a giant training yard.  All arround you there are teachers
 showing various strikes to the less experianced students.  Off to the east
-and west you can see towers, and to the north is the main building.  
+and west you can see towers, and to the north is the main building.
 ~
 0 0 0
 Rd     0
@@ -833,7 +833,7 @@ The Main Hallway~
 You are standing before the Sensei's meditation chamber.  Small beams of
 light burst from around the seams of the door.  The walls radiate with
 mystical energys, giving the room a magical glow.  The hall continues to the
-south, where you can see an intersection.  
+south, where you can see an intersection.
 ~
 0 0 0
 Rd     0
@@ -851,8 +851,8 @@ The Sensei's Meditation Chamber~
 You are standing in a brightly lit room.  All arround you there are
 candles burning, letting off a peaceful scent.  The walls are completely
 bare.  In the center of the room floats a man who appears to be deep in
-meditation.  To the south you can see a small door to exit the chamber by. 
-There also is a trapdoor inbedded in the ceiling.  
+meditation.  To the south you can see a small door to exit the chamber by.
+There also is a trapdoor inbedded in the ceiling.
 ~
 0 134619152 0
 Rd     0
@@ -1053,7 +1053,7 @@ As you reach the top of the stairs you are almost stunned by the
 surrounding country side.  All arround you there are trees and plant life
 that you never have seen before.  Off to the west the sun is slowly sinking
 behind a bank of clouds, causing the sky to be lit up in a spectacular array
-of &Rreds &Ppurples &Yand &Bblues.  
+of &Rreds &Ppurples &Yand &Bblues.
 ~
 0 0 0
 Rd     0
@@ -1068,7 +1068,7 @@ As you reach the top of the stairs you are almost stunned by the
 surrounding country side.  All arround you there are trees and plant life
 that you never have seen before.  Off to the west the sun is slowly sinking
 behind a bank of clouds, causing the sky to be lit up in a spectacular array
-of &Rreds &Ppurples &Yand &Bblues.  
+of &Rreds &Ppurples &Yand &Bblues.
 ~
 0 0 0
 Rd     0
@@ -1090,7 +1090,7 @@ S
 #26243
 A Storage Closet~
 You are standing in a small dark room.  There are shelves lining all the
-walls.  Ther only exit is through the oak door to the north.  
+walls.  Ther only exit is through the oak door to the north.
 ~
 0 2049 0
 Rd     0

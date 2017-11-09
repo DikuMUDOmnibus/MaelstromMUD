@@ -1,7 +1,7 @@
 #AREADATA
-Name        { 30-60} Daern Mansion       Sherf~
+Name        Daern Mansion~
 Levels      30 60
-Builders    Dolguard~
+Builders    Sherf Dolguard~
 VNUMs       8100 8199
 Security    100
 Recall      25001
@@ -32,7 +32,7 @@ A Corpse of a Servant wanders mindlessly...
 ~
 The embroidered symbol of the Daern Mansion is still decipherable on the
 left breast pocket of the corpses uniform... However, the whole torso of
-the thing looks to have been hit with some sort of blast.  
+the thing looks to have been hit with some sort of blast.
 ~
 65 0 0 -899 S
 32 0 0 1600d0+0 0d0+0
@@ -80,7 +80,7 @@ or class($n) == 6
 say Although one of yer prowess may fight yer way through.
 endif
 if class($n) == 2
-or class ($n) == 8 
+or class ($n) == 8
 say Although one as skilled as yerself might find yer way through.
 endif
 if class($n) == 9
@@ -122,7 +122,7 @@ A goat-like Demon waits here for you.
 A grossly fat demon, some 8 feet tall. Its huge blue-green body is
 covered with goatish hair, and its head is goat-like although its horns are
 similar to those of a ram. Its great legs are also goat-like, but its arms
-are human. Vast bat wings sprout from its back.  
+are human. Vast bat wings sprout from its back.
 ~
 1966147 100663352 0 -1000 S
 60 0 0 6500d0+0 0d0+0
@@ -207,7 +207,7 @@ The raving-mad Librarian~
 The Librarian gnaws anxiously on his fingernails as his eyes dart around in paranoia.
 ~
 This balding, frizzy-haired old coot takes a nip of something out of a
-brown burlap bag, and mumbles incoherently to himself.  
+brown burlap bag, and mumbles incoherently to himself.
 ~
 3 0 0 500 S
 42 0 0 3200d0+0 0d0+0
@@ -243,7 +243,7 @@ A Loyal Guard lies here, looking very drained.
 Looking carefully at the guard, you see that he is elven... Which comes
 as a shock because of his enormous size. Clad in plate and chainmail armor
 (which is covered in dried blood) you notice that he is very bruised and his
-eyes look tired as though he'd been fighting for a very long time.  
+eyes look tired as though he'd been fighting for a very long time.
 ~
 262147 0 0 1000 S
 59 0 0 9600d0+0 0d0+0
@@ -298,7 +298,7 @@ A corpse of a loyal guard wanders here...
 ~
 What used to be a noble looking guard is now a mobile slab of rotting
 flesh. Its armor has been baked onto it and is scorched to a crisp... All
-that remains are metal bits. 
+that remains are metal bits.
 ~
 8257 0 0 -700 S
 46 0 0 4600d0+0 0d0+0
@@ -362,19 +362,19 @@ reserved~
 E
 paper~
 You see a piece of paper, which looks to be an important document.  The
-line at the top of the document reads, "DEED".  
+line at the top of the document reads, "DEED".
 Perhaps this is worth something to Sherf or Bahl...
 ~
 E
 document~
 You see a piece of paper, which looks to be an important document.  The
-line at the top of the document reads, "DEED".  
+line at the top of the document reads, "DEED".
 Perhaps this is worth something to Sherf or Bahl...
 ~
 E
 deed~
 You see a piece of paper, which looks to be an important document.  The
-line at the top of the document reads, "DEED".  
+line at the top of the document reads, "DEED".
 Perhaps this is worth something to Sherf or Bahl...
 ~
 #8109
@@ -392,12 +392,12 @@ reserved~
 E
 demon~
 This hideous waste of flesh has a humanoid appearance, but its hind legs
-are that of a goat, and vast bat-like wings sprout from its back.  
+are that of a goat, and vast bat-like wings sprout from its back.
 ~
 E
 corpse~
 This hideous waste of flesh has a humanoid appearance, but its hind legs
-are that of a goat, and vast bat-like wings sprout from its back.  
+are that of a goat, and vast bat-like wings sprout from its back.
 ~
 #8110
 valise travel case~
@@ -417,19 +417,19 @@ E
 valise~
 A leather valise is a case for clothes and toilet articles of a
 traveller. A nifty wooden handle allows one to carry it easily, and a
-leather strap with a buckle keeps it closed while travelling.  
+leather strap with a buckle keeps it closed while travelling.
 ~
 E
 travel~
 A leather valise is a case for clothes and toilet articles of a
 traveller. A nifty wooden handle allows one to carry it easily, and a
-leather strap with a buckle keeps it closed while travelling.  
+leather strap with a buckle keeps it closed while travelling.
 ~
 E
 case~
 A leather valise for clothes and toilet articles of a traveller. A nifty
 wooden handle allows one to carry it easily, and a leather strap with a buckle
-keeps it closed while travelling.  
+keeps it closed while travelling.
 ~
 #8111
 hairbrush~
@@ -472,28 +472,28 @@ letter~
 This small golden knife has the head of a unicorn for a handle and it's
 flat, but sharp blade looks like it could do a nice bit of damage.  The
 knife is inscribed, "Seek the goodness of the unicorn, for it is deep in all
-our hearts."  
+our hearts."
 ~
 E
 opener~
 This small golden knife has the head of a unicorn for a handle and it's
 flat, but sharp blade looks like it could do a nice bit of damage.  The
 knife is inscribed, "Seek the goodness of the unicorn, for it is deep in all
-our hearts."  
+our hearts."
 ~
 E
 knife~
 This small golden knife has the head of a unicorn for a handle and it's
 flat, but sharp blade looks like it could do a nice bit of damage.  The
 knife is inscribed, "Seek the goodness of the unicorn, for it is deep in all
-our hearts."  
+our hearts."
 ~
 E
 gold~
 This small golden knife has the head of a unicorn for a handle and it's
 flat, but sharp blade looks like it could do a nice bit of damage.  The
 knife is inscribed, "Seek the goodness of the unicorn, for it is deep in all
-our hearts."  
+our hearts."
 ~
 #8113
 robes goodly material robe~
@@ -755,12 +755,12 @@ A
 1 1
 E
 pan~
-The frying pan is made from cast-iron making it quite heavy. It has been used, 
+The frying pan is made from cast-iron making it quite heavy. It has been used,
 as there are scorch marks on the bottom of it.
 ~
 E
 frying~
-The frying pan is made from cast-iron making it quite heavy. It has been used, 
+The frying pan is made from cast-iron making it quite heavy. It has been used,
 as there are scorch marks on the bottom of it.
 ~
 E
@@ -842,7 +842,7 @@ E
 rattle~
 A baby turtle-shell on a stick that rattles when you shake it.  The head
 end of the turtle-shell has been filled in, but there are a few colourful
-ribbons coming out of it.  
+ribbons coming out of it.
 ~
 E
 turtle-shell~
@@ -939,12 +939,12 @@ reserved~
 E
 brass~
 You see a shiny brass key has little nicks in it...  Probably from all of
-the use it gets.  
+the use it gets.
 ~
 E
 key~
 You see a shiny brass key has little nicks in it...  Probably from all of
-the use it gets.  
+the use it gets.
 ~
 #8147
 desk oak~
@@ -1000,12 +1000,12 @@ reserved~
 E
 entrails~
 You can't tell what body parts these entrails consist of...  But you
-assume that it was one of the Librarians' victims.  
+assume that it was one of the Librarians' victims.
 ~
 E
 demon~
 You can't tell what body parts these entrails consist of...  But you
-assume that it was one of the Librarians' victims.  
+assume that it was one of the Librarians' victims.
 ~
 #8150
 coif old~
@@ -1089,12 +1089,12 @@ reserved~
 E
 crystal~
 Long shards of crystal hang from above, in three tiers of different
-sizes.  A dim light emanates from the centre of this triangular splendor.  
+sizes.  A dim light emanates from the centre of this triangular splendor.
 ~
 E
 chandelier~
 Long shards of crystal hang from above, in three tiers of different
-sizes.  A dim light emanates from the centre of this triangular splendor.  
+sizes.  A dim light emanates from the centre of this triangular splendor.
 ~
 #8159
 lantern floating~
@@ -1111,12 +1111,12 @@ reserved~
 E
 lantern~
 A lantern is made of wrought iron and glass... within it is a light that
-seems never to fade. Your only guess is that sorcery keeps it aglow.  
+seems never to fade. Your only guess is that sorcery keeps it aglow.
 ~
 E
 floating~
 A lantern is made of wrought iron and glass... within it is a light that
-seems never to fade. Your only guess is that sorcery keeps it aglow.  
+seems never to fade. Your only guess is that sorcery keeps it aglow.
 ~
 #8161
 carpet heavy~
@@ -1134,13 +1134,13 @@ E
 heavy~
 A heavy red carpet is the most beautiful piece of upholstery you have
 ever seen. It's hue of red is divine, and it's texture makes you cringe
-with delight.  
+with delight.
 ~
 E
 carpet~
 A heavy red carpet is the most beautiful piece of upholstery you have
 ever seen. It's hue of red is divine, and it's texture makes you cringe
-with delight.  
+with delight.
 ~
 #8162
 diploma parchment paper~
@@ -1288,7 +1288,7 @@ very nice.
 E
 towel~
 A plush white towel looks very comfortable, although it doesn't smell
-very nice.  
+very nice.
 ~
 #8178
 bedknob~
@@ -1367,9 +1367,9 @@ reserved~
 #ROOMDATA
 #8104
 A Room in the Attic~
-Standing here, you can smell a mustiness about. The air is dry, and it is    
+Standing here, you can smell a mustiness about. The air is dry, and it is
 quite hot up here... and from the looks of things, kinda creepy. Cob webs
-hang from every corner, and an occasional squeaking can be heard.  
+hang from every corner, and an occasional squeaking can be heard.
 ~
 0 8 0
 Rd     0
@@ -1457,7 +1457,7 @@ D3
 S
 #8109
 Wall Around the Mansion~
-The vines continue to grow here, mixed in with the rose bushes that seem to 
+The vines continue to grow here, mixed in with the rose bushes that seem to
 come from nowhere. Very little patches of the Mansion Wall peek out from
 behind this large mass of vegetation. To the west you can see that the bushes
 and vines seem to get thicker covering almost the entirety of the barrier.
@@ -1487,7 +1487,7 @@ S
 Entrance to the Old Daern Mansion~
 Vines have already begun to overgrow the gates, which remain open and
 mostly destroyed by the demons within. The house beyond, although recently
-built, is now in shambles... courtesy of its new occupants.  
+built, is now in shambles... courtesy of its new occupants.
 ~
 0 4 0
 Rd     0
@@ -1541,7 +1541,7 @@ S
 #8113
 Wall Around the Mansion~
 The roses and vines begin to get thicker here, covering almost the whole of
-the Mansion wall. The path to the east and west is also wrapped in the 
+the Mansion wall. The path to the east and west is also wrapped in the
 vegetation.
 ~
 0 0 0
@@ -1557,7 +1557,7 @@ D3
 S
 #8114
 Wall Around the Mansion~
-Coming around a bend, you can see more of the vegetation. To the north, it 
+Coming around a bend, you can see more of the vegetation. To the north, it
 becomes more dense almost concealing the wall around the Mansion. To the west,
 it begins to clear up a little.
 ~
@@ -1577,7 +1577,7 @@ Wall Around the Mansion~
 Rose bushes and climbing vines surround the area, but you can still see
 the Mansion wall peeking out from underneath. The vegetation continues to
 thicken going towards the north, and to the south you see what might be a
-turn in the path.  
+turn in the path.
 ~
 0 0 0
 Rd     0
@@ -1598,7 +1598,7 @@ S
 Wall Around the Mansion~
 Rose bushes and climbing vines surround the area, however, you can see
 some of the Mansion wall peeking through here and there. Looking up, you
-can see a window that hasn't quite been hidden.  
+can see a window that hasn't quite been hidden.
 ~
 0 0 0
 Rd     0
@@ -1656,7 +1656,7 @@ Wall Around the Mansion~
 Rose bushes and climbing vines surround the area, however, you can still
 see some of the Mansion wall peeking through here and there.  The grass
 beneath your feet looks like it might be comfortable to find a shady spot to
-stop and rest on.  
+stop and rest on.
 ~
 0 0 0
 Rd     0
@@ -1792,7 +1792,7 @@ Wall Around the Mansion~
 This whole area is densely covered in rose bushes and climbing vines that
 seem to pour out from behind the Mansion Wall. The path of the vegetation
 goes on for as far as you can see, getting thicker to the west. A bend in
-the easterly direction heads down south.  
+the easterly direction heads down south.
 ~
 0 0 0
 Rd     0
@@ -1844,8 +1844,8 @@ S
 #8127
 Gazebo to the Garden~
 A beautiful gazebo opens the way into the garden to the north. Rose
-bushes and climbing vines grow here, framing the entryway to perfection. 
-East and west directions continue to lead you around the mansion. A sign is     here for your information.  
+bushes and climbing vines grow here, framing the entryway to perfection.
+East and west directions continue to lead you around the mansion. A sign is     here for your information.
 &RIt might be a good idea to LOOK SIGN&G
 ~
 0 134218756 0
@@ -2068,14 +2068,14 @@ D2
 S
 #8138
 Wall Around the Mansion~
-The vines and roses have almost fully overgrown the area here, allowing but a 
+The vines and roses have almost fully overgrown the area here, allowing but a
 small patch of the Mansion wall to peek through here and there.
 ~
 0 0 0
 Rd     0
 E
 wall~
-Although the wall is drowning in vegetation, you see that some of it still 
+Although the wall is drowning in vegetation, you see that some of it still
 manages to peek through.
 ~
 D0
@@ -2130,7 +2130,7 @@ S
 Entryway~
 Rose bushes on either side of the path frame a perfect entryway for the
 large Mansion directly ahead. Surprisingly, this area has been left
-relatively untouched by evil.  
+relatively untouched by evil.
 ~
 0 8 0
 Rd     0
@@ -2147,7 +2147,7 @@ S
 The Glass Doors~
 Glass crunches underfoot, and what's left of the doors is covered in
 congealed blood and grime. The golden hinges that once held fast the doors
-hang useless from the frame.  
+hang useless from the frame.
 ~
 0 8 0
 Rd     0
@@ -2165,7 +2165,7 @@ The Front Foyer~
 A large area rug covers the foyer floor, and in the northeast corner of
 the room is a tall table on which a vase used to stand... Now broken
 beneath that table with a scatter of wilted flowers. To the north can be
-seen a grand chandelier, and hallways branch out to the east and west.  
+seen a grand chandelier, and hallways branch out to the east and west.
 ~
 0 12 0
 Rd     0
@@ -2188,9 +2188,9 @@ D3
 S
 #8144
 A hallway~
-Like any other hallway, this one takes you from one place to another. 
+Like any other hallway, this one takes you from one place to another.
 The walls are black with soot and grime. The floor is a mess due to the
-shredded carpet, or lack there-of.  
+shredded carpet, or lack there-of.
 ~
 0 8 0
 Rd     0
@@ -2210,7 +2210,7 @@ relaxing here. There are couches and chairs along the north and east walls,
 and the room is nicely decorated. This puts you at ease, and you know that
 you are in no danger. Judging by the looks of this place, it seems as though it
 is a waiting room... Perhaps for one to wait when seeking the audience of
-Lord Bahl, his Lady Sherf or their son, Fazoul.  
+Lord Bahl, his Lady Sherf or their son, Fazoul.
 ~
 0 1036 0
 Rd     0
@@ -2228,7 +2228,7 @@ The Library~
 This is your typical library... Books line the shelves on both the east
 and west walls, maps hang on the north wall, and in the southeast corner
 there is a long reading table and chairs. You hear nothing from the outside
-world in this place because, well, it's a library.  
+world in this place because, well, it's a library.
 ~
 0 8388620 0
 Rd     0
@@ -2241,7 +2241,7 @@ varieties of information and leisure.
 E
 maps~
 There is a map of Bethaven on this wall.  As well as a map of a village
-of some sort.  
+of some sort.
 ~
 D0
 ~
@@ -2256,13 +2256,13 @@ S
 A Small Office~
 Scorch marks mar the walls, and a particularly vicious-looking gouge is
 carved into the east wall. The foul-smelling remains of long dead, and
-recently slain creatures litter the floor, staining it a deep, dirty black. 
+recently slain creatures litter the floor, staining it a deep, dirty black.
 ~
 0 8 0
 Rd     0
 E
 gouge~
-Looking through the gouge in the east wall, you can see a tiny room which 
+Looking through the gouge in the east wall, you can see a tiny room which
 contains a few filing cabinets.
 ~
 D0
@@ -2280,7 +2280,7 @@ S
 Files Room~
 A few filing cabinets fill this little room to its maximum. The place is
 neat, and well looked after, presumably by the mad-man in the previous room.
-Things such as income, bills, and other records are stored here.  
+Things such as income, bills, and other records are stored here.
 ~
 0 8 0
 Rd     0
@@ -2293,8 +2293,8 @@ door~
 S
 #8149
 A hallway~
-Sconces used to light the way here, but are now burnt to a crisp... 
-Apparently, someone got carried away when trying to light the things!  
+Sconces used to light the way here, but are now burnt to a crisp...
+Apparently, someone got carried away when trying to light the things!
 ~
 0 8 0
 Rd     0
@@ -2311,7 +2311,7 @@ S
 The Guards' Ready-Room~
 This disorderly muddle consists of destroyed armor, weapons, and mold-
 covered dishes... Makes you have to wonder if "the boys" have cleaned
-their rooms lately.  
+their rooms lately.
 ~
 0 8 0
 Rd     0
@@ -2333,7 +2333,7 @@ S
 The Guards' Sleeping Quarters~
 A few small beds and night tables make up the sleeping quarters for The
 Daern Family's Loyal Guards. Straw from the beds is scattered about the
-place, along with feathers from the pillows that were once plush.  
+place, along with feathers from the pillows that were once plush.
 ~
 0 12 0
 Rd     0
@@ -2355,14 +2355,14 @@ Behind the Sliding Wall~
 A small handle on the south wall reveals that a door is 'hidden' there...
 And besides the musty smell in the room, there is not much else that makes
 this room special. The floor, however, is worn with use as this room is a
-passage to the guards' food storage.  
+passage to the guards' food storage.
 ~
 0 8 0
 Rd     0
 E
 door~
 The door is in fact, the whole wall.  It appears that the whole wall
-slides in and out of place.  
+slides in and out of place.
 ~
 D2
 The southern wall seems disproportionate somehow.
@@ -2378,7 +2378,7 @@ S
 The Guards' Food Storage~
 Baskets, boxes, cartons, sacks, and pitchers litter this room, and the
 shelf on which they were once stored has been torn apart and used as
-firewood.  
+firewood.
 ~
 0 8 0
 Rd     0
@@ -2395,7 +2395,7 @@ S
 A little cubby~
 This little cubby is just that. Perhaps it was used as a resting room for
 the hard-working guards, as there is a dirty old blanket sprawled out in the
-southwest corner.  
+southwest corner.
 ~
 0 8 0
 Rd     0
@@ -2412,7 +2412,7 @@ S
 #8155
 The Guards' Outhouse~
 This place simply reeks of an outhouse! Time to turn around and get a
-breath of fresh air.  
+breath of fresh air.
 ~
 0 268435464 0
 Rd     0
@@ -2426,7 +2426,7 @@ S
 A Beautiful Chandelier~
 This large room was once very beautiful... But all you can see now, are
 torn remnants of carpet and wallpaper. All that remains intact here is
-an enormous crystal chandelier.  
+an enormous crystal chandelier.
 ~
 0 8 0
 Rd     0
@@ -2447,7 +2447,7 @@ S
 The Main Foyer~
 The destructive path you've seen throughout the place doesn't end here...
 Looking around you see a familiar wreckage. The walls are black here, but
-it certainly wasn't any painter that did it!  
+it certainly wasn't any painter that did it!
 ~
 0 8 0
 Rd     0
@@ -2476,10 +2476,10 @@ A large mural covers the west wall, and the stairway ascends eastward to a      
 Rd     0
 E
 mural~
-The painting depicts a field of fine steeds in training for knighthood. 
+The painting depicts a field of fine steeds in training for knighthood.
 Their knights mounting their horses with pride, others rewarding their
 steeds with grain for their accomplishments, and more still, meeting their
-horses for the first time.  
+horses for the first time.
 A young stable boy watches on from the fence with awe...perhaps dreaming one dayto become a great knight such as these.
 Inscribed in the bottom right hand corner of the mural is the name Sheffia.
 ~
@@ -2495,7 +2495,7 @@ S
 #8159
 Landing atop the Crescent Stairway~
 A heavy red carpet begins here, and large dragon-mouthed sconces light
-the way east to a hallway. The stairs descend to the west.  
+the way east to a hallway. The stairs descend to the west.
 ~
 0 8 0
 Rd     0
@@ -2511,7 +2511,7 @@ S
 #8160
 The Bottom of a Crescent Stairway~
 The stairway ascends to the west, and on the east wall there hangs a
-large tapestry.  
+large tapestry.
 ~
 0 8 0
 Rd     0
@@ -2519,7 +2519,7 @@ E
 tapestry~
 Not unlike the mural you can see to the west of here, this scene depicts a
 group of pixies and sprites training their ponies, dragonflies, and what
-have you.  
+have you.
 The training area is a large clearing in which a circle of toadstools encloses  it. Brownies look on from behind the wildflowers in hopes to cause some mischiefthis day.
 The tapestry is framed with a beautiful golden sinew.
 ~
@@ -2535,7 +2535,7 @@ S
 #8161
 Landing atop the Crescent Stairway~
 A heavy red carpet begins here, and large dragon-mouthed sconces light
-the way west to a hallway. The stairs curve down to the east.  
+the way west to a hallway. The stairs curve down to the east.
 ~
 0 8 0
 Rd     0
@@ -2552,7 +2552,7 @@ S
 The Showroom~
 Armor, weapons, maps, jewelry and other such trophies lie strewn about
 the place... Torn, mashed, ripped, and bashed are these... Useless, and
-trophies no more.  
+trophies no more.
 ~
 0 8 0
 Rd     0
@@ -2576,7 +2576,7 @@ S
 #8163
 Sherf's Private Room~
 This room was once nicely carpeted, but is now floored with a shredded
-mass. A halberd is mounted on the east wall.  
+mass. A halberd is mounted on the east wall.
 ~
 0 8 0
 Rd     0
@@ -2596,7 +2596,7 @@ D5
 S
 #8164
 Bahl's Private Room~
-A large polar bear pelt leads you to a desk in the centre of the room. Various  parchments, ink, and a quill sit on the desk. A large sword is mounted on the 
+A large polar bear pelt leads you to a desk in the centre of the room. Various  parchments, ink, and a quill sit on the desk. A large sword is mounted on the
 west wall.
 ~
 0 8 0
@@ -2607,7 +2607,7 @@ A beautifully crafted longsword is mounted on the west wall here. The
 pommel forms the body of a dragon, its mouth open to hold a magnificent ruby
 gem, and its wings span out to make the cross-hilt. A groove cut vertically
 down the length of the blade is stained black with the blood of Bahl's many
-victims.  
+victims.
 ~
 D1
 ~
@@ -2622,7 +2622,7 @@ S
 A Room in the Basement~
 A comfortable chair in the north east corner indicates that maybe Sherf came
 down from her office above to sneak a nap here and there. An easel stands
-along the east wall with some paints and paintbrushes, indicating that she     
+along the east wall with some paints and paintbrushes, indicating that she
 might have dabbled from time to time.
 ~
 0 8 0
@@ -2642,7 +2642,7 @@ D4
 S
 #8166
 A Room in the Basement~
-This little room goes up to Bahls' Private Office. There is a rocking chair 
+This little room goes up to Bahls' Private Office. There is a rocking chair
 here and a wool blanket hangs off of the back of it. Perhaps Bahl snuck down
 here from time to time to have a catnap.
 ~
@@ -2662,7 +2662,7 @@ A very large room~
 Like most other rooms in the mansion, this one is filled with garbage
 and remnants of undiscernable items. It is obvious that this room was once
 used for entertaining guests as there is a stage off to the east and a
-dining room to the west.  
+dining room to the west.
 ~
 0 8 0
 Rd     0
@@ -2670,7 +2670,7 @@ E
 stage~
 The floor is raised here by about 2 feet to make a stage. An open
 curtain on the wall behind it reveals a door, and it is littered with
-parchments.  
+parchments.
 ~
 D0
 ~
@@ -2691,9 +2691,9 @@ D3
 S
 #8168
 The Stage~
-There is a curtain on the east wall, slightly opened to reveal a doorway. 
+There is a curtain on the east wall, slightly opened to reveal a doorway.
 The floor has been raised and there are a few parchments of paper lying
-about the podium at centre stage.  
+about the podium at centre stage.
 ~
 0 12 0
 Rd     0
@@ -2723,7 +2723,7 @@ S
 A large dining room~
 A turned over table is the centerpiece for this large room. Various
 dishes, bowls and such are scattered around the place. To the west you can
-see the kitchen.  
+see the kitchen.
 ~
 0 12 0
 Rd     0
@@ -2742,12 +2742,12 @@ D3
 S
 #8171
 The Kitchen~
-A huge, black woodstove dominates the counters and preparation tables. 
+A huge, black woodstove dominates the counters and preparation tables.
 These are covered with decomposing salad components, cheese, and other
 non-perishable foods. There are still several pans, ladels, and the like
 hanging about in their proper storage spaces... However, the majority of
 the kitchen is a straggly mess, to say the least. A small panel in the
-floor squeaks as you go past.  
+floor squeaks as you go past.
 ~
 0 12 0
 Rd     0
@@ -2765,7 +2765,7 @@ The Family Room~
 Ripped up couches and lounging chairs look like they might have been very
 cozy at one point in time. A family portrait hangs on the west wall, and to
 the north there is a window from which you can see the Gazebo at the back
-of the house.  
+of the house.
 ~
 0 8 0
 Rd     0
@@ -2777,13 +2777,13 @@ E
 window~
 A nice bay window frames the Gazebo at the back of the house. It is
 surrounded in vines and flowers to accentuate its passage into the garden
-beyond.  
+beyond.
 ~
 E
 portrait~
 A portrait of Bahl and Sherf with their son, Fazoul. They look somewhat
 strange to you, however, as they are all out of their armour and wearing
-houseclothes.  
+houseclothes.
 ~
 D1
 ~
@@ -2802,7 +2802,7 @@ S
 The Games Room~
 A dart board hangs off of the east wall, with a single dart jabbed into
 the bulls-eye.  A card table and chairs are set up in the centre of the
-room, and there are playing cards all over the floor.  
+room, and there are playing cards all over the floor.
 ~
 0 8 0
 Rd     0
@@ -2819,7 +2819,7 @@ S
 A hallway~
 To the east and west a stairway begins to descend, and to the north a
 little ways you can see a magical light. The hallway also goes to the south
-where a path of sconces light the way.  
+where a path of sconces light the way.
 ~
 0 8 0
 Rd     0
@@ -2845,7 +2845,7 @@ The Main Lavatory~
 This large "bath" room is just that. It contains a large porcelain tub,
 which is now smashed into itty-bitty little pieces. A mirror on the south
 wall has been broken many times... But still hangs reflectively off of the
-wall.  
+wall.
 ~
 0 8 0
 Rd     0
@@ -2869,7 +2869,7 @@ S
 A hallway~
 To the north you can see a light that seems to be floating... The east
 and west walls are covered in blood and claw marks. One gouge in particular
-allows you to peek into the east room.  
+allows you to peek into the east room.
 ~
 0 12 0
 Rd     0
@@ -2899,7 +2899,7 @@ S
 #8177
 Second Room of the Main Lavatory~
 This smaller room contains a water basin, a chest of drawers, and many
-towels littered about. There is a door to the south.  
+towels littered about. There is a door to the south.
 ~
 0 12 0
 Rd     0
@@ -2918,7 +2918,7 @@ The Master Bedroom~
 A canopy bed is the centre of focus in this rather large room... It's
 wrought iron posts on all four corners still intact. The sheer curtains
 that once consumed the bed are all in tatters on the floor, and feathers
-from the mattress float about the place.  
+from the mattress float about the place.
 ~
 0 8 0
 Rd     0
@@ -2939,10 +2939,10 @@ S
 #8179
 A Nursery!~
 A beautifully carved wooden crib is here, and from the window you can see
-the gardens... A few vines have grown over the window, framing it nicely. 
+the gardens... A few vines have grown over the window, framing it nicely.
 Small pillows and "blanky's" have been strewn about the room... And you
 might want to be wary of where you step, as there are already baby toys
-strategically placed about!  
+strategically placed about!
 ~
 0 8 0
 Rd     0
@@ -2969,7 +2969,7 @@ S
 The End of the hallway~
 The room is aglow with what looks like a magical light. From here you
 can see a little ways south, to where some sconces begin to take over the
-light source.  
+light source.
 ~
 0 8 0
 Rd     0
@@ -2995,16 +2995,16 @@ S
 Fazoul's Room~
 A bed in the corner and a dresser of drawers is all that is contained in
 this large room. Candlesticks are broken all about the floor and there is a
-portrait of Sherf and Bahl Daern on the south wall.  
+portrait of Sherf and Bahl Daern on the south wall.
 ~
 0 8 0
 Rd     0
 E
 portrait~
 A lovely painting of Bahl and Sherf, out of their armour! It is an old
-one, as Sherf has a bit of a belly, and is wearing a flowing lavender gown. 
+one, as Sherf has a bit of a belly, and is wearing a flowing lavender gown.
 Bahl sports a white pirate shirt, and the two have their hands placed
-together on Sherf's right shoulder.  
+together on Sherf's right shoulder.
 ~
 D1
 There is a door here in the east wall.
@@ -3047,7 +3047,7 @@ S
 #8184
 A Landing in the Attic~
 The attic is very grim and dark, and a musty smell looms through the air. You
-look around to find no sconces, candles, or torches anywhere. To the west 
+look around to find no sconces, candles, or torches anywhere. To the west
 and south, you can see many compartments used for storing various household
 treasures, trash and what have you.
 ~
@@ -3069,7 +3069,7 @@ S
 #8185
 A hallway~
 Dragon-mouthed sconces light the way through the hallways to the north
-and to the south. There are exits leading east and west as well.  
+and to the south. There are exits leading east and west as well.
 ~
 0 12 0
 Rd     0
@@ -3095,7 +3095,7 @@ S
 #8186
 A Guest Room~
 This small room contains a small turned over bed, and a dresser that has
-been used as a scratching post for some vile creature.  
+been used as a scratching post for some vile creature.
 ~
 0 8 0
 Rd     0
@@ -3109,7 +3109,7 @@ S
 A Guest Room~
 The west exit leads you back to the hallway, and there is a keyhole
 window cut into the east wall. A ray of light peeks in through the
-overgrowth of vines, leaving a streak on the floor.  
+overgrowth of vines, leaving a streak on the floor.
 ~
 0 0 0
 Rd     0
@@ -3175,7 +3175,7 @@ S
 A Huge Guest Room~
 This 'boudoir' features a large bed and a wardrobe. A window on the
 east wall allows you to see that the walls around the mansion are covered
-with vines and the like.  
+with vines and the like.
 ~
 0 8 0
 Rd     0
@@ -3255,7 +3255,7 @@ underneath you.
 E
 rope~
 The rope, you can see is what the servants use to pull themselves up or down
-when going to or from this passage. 
+when going to or from this passage.
 ~
 D3
 A small handle sticks out of the wall to the west.
@@ -3327,8 +3327,8 @@ The Wine Cellar~
 There are shelves lined with bottles of wine, brandy, ale and mead in
 each corner of the room. A serving cart has been left here. It and it's
 contents are now shattered all over the floor... The room smells of old,
-stale wine.  
- 
+stale wine.
+
 ~
 0 12 0
 Rd     0

@@ -1,7 +1,7 @@
 #AREADATA
-Name        {90-100} The Forest Shrine   Tyrion~
+Name        The Forest Shrine~
 Levels      90 100
-Builders    Cluff~
+Builders    Cluff Tyrion~
 VNUMs       9001 9060
 Security    1
 Recall      25001
@@ -20,7 +20,7 @@ The High Cleric stands, a peaceful look in his eyes.
 Standing before you is the wise and ageless High Cleric.  His knowledge
 of the realm and of the arts of magic have helped him keep a hold onto the
 world.  He stands close to six feet in height, with long, blue, flowing
-robes about him.  
+robes about him.
 ~
 67 201343164 0 800 S
 105 0 0 21150d0+0 0d0+0
@@ -92,7 +92,7 @@ A Warrior Priest walks around peacefully.
 ~
 A warrior priest of the Forest Shrine stands before you.  He is tall, and
 wear combat gear.  By the way he moves, you get the impression that he knows
-how to use them.  
+how to use them.
 ~
 65 100663424 0 500 S
 93 0 0 13250d0+0 0d0+0
@@ -111,9 +111,9 @@ sprite~
 The Tree Sprite~
 A Tree Sprite flies around, annoying people.
 ~
-A small tree sprite fluttes about the branches of the the Forest Shrine. 
+A small tree sprite fluttes about the branches of the the Forest Shrine.
 As it flies, glittering sparkles trail it.  It smiles happily as it flies
-by.  
+by.
 ~
 65 34095296 0 100 S
 85 0 0 11250d0+0 0d0+0
@@ -151,7 +151,7 @@ A Paladin Highlord is here.
 ~
 You stand before the Paladin Highlord.  A man who has devoted his life to
 fighting evil, he is battle hardened, alert, cautious, yet kind and
-thoughtful.  
+thoughtful.
 ~
 67 234881152 0 800 S
 98 0 0 13500d0+0 0d0+0
@@ -192,7 +192,7 @@ The High Paladin guards the altar.
 ~
 The High Paladin is the Paladin Highlord's right hand man.  He stands
 before with a strange vigor.  He stands tall, and wears battle armor which
-is both functional as it is formal.  
+is both functional as it is formal.
 ~
 67 234881152 0 500 S
 95 0 0 12375d0+0 0d0+0
@@ -220,7 +220,7 @@ The Paladin~
 A Paladin walks around, minding his own business.
 ~
 The paladin walks amongst the branches of the Forest Shrine.  He has come
-to make peace with nature, as well as himself.  
+to make peace with nature, as well as himself.
 ~
 65 201343104 0 500 S
 90 0 0 11250d0+0 0d0+0
@@ -325,9 +325,9 @@ khaquon death knight cowardice~
 Khaquon~
 Khaquon, Death Knight of Cowardice is here, trembling nervously.
 ~
-Khaquon is the Death Knight of Cowardice.  He wears heavy black armor. 
+Khaquon is the Death Knight of Cowardice.  He wears heavy black armor.
 He looks around nervously, as if loking out for something.  A yellow glow
-emanates from his closed visor.  
+emanates from his closed visor.
 ~
 193 128 32 -1000 S
 105 0 0 30550d0+0 0d0+0
@@ -369,7 +369,7 @@ Calumnus~
 Calumnus, Death Knight of Greed is here, counting his gold.
 ~
 Calumnus is the Death Knight of Greed.  He wears highly decorated black
-armor.  A green glow emanates from his closed visor..  
+armor.  A green glow emanates from his closed visor..
 ~
 67 128 32 -1000 S
 105 0 0 30550d0+0 0d0+0
@@ -409,7 +409,7 @@ Lycanthus, Death Knight of Falsehood stands here, looking for people to con.
 Lycanthus is the Death Knight of Falsehood.  He stands 6 inches past six
 feet and is encased in heavy black armor.  A large broadsword is in his
 right hand.  A large shield in his left.  A blue glow emanates from his
-closed visor.  
+closed visor.
 ~
 67 128 32 -1000 S
 105 0 0 30550d0+0 0d0+0
@@ -450,7 +450,7 @@ Zargon~
 Zargon, Death Knight of Hate looms over you mercilessly...
 ~
 Zargon is the Death knight of Hate.  He wears heavy black armor and
-stands nearly 7 feet in height.  A red glow emanates from his closed visor. 
+stands nearly 7 feet in height.  A red glow emanates from his closed visor.
 ~
 67 128 32 -1000 S
 105 0 0 30550d0+0 0d0+0
@@ -493,7 +493,7 @@ Zhakarius the Warlock is here chanting.
 ~
 Zhakarius is much older than he looks.  His face is that of a 30 year
 old, with a full black beard and youthful brown eyes.  He wears heavy black
-robes, and is disturbed by your presence.  
+robes, and is disturbed by your presence.
 ~
 67 67125376 32768 -1000 S
 110 0 0 21150d0+0 0d0+0
@@ -553,17 +553,17 @@ A
 E
 holy~
 This mace glows with the divine power it is infused with.  Sturdy and
-well crafted, it's a weapon one can count on to preform in a fight.  
+well crafted, it's a weapon one can count on to preform in a fight.
 ~
 E
 mace~
 This mace glows with the divine power it is infused with.  Sturdy and
-well crafted, it's a weapon one can count on eto preform in a fight.  
+well crafted, it's a weapon one can count on eto preform in a fight.
 ~
 E
 mace~
 This mace glows with the divine power it is infused with.  Sturdy and
-well crafted, it's a weapon one can count on to preform in a fight.  
+well crafted, it's a weapon one can count on to preform in a fight.
 ~
 #9002
 cloak righteousness~
@@ -586,12 +586,12 @@ A
 E
 righteousness~
 This silver coloured cloak is free from dirt, rips, and flaws.  It is
-amazingly well tailored and the craftsmanship is fit for a king.  
+amazingly well tailored and the craftsmanship is fit for a king.
 ~
 E
 cloak~
 This silver coloured cloak is free from dirt, rips, and flaws.  It is
-amazingly well tailored and the craftsmanship is fit for a king.  
+amazingly well tailored and the craftsmanship is fit for a king.
 ~
 #9003
 platinum field breastplate~
@@ -614,22 +614,22 @@ A
 E
 plate~
 This breastplate is fashioned out of the finest platinum.  It is crafted
-with obvious skill and the quality is high.  
+with obvious skill and the quality is high.
 ~
 E
 breast~
 This breastplate is fashioned out of the finest platinum.  It is crafted
-with obvious skill and the quality is high.  
+with obvious skill and the quality is high.
 ~
 E
 platinum~
 This breastplate is fashioned out of the finest platinum.  It is crafted
-with obvious skill and the quality is high.  
+with obvious skill and the quality is high.
 ~
 E
 breastplate~
 This breastplate is fashioned out of the finest platinum.  It is crafted
-with obvious skill and the quality is high.  
+with obvious skill and the quality is high.
 ~
 E
 field~
@@ -655,17 +655,17 @@ A
 E
 helm~
 This finely crafted helmet is highly polished and well kept.  It is free
-from dents, marks, and chips.  
+from dents, marks, and chips.
 ~
 E
 field~
 This finely crafted helmet is highly polished and well kept.  It is free
-from dents, marks, and chips.  
+from dents, marks, and chips.
 ~
 E
 platinum~
 This finely crafted helmet is highly polished and well kept.  It is free
-from dents, marks, and chips.  
+from dents, marks, and chips.
 ~
 #9005
 platinum field fieldplate face guard~
@@ -730,22 +730,22 @@ A
 E
 field~
 This set of platinum fieldplate leggings is amazingly lightweight, in
-addition to it's obviously superior craftsmanship.  
+addition to it's obviously superior craftsmanship.
 ~
 E
 leggings~
 This set of platinum fieldplate leggings is amazingly lightweight, in
-addition to it's obviously superior craftsmanship.  
+addition to it's obviously superior craftsmanship.
 ~
 E
 fieldplate~
 This set of platinum fieldplate leggings is amazingly lightweight, in
-addition to it's obviously superior craftsmanship.  
+addition to it's obviously superior craftsmanship.
 ~
 E
 platinum~
 This set of platinum fieldplate leggings is amazingly lightweight, in
-addition to it's obviously superior craftsmanship.  
+addition to it's obviously superior craftsmanship.
 ~
 #9007
 platinum field fieldplate boots~
@@ -942,17 +942,17 @@ A
 E
 holysword~
 A plain looking steel blade with a polished ivory hilt glows softly,
-repelling the darkness.  
+repelling the darkness.
 ~
 E
 sword~
 A plain looking steel blade with a polished ivory hilt glows softly,
-repelling the darkness.  
+repelling the darkness.
 ~
 E
 holy~
 This great sword pulses with immense power.  A plain steel blade with a
-polished ivory hilt glows softly among your belongings.  
+polished ivory hilt glows softly among your belongings.
 ~
 #9014
 staff~
@@ -1084,13 +1084,13 @@ E
 priest~
 This blade has intricate engravings on the blade.  The steel hilt is
 covered with holy symbols and small gems.  The handle is comfortable, being
-wrapped in fine leather.  
+wrapped in fine leather.
 ~
 E
 sword~
 This blade has intricate engravings on the blade.  The steel hilt is
 covered with holy symbols and small gems.  The handle is comfortable, being
-wrapped in fine leather.  
+wrapped in fine leather.
 ~
 #9020
 sprites ring~
@@ -1109,12 +1109,12 @@ A
 E
 sprites~
 This magical ring has one tiny gem on it.  The stone glows softly with a
-pale red light.  
+pale red light.
 ~
 E
 ring~
 This magical ring has one tiny gem on it.  The stone glows softly with a
-pale red light.  
+pale red light.
 ~
 #9021
 aquablade aqua blade~
@@ -1467,7 +1467,7 @@ A
 E
 death knight blade~
 This sword is given to the Death knights of Zhakarius.  It is the
-ultimate evil weapon.  
+ultimate evil weapon.
 ~
 #9035
 death knight shield~
@@ -2427,7 +2427,7 @@ S
 Entrance to Calumnus' Hideout~
 You stand at the top of a castle garrison.  From here, you can see
 endless expanses of forests and fields.  Looking to the east, you notice the
-castle tower and an open arch.  
+castle tower and an open arch.
 ~
 0 401428 1
 Rd     0
@@ -2441,7 +2441,7 @@ Lair of Calumnus, Death Knight of Greed~
 You stand inside a tower room.  The stone walls are bare, and the only
 things in the room is a small table and chair in one corner, and a cot up
 against one wall.  The room is cold, and a draught come throught the open
-windows.  
+windows.
 ~
 0 131088 0
 Rd     0
@@ -2454,7 +2454,7 @@ S
 Entrance to Khaquon's Hideout~
 You find yourself standing at a dead end of a cave.  The air is cold and
 you can hear a light dripping noise in the distance.  A faint flicker of
-light can be seen in the distance.  
+light can be seen in the distance.
 ~
 0 401428 0
 Rd     0
@@ -2468,7 +2468,7 @@ Khaquon's Hideout~
 Khaquon's hideout is nothing more than a damp cave with a small table,
 chair, and cot thrown into the corner.  A dripping noise can be heard off in
 the distance, and a low rumbling noise rings through the cave every few
-minutes.  
+minutes.
 ~
 0 134348816 0
 Rd     0
@@ -2485,7 +2485,7 @@ S
 A Dead End~
 You follow the cave down a few yards, but come to another dead end.  A
 few logs of wood lie against the cave wall.  The rumbling noise is louder
-here, but you can't be sure which direction it's coming from.  
+here, but you can't be sure which direction it's coming from.
 ~
 0 134348816 0
 Rd     0
@@ -2499,7 +2499,7 @@ Lair of Lycanthus, Death Knight of Falsehood~
 You find yourself standing before large double doors.  The room you are
 standing in is well lit with numerous torches.  On the walls hang many
 tapestries and frecoes.  Surprisingly, there is no door behind you.  The
-only exit is the double doors ahead.  
+only exit is the double doors ahead.
 ~
 0 393232 0
 Rd     0
@@ -2517,7 +2517,7 @@ Lycanthus' Throne Room~
 You are standing in a large throne room.  The walls and columns are made
 out of marble and have been polished to shine.  Many torches line the walls,
 making the marble reflect brilliantly.  At your feet is a long red carpet
-that leads to a giant throne.  The only exit is the doors to the south.  
+that leads to a giant throne.  The only exit is the doors to the south.
 ~
 0 134348816 0
 Rd     0
@@ -2532,7 +2532,7 @@ You stand in the entrance of the dreaded caves known as the Halls of
 Hatred.  Named so by the man who dwells in the caves, the very walls emanate
 hatred.  The emotions are so strong that even the strongest men will fall if
 they dwell in the caves for too long.  The cave walls glow a dull red, and
-the only sound you can hear is the sound of someone grunting..  
+the only sound you can hear is the sound of someone grunting..
 ~
 0 131088 0
 Rd     75
@@ -2545,7 +2545,7 @@ S
 Hall of Hatred~
 You continue down the Hall of Hatred.  Strength slowly drains from you as
 you linger within the cave.  The walls remain unchanged, and the grunting
-sound is getting louder.  
+sound is getting louder.
 ~
 0 402784272 0
 Rd     75
@@ -2571,8 +2571,8 @@ S
 #9055
 Tower of Zhakarius~
 You stand at the top of a tower.  There are no stairs, ladders, or other
-means to get down.  A cold chilling air blows so violently that it injures. 
-A door to the north leads indoors.  
+means to get down.  A cold chilling air blows so violently that it injures.
+A door to the north leads indoors.
 ~
 0 131072 0
 Rd     0
@@ -2585,8 +2585,8 @@ S
 Zhakarius' Study~
 You are surrounded by shelves filled with books, maps, and scrolls.  A
 large globe stands in the center of the room, on top of a shag carpet.  Over
-to one side is a desk cluttered with quills, bottles of ink, and parchment. 
-A single opening allows light to enter.  
+to one side is a desk cluttered with quills, bottles of ink, and parchment.
+A single opening allows light to enter.
 ~
 0 134348816 0
 Rd     0
@@ -2600,7 +2600,7 @@ Castle Ruins~
 Two large double doors barely hang on their hinges here.  Numerous burned
 out torches and empty torch rings line the walls, as do torn tapestries and
 faded frescoes.  The place projects an image of emptiness, enhanced by a
-cold wind.  
+cold wind.
 ~
 0 0 0
 Rd     0
@@ -2613,7 +2613,7 @@ S
 Faded Illusion~
 You stand in the ruins of an old, broken down castle.  With the Death
 Knight Lycanthus dead, the magical illusion surrounding the area has faded,
-revealing the truth.  The only exit from the throne room is to the south.  
+revealing the truth.  The only exit from the throne room is to the south.
 ~
 0 0 0
 Rd     0

@@ -1,7 +1,7 @@
 #AREADATA
-Name        {80-100} Bretonnia           Tyrion~
+Name        Bretonnia~
 Levels      80 100
-Builders    None~
+Builders    Tyrion~
 VNUMs       2800 2999
 Security    98
 Recall      25001
@@ -278,7 +278,7 @@ Nightshade the banker is here.
 Nightshade is your typical looking banker.  He is rather thin and pale,
 which makes his tall frame look almost sickly.  His eyes seem to be sunken
 back and his skin pressed tightly against his bones.  The dark suit that he
-wears makes him look like a modern Grim Reaper.  
+wears makes him look like a modern Grim Reaper.
 ~
 67 16552 0 0 S
 80 0 0 20000d0+0 0d0+0
@@ -304,7 +304,7 @@ This banker does not fit any stereotype that has ever been placed on an
 accountant.  Origionally trained as a warrior, he gave that up because he
 could not handle all the killing.  Nonetheless, this six foot, four inch
 tall man with easily over two hundred pounds to him makes one think about
-trying to rob the bank.  
+trying to rob the bank.
 ~
 67 16552 0 0 S
 80 0 0 20000d0+0 0d0+0
@@ -393,7 +393,7 @@ The Giant Spider~
 A Giant spider is here, clinging to its web.
 ~
 This giant spider is waiting quietly for something (or someone) to fall
-into it's web.  
+into it's web.
 ~
 71 335659010 0 -500 S
 88 0 0 12000d0+0 0d0+0
@@ -468,7 +468,7 @@ A Daemon of Earth is not happy to see you.
 ~
 The Earth Daemon is a powerful looking being.  While not overly tall, his
 stocky frame looks very capable of slashing you to pieces with the mighty
-swords that he is wielding.  
+swords that he is wielding.
 ~
 65 167772288 0 -500 S
 92 0 0 13000d0+0 0d0+0
@@ -503,7 +503,7 @@ The Necromancer~
 A Necromancer is here!
 ~
 The Necromancer is difficult to distinguish as he is wearing an ash grey
-robe that seems to blend into whatever background he is in front of.  
+robe that seems to blend into whatever background he is in front of.
 ~
 99 503316672 0 -1000 S
 97 0 0 9000d0+0 0d0+0
@@ -526,8 +526,8 @@ wraith guard breton~
 The Wraith Guard~
 A Wraith Guard stands here, keeping an eye out for intruders.
 ~
-The Wraith guard seems to hover about his station waiting for intruders. 
-He is constantly on the vigil, and looks to be a dangerous advesary.  
+The Wraith guard seems to hover about his station waiting for intruders.
+He is constantly on the vigil, and looks to be a dangerous advesary.
 ~
 99 469827714 0 -1000 S
 80 0 0 8500d0+0 0d0+0
@@ -540,7 +540,7 @@ The Wraith~
 A Wraith wanders, looking for anything alive.
 ~
 This sentinel is almost transparent, and you don't even notice him until
-he attacks!  
+he attacks!
 ~
 97 469827714 0 -100 S
 83 0 0 8000d0+0 0d0+0
@@ -555,7 +555,7 @@ The Wraith Champion challenges all opponents!
 Powerful.  This sums up the Wraith Champion.  Big swords, big body, and
 even bigger strength.  Running seems to be the first thought that croses
 even the bravest warriors mind when theey see this opponent.  Not many seem
-to want to end up being a screamig soul that the champ wears on his body.  
+to want to end up being a screamig soul that the champ wears on his body.
 ~
 99 469844162 0 -1000 S
 92 0 0 9250d0+0 0d0+0
@@ -599,7 +599,7 @@ A prisoner is here, deathly sick.
 ~
 This poor prisoner has been locked up here for months and does not look
 like much of an enemy.  His clothes are barely hanging onto his gaunt body,
-and the lack of good food has left him to waste away.  
+and the lack of good food has left him to waste away.
 ~
 67 0 0 200 S
 50 0 0 5000d0+0 0d0+0
@@ -630,7 +630,7 @@ An Undead Dragon roars!
 ~
 This huge dragon attackes you the moment you enter his chambers.  The
 thought crosses your mind, "How do you kill an undead creature?"  I guess
-you had better find out in a hurry, or you'll wind up being unalive!  
+you had better find out in a hurry, or you'll wind up being unalive!
 ~
 8227 469778624 0 -1000 S
 90 0 0 9500d0+0 0d0+0
@@ -914,7 +914,7 @@ A
 E
 claws wolverine pair~
 A pair of very large claws.  They look like a wolf's claws, but are much
-larger in size.  
+larger in size.
 ~
 #2903
 fangs spider pair breton~
@@ -1028,7 +1028,7 @@ A
 E
 flameblade burning blade~
 &RThe flamblade burns with an unfelt heat.  It is very large in size and
-most may consider this a two-handed weapon.  
+most may consider this a two-handed weapon.
 ~
 #2908
 sword elemental earth breton~
@@ -1555,7 +1555,7 @@ E
 packet food~
 A small burlap packet of food contains a bunch of dried vegetables and
 other various dried goods.  It probaby won't taste very good, but it is
-nutritious enough to eat.  
+nutritious enough to eat.
 ~
 #2962
 shadow dark breton~
@@ -1889,7 +1889,7 @@ Desert Path~
 You are moving through a path in the desert.  A rather small city can be
 seen to the south.  The hot sands swirl around at your feet as you move,
 occasionally kicking up as high as your face.  The path continues north and
-south.  
+south.
 ~
 0 0 10
 Rd     0
@@ -2068,7 +2068,7 @@ S
 Desert Town Road~
 You are moving along a road.  There is a building to the north of here.
 The sand blows easily over the ground, brushing up against your armor,
-making you feel nervous.  This town is very quiet, almost too quiet.  
+making you feel nervous.  This town is very quiet, almost too quiet.
 ~
 0 131072 0
 Rd     0
@@ -2210,9 +2210,9 @@ S
 #2835
 Desert Path~
 You are moving along a desert path.  The heat and dryness of this desert
-is starting to get to you, you can feel yourself baking inside your armour. 
+is starting to get to you, you can feel yourself baking inside your armour.
 The warm sands at your feet blow in the wind.  The path continues to the
-east or to the west.  
+east or to the west.
 ~
 0 0 10
 Rd     0
@@ -2266,10 +2266,10 @@ D3
 S
 #2838
 Desert Hills~
-You are moving along an area in the hills that is totally barren of life. 
+You are moving along an area in the hills that is totally barren of life.
 You can see hoofprints all around you here, perhaps horses have walked this
 path before you.  The main path over the hills lies to the north, while this
-small side path traverses to the south.  
+small side path traverses to the south.
 ~
 0 0 10
 Rd     0
@@ -2287,7 +2287,7 @@ Desert Hills~
 You are moving along the hills in the desert.  This area is totally void
 of any sign of life, and it is starting to give you an eery feeling, like
 something is watching you.  The path continues to the north and to the
-south.  
+south.
 ~
 0 0 10
 Rd     0
@@ -2305,7 +2305,7 @@ Desert Hills~
 You are moving along a path through the hills in the desert.  A small
 alcove lies to the west, its walls black as soot.  You can see small amounts
 of smoke pouring out of its mouth.  The path travels to the north, or into
-the alcove to the west.  
+the alcove to the west.
 ~
 0 1 10
 Rd     0
@@ -2322,7 +2322,7 @@ S
 Nightmare's Lair~
 You have stumbled into an entrance to the Nightmare's Lair.  This small
 alcove does not appear to be a home however, and the nightmare is nowhere to
-be seen.  The only exit is back the way you came, to the east.  
+be seen.  The only exit is back the way you came, to the east.
 ~
 0 0 0
 Rd     0
@@ -2340,7 +2340,7 @@ Desert Hills~
 You are moving along the hills of the desert.  You have almost reached
 its peak now, and it lies just to the west of here.  The path east leads
 down the hillside, back to the sands below.  You can feel the heat baking
-you inside of your armour.  
+you inside of your armour.
 ~
 0 0 4
 Rd     0
@@ -2375,7 +2375,7 @@ S
 Desert Hills~
 You are moving along the west side of a large hill.  This path twists and
 turns along, one way leading to a large open desert, the other way leading
-up to the peak of the hill.  You can go north and west from here.  
+up to the peak of the hill.  You can go north and west from here.
 ~
 0 0 4
 Rd     0
@@ -2393,7 +2393,7 @@ Desert Hills~
 You are moving along the hills of a desert.  This path twists and turns
 in both directions, one way leading up to the peak of the hill, the other
 leading down to an open desert.  A little bit of sand blows around your
-feet, while small tufts of grass attempt to grow unsuccessfully.  
+feet, while small tufts of grass attempt to grow unsuccessfully.
 ~
 0 0 4
 Rd     0
@@ -2411,7 +2411,7 @@ Desert Hills~
 You are moving along a twisted path on a hillside.  The desert lies a
 little ways below you.  You can see small plants attempting to grow here,
 not being very successful at it.  Small swirls of sand blow at your feet as
-you move along the path.  It leads to the north and the west.  
+you move along the path.  It leads to the north and the west.
 ~
 0 0 4
 Rd     0
@@ -2429,7 +2429,7 @@ Desert Hills~
 You are moving along a windy, twisty path along the side of a hill.  The
 path winds up the hill to the east, or down the hill to the south.  The heat
 of the deserts surrounding you have moved in around you.  You are sweating
-beneath your clothes.  
+beneath your clothes.
 ~
 0 0 4
 Rd     0
@@ -2486,7 +2486,7 @@ S
 Desert Path~
 You are moving on a path through the desert.  The way south leads around
 a large hill, while a T-Junction lies directly to the north of here.  Small
-bits of grass attempt to grow here, but are not very successful.  
+bits of grass attempt to grow here, but are not very successful.
 ~
 0 0 10
 Rd     0
@@ -2520,7 +2520,7 @@ S
 Desert Path~
 You are moving around a rather large hill in the desert.  You can see
 some sort of building to the east, and a T-Junction a little ways to the
-north.  You can't help but feel thirsty in this dry climate.  
+north.  You can't help but feel thirsty in this dry climate.
 ~
 0 0 10
 Rd     0
@@ -2538,7 +2538,7 @@ Desert Path~
 You are moving along a desert path around a large hill.  You can see a
 small building to the east of here, perhaps someone lives there.  The path
 continues to the east and west.  You can feel the sand blowing softly at
-your feet as you move along.  
+your feet as you move along.
 ~
 0 0 0
 Rd     0
@@ -2632,7 +2632,7 @@ You are moving on what seems the endless sand of the AErathi Desert.  The
 heat from the ground starts to seem through your boots, and is making your
 feet burn.  You can see no point to going south, for you see nothing but
 sand as far as the horizon.  What seems like a small footpath leads off to
-the north, west and east of here.  
+the north, west and east of here.
 ~
 0 0 10
 Rd     0
@@ -2653,7 +2653,7 @@ S
 AErathi Desert~
 You are moving through a hot desert.  You can see some small buildings to
 the south, but they look more like caves.  A makeshift path leads off to the
-south and east, drudging through the dunes of sand.  
+south and east, drudging through the dunes of sand.
 ~
 0 0 10
 Rd     0
@@ -2671,7 +2671,7 @@ AErathi Desert~
 You are moving through the endless sands of the AErathi Desert.  The heat
 is really starting to get to you here, making you sweat and almost pass out
 from heat exhaustion.  You can almost make out what looks like a path
-leading off to the east, south and west.  
+leading off to the east, south and west.
 ~
 0 0 10
 Rd     0
@@ -2693,7 +2693,7 @@ AErathi Desert~
 You are moving along the AErathi Desert sands.  A small path leads off to
 the north, appearing to end at a rather lush forest.  The desert stretches
 out in all other directions, for what seems like an eternity.  Perhaps your
-eyes are just playing tricks on you.  
+eyes are just playing tricks on you.
 ~
 0 0 10
 Rd     0
@@ -2720,7 +2720,7 @@ You are moving along the hot sands of the AErathi Desert.  A large hill
 can be seen a little ways to the east, but you see no way of getting to it
 from here.  A makeshift path leads off to the south and to the west from
 here.  The hot sands are starting to burn you through your armour, perhaps
-they are getting inside of it somehow.  
+they are getting inside of it somehow.
 ~
 0 0 10
 Rd     0
@@ -2756,7 +2756,7 @@ AErathi Desert~
 You are moving through a large desert.  The sand stretches for what seems
 like an eternity in all the cardinal directions, except for north.  You can
 see a forest on the horizon in that direction.  The hot sands are starting
-to seep through your armour, and slightly burn your skin.  
+to seep through your armour, and slightly burn your skin.
 ~
 0 0 10
 Rd     0
@@ -2899,7 +2899,7 @@ S
 AErathi Desert~
 You are moving on the endless sands of the AErathi Desert.  You can see
 some sort of outpost to the southeast of here.  Perhaps this place isn't as
-endless as yo once thought.  
+endless as yo once thought.
 ~
 0 0 10
 Rd     0
@@ -2943,7 +2943,7 @@ AErathi Desert~
 You are moving along the southern end of the AErathi desert.  You can see
 some kind of structure to the west.  You take a look to the south, and see
 nothing but sand as far as the horizon, so you see no point of going in that
-direction.  The only exits are west and north.  
+direction.  The only exits are west and north.
 ~
 0 0 10
 Rd     0
@@ -2961,7 +2961,7 @@ Desert Path~
 You are moving along a desert path.  A large desert lies directly to the
 south of here, while a forest can be seen a little ways to the north.  The
 sands blow in small circles at your feet, occasionally blowing up as far as
-your waist.  
+your waist.
 ~
 0 0 10
 Rd     0
@@ -2978,8 +2978,8 @@ S
 Desert Path~
 You are moving along a desert path.  It is much hotter to the south than
 it is to the north.  Small bits of sand are starting to seep through the
-cracks in your armour, while some other particles get up into your face. 
-You find it rather annoying.  
+cracks in your armour, while some other particles get up into your face.
+You find it rather annoying.
 ~
 0 0 0
 Rd     0
@@ -2998,7 +2998,7 @@ You are moving along a desert path.  A large forest can be seen a little
 ways to the north, beyond a T-Junction, while a large desert can be seen to
 the south.  The vegetation in this area is dying rapidly, due to the heat
 coming from the desert.  You can't help but feel a little sorry for the
-plants, for weather does not care what it affects.  
+plants, for weather does not care what it affects.
 ~
 0 0 10
 Rd     0
@@ -3122,7 +3122,7 @@ S
 #2893
 Arena~
 This is part of the arena within Bretonnia.  Your exits take you north,
-east, south and up from here.  
+east, south and up from here.
 ~
 0 809902089 0
 Rd     0
@@ -3146,7 +3146,7 @@ S
 #2894
 Arena~
 This is part of the arena within Bretonnia.  Your exits take you in all
-cardinal directions, and up from here.  
+cardinal directions, and up from here.
 ~
 0 541466633 0
 Rd     0
@@ -3198,7 +3198,7 @@ S
 #2896
 Arena~
 This is part of the Bretonnia Arena.  You can go north, east, and up from
-here.  
+here.
 ~
 0 805707785 0
 Rd     0
@@ -3218,7 +3218,7 @@ S
 #2897
 Arena~
 This is part of the Bretonnia Arena.  You can go north, east, west and up
-from here.  
+from here.
 ~
 0 541466633 0
 Rd     0
@@ -3242,7 +3242,7 @@ S
 #2898
 Arena~
 This is part of the arena within Bretonnia.  You can go north, west or up
-from here.  
+from here.
 ~
 0 805707785 0
 Rd     0
@@ -3265,7 +3265,7 @@ You have reached an entrance to a dark, dismal cave under the AErathi
 Desert.  As you look around, you realize that the walls are definately not
 natural, someone or something has definately made this area.  The walls are
 very rough, but form a definate coridor leading south.  It is suprisingly
-damp in this cave.  The hole in the ceiling leads up to the desert.  
+damp in this cave.  The hole in the ceiling leads up to the desert.
 ~
 0 401417 0
 Rd     0
@@ -3282,7 +3282,7 @@ S
 Desert Cave~
 You are moving inside a dark, damp cave under the AErathi Desert.  The
 walls here are very rough and crude, but definately not natural.  The cave
-continues to the south, where a bend east can be seen, or to the north.  
+continues to the south, where a bend east can be seen, or to the north.
 ~
 0 401417 0
 Rd     0
@@ -3299,7 +3299,7 @@ S
 Desert Cave~
 You are moving through a cave beneath the AErathi Desert.  The dark, damp
 walls and ceiling make for a very uncomfortable stay.  The main corridor
-goes to the east, while another cave stretches further to the south.  
+goes to the east, while another cave stretches further to the south.
 ~
 0 401417 0
 Rd     0
@@ -3387,7 +3387,7 @@ Desert Cave~
 You are moving through what appears to be a fairly large network of caves
 under the AErathi Desert.  The walls here are very rough, as though they
 were constructed in a hurry.  You could have swore you saw something moving,
-but it must have been your eyes playing tricks on you.  
+but it must have been your eyes playing tricks on you.
 ~
 0 401417 0
 Rd     0
@@ -3404,7 +3404,7 @@ S
 Desert Cave~
 You are moving along in a dark, damp cave under the AErathi desert.  The
 cave takes a sharp bend here.  To the east you can see a couple branches
-from this cave hallway, or you can go north.  
+from this cave hallway, or you can go north.
 ~
 0 401417 0
 Rd     0
@@ -3420,8 +3420,8 @@ S
 #2910
 Desert Cave~
 You are moving through a desert cave.  The way south is definately an
-easier path to travel, the walls there are much smoother and well formed. 
-You can smell what you think is honey to the east.  
+easier path to travel, the walls there are much smoother and well formed.
+You can smell what you think is honey to the east.
 ~
 0 401417 0
 Rd     0
@@ -3459,7 +3459,7 @@ S
 Desert Cave~
 You are moving along a desert cave, and it is obvious now why you could
 smell honey, a massive bee hive can easily be seen to the south.  You can
-hear the buzzing of bees from that direction.  
+hear the buzzing of bees from that direction.
 ~
 0 139273 0
 Rd     0
@@ -3491,7 +3491,7 @@ Desert Cave~
 You are moving through an underground cave, located under the AErathi
 Desert.  The walls here are much smoother than directly to the north, but
 they are still a little rough by your standards.  The cave can be seen
-making an immediate turn west to the south.  
+making an immediate turn west to the south.
 ~
 0 401421 0
 Rd     0
@@ -3735,7 +3735,7 @@ S
 Desert Cave~
 You are moving within a cave.  The walls are very crude, and look
 natural.  The cave continues to the north and to the south.  You can hear
-some heavy breathing here.  
+some heavy breathing here.
 ~
 0 401417 0
 Rd     0
@@ -3804,7 +3804,7 @@ S
 Desert Cave~
 You are moving through a large underground cave.  You can travel to the
 east or the south from here.  Some pebbles litter the ground here, and you
-could have sworn you saw something moving around.   
+could have sworn you saw something moving around.
 ~
 0 401417 0
 Rd     0
@@ -3821,7 +3821,7 @@ S
 Desert Cave~
 You are moving along in a cave beneath the AErathi Desert.  There is a
 hole on the ground here, and the dead carcasses of some kind of animal
-surround you.  The cave continues to the north and the south.  
+surround you.  The cave continues to the north and the south.
 ~
 0 401417 0
 Rd     0
@@ -3859,7 +3859,7 @@ S
 Desert Cave~
 You are moving in an underground cave.  It is very dark and gloomy here,
 with the only exits to the north and west.  Small pebbles litter the ground
-and make crackling noises as you move.  
+and make crackling noises as you move.
 ~
 0 401417 0
 Rd     0
@@ -3876,7 +3876,7 @@ S
 Desert Cave~
 You are moving in an underground cave, the walls seeming to be old and
 decayed.  You think you can hear breathing coming from all around you, but
-are unsure of your own senses.  The cave continues to the east and west.  
+are unsure of your own senses.  The cave continues to the east and west.
 ~
 0 401417 0
 Rd     0
@@ -3893,7 +3893,7 @@ S
 Desert Cave~
 You are moving in an underground cave.  A smaller cave leads off to the
 south of this larger cave, which travels east and west.  Small pebbles
-clutter at your feet as you move.  
+clutter at your feet as you move.
 ~
 0 401417 0
 Rd     0
@@ -3915,7 +3915,7 @@ Desert Cave~
 You are moving through a much smaller cave, it looks as though this one
 has been carved into the wall by a clawed hand.  Grey hairs are all over the
 floor, and some dried blood can be seen surrounding the corpse of some kind
-of creature.  
+of creature.
 ~
 0 401417 0
 Rd     0
@@ -3947,7 +3947,7 @@ S
 Desert Cave~
 You are moving along a fairly wide cave.  The walls look very old, as
 though they have been here for quite some time.  The cave contines to the
-east or to the north.  
+east or to the north.
 ~
 0 401417 0
 Rd     0
@@ -3998,7 +3998,7 @@ S
 Desert Cave~
 You are moving along a cave beneath the desert.  Two larger caves lead
 off to the east and the west, while a somewhat smaller cave leads off to the
-south.  The southern cave is still quite large however.  
+south.  The southern cave is still quite large however.
 ~
 0 401421 0
 Rd     0
@@ -4110,7 +4110,7 @@ the east.  As you take a better look at the castle, you realize just how old
 and decayed it is.  Its walls look as though they may collapse at any time,
 and you could have swore that you just saw something move inside.  A large
 tower is on the other side of the castle, but you see no way of reaching it
-from here.  
+from here.
 ~
 0 401421 0
 Rd     0
@@ -4152,8 +4152,8 @@ S
 #2951
 Castle Hallway~
 You are moving along the eastern hallway in the castle.  The walls are
-very old, crumbling in places.  You cannot see any footprints in the dust. 
-The only exits are to the north and south.  
+very old, crumbling in places.  You cannot see any footprints in the dust.
+The only exits are to the north and south.
 ~
 0 401417 0
 Rd     0
@@ -4170,7 +4170,7 @@ S
 Castle Hallway~
 You are moving through the castle along its hallways, and have reached
 the northeast corner.  The crumbling walls are very old, and are very cold
-to the touch.  The hallways continue to the south and west.  
+to the touch.  The hallways continue to the south and west.
 ~
 0 401417 0
 Rd     0
@@ -4205,7 +4205,7 @@ S
 Castle Hallway~
 You are moving along the northern hallway in a castle.  The decayed walls
 look as though they may fall in on you at any moment.  A large door is
-situated in the south wall.  The hallway continues to the east and west.  
+situated in the south wall.  The hallway continues to the east and west.
 ~
 0 401417 0
 Rd     0
@@ -4225,11 +4225,11 @@ D3
 S
 #2955
 Castle Hallway~
-You are moving along the northern hallway in an old, abandoned castle. 
+You are moving along the northern hallway in an old, abandoned castle.
 The dark, gloomy walls seem to be closing in on you, but you realize it is
 just the lack of light playing tricks on your eyes.  You take notice that
 there are no windows in any of the walls.  The hallway goes to the east and
-west.  
+west.
 ~
 0 401417 0
 Rd     0
@@ -4246,7 +4246,7 @@ S
 Castle Hallway~
 You are moving through the castle along its hallways, and have reached
 the northwest corner.  The crumbling walls are very old, and are very cold
-to the touch.  The hallways continue to the east and the south.  
+to the touch.  The hallways continue to the east and the south.
 ~
 0 401417 0
 Rd     0
@@ -4286,7 +4286,7 @@ Castle Hallway~
 You are moving along the darkest hallway you have ever seen.  A cell door
 lies on the east wall, but it is too dark to see if anything is there.  A
 second door, made of wood, is on the west wall.  The hallway continues to
-the north and the south.  
+the north and the south.
 ~
 0 401417 0
 Rd     0
@@ -4312,7 +4312,7 @@ Castle Hallway~
 You are moving along the western hallway, what seems to be the darkest
 hallway you have ever seen.  A cell door lies on the east wall, but it is
 far too dark to see what lies behind it.  The hallway continues to the north
-or the south.  
+or the south.
 ~
 0 401417 0
 Rd     0
@@ -4334,7 +4334,7 @@ S
 Castle Hallway~
 You are moving through the castle along its hallways, and have reached
 the southeast corner.  The crumbling walls are very old, and are very cold
-to the touch.  The hallways continue to the north and the east.  
+to the touch.  The hallways continue to the north and the east.
 ~
 0 401417 0
 Rd     0
@@ -4368,7 +4368,7 @@ S
 Castle Hallway~
 You are moving along the southern hallway.  Little bits of rock and dust
 fall from the walls as you move, your mere draft causing it to happen.  The
-hallway continues to the east and west.  
+hallway continues to the east and west.
 ~
 0 401417 0
 Rd     0
@@ -4390,7 +4390,7 @@ Castle Hallway~
 You are moving along the southern hallway.  You stop dead in your tracks
 as a howl sends a chill down your spine.  You have never heard such a blood-
 curdling, painfull sound in your life.  The hallway leads to the east or
-west.  
+west.
 ~
 0 401417 0
 Rd     0
@@ -4407,7 +4407,7 @@ S
 Castle Hallway~
 You are moving through the cstle along its hallways, and have reached the
 northeast corner.  The crumbling walls are very old, and are very cold to
-the touch.  The hallways continue to the south and west.  
+the touch.  The hallways continue to the south and west.
 ~
 0 401417 0
 Rd     0
@@ -4425,7 +4425,7 @@ Castle Hallway~
 You are moving along the eastern hallway in a large castle.  The
 crumbling walls on either side of you do not stretch much taller than ten
 feet, for the roof has started to collapse here.  The hallway goes to the
-north and south.  
+north and south.
 ~
 0 401417 0
 Rd     0
@@ -4442,7 +4442,7 @@ S
 Champions Hallway~
 You are moving along a long dark, hallway.  A door in the east wall leads
 back to the main hallway of the castle, while this hallway leads to the
-west.  You can feel something of great evil in that direction.  
+west.  You can feel something of great evil in that direction.
 ~
 0 401417 0
 Rd     0
@@ -4480,7 +4480,7 @@ leads off to the east.
 Rd     0
 D0
 The decayed wall looks out of place somehow, aside from the fact that
-it's falling apart.  
+it's falling apart.
 ~
 "decayed wall" "wall"~
 67 0 2954
@@ -4627,7 +4627,7 @@ Upper Tower~
 You are moving along a flight of stairs in a tower.  You seem to have
 reached the top of this tower, but there is a trapdoor in the ceiling.  If
 only you could fly up into it, you think you yourself.  The only other exit
-is down.  
+is down.
 ~
 0 401417 0
 Rd     0
@@ -4725,7 +4725,7 @@ S
 #2983
 Arena~
 This is part of the Arena in Bretonnia, your exits take you east, south,
-west and up and down.  
+west and up and down.
 ~
 0 541466633 0
 Rd     0
@@ -4804,7 +4804,7 @@ S
 #2986
 Arena~
 This is the Arena of Bretonnia.  Exits lead you in all cardinal
-directions as well as up or down.  
+directions as well as up or down.
 ~
 0 809903113 0
 Rd     0
@@ -4914,7 +4914,7 @@ D5
 S
 #2990
 Arena~
-You may go north, west, up or down from this part of the Bretonnia Arena.  
+You may go north, west, up or down from this part of the Bretonnia Arena.
 ~
 0 541466633 0
 Rd     0

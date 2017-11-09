@@ -1,5 +1,5 @@
 #AREADATA
-Name        {??-???} Dragon Orphanage    Fyraxx~
+Name        Dragon Orphanage~
 Levels      5 20
 Builders    Fyraxx~
 VNUMs       21700 21749
@@ -19,7 +19,7 @@ A cute baby dragon toddles around here.
 ~
 This cute little baby dragon must have been abandoned at a young age.  It
 wanders the grounds of the Dragon Orphanage.  Every once in awhile it spits
-out a bit of fire, though it is a small amount.  
+out a bit of fire, though it is a small amount.
 
 The baby looks up at you with interest, studying this foreigner.
 ~
@@ -48,7 +48,7 @@ reserved~
 E
 sign~
 A large sign is stuck into the ground here.  Written on it in a flowery
-script are the words: 
+script are the words:
 
 Welcome to the Home for Lost Dragons!
 This area is for levels 5-15 only.

@@ -1,5 +1,5 @@
 #AREADATA
-Name        {??-???} PROTO AREA          Cluff~
+Name        PROTO AREA~
 Levels      0 0
 Builders    Cluff~
 VNUMs       3501 3599
@@ -17,8 +17,8 @@ brock doorman guard~
 Brock the doorman~
 Brock the guard stands here, inspecting all who approach
 ~
-Brock is a large man, nearly 7 feet in height, and a build to match. 
-Other than the armor and sword, he looks like a cheery fellow.  
+Brock is a large man, nearly 7 feet in height, and a build to match.
+Other than the armor and sword, he looks like a cheery fellow.
 ~
 65 0 0 0 S
 1 0 0 1d0+0 0d0+0
@@ -56,7 +56,7 @@ Riley Arion is here to aid you.
 Riley Arion is Cluff's brother.  Choosing a slightly different path, he
 also helps those in need, whether physical or spiritual.  He's slightly over
 6 feet in height.  His thick black hair flows with the breeze.  He keeps his
-white robes immaculately clean, just like his heart and soul..  
+white robes immaculately clean, just like his heart and soul..
 ~
 67 50331816 0 1000 S
 105 0 0 1d0+0 0d0+0
@@ -126,14 +126,14 @@ E
 statue~
 This large stone statue of Cluff Arion depicts him wearing full armor,
 with a sword in each hand.  There is a plaque attached to the base of the
-monument.  
+monument.
 ~
 E
 plaque~
 The citizens of Mira have erected this statue to honor Cluff Arion, a
 True Paladin who defended our city against a red dragon's attack.  His valor
 and courage, as well as those of his lineage, will be remembered until the
-end of time..  
+end of time..
 ~
 #0
 
@@ -144,7 +144,7 @@ end of time..
 Southern Gate to Mira~
 You stand before the southern gate to Mira, the flying city.  High stone
 walls lined with garrisons dominate your view.  A guard by the gate attracts
-your attention.  
+your attention.
 ~
 0 0 1
 Rd     0
@@ -291,7 +291,7 @@ S
 Arion Memorial~
 At the heart of Mira stands Arion Memorial.  The memorial is in honor of
 the family whose members have defended the city time and time again.  A
-statue has been erected of one of the more recent of the Arion family.  
+statue has been erected of one of the more recent of the Arion family.
 ~
 0 394256 0
 Rd     0

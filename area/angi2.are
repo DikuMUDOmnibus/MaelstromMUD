@@ -1,5 +1,5 @@
 #AREADATA
-Name        {??-???} PROTO AREA          Angi~
+Name        PROTO AREA~
 Levels      0 0
 Builders    Angi~
 VNUMs       8300 8349
@@ -83,9 +83,9 @@ reserved~
 #ROOMDATA
 #8300
 &YZenza's Foxy Imports~
-&PA sensual aroma fills the air, overpowering your mind and emotions. 
+&PA sensual aroma fills the air, overpowering your mind and emotions.
 You might begin to reconsider whether this shop will serve your purposes or
-not.  There is a sign hanging on the far wall in bright red lettering.  
+not.  There is a sign hanging on the far wall in bright red lettering.
 ~
 0 4 0
 Rd     0
@@ -110,7 +110,7 @@ S
 closely.  The sensual atmosphere that drew you to this room is strong,
 sending a tingling sensation throughout your body.  One must wonder what
 those shackles resting against the tall steel &wcolumn &Wcould possibly be
-used for.  Against the east wall lies a larg king size &wbed&W.  
+used for.  Against the east wall lies a larg king size &wbed&W.
 ~
 0 4 0
 Rd     0
@@ -120,12 +120,12 @@ tall steel column~
 sides, dangling loosely.  The shackles are made of iron as well, with a fur
 outline to protect victims' wrists.  They are attached to silver chains
 embedded into the column, just long enough to provide the most minimum
-movement.  
+movement.
 ~
 E
 bed~
 Covered with white satin sheets, this huge bed invites you to bask in
-it's warmth and pleasures it may offer.  
+it's warmth and pleasures it may offer.
 ~
 D0
 ~

@@ -1,7 +1,7 @@
 #AREADATA
-Name        {70-100} Arctic Wasteland    Nosferatu~
+Name        Arctic Wasteland~
 Levels      70 100
-Builders    None~
+Builders    Nosferatu~
 VNUMs       20000 20199
 Security    100
 Recall      10210

@@ -1,7 +1,7 @@
 #AREADATA
-Name        {  All } Midgaard            Diku~
+Name        Midgaard~
 Levels      0 0
-Builders    None~
+Builders    Diku~
 VNUMs       3000 3500
 Security    1
 Recall      25001
@@ -19,7 +19,7 @@ The healer is here, ready to assist the injured.
 The monk is robed in dark silk and gosomer.  His cowl covers his entire
 face, even keeping the eyes hidden.  He turns at you presence and seems to
 study you with curious eyes, no doubt wondering if you are one of his undead
-minions.  
+minions.
 ~
 65 128 0 0 S
 35 0 0 0d0+0 0d0+0
@@ -76,7 +76,7 @@ A shadow~
 A shadow flickers in and out of reality here.
 ~
 The shadow blends into the surrounding area, looking like nothing more
-than it's namesake.  It is however quite twisted in shape.  
+than it's namesake.  It is however quite twisted in shape.
 ~
 1 4268162 0 0 S
 1 0 0 100d0+0 0d0+0
@@ -1702,7 +1702,7 @@ In a chasm of pure darkness, far away and hidden, is where your mortal
 form now stands.  On a floating island of shadows, in a world of magic, is
 where your mind lies.  Your presence is linked here only because your morbid
 curiousity wills it.  You are before the town of Ravenwood.  There is a sign
-here.  
+here.
 ~
 0 8704 0
 Rd     0
@@ -1728,7 +1728,7 @@ been constructed from giant obsidian blocks, eternal and dark in appearance,
 and most of the wall is covered in blood stains from the rituals performed
 here.  Not far to the north can be heard the rythmic chanting of the
 T'Kirrin monks, their dark voices carrying the glory of any number of dark
-gods.  You shudder unconciously.  
+gods.  You shudder unconciously.
 ~
 0 1036 0
 Rd     0
@@ -1816,7 +1816,7 @@ square, the center of Midgaard.
 0 1 1
 Rd     0
 D0
-You see the gaping maw of the T'Kirrin Citadel 
+You see the gaping maw of the T'Kirrin Citadel
 ~
 ~
 0 -1 3001
@@ -2641,7 +2641,7 @@ S
 Inside the East Gate of Midgaard~
 You are by two small towers that have been built into the city wall and
 connected with a footbridge across the heavy wooden gate.  Main Street leads
-west from here.  South of here is the wall road, but it looks dirty and 
+west from here.  South of here is the wall road, but it looks dirty and
 not too safe.  To the north you see the Psionicist's Guild.
 ~
 0 0 1
@@ -3017,7 +3017,7 @@ the T'Kirrin Citadel.  The altar itself looks to have been carved from a
 large obsidian rock, and is stained from the countless sacrifices that the
 monks have lain upon it.  Glancing around you note the instruments that the
 monks use to reanimate the sacrifices, potions and poultices line the walls,
-along side obsidian bladed knifes and long hooked instruments.  
+along side obsidian bladed knifes and long hooked instruments.
 
 ~
 0 1036 0
@@ -3054,7 +3054,7 @@ More of the same.
 S
 #3060
 Rooms Above the Altar~
-You are above the temple altar.  Here you see rooms meant for the working 
+You are above the temple altar.  Here you see rooms meant for the working
 immortals of this mud to sit down and discuss issues.  To the north, you see
 the general meeting room.  To the east, you see the Builders' room.  To the
 south, you see the Implementors' room.  To the west, you see the Coders' room.
@@ -3087,7 +3087,7 @@ S
 General Meeting Room~
 You are inside the general meeting room, where the issues of this mud are
 discussed.  You see a large table and chairs, along with three seats at the far
-end, meant for the three directors of this mud, Yaz, Kahn, and Hatchet.  The 
+end, meant for the three directors of this mud, Yaz, Kahn, and Hatchet.  The
 exit is to the south.
 ~
 0 1036 0
@@ -3114,8 +3114,8 @@ S
 #3063
 Implementors' Room~
 You are inside the Implementors' room, where the issues regarding this mud are
-discussed.  You see a large table and chairs, along with a large seat at the 
-far end, meant for the director of implementors, Kith.  The exit is to the 
+discussed.  You see a large table and chairs, along with a large seat at the
+far end, meant for the director of implementors, Kith.  The exit is to the
 north.
 ~
 0 1036 0
@@ -4185,7 +4185,7 @@ D3
 S
 #3175
 North Underwater Room~
-This room is SECT_UNDERWATER, as is the room to the south.  To the 
+This room is SECT_UNDERWATER, as is the room to the south.  To the
 west is dry land.
 ~
 0 0 8
@@ -4324,7 +4324,7 @@ dark clouds.  It appears to be deserted, but a faint clanking sound of metal
 can be heard coming from within it's depths.  Whatever lies beyond the gates
 to your west must be of importance for it to require such an armada of
 weaponry to guard it.  An archway is before you, and in it's gloomy depths
-you can faintly make out the shape of a spiral staircase leading up.  
+you can faintly make out the shape of a spiral staircase leading up.
 ~
 0 520 0
 Rd     0

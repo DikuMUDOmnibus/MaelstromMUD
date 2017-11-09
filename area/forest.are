@@ -1,7 +1,7 @@
 #AREADATA
-Name        { 10-30} Forest Vale         Dwergen~
+Name        Forest Vale~
 Levels      10 30
-Builders    Reklar~
+Builders    Dwergen Reklar~
 VNUMs       8000 8099
 Security    100
 Recall      25001
@@ -40,7 +40,7 @@ The Mequi Guard stands here sternly.
 ~
 The Mequi guard stands here blocking your way.  By the looks of his body,
 he has fought off many creatures in his time.  He is covered with mud,
-making him harder to see.  Strange tribal tattoos mark his angry face.  
+making him harder to see.  Strange tribal tattoos mark his angry face.
 ~
 35 0 0 -1000 S
 28 0 0 1320d0+0 0d0+0
@@ -55,7 +55,7 @@ The Mequi licks his lips with hunger.
 The mequi looks like a vicious creature.  They are tall and brauny.  They
 resemble ogres, except much hairier.  Their facial features are hard, made
 of a thick bone structure.  Their arms look as if they can break thick
-branches with ease.  
+branches with ease.
 ~
 3 0 0 -1000 S
 25 0 0 1050d0+0 0d0+0
@@ -68,7 +68,7 @@ The Valewoman~
 The valewoman is hard at work making bread.
 ~
 The valewoman is hard at work making bread and other treats.  She looks
-like she has tasted many of her fine pastries many times over.  
+like she has tasted many of her fine pastries many times over.
 ~
 393219 0 0 1000 S
 30 0 0 1500d0+0 0d0+0
@@ -81,7 +81,7 @@ The Valeman~
 The valeman is looking over his supplies.
 ~
 The robusk valeman is constantly looking over his supplies.  He always
-wants the best for his faithful customers.  
+wants the best for his faithful customers.
 ~
 3 0 0 200 S
 30 0 0 1500d0+0 0d0+0
@@ -95,7 +95,7 @@ The valeman leader is not happy with your presence
 ~
 As you take a look at this man you realize that the title of leader of
 this outcasted clan is earned by the means of a fight.  His scars tell
-everything.  
+everything.
 ~
 67 0 0 -300 S
 20 0 0 600d0+0 0d0+0
@@ -107,7 +107,7 @@ valechild child~
 A valechild~
 A valechild plays here.
 ~
-The sounds of laughter fill the air as the valechild frolicks around.  
+The sounds of laughter fill the air as the valechild frolicks around.
 ~
 65 0 0 1000 S
 13 0 0 320d0+0 0d0+0
@@ -120,7 +120,7 @@ A valeman~
 A valeman walks around pondering life.
 ~
 The valeman seems to be walking around aimlessly.  He must be thinking
-about how he is going to keep his families alive and together.  
+about how he is going to keep his families alive and together.
 ~
 65 0 0 300 S
 15 0 0 400d0+0 0d0+0
@@ -133,7 +133,7 @@ A valewoman~
 A valewoman keeps a close eye on the children.
 ~
 All of the valewoman's attention is on her children.  Always making sure
-they are safe.  
+they are safe.
 ~
 65 0 0 800 S
 15 0 0 400d0+0 0d0+0
@@ -159,7 +159,7 @@ A smelly skunk strolls by.
 ~
 A rather large skunk scurries about for food.  It keeps a wary eye out
 for predators.  Getting too close would cause him to release a vile smelling
-spray.  
+spray.
 ~
 65 0 0 0 S
 11 0 0 240d0+0 0d0+0
@@ -173,7 +173,7 @@ A masked raccoon glances at you with curious eyes.
 ~
 The raccoon looks like a shady animal.  It wears a mask and picks up
 anything it finds to closely examine it.  It scurries about, careful not to
-get too close.  
+get too close.
 ~
 65 0 0 0 S
 13 0 0 320d0+0 0d0+0
@@ -267,7 +267,7 @@ A Griffin is perched here looking for food.
 The Griffin is a very large creature indeed.  Its coarse golden fur lines
 its feline body of a lion while it's huge wings span out at more than eight
 feet wide.  A lion's tail brings up the rear, and it's head and front legs
-are those of an eagle.  
+are those of an eagle.
 ~
 67 512 16 -600 S
 26 0 0 1140d0+0 0d0+0
@@ -638,7 +638,7 @@ A
 E
 shroud~
 This shroud is a purple color.  It will cover you.  But doesn't look like
-it will protect you.  Or will it.  
+it will protect you.  Or will it.
 ~
 #8017
 club~
@@ -820,7 +820,7 @@ Tall trees surround this well travelled path.  Thick shrubbery and growth
 around the path blocks any travelling towards the north and south.  The only
 directions passable are towards the east and west.  A stone bridge can be
 seen just slightly west of here.  The path travels deeper into the forest
-towards the east.  
+towards the east.
 ~
 0 0 3
 Rd     0
@@ -839,7 +839,7 @@ As you enter the forest you can hear the sounds of creatures scurrying
 about looking for food.  The sounds of nearby twigs breaking from their
 movements makes the hair on the back of your neck stand on end.  You begin
 to look around and you can swear you can see movement out of the corner of
-your eye.  But as you focus in that direction, you see nothing!  
+your eye.  But as you focus in that direction, you see nothing!
 To the south, a very thin path leads into a glade.
 ~
 0 0 3
@@ -879,7 +879,7 @@ The Forest Vale~
 The sound of nature rings loudly.  Something scutters in nearby bushes
 and birds chirp high atop trees.  A small trail branches off from the
 east-west route.  It heads north, through a strange arch made from the trunk
-of an old oak tree.  
+of an old oak tree.
 ~
 0 0 3
 Rd     0
@@ -901,7 +901,7 @@ The Forest Vale~
 This path is barely noticeable.  It is overgrown with vegetation and only
 slight marks of travel reveals its existence.  The path seems to be
 concealed to make it less conspicuous.  Beautiful flowers grow on little
-mounds rising from the ground.  The path stretches north and south.  
+mounds rising from the ground.  The path stretches north and south.
 ~
 0 0 0
 Rd     0
@@ -916,10 +916,10 @@ D2
 S
 #8006
 The Forest Vale~
-The path is beginning to become overwhelmed by the growth of the grass. 
+The path is beginning to become overwhelmed by the growth of the grass.
 It feels like you are one of the few that have chosen this path in the past
 few months.  But, some of the grass seems to be parted, as if it may have
-been secretly travelled, maybe under the cover of darkness.  
+been secretly travelled, maybe under the cover of darkness.
 ~
 0 0 3
 Rd     0
@@ -953,7 +953,7 @@ S
 The Forest Vale~
 The forest is getting more prolific, the canopy of the towering trees
 block out almost all the light here, and, as a consequence, nothing lives
-here or grows here.  At least...  nothing...  warm-blooded.  
+here or grows here.  At least...  nothing...  warm-blooded.
 ~
 0 1 3
 Rd     0
@@ -970,7 +970,7 @@ S
 The Forest Vale~
 The forest grows denser towards the east.  The branches seem to reach out
 and the trees extend higher and higher.  The thick roots begin to head
-towards the trail, threatening its existence.  
+towards the trail, threatening its existence.
 ~
 0 1 3
 Rd     0
@@ -989,7 +989,7 @@ The surrounding darkness is unsettling, the shadows hiding their secrets
 from all.  You hear something stirring behind you, but as you turn about it
 is gone, just slipping from view from the corner of your eye.  A ray of
 sunshine would be welcomed right now, though in all probability, it will
-never happen.  Not here.  
+never happen.  Not here.
 ~
 0 1 3
 Rd     0
@@ -1007,7 +1007,7 @@ The Forest Vale~
 Pressing on through the Vale, the glint of eerie greenish light that
 reflects from the eyes of predators flashes off to either side of you.  But,
 when you turn your head to peer through the darkness there by the side of
-the path in the thick copse of trees, it is gone, as if it never happened.  
+the path in the thick copse of trees, it is gone, as if it never happened.
 ~
 0 1 3
 Rd     0
@@ -1025,7 +1025,7 @@ The Forest Vale~
 Sparce glimmers of light manage to reach through the forest canopy and
 speckle the ground about you just enough to reveal a fork in the path.  To
 go north or continue to the east - both options seem equally viable, if not
-a little bit disquieting.  You glance about for clues...  
+a little bit disquieting.  You glance about for clues...
 ~
 0 0 3
 Rd     0
@@ -1047,7 +1047,7 @@ Path to the Rock~
 This stoney path leads to what looks like a large obsidian rock.  Smoke
 can be seen emanating from around it.  Scavenger birds circle the skies
 above, obviously waiting for small dead animals.  Heat also can be felt
-further north.  South of this path leads back into a forest.  
+further north.  South of this path leads back into a forest.
 ~
 0 0 3
 Rd     0
@@ -1065,7 +1065,7 @@ Path to the Rock~
 You look before you and you see a mountain of rock.  You examine it
 closer and you notice an opening to the north.  There are tracks of dried
 blood leading into the caves.  Whatever inhabits this cave must like to eat
---- a lot.  
+--- a lot.
 ~
 0 0 3
 Rd     0
@@ -1082,10 +1082,10 @@ S
 The Mequi's Cave~
 As you step into the cave you are overcome by the stench of rotting
 corpses.  You examine the room closer and you notice dried blood on the
-walls.  Once again you have that eerie feeling that you are being watched. 
+walls.  Once again you have that eerie feeling that you are being watched.
 As your eyes adjust to the darkness you can see little blue flaming eyes
 penetrating right through you.  You look around and notice these little eyes
-in every direction but the one you came through.  
+in every direction but the one you came through.
 ~
 0 5 0
 Rd     0
@@ -1110,7 +1110,7 @@ S
 The Mequi's Cave~
 By the appearance of the corpses that clutter the cave, it looks like
 these things have no problems killing their prey.  But it does look like the
-victims did put up a good fight.  
+victims did put up a good fight.
 ~
 0 1 0
 Rd     0
@@ -1127,7 +1127,7 @@ S
 The Mequi's Cave~
 Once again there is blood and pieces of discarded bone lying around the
 cave.  The stench itself almost wants to make you vomit.  What could bare to
-live in such a place like this.  
+live in such a place like this.
 ~
 0 1 0
 Rd     0
@@ -1145,7 +1145,7 @@ The Mequi's Cave~
 You must watch where you are walking here due to the fact that the floor
 is so cluttered with the remnants of so many creatures.  You see pieces of
 clothing scattered about that look awfully familiar.  You then realize where
-you have seen them.  On other adventurers like yourself.  
+you have seen them.  On other adventurers like yourself.
 ~
 0 1 0
 Rd     0
@@ -1162,7 +1162,7 @@ S
 The Mequi's Cave~
 You notice that there is a path leading to the north from here.  There is
 a very powerful stench coming from in there.  Strong enough that it
-overpowers the present stench of the rotting of bodies.  
+overpowers the present stench of the rotting of bodies.
 ~
 0 1 0
 Rd     0
@@ -1187,7 +1187,7 @@ S
 The Mequi's Cave~
 There seems to be some etchings on the cave wall.  You walk closer to
 get a better look.  It's hard to make out what it says, but you are able to
-make out just enough to get the hint.  It say's "Get out while you can."  
+make out just enough to get the hint.  It say's "Get out while you can."
 ~
 0 1 0
 Rd     0
@@ -1203,9 +1203,9 @@ S
 #8025
 The Forest Vale~
 As you continue to the east, the forest ahead opens up to a wider path
-and the trees over head thin out somewhat and let in a little more light. 
+and the trees over head thin out somewhat and let in a little more light.
 With the increasing light comes safety, for where there is light the
-creatures of the dark cannot hide and watch you.  
+creatures of the dark cannot hide and watch you.
 ~
 0 0 3
 Rd     0
@@ -1223,7 +1223,7 @@ The Forest Vale~
 As you travel the path you have a chance to study it more closely.  It
 appears that a cart has come through here not long ago, for the ruts left by
 crude wooden wheels look fresh.  You have to watch your step so as not to
-turn your ankle as you continue on your way.  
+turn your ankle as you continue on your way.
 ~
 0 0 3
 Rd     0
@@ -1241,7 +1241,7 @@ The Forest Vale~
 Now you examine the trees which line the path here.  The branches have
 been snapped off close to the pathway, as if a passing cart or possibly a
 wagon could have done.  And, by the looks of the ruts in the road here, it
-had to have been of massive proportions.  
+had to have been of massive proportions.
 ~
 0 0 3
 Rd     0
@@ -1259,7 +1259,7 @@ The Forest Vale~
 The path here takes a sharp turn to the south where the trees have been
 manually removed to accomodate the passage of the huge cart or wagon that
 has obviously passed this way.  The birds chirp high in the canopy above and
-tell of no dangers.  
+tell of no dangers.
 ~
 0 0 3
 Rd     0
@@ -1285,7 +1285,7 @@ The Forest Vale~
 The path snakes sharply again to the east.  The surrounding area is
 taking on a more hostile flair with the vegetation choking the path and the
 darkness taking over the light.  You have to peer into the forest now to
-see.  
+see.
 ~
 0 0 3
 Rd     0
@@ -1303,7 +1303,7 @@ The Forest Vale~
 The forest that surrounds you seems to have been here for centuries.  The
 trees have gone through quite a bit as you look around.  There are a few with
 cracks down the center from lightning striking.  And even more from the
-ravages of the storms that have passed over.  
+ravages of the storms that have passed over.
 ~
 0 0 3
 Rd     0
@@ -1348,7 +1348,7 @@ The Path to the Village~
 As you walk to the south, you notice that the forest starts to thin out
 even more than before.  The path looks well tended to with barely any grass
 growing on it.  It seems that the people of the Vale Village really care
-about the appearance of their village to outside visitors.  
+about the appearance of their village to outside visitors.
 ~
 0 0 3
 Rd     0
@@ -1368,7 +1368,7 @@ into the heavens.  The clatter of the village can be heard in the near
 distance.  You can hear the odd voice as the villagers walk near the walls
 that surround this village.  As you examine the walls, you notice the
 craftmanship that has gone into the work and design.  The wall looks like it
-can withhold a lot of pressure from any outside source.  
+can withhold a lot of pressure from any outside source.
 ~
 0 0 3
 Rd     0
@@ -1383,10 +1383,10 @@ D1
 S
 #8036
 The Forest Vale~
-As you walk to the east, the forest is starting to thin out completely. 
+As you walk to the east, the forest is starting to thin out completely.
 The feelings of being watched slowly fade as the trees do.  The sounds of
 creatures scurrying about has all but vanished.  With the new found silence
-you feel more at ease.  
+you feel more at ease.
 ~
 0 0 3
 Rd     0
@@ -1400,7 +1400,7 @@ The Forest Vale~
 The forest is almost completely vanished from sight.  The path now takes
 a sharp turn to the north.  As you look in the north, you can see the
 horizon of the Storm in the distance.  But before that you can see a great
-cliff rising above you.  What a vantage point this would be.  
+cliff rising above you.  What a vantage point this would be.
 ~
 0 0 3
 Rd     0
@@ -1414,7 +1414,7 @@ Vantage Point~
 As you climb further north, you can see more of this vast planet.  You
 marvell to yourself the amount of area that must be traveled to explore this
 whole world.  You are eager with the anticipation that maybe one day you can
-explore all of this great world.  
+explore all of this great world.
 ~
 0 4 5
 Rd     0
@@ -1433,7 +1433,7 @@ Still you continue further north hoping that you will come to the top
 soon.  The air around you seems to be getting thinner.  You are finding
 yourself getting light headed and tired with all of the exertion it is
 taking to climb to the top.  But you feel the anticipation growing inside
-you as you see the point in the near distance.  
+you as you see the point in the near distance.
 ~
 0 0 5
 Rd     0
@@ -1453,7 +1453,7 @@ off.  It is a far way to the bottom.  As you examine the horizon, you
 realize the shear greatness of the Storm.  You strain your eyes as you look
 down and you can swear that you can see other adventurers like yourself
 locked in battle or just exploring the land.  The path continues on to the
-west.  
+west.
 ~
 0 0 5
 Rd     0
@@ -1472,7 +1472,7 @@ As you look to the west, you can see inside the town of Bethaven.  There
 is movement in all parts of town.  You can also see the entire Vale Forest
 below you.  You notice that there is a path in front of you that it hidden
 from plain view due to a bush.  You push the bush aside and see that is
-extends down the entire side of this enormous cliff.  
+extends down the entire side of this enormous cliff.
 ~
 0 4 5
 Rd     0
@@ -1489,7 +1489,7 @@ S
 The Forest Vale~
 As you journey northward, a scent - familiar, yet obscure - catches your
 attention.  It is making you hungry, however, and your stomach growls at the
-tempting aroma.  You continue to follow your nose...  
+tempting aroma.  You continue to follow your nose...
 ~
 0 0 3
 Rd     0
@@ -1505,8 +1505,8 @@ S
 #8052
 The Forest Vale~
 The path now takes a sharp turn to the east.  The wonderful aroma seems
-to be wafting stronger here, as if it could be very close to you now. 
-However, you still have not a clue to its origins.  
+to be wafting stronger here, as if it could be very close to you now.
+However, you still have not a clue to its origins.
 ~
 0 0 3
 Rd     0
@@ -1524,7 +1524,7 @@ The Forest Vale~
 The path widens here and seems well-travelled as well.  The aroma is very
 strong now and you could be very close to the nature of its origin!  There
 are signs of others having travelled here and not too long ago.  The scent
-seems to attract many to this area.  Your stomach growls louder.  
+seems to attract many to this area.  Your stomach growls louder.
 ~
 0 0 3
 Rd     0
@@ -1541,7 +1541,7 @@ S
 The Forest Vale~
 From down the path and to the north a haze of sweet smelling smoke curls
 in the air and tempts you with its wonderful and nostalgic aroma!  There
-must be something yummy up there to make you feel so hungry!  
+must be something yummy up there to make you feel so hungry!
 ~
 0 0 3
 Rd     0
@@ -1558,7 +1558,7 @@ S
 The Forest Vale~
 As you near the origin of the sweet-smelling smoke, the unmistakable din
 of idle conversation hums in your ears.  Though you try, you cannot make out
-anything coherant from any of the conversations.  
+anything coherant from any of the conversations.
 ~
 0 4 3
 Rd     0
@@ -1578,7 +1578,7 @@ ground.  To the east is a large tent with trees for tent poles and grass
 growing thick around the edges.  Sweet smoke is wafting from the flap in the
 front where, just inside, you catch the glimpse of a valewoman busily going
 about the task of baking.  To the north the encampment continues, the
-community busy at work while the children run about in play.  
+community busy at work while the children run about in play.
 ~
 0 0 3
 Rd     0
@@ -1602,7 +1602,7 @@ and waves as she beckons you to enter and partake in her tasty wares!  A
 small smudge of flour accents the tip of her nose as she kneads the dough
 and sets it aside to rise.  Unable to resist the temptation, the change in
 your pocket seems to almost beg for you to spend it on the golden brown
-pastry being offerd to you now...  
+pastry being offerd to you now...
 ~
 0 8 0
 Rd     0
@@ -1617,7 +1617,7 @@ Standing smack in the middle of the Vale encampment, the sound of idle
 conversation fills the air.  Just to the west you notice a rather large
 tent, and through the door flap you catch the glimpse of various equipment
 and supplies scattered about the edge there.  A Valeman of a rather robust
-stature is standing there, assessing his wares.  
+stature is standing there, assessing his wares.
 ~
 0 0 3
 Rd     0
@@ -1641,7 +1641,7 @@ activity among the vale people.  This small isolated community has found an
 icon in the store owner and find enjoyment in gathering here to chat and
 gossip quietly while they inspect the goods and trade for the peddler's
 wares.  The items here seem to be of qualtiy workmanship and appear to be
-quite a bargain, at that.  
+quite a bargain, at that.
 ~
 0 8 0
 Rd     0
@@ -1654,7 +1654,7 @@ S
 The Vale Camp~
 Here it is quieter, with the excepsion of an occational murmer that
 chances to stray in your direction.  Here, behind the tents, there is a
-little more privacy.  The path continues with a sharp turn to the east...  
+little more privacy.  The path continues with a sharp turn to the east...
 ~
 0 0 3
 Rd     0
@@ -1674,7 +1674,7 @@ fashion.  This may very well be the sleeping quarters of these very odd
 people.  They don't seem to be of any particular type of people that you
 have ever encountered before, as they don't seem quite civilized, yet show
 no hostilities either.  Their calm demeanor smacks of secrecy, as if they
-were wary...  Or maybe...  Hiding.  
+were wary...  Or maybe...  Hiding.
 ~
 0 0 3
 Rd     0
@@ -1693,7 +1693,7 @@ Before you blazes a bright and cheery campfire.  There are the remains of
 a past meal scattered here and about close to the flames.  A few platters
 have food remaining on them.  Tents surround you and the fire pit on all
 sides.  This must be the sleeping area, for you can hear the snoring of the
-stuffed and sleepy valeperson as they nap after their meal.  
+stuffed and sleepy valeperson as they nap after their meal.
 ~
 0 0 3
 Rd     0
@@ -1721,7 +1721,7 @@ Crude yet comfy cots fashioned from wood and animal hides lend to a cozy
 and rustic atmosphere here in this little sleeping tent.  The walls made of
 the natural tanned hide of large animals shields you from the elements,
 keeping you warm and safe.  There are primative drawings on the walls,
-lending a surreal atmosphere to this humble dwelling.  
+lending a surreal atmosphere to this humble dwelling.
 ~
 0 0 0
 Rd     0
@@ -1741,9 +1741,9 @@ Sleeping Tent~
 You enter into the grandest tent of them all!  Tall and spacious with
 lavishly made cots and sleeping places all about, you notice that one among
 them is larger and more grandoise than all the rest.  Treasures are heaped
-and piled in the corners, and a huge platter food rests temptingly near. 
+and piled in the corners, and a huge platter food rests temptingly near.
 This may be the leader's abode.  His manner of living seems to be more
-extravagant than the rest of his meager subjects.  
+extravagant than the rest of his meager subjects.
 ~
 0 0 0
 Rd     0
@@ -1759,7 +1759,7 @@ This sleeping tent is charming and cozy, with primitive yet sturdy cots
 for resting and walls of soft tanned hide for protection from the outside
 elements.  Furs and throws are scattered about.  The drawings upon the sides
 of the tent seem to dance in the light of the campfire that glows from the
-outside.  A soft rabbit skin pillow looks perfect for napping...  
+outside.  A soft rabbit skin pillow looks perfect for napping...
 ~
 0 8 0
 Rd     0
@@ -1777,7 +1777,7 @@ S
 Cliff Edge~
 As you carefully place your feet on secure footing you begin to notice
 the actual size of this cliff.  There is barely enough room for you to place
-your feet.  The only thing for you to do now is to continue on to the east. 
+your feet.  The only thing for you to do now is to continue on to the east.
 ~
 0 0 5
 Rd     0
@@ -1795,7 +1795,7 @@ Cliff Edge~
 You notice a large nest before you with eggs that are newly hatched.  You
 wonder to yourself what kind of animal could live at such a location.  You
 also notice the carcass of other animals that have been considered lunch for
-this animal.  
+this animal.
 ~
 0 0 5
 Rd     0
@@ -1814,7 +1814,7 @@ As you examine the area that you are using to climb down the cliif, you
 realize the shear danger of this descent.  The rocks in the wall are no
 longer secure due to the amount of traffic this path has endured over the
 years.  You must be extremely careful of your footing to survive such a
-climb.  
+climb.
 ~
 0 0 5
 Rd     0
@@ -1830,11 +1830,11 @@ S
 #8070
 Cliff Edge~
 As you continue your climb down the mountain, you begin to lose your
-footing under your right foot.  Luckily you had enough strength to hold on. 
+footing under your right foot.  Luckily you had enough strength to hold on.
 You look to the right and notice the rock that you had dislodged falling at
 a high rate of speed.  It is not until you count to fifteen (if you can)
 that you hear the rock hit the ground below.  At this point you tighten your
-hand grip to the rocks of the mountain.  
+hand grip to the rocks of the mountain.
 ~
 0 0 5
 Rd     0
@@ -1852,7 +1852,7 @@ Cliff Edge~
 You examine the walls of the mountain and see many gashes taken out of
 the stone by powerful blows from past adventurers like yourself.  You also
 see the remains of many of the same adventurers lying on the ground before
-you.  
+you.
 ~
 0 0 5
 Rd     0
@@ -1866,7 +1866,7 @@ Cliff Edge~
 You find yourself on another ledge.  You examine this ledge and notice
 that it has been used very frequently.  Both by man and animal.  There are
 marks covered all over the sides of the ledge.  It looks like there has been
-a number of battles here over the years.  
+a number of battles here over the years.
 ~
 0 0 5
 Rd     0
@@ -1886,9 +1886,9 @@ S
 #8073
 Cliff Edge~
 As you gaze over the edge of the cliff, you notice that you are getting
-closer to the ground below.  With this in mind, you nerves let up a bit. 
+closer to the ground below.  With this in mind, you nerves let up a bit.
 Before you is a path that continues down to the ground below.  Once again,
-it does not look like the safest path you have seen.  
+it does not look like the safest path you have seen.
 ~
 0 0 5
 Rd     0
@@ -1907,7 +1907,7 @@ The path that continues on down is still not as secure as most would like
 it to be.  You must be very careful about where you place yourself because
 the wrong move can be disasterous.  The rocks around you fall with the
 slightest touch.  You must find one that is secure enough to withstand your
-weight.  
+weight.
 ~
 0 0 5
 Rd     0
@@ -1924,7 +1924,7 @@ S
 Cliff Edge~
 The climb down the mountain is becoming much safer now.  The rocks here
 seem to be holding together much more concrete now.  It is much easier to
-find suitable foot holds now and this causes you to become more at ease.  
+find suitable foot holds now and this causes you to become more at ease.
 ~
 0 0 5
 Rd     0
@@ -1943,7 +1943,7 @@ You find yourself on the final cliff of this mountain.  You realize that
 this has been a very difficult climb.  Once again there are signs that there
 have been many battles taken place here.  There are blood stains coating the
 rocks.  It almost looks like someone or something had bled to death here
-and stained the area for eternity.  
+and stained the area for eternity.
 ~
 0 0 5
 Rd     0
@@ -1958,12 +1958,12 @@ D4
 S
 #8078
 Cliff Edge~
-The signs of the battle that took place continue to mark this area. 
+The signs of the battle that took place continue to mark this area.
 There are fragments of fractured bones scattered about haphazardly.  Once
-again there are blood stains splashed against almost every rock in sight. 
+again there are blood stains splashed against almost every rock in sight.
 This must have been a very entertaining fight to see.  As you look over the
 edge of the cliff you realize that you have almost reached the base of the
-mountain.  
+mountain.
 ~
 0 0 5
 Rd     0
@@ -1980,7 +1980,7 @@ S
 Cliff Edge~
 The climb here seems very simple.  The rock is holding very well.  With
 this in mind you are able to climb very readily.  Looking down you realize
-that you have almost reached the base of the mountain.  
+that you have almost reached the base of the mountain.
 ~
 0 0 5
 Rd     0
@@ -1998,7 +1998,7 @@ The Forest Vale~
 You find yourself back in the forest vale.  The sounds of animals
 searching for prey returns to the still air.  The eeriness of the forest
 almost makes you want to climb back up this great mountain and face the
-dangers there.  
+dangers there.
 ~
 0 4 3
 Rd     0
@@ -2016,7 +2016,7 @@ The Forest Vale~
 The path continues along the side of the great mountain that you have
 just climbed down.  The physical and mental exertion from the climb is
 starting to take it's toll on you.  You feel that you are being watched by
-something in the near distance.  
+something in the near distance.
 ~
 0 0 3
 Rd     0
@@ -2034,7 +2034,7 @@ The Forest Vale~
 The path now takes a sharp turn to the south along the edge of the
 mountain.  Once again you feel that there is something lurking in the
 darkness of the forest ahead of you.  But being a great adventurer like
-yourself, you continue on.  
+yourself, you continue on.
 ~
 0 0 0
 Rd     0
@@ -2047,8 +2047,8 @@ S
 The Forest Vale~
 This dead-end in the forest is ominous.  The trees around you bear
 various deep claw marks.  Barkskin ripped out in large chunks litter the
-ground.  The only exit is back south.  All other directions are impassable. 
-A rather unpleasant place to be caught and cornered in.  
+ground.  The only exit is back south.  All other directions are impassable.
+A rather unpleasant place to be caught and cornered in.
 ~
 0 0 3
 Rd     0
@@ -2064,7 +2064,7 @@ a way it looks altered from it's original state.  The trees do not grow
 straight but are twisted and angulated in strange patterns.  The grass has
 slowly turned a putrid yellow with no hopes of return to its original
 beauty.  It is most likely caused from the volatile creature that inhabits
-this area.  
+this area.
 ~
 0 0 3
 Rd     0
@@ -2080,7 +2080,7 @@ S
 #8085
 The Mequi's Cave~
 As you begin to enter the back of the cave, you are overcome by a slight
-warm breeze that makes it difficult to breathe.  It feels very humid here.  
+warm breeze that makes it difficult to breathe.  It feels very humid here.
 ~
 0 5 0
 Rd     0
@@ -2146,7 +2146,7 @@ The temperature in this dank cave rises dramatically here.  It is almost
 unbearable combined with the humidity and stench of this wretched place.  A
 dim light is provided by a strange moss covering the walls.  It emits an
 eerie feeling all around.  Steps are crudely carved leading upwards into
-darkness.  
+darkness.
 ~
 0 5 0
 Rd     0
@@ -2166,7 +2166,7 @@ as you thought before.  You realize that it must have been a safe guard
 against unwanted intruders.  This part of the cavern is larger than the
 rest.  The walls are smoother and cleaner.  The temperature here drops to a
 comfortable level.  A low gutteral sound and scratching can be heard, then
-the clinking of chains ring from the east.  
+the clinking of chains ring from the east.
 ~
 0 1 0
 Rd     0
@@ -2184,7 +2184,7 @@ The Mequi's Cave~
 Upon examing the walls you notice a great deal of scratch marks.  There
 are even pieces of finger nails embedded in the wall with it's skin still
 dangling from it.  It appears that whatever is brought up here, does not
-enjoy the experience a great deal.  
+enjoy the experience a great deal.
 ~
 0 1 0
 Rd     0
@@ -2201,7 +2201,7 @@ S
 The Mequi's Cave~
 There is blood leaking from above you like a small waterfall.  The stench
 of aging blood and unwanted corpses fills the still air.  You notice that
-the blood is originating from a small opening above you.  
+the blood is originating from a small opening above you.
 ~
 0 5 0
 Rd     0

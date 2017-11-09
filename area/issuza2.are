@@ -1,5 +1,5 @@
 #AREADATA
-Name        { 30-60} Troll Mountain      Issuza~
+Name        Troll Mountain~
 Levels      30 60
 Builders    Issuza Cailean~
 VNUMs       2000 2099
@@ -18,7 +18,7 @@ The Troll Bridge Attendant~
 The Troll Bridge Attendant tries to extract the toll from you.
 ~
 A young and angry troll stands before you wishing he was elsewhere. Given
-orders to stand guard over the bridge and collect tolls from people 
+orders to stand guard over the bridge and collect tolls from people
 that pass over the bridge. He decides to take the easy way out and steal for
 the tolls.
 ~
@@ -32,7 +32,7 @@ young troll~
 A young cave troll~
 A young cave troll looks at you.
 ~
-A very young troll stands before you. He is about your size though. 
+A very young troll stands before you. He is about your size though.
 ~
 197 32768 0 -100 S
 30 0 0 1500d0+0 0d0+0
@@ -45,7 +45,7 @@ A cave troll~
 A cave troll is here protecting her young.
 ~
 A homely looking troll looks back at you with furey in her eyes.  She is
-small for a troll but ofcourse she is far bigger than you.  
+small for a troll but ofcourse she is far bigger than you.
 ~
 65 0 0 -100 S
 33 0 0 1800d0+0 0d0+0
@@ -57,8 +57,8 @@ Slime mold~
 An oozing slime mold~
 An oozing slime mold is here dissolving all it touches
 ~
-A slimy green jello mold covering half the room lies here. The mold is very 
-contempt to stay here it is feed very well. 
+A slimy green jello mold covering half the room lies here. The mold is very
+contempt to stay here it is feed very well.
 ~
 7 8192 0 0 S
 45 0 0 4000d0+0 0d0+0
@@ -73,7 +73,7 @@ A cave troll is guarding his village stands ready here
 A large cave troll looks deep into your soul and determines you are not
 worth his trouble to battle and lets you pass with a quick lick of his lips.
 You wonder why he did that but looking into his hungry eyes you get the
-feeling that he thinks you are going to be dinner soon.  
+feeling that he thinks you are going to be dinner soon.
 ~
 3 8320 0 -100 S
 38 0 0 1800d0+0 0d0+0
@@ -87,7 +87,7 @@ A cave troll ready to hunt for food for his clan attacks you.
 ~
 A large male cave troll stands before you.  He is dressed to hunt in the
 hills that surrounds the cave.  Being lazy though and seeing you he decides
-he does not have to go out for food today and attacks you.  
+he does not have to go out for food today and attacks you.
 ~
 97 128 0 -100 S
 35 0 0 1350d0+0 0d0+0
@@ -99,8 +99,8 @@ cave troll shaman~
 a cave troll shaman~
 A cave troll shaman stands here healing her clan.
 ~
-An old troll stands before you. She is very knowledgable in the healing arts. 
-She stands here ready to heal any of her clan that needs it. 
+An old troll stands before you. She is very knowledgable in the healing arts.
+She stands here ready to heal any of her clan that needs it.
 ~
 3 268443776 0 -100 S
 40 0 0 2250d0+0 0d0+0
@@ -112,7 +112,7 @@ Cave troll Chief~
 The cave troll chief~
 The Cave Troll Chief snarls loudly.
 ~
-The chief of the clan looks back at you with furey in his eyes. 
+The chief of the clan looks back at you with furey in his eyes.
 He yells "GET OUT YOU ARE NOT WANTED HERE"
 ~
 35 24704 0 -1000 S
@@ -127,8 +127,8 @@ A cave troll guarding and watching his village is here
 ~
 A large cave troll looks deep into your soul and determines you are not
 worth his trouble to battle and lets you pass with a quick lick of his lips.
-You wonder why he did that but looking into his hungry eyes you get the     
-feeling that he thinks you are going to be dinner soon.                
+You wonder why he did that but looking into his hungry eyes you get the
+feeling that he thinks you are going to be dinner soon.
 ~
 3 8320 0 -100 S
 39 0 0 1950d0+0 0d0+0
@@ -140,7 +140,7 @@ young fire troll~
 a young fire troll~
 A young fire troll wanders here
 ~
-A very young fire troll stands here.  It looks greedly at your purse.  
+A very young fire troll stands here.  It looks greedly at your purse.
 ~
 69 33587200 0 -400 S
 40 0 0 2000d0+0 0d0+0
@@ -153,7 +153,7 @@ a fire troll~
 A fire troll is here protecting her young
 ~
 A homely looking troll looks back at you with furey in her eyes.  She is
-small for a troll but ofcourse she is far bigger than you.  
+small for a troll but ofcourse she is far bigger than you.
 ~
 65 33554432 0 -400 S
 43 0 0 2250d0+0 0d0+0
@@ -167,7 +167,7 @@ A Fire Troll, dressed in his hunting clothes, snarls loudly
 ~
 A large male fire troll stands before you.  He is dressed to hunt in the
 hills that surrounds the cavern.  Being lazy though and seeing you he
-decides he does not have to go out for food today and attacks you.  
+decides he does not have to go out for food today and attacks you.
 ~
 97 33554560 0 -400 S
 45 0 0 2550d0+0 0d0+0
@@ -181,7 +181,7 @@ A fire troll stands guarding his village
 ~
 A large fire troll looks deep into your soul and determines you are not
 worth his trouble to battle and lets you pass with a quick lick of his lips.
-You wonder why he did that but looking into his hungry eyes you get the     
+You wonder why he did that but looking into his hungry eyes you get the
 feeling that he thinks you are going to be dinner soon.
 ~
 3 33562752 0 -400 S
@@ -197,7 +197,7 @@ A fire troll stands ready to protect his village
 A large fire troll looks deep into your soul and determines you are not
 worth his trouble to battle and lets you pass with a quick lick of his lips.
 You wonder why he did that but looking into his hungry eyes you get the
-feeling that he thinks you are going to be dinner soon.  
+feeling that he thinks you are going to be dinner soon.
 ~
 3 33562752 0 -400 S
 49 0 0 3670d0+0 0d0+0
@@ -210,7 +210,7 @@ a fire troll shaman~
 A fire troll shaman stands here healing her clan.
 ~
 An old troll stands before you.  She is very knowledgable in the healing
-arts.  She stands here ready to heal any of her clan that needs it.  
+arts.  She stands here ready to heal any of her clan that needs it.
 ~
 3 33562752 0 -400 S
 50 0 0 3300d0+0 0d0+0
@@ -222,8 +222,8 @@ Fire troll chief~
 The fire troll chief~
 The fire troll chief attacks you
 ~
-The chief of the clan looks back at you with furey in his eyes. 
-He yells "GET OUT YOU ARE NOT WANTED HERE"                      
+The chief of the clan looks back at you with furey in his eyes.
+He yells "GET OUT YOU ARE NOT WANTED HERE"
 ~
 35 33570952 0 -400 S
 52 0 0 3500d0+0 0d0+0
@@ -236,7 +236,7 @@ the lava monster~
 A red hot lava monster is here melting everything it touches
 ~
 A very content lava monster looks around at all the food the fire trolls
-waste and slowly absorbs it after melting everything it touches 
+waste and slowly absorbs it after melting everything it touches
 ~
 7 33562624 0 0 S
 55 0 0 5700d0+0 0d0+0
@@ -261,7 +261,7 @@ A glowing red hot beetle is here
 ~
 A small, crimson shaded insect that crawls around on it's numerous little
 feet.  Despite it's small size, you can feel a tremendous heat eminate from
-it as it passes by you.  
+it as it passes by you.
 ~
 65 524288 0 0 S
 33 0 0 1800d0+0 0d0+0
@@ -308,7 +308,7 @@ a ice troll~
 A ice troll is here protecting her young
 ~
 A homely looking troll looks back at you with furey in her eyes.  She is
-small for a troll but ofcourse she is far bigger than you.  
+small for a troll but ofcourse she is far bigger than you.
 ~
 65 134217728 0 200 S
 53 0 0 4800d0+0 0d0+0
@@ -321,7 +321,7 @@ a ice troll miner~
 A ice troll miner works here
 ~
 A miner forty niner or not?  This troll is busy working but it is hard to
-tell if he is digging or filling.  
+tell if he is digging or filling.
 ~
 65 134217728 0 400 S
 55 0 0 5700d0+0 0d0+0
@@ -335,7 +335,7 @@ A hunter ice troll attacks you
 ~
 A large female ice troll stands before you.  She is dressed to hunt in the
 hills that surrounds the cavern.  Being lazy though and seeing you she
-decides she does not have to go out for food today and attacks you.  
+decides she does not have to go out for food today and attacks you.
 ~
 97 134217856 0 400 S
 57 0 0 5400d0+0 0d0+0
@@ -361,7 +361,7 @@ A ice troll stands guarding his village
 A large ice troll looks deep into your soul and determines you are not
 worth his trouble to battle and lets you pass with a quick lick of his lips.
 You wonder why he did that but looking into his hungry eyes you get the
-feeling that he thinks you are going to be dinner soon.  
+feeling that he thinks you are going to be dinner soon.
 ~
 3 134226048 0 200 S
 60 0 0 6000d0+0 0d0+0
@@ -376,7 +376,7 @@ A ice troll stands ready to protect his village
 A large ice troll looks deep into your soul and determines you are not
 worth his trouble to battle and lets you pass with a quick lick of his lips.
 You wonder why he did that but looking into his hungry eyes you get the
-feeling that he thinks you are going to be dinner soon.  
+feeling that he thinks you are going to be dinner soon.
 ~
 3 134226048 0 200 S
 61 0 0 6100d0+0 0d0+0
@@ -389,7 +389,7 @@ a ice troll shaman~
 A ice troll shaman stands here healing her clan
 ~
 An old troll stands before you.  She is very knowledgable in the healing
-arts.  She stands here ready to heal any of her clan that needs it.  
+arts.  She stands here ready to heal any of her clan that needs it.
 ~
 3 402661504 0 2000 S
 63 0 0 6000d0+0 0d0+0
@@ -402,7 +402,7 @@ a ice troll chief~
 A ice troll chief attacks you
 ~
 The chief of the clan looks back at you with furey in his eyes.  He yells
-"GET OUT YOU ARE NOT WANTED HERE" 
+"GET OUT YOU ARE NOT WANTED HERE"
 ~
 35 134242440 0 200 S
 65 0 0 6800d0+0 0d0+0
@@ -415,7 +415,7 @@ a ice cube is here~
 A ice cube moves here freezing everything
 ~
 A very happy ice cube is here freezing all the scraps the ice trolls send
-down here slowly increasing its mass 
+down here slowly increasing its mass
 ~
 7 134225920 0 100 S
 67 0 0 10000d0+0 0d0+0
@@ -466,14 +466,14 @@ reserved~
 E
 trollbooth~
 &YPleeze depozit 1 gold pece
- 
+
                &r Da King
 ~
 E
 box~
 A poorly constructed wooden box, positioned on a wooden pole about waist
 height.  The well worn exterior is potched with claw gouges.  However, the
-coin deposit slot doesn't look all that used.  
+coin deposit slot doesn't look all that used.
 ~
 #2001
 Cream filled bug~
@@ -490,7 +490,7 @@ reserved~
 E
 bug~
 The bug is a deep blue in color, speckled with little red dots.  It's
-numerous feet scurry in an attempt to escape your grasp.  
+numerous feet scurry in an attempt to escape your grasp.
 ~
 E
 slimy~
@@ -498,7 +498,7 @@ The bug is coated in some form of translucent mucus.  Yummy.
 ~
 E
 cream~
-The inside of the insect is filled with a white, pus like substance.  
+The inside of the insect is filled with a white, pus like substance.
 ~
 #2002
 Bone Fountain~
@@ -517,7 +517,7 @@ bone~
 The fountain's exterior is composed of a mixture of bleached white bones,
 held together with some sort of clay.  You note that the bones are well
 worn, appeaing to have been gnawed on by large teeth.  You spot what you
-believe to be a human skull near the base!  
+believe to be a human skull near the base!
 ~
 E
 fountain~
@@ -546,13 +546,13 @@ E
 troll~
 The mask sports the wide, toothy grin of a troll.  It looks very much
 like a real troll, which prompts you to wonder how the creatures tell each
-other apart.  
+other apart.
 ~
 E
 mask~
 A wooden mask, finely hand crafted with more skill than you would expect
 from a brutish troll.  The face sports a wide, toothy grin, and gems adorn
-the edges.  The mask seems to eminate a pale, comforting aura.  
+the edges.  The mask seems to eminate a pale, comforting aura.
 ~
 #2004
 bone sceptre~
@@ -575,13 +575,13 @@ A
 E
 bone~
 The sceptre's main body seems to be what was once the leg of a large land
-mammal.  
+mammal.
 ~
 E
 sceptre~
-What was once the leg of some poor creature is now an oversized sceptre. 
+What was once the leg of some poor creature is now an oversized sceptre.
 It has been polished to an extent where you can barely see the teeth marks
-that cover it's surface.  
+that cover it's surface.
 ~
 #2005
 bone club~
@@ -606,12 +606,12 @@ A
 E
 bone~
 The bone appears to be a thighbone.  It's surface has been scarred by
-repeated use.  
+repeated use.
 ~
 E
 club~
 The club is made of a large, white bone, whose surface is chipped and
-scarred.  No subtlety here.  
+scarred.  No subtlety here.
 ~
 #2006
 bone necklace~
@@ -632,12 +632,12 @@ A
 E
 bone~
 The bones are small, with jagged broken edges.  Most look like
-knucklebones.  
+knucklebones.
 ~
 E
 necklace~
 The necklace is made of a dozen or so knuckle and finger bones, strung
-together on a thin etal wire.  
+together on a thin etal wire.
 ~
 #2007
 Troll skin jerkin~
@@ -655,7 +655,7 @@ A
 17 -25
 E
 troll~
-The trollskin is thick, heavy and warm.  It stinks too.  
+The trollskin is thick, heavy and warm.  It stinks too.
 ~
 E
 skin~
@@ -665,7 +665,7 @@ E
 jerkin~
 What was once the thick, smelly hide of a troll, is now the fashionably
 questionable jerkin before your eyes.  Although ugly, the trollskin looks
-tough and durable.  
+tough and durable.
 ~
 #2008
 bone platemail~
@@ -696,7 +696,7 @@ platemail~
 A hefty suit of platemail armor, made from wiring together the shoulder
 blades, kneecaps and other assorted bones of some long dead creature.  The
 bones are heavy and thick, and don't break easily, judging by the number of
-chips in them.  
+chips in them.
 ~
 #2009
 Troll Stone~
@@ -714,12 +714,12 @@ A
 4 2
 E
 troll~
-The stone is dank and mossy.  It smells like a troll.  
+The stone is dank and mossy.  It smells like a troll.
 ~
 E
 stone~
 A dark quartz stone, covered with a bit of mud and moss.  It is, however,
-unaturally light, and seems to glow with an inner power.  
+unaturally light, and seems to glow with an inner power.
 ~
 #2010
 troll skin boots~
@@ -736,18 +736,18 @@ reserved~
 E
 troll~
 A pair of boots made from stiffened trollskin.  Worn and dirty, but warm
-and sturdy.  
+and sturdy.
 ~
 E
 skin~
 Trollskin is an amazing substance: No matter what it endures, it always
-remains strong, sturdy, and smelly.  
+remains strong, sturdy, and smelly.
 ~
 E
 boots~
 This pair of boots was made from the hide of a troll that no longer
 needed it.  Despite the fact that they look awful, they are actually quite
-sturdy and practical.  
+sturdy and practical.
 ~
 #2011
 skull cap~
@@ -842,13 +842,13 @@ A
 E
 fire~
 Like all the flames that encompass the realm of the fire trolls, the heat
-eminated by the bracer is warm, but not enough to burn you.  
+eminated by the bracer is warm, but not enough to burn you.
 ~
 E
 bracer~
 A sturdy bracer made of the hide of a fire troll.  Like all the items
 that are forged under Troll Mountain, this bracer seems to eminate it's own
-heat and glow.  
+heat and glow.
 ~
 #2017
 fire skin jerkin~
@@ -886,12 +886,12 @@ E
 platemail~
 The platemail is warm to the touch, as if fresh from the forge of a
 volcano.  It's metal plates are coated in a bluish flame that glows with a
-pale aura.  
+pale aura.
 ~
 E
 fire~
 A mystical flame of unknown source seems to coat the metal.  It provides
-no noticeable heat or light, though.  
+no noticeable heat or light, though.
 ~
 #2019
 gloves warmth~
@@ -913,12 +913,12 @@ E
 gloves~
 These gloves are made of fire trollskin, and they glow with a crimson
 aura that accomidates the soft, comforting heat they seem to produce.  The
-gloves are quite large, but they are sturdy and flexable.  
+gloves are quite large, but they are sturdy and flexable.
 ~
 E
 warmth~
 These gloves seem to produce a heat of their own, and they eminate a
-soft, orange hue from their trollskin hides.  
+soft, orange hue from their trollskin hides.
 ~
 #2020
 fire belt~
@@ -938,15 +938,15 @@ A
 1 2
 E
 belt~
-The fire belt is made of some type of material, most likely trollskin. 
+The fire belt is made of some type of material, most likely trollskin.
 It is fitted with a large, mettlic clasp, indicating that it was meant for
 use by larger creatures.  It is encompassed by a mystical flame that burns,
-but does not harm.  
+but does not harm.
 ~
 E
 fire~
 The belt seems to be sheathed with a mystical flame that, although warm,
-does not burn.  
+does not burn.
 ~
 #2021
 fire scimitar~
@@ -969,13 +969,13 @@ A
 E
 fire~
 The blade of the fire scimitar is bathed in a bright, red flame.  Tounges
-of fire lash out in small arcs as you move it through the air.  
+of fire lash out in small arcs as you move it through the air.
 ~
 E
 scimitar~
-A wickedly curved stone blade, made in the forges under Troll Mountain. 
+A wickedly curved stone blade, made in the forges under Troll Mountain.
 The lon, curved edge, though unwieldly, looks meanacing.  The scimitar is
-covered in a great, red flame.  
+covered in a great, red flame.
 ~
 #2022
 fire dagger~
@@ -999,12 +999,12 @@ E
 dagger~
 A dagger made from the molten rock of Troll mountain.  The blade still
 burns with the heat of the stone from which it was forged.  A pale blue
-flame encompasses the sharpeded blade.  
+flame encompasses the sharpeded blade.
 ~
 E
 fire~
 The blade of the dagger is coated in a pale blue flame, which glows
-softly.  
+softly.
 ~
 #2023
 fire ball~
@@ -1026,13 +1026,13 @@ E
 ball~
 A curious item,.  This hovering ball of flame.  It seems to follow you
 around as you move, hovering a foot above your head.  It sparks and sputters
-occasionally.  
+occasionally.
 ~
 E
 fire~
 A curious item, this floating ball of flame.  It seems to follow you
 around as you move, hovering a foot above your head.  It sparks and sputers
-occasionally.  
+occasionally.
 ~
 #2024
 ring ice~
@@ -1246,9 +1246,9 @@ reserved~
 0 0 0
 E
 river~
-You see a fast running river named after the mountain it comes form. 
+You see a fast running river named after the mountain it comes form.
 Troll river is a sparkling clear river that came from melting snow of Troll
-mountain.  
+mountain.
 ~
 #2036
 river~
@@ -1281,12 +1281,12 @@ reserved~
 E
 spring~
 This water comes from an underground resevoir, heated by the currents of
-molten rock around you.  
+molten rock around you.
 ~
 E
 hot~
 This water is warm to the touch.  You don't know if you should drink or
-bathe here.  
+bathe here.
 ~
 #2038
 ice pond~
@@ -1316,7 +1316,7 @@ E
 fly~
 The small, humming insect is one of the strange creatures that inhabits
 the cavrens beneath Troll Mountain.  It's body glows with a dark, crimson
-hue.  
+hue.
 ~
 #2040
 Ice beetle~
@@ -1394,13 +1394,13 @@ E
 dagger~
 The dagger is made of a dark, quartz like substance that has been filed
 to a sharp point.  It's black surface gleams with an eerie glow, seeming to
-eminate from the single red jewel in the hilt.  
+eminate from the single red jewel in the hilt.
 ~
 E
 death~
 The dagger is made of a dark, quartz like substance that has been filed
 to a sharp point.  It's black surface gleams with an eerie glow, seeming to
-eminate from the single red jewel in the hilt.  
+eminate from the single red jewel in the hilt.
 ~
 #0
 
@@ -1435,7 +1435,7 @@ heavy creatures.  You should think twice before moving on. These creatures
 could very well be the death of you.  The mountain looks larger from here
 and more beautiful then before.  You can start to make out what appears to
 be caves in the side of the mountain.  The path continues to the north or to
-the bridge to the south.  
+the bridge to the south.
 ~
 0 0 4
 Rd     0
@@ -1454,7 +1454,7 @@ The trail has led you to the base of a rather large mountain.  The trail
 continues to wind its way up the mountain and into the snow.  There is also
 a tunnel that leads down into the earth below the mountain.  Looking to the
 north you see a large boulder and you sense there is something behind it
-that warrants further investigation.  
+that warrants further investigation.
 ~
 0 4 5
 Rd     0
@@ -1517,7 +1517,7 @@ Pushing the boulder aside, you have entered a dark damp cave.  The air in
 here is very stale and smells of death.  Looking closer you see some animal
 bones on the ground.  Taking a double take you also notice a human skull or
 two.  The creatures of this cave must have a wide range of tastes maybe you
-should head back the way you came.  
+should head back the way you came.
 ~
 0 9 0
 Rd     0
@@ -1536,7 +1536,7 @@ Against your better judgement you continue further into the cave.  The
 smell is definitely stronger here almost causing you to pass out.  There are
 more bones covering the floor here making it very difficult not to make
 noise.  Hearing a sound you look up and see a shuffle of a figure above you.
-This is your last chance to return south and head home.  
+This is your last chance to return south and head home.
 ~
 0 9 0
 Rd     0
@@ -1558,7 +1558,7 @@ of your will you take your eyes off the troll and look around the entrance
 to what appears to be a large cavern inside the mountain.  You notice small
 holes in the ceiling that you can feel a soft breeze bringing in fresh air
 to this otherwise stale place.  You may continue onward through the village
-to the north or return down and go home.  
+to the north or return down and go home.
 ~
 0 12 0
 Rd     0
@@ -1574,12 +1574,12 @@ S
 #2008
 Meeting Room~
 You have entered a very large section of the cavern.  It appears to be a
-gathering place by the look of the fountain in the centre of the room. 
+gathering place by the look of the fountain in the centre of the room.
 Light shines down from slits in the ceiling that also bring in fresh air
 from the outside.  Luckily for you this room is empty or you could be the
 next appetizer for the clan trolls.  There is a nasty odor coming from the
 floor.  There is a door to the east with a sign on it.  To the west is what
-appears to be a hallway and above you is a tower.  
+appears to be a hallway and above you is a tower.
 ~
 0 12 0
 Rd     0
@@ -1623,7 +1623,7 @@ A Hallway~
 You have entered a small hallway the walls made from the stalactites and
 stalagmites in the cavern.  You can feel a slight breeze coming from the
 small slits in the ceiling above.  Exits lead north to another part of the
-hallway or east to the meeting room.  
+hallway or east to the meeting room.
 ~
 0 8 0
 Rd     0
@@ -1638,7 +1638,7 @@ D1
 S
 #2010
 Doorway to Troll's Living Quarters~
-You have entered a small hallway the walls made from the stalactites and 
+You have entered a small hallway the walls made from the stalactites and
 stalagmites in the cavern. You can feel a slight breeze coming from the
 small slits in the ceiling above. Exits lead south to another part of
 the hallway or there is a door to the west that leads to what looks like
@@ -1658,13 +1658,13 @@ S
 #2011
 Troll's Living Quarters~
 You have entered the living quarters for the cave trolls.  The women and
-child spend most of their day here preparing the kills that the hunters 
-bring back.  They look at you and think they can never have to much meat. 
-The room is lit by the air slots in the ceiling that you noticed before.  
+child spend most of their day here preparing the kills that the hunters
+bring back.  They look at you and think they can never have to much meat.
+The room is lit by the air slots in the ceiling that you noticed before.
 You notice all kinds of raw meat around the room and looking closer at the
 meat you notice there are some big juicy bugs crawling around on it.  There
 are no bones in this room and you wonder what they did with them all.  Then
-you smell a God awful smell coming from the floor.                         
+you smell a God awful smell coming from the floor.
 ~
 0 8 0
 Rd     0
@@ -1689,12 +1689,12 @@ S
 Troll's Living Quarters~
 You have entered the living quarters for the cave trolls.  The women and
 child spend most of their day here preparing the kills that the hunters
-bring back.  They look at you and think they can never have to much meat. 
-The room is lit by the air slots in the ceiling that you noticed before. 
+bring back.  They look at you and think they can never have to much meat.
+The room is lit by the air slots in the ceiling that you noticed before.
 You notice all kinds of raw meat around the room and looking closer at the
 meat you notice there are some big juicy bugs crawling around on it.  There
 are no bones in this room and you wonder what they did with them all.  Then
-you smell a God awful smell coming from the floor.  
+you smell a God awful smell coming from the floor.
 ~
 0 8 0
 Rd     0
@@ -1715,12 +1715,12 @@ S
 Troll's Living Quarters~
 You have entered the living quarters for the cave trolls.  The women and
 child spend most of their day here preparing the kills that the hunters
-bring back.  They look at you and think they can never have to much meat. 
-The room is lit by the air slots in the ceiling that you noticed before. 
+bring back.  They look at you and think they can never have to much meat.
+The room is lit by the air slots in the ceiling that you noticed before.
 You notice all kinds of raw meat around the room and looking closer at the
 meat you notice there are some big juicy bugs crawling around on it.  There
 are no bones in this room and you wonder what they did with them all.  Then
-you smell a God awful smell coming from the floor.  
+you smell a God awful smell coming from the floor.
 ~
 0 8 0
 Rd     0
@@ -1740,13 +1740,13 @@ S
 #2014
 Troll's Living Quarters~
 You have entered the living quarters for the cave trolls.  The women and
-child spend most of their day here preparing the kills that the hunters 
-bring back.  They look at you and think they can never have to much meat. 
-The room is lit by the air slots in the ceiling that you noticed before.  
+child spend most of their day here preparing the kills that the hunters
+bring back.  They look at you and think they can never have to much meat.
+The room is lit by the air slots in the ceiling that you noticed before.
 You notice all kinds of raw meat around the room and looking closer at the
 meat you notice there are some big juicy bugs crawling around on it.  There
 are no bones in this room and you wonder what they did with them all.  Then
-you smell a God awful smell coming from the floor.                         
+you smell a God awful smell coming from the floor.
 ~
 0 8 0
 Rd     0
@@ -1766,39 +1766,39 @@ S
 #2015
 The Garbage Pit~
 ****** YOU ARE SLIDING DOWN A GARBAGE SLIDE *****
-                                                 
- 
- 
+
+
+
 ****** YOU ARE SLIDING DOWN A GARBAGE SLIDE *****
-                                                  
- 
- 
+
+
+
 ****** YOU ARE SLIDING DOWN A GARBAGE SLIDE *****
-                                                
- 
- 
- 
+
+
+
+
 ****** YOU ARE SLIDING DOWN A GARBAGE SLIDE *****
-                                                
- 
- 
+
+
+
 ****** YOU ARE SLIDING DOWN A GARBAGE SLIDE *****
-                                               
- 
- 
+
+
+
 ****** YOU ARE SLIDING DOWN A GARBAGE SLIDE *****
-                                                
- 
- 
+
+
+
 ****** YOU ARE SLIDING DOWN A GARBAGE SLIDE *****
-                                                
- 
- 
-You have slid down a garbage slide into this garbage pit. The smell is 
+
+
+
+You have slid down a garbage slide into this garbage pit. The smell is
 is unbearable and you pass out. When you awaken you find yourself deep in
-garbage. You feel like you really should not have waken up but then you  
+garbage. You feel like you really should not have waken up but then you
 feel something moving besides you. The slime mold besides you leaves no
-question as to what happens to the garbage here as you see it slowly   
+question as to what happens to the garbage here as you see it slowly
 dissolving the bones around you. Searching for a way up you see the all
 slides that lead down here but only one seems climbable.
 ~
@@ -1814,9 +1814,9 @@ Hunter's Den~
 You have entered a large hunter's den.  This room is filled with trophies
 of all kinds of animals.  There are several different types of each animal
 each is a prime specimen of that race.  Looking closer you see a head of a
-Dwarf and one of a Pixie among others.  Maybe if your lucky you might be  
+Dwarf and one of a Pixie among others.  Maybe if your lucky you might be
 consider a prime specimen also and your head will join the others in the
-room.  Ofcourse the cave troll that is here might just decide to eat you.  
+room.  Ofcourse the cave troll that is here might just decide to eat you.
 ~
 0 8 0
 Rd     0
@@ -1840,7 +1840,7 @@ of all kinds of animals.  There are several different types of each animal
 each is a prime specimen of that race.  Looking closer you see a head of a
 Dwarf and one of a Pixie among others.  Maybe if your lucky you might be
 consider a prime specimen also and your head will join the others in the
-room.  Ofcourse the cave troll that is here might just decide to eat you.  
+room.  Ofcourse the cave troll that is here might just decide to eat you.
 ~
 0 8 0
 Rd     0
@@ -1854,9 +1854,9 @@ Hunter's Den~
 You have entered a large hunter's den.  This room is filled with trophies
 of all kinds of animals.  There are several different types of each animal
 each is a prime specimen of that race.  Looking closer you see a head of a
-Dwarf and one of a Pixie among others.  Maybe if your lucky you might be  
+Dwarf and one of a Pixie among others.  Maybe if your lucky you might be
 consider a prime specimen also and your head will join the others in the
-room.  Ofcourse the cave troll that is here might just decide to eat you.  
+room.  Ofcourse the cave troll that is here might just decide to eat you.
 ~
 0 8 0
 Rd     0
@@ -1874,7 +1874,7 @@ of your will you take your eyes off the troll and look around the tower and
 you notice that you can see everything in the cavern from here.  You notice
 small holes in the ceiling that you can feel a soft breeze bring in fresh
 air to this otherwise stale place.  You may go north further into the tower
-or head back down.  
+or head back down.
 ~
 0 8 0
 Rd     0
@@ -1894,7 +1894,7 @@ waiting room.  Chairs line the walls here but give no hint as to what you
 are supposed to be waiting for.  This room like the others on the tower
 affords a great view of the village below.  The air is definitely fresher up
 here being closer to the vents.  There are two unmarked doors here one to
-the east and one to the west.  
+the east and one to the west.
 ~
 0 8 0
 Rd     0
@@ -1918,8 +1918,8 @@ troll if ever there was one.  She is here to heal her fellow clan members
 but really doesn't care who she heals.  This room is lined with all sorts of
 herbs and things that the shaman needs to practice her art.  You have a good
 view of the cavern from here.  It is really amazing how the trolls used the
-natural stalactites and stalagmites to form the walls of the passageways. 
-The only exit is the door you entered to the west.  
+natural stalactites and stalagmites to form the walls of the passageways.
+The only exit is the door you entered to the west.
 ~
 0 8 0
 Rd     0
@@ -1936,7 +1936,7 @@ you.  From this office he can see everything that goes on in the cavern that
 is probally why he is so angry at you.  You notice that this office is quite
 comfortable how odd that is compared to the rest of village ofcourse that is
 also the reason the chief has not left to kill you earlier.  The only exit
-is the door you entered from to the east.  
+is the door you entered from to the east.
 ~
 0 8 0
 Rd     0
@@ -1950,7 +1950,7 @@ Tunnel into the depths of the earth~
 At this point in the cavern, your skin tingles slightly with the
 sensation of heat.  From below, where the cavern continues downwards, a
 hazy, red glow is visible.  Up above, you see the sky, and a gush of cool
-air blows down at you.  
+air blows down at you.
 ~
 0 9 0
 Rd     0
@@ -1969,7 +1969,7 @@ It's HOT down here!  The air is hazy from the intense heat that eminates
 from the rocks about you.  A bright, red light shines from the cavern
 enterance to the north.  You can hear a small, rumbling sound from the same
 direction.  Up above, you can feel cool air as the cavern opens towards the
-outdoors.  
+outdoors.
 ~
 0 9 0
 Rd     0
@@ -1986,10 +1986,10 @@ S
 Entrance to large cavern~
 The ground here is level and smoothed out.  Around you, molten streams of
 lava flow slowly.  Through the hazy air, you can make out what appears to be
-a village, composed of small huts that litter the interior of this cavern. 
+a village, composed of small huts that litter the interior of this cavern.
 Small vent shafts carry air down into this otherwise stale place.  The
 cavern expands to the north, while a tunnel to the outer world is to your
-south.  
+south.
 ~
 0 12 0
 Rd     0
@@ -2005,13 +2005,13 @@ S
 #2026
 Meeting Room~
 &RYou have entered a very large section of the cavern.  It appears to be a
-gathering place by the look of the fountain in the center of the room. 
+gathering place by the look of the fountain in the center of the room.
 Light shines up from the clear floor and the lava pit beneath it no wonder
 it is so hot down here.  Slits in the ceiling that also bring in fresh air
 form the outside.  Luckily for you this room is empty or you could be the
 next appetizer for the clan trolls.  There is a burning odor coming from the
 floor.  There is a door to the east with a sign on it.  To the west is what
-appears to be a hallway and above you is a tower.  
+appears to be a hallway and above you is a tower.
 ~
 0 12 0
 Rd     0
@@ -2027,7 +2027,7 @@ sign~
 \                                 /
 / This is your final warning !!!  \
 \                                 /
- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ~
 D1
 ~
@@ -2055,7 +2055,7 @@ Hallway~
 &RYou have entered a small hallway the walls made from the stalactites and
 stalagmites in the cavern.  You can feel a slight breeze coming from the
 small slits in the ceiling above.  Exits lead north to another part of the
-hallway or east to the meeting room. 
+hallway or east to the meeting room.
 ~
 0 8 0
 Rd     0
@@ -2074,7 +2074,7 @@ Doorway to the Living Quarters~
 and stalagmites in the cavern.  You can feel a slight breeze coming from the
 small slits in the ceiling above.  Exits lead south to another part of the
 hallway or there is a door to the west that leads to what looks like a small
-living area.  
+living area.
 ~
 0 8 0
 Rd     0
@@ -2093,9 +2093,9 @@ You have entered what appears to pass for the living quarters of the fire
 trolls.  The women and children spend most of their day here preparing the
 kills that the hunters bring back.  The room is lit, but poorly ventilated,
 by the air slots in the ceiling that you noticed before.  Raw, uncooked meat
-is stewn around the room.  Bugs in search of carrion crawl about the floor. 
+is stewn around the room.  Bugs in search of carrion crawl about the floor.
 The nauseating odour of charred flesh waffs up from the floor.  Strangely,
-you notice an absence of bones...  
+you notice an absence of bones...
 ~
 0 8 0
 Rd     0
@@ -2124,13 +2124,13 @@ S
 Living Quarters of the Fire Trolls~
 &RYou have entered the living quarters for the fire trolls.  The women
 and child spend most of their day here preparing the kills that the hunters
-bring back.  They look at you and think they can never have to much meat. 
-The room is lit by the air slots in the ceiling that you noticed before. 
+bring back.  They look at you and think they can never have to much meat.
+The room is lit by the air slots in the ceiling that you noticed before.
 You notice all kinds of raw meat around the room and looking closer at the
 meat you notice there are some big juicy bugs crawling around on it.  There
 are no bones in this room, which prompts you to wonder what they did with
 them all.  The smell of carrion waffs up at you from an opening in the
-floor.  
+floor.
 ~
 0 8 0
 Rd     0
@@ -2155,8 +2155,8 @@ S
 Living Quarters of the Fire Trolls~
 &RYou have entered the living quarters for the fire trolls.  The women
 and child spend most of their day here preparing the kills that the hunters
-bring back.  They look at you and think they can never have to much meat.  
-The room is lit by the air slots in the ceiling that you noticed before.  
+bring back.  They look at you and think they can never have to much meat.
+The room is lit by the air slots in the ceiling that you noticed before.
 You notice all kinds of raw meat around the room and looking closer at the
 meat you notice there are some big juicy bugs crawling around on it.  There
 are no bones in this room and you wonder what they did with them all.  Then
@@ -2181,8 +2181,8 @@ S
 Living Quarters of the Fire Trolls~
 &RYou have entered the living quarters for the fire trolls.  The women
 and child spend most of their day here preparing the kills that the hunters
-bring back.  They look at you and think they can never have to much meat.  
-The room is lit by the air slots in the ceiling that you noticed before.  
+bring back.  They look at you and think they can never have to much meat.
+The room is lit by the air slots in the ceiling that you noticed before.
 You notice all kinds of raw meat around the room and looking closer at the
 meat you notice there are some big juicy bugs crawling around on it.  There
 are no bones in this room and you wonder what they did with them all.  Then
@@ -2208,9 +2208,9 @@ Hunter's Den~
 &RYou have entered a large hunter's den.  This room is filled with trophies
 of all kinds of animals.  There are several different types of each animal
 each is a prime specimen of that race.  Looking closer you see a head of a
-elf and one of a demon among others.  Maybe if your lucky you might be    
+elf and one of a demon among others.  Maybe if your lucky you might be
 consider a prime specimen also and your head will join the others in the
-room.  Ofcourse the fire troll that is here might just decide to eat you. 
+room.  Ofcourse the fire troll that is here might just decide to eat you.
 ~
 0 8 0
 Rd     0
@@ -2234,7 +2234,7 @@ trophies of all kinds of animals.  There are several different types of each
 animal each is a prime specimen of that race.  Looking closer you see a head
 of a elf and one of a demon among others.  Maybe if you're lucky you might
 be considered a prime specimen also and your head will join the others in
-the feast.  You may not like your role in the matter, however.  
+the feast.  You may not like your role in the matter, however.
 ~
 0 8 0
 Rd     0
@@ -2248,9 +2248,9 @@ Hunter's Den ~
 &RYou have entered a large hunter's den.  This room is filled with trophies
 of all kinds of animals.  There are several different types of each animal
 each is a prime specimen of that race.  Looking closer you see a head of a
-elf and one of a demon among others.  Maybe if your lucky you might be    
+elf and one of a demon among others.  Maybe if your lucky you might be
 consider a prime specimen also and your head will join the others in the
-room.  Ofcourse the fire troll that is here might just decide to eat you. 
+room.  Ofcourse the fire troll that is here might just decide to eat you.
 ~
 0 8 0
 Rd     0
@@ -2262,11 +2262,11 @@ S
 #2036
 Watch Tower Entrance~
 &RClimbing up to investgate further you see a rather large troll before you
-eyeing you up and down.  Luckily for you he doesn't seem to think your a 
+eyeing you up and down.  Luckily for you he doesn't seem to think your a
 threat to his village or you would problably be dead now.  Using the force
 of your will you take your eyes off the troll and look around the tower and
 you notice that you can see everything in the cavern from here.  You notice
-small holes in the ceiling that you can feel a soft breeze bring in fresh  
+small holes in the ceiling that you can feel a soft breeze bring in fresh
 air to this otherwise hot stale place.  You may go north further into the
 tower or head back down.
 ~
@@ -2289,7 +2289,7 @@ supposed to be waiting for.  Tje room is like the others in the tower,
 affoarding a great view of the village below.  The air is definatly fresher
 up here, closer to the air vents.  The floor of this cavern is translucent
 because of the intense heat of the lava below.  There are two unmarked doors
-here: One to the east, the other to the west.  
+here: One to the east, the other to the west.
 ~
 0 8 0
 Rd     0
@@ -2312,7 +2312,7 @@ Entering the office of the Fire Troll chief may not have been the
 smartest move you've ever had.  The chief doesn't appreciate people
 tresspassing in his private room.  The room is actually quite comfortable,
 and the windows give an excellent view of the cavern, as well as a steady
-supply of fresh air.  The only exit is the door to the east.  
+supply of fresh air.  The only exit is the door to the east.
 ~
 0 8 0
 Rd     0
@@ -2327,9 +2327,9 @@ Fire Troll Shaman~
 troll if ever there was one.  She is here to heal her fellow clan members
 but really doesn't care who she heals.  This room is lined with all sorts of
 herbs and things that the shaman needs to practice her art.  You have a good
-view of the cavern from here.  It is really amazing how the trolls used the 
-natural stalactites and stalagmites to form the walls of the passageways.  
-The only exit is the door you entered to the west. 
+view of the cavern from here.  It is really amazing how the trolls used the
+natural stalactites and stalagmites to form the walls of the passageways.
+The only exit is the door you entered to the west.
 ~
 0 8 0
 Rd     0
@@ -2345,7 +2345,7 @@ floor opening, you crash down a slick rock face into a deep pit.  You pull
 yourself out of a waist high mound of trash, rotting meat and nauseating
 excrements.  The floor of this room is burning hot.  Searching for a way
 out, you notice that one of the walls has gaps just big enough for your
-hands.  
+hands.
 ~
 0 12 0
 Rd     0
@@ -2359,7 +2359,7 @@ Living Quarters of the Fire Trolls~
 You find youreself in the rearmost corner of the living area of the
 Fire-Trolls.  Back here, rotting meat is piled high, intermixed with
 excretions that are on the verge of fossilization.  The repugnace of this
-room is so overwhelming that you nearly fall into the hole in it's center.  
+room is so overwhelming that you nearly fall into the hole in it's center.
 ~
 0 8 0
 Rd     0
@@ -2380,8 +2380,8 @@ S
 Living Quarters of the Fire Trolls~
 &RYou have entered the living quarters for the fire trolls.  The women
 and child spend most of their day here preparing the kills that the hunters
-bring back.  They look at you and think they can never have to much meat.  
-The room is lit by the air slots in the ceiling that you noticed before.  
+bring back.  They look at you and think they can never have to much meat.
+The room is lit by the air slots in the ceiling that you noticed before.
 You notice all kinds of raw meat around the room and looking closer at the
 meat you notice there are some big juicy bugs crawling around on it.  There
 are no bones in this room and you wonder what they did with them all.  Then
@@ -2454,7 +2454,7 @@ look around the entrance to the village that is set on a large cliff on the
 side of the mountain.  The snow is very deep here.  The village is dug out
 of the snow giving you an idication as to how deep the snow really is
 because you still can not see the earth below it.  You may continue onward
-through the village to the east or return down and go home.  
+through the village to the east or return down and go home.
 ~
 0 4 5
 Rd     0
@@ -2476,7 +2476,7 @@ seen during the day but it does not provide any warmth up here.  Luckily for
 you this room is empty or you could be the next appetizer for the clan
 trolls.  There is a stale odor coming from the floor.  There is a door to
 the south with a sign on it.  To the north is what appears to be a hallway
-and above you is a ladder up to a higher cliff.  
+and above you is a ladder up to a higher cliff.
 ~
 0 4 5
 Rd     0
@@ -2508,10 +2508,10 @@ S
 #2048
 Cliff Passage~
 &BYou have entered a small passage carved out of the snow.  You can see a
-cliff above you thru a clear sheet of ice you hope is thick enough to  
+cliff above you thru a clear sheet of ice you hope is thick enough to
 support the weight of the trolls above you.  Exits lead east to another part
-of the passage or there is a door to the north that leads to what looks     
-likes a some ice huts.         
+of the passage or there is a door to the north that leads to what looks
+likes a some ice huts.
 ~
 0 0 5
 Rd     0
@@ -2527,11 +2527,11 @@ S
 #2049
 Entry Passage to the Ice Huts~
 &BYou have entered a small passage carved out of the snow.  You can see a
-cliff above you thru a clear sheet of ice you hope is thick enough to  
+cliff above you thru a clear sheet of ice you hope is thick enough to
 support the weight of the trolls above you.  Exits lead east to another part
-of the passage, there is a door to the north that leads to what looks       
-likes a some ice huts or there is a door to the east that goes to some    
-kind of shop.                              
+of the passage, there is a door to the north that leads to what looks
+likes a some ice huts or there is a door to the east that goes to some
+kind of shop.
 ~
 0 0 5
 Rd     0
@@ -2552,12 +2552,12 @@ S
 Ice Huts~
 &BYou have entered the living quarters for the ice trolls.  The women and
 child spend most of their day here preparing the kills that the hunters
-bring back.  They look at you and think they can never have to much meat. 
+bring back.  They look at you and think they can never have to much meat.
 The room is lit by the air slots in the ceiling of the huts.  You notice all
 kinds of frozen raw meat around the room and looking closer at the meat you
 notice there are some big juicy bugs crawling around on it.  There are no
 bones in this room and you wonder what they did with them all.  Then you
-smell a God awful smell of freezing flesh coming from the floor.  
+smell a God awful smell of freezing flesh coming from the floor.
 ~
 0 8 0
 Rd     0
@@ -2586,11 +2586,11 @@ S
 Ice Huts~
 &BYou have entered the living quarters for the ice trolls.  The women and
 child spend most of their day here preparing the kills that the hunters
-bring back.  They look at you and think they can never have to much meat. 
+bring back.  They look at you and think they can never have to much meat.
 The room is lit by the air slots in the ceiling of the huts.  You notice all
-kinds of frozen raw meat around the room and looking closer at the meat you 
-notice there are some big juicy bugs crawling around on it.  There are no  
-bones in this room and you wonder what they did with them all.  Then you 
+kinds of frozen raw meat around the room and looking closer at the meat you
+notice there are some big juicy bugs crawling around on it.  There are no
+bones in this room and you wonder what they did with them all.  Then you
 smell a God awful smell of freezing flesh coming from the floor.
 ~
 0 8 0
@@ -2616,11 +2616,11 @@ S
 Ice Huts~
 &BYou have entered the living quarters for the ice trolls.  The women and
 child spend most of their day here preparing the kills that the hunters
-bring back.  They look at you and think they can never have to much meat. 
+bring back.  They look at you and think they can never have to much meat.
 The room is lit by the air slots in the ceiling of the huts.  You notice all
-kinds of frozen raw meat around the room and looking closer at the meat you 
-notice there are some big juicy bugs crawling around on it.  There are no  
-bones in this room and you wonder what they did with them all.  Then you 
+kinds of frozen raw meat around the room and looking closer at the meat you
+notice there are some big juicy bugs crawling around on it.  There are no
+bones in this room and you wonder what they did with them all.  Then you
 smell a God awful smell of freezing flesh coming from the floor.
 ~
 0 8 0
@@ -2642,11 +2642,11 @@ S
 Ice Huts~
 &BYou have entered the living quarters for the ice trolls.  The women and
 child spend most of their day here preparing the kills that the hunters
-bring back.  They look at you and think they can never have to much meat. 
+bring back.  They look at you and think they can never have to much meat.
 The room is lit by the air slots in the ceiling of the huts.  You notice all
-kinds of frozen raw meat around the room and looking closer at the meat you 
-notice there are some big juicy bugs crawling around on it.  There are no  
-bones in this room and you wonder what they did with them all.  Then you 
+kinds of frozen raw meat around the room and looking closer at the meat you
+notice there are some big juicy bugs crawling around on it.  There are no
+bones in this room and you wonder what they did with them all.  Then you
 smell a God awful smell of freezing flesh coming from the floor.
 ~
 0 8 0
@@ -2668,11 +2668,11 @@ S
 Ice Huts~
 &BYou have entered the living quarters for the ice trolls.  The women and
 child spend most of their day here preparing the kills that the hunters
-bring back.  They look at you and think they can never have to much meat. 
+bring back.  They look at you and think they can never have to much meat.
 The room is lit by the air slots in the ceiling of the huts.  You notice all
-kinds of frozen raw meat around the room and looking closer at the meat you 
-notice there are some big juicy bugs crawling around on it.  There are no  
-bones in this room and you wonder what they did with them all.  Then you 
+kinds of frozen raw meat around the room and looking closer at the meat you
+notice there are some big juicy bugs crawling around on it.  There are no
+bones in this room and you wonder what they did with them all.  Then you
 smell a God awful smell of freezing flesh coming from the floor.
 ~
 0 8 0
@@ -2694,11 +2694,11 @@ S
 Ice Huts~
 &BYou have entered the living quarters for the ice trolls.  The women and
 child spend most of their day here preparing the kills that the hunters
-bring back.  They look at you and think they can never have to much meat. 
+bring back.  They look at you and think they can never have to much meat.
 The room is lit by the air slots in the ceiling of the huts.  You notice all
-kinds of frozen raw meat around the room and looking closer at the meat you 
-notice there are some big juicy bugs crawling around on it.  There are no  
-bones in this room and you wonder what they did with them all.  Then you 
+kinds of frozen raw meat around the room and looking closer at the meat you
+notice there are some big juicy bugs crawling around on it.  There are no
+bones in this room and you wonder what they did with them all.  Then you
 smell a God awful smell of freezing flesh coming from the floor.
 ~
 0 8 0
@@ -2724,7 +2724,7 @@ threat to his village or you would problably be dead now.  Using the force
 of your will you take your eyes off the troll and look around the tower and
 you notice that you can see everything on the cliff below from here.  You
 notice that this cliff is actually polished ice supported by the snow walls
-below.  You may go east further onto the cliff or head back down.  
+below.  You may go east further onto the cliff or head back down.
 ~
 0 0 5
 Rd     0
@@ -2746,7 +2746,7 @@ ice affords a great view of the village below.  The air is definitely
 fresher and cooler up here being closer to the top of the mountain.  The
 floor of this cliff is translucant due to the highly polished ice it is made
 from.  There are two unmarked doors here one to the south and one trapdoor
-up.  
+up.
 ~
 0 8 0
 Rd     0
@@ -2762,7 +2762,7 @@ sign~
 \                                 /
 / This is your final warning !!!  \
 \                                 /
- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ~
 D2
 ~
@@ -2781,11 +2781,11 @@ S
 Ice Troll Chief's Hut~
 &BEntering the ice troll chief's office is not the best idea you had today.
 The chief is very angry, you realize this as he begins to attack you.  From
-this office he can see everything that goes on in the cavern that is       
+this office he can see everything that goes on in the cavern that is
 probally why he is so angry at you.  You notice that this office is quite
 comfortable how odd that is compared to the rest of village ofcourse that is
-also the reason the chief has not left to kill you earlier.  The only exit  
-is the door you entered from below.          
+also the reason the chief has not left to kill you earlier.  The only exit
+is the door you entered from below.
 ~
 0 8 0
 Rd     0
@@ -2803,7 +2803,7 @@ herbs and things that the shaman needs to practice her art.  You have a good
 view of the cavern from here.  It is really amazing how the trolls dug the
 village from the snow of the mountain.  The snow must be hundred feet deep
 to be able to make such a huge village.  The only exit is the door you
-entered to the north.  
+entered to the north.
 ~
 0 8 0
 Rd     0
@@ -2817,7 +2817,7 @@ Hunter's Den~
 &BYou have entered a large hunter's den.  This room is filled with trophies
 of all kinds of animals.  There are several different types of each animal
 each is a prime specimen of that race.  Looking closer you see a head of a
-elder and one of a human among others.  Maybe if your lucky you might be  
+elder and one of a human among others.  Maybe if your lucky you might be
 consider a prime specimen also and your head will join the others in the
 room.  Ofcourse the ice troll that is here might just decide to eat you.
 ~
@@ -2841,7 +2841,7 @@ Hunter's Den~
 &BYou have entered a large hunter's den.  This room is filled with trophies
 of all kinds of animals.  There are several different types of each animal
 each is a prime specimen of that race.  Looking closer you see a head of a
-elder and one of a human among others.  Maybe if your lucky you might be  
+elder and one of a human among others.  Maybe if your lucky you might be
 consider a prime specimen also and your head will join the others in the
 room.  Ofcourse the ice troll that is here might just decide to eat you.
 ~
@@ -2861,7 +2861,7 @@ Hunter's Den~
 &BYou have entered a large hunter's den.  This room is filled with trophies
 of all kinds of animals.  There are several different types of each animal
 each is a prime specimen of that race.  Looking closer you see a head of a
-elder and one of a human among others.  Maybe if your lucky you might be  
+elder and one of a human among others.  Maybe if your lucky you might be
 consider a prime specimen also and your head will join the others in the
 room.  Ofcourse the ice troll that is here might just decide to eat you.
 ~
@@ -2881,7 +2881,7 @@ Hunter's Den~
 &BYou have entered a large hunter's den.  This room is filled with trophies
 of all kinds of animals.  There are several different types of each animal
 each is a prime specimen of that race.  Looking closer you see a head of a
-elder and one of a human among others.  Maybe if your lucky you might be  
+elder and one of a human among others.  Maybe if your lucky you might be
 consider a prime specimen also and your head will join the others in the
 room.  Ofcourse the ice troll that is here might just decide to eat you.
 ~
@@ -2899,40 +2899,40 @@ S
 #2064
 Ice Pit~
 &B****** YOU ARE SLIDING DOWN A ICE SHOOT *****
-                                                 
- 
- 
+
+
+
 ****** YOU ARE SLIDING DOWN A ICE SHOOT *****
-                                                  
- 
- 
+
+
+
 ****** YOU ARE SLIDING DOWN A ICE SHOOT *****
-                                                
- 
- 
- 
+
+
+
+
 ****** YOU ARE SLIDING DOWN A ICE SHOOT *****
-                                                
- 
- 
+
+
+
 ****** YOU ARE SLIDING DOWN A ICE SHOOT *****
-                                               
- 
- 
+
+
+
 ****** YOU ARE SLIDING DOWN A ICE SHOOT *****
-                                                
- 
- 
+
+
+
 ****** YOU ARE SLIDING DOWN A ICE SHOOT *****
-                                                
- 
- 
-You have slid down a ice shoot into this ice pit. The smell is 
+
+
+
+You have slid down a ice shoot into this ice pit. The smell is
 is unbearable and you pass out. When you awaken you find yourself deep in
-garbage. You feel like you really should not have waken up but then you  
+garbage. You feel like you really should not have waken up but then you
 feel something moving besides you. The ice cube besides you leaves no
-question as to what happens to the garbage here as you see it slowly   
-freezing the discarded scraps around you. Searching for a way up you see 
+question as to what happens to the garbage here as you see it slowly
+freezing the discarded scraps around you. Searching for a way up you see
 the all slides that lead down here but only one seems climbable.
 ~
 0 12 0
@@ -3154,9 +3154,9 @@ D3
 S
 #2080
 Trail around Troll Mountain~
-You follow the small trail around Troll Mountain. The trail is not very wide 
+You follow the small trail around Troll Mountain. The trail is not very wide
 and rather rocky. You have to watch your steps carefully...to one side rise
-the jaggered cliffs of the mountain, to the other side is a very steep 
+the jaggered cliffs of the mountain, to the other side is a very steep
 slope...
 ~
 0 0 5
@@ -3172,9 +3172,9 @@ D3
 S
 #2081
 Trail around Troll Mountain~
-You follow the small trail around Troll Mountain. The trail is not very wide 
+You follow the small trail around Troll Mountain. The trail is not very wide
 and rather rocky. You have to watch your steps carefully...to one side rise
-the jaggered cliffs of the mountain, to the other side is a very steep 
+the jaggered cliffs of the mountain, to the other side is a very steep
 slope...
 ~
 0 0 5
@@ -3190,9 +3190,9 @@ D3
 S
 #2082
 Trail around Troll Mountain~
-You follow the small trail around Troll Mountain. The trail is not very wide 
+You follow the small trail around Troll Mountain. The trail is not very wide
 and rather rocky. You have to watch your steps carefully...to one side rise
-the jaggered cliffs of the mountain, to the other side is a very steep 
+the jaggered cliffs of the mountain, to the other side is a very steep
 slope...
 ~
 0 0 5
@@ -3208,9 +3208,9 @@ D2
 S
 #2083
 Trail around Troll Mountain~
-You follow the small trail around Troll Mountain. The trail is not very wide 
+You follow the small trail around Troll Mountain. The trail is not very wide
 and rather rocky. You have to watch your steps carefully...to one side rise
-the jaggered cliffs of the mountain, to the other side is a very steep 
+the jaggered cliffs of the mountain, to the other side is a very steep
 slope...
 ~
 0 0 5
@@ -3226,9 +3226,9 @@ D3
 S
 #2084
 Trail around Troll Mountain~
-You follow the small trail around Troll Mountain. The trail is not very wide 
+You follow the small trail around Troll Mountain. The trail is not very wide
 and rather rocky. You have to watch your steps carefully...to one side rise
-the jaggered cliffs of the mountain, to the other side is a very steep 
+the jaggered cliffs of the mountain, to the other side is a very steep
 slope...
 ~
 0 0 5
@@ -3244,7 +3244,7 @@ D3
 S
 #2085
 View from the Trail~
-You have reached a small intersection on the trail. From here you have 
+You have reached a small intersection on the trail. From here you have
 a good view to the south at Troll Mountain while to the north you make out
 a large valley in the distance. The trail continues in east-west directions,
 and a small and dusty road leads off north to an overlook...
@@ -3266,9 +3266,9 @@ D3
 S
 #2086
 Trail around Troll Mountain~
-You follow the small trail around Troll Mountain. The trail is not very wide 
+You follow the small trail around Troll Mountain. The trail is not very wide
 and rather rocky. You have to watch your steps carefully...to one side rise
-the jaggered cliffs of the mountain, to the other side is a very steep 
+the jaggered cliffs of the mountain, to the other side is a very steep
 slope...
 ~
 0 0 5
@@ -3284,9 +3284,9 @@ D3
 S
 #2087
 Trail around Troll Mountain~
-You follow the small trail around Troll Mountain. The trail is not very wide 
+You follow the small trail around Troll Mountain. The trail is not very wide
 and rather rocky. You have to watch your steps carefully...to one side rise
-the jaggered cliffs of the mountain, to the other side is a very steep 
+the jaggered cliffs of the mountain, to the other side is a very steep
 slope...
 ~
 0 0 5
@@ -3302,9 +3302,9 @@ D2
 S
 #2088
 Trail around Troll Mountain~
-You follow the small trail around Troll Mountain. The trail is not very wide 
+You follow the small trail around Troll Mountain. The trail is not very wide
 and rather rocky. You have to watch your steps carefully...to one side rise
-the jaggered cliffs of the mountain, to the other side is a very steep 
+the jaggered cliffs of the mountain, to the other side is a very steep
 slope...
 ~
 0 0 5
@@ -3320,9 +3320,9 @@ D2
 S
 #2089
 Trail around Troll Mountain~
-You follow the small trail around Troll Mountain. The trail is not very wide 
+You follow the small trail around Troll Mountain. The trail is not very wide
 and rather rocky. You have to watch your steps carefully...to one side rise
-the jaggered cliffs of the mountain, to the other side is a very steep 
+the jaggered cliffs of the mountain, to the other side is a very steep
 slope...
 ~
 0 0 5
@@ -3338,9 +3338,9 @@ D1
 S
 #2090
 Trail around Troll Mountain~
-You follow the small trail around Troll Mountain. The trail is not very wide 
+You follow the small trail around Troll Mountain. The trail is not very wide
 and rather rocky. You have to watch your steps carefully...to one side rise
-the jaggered cliffs of the mountain, to the other side is a very steep 
+the jaggered cliffs of the mountain, to the other side is a very steep
 slope...
 ~
 0 0 5
@@ -3356,9 +3356,9 @@ D3
 S
 #2091
 Trail around Troll Mountain~
-You follow the small trail around Troll Mountain. The trail is not very wide 
+You follow the small trail around Troll Mountain. The trail is not very wide
 and rather rocky. You have to watch your steps carefully...to one side rise
-the jaggered cliffs of the mountain, to the other side is a very steep 
+the jaggered cliffs of the mountain, to the other side is a very steep
 slope...
 ~
 0 0 5
@@ -3374,9 +3374,9 @@ D3
 S
 #2092
 Trail around Troll Mountain~
-You follow the small trail around Troll Mountain. The trail is not very wide 
+You follow the small trail around Troll Mountain. The trail is not very wide
 and rather rocky. You have to watch your steps carefully...to one side rise
-the jaggered cliffs of the mountain, to the other side is a very steep 
+the jaggered cliffs of the mountain, to the other side is a very steep
 slope...
 ~
 0 0 0
@@ -3392,9 +3392,9 @@ D2
 S
 #2093
 Trail around Troll Mountain~
-You follow the small trail around Troll Mountain. The trail is not very wide 
+You follow the small trail around Troll Mountain. The trail is not very wide
 and rather rocky. You have to watch your steps carefully...to one side rise
-the jaggered cliffs of the mountain, to the other side is a very steep 
+the jaggered cliffs of the mountain, to the other side is a very steep
 slope...
 ~
 0 0 5
@@ -3413,7 +3413,7 @@ Trail around Troll Mountain~
 You follow the small trail around Troll Mountain.  The trail is not very
 wide and rather rocky.  You have to watch your steps very carefully.  To one
 side rise the jagged cliffs of the mountain, while to the other is a steep
-slope.  
+slope.
 ~
 0 0 0
 Rd     0

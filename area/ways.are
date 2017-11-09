@@ -1,7 +1,7 @@
 #AREADATA
-Name        { 50-85} The Ways            Ichiban~
+Name        The Ways~
 Levels      50 85
-Builders    None~
+Builders    Ichiban~
 VNUMs       15100 15165
 Security    100
 Recall      25001
@@ -21,7 +21,7 @@ A huge guardian demon stands here watching the entrance to The Ways.
 The demon stands about fourteen feet tall, his body is silver and
 radiates a dull luminance.  His eyes are dark, yet sharp with intelligence
 and cunning.  Muscles ripple on a well toned body that seems as hard as
-steel, yet as soft as silk.  The guardian does not look like an easy mark.  
+steel, yet as soft as silk.  The guardian does not look like an easy mark.
 ~
 67 136 0 0 S
 55 0 0 10000d0+0 0d0+0
@@ -58,7 +58,7 @@ A massive flaming hound is here guarding the prism.
 ~
 The hound stands about nine feet tall at the shoulder.  His eyes glow
 with a dark inner light which seem to darken the surrounding area.  He
-growls low in his throat at your approach.  
+growls low in his throat at your approach.
 ~
 67 33554600 0 -1000 S
 50 0 0 3900d0+0 0d0+0
@@ -72,7 +72,7 @@ A man dressed in robes wanders The Ways in search of the answer.
 ~
 The way walker hovers about an inch off the ground.  He looks young
 compared to the halls, and you gather that he is probably the apprentice of
-one more skilled in way walking.  
+one more skilled in way walking.
 ~
 65 532608 0 500 S
 45 0 0 2600d0+0 0d0+0
@@ -86,7 +86,7 @@ A hideously disfigured beast cries eternally in torment here.
 ~
 The beast is truly repulsive.  Her hair hangs in knotted clumps that stick
 to the side of her disfigured face.  Her body is lumpy and misformed, she
-looks to be in tremendous pain and her eyes are filled with madness.  
+looks to be in tremendous pain and her eyes are filled with madness.
 ~
 67 100663434 0 -100 S
 66 0 0 6500d0+0 0d0+0
@@ -105,9 +105,9 @@ way demon red~
 A way demon~
 A massive red demon wanders the halls here.
 ~
-The way demon stands a full eight feet tall, and is built like a tank. 
+The way demon stands a full eight feet tall, and is built like a tank.
 His eyes are deep set and black as coal.  His breath is like steam and his
-drool hisses and spits when it hits the ground.  
+drool hisses and spits when it hits the ground.
 ~
 65 33562666 0 -1000 S
 60 0 0 8000d0+0 0d0+0
@@ -130,7 +130,7 @@ she looks as though she might weigh a few hundred tons.  Her eyes are sad as
 she wanders the great hallways in search of the gate that will take her
 home.  Her colouring is quite beautiful, varying from a pale orange at her
 head to a sky blue at her tail.  You feel remorse for her, and you hope she
-will find a way home.  
+will find a way home.
 ~
 65 33570952 16 1000 S
 70 0 0 7500d0+0 0d0+0
@@ -150,7 +150,7 @@ A huge griffin pounces at you with hatred in it's eyes.
 ~
 The griffin is a cross between a lion and an eagle, he is resplendant in
 his flowing mane.  His talons are a full seven inches long and sharp as a
-dagger.  You can see claw marks in the floor where he paces.  
+dagger.  You can see claw marks in the floor where he paces.
 ~
 99 16520 16 -500 S
 72 0 0 11050d0+0 0d0+0
@@ -177,7 +177,7 @@ All eight heads of the hydra turn to watch you.
 The hydra is a truly impressive beast!  She sports eight heads of varying
 color and shape.  Her body is huge and mottled with scars from previous
 battles.  She carries on her, the diamond goblet that she was placed here to
-protect.  
+protect.
 ~
 67 134217856 16 -400 S
 60 0 0 6500d0+0 0d0+0
@@ -203,7 +203,7 @@ A creature has been damned to spend eternity here.
 ~
 The creature is truly pitiful, his eyes are sunken and dark, his hair is
 clotted and sweaty.  You are not sure of what is happening, but he looks to
-be in tremendous pain.  
+be in tremendous pain.
 ~
 67 8320 0 1000 S
 55 0 0 6400d0+0 0d0+0
@@ -251,7 +251,7 @@ A behemoth snorts at your arrival.
 ~
 The behomoth is a huge boar like beast with highly intelligent eyes.  He
 rolls them towards you as you enter.  He stands about seventeen feet at the
-shoulder and his skin looks rough and hard to penetrate.  
+shoulder and his skin looks rough and hard to penetrate.
 ~
 67 16904 0 -350 S
 50 0 0 4800d0+0 0d0+0
@@ -264,7 +264,7 @@ The High Magus~
 A wizened old Magi of the High Order strolls proudly through the halls.
 ~
 The wizard watches you through eyes that have seen many a fabulous thing.
-His presence shrieks of power and control.  
+His presence shrieks of power and control.
 ~
 65 469778432 16 500 S
 76 0 0 8100d0+0 0d0+0
@@ -302,7 +302,7 @@ A huge gray worm crawls through the halls here.
 The worm is a full twelve feet long and about three feet thick.  It has
 no eyes or describable facial attributes.  The only noticable thing is a set
 of circualar teeth that resembles a mouth on either end.  It seems to sense
-your presence.  
+your presence.
 ~
 97 136 16 -100 S
 78 0 0 15200d0+0 0d0+0
@@ -316,7 +316,7 @@ A seven foot mind flayer glares icily at you.
 ~
 The mind flayer stands a good seven feet in height and has strange black
 tentacles hanging from a vaguely humanoid face.  The tentacles seem to
-twitch every time you concentrate, as if reacting to your brain wave.  
+twitch every time you concentrate, as if reacting to your brain wave.
 ~
 67 134242472 16 -300 S
 90 0 0 12500d0+0 0d0+0
@@ -348,7 +348,7 @@ A huge dragon stalks the halls of the ancient ways.
 This dragon is nothing like the friendly way dragon from the newer
 section of The Ways.  The rift Wyrm stands about fourty feet at the shoulder
 and is approximately ninety feet long.  The top of his head is decorated in
-multi-faceted horns that sparkle in the dim light of the halls.  
+multi-faceted horns that sparkle in the dim light of the halls.
 ~
 69 302096512 16 -100 S
 90 0 0 12500d0+0 0d0+0
@@ -369,7 +369,7 @@ c 'frost breath'
 ~
 >hitprcnt_prog 50~
 shriek
-cast 'complete heal' 
+cast 'complete heal'
 ~
 >fight_prog 35~
 cast 'dispel magic' $n
@@ -382,7 +382,7 @@ A strange beast comprised of brain tissue wanders blindly here.
 ~
 The memory eater is an extremely ugly creature that seems to be able to
 see with out the use of eyes or anything similar.  It is quite small, only
-about two feet long, and looks kinda like a brain with legs.  
+about two feet long, and looks kinda like a brain with legs.
 ~
 97 8320 16 0 S
 80 0 0 16000d0+0 0d0+0
@@ -789,7 +789,7 @@ E
 golden~
 &YA plain golden band... with a line engraved through it. It is about 10mm
 (1/4 of an inch) thick.
- 
+
 ~
 E
 ring~
@@ -1042,7 +1042,7 @@ A
 1 2
 E
 behemoth~
-&OThe behemoth hide is very rough and course. It has a course fur on it, 
+&OThe behemoth hide is very rough and course. It has a course fur on it,
 although you wouldn't consider it a fur because it is just a thin layer.
 ~
 E
@@ -1662,12 +1662,12 @@ A
 #15100
 Waygate~
 The walls of this chamber seem alive with colour and lights.  Images are
-called to your memory by the patterns created as they swirl and glitter. 
+called to your memory by the patterns created as they swirl and glitter.
 You find yourself thinking of things long forgotten, and times before the
 storm.  You start to see images of people long dead, and of battles fought
 thousands of years before your time.  You realize that these chambers are
 ancient, perhaps older than The Storm itself.  There is a small golden sign
-on the wall here.  
+on the wall here.
 ~
 0 1074143256 0
 Rd     0
@@ -1693,7 +1693,7 @@ adequate, you can only see about ten feet around you.  There doesn't seem to
 be a fading of light, but rather an absence of it.  You note this as merely
 an annoyance until you realize that ten feet is an awfully short distance
 for a creature to close in at.  You realize that you'll have no quick notice
-as to what is about to attack you.  The place fairly reeks of fear.  
+as to what is about to attack you.  The place fairly reeks of fear.
 ~
 0 1074143256 0
 Rd     0
@@ -1715,7 +1715,7 @@ Flame Hallway~
 The hallway takes an abrupt turn to the east here.  The walls are lined
 with portraits and tapestries of varying size and colour.  You can smell the
 rancid scent of death hanging cloyantly in the air and your stomach rushes
-to rebel.  
+to rebel.
 ~
 0 1074143256 0
 Rd     0
@@ -1746,7 +1746,7 @@ Hallway of the Beast~
 The angles of this hallway seem all wrong, twisted and distorted.  The
 pictures show hideous creatures devouring mortal creatures of all types,
 many humanoid.  The floor seems to be slanting slowly downwards and travel
-to the east is almost easy, as if the place wanted you to go this way.  
+to the east is almost easy, as if the place wanted you to go this way.
 ~
 0 1074143256 0
 Rd     0
@@ -1794,7 +1794,7 @@ Hallway of the Beast~
 The hallway shifts to the north here.  The walls are distorted and
 horribly disfigured.  They bend and twist at angles that would quickly cause
 any normal structure to collapse.  You try not to think about what might
-happen if there was a cave in.  
+happen if there was a cave in.
 ~
 0 1074143256 0
 Rd     0
@@ -1814,7 +1814,7 @@ if the walls curve in and out as they join the slightly larger roof to the
 small and oddly shaped floor.  The walls are lined with hideous portraits of
 creatures that defy nature, arms sprouting from cracked and bleeding heads,
 legs protruding from a pustule and infected back.  This place is a true
-horror unto itself.  You shiver unconsciously.  
+horror unto itself.  You shiver unconsciously.
 ~
 0 1074143256 0
 Rd     0
@@ -1828,7 +1828,7 @@ Hallway of the Dragon~
 This hall looks much more civil than some of the others in The Ways.  It
 is well maintained and is not in flux.  There are several portraits on the
 wall, including some of dragons and other great beasts.  This almost reminds
-you of a hallway in any castle within The Storm.  
+you of a hallway in any castle within The Storm.
 ~
 0 1074143256 0
 Rd     0
@@ -1852,7 +1852,7 @@ The hallway continues to the west and the northern wall harbors an
 entrance way.  You can smell a foul stench radiating from the north.  The
 area around the door seems to slowly fade from stone to a sort of milky
 white substance as it curves into the large oval room.  You can sense the
-presence of some huge beast through that passageway.  
+presence of some huge beast through that passageway.
 ~
 0 1074143256 0
 Rd     0
@@ -1874,7 +1874,7 @@ An oval chamber~
 The chamber is oval in shape, and it is most awkward to stand on the
 floor.  The walls are fashioned of some strange milky white substance and
 colours seem to play across its surface.  You mentally liken it to watching
-a rainbow through milky lenses.  The overall affect is quite stunning.  
+a rainbow through milky lenses.  The overall affect is quite stunning.
 ~
 0 1074143256 0
 Rd     0
@@ -1890,7 +1890,7 @@ just that, a bend.  The hallway seems to have been drawn to the south slowly
 and the hall curves and contorts to compensate.  The portraits hanging along
 the curved wall are also curved, as are the torches and the flames they
 produce.  The overall affect is quite disconcerting, especially when you
-notice that you begin to curve as well.  
+notice that you begin to curve as well.
 ~
 0 1074143256 0
 Rd     0
@@ -1909,7 +1909,7 @@ The hallway broadens here until you could fit five or six stalwart
 dwarves shoulder to shoulder across it.  You can sense tiny vibrations
 through the floor as if some massive machine is operating off in the
 distance.  You note that the walls here seem to glow with a light of their
-own, and even give off a small amount of heat.  
+own, and even give off a small amount of heat.
 ~
 0 1074143256 0
 Rd     0
@@ -1927,7 +1927,7 @@ Hallway of the Dragon~
 The walls of the hallway seem to pulse slowly, as if breathing.  You
 slowly run your hands across its surface before realizing that they are not
 pulsing with life, but with some kind of vibration.  You can feel the
-presence of some powerful entity lurking just beyond your sight.  
+presence of some powerful entity lurking just beyond your sight.
 ~
 0 1074143256 0
 Rd     0
@@ -1946,7 +1946,7 @@ Once again the hallway bends slowly to the west.  The curvature is
 amazingly accurate and you note that all the portraits and tapestries are
 curved to fit their position on the wall.  As you navigate the curve you
 feel your stomach wrench in contept as your body itself starts to conform to
-the hall's curvature.  
+the hall's curvature.
 ~
 0 1074143256 0
 Rd     0
@@ -1965,7 +1965,7 @@ The vibrations here seem more intense and you can hear a faint hum
 emanating from somewhere close by.  You can smell sulfur and brimstone not
 far to the south, and it is from that direction that the vibrations seem to
 be strongest.  Over the low hum you can make out the sound of claws grating
-on brick, and the low rumble of some huge beasts growl.  
+on brick, and the low rumble of some huge beasts growl.
 ~
 0 1074143256 0
 Rd     0
@@ -1988,9 +1988,9 @@ This chamber seems to have been carved from a huge multi-faceted crystal.
 Lights refract across its surface creating a highly hypnotic pattern.  You
 watch blithly until you can feel your mind slowly slipping away.  You shake
 yourself back into realization with a new respect for this place.  Surely it
-is the purpose of this chamber to distract the undisciplined adventurer. 
+is the purpose of this chamber to distract the undisciplined adventurer.
 The whole chamber seems to be vibrating in resonance to some sound you
-cannot hear.  
+cannot hear.
 ~
 0 1074143256 0
 Rd     0
@@ -2004,7 +2004,7 @@ Hallway of the Dragon~
 The hall bends slowly to the north.  You are becoming more accustomed to
 this strange phenomenon.  You feel what hairs you have begin to rise, and
 mistake the affect for fear and caution, before you realize that the walls
-are fairly humming with some form of magical energy.  
+are fairly humming with some form of magical energy.
 ~
 0 1074143256 0
 Rd     0
@@ -2022,7 +2022,7 @@ Hallway of the Dragon~
 The smell of fresh air fills your lungs as a small breeze gusts past you
 from the north.  You feel a longing to be outside and in the open, where you
 can see for miles and miles.  For the first time you feel the rubber hands
-of claustrophobia stroking your body.  
+of claustrophobia stroking your body.
 ~
 0 1074143256 0
 Rd     0
@@ -2041,7 +2041,7 @@ To the north you can see a bend and light.  You can also make out the
 clear smell of fresh air.  Your lungs pull it in hungrily, like a man denied
 food for several days.  Glancing around you notice that the portraits here
 are in much better repair than those you've seen previously.  It is obvious
-that someone maintains these halls.  
+that someone maintains these halls.
 ~
 0 1074143256 0
 Rd     0
@@ -2063,7 +2063,7 @@ Hallway of the Dragon~
 The hallway turns abruptly to the west here, unlike the other corners
 which just seemed to bend naturally.  This particular corner almost seems
 unnatural, as if carved by sentient hands.  Your heart begins to leap with
-harnessed anticipation.  
+harnessed anticipation.
 ~
 0 1074143256 0
 Rd     0
@@ -2082,9 +2082,9 @@ This room is set apart from the rest in The Ways.. in the fact that it
 seems normal.  You would almost think this to be a simple chamber in any
 castle within The Storm.  The walls are made of good hard granite and
 torches light the chamber with a flickering glow.  The rug is plush and well
-woven and there are several portraits of warriors and magi on the walls. 
+woven and there are several portraits of warriors and magi on the walls.
 You are about to leave when you notice a faint glow coming from the east
-wall...  
+wall...
 ~
 0 1074143256 0
 Rd     0
@@ -2104,7 +2104,7 @@ somewhere within these chambers a huge heart is beating.  You can almost
 make out the sounds of voices with each throb.  They call to you
 tantalizing, seducing....  You slowly snap back to reality and shake off the
 web that had been slowly falling over your mind.  You realize that you will
-have to keep a strong mental hold on yourself.  
+have to keep a strong mental hold on yourself.
 ~
 0 1074143256 0
 Rd     0
@@ -2121,7 +2121,7 @@ S
 Flame Hallway~
 The hallway abruptly comes to an end, but two sister hallways branch to
 the east and west.  You can make out the faint scratching of claw to stone
-not far to the east, while the west seems oddly quiet.  
+not far to the east, while the west seems oddly quiet.
 ~
 0 1074143256 0
 Rd     0
@@ -2145,7 +2145,7 @@ it by at some point or another.  There are no overly distinguishing
 qualities to it, the walls are all fine granite stone, and the floor is very
 nearly buried in plush rugs and furs.  The portraits on the walls show
 strange beings walking amongst groups of mortals which seem to be totally
-ignorant of their existance.  
+ignorant of their existance.
 ~
 0 1074143256 0
 Rd     0
@@ -2163,7 +2163,7 @@ Hallway of the Magi~
 This hallway seems to stretch towards infinity.  You cannot make out the
 end which must lie somewhere far to the north.  The walls here seem much
 older than any you've seen before in The Ways.  You wonder at how ancient
-this must be to show the ravages of time within these magical halls.  
+this must be to show the ravages of time within these magical halls.
 ~
 0 1074143256 0
 Rd     0
@@ -2199,7 +2199,7 @@ Hallway of the Magi~
 In this part of the halls the ceiling looks to be sagging and fine
 hairline cracks cover it in a spiderweb pattern.  A small trickle of dust
 sifts slowly down from above to rest on your shoulder, where it begins to
-tingle.  You quickly brush it off and watch it vanish into the floor.  
+tingle.  You quickly brush it off and watch it vanish into the floor.
 ~
 0 1074143256 0
 Rd     0
@@ -2217,7 +2217,7 @@ Hallway of the Magi~
 The walls here have a look as though they are thin as paper.  They seem
 to ripple in your vision as if on the verge of collapsing.  Warily you
 extend a finger to poke at them, luckily they still feel solid enough.  You
-wonder how old these particular halls must be.  
+wonder how old these particular halls must be.
 ~
 0 1074143260 0
 Rd     0
@@ -2236,7 +2236,7 @@ This room seems quite solid, almost in contradiction of the halls
 adjoining it.  There are small chairs against the walls, as if someone was
 planning on giving some sort of lecture here.  The tapestries show scenes of
 some great mage opening portals from which strange creatures come forth to
-bow at his feet.  
+bow at his feet.
 ~
 0 1074143256 0
 Rd     0
@@ -2259,7 +2259,7 @@ Hallway of the Magi~
 This segment of the hall, like the one to the south, is in fairly good
 repair.  The carpet is fresh and all the stones seem good and solid.  There
 are various objects scattered on some tables about the room.  You take a
-quick check and find all of them useless.  
+quick check and find all of them useless.
 ~
 0 1074143256 0
 Rd     0
@@ -2282,7 +2282,7 @@ Hallway of the Magi~
 To the north lies a huge chamber, it seems to be in excellent condition
 and is lavishly furnished, as if it is lived in.  You peek around the
 corners but cannot make out anything in the room itself.  You can hear the
-faint crackle of some powerful magics being used.  
+faint crackle of some powerful magics being used.
 ~
 0 1074143256 0
 Rd     0
@@ -2301,7 +2301,7 @@ This chamber is huge!  Some one hundred by seventy by fourty feet.  You
 marvel at the architecture.  Hanging from the ceiling are any number of
 chandeliers and magical lanterns.  You watch the patterns of light that
 reflect from the chandeliers dance across the walls.  The floors are covered
-in a plush red carpet that feels soft enough to sleep on.  
+in a plush red carpet that feels soft enough to sleep on.
 ~
 0 1074143256 0
 Rd     0
@@ -2383,10 +2383,10 @@ S
 #15135
 Chamber of the Ancients~
 Against the north wall is a throne inlaid with priceless gemstones and
-encrusted with gold.  The scrollwork going up the back is quite elegant. 
+encrusted with gold.  The scrollwork going up the back is quite elegant.
 Directly above this throne hangs a portrait of a great mage holding sway
 over a huge black wyrm. The picture is lighted by another of those strange
-magical lanterns and it throws shadows and sparkles across the scene.  
+magical lanterns and it throws shadows and sparkles across the scene.
 ~
 0 1082130456 0
 Rd     0
@@ -2450,7 +2450,7 @@ creature's breath pushing warmly at the back of your neck.  You spin to
 engage this beast in combat, but it is not there, instead the feeling comes
 from another direction.  Quickly you realize that the halls are tormenting
 you, making you immune to this feeling of weariness, so that when it becomes
-real you won't be ready.  
+real you won't be ready.
 ~
 0 1082531864 0
 Rd     0
@@ -2466,10 +2466,10 @@ S
 #15139
 Twisted Hallway~
 The hallway takes a sharp bend to the west here.  Not far in the distance
-you can feel some unseen force, and it seems to be approaching... 
+you can feel some unseen force, and it seems to be approaching...
 Watching...  Waiting for you to let your guard down.  Sweat slowly rolls
 down your face from the sheer force of will it takes you not to turn and
-run.  
+run.
 ~
 0 1074143256 0
 Rd     0
@@ -2487,7 +2487,7 @@ Twisted Hallway~
 The temperature here seems to have dropped about twenty degrees.  Small
 crystals of ice form before your eyes on the elaborate paneling here.  You
 watch as small patterns form and just as suddenly melt, as if blown on by a
-warm breeze.  
+warm breeze.
 ~
 0 1074143256 0
 Rd     0
@@ -2506,7 +2506,7 @@ The hallway splits to the north and south here.  You notice that every
 few minutes the perspective in the room seems to sway, as if you are moving
 closer, then further.  It seems that this occurs at around the same time
 that some strange electrical force lifts the hairs on your head.  Not for
-the first time you wonder what powers this strange place.  
+the first time you wonder what powers this strange place.
 ~
 0 1074143256 0
 Rd     0
@@ -2525,12 +2525,12 @@ D2
 S
 #15142
 Corridor of Gates~
-A small stain of blood covers the carpet of this section of the hallway. 
+A small stain of blood covers the carpet of this section of the hallway.
 It appears to be quite fresh.  Upon closer examination you can see that the
 blood trails to the wall and then proceeds up the side to the ceiling.  From
 the ceiling it drips back to the floor and slowly moves toward the wall, in
 an endless cycle.  You deftly step around the drip, wary of what it might do
-if you interrupt it's pattern.  
+if you interrupt it's pattern.
 ~
 0 1074143256 0
 Rd     0
@@ -2546,9 +2546,9 @@ S
 #15143
 Corridor of Gates~
 The air in this room seems thin and hardly breathable.  You stumble
-towards the wall to steady yourself as a wave of dizziness overcomes you. 
+towards the wall to steady yourself as a wave of dizziness overcomes you.
 Quickly you regain your composure and move on, your lungs straining for air
-where none can be found.  
+where none can be found.
 ~
 0 1074143256 0
 Rd     0
@@ -2568,7 +2568,7 @@ deeply you begin to feel happier...  Things begin to seem funny.  Glancing
 at the wall you see portraits of strange aquatic creatures engaging in
 fornication.  You bellow in laughter although you find no humour in it.  You
 realize that the cause must be the strange air...  You can try to hold your
-breath and focus on the hallway before you.  
+breath and focus on the hallway before you.
 ~
 0 1074143256 0
 Rd     0
@@ -2586,7 +2586,7 @@ Corridor of Gates~
 The hallway turns sharply to the north here.  The carpeting in the
 northern hallway seems damp and the walls have small droplets of water on
 them.  Tasting the drops you find the water salty, as if it came from the
-sea.  The air has a faint smell of salt to it as well.  
+sea.  The air has a faint smell of salt to it as well.
 ~
 0 1074143256 0
 Rd     0
@@ -2604,7 +2604,7 @@ Corridor of Gates~
 You can definitely feel the moisture in the air now.  Not far to the
 north you can hear the sounds of the surf crashing into the land.  You can
 even make out the faint cry of gulls and other sea birds.  The carpets here
-are soaked with salty water.  
+are soaked with salty water.
 ~
 0 1074143256 0
 Rd     0
@@ -2622,7 +2622,7 @@ Corridor of Gates~
 There is about an inch of sea water on the carpeting here, and small
 pieces of sea vegetation float around your feet.  To the east rises a solid
 wall of water.  There is an iron clad gate to the west, and from below it
-seeps an ominous red mist.  
+seeps an ominous red mist.
 ~
 0 1074143256 0
 Rd     0
@@ -2645,7 +2645,7 @@ As you enter the chamber, a feeling of uneasiness comes over you.  You
 instinctively reach for your weapon as the hairs on the nape of your neck
 begin to rise.  This room seems to be filled to the brim of bursting hatred
 and malign intent.  The floor is shrouded in a series of strange mists.  The
-swirl begins to draw you attention...  Just as it was designed to do.  
+swirl begins to draw you attention...  Just as it was designed to do.
 ~
 0 1074143256 0
 Rd     0
@@ -2658,7 +2658,7 @@ S
 Chamber of Atlantis~
 This chamber is brilliantly designed.  Its walls are inlaid with mother
 of pearl and there are several tapestries depicting any number of seascapes.
-You feel at peace here.  
+You feel at peace here.
 ~
 0 1074143256 8
 Rd     0
@@ -2680,7 +2680,7 @@ Soft breezes tickle your face, seeming to come from everywhere and
 nowhere.  Glancing around, you see the walls retreat, then approach as if
 locked in some magical dance.  Slowly you feel your consciousness begin to
 fade, you quickly slap yourself to gain back your control.  Once more you
-remind yourself of the dangers of letting your mind wander.  
+remind yourself of the dangers of letting your mind wander.
 ~
 0 1074143256 0
 Rd     0
@@ -2699,7 +2699,7 @@ Strange voices fill the air, whispering, singing.  You can make out
 voices that sound familiar, like an old friend, begging you to come to
 their aid.  Songs dance through your head, switching volume and tempo until
 the beat becomes maddening.  Locking out the voices you brace yourself to
-carry on.  
+carry on.
 ~
 0 1074143256 0
 Rd     0
@@ -2764,8 +2764,8 @@ S
 Corridor of Gates~
 There is an iron bound door to the west.  You can hear eight distinct
 growls coming from behind the door, yet you hear only one creature moving
-about.  You wonder briefly as to what make of creature this must be. 
-Whatever it is, you doubt it will be friendly.  
+about.  You wonder briefly as to what make of creature this must be.
+Whatever it is, you doubt it will be friendly.
 ~
 0 1074143256 0
 Rd     0
@@ -2784,11 +2784,11 @@ door~
 S
 #15155
 Chamber of the Goblet~
-This room is enormous, its ceiling being well over thirty feet above. 
+This room is enormous, its ceiling being well over thirty feet above.
 The floor is damp and the air smells stale and fetid.  You look down and see
 the bones of past travelers littering the room.  Most are cracked or
 entirely destroyed.  Under the decay you can make out a faint hint of sulfur
-and the rank smell of feces. 
+and the rank smell of feces.
 ~
 0 1074143256 0
 Rd     0
@@ -2802,7 +2802,7 @@ Corridor of Gates~
 You come abruptly to the end of the passageway.  There is a large black
 door directly to the east, and you can hear the sounds of flapping coming
 from within.  Taking a quick look around you notice that the pictures in
-this portion of the halls are hung upside down.  
+this portion of the halls are hung upside down.
 ~
 0 1074143256 0
 Rd     0
@@ -2821,7 +2821,7 @@ Upon entering this chamber your nostrils are assailed with the rank smell
 of feces and other bodily excretions.  You feel your stomach begin to turn
 and consciously fend off an urge to relinquish your last reprise.  The room
 itself seems to be in good shape, other than the inch deep scratches in the
-floor.  
+floor.
 ~
 0 1074143256 0
 Rd     0
@@ -2834,7 +2834,7 @@ S
 A crumbling waygate~
 The waygate is crumbling and in bad repair.  Mortar falls from the walls
 and ceiling making it difficult to walk.  You wonder how the place is still
-even standing, it is such a mess.  
+even standing, it is such a mess.
 ~
 0 401432 0
 Rd     0
@@ -2852,8 +2852,8 @@ Decaying Hallway~
 You are walking down a decaying hallway.  The walls are in poor repair
 with mortar and stones falling from them and leaving piles of rubble on the
 ground.  The ceiling is pocked and crumbling about you.  You get the feeling
-that this is not the safest place in the world to be.  
- 
+that this is not the safest place in the world to be.
+
 ~
 0 401432 0
 Rd     0
@@ -2871,7 +2871,7 @@ Decaying Hallway~
 You are in a decaying hallway.  It looks like this place has never been
 cared for.  Holes in the walls and ceiling are abundant and the floor is
 covered with mortar and splintered wood.  Looking around you, you can never
-be fully sure the hall will not collapse about you.  
+be fully sure the hall will not collapse about you.
 ~
 0 401432 0
 Rd     0
@@ -2902,7 +2902,7 @@ S
 Decaying Hallway~
 Mortar and stone crumble to the ground.  The walls are crumbling and not
 very safe looking.  Overhead the ceiling is pock marked and stained.  You
-get the feeling no one has been down this hall in a very long time.  
+get the feeling no one has been down this hall in a very long time.
 ~
 0 401432 0
 Rd     0
@@ -2920,7 +2920,7 @@ Decaying Hallway~
 You are moving down a decaying hallway.  The walls are in poor repair
 with mortar and stones falling from them and leaving piles of rubble on the
 ground.  The ceiling is pocked and crumbling about you.  You get the feeling
-that this is not the safest place in the world to be.  
+that this is not the safest place in the world to be.
 ~
 0 401432 0
 Rd     0
@@ -2938,7 +2938,7 @@ Decaying Hallway~
 You are forced to carefully pick your way through the rubble on the
 ground that at one time was the walls and ceiling of the hall.  A shiver
 goes up your spine as yet another piece of the ceiling falls not 3 inches
-from your head.  
+from your head.
 ~
 0 401432 0
 Rd     0
@@ -2954,11 +2954,11 @@ S
 #15165
 Chamber of Decay~
 As you enter the chamber you are overwhelmed with the general disrepair of
-the whole place.  Every available surface is cracked and filled with holes. 
+the whole place.  Every available surface is cracked and filled with holes.
 Piles of mortar cover the floor and pieces of the ceiling continue to fall
 around you.  The floor is made from black flagstones but not one flagstone
 is whole.  Looking around you, a shiver runs up your spine as you wonder
-whether it is safe to be here.  
+whether it is safe to be here.
 ~
 0 401432 0
 Rd     0

@@ -1,7 +1,7 @@
 #AREADATA
-Name        {  All } The Greenway        Sherf~
+Name        The Greenway~
 Levels      1 100
-Builders    None~
+Builders    Sherf~
 VNUMs       5300 5499
 Security    100
 Recall      25001
@@ -27,7 +27,7 @@ End
 On a well beaten pathway~
 Here the dirt path merges with a small path that is well paved with
 cobblestones of various types.  You may continue on the cobblestone path to
-the east, or towards a large town to the north.  
+the east, or towards a large town to the north.
 ~
 0 4 0
 Rd     0
@@ -48,7 +48,7 @@ S
 On a well beaten pathway~
 The small path is well paved with cobblestones of various types.  You can
 hear the sounds of many small animals off in the distance.  A small sign
-stands here, almost overgrown with weeds and small bushes.  
+stands here, almost overgrown with weeds and small bushes.
 ~
 0 0 0
 Rd     0
@@ -73,7 +73,7 @@ S
 On a well beaten pathway~
 The small path is well paved with cobblestones of various types.  You can
 hear the sounds of many small animals off in the distance.  You may continue
-along the path in either direction.  
+along the path in either direction.
 ~
 0 0 0
 Rd     0
@@ -90,7 +90,7 @@ S
 On a well beaten pathway~
 The small path is well paved with cobblestones of various types.  You can
 hear the sounds of many small animals off in the distance.  You may continue
-along the path in either direction.  
+along the path in either direction.
 ~
 0 0 0
 Rd     0
@@ -107,7 +107,7 @@ S
 On a well beaten pathway~
 The small path is well paved with cobblestones of various types.  You can
 hear the sounds of many small animals off in the distance.  You may continue
-along the path in either direction.  The bones of a small animal lie here.  
+along the path in either direction.  The bones of a small animal lie here.
 ~
 0 0 0
 Rd     0
@@ -115,7 +115,7 @@ E
 bones~
 A closer look at the remains of this poor creature reveals that it is a
 small four-legged animal, perhaps a squirrel or a rabbit.  No doubt both
-small and large animals make their homes in this forest.  
+small and large animals make their homes in this forest.
 ~
 D1
 ~
@@ -130,7 +130,7 @@ S
 On a well beaten pathway~
 The small path is well paved with cobblestones of various types.  You can
 hear the sounds of many small animals off in the distance.  You may continue
-along the path in either direction.  
+along the path in either direction.
 ~
 0 0 0
 Rd     0
@@ -148,7 +148,7 @@ On a well beaten pathway~
 The small path is well paved with cobblestones of various types.  You can
 hear the sounds of many small animals off in the distance.  You may continue
 along the path in either direction.  The freshly slaughtered remains of a
-large buck deer lies on the ground here.  
+large buck deer lies on the ground here.
 ~
 0 4 0
 Rd     0
@@ -157,7 +157,7 @@ remains~
 The bloody carcass of this animal is too fresh to give off any smell but
 those of blood and guts.  A closer examination reveals that it was killed by
 another animal, yet only a small portion has been eaten.  Perhaps the killer
-was driven away by a fiercer predator.  
+was driven away by a fiercer predator.
 ~
 D1
 ~
@@ -171,8 +171,8 @@ S
 #5307
 On a Path Through the Fields~
 The dirt path twists away to the north and south from this point, with
-high grass partly obscuring your vision on either side of the road. 
-Occasionally a field mouse will pop its head up, and then disappear.  
+high grass partly obscuring your vision on either side of the road.
+Occasionally a field mouse will pop its head up, and then disappear.
 ~
 0 0 0
 Rd     0
@@ -188,9 +188,9 @@ S
 #5308
 On a Path Through the Fields~
 The dirt path twists away to the north and south from this point, with
-high grass partly obscuring your vision on either side of the road. 
+high grass partly obscuring your vision on either side of the road.
 Occasionally a field mouse will pop its head up, and then disappear.  A
-tattered snakeskin lies tangled in the grass here.  
+tattered snakeskin lies tangled in the grass here.
 ~
 0 0 0
 Rd     0
@@ -198,7 +198,7 @@ E
 snakeskin~
 This papery thin skin was apparently left behind by its owner several
 days ago.  No doubt the mice in this field need to worry about more than
-just food.  
+just food.
 ~
 D0
 ~
@@ -212,8 +212,8 @@ S
 #5309
 On a Path Through the Fields~
 The dirt path twists away to the north and south from this point, with
-high grass partly obscuring your vision on either side of the road. 
-Occasionally a field mouse will pop its head up, and then disappear.  
+high grass partly obscuring your vision on either side of the road.
+Occasionally a field mouse will pop its head up, and then disappear.
 ~
 0 0 0
 Rd     0
@@ -229,8 +229,8 @@ S
 #5310
 On a Path Through the Fields~
 The dirt path twists away to the north and south from this point, with
-high grass partly obscuring your vision on either side of the road. 
-Occasionally a field mouse will pop its head up, and then disappear.  
+high grass partly obscuring your vision on either side of the road.
+Occasionally a field mouse will pop its head up, and then disappear.
 ~
 0 0 0
 Rd     0
@@ -246,16 +246,16 @@ S
 #5311
 On a Path Through the Fields~
 The dirt path twists away to the north and south from this point, with
-high grass partly obscuring your vision on either side of the road. 
+high grass partly obscuring your vision on either side of the road.
 Occasionally a field mouse will pop its head up, and then disappear.  A
-small cluster of acorns lies beside the path here.  
+small cluster of acorns lies beside the path here.
 ~
 0 0 0
 Rd     0
 E
 acorns~
 You see a group of ten or so acorns lying on the ground, no doubt
-gathered and then forgotten by an industrious yet absentminded field mouse. 
+gathered and then forgotten by an industrious yet absentminded field mouse.
 ~
 D0
 ~
@@ -269,8 +269,8 @@ S
 #5312
 On a Path Through the Fields~
 The dirt path twists away to the north and south from this point, with
-high grass partly obscuring your vision on either side of the road. 
-Occasionally a field mouse will pop its head up, and then disappear.  
+high grass partly obscuring your vision on either side of the road.
+Occasionally a field mouse will pop its head up, and then disappear.
 ~
 0 0 0
 Rd     0
@@ -289,7 +289,7 @@ The southern edges of the shanty town known as Villein Village shows out
 from beyond the small arch of trees to the west.  Shining brightly in the
 sun, gleaming towers of pure silver loom above the treetops to the southwest
 marking the famous Silver Castle.  The path continues to the east and
-outlets to the west.  
+outlets to the west.
 ~
 0 134217729 3
 Rd     0
@@ -307,7 +307,7 @@ A Small Forest Path~
 Carved out of a length of receding trees this path continues to the east
 or leads back west towards the Villein Village's south end.  Trees cover
 each side of this small dusty path with the faint sound of falling leaves in
-the background.  The path continues to the west and the east.  
+the background.  The path continues to the west and the east.
 ~
 0 134217729 3
 Rd     0
@@ -325,7 +325,7 @@ A Small Forest Path~
 This dusty little path winds through the forest, shadowed by the tall
 oaks surrounding it.  The chirping of birds can be heard faintly in the
 distance, and the sound of running water comes from the east.  The path
-continues to the east and west.  
+continues to the east and west.
 ~
 0 134217729 3
 Rd     0
@@ -343,16 +343,16 @@ A Small Forest Path~
 A small brook crosses the path here, with a few rickety planks of wood
 bridging it.  The trees tower to either side of the path, as it bends
 sharply to the south and west.  A brightly colored blue stone in the brook
-catches your eye as the water gurgles over it.  
+catches your eye as the water gurgles over it.
 ~
 0 134217729 3
 Rd     0
 E
 stone~
-This shiny blue stone stands out clearly among its cousins in the brook. 
+This shiny blue stone stands out clearly among its cousins in the brook.
 The longer you look at it, the more it seems that the stone is giving off
 far more light than could possibly be reflected by the faint light in this
-forest.  
+forest.
 ~
 D2
 ~
@@ -368,7 +368,7 @@ A Small Forest Path~
 A brook crosses the path here at an angle, with a small and unstable
 looking bridge leading across it.  Tall oak trees tower to either side of
 the road, and the sound of flowing water fills the area.  The path runs to
-the north and south.  
+the north and south.
 ~
 0 134217729 3
 Rd     0
@@ -386,7 +386,7 @@ A Small Forest Path~
 Large trees tower over the path around you, casting shadows over the
 road.  The faint sound of leaves rustling in the wind momentarily captures
 your attention, a contrast to the constant rushing of water coming from the
-north.  The path continues to the north and south.  
+north.  The path continues to the north and south.
 ~
 0 1 3
 Rd     0
@@ -402,7 +402,7 @@ S
 #5319
 A Small Forest Path~
 The path here darkens, as the trees grow taller and denser together.  The
-dusty road winds north and east from here, bending sharply.  
+dusty road winds north and east from here, bending sharply.
 ~
 0 134217729 3
 Rd     0
@@ -419,7 +419,7 @@ S
 A Small Forest Path~
 The heavily shadowed path seems to straighten a bit here, running mainly
 east and west.  The only sound to be heard is the faint rustling of leaves,
-and the sounds of birds singing in the trees.  
+and the sounds of birds singing in the trees.
 ~
 0 134217729 3
 Rd     0
@@ -436,7 +436,7 @@ S
 A Small Forest Path~
 The path bends once again here, running south and west through the tall,
 dark trees.  The rustling leaves whisper quietly, as a small gust of wind
-stirs up a cloud of dust off the path.  
+stirs up a cloud of dust off the path.
 ~
 0 134217729 3
 Rd     0
@@ -453,7 +453,7 @@ S
 A Small Forest Path~
 The path here runs straight north and south, cutting narrowly through the
 trees that tower on either side.  The shadows are thick, enveloping the path
-entirely.  A strange looking twig lies in the middle of the path here.  
+entirely.  A strange looking twig lies in the middle of the path here.
 ~
 0 134217729 3
 Rd     0
@@ -461,7 +461,7 @@ E
 twig~
 As you look closer at this twig, you notice that the bark of the twig is
 gnarled and cracked like that of an ancient oak tree, yet it is in the
-delicate form of a young tree branch.  
+delicate form of a young tree branch.
 ~
 D0
 ~
@@ -476,7 +476,7 @@ S
 A Small Forest Path~
 The thick shadows seem to press in on you here, as you move along the
 narrow litle path.  The trees loom over you on either side,and the path runs
-north and south.  
+north and south.
 ~
 0 134217729 3
 Rd     0
@@ -492,9 +492,9 @@ S
 #5324
 A Small Forest Path~
 The narrow path forks here, running north and south, with a branch
-leading eastward.  The trees press thickly together, and tower high above. 
+leading eastward.  The trees press thickly together, and tower high above.
 A particularly huge oak stands just to the right of the path here, with a
-large hole in the trunk of the tree.  
+large hole in the trunk of the tree.
 ~
 0 134217729 3
 Rd     0
@@ -502,7 +502,7 @@ E
 oak~
 This oak tree is about 6 feet in diameter, with a gaping hole about five
 feet off the ground.  Peering into the hole, you can see nothing, but you
-can hear the faint sounds of heavy breathing.  
+can hear the faint sounds of heavy breathing.
 ~
 D0
 ~
@@ -521,7 +521,7 @@ S
 A Dead End~
 The trees encroach on the path here, bringing it to a gradual end.  The
 shadows form a thick blanket, enveloping the surrounding area in darkness
-and leaving you to wonder what might lie beyond the trees...  
+and leaving you to wonder what might lie beyond the trees...
 ~
 0 134217729 3
 Rd     0

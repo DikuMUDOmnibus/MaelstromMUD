@@ -1,7 +1,7 @@
 #AREADATA
-Name        { 10-20} Bethaven Badlands   Tiberon~
+Name        Bethaven Badlands~
 Levels      10 20
-Builders    Reklar~
+Builders    Reklar Tiberon~
 VNUMs       11101 11200
 Security    100
 Recall      25001
@@ -37,7 +37,7 @@ A dirty Slave~
 A dirty slave toils in agony.
 ~
 You notice this human being chained on a large wheel.  He is very dirty
-and seems very old.  He seems worthless to someone like you.  
+and seems very old.  He seems worthless to someone like you.
 ~
 67 0 0 10 S
 10 0 0 200d0+0 0d0+0
@@ -69,7 +69,7 @@ scorpion~
 ~
 You see here a small scorpion of the Bethaven desert.  Its color is
 reddish and dark black eyes.  It is bigger than most scorpions you've ever
-seen.  
+seen.
 ~
 97 65536 0 -10 S
 11 0 0 240d0+0 0d0+0
@@ -83,7 +83,7 @@ A HeadHunter~
 ~
 &OThe headhunter looks like a normal man underneath all that make-up and
 costume.  He is dressed in feathers and skins (some of them look humanoid)
-and looks at you with hunger.  
+and looks at you with hunger.
 ~
 197 0 0 -20 S
 15 0 0 400d0+0 0d0+0
@@ -122,9 +122,9 @@ Nishta the Mongol stands ready for a fight.
 ~
 Nishta is a prized martial artist from the far east.  She bears the mark
 of an odd sign by the ancient mongolians.  Her features are lanky compared
-to yours.  She is known to be an outcast of the Bethevanian warrior class. 
+to yours.  She is known to be an outcast of the Bethevanian warrior class.
 She wears a medal which she bears as a tough fighter of the lightweight
-class.  Do you think you can beat her?  
+class.  Do you think you can beat her?
 ~
 71 0 0 100 S
 19 0 0 560d0+0 0d0+0
@@ -147,7 +147,7 @@ He is the leading champion of the Bethaven 21'st phallanx division and
 master champion of the Bethaven fighting grounds for over 31 years.  He
 bears the mark of the dragon on his bald scalp.  On his neck, he has the
 letters "FTW" in old english letters.  He holds a heavyweight belt, which a
-competitor must attain to leave the grounds alive.  
+competitor must attain to leave the grounds alive.
 ~
 262215 0 0 -1000 S
 20 0 0 600d0+0 0d0+0
@@ -160,7 +160,7 @@ emote points at you.
 emote grins at $n.
 tell $n are you ready to die?
 endif
- 
+
 ~
 |
 #11127
@@ -213,7 +213,7 @@ A horseman of Bethaven watches alertly for trouble.
 ~
 This is one of Bethaven's finest warriors.  The armor she wears is a
 tight fitting metallic bra with matching underwear.  Her favorite weapon is
-a Bethaven long sword.  
+a Bethaven long sword.
 ~
 67 0 0 100 S
 10 0 0 200d0+0 0d0+0
@@ -228,7 +228,7 @@ The Master of Perfection~
 This is the Master of Practice and Perfection.  She thrives on seeing
 others work and strive to achieve skills of high power.  She is a human who
 seems ageless...  That is, she seems to have great knowledge and skill, yet
-she appears to be only in her mid-twenties.  
+she appears to be only in her mid-twenties.
 ~
 394307 67108992 0 100 S
 90 0 0 16250d0+0 0d0+0
@@ -294,7 +294,7 @@ A White Marble Stone~
 &wA white marble stone sits here.
 ~
 The stone seems to be innocent looking.  There is something weird,
-because the stone seems to be like a small creature of unknown origin.  
+because the stone seems to be like a small creature of unknown origin.
 ~
 65 0 0 -100 S
 13 0 0 320d0+0 0d0+0
@@ -361,7 +361,7 @@ A
 E
 power bracer~
 This is Conan's power bracer.  It is solid gold with jewels encrusted
-into it.  
+into it.
 ~
 #11102
 shackles~
@@ -614,7 +614,7 @@ E
 jahun~
 The heavyweight belt is that of the legendary Jahun, Champion fighter at
 Jahun Falls for the last few decades.  For a simple orc, he is quite well
-known throughout the continent.  
+known throughout the continent.
 ~
 #11127
 cup suction~
@@ -760,21 +760,21 @@ are tested by fate, showing their great abilities and quick wit.  Good
 experience is abundant here as the land is big.  An old battered gate stands
 here, and a sign hangs from it reading "Bethaven Badlands".  Left of where
 you stand is an old wooden signpost.  Conan can usually be seen here as
-well.  
+well.
 ~
 0 8192 0
 Rd     0
 E
 gate~
 The sign is marked in old english letters.  The gate itself is old and is
-ready to topple at any time.  
+ready to topple at any time.
 ~
 E
 signpost~
 This area is strictly for "NEWBIES" only.  New adventurers will find this
 area challenging.  If you cannot handle this area, then this is not the mud
 for you.  All newbies should consult the help files by simply typing "help
-newbie".  
+newbie".
 ***************************
 * Area brought to you by: *
 *   Tiberon Fubackster    *
@@ -800,7 +800,7 @@ Upon entering the Badlands, the feeling of death suddenly runs up your
 spine.  Massive heat and a feeling of exhaustion strikes your body.  On the
 northern horizon, you notice skeletal remains hung on wooden poles.  The
 road splits into two paths, leading to two different destinies.  Your choice
-would be crucial indeed.  
+would be crucial indeed.
 ~
 0 5 2
 Rd     0
@@ -824,7 +824,7 @@ skeletal remains of the soldiers seem to be strung on the wooden poles.  The
 bones seem old and start to reek from the sun's exposure, at the same time
 your skin starts to burn from the massive heat the desert produces.  You make
 sure you have some water left in your waterskin in case you run into
-trouble.  
+trouble.
 ~
 0 1 2
 Rd     0
@@ -844,7 +844,7 @@ skeletal remains of a soldier seems to be strung on each wooden pole.  The
 bones seem old and start to reek from the sun's exposure, at the same time
 your skin starts to burn from the massive heat the desert produces.  You
 make sure you have some water left in your waterskin in case you run into
-trouble.  
+trouble.
 ~
 0 5 2
 Rd     0
@@ -862,7 +862,7 @@ Turnabout~
 The scorching heat makes decision-making difficult.  Sand dunes rise up
 around you blocking your view in any given direction.  From here, there are
 three paths leading away from the intersection.  One path runs west, and the
-other runs to the north and south.  Your choice will be crucial indeed...  
+other runs to the north and south.  Your choice will be crucial indeed...
 ~
 0 5 2
 Rd     0
@@ -883,8 +883,8 @@ S
 Sand Pit~
 You suddenly step in the softest sand imaginable ever.  The sand starts
 to trickle up to your ankles, slowly but surely.  You notice that you are
-being sucked slowly down the sandpipe and realize nothing will get you out. 
-There is something moving at the center of the pit.  
+being sucked slowly down the sandpipe and realize nothing will get you out.
+There is something moving at the center of the pit.
 ~
 0 1 2
 Rd     0
@@ -899,7 +899,7 @@ The desert leads to the horizon.  On each side ot the path, the skeletal
 remains of a soldier seems to be strung on a wooden pole.  The bones seem
 old and start to reek from the sun's exposure, at the same time your skin
 starts to burn from the massive heat the desert produces.  You make sure you
-have some water left in your waterskin in case you run into trouble.  
+have some water left in your waterskin in case you run into trouble.
 ~
 0 1 2
 Rd     0
@@ -917,7 +917,7 @@ Before the Lookout Tower~
 As you stand at the center of many dunes, you notice a lookout tower
 standing isolated in the great desert.  You ponder as the situation strikes
 you odd.  The only way to satisfy your curiosity is to turn your fate to
-the towers direction.  
+the towers direction.
 ~
 0 1 2
 Rd     0
@@ -933,8 +933,8 @@ S
 #11109
 Dunes~
 The dunes don't seem to end, as the horizon piles up with neverending
-desert.  Scorching rays of the sun touch your face as it burns your eyes. 
-For miles and miles there is no water to be found.  
+desert.  Scorching rays of the sun touch your face as it burns your eyes.
+For miles and miles there is no water to be found.
 ~
 0 0 2
 Rd     0
@@ -954,8 +954,8 @@ S
 #11110
 Dunes~
 The dunes don't seem to end, as the horizon piles up with neverending
-desert.  Scorching rays of the sun touch your face as it burns your eyes. 
-For miles and miles there is no water to be found.  
+desert.  Scorching rays of the sun touch your face as it burns your eyes.
+For miles and miles there is no water to be found.
 ~
 0 0 2
 Rd     0
@@ -974,7 +974,7 @@ You come atop a hill, scanning your area before you.  Several insects
 move around you, especially those annoying scorpions.  You realize your
 consequences as you ponder the fact that there might be headhunters around
 looking for your scalp.  You duck hard and fast, placing your nose on a well
-rounded position in the sand.  
+rounded position in the sand.
 ~
 0 0 2
 Rd     0
@@ -989,11 +989,11 @@ D3
 S
 #11112
 Horizon~
-As you sit on a dune hill, you see the nice sun setting on the horizon. 
+As you sit on a dune hill, you see the nice sun setting on the horizon.
 Your adventure will be long and hard, but soon you will be a formidable
 enemy.  You rest here now pondering about the future and the treasures it
 holds before you.  This may be the only time you will ever again get a nice
-long sleep.  
+long sleep.
 ~
 0 1029 0
 Rd     0
@@ -1004,11 +1004,11 @@ D2
 S
 #11113
 More Dunes~
-You come down from the hill, managing to camouflage yourself unnoticed. 
+You come down from the hill, managing to camouflage yourself unnoticed.
 It was a quick getaway and a sure gamble for being safe.  On the western
 horizon, you see the sky fogging up slightly.  To the east is a dune hill
 tall enough for a great lookout.  Everywhere around you, dunes, dunes and
-more dunes.  And on the southern horizon, as you guessed more dunes.  
+more dunes.  And on the southern horizon, as you guessed more dunes.
 ~
 0 0 2
 Rd     0
@@ -1028,8 +1028,8 @@ S
 #11114
 Dunes~
 The dunes don't seem to end, as the horizon piles up with neverending
-desert.  Scorching rays of the sun touch your face as it burns your eyes. 
-For miles and miles there is no water to be found.  
+desert.  Scorching rays of the sun touch your face as it burns your eyes.
+For miles and miles there is no water to be found.
 ~
 0 0 2
 Rd     0
@@ -1045,8 +1045,8 @@ S
 #11115
 Dunes~
 The dunes don't seem to end, as the horizon piles up with neverending
-desert.  Scorching rays of the sun touch your face as it burns your eyes. 
-For miles and miles there is no water to be found.  
+desert.  Scorching rays of the sun touch your face as it burns your eyes.
+For miles and miles there is no water to be found.
 ~
 0 0 2
 Rd     0
@@ -1065,7 +1065,7 @@ The desert path leads to the horizon.  On each side of the path, the
 skeletal remains of a soldier seem to be strung on a pole.  The bones seem
 old and start to reek from the sun's exposure, at the same time your skin
 starts to burn from the massive heat the desert produces.  You make sure you
-have enough water left in your waterskin in case you run into trouble.  
+have enough water left in your waterskin in case you run into trouble.
 ~
 0 0 2
 Rd     0
@@ -1102,7 +1102,7 @@ It is an unbelievable sight, you stand at the entrance of your salvation.
 From the nights and days you have ventured through the desert, you finally
 see this oasis.  Palm trees grow wildly around here.  The edge of the desert
 can be seen only a few feet from where you stand.  While you conquer one
-situation, another is at hand.  
+situation, another is at hand.
 ~
 0 5 3
 Rd     0
@@ -1125,7 +1125,7 @@ You are on the southern edge of the seiged tower, positioning yourself
 for a great lookout.  An eerie silence falls on this tower, which leaves you
 fearful of your life.  You suddenly notice, from the corner of your eye a
 living entity.  An animated skeletal creature has been disturbed and has
-been awaken from the dead.  Are you ready to do battle with this monster  
+been awaken from the dead.  Are you ready to do battle with this monster
 or will it leave you to your trek.
 ~
 0 9 0
@@ -1139,7 +1139,7 @@ S
 Tower Lookout~
 You manage to climb out of the wooden stairs.  Do not forget that the
 crusted wood might buckle under your feet.  From here you see a flagpole
-that holds the Bethaven sign.  There are gangplanks to this lookout tower.  
+that holds the Bethaven sign.  There are gangplanks to this lookout tower.
 ~
 0 9 0
 Rd     0
@@ -1174,7 +1174,7 @@ You are on the eastern edge of the seiged tower, positioning yourself
 for a great lookout.  An eerie silence falls on this tower, which leaves you
 fearful for your life.  Suddenly you notice a living entity from the corners
 of your eye.  An animated skeletal creature has been disturbed and awaken
-from the dead.  Are you ready to do battle with this monster or will it  
+from the dead.  Are you ready to do battle with this monster or will it
 leave you to your trek.
 ~
 0 9 0
@@ -1205,7 +1205,7 @@ You have come out of the oasis onto this clearing.  Water is abundant as
 the Jahun waterfalls stand a few yards from you.  The fresh wind blows upon
 your hair, as you notice your unfamiliar surroundings.  A deep seated
 feeling comes upon you because behind the falls, shadowy forms form behind
-the water.  
+the water.
 ~
 0 1 3
 Rd     0
@@ -1224,7 +1224,7 @@ Men, women and children have come to this arena to cheer you on.  You
 seemed to have been picked for battle.  You see in front of you a narrow
 line between many spectators who have come to see you fight.  The fight will
 be to the death and undoubtedly nice gifts will come for you.  Many cheer
-you on as men lead you to the center of a circular pit.  
+you on as men lead you to the center of a circular pit.
 ~
 0 134217737 0
 Rd     0
@@ -1241,7 +1241,7 @@ S
 Nishta: Lightweight Title Holder~
 Your first opponent is named Nishta.  You've heard that she is good,
 really good.  Moments pass by as you hear the loud cheers of several
-spectators that have come to watch.  This will be a battle indeed.  
+spectators that have come to watch.  This will be a battle indeed.
 ~
 0 134348813 0
 Rd     0
@@ -1251,7 +1251,7 @@ D1
 0 0 11124
 D3
 A door stands here in the west wall.  The keyhole is strange however, it
-is circular and a bit larger than a coin.  
+is circular and a bit larger than a coin.
 ~
 door~
 7 11125 11126
@@ -1261,7 +1261,7 @@ Jahun: Champion of Bethaven~
 Now you face the ultimate fighting machine of Bethaven.  An elflike
 announcer introduces forth a great warrior named Jahun.  As Jahun's favorite
 motto goes "You are next!".  It seems like you have been marked for death.
-Only way out now is the first chance to kill him.  
+Only way out now is the first chance to kill him.
 ~
 0 134217741 0
 Rd     0
@@ -1276,7 +1276,7 @@ S
 Further Down in the Pit~
 As you are being sucked slowly but surely down the sand pit, you notice a
 feeling of something gripping your ankles.  It is unimaginable to know but
-what if this is the end of your adventures?  Act fast.  
+what if this is the end of your adventures?  Act fast.
 ~
 0 1 2
 Rd     0
@@ -1296,7 +1296,7 @@ the grip has started to close tighter on your legs.  Suddenly, a huge
 monstrosity gapes his wide mouth open.  It is Skeltor, the Desert Worm of
 the Dunes.  A circular array of tooth splits open revealing a variety of
 teeth: long, short, sharp, edged, and hungry.  It is hard to imagine, but
-will you survive for another day?  
+will you survive for another day?
 ~
 0 1 2
 Rd     0
@@ -1317,7 +1317,7 @@ You are on the southern edge of the seiged tower, positioning yourself
 for a great lookout.  An eerie silence falls on this tower, which leaves you
 fearful of your life.  You suddenly notice a living entity from the corners
 of your eye.  An animated skeletal creature has been disturbed and awaken
-from the dead.  Are you ready to do battle with this monster?  
+from the dead.  Are you ready to do battle with this monster?
 ~
 0 9 0
 Rd     0
@@ -1332,7 +1332,7 @@ In front of you works a big grinding wheel, where soulless adventurers are
 shackled.  You notice that men and women of all races are braced unto this
 large round contraption.  A slave monger whips a weakling a few feet from
 you.  Suddenly a person behind you shoves your face in front of this slave
-driving wheel locking your fate.  
+driving wheel locking your fate.
 ~
 0 8192 0
 Rd     0
@@ -1354,7 +1354,7 @@ Labors of Perfection~
 While you are shackled with the wheel, you feel the whip hitting you as
 your masters drive you to perfection.  There are others who show interest in
 magical fields, perfecting their spells and beliefs.  This is the labor of
-perfection to advance you to your proper destiny.  
+perfection to advance you to your proper destiny.
 ~
 0 132100 0
 Rd     0
@@ -1370,7 +1370,7 @@ strength.  Walking hundreds of times around this machine raises your
 dexterity and constitution.  There are those exceptional who show interest
 on the fields of intelligence and wisdom, picked out from the lot and sent
 to worldly masters.  This is the labor of training to advance you to your
-proper destiny.  
+proper destiny.
 ~
 0 132100 0
 Rd     0
@@ -1386,7 +1386,7 @@ dead skeletal corpses hang from a tight rope above.  A wooden stairwell
 leads to the lookout tower above.  Cobwebs and sand litter the floor.  A pit
 is located at the center of the room.  You also notice that there is no
 water to be found anywhere here, thus you realize it is time to conserve
-what little you have left.  
+what little you have left.
 ~
 0 4194313 0
 Rd     0
@@ -1402,11 +1402,11 @@ S
 #11135
 Deep in the Oasis~
 "They are only sticks and stones!"  Well not here, the oasis is filled
-with life.  Ferns and Palm trees grow wildly here in this desert paradise. 
-The sun barely shines on your face but the warmth gives you deep security. 
+with life.  Ferns and Palm trees grow wildly here in this desert paradise.
+The sun barely shines on your face but the warmth gives you deep security.
 While slashing your way through the underbush, scratches have started to
 cover your whole body.  The terrain is often mistaken but thus it is still
-hard to get around.  
+hard to get around.
 ~
 0 134217729 3
 Rd     0
@@ -1424,7 +1424,7 @@ Edge of the Oasis~
 You are on the soft sand of the deserts of Bethaven, a few feet from
 where you are is the edge of the oasis.  There are massive ferns growing
 wildly boundering the edge of this desert paradise.  To the west you see a
-small pathed entrance surrounded by palm trees.  
+small pathed entrance surrounded by palm trees.
 ~
 0 5 2
 Rd     0
@@ -1439,8 +1439,8 @@ D3
 S
 #11137
 Lost in the Oasis~
-Are you lost? Well, if you think really really hard, maybe you might 
-be able to get out finally. But since you're a first time adventurer, 
+Are you lost? Well, if you think really really hard, maybe you might
+be able to get out finally. But since you're a first time adventurer,
 this forest won't be so tough after all.
 ~
 0 134217733 3
@@ -1470,7 +1470,7 @@ Undoubtedly there is something different here because a chill has rung
 through your whole body.  Shadows emanating from below has cast you
 bewildered.  The is a glowish hue coming from below, a wet ladder seems to
 lead you to go down.  There is a strangely carved entranceway leading off to
-the north from here.  
+the north from here.
 The is' 'There is'
 ~
 0 13 0
@@ -1496,7 +1496,7 @@ S
 Standing Under the Falls~
 The water comes down upon your head with a thundering crash.  A score of
 fishes swim aggressively down from the falls.  But don't be fooled because
-some fishes are dangerous.  
+some fishes are dangerous.
 ~
 0 9 0
 Rd     0
@@ -1515,7 +1515,7 @@ You enter a cavern, where many men and women of all races come to test
 their skill.  They come here not because of will alone but they are forced
 into a bloody sport.  On your left side is a marking of some unknown sort,
 revealing a primal dragon.  Ahead of you stands a contender attending the
-"Jahun Fighting Grounds".  
+"Jahun Fighting Grounds".
 ~
 0 9 0
 Rd     0

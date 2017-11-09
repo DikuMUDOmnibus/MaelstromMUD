@@ -1,5 +1,5 @@
 #AREADATA
-Name        {??-???} Halls of the Damned Reklar~
+Name        Halls of the Damned~
 Levels      100 110
 Builders    Reklar~
 VNUMs       10802 10880
@@ -20,7 +20,7 @@ A Shade of The Lord Reklar Stands Here, Warning You.
 This is the shade of the God Reklar.  This shade acts as Reklars beacon
 of warning.  He keeps the weak and the foolish out of Reklars Hall.  He
 flickers slightly in the light.  But You know attacking him Would be
-foolish.  
+foolish.
 ~
 67 520643240 32 0 S
 100 0 0 30000d0+0 0d0+0
@@ -49,7 +49,7 @@ Palladia Mors~
 ~
 Palladia Mors.  He is the storngest and the most powerfull of the First
 Order Of Paladins.  He Is of an oder of paladins Call the first order.  He
-has honor And Faith at his Command.  
+has honor And Faith at his Command.
 ~
 3 503341184 0 1000 S
 135 0 0 41100d0+0 0d0+0
@@ -94,7 +94,7 @@ Nilor~
 Nilor~
 Nilor, The Second Paladin Of The First Order Stands Here.
 ~
-Nilor Is the second paladin of the Glorious First order.  
+Nilor Is the second paladin of the Glorious First order.
 ~
 3 503341184 0 700 S
 125 0 0 41100d0+0 0d0+0
@@ -102,7 +102,7 @@ Nilor Is the second paladin of the Glorious First order.
 0 0 1
 0 0 0
 >all_greet_prog 100~
-say What Begotten Freak is this That Darest Defy God With his presence? 
+say What Begotten Freak is this That Darest Defy God With his presence?
 say Bogone, $n, You Coward.
 ~
 >hitprcnt_prog 90~
@@ -327,7 +327,7 @@ Heartstabber The Thief Of the Blade stands Here.
 #10824
 rivon~
 Rivon~
-Rivon The Soul Eating Necromancer Stands Here. 
+Rivon The Soul Eating Necromancer Stands Here.
 ~
 ~
 3 503341184 0 -200 S
@@ -566,7 +566,7 @@ A
 E
 sphere faith~
 This Swirling sphere of energy is a physical Representaion of a Paladin's
-Faith.  In the Hands of A Paladin their Faith is there best weapon.  
+Faith.  In the Hands of A Paladin their Faith is there best weapon.
 ~
 #10804
 plate servitude~
@@ -2610,8 +2610,8 @@ At The Gate To The Hall~
 You stand before a huge gate.  The gate has been locked into an open
 position and cannot be closed.  Above this area is a huge stone arch which
 serves as an entrance to the northern building.  The Building to the north
-appears to be a great hall.  Magiks swirl and collide about the entrance. 
-Perhaps this hall is more than it appears.  
+appears to be a great hall.  Magiks swirl and collide about the entrance.
+Perhaps this hall is more than it appears.
 ~
 0 8 0
 Rd     0
@@ -2629,9 +2629,9 @@ Inside The Gate~
 You are passing under a great arch.  A light peers in here but from an
 unknown source.  It looks as if the Gleaming silver walls themselves are
 glowing.  The Walls floor and Arch all appear to be made of the same
-material.  It looks like a silver metal.  It glows with a life of its own. 
+material.  It looks like a silver metal.  It glows with a life of its own.
 The End of the arch is visible to both directions.  To the North it enters A
-chamber.  To the south it exits the hall.  
+chamber.  To the south it exits the hall.
 ~
 0 8 0
 Rd     0
@@ -2649,7 +2649,7 @@ The Halls Of The Damned~
 This is the main chamber of the Halls of the Damned.  Here are placed
 some of the finest of the professions in order to test prospective
 Champions.  All who wish to be famous and reign in glory of battle will at
-one point pass through these Halls.  
+one point pass through these Halls.
 ~
 0 8 0
 Rd     0
@@ -2669,7 +2669,7 @@ east and west Directions.  The Paladins wing is to the east.  To the West is
 the Warriors Wing.  The Walls of this place are the same gleaming silver as
 the other rooms.  The Walls Glow with a life of their own.  The Walls are
 seemingly Untouched.  There isnt a single scratch or mark upon them.  A
-Single lonely plaque clings to the walls here.  
+Single lonely plaque clings to the walls here.
 ~
 0 8 0
 Rd     0
@@ -2700,7 +2700,7 @@ S
 Halls Of The Damned Main Corrodor~
 This is another Chamber in the Halls Of The Damned.  Its Gleaming Silver
 walls sparkle in the light glowing off of them.  Moans of adventurers Echo
-in this area.  To the north and south sprout out wings of certain classes.  
+in this area.  To the north and south sprout out wings of certain classes.
 ~
 0 8 0
 Rd     0
@@ -2719,7 +2719,7 @@ A Thousand notes of music pour into this area of the Halls of the Damned.
 Moans Of the dying come in from both directions.  But The ever constant
 gleam of the silver walls remains the same.  Light Pours into this area like
 all other areas in these cursed halls.  The Light seems to eminate from the
-walls themselves.  
+walls themselves.
 ~
 0 8 0
 Rd     0
@@ -2744,9 +2744,9 @@ S
 Halls Of The Damned Main Corrodor~
 This is another Chamber in the Halls Of The Damned.  Its Gleaming Silver
 walls sparkle in the light glowing off of them.  Moans of adventurers Echo
-in this area.  To the north and south sprout out wings of certain classes. 
+in this area.  To the north and south sprout out wings of certain classes.
 The Walls Appear to have no damage done to them.  The Arched Cielings and
-solid metal floors appear to be in the same condition.  
+solid metal floors appear to be in the same condition.
 ~
 0 8 0
 Rd     0

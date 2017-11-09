@@ -1,5 +1,5 @@
 #AREADATA
-Name        {80-100} Bretonnia           Tyrion~
+Name        Bretonnia~
 Levels      80 100
 Builders    Tyrion~
 VNUMs       21401 21600
@@ -427,7 +427,7 @@ else
  emote laughs and says, "You chose the wrong one!"
  laugh
 endif
- 
+
 ~
 >speech_prog bye~
 emote nods in your general direction
@@ -1964,7 +1964,7 @@ S
 #21403
 Mountain Clearing~
 You are walking along the side of a mountain.  A large hole in the side of it
-is directly to the west of you.  Looking around, you can see a small path 
+is directly to the west of you.  Looking around, you can see a small path
 leading to the south, and to the west.  Perhaps this hole deserves some
 exploration.
 ~
@@ -5458,9 +5458,9 @@ S
 #21596
 The Repair Smithy~
 You are in the repair shop.  A large forge can be seen in the northeast
-corner of the room, and a counter stretches along the entire east wall. 
+corner of the room, and a counter stretches along the entire east wall.
 Greetz is usually here to repair your things.  An archway lies to the west,
-leading back to Forge Way.  
+leading back to Forge Way.
 ~
 0 67109896 0
 Rd     0

@@ -1,7 +1,7 @@
 #AREADATA
-Name        {25-110} Dragon Valley       Nosferatu~
+Name        Dragon Valley~
 Levels      25 110
-Builders    None~
+Builders    Nosferatu~
 VNUMs       10101 10200
 Security    100
 Recall      25000
@@ -60,8 +60,8 @@ Siegfried, the Dragonslayer guards the Royal Lair...
 ~
 Here stands Siegfried, the retired Dragonslayer. The Dragon King, well aware
 of Siegfried's formidable swordsplay, persuaded the hero to guard the royal
-lair. 
-Now Siegfried, himself a Prince, protects these halls with a keen eye and 
+lair.
+Now Siegfried, himself a Prince, protects these halls with a keen eye and
 and even keener blade.
 ~
 71 469770920 0 500 S
@@ -151,7 +151,7 @@ A beautiful Pixie flutters by...
 ~
 This tiny creature is a breathtakingly beautiful woman. She beams a smile
 at you and performs some airial acrobatics. Then she flies down, gives you
-a hug and a kiss and soars in the air again. She waves and giggles and 
+a hug and a kiss and soars in the air again. She waves and giggles and
 swiftly flies away...
 ~
 193 533136 0 0 S
@@ -166,7 +166,7 @@ A newborn Dragon peers through its cracked egg shell...
 ~
 A cute little Dragon baby peers through its cracked egg shell. It is hard
 to imagine that this little guy will grow to such immense size over the
-centuries. 
+centuries.
 The tiny dragon looks at you and makes a chirping noise...maybe it thinks
 you are its mother?
 ~
@@ -181,7 +181,7 @@ A Hatchling~
 A Dragon Hatchling is playing here...
 ~
 The Dragon Hatchling is about 5 feet tall and looks very humanoid. He is
-playing happily with his peers. When he notices you, he tugs on your 
+playing happily with his peers. When he notices you, he tugs on your
 armor as if he would like you to join their games.
 ~
 67 8872 0 500 S
@@ -195,8 +195,8 @@ A Maiden~
 A beautiful maiden tries to hide from you...
 ~
 You look in the eyes of a gorgeous young woman. Just recently, she has been
-abducted by the Dragons, but she seems to be very happy here. Against 
-common belief, Dragons do not capture maidens for a quick snack, but to 
+abducted by the Dragons, but she seems to be very happy here. Against
+common belief, Dragons do not capture maidens for a quick snack, but to
 enjoy the beauty of these human females.
 Her tender skin does not bare any marks of violence...speaking of skin,
 you just realize that this lady is totally nude...
@@ -211,8 +211,8 @@ Nurse~
 A Nurse~
 A Nurse rushes to see after the hatchlings...
 ~
-This Nurse is an older lady with a worried look on her face. Obviously, 
-she takes her duties with the dragon hatchlings very serious. 
+This Nurse is an older lady with a worried look on her face. Obviously,
+she takes her duties with the dragon hatchlings very serious.
 She just glances at you for a moment, then she if off to she after her
 charges.
 ~
@@ -228,7 +228,7 @@ A Wyrm is studying here...
 ~
 The Wyrm is about 7 feet tall and looks like an alligator on two legs.
 Much like human teenagers, he does not really like being here in school
-and spend so much time with the books. Especially, when there is a whole 
+and spend so much time with the books. Especially, when there is a whole
 world out there waiting to be explored.
 The Wyrm wears a strange pair of spectacles, probably the latest in dragon
 fashions.
@@ -244,7 +244,7 @@ A Drake~
 A Drake is working out here...
 ~
 The Drake looks almost like a minature dragon. His wings are developed
-and he practices hard to make them stronger so they can support his 
+and he practices hard to make them stronger so they can support his
 weight. In a few years, he will be able to soar through the shies without
 the help of magic.
 ~
@@ -259,7 +259,7 @@ Theodor~
 Theodor, seated on a rock, greets you friendly...
 ~
 This old man is without any doubt Theodor, the famous Dragon researcher.
-You have read much about him in the libraries of the realm. He is a 
+You have read much about him in the libraries of the realm. He is a
 friendly man and is happy to have a conversation with you.
 He tells you about the runestones he has planted all over this area with
 advice and warnings for adventurers like yourself.
@@ -287,7 +287,7 @@ Servant~
 A Servant~
 A Servant running an errand passes by...
 ~
-This Servant is dressed in a plain grey robe. He appears to be very busy 
+This Servant is dressed in a plain grey robe. He appears to be very busy
 with some task he has to perform for one of the Dragon Lords.
 He briefly glances at you, then he is gone...
 ~
@@ -317,7 +317,7 @@ A Worshipper~
 A Dragon Worshipper walks the valley...
 ~
 This Worshipper wanders around the valley, looking for his Dragon deity.
-Unlike you, he is not very aware of the surroundings, he seems to be 
+Unlike you, he is not very aware of the surroundings, he seems to be
 preoccupied with something else.
 ~
 1 134226472 0 0 S
@@ -362,9 +362,9 @@ Dragon Bronze~
 The Bronze Dragon~
 The Bronze Dragon stares at you...
 ~
-The Bronze Dragon is fairly surprised to see your kind this high up in 
-the sky. He stares at you curiously, and quickly realizes the means of 
-transportation you employed. 
+The Bronze Dragon is fairly surprised to see your kind this high up in
+the sky. He stares at you curiously, and quickly realizes the means of
+transportation you employed.
 With a few flaps of his wings he gains more altitude and flies towards
 the horizon...
 ~
@@ -378,8 +378,8 @@ Cloud Dragon~
 The Cloud Dragon~
 The Cloud Dragon howls insanely!
 ~
-The Cloud Dragon looks very confused! She seems to have lost her way in 
-her own clouds. She is so frustrated that she attacks you immediately 
+The Cloud Dragon looks very confused! She seems to have lost her way in
+her own clouds. She is so frustrated that she attacks you immediately
 upon your arrival here.
 ~
 99 201859720 0 0 S
@@ -392,10 +392,10 @@ Shadow Dragon~
 The Shadow Dragon~
 The Shadow Dragon attacks with a great fury!
 ~
-The Shadow Dragon is a cruel and evil creature. The other Dragon Lords 
-have banned him into these tunnels for the countless crimes he has 
+The Shadow Dragon is a cruel and evil creature. The other Dragon Lords
+have banned him into these tunnels for the countless crimes he has
 committed against dragonkind and other races.
-But the Shadow Dragon never changed his ways, he attacks you the moment 
+But the Shadow Dragon never changed his ways, he attacks you the moment
 you enter his prison.
 ~
 99 602666 0 -1000 S
@@ -417,7 +417,7 @@ Shadowgator~
 A Shadowgator~
 A Shadowgator attacks from its hiding place!
 ~
-The Shadowgator is not really a creature..more a phantom! Nevertheless, 
+The Shadowgator is not really a creature..more a phantom! Nevertheless,
 it can hurt you pretty bad with its long jagged teeth and sharp talons!
 ~
 97 74280 0 -500 S
@@ -468,7 +468,7 @@ The Rainbow Dragon~
 The Rainbow Dragon looks a pretty confused...
 ~
 The Rainbow Dragon is by far the most beautiful dragon you have encountered
-in the valley. Her shiny scales really sparkle in all colours of the 
+in the valley. Her shiny scales really sparkle in all colours of the
 rainbow. However, for some reason, this Dragon Lady does not seem quite
 sane. She looks very confused and mutters strange incarnation in the old
 dragon tongue.
@@ -484,7 +484,7 @@ The Royal Alchemist~
 The Alchemist tries to hide his goods from you...
 ~
 The Royal Alchemist has heard of your coming. Although he dutifully obeys
-the orders of the dragon king, he jealously tries to hide his precious 
+the orders of the dragon king, he jealously tries to hide his precious
 potions and herbs.
 ~
 67 285221560 0 0 S
@@ -595,8 +595,8 @@ The Silver Dragon~
 The Silver Dragon welcomes you to her lair...
 ~
 The Silver Dragon Lady is a shiny, stunning creature! Her scales sparkle
-in the light of your torches. She is glad to see you here, and welcomes 
-you to her lair. Apparently, she is very curious about the ways of the 
+in the light of your torches. She is glad to see you here, and welcomes
+you to her lair. Apparently, she is very curious about the ways of the
 mortals and asks you alot of questions.
 ~
 67 369648296 0 0 S
@@ -748,7 +748,7 @@ Dragonguard~
 A Dragonguard~
 A Dragonguard guards this lair entrance...
 ~
-Some Drake serve as guards for the Dragon Lords. They have received 
+Some Drake serve as guards for the Dragon Lords. They have received
 special training...always ready, always present yet never seen.
 This Drake has been assigned to partol the valley.
 ~
@@ -762,7 +762,7 @@ Garby~
 Garby~
 Garby, the Samaritan tends your wounds...
 ~
-Garby is a women of an undefined catlike race. You cannot tell how old 
+Garby is a women of an undefined catlike race. You cannot tell how old
 she really is, but her experience in curing the injured suggests that
 she has been doing it for a very long time.
 Garby smiles at you in a friendly manner...
@@ -1706,7 +1706,7 @@ reserved~
 E
 fountain~
 <<<     ALIA JACTA EST     >>>
- 
+
 ~
 #10160
 Anti-Magic Scroll~
@@ -2074,20 +2074,20 @@ An Overlook~
 You are at the entrance to a large and wonderous valley that stretches
 out here to the north.  A large rock in front of you seems to be carved out
 into some sort of throne.  A mountain, to trecherous to climb juts out of
-the earth in front of you to the north.  
+the earth in front of you to the north.
 ~
 0 1074003972 4
 Rd     0
 E
 runestone~
-Welcome to the Dragon Valley! This area is mostly for higher 
+Welcome to the Dragon Valley! This area is mostly for higher
 level characters, but there are some low level mobs as well.
 The Area is listed as Level 25 - 100.
- 
+
 Most of this area is no recall except for specifically marked rooms.
 Make sure to read all the other Runestones along the way, for they
 will give you much insight in the secrets of the Dragon Valley.
- 
+
 Enjoy, Nosferatu!
 ~
 D0
@@ -2101,8 +2101,8 @@ D2
 S
 #10102
 A Dusty Road~
-The dusty road stretches further north from here. Back to the south, you 
-can see Theodor waving after you. The surrounding mountains are so high, 
+The dusty road stretches further north from here. Back to the south, you
+can see Theodor waving after you. The surrounding mountains are so high,
 their snow-covered tops seem to touch the sky.
 ~
 0 1074143232 4
@@ -2118,7 +2118,7 @@ D2
 S
 #10103
 A Dusty Road~
-The road descends rather steeply now. To the north you can see a golden 
+The road descends rather steeply now. To the north you can see a golden
 gate sparkle in the sun. Did you remember to take the key from Theodor's
 chalice? It seems you will need it soon.
 Near the road is a small clear mountain lake. Many colourful birds roams the
@@ -2155,7 +2155,7 @@ D2
 S
 #10105
 Entrance to the Valley~
-You are just inside of the mighty golden gate. To the north stretches a 
+You are just inside of the mighty golden gate. To the north stretches a
 well travelled path deeper into the valley. To the east and west gentle
 slopes rise towards the mountains.
 ~
@@ -2180,9 +2180,9 @@ D3
 S
 #10106
 A Road Crossing~
-You have reached a wide road crossing. One path leads north deeper into the 
+You have reached a wide road crossing. One path leads north deeper into the
 valley and south to the golden gate, the other path heads up the mountains
-east and west respectively. 
+east and west respectively.
 High above the clouds, you see a large shadow circling over the valley. It
 seems, you are watching a huge bird...or is it a dragon?
 ~
@@ -2213,8 +2213,8 @@ S
 Red-Green Intersection~
 This intersection is very busy. Dragon Worshippers and Severant are coming
 and going all the time. To the east, you see torched land while west of
-this intersection it appears that something or someone has etched the 
-rocks with some strong acid. 
+this intersection it appears that something or someone has etched the
+rocks with some strong acid.
 Nearby, you notice and old and rusty grate on the ground. It appears to be
 locked tightly. Another Runestone stands here as well.
 ~
@@ -2274,8 +2274,8 @@ D3
 S
 #10109
 Black-White Intersection~
-You have come to yet another intersection. One path leads off to the east 
-into something that could be best described as a swamp hole, while to the 
+You have come to yet another intersection. One path leads off to the east
+into something that could be best described as a swamp hole, while to the
 west the land and trees are covered with show and ice. A chilling breeze
 blows from that direction clearing the air from the swamp gas that drifts
 from the east.
@@ -2307,7 +2307,7 @@ lit~
 S
 #10110
 Gold-Silver Intersection~
-You have reached another small plaza in the valley. The main road is 
+You have reached another small plaza in the valley. The main road is
 intersected here by another road going from east to west. Looking eastward,
 you see silvery trees and bushes while to the west, everything seems to be
 covered with some golden dust.
@@ -2343,10 +2343,10 @@ D4
 S
 #10111
 Preparing for the Great Tests~
-You have reached the northern end of the Dragon Vale. A huge door is 
+You have reached the northern end of the Dragon Vale. A huge door is
 blocking your way into the mountain caverns north of you. Nearby stands a
 giant tree, almost as high as the surrounding mountains. West of here,
-you can see a barren path...the wind carries the sweet smell for decaying 
+you can see a barren path...the wind carries the sweet smell for decaying
 flesh from that direction.
 Next to the door, you notice another Runestone...
 ~
@@ -2379,7 +2379,7 @@ The First Test~
 In order to reach the famed shops of the land of the Dragons, you must
 first pass through a series of tests.  The first one, which you are facing,
 is a very large and very nasty viper.  Even as you try to sneak past it, it
-rears up in preparation to strike.  
+rears up in preparation to strike.
 ~
 0 1078337549 0
 Rd     0
@@ -2398,7 +2398,7 @@ The second of the tests to reach the land of the Dragons is equally if
 not more difficult than the first.  A giant cobra hisses in the bottom of a
 pit, threatening you with its flared out hood and large fangs.  The putrid
 stench of previous victims fills the rooms, and skeletons of all races
-litter the ground.  
+litter the ground.
 ~
 0 1078337545 0
 Rd     0
@@ -2417,7 +2417,7 @@ Finally, you have reached the final test.  If you can only pass the giant
 mamba, all of the riches of the Dragon lands will be at your feet.  Passing
 the mamba will be no small feat, however.  The immense size of the snake
 sends quivers through your legs.  Incensed by the interruption into its pit,
-it strikes out toward you.  
+it strikes out toward you.
 ~
 0 1078337545 0
 Rd     0
@@ -2436,7 +2436,7 @@ The tests behind you, you now face the entrance to the lair of the
 Dragons.  The famous dragonslayer Siegfried stands guard over the lair,
 questioning any who seek audience with the royal family.  The entrance is
 immense: it stands 15 meters high and is equally broad.  You stand in awe of
-the incredible size of the royal lair.  
+the incredible size of the royal lair.
 ~
 0 1078337561 0
 Rd     0
@@ -2451,7 +2451,7 @@ The royal lair is a finely carved series of caverns.  Each is smoothly
 vaulted high in the air, and the stone seems to be granite.  Carvings of
 Dragons roasting entire villages of people are carved into the walls, a
 sight that makes you uncomfortable even though aggressions between mortals
-and Dragons is long in the past.  
+and Dragons is long in the past.
 ~
 0 1074143241 0
 Rd     0
@@ -2479,7 +2479,7 @@ coins lie strewn about him, and some of the jewels can be seen encrusting
 his body.  Apparently, the many years of sitting on the jewels caused them
 to become a part of his skin.  He looks like he would be a formidable enemy
 despite the years of apparent laziness.  The stench of dragon and the acrid
-scent of smoke fill your nostrils.  
+scent of smoke fill your nostrils.
 ~
 0 1078337545 0
 Rd     0
@@ -2497,7 +2497,7 @@ that most people believe they are, the dragons are actually very
 compassionate.  The only request they make of the mortals is that they be
 left in peace.  Knowing this won't happen, though, they devised the tests to
 keep them out.  They also have employed the assistance of Garby to tend the
-wounds of the mortals lucky enough to escape the trials.  
+wounds of the mortals lucky enough to escape the trials.
 ~
 0 1076233228 0
 Rd     0
@@ -2508,7 +2508,7 @@ This finely carved tunnel leads to the most powerful ruler in all of the
 realms.  The Dragon King's word in law, and none would dare cross him.  The
 roof of the rock tunnel must be at least 20 meters in the air, and they are
 purposefully left in their rough state to show off the many quartz crystals
-hanging from them.  
+hanging from them.
 ~
 0 1074143241 0
 Rd     0
@@ -2528,7 +2528,7 @@ awe.  Not only is he the largest dragon you have ever seen, you are also
 stunned by the splendor of his scales; they outshine the immense amount of
 gold lying strewn about on the floor.  For a second, you almost consider
 taking some of the bounty of this room.  Another look at the King changes
-your mind.  
+your mind.
 ~
 0 1078337545 0
 Rd     0
@@ -2544,11 +2544,11 @@ S
 #10121
 Royal Potions & Herbs~
 The smell of pungent herbs and the heavy cloud of smoke which greet you
-at the door immediately reveal your location: the royal alchemist's shop. 
+at the door immediately reveal your location: the royal alchemist's shop.
 Various packages of herbs and incense are strewn about the shop, and a large
-humanoid with features reminiscent of a dragon looks disdainfully at you. 
+humanoid with features reminiscent of a dragon looks disdainfully at you.
 The natural magick of these shop items are well known throughout the land,
-and the knowledge of how to make them is a well-guarded secret.  
+and the knowledge of how to make them is a well-guarded secret.
 ~
 0 1076241417 0
 Rd     0
@@ -2562,7 +2562,7 @@ A catacomb leading to Her Majesty~
 This large tunnel carved out of the rock leads to the Queen of the
 Dragons.  Equally as impressive as her husband, this wise ruler is the
 King's closest advisor.  Large opals which have been imbedded in the ceiling
-of the rock cave shine like the inside of a beautiful seashell.  
+of the rock cave shine like the inside of a beautiful seashell.
 ~
 0 1074143241 0
 Rd     0
@@ -2580,7 +2580,7 @@ Lair of Her Majesty~
 The lair of the Dragon Queen is immense!  It must be, for the Dragon
 Queen herself is immense!  Even though her cavern is gargantuan size, she
 still takes up most of it with her size.  Splendid treasure covers the
-ground, and intricate carvings abound on the walls.  
+ground, and intricate carvings abound on the walls.
 ~
 0 1078337545 0
 Rd     0
@@ -2600,7 +2600,7 @@ type of device possible is here.  There are items to make you stronger,
 items to enchance how well you do in battle, and amusingly enough, items to
 make someone fall in love.  A great cauldren bubbles and boils in the back
 of the shop, and by the looks of the things floating up now and then, it's
-not your average chicken soup.  
+not your average chicken soup.
 ~
 0 2491401 0
 Rd     0
@@ -2611,7 +2611,7 @@ door~
 S
 #10125
 A Barren Path~
-This area is really desolate! Trees and other vegitation have died here a 
+This area is really desolate! Trees and other vegitation have died here a
 long time ago. No sounds of nature and no signs of life...and the stench of
 decay is even stronger...
 ~
@@ -2656,7 +2656,7 @@ S
 Thin Trail to the Dragon Valley~
 You are on a small mountain trail. You must be at least 4000 meters above
 sea level now. The air is fresh and clean, but the elevation makes breathing
-rather difficult. The trail seems to desend rather steeply to the south, 
+rather difficult. The trail seems to desend rather steeply to the south,
 while it is winding even higher to north.
 ~
 0 1074143236 5
@@ -2714,7 +2714,7 @@ D3
 S
 #10130
 Lair of the Dragolich~
-This bone-filled cave smells so bad, you have the urge to vomit. However, 
+This bone-filled cave smells so bad, you have the urge to vomit. However,
 you have larger problems than an upset stomach...the Dragolich, who resides
 in this terrible place wants you dead! Judging by his size and power, he
 has a good chance to get his wish...
@@ -2728,8 +2728,8 @@ D2
 S
 #10131
 A Dark Catacomb~
-This dark catacomb is filled with bones and corpses. To the south, the 
-skeletons pile up so high that it is impossible for you to proceed any 
+This dark catacomb is filled with bones and corpses. To the south, the
+skeletons pile up so high that it is impossible for you to proceed any
 deeper into this cavern.
 ~
 0 1078329353 0
@@ -2741,8 +2741,8 @@ D0
 S
 #10132
 A Dark Catacomb~
-This dark catacomb is filled with bones and corpses. To the south, the 
-skeletons pile up so high that it's nearly impossible for you to proceed any 
+This dark catacomb is filled with bones and corpses. To the south, the
+skeletons pile up so high that it's nearly impossible for you to proceed any
 deeper into this cavern.
 ~
 0 1078337545 0
@@ -2762,7 +2762,7 @@ As you enter this cave, you immediately sense your mistake.  A huge
 dragon made entirely of bone looms far overhead.  The things only nightmares
 are made of, the dragon looks surprisingly substantial and ominous despite
 having no flesh.  As it moves to attack, you can hear the clicking of bone
-against bone.  
+against bone.
 ~
 0 1078337545 0
 Rd     0
@@ -2777,7 +2777,7 @@ You are at the base of a gigantic tree.  Its top seems to be as high as
 the snow covered mountains nearby.  Huge, leafy branches hide a substancial
 part of this area from the sunlight.  Many animals are all around its
 moss-covered trunk and its immense roots.  To the east, you spy a small path
-partially overgrown by shrubbery.  
+partially overgrown by shrubbery.
 ~
 0 1074143236 3
 Rd     0
@@ -2815,7 +2815,7 @@ D5
 S
 #10136
 High up in the Tree~
-You are now high over the Dragon Valley. The branches getting thinner up 
+You are now high over the Dragon Valley. The branches getting thinner up
 here and more sunlight reaches this area. There are a few, colorful birds
 up here and strange, yet beautiful creatures hovering between the leaves...
 you think you hear them giggle?
@@ -2835,7 +2835,7 @@ S
 On the Tree Roof~
 Finally you have reached the tree top of this ancient tree. All around you
 are small huts made from the leaves and branches of the trees. Lots of small
-winged humanoids are flying and playing in the air. When they notice you, 
+winged humanoids are flying and playing in the air. When they notice you,
 they get very curious. Some of them bolt out of the sky to give you a hug
 or a kiss, then, with much giggling they soar back up in the air...
 ~
@@ -2868,7 +2868,7 @@ Kytara's house has a reocurring theme.  Every piece of furniture and
 every other item you see is made of diamond.  The sparkling diamonds scatter
 the light that enters from the window, making beautiful rainbows that splash
 the whole room with color.  Kytara greets you with a hug and giggles
-happily.  
+happily.
 ~
 0 1074143240 0
 Rd     0
@@ -2883,7 +2883,7 @@ Milantha's house is a study in chaos.  Bright ruby objects lie strewn
 about the floor, and a gore-coated ruby morning star is propped up against
 the far wall.  The lady of the house is not in, which you take as a good
 sign.  She may be just a little pixie, but by the looks of things she's very
-dangerous.  
+dangerous.
 ~
 0 1074143240 0
 Rd     0
@@ -2899,7 +2899,7 @@ dwelling likes diminutive things, for being small herself, she prefers to be
 around things her own size.  A small indentation on the floor holds pillows
 and a velvet blanket, and on a table in the center of the room holds a
 little pitcher of Rose nectar, and a plate of ambrosia biscuits.  All who
-enter are welcome, and she greets each arrival with a kiss and a giggle.  
+enter are welcome, and she greets each arrival with a kiss and a giggle.
 ~
 0 1074143240 0
 Rd     0
@@ -2911,9 +2911,9 @@ S
 #10141
 A Pixie Tree House~
 This tiny little house has peach wallpaper and plush carpet.  A tiny
-little table has a freshly cut lily of the valley in a small crystal vase. 
+little table has a freshly cut lily of the valley in a small crystal vase.
 The owner of the house doesn't seem to be at home.  She's probably out with
-her pixie friends playing in the forest.  
+her pixie friends playing in the forest.
 ~
 0 1074143240 0
 Rd     0
@@ -2959,8 +2959,8 @@ S
 #10144
 Meeting the Bronze Dragon~
 Wow, you have come face to face with one of the oldest and most powerful
-creatures of the realm! 
-While you are gasping and gaping, the giant dragon slowly flies a few 
+creatures of the realm!
+While you are gasping and gaping, the giant dragon slowly flies a few
 rounds around you, observing, analysing. Then he just nodded to you and
 takes off towards the horizon, his bronze body gleaming in the sun...
 ~
@@ -2974,7 +2974,7 @@ S
 #10145
 A Dark Tunnel~
 You have entered a pitchblack tunnel. The stagnant air smells like decay
-and feces. You can feel the presence of some very unfriendly life forms 
+and feces. You can feel the presence of some very unfriendly life forms
 nearby...
 ~
 0 1074143241 0
@@ -3003,7 +3003,7 @@ S
 #10146
 A Dark Tunnel~
 You have entered a pitchblack tunnel. The stagnant air smells like decay
-and feces. You can feel the presence of some very unfriendly life forms 
+and feces. You can feel the presence of some very unfriendly life forms
 nearby...
 ~
 0 1074143241 0
@@ -3028,7 +3028,7 @@ S
 #10147
 A Dark Tunnel~
 You have entered a pitchblack tunnel. The stagnant air smells like decay
-and feces. You can feel the presence of some very unfriendly life forms 
+and feces. You can feel the presence of some very unfriendly life forms
 nearby...
 ~
 0 1074143241 0
@@ -3052,8 +3052,8 @@ D3
 S
 #10148
 A Dead End~
-You have reached a dead end in the tunnel. Water is dripping from the 
-ceiling, making puddles all around your feet. The air is now so bad, that 
+You have reached a dead end in the tunnel. Water is dripping from the
+ceiling, making puddles all around your feet. The air is now so bad, that
 you almost vomit everytime you take a breath.
 ~
 0 1074143241 0
@@ -3065,9 +3065,9 @@ D0
 S
 #10149
 Before a Dark Cave~
-The tunnel comes to an abrupt end here. With your hands, you touch the 
+The tunnel comes to an abrupt end here. With your hands, you touch the
 slimey, fungus-covered walls around you in the search of hidden doors.
-An awful sound echos through these strange caverns...something evil is 
+An awful sound echos through these strange caverns...something evil is
 very near...
 There is a damaged Runestone nearby.
 ~
@@ -3090,9 +3090,9 @@ D2
 S
 #10150
 Cell of the Shadow Dragon~
-You have entered a foul and evil place! And you are regretting that you 
+You have entered a foul and evil place! And you are regretting that you
 have ever come down here. The Shadow Dragon attacks you immediately as you
-enter its ancient prison. There is no escape, no help and all your magic 
+enter its ancient prison. There is no escape, no help and all your magic
 seems to fail...
 ~
 0 1078370313 0
@@ -3105,7 +3105,7 @@ S
 #10151
 In the air...~
 You are floating a few hundred meters above the ground. The air is clear
-and fresh, birds and insects are flying everywhere. Yet above you hovers 
+and fresh, birds and insects are flying everywhere. Yet above you hovers
 this strange, dark cloud...
 ~
 0 1074143236 9
@@ -3198,7 +3198,7 @@ D5
 S
 #10155
 Lair of the Cloud Dragon~
-You have reached something like a cavern made from fog. In it resides, or 
+You have reached something like a cavern made from fog. In it resides, or
 better insanely raves the Cloud Dragon!
 When she realizes that you have entered her domain, she howls furiously:
 "No more, begone you dark dreams, BEGONE!"
@@ -3234,7 +3234,7 @@ S
 A Rainbow Tunnel~
 You are in a rainbow tunnel.  The swirling vortex of colors makes you
 alternately giddy and sick to your stomach.  The tunnel itself is made of
-some soft chalky material, and as you walk along, you hear nothing.  
+some soft chalky material, and as you walk along, you hear nothing.
 ~
 0 1074143245 0
 Rd     0
@@ -3263,7 +3263,7 @@ S
 A Rainbow Tunnel~
 You are in a rainbow tunnel.  The swirling vortex of colors makes you
 alternately giddy and sick to your stomach.  The tunnel itself is made of
-some soft chalky material, and as you walk along, you hear nothing.  
+some soft chalky material, and as you walk along, you hear nothing.
 ~
 0 1074143245 0
 Rd     0
@@ -3288,7 +3288,7 @@ S
 A Rainbow Tunnel~
 You are in a rainbow tunnel.  The swirling vortex of colors makes you
 alternately giddy and sick to your stomach.  The tunnel itself is made of
-some soft chalky material, and as you walk along, you hear nothing.  
+some soft chalky material, and as you walk along, you hear nothing.
 ~
 0 1074143245 0
 Rd     0
@@ -3311,10 +3311,10 @@ D3
 S
 #10159
 Before a Colourful Cave~
-You stand in front of the most magnificent cave you have ever seen. 
+You stand in front of the most magnificent cave you have ever seen.
 Carved out of a soft chalky stone, every color of the rainbow can be seen in
 it.  From inside, you think you can hear a low rumble and a language which
-you have never heard before.  
+you have never heard before.
 ~
 0 1074143245 0
 Rd     0
@@ -3332,7 +3332,7 @@ Lair of the Rainbow Dragon~
 The lair of the rainbow dragon is large and swelteringly hot.  Jewels and
 coins of all types and ages lie strewn about the floor.  In the middle of
 the pile of booty is a gigantic and beautiful dragon.  Her scales shimmer
-and vary with every color of the rainbow.  
+and vary with every color of the rainbow.
 ~
 0 1078337545 0
 Rd     0
@@ -3347,7 +3347,7 @@ You are on a little slope that leads into the child-rearing center of the
 dragon lands.  To the west, you can hear the peeps and chirps of the newly
 hatched dragon babies.  The nurses who look after them have their hands
 full.  Not only do the babies have sharp little teeth, but they can also
-breath spouts of flame, ice, or lightning.  
+breath spouts of flame, ice, or lightning.
 ~
 0 1074143232 4
 Rd     0
@@ -3370,7 +3370,7 @@ The dragon nursery is kept swelteringly warm in order to insure the
 proper development of the tiny dragon bodies inside the eggs.  Nurses keep a
 frantic watch over the eggs watching for the first sign of the young
 breaking out of the shell.  They chirp and roar encouragement to them, and
-in desperate cases help pry them from the shells.  
+in desperate cases help pry them from the shells.
 ~
 0 1074143240 0
 Rd     0
@@ -3384,7 +3384,7 @@ A Small Cave~
 This cave is separated into two main sections.  To the south is the
 Cavern of the Maidens, and to the west is the Cavern of the Nurses.  The
 dragons have carved these chambers out of solid granite, and you can still
-see the clawmarks imbedded in the stone.  
+see the clawmarks imbedded in the stone.
 ~
 0 1074143240 0
 Rd     0
@@ -3404,12 +3404,12 @@ S
 #10164
 Cavern of the Maidens~
 As you enter the room, you are starled to see a group of beautiful young
-women.  With a start, you realize you must be in the cavern of the maidens. 
+women.  With a start, you realize you must be in the cavern of the maidens.
 The beautiful golden and brown tresses of the women flow down over their
 shoulders and accentuate the curves of their bodies.  The temperature in the
 room is very comfortable and is provided by dragon fire.  Each woman seems
 to have her own bed and personal items.  It appears they are being well
-taken care of by the Dragons.  
+taken care of by the Dragons.
 ~
 0 1074143240 0
 Rd     0
@@ -3423,7 +3423,7 @@ Cavern of the Nurses~
 The cavern of the nurses is filled with frantic older dragon ladies who
 bustle back and forth from this room which holds supplies to the dragon
 nursery to the north.  The nurses look a little haggard, overworked, and in
-some cases singed.  
+some cases singed.
 ~
 0 1074143240 0
 Rd     0
@@ -3438,7 +3438,7 @@ To the east, you can hear the chaotic sound of children at play.  The
 Dragon youth love to play games, and the parents are often happy to get rid
 of them for a while.  Raising Dragon young is difficult work even for the
 most patient parent.  Since there are no natural enemies around, the youth
-are free to roam about the playground unsupervised.  
+are free to roam about the playground unsupervised.
 ~
 0 1074143232 4
 Rd     0
@@ -3457,7 +3457,7 @@ The Dragon hatchlings stop their game and greet you as you walk in.  A
 large ball that appears to be made out of an animal bladder is left standing
 in the middle of the playground.  The Dragon hatchlings look surprisingly
 human at this stage in their development, and you feel a pang of
-somesickness at the sight of them.  
+somesickness at the sight of them.
 ~
 0 1074143240 0
 Rd     0
@@ -3472,7 +3472,7 @@ The steep slope leads high up into the mountains to the east.  Dragons
 can be seen circling far ahead.  The road which you are on is not very good;
 it is full of ruts and overgrown with weeds.  The dragons have no use for
 roads because they can fly from adolescence on.  Roads, then, are only for
-the wingless visitors which are rare in the Dragon lands.  
+the wingless visitors which are rare in the Dragon lands.
 ~
 0 1074143232 5
 Rd     0
@@ -3490,7 +3490,7 @@ The Dragon School~
 Just like in the mortal lands, young Dragons are sent to school to learn
 about the world.  Since their life spans are so enormous, though, school can
 constitute four centuries of study.  These young Dragons seem to be sick of
-studying, and most of them are daydreaming about far off places.  
+studying, and most of them are daydreaming about far off places.
 ~
 0 1074143240 0
 Rd     0
@@ -3503,7 +3503,7 @@ S
 A Small Cave~
 This small cave has been carved out of the native rock.  Its purpose
 seems obscure and you wonder why it was built.  Chambers to the west and to
-the south might give some clues as to the purpose.  
+the south might give some clues as to the purpose.
 ~
 0 1074143240 0
 Rd     0
@@ -3518,11 +3518,11 @@ door~
 S
 #10171
 Cavern of the Servants~
-The servants of the Dragon Lords eke out their meager existances here. 
+The servants of the Dragon Lords eke out their meager existances here.
 Instead of the palatial lairs of the Dragon Lords, these servants have a
-tiny and cramped lair, and they must share it with several other Dragons. 
+tiny and cramped lair, and they must share it with several other Dragons.
 The fact that they have a lair at all is some comfort, however.  At least
-they don't have to sleep on a mountaintop.  
+they don't have to sleep on a mountaintop.
 ~
 0 1074143240 0
 Rd     0
@@ -3541,7 +3541,7 @@ The cavern of the teachers was built to provide housing for the teachers
 which is close to the school.  It is here that they provide their "daily"
 lessons.  Instead of lasting a mere twenty-four hours, however, these
 lectures can drag on for weeks, insuring that the young dragons will
-experience incredible bouts of boredom.  
+experience incredible bouts of boredom.
 ~
 0 1074143240 0
 Rd     0
@@ -3555,7 +3555,7 @@ A Steep Slope~
 The mountains looming to west seem to be almost impassible.  The road is
 poor at best here, and in some places, there isn't a road at all.  You look
 at the dragons circling above with much envy, and you wish one would swoop
-down and offer you a ride.  What you wouldn't give for wings!  
+down and offer you a ride.  What you wouldn't give for wings!
 ~
 0 1074143232 5
 Rd     0
@@ -3573,7 +3573,7 @@ The Dragon Gym~
 Every imaginable exercise machine can be seen here in the Dragon Gym.  In
 order to support the immense weight of the Dragon bodies, the wing
 musculature has to be very strong.  The exercise machines have been
-specially designed to pinpoint the major muscle groups involved in flying.  
+specially designed to pinpoint the major muscle groups involved in flying.
 ~
 0 1074143240 0
 Rd     0
@@ -3586,8 +3586,8 @@ S
 A Torched Slope~
 This slope looks as if a major forest fire has hit it.  The few trees
 that are still living are torched on the tops, and many of the trees have
-been reduced to charcoal.  Soot and the stench of burning fills the area. 
-You wonder what could have possibly caused this massive destruction.  
+been reduced to charcoal.  Soot and the stench of burning fills the area.
+You wonder what could have possibly caused this massive destruction.
 ~
 0 1074143232 4
 Rd     0
@@ -3605,7 +3605,7 @@ Before a Smoldering Cave~
 The cause of the desctruction of the lands below is now apparent.  You
 stand before a smoldering cave.  The heat is so intense even out here that
 you almost pass out.  Inside, you can hear the low rumble of a Dragon
-sleeping.  At least, you hope he's sleeping.  
+sleeping.  At least, you hope he's sleeping.
 ~
 0 1074143232 4
 Rd     0
@@ -3620,11 +3620,11 @@ D3
 S
 #10177
 Lair of the Red Dragon~
-As you enter the Red Dragon's Lair, you immediately see your mistake. 
+As you enter the Red Dragon's Lair, you immediately see your mistake.
 Not only is the Red Dragon not asleep, he's actually sitting at the entrance
 of his lair waiting for something to roast.  The quick look you get at him
 reveals a marvelous set of flame-red scales.  Smoke billows out of his
-nostrils, and he moves to attack.  
+nostrils, and he moves to attack.
 ~
 0 1074143261 0
 Rd     0
@@ -3639,7 +3639,7 @@ The black gooey masses of what used to be trees and animals lie spread
 out in waste over this slope.  The acrid stench and the caustic result of
 breathing the air into your lungs makes you question the sanity of being
 here.  Not only is it hazardous to your health, you might also run into the
-cause of this devastation.  
+cause of this devastation.
 ~
 0 1074143232 4
 Rd     0
@@ -3657,7 +3657,7 @@ Before a Fuming Cave~
 You stand in front of a fuming cave.  Every breath you take sears your
 lungs, and a sour taste is in your mouth.  The desolation and destruction
 around you is complete.  From within the cave, you think you can hear the
-deep rumbling breathing of a Dragon.  
+deep rumbling breathing of a Dragon.
 ~
 0 1074143232 4
 Rd     0
@@ -3676,7 +3676,7 @@ As you walk in the entrance to the lair, you realize you should have
 waited for an invitation from the Green Dragon Lady.  Her scales are
 magnificent, and her breath is deadly.  Clouds of smoking acid billow out of
 her mouth and nostrils, and you marvel at this feat.  You don't marvel long
-because she begins her attack.  
+because she begins her attack.
 ~
 0 1074143245 0
 Rd     0
@@ -3690,7 +3690,7 @@ A Blue Slope~
 The steep slope you are walking on is covered with vegetation of all
 kinds.  Mostly, however, it is covered with beautiful blue flowers of all
 kinds.  Used to seeing destruction, you take a moment to relax, breathe some
-fresh air, and enjoy the flowers.  
+fresh air, and enjoy the flowers.
 ~
 0 1074143232 4
 Rd     0
@@ -3708,7 +3708,7 @@ Before a Blue Cave~
 You stand in front of the cave of the Blue Dragon.  A low rumbling sound
 can be heard inside, and a soft sibilant voice as well.  You try to get the
 attention of the Dragon inside by knocking on the door, but there is no
-answer and you only hurt your hand.  
+answer and you only hurt your hand.
 ~
 0 1074143232 4
 Rd     0
@@ -3728,7 +3728,7 @@ in.  A splendid looking blue dragon raises its graceful head and peers at
 you intently, then blinks.  Prepared for an all-out battle, you are
 surprised when she opens her mouth and greets you happily.  After talking
 with her for a day and a half, though, you think maybe death would have been
-better.  
+better.
 ~
 0 1074143261 0
 Rd     0
@@ -3741,7 +3741,7 @@ S
 On a Weatherbeaten Trail~
 The trail becomes wider and somewhat difficult to traverse here, and the
 weather has begun to drop in temperature.  The trail continues to the north
-and south from this point, and looks to be in horrible shape. 
+and south from this point, and looks to be in horrible shape.
 ~
 0 1078337540 5
 Rd     0
@@ -3763,7 +3763,7 @@ A Slimey Slope~
 Traveling up the slope would be hard enough if the ground were rough, but
 it is covered with a disgusting and sticky goo.  Every footstep is
 precarious, and you slip and fall on your face several times.  The slime not
-only looks putrid, but it smells disgusting too.  
+only looks putrid, but it smells disgusting too.
 ~
 0 1074143232 4
 Rd     0
@@ -3781,7 +3781,7 @@ Before a Slimey Cave~
 Yellow slime drips down the sides of this cave.  From the inside of the
 cave, you think you can hear the low rumble of a Dragon breathing.  All
 around you, slime is covering everything, and you feel like you have landed
-in a giant sneeze.  
+in a giant sneeze.
 ~
 0 1074143232 4
 Rd     0
@@ -3796,12 +3796,12 @@ cave~
 S
 #10187
 Lair of the Yellow Dragon~
-The lair of the Yellow Dragon is slippery and sticky with yellow slime. 
+The lair of the Yellow Dragon is slippery and sticky with yellow slime.
 Although the idea of a frost dragon or a fire dragon does not surprise you,
 you had no idea that there could also be a slime dragon.  You are just about
 to laugh when a large and slimey head rears up from the floor.  After one
 piercing and furious gaze at you, the Yellow Dragon opens its mouth to
-attack.  
+attack.
 ~
 0 1074143261 0
 Rd     0
@@ -3816,7 +3816,7 @@ The foul, hideous odor of the swamp is overpowering, and you afraid you
 will pass out into the murk of the swamp.  With every footstep you seem to
 sink deeper into the swamp, and the sucking sound the mud makes at your
 boots is disgusting.  A small set of red, beady eyes stares at you from the
-brush surrounding the swamp.  
+brush surrounding the swamp.
 ~
 0 1074143232 6
 Rd     0
@@ -3835,7 +3835,7 @@ You are standing before a very large swamp hole.  You can't imagine what
 could possibly be big enough to have made such a hole, but you guess it must
 be a Dragon Lord.  Surely only the most foul and evil of the Dragons would
 choose to live in this disgusting place.  A swamp snake strikes out at you,
-and you chop it in half just in the nick of time.  
+and you chop it in half just in the nick of time.
 ~
 0 1074143232 6
 Rd     0
@@ -3852,10 +3852,10 @@ S
 Lair of the Black Dragon~
 The lair of the Black Dragon is actually nothing more than a big hole in
 the swamp.  In the middle of it is the Black Dragon himself.  Swamp ooze
-slides of his scales as he rises up out of the hole to tower over you. 
+slides of his scales as he rises up out of the hole to tower over you.
 Puffs of thick, acrid smoke come out of his nostrils, and his eyes burn with
 an unholy fire.  He seems to be the most incredibly cruel Dragon you have
-ever met.  
+ever met.
 ~
 0 1074143261 6
 Rd     0
@@ -3869,7 +3869,7 @@ Arctic Wasteland~
 Trudging up the mountain path is almost impossible.  A huge howling ice
 and snow storm surrounds you, tugging at your clothes and chilling you to
 the bone.  Snow drifts up to three meters high dwarf you, and they are
-almost impossible to cross.  
+almost impossible to cross.
 ~
 0 1074143232 2
 Rd     0
@@ -3887,7 +3887,7 @@ Before an Icy Cave~
 You are before a cave made entirely out of ice.  Through the thick
 glass-like walls, you think you can see a large creature moving.  A rumbling
 and creaking sound clues you into the nature of the beast.  It must be the
-home of the Ice Dragon!  
+home of the Ice Dragon!
 ~
 0 1074143232 2
 Rd     0
@@ -3907,7 +3907,7 @@ through the ice walls, illuminating everything within.  The White Dragon
 does not seem pleased to see you, and from the look in her yes, you can tell
 she considers attacking you.  She must not find you worth her while,
 however, for she does not attack.  It might be a good idea to get out of
-here before she changes her mind, though.  
+here before she changes her mind, though.
 ~
 0 1074012189 0
 Rd     0
@@ -3921,7 +3921,7 @@ A Silvery Slope~
 Silver maple trees, birch trees, and other silvery foliage dominates this
 slope.  The metallic look of the landscape gives it an other-worldly look,
 and the crunch of the branches sends chills up your spine.  This area is
-down-right creepy.  
+down-right creepy.
 ~
 0 1074143232 4
 Rd     0
@@ -3938,7 +3938,7 @@ S
 Before a Shiny Cave~
 A large and very shiny silver cave stands reflecting brightly in the sun.
 It looks very cold and very foreign, and you wonder why even a Dragon would
-choose to live in this bizarre cave.  
+choose to live in this bizarre cave.
 ~
 0 1074143232 4
 Rd     0
@@ -3956,9 +3956,9 @@ Lair of the Silver Dragon~
 The Silver Dragon is a truly magnificent creature.  Here on the inside of
 the cave, the walls have been left unpolished, making them seem dull in
 coparison with the Dragon Lady.  Always concerned about the reception you
-will receive from the Dragon Lords and Ladies, you approach her cautiously. 
+will receive from the Dragon Lords and Ladies, you approach her cautiously.
 She seems pleased to see you however, and offers you a seat in a beautiful
-silver throne.  
+silver throne.
 ~
 0 1074143261 0
 Rd     0
@@ -3973,7 +3973,7 @@ A thin layer of gold dust covers everything in this area.  You reach out
 and touch a leaf, and the gold dust sticks to your finger.  You are amazed
 and curious by this strange dust.  It appears to be real gold, but you have
 no idea how it could have gotten here.  The amount of powder looks like it
-could add up to a fortune, though.  
+could add up to a fortune, though.
 ~
 0 1074143232 4
 Rd     0
@@ -3991,7 +3991,7 @@ Before a Golden Cave~
 You are standing in front of a shiny golden cave.  The roaring from
 within indicates that the Master of the Lair must currently be in.  One of
 the most respected Dragon Lords, the Golden Dragon is rumored to be kind and
-generous.  The fierce sound of the roar makes you wonder, however.  
+generous.  The fierce sound of the roar makes you wonder, however.
 ~
 0 1074143232 4
 Rd     0
@@ -4010,7 +4010,7 @@ The Gold Dragon is a splendid creature.  His scales sparkle and shimmer,
 and he towers high above you, his head almost reaching the ceiling of his
 lair.  Being a very vain Dragon, he has absolutely no gold of any kind in
 his lair, afraid that it might outshine him.  Instead, he has every possible
-color of gemstone, and the rainbow colors are magnificent.  
+color of gemstone, and the rainbow colors are magnificent.
 ~
 0 1074143261 0
 Rd     0

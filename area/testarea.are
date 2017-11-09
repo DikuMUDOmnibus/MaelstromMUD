@@ -1,5 +1,5 @@
 #AREADATA
-Name        {??-???} Test Area           Decklarean~
+Name        Test Area~
 Levels      1 100
 Builders    Decklarean~
 VNUMs       30000 30399
@@ -27,7 +27,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Around you stretch massive amounts of ferns and strange plants.  A
 sheet of mud covers the forest floor.  Sounds of strange birds echo through
 the area.  There is a deep earthy smell around here.  The moisture in the
-air makes you feel damp.  
+air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -46,7 +46,7 @@ All that is above you is a solid mass of green leaves.  The undergrowth
 is dense and full of thorny plants.  The forest floor is covered in a deep
 mat of dead leaves.  There is a strange howling noise coming from the
 distance.  There is a deep earthy smell around here.  You feel a strange
-warmth in the air.  
+warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -66,10 +66,10 @@ S
 #30002
 Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
-sky.  Around you are allot of small little plants poking out of the ground. 
-Leaves rustle beneath you.  Sounds of strange birds echo through the area. 
+sky.  Around you are allot of small little plants poking out of the ground.
+Leaves rustle beneath you.  Sounds of strange birds echo through the area.
 There is some terrible smell coming from some of the plants.  There is a
-stickiness in the air even with a cool breeze.  
+stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -92,7 +92,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Everywhere are huge plants with gigantic leaves.  The forest floor is
 quagmire of mud.  There is a strange howling noise coming from the distance.
 There is a deep earthy smell around here.  You feel a strange warmth in the
-air.  
+air.
 ~
 0 270352 3
 Rd     0
@@ -111,11 +111,11 @@ D2
 S
 #30004
 Rainforest~
-Strangely brown moss clings erratically to the trees around here. 
+Strangely brown moss clings erratically to the trees around here.
 Everywhere are huge plants with gigantic leaves.  While the ground is
 covered in a carpet of flowers.  You hear many birds of all types calling
 out in the distance.  The air is full of moisture and the smell of green
-things.  The air feels cool.  
+things.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -135,10 +135,10 @@ S
 #30005
 Rainforest~
 A huge mat of moss hanging from massive tree branches block sight of the
-sky.  Around you are allot of small little plants poking out of the ground. 
+sky.  Around you are allot of small little plants poking out of the ground.
 A shallow pool of murky water covers the ground.  You hear many birds of all
 types calling out in the distance.  There is some terrible smell coming from
-some of the plants.  You feel a strange warmth in the air.  
+some of the plants.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -158,10 +158,10 @@ S
 #30006
 Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
-sky.  Around you are allot of small little plants poking out of the ground. 
+sky.  Around you are allot of small little plants poking out of the ground.
 A shallow pool of murky water covers the ground.  There is a strange
 screeching coming from somewhere above you.  The air is full of moisture and
-the smell of green things.  The moisture in the air makes you feel damp.  
+the smell of green things.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -184,7 +184,7 @@ Strangely brown moss clings erratically to the trees around here.  The
 undergrowth is dense and full of thorny plants.  The ground is a hard packed
 dirt.  You hear some kind of animal calling out in the distance.  The smell
 of living plants hangs heavy in the air.  There is the feeling as if
-something is watching.  
+something is watching.
 ~
 0 270352 3
 Rd     0
@@ -207,7 +207,7 @@ All that is above you is a solid mass of green leaves.  Around you are
 allot of small little plants poking out of the ground.  Leaves rustle
 beneath you.  Sounds of strange birds echo through the area.  The smell of
 living plants hangs heavy in the air.  The moisture in the air makes you
-feel damp.  
+feel damp.
 ~
 0 270352 3
 Rd     0
@@ -230,7 +230,7 @@ All that is above you is a solid mass of green leaves.  Plants of all
 different types and shades of green are growing on everything around.  A
 sheet of mud covers the forest floor.  Off somewhere you hear something
 crowing.  The smell of living plants hangs heavy in the air.  The moisture
-in the air makes you feel damp.  
+in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -253,7 +253,7 @@ A small break in the canopy is letting you view the sky.  Everywhere are
 huge plants with gigantic leaves.  The floor of the forest is a mess of
 twigs and leaves.  You hear some kind of animal calling out in the distance.
 The air is full of moisture and the smell of green things.  The moisture in
-the air makes you feel damp.  
+the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -276,7 +276,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Around you stretch massive amounts of ferns and strange plants.  A
 shallow pool of murky water covers the ground.  There is a strange howling
 noise coming from the distance.  There is some terrible smell coming from
-some of the plants.  You feel a strange warmth in the air.  
+some of the plants.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -299,7 +299,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Around you stretch massive amounts of ferns and strange plants.  The
 floor of the forest is a mess of twigs and leaves.  There is a strange
 howling noise coming from the distance.  There is a deep earthy smell around
-here.  You feel a strange warmth in the air.  
+here.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -322,7 +322,7 @@ A small break in the canopy is letting you view the sky.  The undergrowth
 is dense and full of thorny plants.  The ground is a hard packed dirt.  You
 hear a constant rustle of animals in the undergrowth.  The smell of living
 plants hangs heavy in the air.  There is a stickiness in the air even with a
-cool breeze.  
+cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -341,11 +341,11 @@ D2
 S
 #30014
 Rainforest~
-Strangely brown moss clings erratically to the trees around here. 
+Strangely brown moss clings erratically to the trees around here.
 Everywhere are huge plants with gigantic leaves.  A shallow pool of murky
 water covers the ground.  There is a strange screeching coming from
 somewhere above you.  There is some terrible smell coming from some of the
-plants.  There is the feeling as if something is watching.  
+plants.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -367,7 +367,7 @@ Rainforest~
 All that is above you is a solid mass of green leaves.  Around you there
 is an almost impassable maze of plant life.  Leaves rustle beneath you.  You
 hear a constant rustle of animals in the undergrowth.  There is some
-terrible smell coming from some of the plants.  The air feels cool.  
+terrible smell coming from some of the plants.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -390,7 +390,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Bright flowers are growing out of the trees.  The forest floor is
 quagmire of mud.  Sounds of strange birds echo through the area.  The air is
 full of moisture and the smell of green things.  You feel a strange warmth
-in the air.  
+in the air.
 ~
 0 270352 3
 Rd     0
@@ -413,7 +413,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Everywhere are huge plants with gigantic leaves.  The floor of the
 forest is a mess of twigs and leaves.  You hear a constant rustle of animals
 in the undergrowth.  There is a deep earthy smell around here.  The moisture
-in the air makes you feel damp.  
+in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -436,7 +436,7 @@ All that is above you is a solid mass of green leaves.  Around you
 stretch massive amounts of ferns and strange plants.  Leaves rustle beneath
 you.  Sounds of strange birds echo through the area.  The air is heavy with
 the smell of flowers drifting on the air currents.  The moisture in the air
-makes you feel damp.  
+makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -460,7 +460,7 @@ looking up into a green cave.  Around you are allot of small little plants
 poking out of the ground.  The forest floor is covered in a deep mat of dead
 leaves.  You hear many birds of all types calling out in the distance.  The
 air is full of moisture and the smell of green things.  You feel a strange
-warmth in the air.  
+warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -478,8 +478,8 @@ Rainforest~
 A small break in the canopy is letting you view the sky.  Plants of all
 different types and shades of green are growing on everything around.  The
 forest floor is quagmire of mud.  You hear many birds of all types calling
-out in the distance.  The smell of living plants hangs heavy in the air. 
-There is a stickiness in the air even with a cool breeze.  
+out in the distance.  The smell of living plants hangs heavy in the air.
+There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -501,7 +501,7 @@ Rainforest~
 Strangely brown moss clings erratically to the trees around here.  Bright
 flowers are growing out of the trees.  The forest floor is covered in a deep
 mat of dead leaves.  There is a strange screeching coming from somewhere
-above you.  There is a deep earthy smell around here.  The air feels cool.  
+above you.  There is a deep earthy smell around here.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -525,10 +525,10 @@ S
 #30022
 Rainforest~
 Huge branches interlock overhead, blocking all but brief glimpses of the
-sky.  Around you are allot of small little plants poking out of the ground. 
+sky.  Around you are allot of small little plants poking out of the ground.
 A shallow pool of murky water covers the ground.  You hear a constant rustle
 of animals in the undergrowth.  The air is full of moisture and the smell of
-green things.  The moisture in the air makes you feel damp.  
+green things.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -555,7 +555,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Plants of all different types and shades of
 green are growing on everything around.  Leaves rustle beneath you.  Sounds
 of strange birds echo through the area.  There is some terrible smell coming
-from some of the plants.  The moisture in the air makes you feel damp.  
+from some of the plants.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -581,7 +581,7 @@ Rainforest~
 Strangely brown moss clings erratically to the trees around here.  Around
 you are allot of small little plants poking out of the ground.  Leaves
 rustle beneath you.  Off somewhere you hear something crowing.  The smell of
-living plants hangs heavy in the air.  The air feels cool.  
+living plants hangs heavy in the air.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -605,10 +605,10 @@ S
 #30025
 Rainforest~
 A mat of green moss covers everything above giving it the impression of
-looking up into a green cave.  Bright flowers are growing out of the trees. 
+looking up into a green cave.  Bright flowers are growing out of the trees.
 A sheet of mud covers the forest floor.  There is a strange screeching
-coming from somewhere above you.  There is a deep earthy smell around here. 
-There is a stickiness in the air even with a cool breeze.  
+coming from somewhere above you.  There is a deep earthy smell around here.
+There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -634,8 +634,8 @@ Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
 sky.  Bright flowers are growing out of the trees.  A shallow pool of murky
 water covers the ground.  You hear a constant rustle of animals in the
-undergrowth.  The air is full of moisture and the smell of green things. 
-You feel a strange warmth in the air.  
+undergrowth.  The air is full of moisture and the smell of green things.
+You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -659,10 +659,10 @@ S
 #30027
 Rainforest~
 A huge mat of moss hanging from massive tree branches block sight of the
-sky.  Around you are allot of small little plants poking out of the ground. 
+sky.  Around you are allot of small little plants poking out of the ground.
 Leaves rustle beneath you.  You hear many birds of all types calling out in
-the distance.  The air is full of moisture and the smell of green things. 
-There is the feeling as if something is watching.  
+the distance.  The air is full of moisture and the smell of green things.
+There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -690,7 +690,7 @@ looking up into a green cave.  Everywhere are huge plants with gigantic
 leaves.  While the ground is covered in a carpet of flowers.  There is a
 strange screeching coming from somewhere above you.  There is a deep earthy
 smell around here.  There is a stickiness in the air even with a cool
-breeze.  
+breeze.
 ~
 0 270352 3
 Rd     0
@@ -717,7 +717,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Around you there is an almost impassable maze of plant life.  The
 forest floor is covered in a deep mat of dead leaves.  You hear a constant
 rustle of animals in the undergrowth.  There is a deep earthy smell around
-here.  There is a stickiness in the air even with a cool breeze.  
+here.  There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -743,7 +743,7 @@ Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
 sky.  Bright flowers are growing out of the trees.  Leaves rustle beneath
 you.  Sounds of strange birds echo through the area.  The air is heavy with
-the smell of flowers drifting on the air currents.  The air feels cool.  
+the smell of flowers drifting on the air currents.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -770,7 +770,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Bright flowers are growing out of the trees.  A shallow pool of murky
 water covers the ground.  You hear some kind of animal calling out in the
 distance.  The smell of living plants hangs heavy in the air.  The moisture
-in the air makes you feel damp.  
+in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -797,7 +797,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Everywhere are huge plants with gigantic leaves.  While the ground is
 covered in a carpet of flowers.  There is a strange howling noise coming
 from the distance.  There is a deep earthy smell around here.  You feel a
-strange warmth in the air.  
+strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -824,7 +824,7 @@ Strangely brown moss clings erratically to the trees around here.  Plants
 of all different types and shades of green are growing on everything around.
 A sheet of mud covers the forest floor.  There is a strange howling noise
 coming from the distance.  There is some terrible smell coming from some of
-the plants.  There is the feeling as if something is watching.  
+the plants.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -849,9 +849,9 @@ S
 Rainforest~
 Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  The undergrowth is dense and full of thorny plants.  Leaves rustle
-beneath you.  There is a strange howling noise coming from the distance. 
+beneath you.  There is a strange howling noise coming from the distance.
 There is a deep earthy smell around here.  There is the feeling as if
-something is watching.  
+something is watching.
 ~
 0 270352 3
 Rd     0
@@ -878,7 +878,7 @@ Strangely brown moss clings erratically to the trees around here.  The
 undergrowth is dense and full of thorny plants.  The ground is a hard packed
 dirt.  Sounds of strange birds echo through the area.  The air is full of
 moisture and the smell of green things.  There is a stickiness in the air
-even with a cool breeze.  
+even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -902,10 +902,10 @@ S
 #30036
 Rainforest~
 Strangely brown moss clings erratically to the trees around here.  The
-undergrowth is dense and full of thorny plants.  Leaves rustle beneath you. 
+undergrowth is dense and full of thorny plants.  Leaves rustle beneath you.
 There is a strange howling noise coming from the distance.  The smell of
 living plants hangs heavy in the air.  There is the feeling as if something
-is watching.  
+is watching.
 ~
 0 270352 3
 Rd     0
@@ -958,7 +958,7 @@ Strangely brown moss clings erratically to the trees around here.  Bright
 flowers are growing out of the trees.  The ground is barren with only a
 dusty dirt covering it.  You hear some kind of animal calling out in the
 distance.  The smell of living plants hangs heavy in the air.  There is the
-feeling as if something is watching.  
+feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -985,7 +985,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Plants of all different types and shades of green are growing on
 everything around.  The ground is a hard packed dirt.  You hear some kind of
 animal calling out in the distance.  There is a deep earthy smell around
-here.  You feel a strange warmth in the air.  
+here.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -1008,7 +1008,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Bright flowers are growing out of the trees.  The ground is barren
 with only a dusty dirt covering it.  Sounds of strange birds echo through
 the area.  There is a deep earthy smell around here.  You feel a strange
-warmth in the air.  
+warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -1031,7 +1031,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  The undergrowth is dense and full of thorny plants.  A shallow pool of
 murky water covers the ground.  You hear a constant rustle of animals in the
 undergrowth.  There is a deep earthy smell around here.  You feel a strange
-warmth in the air.  
+warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -1058,7 +1058,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Around you there is an almost impassable maze of plant life.  A
 shallow pool of murky water covers the ground.  You hear a constant rustle
 of animals in the undergrowth.  There is some terrible smell coming from
-some of the plants.  You feel a strange warmth in the air.  
+some of the plants.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -1083,9 +1083,9 @@ S
 Rainforest~
 Strangely brown moss clings erratically to the trees around here.  Around
 you stretch massive amounts of ferns and strange plants.  A sheet of mud
-covers the forest floor.  Sounds of strange birds echo through the area. 
+covers the forest floor.  Sounds of strange birds echo through the area.
 The smell of living plants hangs heavy in the air.  You feel a strange
-warmth in the air.  
+warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -1111,8 +1111,8 @@ Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
 sky.  Around you stretch massive amounts of ferns and strange plants.  The
 ground is a hard packed dirt.  You hear a constant rustle of animals in the
-undergrowth.  There is some terrible smell coming from some of the plants. 
-The moisture in the air makes you feel damp.  
+undergrowth.  There is some terrible smell coming from some of the plants.
+The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -1140,7 +1140,7 @@ sky.  Around you stretch massive amounts of ferns and strange plants.  The
 forest floor is covered in a deep mat of dead leaves.  You hear a constant
 rustle of animals in the undergrowth.  The air is heavy with the smell of
 flowers drifting on the air currents.  There is the feeling as if something
-is watching.  
+is watching.
 ~
 0 270352 3
 Rd     0
@@ -1167,7 +1167,7 @@ A small break in the canopy is letting you view the sky.  Bright flowers
 are growing out of the trees.  While the ground is covered in a carpet of
 flowers.  You hear many birds of all types calling out in the distance.  The
 smell of living plants hangs heavy in the air.  There is a stickiness in the
-air even with a cool breeze.  
+air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -1194,7 +1194,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Plants of all different types and shades of green are growing on
 everything around.  While the ground is covered in a carpet of flowers.  Off
 somewhere you hear something crowing.  The smell of living plants hangs
-heavy in the air.  You feel a strange warmth in the air.  
+heavy in the air.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -1222,7 +1222,7 @@ sky.  Plants of all different types and shades of green are growing on
 everything around.  Leaves rustle beneath you.  You hear a constant rustle
 of animals in the undergrowth.  The air is heavy with the smell of flowers
 drifting on the air currents.  There is the feeling as if something is
-watching.  
+watching.
 ~
 0 270352 3
 Rd     0
@@ -1249,7 +1249,7 @@ A small break in the canopy is letting you view the sky.  Around you
 there is an almost impassable maze of plant life.  The forest floor is
 quagmire of mud.  Sounds of strange birds echo through the area.  There is a
 deep earthy smell around here.  There is the feeling as if something is
-watching.  
+watching.
 ~
 0 270352 3
 Rd     0
@@ -1276,7 +1276,7 @@ Strangely brown moss clings erratically to the trees around here.  Around
 you there is an almost impassable maze of plant life.  A sheet of mud covers
 the forest floor.  Sounds of strange birds echo through the area.  The smell
 of living plants hangs heavy in the air.  The moisture in the air makes you
-feel damp.  
+feel damp.
 ~
 0 270352 3
 Rd     0
@@ -1302,7 +1302,7 @@ Rainforest~
 A small break in the canopy is letting you view the sky.  Bright flowers
 are growing out of the trees.  The ground is a hard packed dirt.  Off
 somewhere you hear something crowing.  There is a deep earthy smell around
-here.  The air feels cool.  
+here.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -1328,7 +1328,7 @@ Rainforest~
 All that is above you is a solid mass of green leaves.  Around you there
 is an almost impassable maze of plant life.  The ground is a hard packed
 dirt.  Off somewhere you hear something crowing.  The air is heavy with the
-smell of flowers drifting on the air currents.  The air feels cool.  
+smell of flowers drifting on the air currents.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -1353,9 +1353,9 @@ S
 Rainforest~
 Strangely brown moss clings erratically to the trees around here.  Bright
 flowers are growing out of the trees.  A sheet of mud covers the forest
-floor.  There is a strange screeching coming from somewhere above you. 
+floor.  There is a strange screeching coming from somewhere above you.
 There is a deep earthy smell around here.  There is the feeling as if
-something is watching.  
+something is watching.
 ~
 0 270352 3
 Rd     0
@@ -1381,8 +1381,8 @@ Rainforest~
 A small break in the canopy is letting you view the sky.  Around you are
 allot of small little plants poking out of the ground.  Leaves rustle
 beneath you.  There is a strange screeching coming from somewhere above you.
-The air is heavy with the smell of flowers drifting on the air currents. 
-There is a stickiness in the air even with a cool breeze.  
+The air is heavy with the smell of flowers drifting on the air currents.
+There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -1409,7 +1409,7 @@ A small break in the canopy is letting you view the sky.  Around you
 stretch massive amounts of ferns and strange plants.  Leaves rustle beneath
 you.  You hear many birds of all types calling out in the distance.  The air
 is full of moisture and the smell of green things.  There is the feeling as
-if something is watching.  
+if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -1436,7 +1436,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Bright flowers are growing out of the trees.  While the ground is
 covered in a carpet of flowers.  Sounds of strange birds echo through the
 area.  The air is heavy with the smell of flowers drifting on the air
-currents.  The moisture in the air makes you feel damp.  
+currents.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -1460,10 +1460,10 @@ S
 #30057
 Rainforest~
 Huge branches interlock overhead, blocking all but brief glimpses of the
-sky.  Around you are allot of small little plants poking out of the ground. 
+sky.  Around you are allot of small little plants poking out of the ground.
 The forest floor is quagmire of mud.  There is a strange screeching coming
 from somewhere above you.  There is a deep earthy smell around here.  The
-air feels cool.  
+air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -1490,7 +1490,7 @@ Strangely brown moss clings erratically to the trees around here.  Bright
 flowers are growing out of the trees.  The forest floor is covered in a deep
 mat of dead leaves.  Sounds of strange birds echo through the area.  The air
 is full of moisture and the smell of green things.  You feel a strange
-warmth in the air.  
+warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -1517,7 +1517,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Everywhere are huge plants with gigantic
 leaves.  A sheet of mud covers the forest floor.  There is a strange
 screeching coming from somewhere above you.  The air is heavy with the smell
-of flowers drifting on the air currents.  The air feels cool.  
+of flowers drifting on the air currents.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -1537,10 +1537,10 @@ S
 #30060
 Rainforest~
 A huge mat of moss hanging from massive tree branches block sight of the
-sky.  Around you stretch massive amounts of ferns and strange plants. 
+sky.  Around you stretch massive amounts of ferns and strange plants.
 Leaves rustle beneath you.  You hear many birds of all types calling out in
 the distance.  There is a deep earthy smell around here.  There is a
-stickiness in the air even with a cool breeze.  
+stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -1563,7 +1563,7 @@ All that is above you is a solid mass of green leaves.  Around you
 stretch massive amounts of ferns and strange plants.  The forest floor is
 quagmire of mud.  Off somewhere you hear something crowing.  The air is
 heavy with the smell of flowers drifting on the air currents.  The air feels
-cool.  
+cool.
 ~
 0 270352 3
 Rd     0
@@ -1587,10 +1587,10 @@ S
 #30062
 Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
-sky.  Around you are allot of small little plants poking out of the ground. 
+sky.  Around you are allot of small little plants poking out of the ground.
 While the ground is covered in a carpet of flowers.  Sounds of strange birds
 echo through the area.  There is some terrible smell coming from some of the
-plants.  There is the feeling as if something is watching.  
+plants.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -1615,10 +1615,10 @@ S
 Rainforest~
 A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Plants of all different types and shades of green are growing on
-everything around.  The floor of the forest is a mess of twigs and leaves. 
+everything around.  The floor of the forest is a mess of twigs and leaves.
 There is a strange screeching coming from somewhere above you.  There is
 some terrible smell coming from some of the plants.  You feel a strange
-warmth in the air.  
+warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -1644,8 +1644,8 @@ Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
 sky.  The undergrowth is dense and full of thorny plants.  The floor of the
 forest is a mess of twigs and leaves.  You hear a constant rustle of animals
-in the undergrowth.  The smell of living plants hangs heavy in the air. 
-There is the feeling as if something is watching.  
+in the undergrowth.  The smell of living plants hangs heavy in the air.
+There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -1672,7 +1672,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Everywhere are huge plants with gigantic leaves.  Leaves rustle
 beneath you.  Sounds of strange birds echo through the area.  The air is
 heavy with the smell of flowers drifting on the air currents.  You feel a
-strange warmth in the air.  
+strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -1697,10 +1697,10 @@ S
 Rainforest~
 Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Plants of all different types and shades of green are growing on
-everything around.  While the ground is covered in a carpet of flowers. 
+everything around.  While the ground is covered in a carpet of flowers.
 Sounds of strange birds echo through the area.  The air is full of moisture
 and the smell of green things.  There is a stickiness in the air even with a
-cool breeze.  
+cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -1727,7 +1727,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Bright flowers are growing out of the trees.  Leaves rustle beneath
 you.  You hear some kind of animal calling out in the distance.  There is
 some terrible smell coming from some of the plants.  There is the feeling as
-if something is watching.  
+if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -1782,7 +1782,7 @@ you there is an almost impassable maze of plant life.  The forest floor is
 covered in a deep mat of dead leaves.  You hear many birds of all types
 calling out in the distance.  The air is heavy with the smell of flowers
 drifting on the air currents.  There is the feeling as if something is
-watching.  
+watching.
 ~
 0 270352 3
 Rd     0
@@ -1809,7 +1809,7 @@ All that is above you is a solid mass of green leaves.  Plants of all
 different types and shades of green are growing on everything around.  While
 the ground is covered in a carpet of flowers.  There is a strange screeching
 coming from somewhere above you.  The air is heavy with the smell of flowers
-drifting on the air currents.  You feel a strange warmth in the air.  
+drifting on the air currents.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -1836,7 +1836,7 @@ All that is above you is a solid mass of green leaves.  Around you
 stretch massive amounts of ferns and strange plants.  A shallow pool of
 murky water covers the ground.  You hear some kind of animal calling out in
 the distance.  The smell of living plants hangs heavy in the air.  The air
-feels cool.  
+feels cool.
 ~
 0 270352 3
 Rd     0
@@ -1862,8 +1862,8 @@ Rainforest~
 A small break in the canopy is letting you view the sky.  Around you
 there is an almost impassable maze of plant life.  A shallow pool of murky
 water covers the ground.  You hear some kind of animal calling out in the
-distance.  There is some terrible smell coming from some of the plants. 
-There is a stickiness in the air even with a cool breeze.  
+distance.  There is some terrible smell coming from some of the plants.
+There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -1890,7 +1890,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Bright flowers are growing out of the trees.  The forest floor is
 quagmire of mud.  There is a strange howling noise coming from the distance.
 The air is full of moisture and the smell of green things.  There is the
-feeling as if something is watching.  
+feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -1917,7 +1917,7 @@ Strangely brown moss clings erratically to the trees around here.  The
 undergrowth is dense and full of thorny plants.  The forest floor is covered
 in a deep mat of dead leaves.  You hear a constant rustle of animals in the
 undergrowth.  There is a deep earthy smell around here.  There is a
-stickiness in the air even with a cool breeze.  
+stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -1944,7 +1944,7 @@ A small break in the canopy is letting you view the sky.  Around you
 there is an almost impassable maze of plant life.  A shallow pool of murky
 water covers the ground.  Off somewhere you hear something crowing.  The air
 is full of moisture and the smell of green things.  The moisture in the air
-makes you feel damp.  
+makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -1969,9 +1969,9 @@ S
 Rainforest~
 A small break in the canopy is letting you view the sky.  Around you
 there is an almost impassable maze of plant life.  The forest floor is
-quagmire of mud.  You hear a constant rustle of animals in the undergrowth. 
+quagmire of mud.  You hear a constant rustle of animals in the undergrowth.
 The smell of living plants hangs heavy in the air.  You feel a strange
-warmth in the air.  
+warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -1998,7 +1998,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Around you there is an almost impassable maze of plant life.  The
 floor of the forest is a mess of twigs and leaves.  You hear a constant
 rustle of animals in the undergrowth.  The smell of living plants hangs
-heavy in the air.  You feel a strange warmth in the air.  
+heavy in the air.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -2025,7 +2025,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  The undergrowth is dense and full of thorny
 plants.  The floor of the forest is a mess of twigs and leaves.  Sounds of
 strange birds echo through the area.  There is a deep earthy smell around
-here.  There is a stickiness in the air even with a cool breeze.  
+here.  There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -2048,11 +2048,11 @@ D3
 S
 #30079
 Rainforest~
-Strangely brown moss clings erratically to the trees around here. 
+Strangely brown moss clings erratically to the trees around here.
 Everywhere are huge plants with gigantic leaves.  While the ground is
 covered in a carpet of flowers.  There is a strange howling noise coming
 from the distance.  There is a deep earthy smell around here.  You feel a
-strange warmth in the air.  
+strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -2076,7 +2076,7 @@ looking up into a green cave.  Around you there is an almost impassable maze
 of plant life.  A sheet of mud covers the forest floor.  Sounds of strange
 birds echo through the area.  The air is heavy with the smell of flowers
 drifting on the air currents.  There is a stickiness in the air even with a
-cool breeze.  
+cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -2099,7 +2099,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  The undergrowth is dense and full of thorny plants.  The floor of the
 forest is a mess of twigs and leaves.  Sounds of strange birds echo through
 the area.  The smell of living plants hangs heavy in the air.  There is the
-feeling as if something is watching.  
+feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -2122,11 +2122,11 @@ D3
 S
 #30082
 Rainforest~
-Strangely brown moss clings erratically to the trees around here. 
+Strangely brown moss clings erratically to the trees around here.
 Everywhere are huge plants with gigantic leaves.  The floor of the forest is
-a mess of twigs and leaves.  Off somewhere you hear something crowing. 
+a mess of twigs and leaves.  Off somewhere you hear something crowing.
 There is some terrible smell coming from some of the plants.  You feel a
-strange warmth in the air.  
+strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -2152,7 +2152,7 @@ Rainforest~
 A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Bright flowers are growing out of the trees.  A sheet of mud covers
 the forest floor.  There is a strange howling noise coming from the
-distance.  There is a deep earthy smell around here.  The air feels cool.  
+distance.  There is a deep earthy smell around here.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -2179,7 +2179,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  The undergrowth is dense and full of thorny plants.  The forest floor
 is quagmire of mud.  There is a strange screeching coming from somewhere
 above you.  The air is heavy with the smell of flowers drifting on the air
-currents.  The moisture in the air makes you feel damp.  
+currents.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -2203,10 +2203,10 @@ S
 #30085
 Rainforest~
 A mat of green moss covers everything above giving it the impression of
-looking up into a green cave.  Bright flowers are growing out of the trees. 
+looking up into a green cave.  Bright flowers are growing out of the trees.
 The floor of the forest is a mess of twigs and leaves.  Off somewhere you
 hear something crowing.  There is a deep earthy smell around here.  You feel
-a strange warmth in the air.  
+a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -2232,7 +2232,7 @@ Rainforest~
 All that is above you is a solid mass of green leaves.  Everywhere are
 huge plants with gigantic leaves.  Leaves rustle beneath you.  You hear some
 kind of animal calling out in the distance.  The air is full of moisture and
-the smell of green things.  You feel a strange warmth in the air.  
+the smell of green things.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -2259,7 +2259,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Around you stretch massive amounts of ferns and strange plants.  The
 forest floor is covered in a deep mat of dead leaves.  There is a strange
 howling noise coming from the distance.  The air is full of moisture and the
-smell of green things.  The moisture in the air makes you feel damp.  
+smell of green things.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -2287,7 +2287,7 @@ sky.  Plants of all different types and shades of green are growing on
 everything around.  The ground is barren with only a dusty dirt covering it.
 You hear some kind of animal calling out in the distance.  There is some
 terrible smell coming from some of the plants.  There is a stickiness in the
-air even with a cool breeze.  
+air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -2314,7 +2314,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Plants of all different types and shades of green are growing on
 everything around.  Leaves rustle beneath you.  There is a strange
 screeching coming from somewhere above you.  There is a deep earthy smell
-around here.  There is the feeling as if something is watching.  
+around here.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -2341,7 +2341,7 @@ All that is above you is a solid mass of green leaves.  Around you
 stretch massive amounts of ferns and strange plants.  The ground is a hard
 packed dirt.  Sounds of strange birds echo through the area.  The smell of
 living plants hangs heavy in the air.  The moisture in the air makes you
-feel damp.  
+feel damp.
 ~
 0 270352 3
 Rd     0
@@ -2366,10 +2366,10 @@ S
 Rainforest~
 A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Around you there is an almost impassable maze
-of plant life.  The ground is barren with only a dusty dirt covering it. 
+of plant life.  The ground is barren with only a dusty dirt covering it.
 You hear a constant rustle of animals in the undergrowth.  The air is heavy
 with the smell of flowers drifting on the air currents.  The moisture in the
-air makes you feel damp.  
+air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -2395,8 +2395,8 @@ Rainforest~
 A huge mat of moss hanging from massive tree branches block sight of the
 sky.  The undergrowth is dense and full of thorny plants.  While the ground
 is covered in a carpet of flowers.  There is a strange howling noise coming
-from the distance.  The smell of living plants hangs heavy in the air. 
-There is a stickiness in the air even with a cool breeze.  
+from the distance.  The smell of living plants hangs heavy in the air.
+There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -2423,7 +2423,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  The undergrowth is dense and full of thorny plants.  A sheet of mud
 covers the forest floor.  There is a strange screeching coming from
 somewhere above you.  The air is heavy with the smell of flowers drifting on
-the air currents.  The moisture in the air makes you feel damp.  
+the air currents.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -2449,8 +2449,8 @@ Rainforest~
 Strangely brown moss clings erratically to the trees around here.  Bright
 flowers are growing out of the trees.  While the ground is covered in a
 carpet of flowers.  There is a strange howling noise coming from the
-distance.  There is some terrible smell coming from some of the plants. 
-There is a stickiness in the air even with a cool breeze.  
+distance.  There is some terrible smell coming from some of the plants.
+There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -2477,7 +2477,7 @@ A small break in the canopy is letting you view the sky.  Bright flowers
 are growing out of the trees.  The ground is a hard packed dirt.  You hear a
 constant rustle of animals in the undergrowth.  The air is heavy with the
 smell of flowers drifting on the air currents.  There is a stickiness in the
-air even with a cool breeze.  
+air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -2504,7 +2504,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Around you there is an almost impassable maze of plant life.  The
 forest floor is covered in a deep mat of dead leaves.  Off somewhere you
 hear something crowing.  There is a deep earthy smell around here.  There is
-the feeling as if something is watching.  
+the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -2531,7 +2531,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Bright flowers are growing out of the trees.  Leaves rustle beneath
 you.  You hear a constant rustle of animals in the undergrowth.  The smell
 of living plants hangs heavy in the air.  You feel a strange warmth in the
-air.  
+air.
 ~
 0 270352 3
 Rd     0
@@ -2555,10 +2555,10 @@ S
 #30098
 Rainforest~
 All that is above you is a solid mass of green leaves.  Everywhere are
-huge plants with gigantic leaves.  The forest floor is quagmire of mud. 
+huge plants with gigantic leaves.  The forest floor is quagmire of mud.
 Sounds of strange birds echo through the area.  The air is heavy with the
 smell of flowers drifting on the air currents.  You feel a strange warmth in
-the air.  
+the air.
 ~
 0 270352 3
 Rd     0
@@ -2582,10 +2582,10 @@ S
 #30099
 Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
-sky.  Around you are allot of small little plants poking out of the ground. 
+sky.  Around you are allot of small little plants poking out of the ground.
 A sheet of mud covers the forest floor.  Off somewhere you hear something
 crowing.  The air is full of moisture and the smell of green things.  There
-is a stickiness in the air even with a cool breeze.  
+is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -2606,9 +2606,9 @@ S
 Rainforest~
 Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Around you there is an almost impassable maze of plant life.  The
-ground is a hard packed dirt.  Off somewhere you hear something crowing. 
+ground is a hard packed dirt.  Off somewhere you hear something crowing.
 The air is full of moisture and the smell of green things.  You feel a
-strange warmth in the air.  
+strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -2631,7 +2631,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Everywhere are huge plants with gigantic leaves.  The ground is a hard
 packed dirt.  You hear some kind of animal calling out in the distance.  The
 air is full of moisture and the smell of green things.  You feel a strange
-warmth in the air.  
+warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -2658,7 +2658,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Bright flowers are growing out of the trees.  The forest floor is
 covered in a deep mat of dead leaves.  You hear a constant rustle of animals
 in the undergrowth.  There is some terrible smell coming from some of the
-plants.  The moisture in the air makes you feel damp.  
+plants.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -2684,8 +2684,8 @@ Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
 sky.  The undergrowth is dense and full of thorny plants.  A shallow pool of
 murky water covers the ground.  You hear some kind of animal calling out in
-the distance.  There is some terrible smell coming from some of the plants. 
-There is the feeling as if something is watching.  
+the distance.  There is some terrible smell coming from some of the plants.
+There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -2712,7 +2712,7 @@ Strangely brown moss clings erratically to the trees around here.  Around
 you there is an almost impassable maze of plant life.  The ground is barren
 with only a dusty dirt covering it.  Off somewhere you hear something
 crowing.  There is a deep earthy smell around here.  The moisture in the air
-makes you feel damp.  
+makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -2739,7 +2739,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  The undergrowth is dense and full of thorny plants.  The floor of the
 forest is a mess of twigs and leaves.  There is a strange screeching coming
 from somewhere above you.  The air is heavy with the smell of flowers
-drifting on the air currents.  The moisture in the air makes you feel damp. 
+drifting on the air currents.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -2767,7 +2767,7 @@ looking up into a green cave.  Plants of all different types and shades of
 green are growing on everything around.  The ground is barren with only a
 dusty dirt covering it.  You hear some kind of animal calling out in the
 distance.  The smell of living plants hangs heavy in the air.  There is the
-feeling as if something is watching.  
+feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -2793,8 +2793,8 @@ Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
 sky.  Everywhere are huge plants with gigantic leaves.  The forest floor is
 quagmire of mud.  There is a strange howling noise coming from the distance.
-The air is heavy with the smell of flowers drifting on the air currents. 
-You feel a strange warmth in the air.  
+The air is heavy with the smell of flowers drifting on the air currents.
+You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -2821,7 +2821,7 @@ A small break in the canopy is letting you view the sky.  The undergrowth
 is dense and full of thorny plants.  Leaves rustle beneath you.  Off
 somewhere you hear something crowing.  The air is heavy with the smell of
 flowers drifting on the air currents.  There is a stickiness in the air even
-with a cool breeze.  
+with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -2845,11 +2845,11 @@ S
 #30109
 Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
-sky.  Around you are allot of small little plants poking out of the ground. 
+sky.  Around you are allot of small little plants poking out of the ground.
 The floor of the forest is a mess of twigs and leaves.  Sounds of strange
 birds echo through the area.  The air is heavy with the smell of flowers
 drifting on the air currents.  There is a stickiness in the air even with a
-cool breeze.  
+cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -2876,7 +2876,7 @@ All that is above you is a solid mass of green leaves.  Plants of all
 different types and shades of green are growing on everything around.  While
 the ground is covered in a carpet of flowers.  Sounds of strange birds echo
 through the area.  The air is heavy with the smell of flowers drifting on
-the air currents.  The air feels cool.  
+the air currents.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -2904,7 +2904,7 @@ looking up into a green cave.  Everywhere are huge plants with gigantic
 leaves.  The floor of the forest is a mess of twigs and leaves.  You hear
 some kind of animal calling out in the distance.  There is some terrible
 smell coming from some of the plants.  There is a stickiness in the air even
-with a cool breeze.  
+with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -2931,7 +2931,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Around you there is an almost impassable maze of plant life.  The
 ground is barren with only a dusty dirt covering it.  Off somewhere you hear
 something crowing.  The air is heavy with the smell of flowers drifting on
-the air currents.  The air feels cool.  
+the air currents.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -2958,7 +2958,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Around you there is an almost impassable maze of plant life.  The
 ground is barren with only a dusty dirt covering it.  There is a strange
 howling noise coming from the distance.  There is some terrible smell coming
-from some of the plants.  The moisture in the air makes you feel damp.  
+from some of the plants.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -2985,7 +2985,7 @@ A small break in the canopy is letting you view the sky.  Plants of all
 different types and shades of green are growing on everything around.  While
 the ground is covered in a carpet of flowers.  Off somewhere you hear
 something crowing.  The air is heavy with the smell of flowers drifting on
-the air currents.  You feel a strange warmth in the air.  
+the air currents.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -3012,7 +3012,7 @@ All that is above you is a solid mass of green leaves.  Everywhere are
 huge plants with gigantic leaves.  The ground is barren with only a dusty
 dirt covering it.  Sounds of strange birds echo through the area.  The air
 is full of moisture and the smell of green things.  There is the feeling as
-if something is watching.  
+if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -3039,7 +3039,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Everywhere are huge plants with gigantic leaves.  The forest floor is
 quagmire of mud.  You hear many birds of all types calling out in the
 distance.  There is a deep earthy smell around here.  There is the feeling
-as if something is watching.  
+as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -3063,9 +3063,9 @@ S
 #30117
 Rainforest~
 Strangely brown moss clings erratically to the trees around here.  The
-undergrowth is dense and full of thorny plants.  Leaves rustle beneath you. 
+undergrowth is dense and full of thorny plants.  Leaves rustle beneath you.
 Sounds of strange birds echo through the area.  There is some terrible smell
-coming from some of the plants.  You feel a strange warmth in the air.  
+coming from some of the plants.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -3092,7 +3092,7 @@ All that is above you is a solid mass of green leaves.  Around you are
 allot of small little plants poking out of the ground.  The floor of the
 forest is a mess of twigs and leaves.  There is a strange howling noise
 coming from the distance.  The air is full of moisture and the smell of
-green things.  You feel a strange warmth in the air.  
+green things.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -3116,10 +3116,10 @@ S
 #30119
 Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
-sky.  Around you are allot of small little plants poking out of the ground. 
+sky.  Around you are allot of small little plants poking out of the ground.
 A sheet of mud covers the forest floor.  Off somewhere you hear something
 crowing.  The smell of living plants hangs heavy in the air.  The air feels
-cool.  
+cool.
 ~
 0 270352 3
 Rd     0
@@ -3140,10 +3140,10 @@ S
 Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
 sky.  Plants of all different types and shades of green are growing on
-everything around.  The floor of the forest is a mess of twigs and leaves. 
+everything around.  The floor of the forest is a mess of twigs and leaves.
 There is a strange howling noise coming from the distance.  The air is full
 of moisture and the smell of green things.  The moisture in the air makes
-you feel damp.  
+you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -3166,7 +3166,7 @@ A small break in the canopy is letting you view the sky.  The undergrowth
 is dense and full of thorny plants.  The forest floor is covered in a deep
 mat of dead leaves.  You hear some kind of animal calling out in the
 distance.  There is a deep earthy smell around here.  There is the feeling
-as if something is watching.  
+as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -3190,9 +3190,9 @@ S
 #30122
 Rainforest~
 Strangely brown moss clings erratically to the trees around here.  Bright
-flowers are growing out of the trees.  The ground is a hard packed dirt. 
+flowers are growing out of the trees.  The ground is a hard packed dirt.
 Sounds of strange birds echo through the area.  The smell of living plants
-hangs heavy in the air.  The air feels cool.  
+hangs heavy in the air.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -3220,7 +3220,7 @@ looking up into a green cave.  The undergrowth is dense and full of thorny
 plants.  The forest floor is covered in a deep mat of dead leaves.  You hear
 some kind of animal calling out in the distance.  There is some terrible
 smell coming from some of the plants.  The moisture in the air makes you
-feel damp.  
+feel damp.
 ~
 0 270352 3
 Rd     0
@@ -3247,7 +3247,7 @@ All that is above you is a solid mass of green leaves.  Around you are
 allot of small little plants poking out of the ground.  A shallow pool of
 murky water covers the ground.  You hear many birds of all types calling out
 in the distance.  The air is full of moisture and the smell of green things.
-There is the feeling as if something is watching.  
+There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -3274,7 +3274,7 @@ Strangely brown moss clings erratically to the trees around here.  Around
 you there is an almost impassable maze of plant life.  The ground is barren
 with only a dusty dirt covering it.  You hear many birds of all types
 calling out in the distance.  There is some terrible smell coming from some
-of the plants.  There is the feeling as if something is watching.  
+of the plants.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -3300,8 +3300,8 @@ Rainforest~
 A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  The undergrowth is dense and full of thorny
 plants.  A sheet of mud covers the forest floor.  You hear a constant rustle
-of animals in the undergrowth.  There is a deep earthy smell around here. 
-There is the feeling as if something is watching.  
+of animals in the undergrowth.  There is a deep earthy smell around here.
+There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -3328,7 +3328,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Around you there is an almost impassable maze
 of plant life.  The ground is a hard packed dirt.  You hear many birds of
 all types calling out in the distance.  The smell of living plants hangs
-heavy in the air.  You feel a strange warmth in the air.  
+heavy in the air.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -3355,7 +3355,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Around you stretch massive amounts of ferns and strange plants.  The
 floor of the forest is a mess of twigs and leaves.  There is a strange
 screeching coming from somewhere above you.  The smell of living plants
-hangs heavy in the air.  There is the feeling as if something is watching.  
+hangs heavy in the air.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -3380,9 +3380,9 @@ S
 Rainforest~
 A small break in the canopy is letting you view the sky.  Everywhere are
 huge plants with gigantic leaves.  While the ground is covered in a carpet
-of flowers.  There is a strange screeching coming from somewhere above you. 
+of flowers.  There is a strange screeching coming from somewhere above you.
 The air is full of moisture and the smell of green things.  The air feels
-cool.  
+cool.
 ~
 0 270352 3
 Rd     0
@@ -3409,7 +3409,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Bright flowers are growing out of the trees.  The ground is a hard
 packed dirt.  You hear a constant rustle of animals in the undergrowth.  The
 air is heavy with the smell of flowers drifting on the air currents.  The
-air feels cool.  
+air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -3436,7 +3436,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Plants of all different types and shades of green are growing on
 everything around.  The ground is a hard packed dirt.  There is a strange
 screeching coming from somewhere above you.  There is a deep earthy smell
-around here.  The air feels cool.  
+around here.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -3463,7 +3463,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Bright flowers are growing out of the trees.  While the ground is
 covered in a carpet of flowers.  You hear some kind of animal calling out in
 the distance.  The air is heavy with the smell of flowers drifting on the
-air currents.  The moisture in the air makes you feel damp.  
+air currents.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -3490,7 +3490,7 @@ A small break in the canopy is letting you view the sky.  Plants of all
 different types and shades of green are growing on everything around.  A
 shallow pool of murky water covers the ground.  There is a strange howling
 noise coming from the distance.  The smell of living plants hangs heavy in
-the air.  The air feels cool.  
+the air.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -3517,7 +3517,7 @@ A small break in the canopy is letting you view the sky.  Around you are
 allot of small little plants poking out of the ground.  Leaves rustle
 beneath you.  You hear some kind of animal calling out in the distance.  The
 smell of living plants hangs heavy in the air.  There is a stickiness in the
-air even with a cool breeze.  
+air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -3544,7 +3544,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Bright flowers are growing out of the trees.  A shallow pool of murky
 water covers the ground.  There is a strange howling noise coming from the
 distance.  There is a deep earthy smell around here.  There is a stickiness
-in the air even with a cool breeze.  
+in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -3571,7 +3571,7 @@ All that is above you is a solid mass of green leaves.  The undergrowth
 is dense and full of thorny plants.  The floor of the forest is a mess of
 twigs and leaves.  You hear a constant rustle of animals in the undergrowth.
 There is a deep earthy smell around here.  You feel a strange warmth in the
-air.  
+air.
 ~
 0 270352 3
 Rd     0
@@ -3595,7 +3595,7 @@ S
 #30137
 Rainforest~
 All that is above you is a solid mass of green leaves.  The undergrowth
-is dense and full of thorny plants.  The forest floor is quagmire of mud. 
+is dense and full of thorny plants.  The forest floor is quagmire of mud.
 You hear some kind of animal calling out in the distance.  The smell of
 living plants hangs heavy in the air.  You feel a strange warmth in the air.
 ~
@@ -3624,7 +3624,7 @@ Strangely brown moss clings erratically to the trees around here.  Bright
 flowers are growing out of the trees.  While the ground is covered in a
 carpet of flowers.  You hear many birds of all types calling out in the
 distance.  The air is full of moisture and the smell of green things.  There
-is a stickiness in the air even with a cool breeze.  
+is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -3651,7 +3651,7 @@ Strangely brown moss clings erratically to the trees around here.  Plants
 of all different types and shades of green are growing on everything around.
 A shallow pool of murky water covers the ground.  You hear some kind of
 animal calling out in the distance.  The smell of living plants hangs heavy
-in the air.  There is a stickiness in the air even with a cool breeze.  
+in the air.  There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -3672,9 +3672,9 @@ S
 Rainforest~
 Strangely brown moss clings erratically to the trees around here.  The
 undergrowth is dense and full of thorny plants.  A shallow pool of murky
-water covers the ground.  Sounds of strange birds echo through the area. 
-The air is heavy with the smell of flowers drifting on the air currents. 
-The air feels cool.  
+water covers the ground.  Sounds of strange birds echo through the area.
+The air is heavy with the smell of flowers drifting on the air currents.
+The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -3695,9 +3695,9 @@ S
 Rainforest~
 Strangely brown moss clings erratically to the trees around here.  Around
 you there is an almost impassable maze of plant life.  The forest floor is
-quagmire of mud.  You hear some kind of animal calling out in the distance. 
+quagmire of mud.  You hear some kind of animal calling out in the distance.
 There is some terrible smell coming from some of the plants.  The moisture
-in the air makes you feel damp.  
+in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -3724,7 +3724,7 @@ All that is above you is a solid mass of green leaves.  The undergrowth
 is dense and full of thorny plants.  Leaves rustle beneath you.  There is a
 strange screeching coming from somewhere above you.  The air is full of
 moisture and the smell of green things.  You feel a strange warmth in the
-air.  
+air.
 ~
 0 270352 3
 Rd     0
@@ -3751,7 +3751,7 @@ Strangely brown moss clings erratically to the trees around here.  Around
 you there is an almost impassable maze of plant life.  The ground is barren
 with only a dusty dirt covering it.  There is a strange screeching coming
 from somewhere above you.  The air is heavy with the smell of flowers
-drifting on the air currents.  The moisture in the air makes you feel damp. 
+drifting on the air currents.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -3777,7 +3777,7 @@ Rainforest~
 A small break in the canopy is letting you view the sky.  The undergrowth
 is dense and full of thorny plants.  Leaves rustle beneath you.  You hear
 some kind of animal calling out in the distance.  There is a deep earthy
-smell around here.  There is the feeling as if something is watching.  
+smell around here.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -3800,11 +3800,11 @@ D3
 S
 #30145
 Rainforest~
-Strangely brown moss clings erratically to the trees around here. 
+Strangely brown moss clings erratically to the trees around here.
 Everywhere are huge plants with gigantic leaves.  The forest floor is
 covered in a deep mat of dead leaves.  You hear a constant rustle of animals
 in the undergrowth.  There is a deep earthy smell around here.  You feel a
-strange warmth in the air.  
+strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -3829,9 +3829,9 @@ S
 Rainforest~
 A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Plants of all different types and shades of green are growing on
-everything around.  The floor of the forest is a mess of twigs and leaves. 
+everything around.  The floor of the forest is a mess of twigs and leaves.
 Off somewhere you hear something crowing.  There is a deep earthy smell
-around here.  There is the feeling as if something is watching.  
+around here.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -3856,9 +3856,9 @@ S
 Rainforest~
 Strangely brown moss clings erratically to the trees around here.  Around
 you there is an almost impassable maze of plant life.  While the ground is
-covered in a carpet of flowers.  Off somewhere you hear something crowing. 
+covered in a carpet of flowers.  Off somewhere you hear something crowing.
 The smell of living plants hangs heavy in the air.  The moisture in the air
-makes you feel damp.  
+makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -3883,9 +3883,9 @@ S
 Rainforest~
 A small break in the canopy is letting you view the sky.  Bright flowers
 are growing out of the trees.  The forest floor is covered in a deep mat of
-dead leaves.  You hear many birds of all types calling out in the distance. 
-The air is heavy with the smell of flowers drifting on the air currents. 
-There is a stickiness in the air even with a cool breeze.  
+dead leaves.  You hear many birds of all types calling out in the distance.
+The air is heavy with the smell of flowers drifting on the air currents.
+There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -3912,7 +3912,7 @@ All that is above you is a solid mass of green leaves.  Around you are
 allot of small little plants poking out of the ground.  While the ground is
 covered in a carpet of flowers.  You hear a constant rustle of animals in
 the undergrowth.  There is a deep earthy smell around here.  The air feels
-cool.  
+cool.
 ~
 0 270352 3
 Rd     0
@@ -3939,7 +3939,7 @@ A small break in the canopy is letting you view the sky.  The undergrowth
 is dense and full of thorny plants.  The ground is barren with only a dusty
 dirt covering it.  There is a strange screeching coming from somewhere above
 you.  There is some terrible smell coming from some of the plants.  The
-moisture in the air makes you feel damp.  
+moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -3966,7 +3966,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Everywhere are huge plants with gigantic
 leaves.  The floor of the forest is a mess of twigs and leaves.  Sounds of
 strange birds echo through the area.  The air is full of moisture and the
-smell of green things.  The air feels cool.  
+smell of green things.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -3990,10 +3990,10 @@ S
 #30152
 Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
-sky.  Around you are allot of small little plants poking out of the ground. 
+sky.  Around you are allot of small little plants poking out of the ground.
 A sheet of mud covers the forest floor.  Sounds of strange birds echo
 through the area.  There is some terrible smell coming from some of the
-plants.  There is the feeling as if something is watching.  
+plants.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -4020,7 +4020,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Around you there is an almost impassable maze of plant life.  A
 shallow pool of murky water covers the ground.  You hear many birds of all
 types calling out in the distance.  There is a deep earthy smell around
-here.  You feel a strange warmth in the air.  
+here.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -4047,7 +4047,7 @@ Strangely brown moss clings erratically to the trees around here.  Bright
 flowers are growing out of the trees.  A sheet of mud covers the forest
 floor.  There is a strange howling noise coming from the distance.  There is
 some terrible smell coming from some of the plants.  There is the feeling as
-if something is watching.  
+if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -4074,7 +4074,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Everywhere are huge plants with gigantic leaves.  The ground is barren
 with only a dusty dirt covering it.  Off somewhere you hear something
 crowing.  The smell of living plants hangs heavy in the air.  The moisture
-in the air makes you feel damp.  
+in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -4101,7 +4101,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  The undergrowth is dense and full of thorny
 plants.  A sheet of mud covers the forest floor.  There is a strange
 screeching coming from somewhere above you.  There is a deep earthy smell
-around here.  There is the feeling as if something is watching.  
+around here.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -4128,7 +4128,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Bright flowers are growing out of the trees.  The floor of the forest
 is a mess of twigs and leaves.  You hear some kind of animal calling out in
 the distance.  There is a deep earthy smell around here.  The air feels
-cool.  
+cool.
 ~
 0 270352 3
 Rd     0
@@ -4155,7 +4155,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Everywhere are huge plants with gigantic
 leaves.  The ground is a hard packed dirt.  You hear a constant rustle of
 animals in the undergrowth.  There is some terrible smell coming from some
-of the plants.  The air feels cool.  
+of the plants.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -4181,7 +4181,7 @@ Rainforest~
 All that is above you is a solid mass of green leaves.  Around you are
 allot of small little plants poking out of the ground.  The forest floor is
 covered in a deep mat of dead leaves.  Sounds of strange birds echo through
-the area.  There is a deep earthy smell around here.  The air feels cool.  
+the area.  There is a deep earthy smell around here.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -4203,8 +4203,8 @@ Rainforest~
 A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Everywhere are huge plants with gigantic
 leaves.  A sheet of mud covers the forest floor.  You hear a constant rustle
-of animals in the undergrowth.  There is a deep earthy smell around here. 
-There is a stickiness in the air even with a cool breeze.  
+of animals in the undergrowth.  There is a deep earthy smell around here.
+There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -4227,7 +4227,7 @@ A small break in the canopy is letting you view the sky.  Bright flowers
 are growing out of the trees.  Leaves rustle beneath you.  There is a
 strange screeching coming from somewhere above you.  The air is full of
 moisture and the smell of green things.  You feel a strange warmth in the
-air.  
+air.
 ~
 0 270352 3
 Rd     0
@@ -4253,8 +4253,8 @@ Rainforest~
 Strangely brown moss clings erratically to the trees around here.  Around
 you stretch massive amounts of ferns and strange plants.  The floor of the
 forest is a mess of twigs and leaves.  You hear a constant rustle of animals
-in the undergrowth.  The smell of living plants hangs heavy in the air. 
-There is a stickiness in the air even with a cool breeze.  
+in the undergrowth.  The smell of living plants hangs heavy in the air.
+There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -4279,9 +4279,9 @@ S
 Rainforest~
 A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Bright flowers are growing out of the trees.  The ground is a hard
-packed dirt.  You hear many birds of all types calling out in the distance. 
+packed dirt.  You hear many birds of all types calling out in the distance.
 There is some terrible smell coming from some of the plants.  You feel a
-strange warmth in the air.  
+strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -4308,7 +4308,7 @@ A small break in the canopy is letting you view the sky.  Around you
 stretch massive amounts of ferns and strange plants.  A sheet of mud covers
 the forest floor.  There is a strange howling noise coming from the
 distance.  The air is full of moisture and the smell of green things.  You
-feel a strange warmth in the air.  
+feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -4332,9 +4332,9 @@ S
 #30165
 Rainforest~
 Strangely brown moss clings erratically to the trees around here.  The
-undergrowth is dense and full of thorny plants.  Leaves rustle beneath you. 
+undergrowth is dense and full of thorny plants.  Leaves rustle beneath you.
 Sounds of strange birds echo through the area.  The smell of living plants
-hangs heavy in the air.  There is the feeling as if something is watching.  
+hangs heavy in the air.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -4361,7 +4361,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Bright flowers are growing out of the trees.  The floor of the forest
 is a mess of twigs and leaves.  Sounds of strange birds echo through the
 area.  There is some terrible smell coming from some of the plants.  There
-is the feeling as if something is watching.  
+is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -4387,7 +4387,7 @@ Rainforest~
 A small break in the canopy is letting you view the sky.  Everywhere are
 huge plants with gigantic leaves.  Leaves rustle beneath you.  Sounds of
 strange birds echo through the area.  There is some terrible smell coming
-from some of the plants.  You feel a strange warmth in the air.  
+from some of the plants.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -4414,7 +4414,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Around you stretch massive amounts of ferns and strange plants.  A
 sheet of mud covers the forest floor.  There is a strange howling noise
 coming from the distance.  There is some terrible smell coming from some of
-the plants.  You feel a strange warmth in the air.  
+the plants.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -4441,7 +4441,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Around you there is an almost impassable maze
 of plant life.  A sheet of mud covers the forest floor.  You hear a constant
 rustle of animals in the undergrowth.  There is some terrible smell coming
-from some of the plants.  The air feels cool.  
+from some of the plants.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -4468,7 +4468,7 @@ All that is above you is a solid mass of green leaves.  Around you
 stretch massive amounts of ferns and strange plants.  The floor of the
 forest is a mess of twigs and leaves.  Off somewhere you hear something
 crowing.  There is a deep earthy smell around here.  There is the feeling as
-if something is watching.  
+if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -4495,7 +4495,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Around you there is an almost impassable maze
 of plant life.  Leaves rustle beneath you.  Sounds of strange birds echo
 through the area.  The air is full of moisture and the smell of green
-things.  The moisture in the air makes you feel damp.  
+things.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -4522,7 +4522,7 @@ A small break in the canopy is letting you view the sky.  Around you
 there is an almost impassable maze of plant life.  The forest floor is
 covered in a deep mat of dead leaves.  Sounds of strange birds echo through
 the area.  The smell of living plants hangs heavy in the air.  The air feels
-cool.  
+cool.
 ~
 0 270352 3
 Rd     0
@@ -4549,7 +4549,7 @@ Strangely brown moss clings erratically to the trees around here.  Around
 you stretch massive amounts of ferns and strange plants.  A sheet of mud
 covers the forest floor.  Off somewhere you hear something crowing.  The air
 is heavy with the smell of flowers drifting on the air currents.  There is
-the feeling as if something is watching.  
+the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -4573,10 +4573,10 @@ S
 #30174
 Rainforest~
 Huge branches interlock overhead, blocking all but brief glimpses of the
-sky.  Around you stretch massive amounts of ferns and strange plants. 
+sky.  Around you stretch massive amounts of ferns and strange plants.
 Leaves rustle beneath you.  There is a strange howling noise coming from the
 distance.  The air is heavy with the smell of flowers drifting on the air
-currents.  The air feels cool.  
+currents.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -4603,7 +4603,7 @@ All that is above you is a solid mass of green leaves.  Everywhere are
 huge plants with gigantic leaves.  The ground is barren with only a dusty
 dirt covering it.  Off somewhere you hear something crowing.  The air is
 full of moisture and the smell of green things.  There is a stickiness in
-the air even with a cool breeze.  
+the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -4630,7 +4630,7 @@ Strangely brown moss clings erratically to the trees around here.  Around
 you are allot of small little plants poking out of the ground.  While the
 ground is covered in a carpet of flowers.  Sounds of strange birds echo
 through the area.  The air is full of moisture and the smell of green
-things.  The air feels cool.  
+things.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -4657,7 +4657,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Everywhere are huge plants with gigantic leaves.  The forest floor is
 quagmire of mud.  You hear many birds of all types calling out in the
 distance.  The smell of living plants hangs heavy in the air.  You feel a
-strange warmth in the air.  
+strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -4685,7 +4685,7 @@ sky.  Around you stretch massive amounts of ferns and strange plants.  The
 ground is barren with only a dusty dirt covering it.  There is a strange
 screeching coming from somewhere above you.  There is some terrible smell
 coming from some of the plants.  The moisture in the air makes you feel
-damp.  
+damp.
 ~
 0 270352 3
 Rd     0
@@ -4709,10 +4709,10 @@ S
 #30179
 Rainforest~
 All that is above you is a solid mass of green leaves.  The undergrowth
-is dense and full of thorny plants.  The forest floor is quagmire of mud. 
+is dense and full of thorny plants.  The forest floor is quagmire of mud.
 You hear many birds of all types calling out in the distance.  The smell of
 living plants hangs heavy in the air.  There is a stickiness in the air even
-with a cool breeze.  
+with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -4736,7 +4736,7 @@ looking up into a green cave.  Around you stretch massive amounts of ferns
 and strange plants.  A shallow pool of murky water covers the ground.  You
 hear many birds of all types calling out in the distance.  There is some
 terrible smell coming from some of the plants.  There is the feeling as if
-something is watching.  
+something is watching.
 ~
 0 270352 3
 Rd     0
@@ -4759,7 +4759,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Everywhere are huge plants with gigantic leaves.  A sheet of mud
 covers the forest floor.  There is a strange howling noise coming from the
 distance.  The air is full of moisture and the smell of green things.  You
-feel a strange warmth in the air.  
+feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -4786,7 +4786,7 @@ Strangely brown moss clings erratically to the trees around here.  Bright
 flowers are growing out of the trees.  While the ground is covered in a
 carpet of flowers.  Off somewhere you hear something crowing.  The air is
 heavy with the smell of flowers drifting on the air currents.  The moisture
-in the air makes you feel damp.  
+in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -4813,7 +4813,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Everywhere are huge plants with gigantic leaves.  The forest floor is
 quagmire of mud.  Sounds of strange birds echo through the area.  The air is
 full of moisture and the smell of green things.  There is a stickiness in
-the air even with a cool breeze.  
+the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -4836,11 +4836,11 @@ D3
 S
 #30184
 Rainforest~
-Strangely brown moss clings erratically to the trees around here. 
+Strangely brown moss clings erratically to the trees around here.
 Everywhere are huge plants with gigantic leaves.  The forest floor is
 quagmire of mud.  Sounds of strange birds echo through the area.  The air is
 heavy with the smell of flowers drifting on the air currents.  There is the
-feeling as if something is watching.  
+feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -4866,7 +4866,7 @@ Rainforest~
 A huge mat of moss hanging from massive tree branches block sight of the
 sky.  The undergrowth is dense and full of thorny plants.  The ground is a
 hard packed dirt.  There is a strange howling noise coming from the
-distance.  There is a deep earthy smell around here.  The air feels cool.  
+distance.  There is a deep earthy smell around here.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -4894,7 +4894,7 @@ sky.  Plants of all different types and shades of green are growing on
 everything around.  The ground is barren with only a dusty dirt covering it.
 You hear many birds of all types calling out in the distance.  The smell of
 living plants hangs heavy in the air.  There is the feeling as if something
-is watching.  
+is watching.
 ~
 0 270352 3
 Rd     0
@@ -4921,7 +4921,7 @@ A small break in the canopy is letting you view the sky.  Around you are
 allot of small little plants poking out of the ground.  The ground is barren
 with only a dusty dirt covering it.  There is a strange screeching coming
 from somewhere above you.  The air is full of moisture and the smell of
-green things.  The air feels cool.  
+green things.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -4949,7 +4949,7 @@ different types and shades of green are growing on everything around.  A
 sheet of mud covers the forest floor.  There is a strange screeching coming
 from somewhere above you.  The air is heavy with the smell of flowers
 drifting on the air currents.  There is a stickiness in the air even with a
-cool breeze.  
+cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -4973,10 +4973,10 @@ S
 #30189
 Rainforest~
 A mat of green moss covers everything above giving it the impression of
-looking up into a green cave.  Bright flowers are growing out of the trees. 
+looking up into a green cave.  Bright flowers are growing out of the trees.
 The forest floor is covered in a deep mat of dead leaves.  Sounds of strange
 birds echo through the area.  The air is full of moisture and the smell of
-green things.  The air feels cool.  
+green things.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -5001,9 +5001,9 @@ S
 Rainforest~
 A small break in the canopy is letting you view the sky.  Plants of all
 different types and shades of green are growing on everything around.  The
-forest floor is quagmire of mud.  Off somewhere you hear something crowing. 
+forest floor is quagmire of mud.  Off somewhere you hear something crowing.
 There is some terrible smell coming from some of the plants.  There is a
-stickiness in the air even with a cool breeze.  
+stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -5030,7 +5030,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  The undergrowth is dense and full of thorny plants.  Leaves rustle
 beneath you.  Off somewhere you hear something crowing.  The smell of living
 plants hangs heavy in the air.  There is the feeling as if something is
-watching.  
+watching.
 ~
 0 270352 3
 Rd     0
@@ -5057,7 +5057,7 @@ A small break in the canopy is letting you view the sky.  Around you
 stretch massive amounts of ferns and strange plants.  While the ground is
 covered in a carpet of flowers.  You hear a constant rustle of animals in
 the undergrowth.  The air is heavy with the smell of flowers drifting on the
-air currents.  You feel a strange warmth in the air.  
+air currents.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -5084,7 +5084,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Plants of all different types and shades of
 green are growing on everything around.  A sheet of mud covers the forest
 floor.  You hear some kind of animal calling out in the distance.  There is
-some terrible smell coming from some of the plants.  The air feels cool.  
+some terrible smell coming from some of the plants.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -5110,8 +5110,8 @@ Rainforest~
 A small break in the canopy is letting you view the sky.  Around you
 stretch massive amounts of ferns and strange plants.  The ground is barren
 with only a dusty dirt covering it.  You hear some kind of animal calling
-out in the distance.  The smell of living plants hangs heavy in the air. 
-There is the feeling as if something is watching.  
+out in the distance.  The smell of living plants hangs heavy in the air.
+There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -5137,7 +5137,7 @@ Rainforest~
 All that is above you is a solid mass of green leaves.  Bright flowers
 are growing out of the trees.  The floor of the forest is a mess of twigs
 and leaves.  Sounds of strange birds echo through the area.  There is a deep
-earthy smell around here.  The air feels cool.  
+earthy smell around here.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -5164,7 +5164,7 @@ All that is above you is a solid mass of green leaves.  Plants of all
 different types and shades of green are growing on everything around.  The
 forest floor is covered in a deep mat of dead leaves.  There is a strange
 howling noise coming from the distance.  The air is heavy with the smell of
-flowers drifting on the air currents.  The air feels cool.  
+flowers drifting on the air currents.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -5191,7 +5191,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Bright flowers are growing out of the trees.  While the ground is
 covered in a carpet of flowers.  Sounds of strange birds echo through the
 area.  The air is full of moisture and the smell of green things.  The air
-feels cool.  
+feels cool.
 ~
 0 270352 3
 Rd     0
@@ -5218,7 +5218,7 @@ All that is above you is a solid mass of green leaves.  Plants of all
 different types and shades of green are growing on everything around.  The
 forest floor is quagmire of mud.  You hear some kind of animal calling out
 in the distance.  There is some terrible smell coming from some of the
-plants.  The air feels cool.  
+plants.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -5244,7 +5244,7 @@ Rainforest~
 All that is above you is a solid mass of green leaves.  Everywhere are
 huge plants with gigantic leaves.  A shallow pool of murky water covers the
 ground.  You hear a constant rustle of animals in the undergrowth.  There is
-some terrible smell coming from some of the plants.  The air feels cool.  
+some terrible smell coming from some of the plants.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -5289,7 +5289,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Around you there is an almost impassable maze of plant life.  The
 ground is a hard packed dirt.  You hear some kind of animal calling out in
 the distance.  There is a deep earthy smell around here.  The air feels
-cool.  
+cool.
 ~
 0 270352 3
 Rd     0
@@ -5313,11 +5313,11 @@ S
 #30202
 Rainforest~
 A mat of green moss covers everything above giving it the impression of
-looking up into a green cave.  Bright flowers are growing out of the trees. 
+looking up into a green cave.  Bright flowers are growing out of the trees.
 The forest floor is covered in a deep mat of dead leaves.  There is a
 strange howling noise coming from the distance.  There is some terrible
 smell coming from some of the plants.  The moisture in the air makes you
-feel damp.  
+feel damp.
 ~
 0 270352 3
 Rd     0
@@ -5344,7 +5344,7 @@ A small break in the canopy is letting you view the sky.  Around you
 stretch massive amounts of ferns and strange plants.  A shallow pool of
 murky water covers the ground.  There is a strange screeching coming from
 somewhere above you.  There is some terrible smell coming from some of the
-plants.  You feel a strange warmth in the air.  
+plants.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -5367,11 +5367,11 @@ D3
 S
 #30204
 Rainforest~
-Strangely brown moss clings erratically to the trees around here. 
+Strangely brown moss clings erratically to the trees around here.
 Everywhere are huge plants with gigantic leaves.  The floor of the forest is
 a mess of twigs and leaves.  You hear some kind of animal calling out in the
 distance.  There is a deep earthy smell around here.  There is a stickiness
-in the air even with a cool breeze.  
+in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -5398,7 +5398,7 @@ All that is above you is a solid mass of green leaves.  The undergrowth
 is dense and full of thorny plants.  The ground is barren with only a dusty
 dirt covering it.  There is a strange screeching coming from somewhere above
 you.  The smell of living plants hangs heavy in the air.  The air feels
-cool.  
+cool.
 ~
 0 270352 3
 Rd     0
@@ -5424,8 +5424,8 @@ Rainforest~
 A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Bright flowers are growing out of the trees.  The forest floor is
 covered in a deep mat of dead leaves.  You hear some kind of animal calling
-out in the distance.  The smell of living plants hangs heavy in the air. 
-The moisture in the air makes you feel damp.  
+out in the distance.  The smell of living plants hangs heavy in the air.
+The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -5449,10 +5449,10 @@ S
 #30207
 Rainforest~
 A small break in the canopy is letting you view the sky.  Everywhere are
-huge plants with gigantic leaves.  A sheet of mud covers the forest floor. 
+huge plants with gigantic leaves.  A sheet of mud covers the forest floor.
 You hear a constant rustle of animals in the undergrowth.  There is a deep
 earthy smell around here.  There is a stickiness in the air even with a cool
-breeze.  
+breeze.
 ~
 0 270352 3
 Rd     0
@@ -5479,7 +5479,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Everywhere are huge plants with gigantic leaves.  The ground is barren
 with only a dusty dirt covering it.  You hear some kind of animal calling
 out in the distance.  The air is full of moisture and the smell of green
-things.  The air feels cool.  
+things.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -5504,9 +5504,9 @@ S
 Rainforest~
 A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Bright flowers are growing out of the trees.  The ground is a hard
-packed dirt.  There is a strange howling noise coming from the distance. 
+packed dirt.  There is a strange howling noise coming from the distance.
 The air is full of moisture and the smell of green things.  The moisture in
-the air makes you feel damp.  
+the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -5530,9 +5530,9 @@ S
 #30210
 Rainforest~
 A small break in the canopy is letting you view the sky.  Bright flowers
-are growing out of the trees.  A sheet of mud covers the forest floor. 
+are growing out of the trees.  A sheet of mud covers the forest floor.
 There is a strange howling noise coming from the distance.  The smell of
-living plants hangs heavy in the air.  The air feels cool.  
+living plants hangs heavy in the air.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -5559,7 +5559,7 @@ A small break in the canopy is letting you view the sky.  Bright flowers
 are growing out of the trees.  A sheet of mud covers the forest floor.  You
 hear a constant rustle of animals in the undergrowth.  There is some
 terrible smell coming from some of the plants.  There is a stickiness in the
-air even with a cool breeze.  
+air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -5583,10 +5583,10 @@ S
 #30212
 Rainforest~
 A mat of green moss covers everything above giving it the impression of
-looking up into a green cave.  Bright flowers are growing out of the trees. 
+looking up into a green cave.  Bright flowers are growing out of the trees.
 Leaves rustle beneath you.  You hear many birds of all types calling out in
 the distance.  The air is heavy with the smell of flowers drifting on the
-air currents.  The air feels cool.  
+air currents.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -5613,7 +5613,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  The undergrowth is dense and full of thorny plants.  The forest floor
 is quagmire of mud.  There is a strange howling noise coming from the
 distance.  The smell of living plants hangs heavy in the air.  There is the
-feeling as if something is watching.  
+feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -5640,7 +5640,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  The undergrowth is dense and full of thorny plants.  The ground is a
 hard packed dirt.  You hear some kind of animal calling out in the distance.
 There is some terrible smell coming from some of the plants.  There is a
-stickiness in the air even with a cool breeze.  
+stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -5664,10 +5664,10 @@ S
 #30215
 Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
-sky.  Around you are allot of small little plants poking out of the ground. 
+sky.  Around you are allot of small little plants poking out of the ground.
 The forest floor is quagmire of mud.  Off somewhere you hear something
 crowing.  The smell of living plants hangs heavy in the air.  You feel a
-strange warmth in the air.  
+strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -5691,7 +5691,7 @@ S
 #30216
 Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
-sky.  Around you are allot of small little plants poking out of the ground. 
+sky.  Around you are allot of small little plants poking out of the ground.
 The floor of the forest is a mess of twigs and leaves.  You hear some kind
 of animal calling out in the distance.  The smell of living plants hangs
 heavy in the air.  There is a stickiness in the air even with a cool breeze.
@@ -5721,7 +5721,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Everywhere are huge plants with gigantic leaves.  While the ground is
 covered in a carpet of flowers.  Sounds of strange birds echo through the
 area.  The air is full of moisture and the smell of green things.  You feel
-a strange warmth in the air.  
+a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -5749,7 +5749,7 @@ looking up into a green cave.  Around you there is an almost impassable maze
 of plant life.  While the ground is covered in a carpet of flowers.  Sounds
 of strange birds echo through the area.  The air is heavy with the smell of
 flowers drifting on the air currents.  There is a stickiness in the air even
-with a cool breeze.  
+with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -5776,7 +5776,7 @@ All that is above you is a solid mass of green leaves.  Around you
 stretch massive amounts of ferns and strange plants.  A sheet of mud covers
 the forest floor.  There is a strange screeching coming from somewhere above
 you.  There is a deep earthy smell around here.  The moisture in the air
-makes you feel damp.  
+makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -5798,7 +5798,7 @@ Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
 sky.  Bright flowers are growing out of the trees.  Leaves rustle beneath
 you.  Sounds of strange birds echo through the area.  There is a deep earthy
-smell around here.  The air feels cool.  
+smell around here.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -5819,9 +5819,9 @@ S
 Rainforest~
 A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Around you there is an almost impassable maze
-of plant life.  The forest floor is covered in a deep mat of dead leaves. 
+of plant life.  The forest floor is covered in a deep mat of dead leaves.
 Off somewhere you hear something crowing.  There is a deep earthy smell
-around here.  The air feels cool.  
+around here.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -5846,9 +5846,9 @@ S
 Rainforest~
 All that is above you is a solid mass of green leaves.  The undergrowth
 is dense and full of thorny plants.  A shallow pool of murky water covers
-the ground.  There is a strange screeching coming from somewhere above you. 
+the ground.  There is a strange screeching coming from somewhere above you.
 The smell of living plants hangs heavy in the air.  You feel a strange
-warmth in the air.  
+warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -5875,7 +5875,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Around you stretch massive amounts of ferns and strange plants.  A
 shallow pool of murky water covers the ground.  Sounds of strange birds echo
 through the area.  There is some terrible smell coming from some of the
-plants.  The moisture in the air makes you feel damp.  
+plants.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -5903,7 +5903,7 @@ looking up into a green cave.  Around you stretch massive amounts of ferns
 and strange plants.  A sheet of mud covers the forest floor.  You hear a
 constant rustle of animals in the undergrowth.  There is some terrible smell
 coming from some of the plants.  The moisture in the air makes you feel
-damp.  
+damp.
 ~
 0 270352 3
 Rd     0
@@ -5926,11 +5926,11 @@ D3
 S
 #30225
 Rainforest~
-Strangely brown moss clings erratically to the trees around here. 
+Strangely brown moss clings erratically to the trees around here.
 Everywhere are huge plants with gigantic leaves.  The ground is a hard
-packed dirt.  There is a strange howling noise coming from the distance. 
-The air is heavy with the smell of flowers drifting on the air currents. 
-There is the feeling as if something is watching.  
+packed dirt.  There is a strange howling noise coming from the distance.
+The air is heavy with the smell of flowers drifting on the air currents.
+There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -5957,7 +5957,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Around you stretch massive amounts of ferns and strange plants.  The
 forest floor is quagmire of mud.  You hear some kind of animal calling out
 in the distance.  There is some terrible smell coming from some of the
-plants.  You feel a strange warmth in the air.  
+plants.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -5984,7 +5984,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Plants of all different types and shades of green are growing on
 everything around.  Leaves rustle beneath you.  Sounds of strange birds echo
 through the area.  The air is full of moisture and the smell of green
-things.  There is the feeling as if something is watching.  
+things.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -6011,7 +6011,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Around you stretch massive amounts of ferns and strange plants.  A
 shallow pool of murky water covers the ground.  You hear many birds of all
 types calling out in the distance.  There is some terrible smell coming from
-some of the plants.  The moisture in the air makes you feel damp.  
+some of the plants.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -6035,10 +6035,10 @@ S
 #30229
 Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
-sky.  Around you are allot of small little plants poking out of the ground. 
+sky.  Around you are allot of small little plants poking out of the ground.
 A sheet of mud covers the forest floor.  You hear many birds of all types
-calling out in the distance.  There is a deep earthy smell around here. 
-There is the feeling as if something is watching.  
+calling out in the distance.  There is a deep earthy smell around here.
+There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -6065,7 +6065,7 @@ Strangely brown moss clings erratically to the trees around here.  Plants
 of all different types and shades of green are growing on everything around.
 The ground is barren with only a dusty dirt covering it.  You hear some kind
 of animal calling out in the distance.  The air is full of moisture and the
-smell of green things.  There is the feeling as if something is watching.  
+smell of green things.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -6092,7 +6092,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Everywhere are huge plants with gigantic leaves.  The ground is a hard
 packed dirt.  There is a strange screeching coming from somewhere above you.
 The smell of living plants hangs heavy in the air.  The moisture in the air
-makes you feel damp.  
+makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -6116,11 +6116,11 @@ S
 #30232
 Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
-sky.  Around you are allot of small little plants poking out of the ground. 
+sky.  Around you are allot of small little plants poking out of the ground.
 The forest floor is covered in a deep mat of dead leaves.  You hear many
 birds of all types calling out in the distance.  The air is heavy with the
 smell of flowers drifting on the air currents.  There is a stickiness in the
-air even with a cool breeze.  
+air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -6144,11 +6144,11 @@ S
 #30233
 Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
-sky.  Around you are allot of small little plants poking out of the ground. 
+sky.  Around you are allot of small little plants poking out of the ground.
 The forest floor is covered in a deep mat of dead leaves.  There is a
 strange screeching coming from somewhere above you.  The smell of living
 plants hangs heavy in the air.  There is the feeling as if something is
-watching.  
+watching.
 ~
 0 270352 3
 Rd     0
@@ -6175,7 +6175,7 @@ Strangely brown moss clings erratically to the trees around here.  Around
 you are allot of small little plants poking out of the ground.  The ground
 is barren with only a dusty dirt covering it.  There is a strange howling
 noise coming from the distance.  The smell of living plants hangs heavy in
-the air.  There is the feeling as if something is watching.  
+the air.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -6202,7 +6202,7 @@ Strangely brown moss clings erratically to the trees around here.  Around
 you stretch massive amounts of ferns and strange plants.  The forest floor
 is quagmire of mud.  Sounds of strange birds echo through the area.  The air
 is heavy with the smell of flowers drifting on the air currents.  You feel a
-strange warmth in the air.  
+strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -6228,8 +6228,8 @@ Rainforest~
 A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  The undergrowth is dense and full of thorny
 plants.  A shallow pool of murky water covers the ground.  Off somewhere you
-hear something crowing.  The smell of living plants hangs heavy in the air. 
-You feel a strange warmth in the air.  
+hear something crowing.  The smell of living plants hangs heavy in the air.
+You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -6256,7 +6256,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  The undergrowth is dense and full of thorny plants.  The floor of the
 forest is a mess of twigs and leaves.  Off somewhere you hear something
 crowing.  There is some terrible smell coming from some of the plants.  The
-air feels cool.  
+air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -6283,7 +6283,7 @@ Strangely brown moss clings erratically to the trees around here.  Plants
 of all different types and shades of green are growing on everything around.
 The floor of the forest is a mess of twigs and leaves.  There is a strange
 howling noise coming from the distance.  The air is full of moisture and the
-smell of green things.  The air feels cool.  
+smell of green things.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -6311,7 +6311,7 @@ sky.  Plants of all different types and shades of green are growing on
 everything around.  The forest floor is covered in a deep mat of dead
 leaves.  You hear some kind of animal calling out in the distance.  The air
 is heavy with the smell of flowers drifting on the air currents.  There is
-the feeling as if something is watching.  
+the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -6334,7 +6334,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Everywhere are huge plants with gigantic
 leaves.  The forest floor is quagmire of mud.  Sounds of strange birds echo
 through the area.  There is a deep earthy smell around here.  There is the
-feeling as if something is watching.  
+feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -6356,8 +6356,8 @@ Rainforest~
 A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Bright flowers are growing out of the trees.  The ground is barren
 with only a dusty dirt covering it.  You hear many birds of all types
-calling out in the distance.  There is a deep earthy smell around here. 
-There is a stickiness in the air even with a cool breeze.  
+calling out in the distance.  There is a deep earthy smell around here.
+There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -6381,9 +6381,9 @@ S
 #30242
 Rainforest~
 Strangely brown moss clings erratically to the trees around here.  Bright
-flowers are growing out of the trees.  The forest floor is quagmire of mud. 
+flowers are growing out of the trees.  The forest floor is quagmire of mud.
 Off somewhere you hear something crowing.  The air is full of moisture and
-the smell of green things.  The moisture in the air makes you feel damp.  
+the smell of green things.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -6407,10 +6407,10 @@ S
 #30243
 Rainforest~
 A mat of green moss covers everything above giving it the impression of
-looking up into a green cave.  Bright flowers are growing out of the trees. 
+looking up into a green cave.  Bright flowers are growing out of the trees.
 A sheet of mud covers the forest floor.  You hear a constant rustle of
 animals in the undergrowth.  There is some terrible smell coming from some
-of the plants.  The moisture in the air makes you feel damp.  
+of the plants.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -6437,7 +6437,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Everywhere are huge plants with gigantic leaves.  The floor of the
 forest is a mess of twigs and leaves.  There is a strange screeching coming
 from somewhere above you.  The smell of living plants hangs heavy in the
-air.  The air feels cool.  
+air.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -6462,9 +6462,9 @@ S
 Rainforest~
 Strangely brown moss clings erratically to the trees around here.  Around
 you there is an almost impassable maze of plant life.  The ground is a hard
-packed dirt.  There is a strange howling noise coming from the distance. 
+packed dirt.  There is a strange howling noise coming from the distance.
 There is a deep earthy smell around here.  The moisture in the air makes you
-feel damp.  
+feel damp.
 ~
 0 270352 3
 Rd     0
@@ -6491,7 +6491,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  The undergrowth is dense and full of thorny plants.  The forest floor
 is quagmire of mud.  Sounds of strange birds echo through the area.  The air
 is heavy with the smell of flowers drifting on the air currents.  The air
-feels cool.  
+feels cool.
 ~
 0 270352 3
 Rd     0
@@ -6515,10 +6515,10 @@ S
 #30247
 Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
-sky.  Around you are allot of small little plants poking out of the ground. 
+sky.  Around you are allot of small little plants poking out of the ground.
 A shallow pool of murky water covers the ground.  You hear many birds of all
 types calling out in the distance.  There is a deep earthy smell around
-here.  There is the feeling as if something is watching.  
+here.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -6545,7 +6545,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  The undergrowth is dense and full of thorny
 plants.  The ground is a hard packed dirt.  Sounds of strange birds echo
 through the area.  The air is heavy with the smell of flowers drifting on
-the air currents.  There is the feeling as if something is watching.  
+the air currents.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -6569,10 +6569,10 @@ S
 #30249
 Rainforest~
 A small break in the canopy is letting you view the sky.  The undergrowth
-is dense and full of thorny plants.  The forest floor is quagmire of mud. 
+is dense and full of thorny plants.  The forest floor is quagmire of mud.
 You hear some kind of animal calling out in the distance.  The smell of
 living plants hangs heavy in the air.  There is the feeling as if something
-is watching.  
+is watching.
 ~
 0 270352 3
 Rd     0
@@ -6599,7 +6599,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Around you stretch massive amounts of ferns and strange plants.  The
 floor of the forest is a mess of twigs and leaves.  There is a strange
 howling noise coming from the distance.  The smell of living plants hangs
-heavy in the air.  The moisture in the air makes you feel damp.  
+heavy in the air.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -6626,7 +6626,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  The undergrowth is dense and full of thorny plants.  The floor of the
 forest is a mess of twigs and leaves.  You hear a constant rustle of animals
 in the undergrowth.  There is some terrible smell coming from some of the
-plants.  The moisture in the air makes you feel damp.  
+plants.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -6653,7 +6653,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Around you there is an almost impassable maze of plant life.  A
 shallow pool of murky water covers the ground.  You hear many birds of all
 types calling out in the distance.  There is a deep earthy smell around
-here.  There is a stickiness in the air even with a cool breeze.  
+here.  There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -6680,7 +6680,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Around you stretch massive amounts of ferns and strange plants.  While
 the ground is covered in a carpet of flowers.  You hear a constant rustle of
 animals in the undergrowth.  The smell of living plants hangs heavy in the
-air.  You feel a strange warmth in the air.  
+air.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -6706,7 +6706,7 @@ Rainforest~
 All that is above you is a solid mass of green leaves.  Bright flowers
 are growing out of the trees.  Leaves rustle beneath you.  There is a
 strange screeching coming from somewhere above you.  There is a deep earthy
-smell around here.  The air feels cool.  
+smell around here.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -6733,7 +6733,7 @@ A small break in the canopy is letting you view the sky.  Bright flowers
 are growing out of the trees.  The ground is a hard packed dirt.  You hear
 many birds of all types calling out in the distance.  The smell of living
 plants hangs heavy in the air.  There is a stickiness in the air even with a
-cool breeze.  
+cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -6760,7 +6760,7 @@ Strangely brown moss clings erratically to the trees around here.  Around
 you stretch massive amounts of ferns and strange plants.  The forest floor
 is quagmire of mud.  You hear some kind of animal calling out in the
 distance.  The smell of living plants hangs heavy in the air.  The air feels
-cool.  
+cool.
 ~
 0 270352 3
 Rd     0
@@ -6786,7 +6786,7 @@ Rainforest~
 A small break in the canopy is letting you view the sky.  The undergrowth
 is dense and full of thorny plants.  Leaves rustle beneath you.  Sounds of
 strange birds echo through the area.  The air is full of moisture and the
-smell of green things.  There is the feeling as if something is watching.  
+smell of green things.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -6813,7 +6813,7 @@ Strangely brown moss clings erratically to the trees around here.  Around
 you stretch massive amounts of ferns and strange plants.  A shallow pool of
 murky water covers the ground.  There is a strange screeching coming from
 somewhere above you.  There is some terrible smell coming from some of the
-plants.  There is a stickiness in the air even with a cool breeze.  
+plants.  There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -6840,7 +6840,7 @@ A small break in the canopy is letting you view the sky.  Around you
 stretch massive amounts of ferns and strange plants.  While the ground is
 covered in a carpet of flowers.  You hear some kind of animal calling out in
 the distance.  There is a deep earthy smell around here.  You feel a strange
-warmth in the air.  
+warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -6861,9 +6861,9 @@ S
 Rainforest~
 All that is above you is a solid mass of green leaves.  Around you there
 is an almost impassable maze of plant life.  The floor of the forest is a
-mess of twigs and leaves.  Sounds of strange birds echo through the area. 
+mess of twigs and leaves.  Sounds of strange birds echo through the area.
 There is some terrible smell coming from some of the plants.  You feel a
-strange warmth in the air.  
+strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -6886,7 +6886,7 @@ All that is above you is a solid mass of green leaves.  The undergrowth
 is dense and full of thorny plants.  A sheet of mud covers the forest floor.
 Sounds of strange birds echo through the area.  The air is full of moisture
 and the smell of green things.  There is the feeling as if something is
-watching.  
+watching.
 ~
 0 270352 3
 Rd     0
@@ -6913,7 +6913,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Everywhere are huge plants with gigantic leaves.  The ground is barren
 with only a dusty dirt covering it.  There is a strange howling noise coming
 from the distance.  There is a deep earthy smell around here.  There is the
-feeling as if something is watching.  
+feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -6940,7 +6940,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Bright flowers are growing out of the trees.  The ground is barren
 with only a dusty dirt covering it.  You hear a constant rustle of animals
 in the undergrowth.  There is some terrible smell coming from some of the
-plants.  There is the feeling as if something is watching.  
+plants.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -6967,7 +6967,7 @@ All that is above you is a solid mass of green leaves.  Around you
 stretch massive amounts of ferns and strange plants.  A shallow pool of
 murky water covers the ground.  Sounds of strange birds echo through the
 area.  There is some terrible smell coming from some of the plants.  There
-is the feeling as if something is watching.  
+is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -6994,7 +6994,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Plants of all different types and shades of green are growing on
 everything around.  A sheet of mud covers the forest floor.  Sounds of
 strange birds echo through the area.  There is a deep earthy smell around
-here.  There is a stickiness in the air even with a cool breeze.  
+here.  There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -7021,7 +7021,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  The undergrowth is dense and full of thorny plants.  While the ground
 is covered in a carpet of flowers.  Off somewhere you hear something
 crowing.  There is a deep earthy smell around here.  You feel a strange
-warmth in the air.  
+warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -7048,7 +7048,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  The undergrowth is dense and full of thorny plants.  The floor of the
 forest is a mess of twigs and leaves.  There is a strange howling noise
 coming from the distance.  The air is heavy with the smell of flowers
-drifting on the air currents.  The air feels cool.  
+drifting on the air currents.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -7073,7 +7073,7 @@ S
 Rainforest~
 A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Plants of all different types and shades of
-green are growing on everything around.  The ground is a hard packed dirt. 
+green are growing on everything around.  The ground is a hard packed dirt.
 There is a strange screeching coming from somewhere above you.  There is a
 deep earthy smell around here.  The moisture in the air makes you feel damp.
 ~
@@ -7102,7 +7102,7 @@ All that is above you is a solid mass of green leaves.  Around you there
 is an almost impassable maze of plant life.  The ground is a hard packed
 dirt.  There is a strange screeching coming from somewhere above you.  The
 air is heavy with the smell of flowers drifting on the air currents.  The
-air feels cool.  
+air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -7127,9 +7127,9 @@ S
 Rainforest~
 All that is above you is a solid mass of green leaves.  The undergrowth
 is dense and full of thorny plants.  While the ground is covered in a carpet
-of flowers.  You hear many birds of all types calling out in the distance. 
+of flowers.  You hear many birds of all types calling out in the distance.
 There is a deep earthy smell around here.  The moisture in the air makes you
-feel damp.  
+feel damp.
 ~
 0 270352 3
 Rd     0
@@ -7156,7 +7156,7 @@ A small break in the canopy is letting you view the sky.  Everywhere are
 huge plants with gigantic leaves.  The floor of the forest is a mess of
 twigs and leaves.  You hear many birds of all types calling out in the
 distance.  The air is full of moisture and the smell of green things.  You
-feel a strange warmth in the air.  
+feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -7183,7 +7183,7 @@ A small break in the canopy is letting you view the sky.  The undergrowth
 is dense and full of thorny plants.  A sheet of mud covers the forest floor.
 You hear many birds of all types calling out in the distance.  The smell of
 living plants hangs heavy in the air.  There is the feeling as if something
-is watching.  
+is watching.
 ~
 0 270352 3
 Rd     0
@@ -7211,7 +7211,7 @@ looking up into a green cave.  Around you stretch massive amounts of ferns
 and strange plants.  A sheet of mud covers the forest floor.  There is a
 strange screeching coming from somewhere above you.  There is a deep earthy
 smell around here.  There is a stickiness in the air even with a cool
-breeze.  
+breeze.
 ~
 0 270352 3
 Rd     0
@@ -7238,7 +7238,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Around you there is an almost impassable maze of plant life.  Leaves
 rustle beneath you.  You hear a constant rustle of animals in the
 undergrowth.  There is a deep earthy smell around here.  There is the
-feeling as if something is watching.  
+feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -7265,7 +7265,7 @@ A small break in the canopy is letting you view the sky.  Around you
 stretch massive amounts of ferns and strange plants.  The forest floor is
 covered in a deep mat of dead leaves.  You hear some kind of animal calling
 out in the distance.  There is some terrible smell coming from some of the
-plants.  There is a stickiness in the air even with a cool breeze.  
+plants.  There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -7292,7 +7292,7 @@ Strangely brown moss clings erratically to the trees around here.  Plants
 of all different types and shades of green are growing on everything around.
 The forest floor is covered in a deep mat of dead leaves.  There is a
 strange howling noise coming from the distance.  The air is full of moisture
-and the smell of green things.  You feel a strange warmth in the air.  
+and the smell of green things.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -7317,10 +7317,10 @@ S
 Rainforest~
 A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Plants of all different types and shades of
-green are growing on everything around.  The ground is a hard packed dirt. 
+green are growing on everything around.  The ground is a hard packed dirt.
 Off somewhere you hear something crowing.  There is some terrible smell
 coming from some of the plants.  The moisture in the air makes you feel
-damp.  
+damp.
 ~
 0 270352 3
 Rd     0
@@ -7348,7 +7348,7 @@ looking up into a green cave.  Plants of all different types and shades of
 green are growing on everything around.  The floor of the forest is a mess
 of twigs and leaves.  Sounds of strange birds echo through the area.  There
 is some terrible smell coming from some of the plants.  There is a
-stickiness in the air even with a cool breeze.  
+stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -7371,11 +7371,11 @@ D3
 S
 #30279
 Rainforest~
-Strangely brown moss clings erratically to the trees around here. 
+Strangely brown moss clings erratically to the trees around here.
 Everywhere are huge plants with gigantic leaves.  The forest floor is
 covered in a deep mat of dead leaves.  Off somewhere you hear something
 crowing.  There is some terrible smell coming from some of the plants.  The
-moisture in the air makes you feel damp.  
+moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -7398,7 +7398,7 @@ All that is above you is a solid mass of green leaves.  Around you are
 allot of small little plants poking out of the ground.  The floor of the
 forest is a mess of twigs and leaves.  You hear many birds of all types
 calling out in the distance.  The air is heavy with the smell of flowers
-drifting on the air currents.  You feel a strange warmth in the air.  
+drifting on the air currents.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -7421,7 +7421,7 @@ All that is above you is a solid mass of green leaves.  Around you are
 allot of small little plants poking out of the ground.  A sheet of mud
 covers the forest floor.  You hear some kind of animal calling out in the
 distance.  There is some terrible smell coming from some of the plants.  The
-moisture in the air makes you feel damp.  
+moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -7445,10 +7445,10 @@ S
 #30282
 Rainforest~
 A huge mat of moss hanging from massive tree branches block sight of the
-sky.  Around you stretch massive amounts of ferns and strange plants. 
-Leaves rustle beneath you.  Sounds of strange birds echo through the area. 
+sky.  Around you stretch massive amounts of ferns and strange plants.
+Leaves rustle beneath you.  Sounds of strange birds echo through the area.
 The air is full of moisture and the smell of green things.  You feel a
-strange warmth in the air.  
+strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -7475,7 +7475,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Around you stretch massive amounts of ferns and strange plants.  The
 ground is a hard packed dirt.  You hear some kind of animal calling out in
 the distance.  The air is heavy with the smell of flowers drifting on the
-air currents.  You feel a strange warmth in the air.  
+air currents.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -7502,7 +7502,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Everywhere are huge plants with gigantic leaves.  A shallow pool of
 murky water covers the ground.  There is a strange howling noise coming from
 the distance.  There is a deep earthy smell around here.  The air feels
-cool.  
+cool.
 ~
 0 270352 3
 Rd     0
@@ -7527,9 +7527,9 @@ S
 Rainforest~
 Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Bright flowers are growing out of the trees.  The forest floor is
-quagmire of mud.  You hear a constant rustle of animals in the undergrowth. 
+quagmire of mud.  You hear a constant rustle of animals in the undergrowth.
 There is a deep earthy smell around here.  There is the feeling as if
-something is watching.  
+something is watching.
 ~
 0 270352 3
 Rd     0
@@ -7552,11 +7552,11 @@ D3
 S
 #30286
 Rainforest~
-Strangely brown moss clings erratically to the trees around here. 
+Strangely brown moss clings erratically to the trees around here.
 Everywhere are huge plants with gigantic leaves.  The floor of the forest is
 a mess of twigs and leaves.  There is a strange howling noise coming from
 the distance.  There is a deep earthy smell around here.  You feel a strange
-warmth in the air.  
+warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -7583,7 +7583,7 @@ A small break in the canopy is letting you view the sky.  Around you
 there is an almost impassable maze of plant life.  The ground is barren with
 only a dusty dirt covering it.  There is a strange howling noise coming from
 the distance.  The air is heavy with the smell of flowers drifting on the
-air currents.  The air feels cool.  
+air currents.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -7610,7 +7610,7 @@ Strangely brown moss clings erratically to the trees around here.  The
 undergrowth is dense and full of thorny plants.  A shallow pool of murky
 water covers the ground.  You hear some kind of animal calling out in the
 distance.  The air is heavy with the smell of flowers drifting on the air
-currents.  There is the feeling as if something is watching.  
+currents.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -7637,7 +7637,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Around you stretch massive amounts of ferns and strange plants.  The
 forest floor is quagmire of mud.  You hear many birds of all types calling
 out in the distance.  The air is heavy with the smell of flowers drifting on
-the air currents.  You feel a strange warmth in the air.  
+the air currents.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -7662,9 +7662,9 @@ S
 Rainforest~
 A small break in the canopy is letting you view the sky.  Bright flowers
 are growing out of the trees.  The floor of the forest is a mess of twigs
-and leaves.  There is a strange screeching coming from somewhere above you. 
-The air is heavy with the smell of flowers drifting on the air currents. 
-You feel a strange warmth in the air.  
+and leaves.  There is a strange screeching coming from somewhere above you.
+The air is heavy with the smell of flowers drifting on the air currents.
+You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -7690,8 +7690,8 @@ Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
 sky.  Bright flowers are growing out of the trees.  A shallow pool of murky
 water covers the ground.  You hear many birds of all types calling out in
-the distance.  There is some terrible smell coming from some of the plants. 
-The moisture in the air makes you feel damp.  
+the distance.  There is some terrible smell coming from some of the plants.
+The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -7718,7 +7718,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Everywhere are huge plants with gigantic
 leaves.  Leaves rustle beneath you.  You hear a constant rustle of animals
 in the undergrowth.  The air is heavy with the smell of flowers drifting on
-the air currents.  The air feels cool.  
+the air currents.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -7746,7 +7746,7 @@ sky.  Plants of all different types and shades of green are growing on
 everything around.  The forest floor is covered in a deep mat of dead
 leaves.  There is a strange howling noise coming from the distance.  There
 is a deep earthy smell around here.  There is the feeling as if something is
-watching.  
+watching.
 ~
 0 270352 3
 Rd     0
@@ -7773,7 +7773,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Everywhere are huge plants with gigantic leaves.  A sheet of mud
 covers the forest floor.  You hear some kind of animal calling out in the
 distance.  The smell of living plants hangs heavy in the air.  There is the
-feeling as if something is watching.  
+feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -7796,11 +7796,11 @@ D3
 S
 #30295
 Rainforest~
-Strangely brown moss clings erratically to the trees around here. 
+Strangely brown moss clings erratically to the trees around here.
 Everywhere are huge plants with gigantic leaves.  A sheet of mud covers the
 forest floor.  There is a strange screeching coming from somewhere above
 you.  The smell of living plants hangs heavy in the air.  The air feels
-cool.  
+cool.
 ~
 0 270352 3
 Rd     0
@@ -7827,7 +7827,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Everywhere are huge plants with gigantic leaves.  A shallow pool of
 murky water covers the ground.  You hear many birds of all types calling out
 in the distance.  There is a deep earthy smell around here.  There is a
-stickiness in the air even with a cool breeze.  
+stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -7854,7 +7854,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Around you stretch massive amounts of ferns
 and strange plants.  The forest floor is quagmire of mud.  You hear many
 birds of all types calling out in the distance.  The smell of living plants
-hangs heavy in the air.  You feel a strange warmth in the air.  
+hangs heavy in the air.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -7881,7 +7881,7 @@ A small break in the canopy is letting you view the sky.  Around you
 stretch massive amounts of ferns and strange plants.  The ground is a hard
 packed dirt.  Sounds of strange birds echo through the area.  The air is
 full of moisture and the smell of green things.  There is the feeling as if
-something is watching.  
+something is watching.
 ~
 0 270352 3
 Rd     0
@@ -7908,7 +7908,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Bright flowers are growing out of the trees.  A shallow pool of murky
 water covers the ground.  You hear some kind of animal calling out in the
 distance.  There is a deep earthy smell around here.  The moisture in the
-air makes you feel damp.  
+air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -7929,10 +7929,10 @@ S
 Rainforest~
 A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Plants of all different types and shades of green are growing on
-everything around.  While the ground is covered in a carpet of flowers. 
+everything around.  While the ground is covered in a carpet of flowers.
 There is a strange screeching coming from somewhere above you.  The smell of
 living plants hangs heavy in the air.  The moisture in the air makes you
-feel damp.  
+feel damp.
 ~
 0 270352 3
 Rd     0
@@ -7953,9 +7953,9 @@ S
 Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
 sky.  Everywhere are huge plants with gigantic leaves.  The ground is a hard
-packed dirt.  You hear many birds of all types calling out in the distance. 
+packed dirt.  You hear many birds of all types calling out in the distance.
 The air is full of moisture and the smell of green things.  There is a
-stickiness in the air even with a cool breeze.  
+stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -7978,11 +7978,11 @@ D3
 S
 #30302
 Rainforest~
-Strangely brown moss clings erratically to the trees around here. 
+Strangely brown moss clings erratically to the trees around here.
 Everywhere are huge plants with gigantic leaves.  The ground is a hard
 packed dirt.  You hear a constant rustle of animals in the undergrowth.  The
 air is full of moisture and the smell of green things.  The moisture in the
-air makes you feel damp.  
+air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -8008,7 +8008,7 @@ Rainforest~
 Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Everywhere are huge plants with gigantic leaves.  The forest floor is
 quagmire of mud.  Off somewhere you hear something crowing.  There is some
-terrible smell coming from some of the plants.  The air feels cool.  
+terrible smell coming from some of the plants.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -8035,7 +8035,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Plants of all different types and shades of green are growing on
 everything around.  A sheet of mud covers the forest floor.  You hear some
 kind of animal calling out in the distance.  The air is full of moisture and
-the smell of green things.  The air feels cool.  
+the smell of green things.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -8062,7 +8062,7 @@ A small break in the canopy is letting you view the sky.  The undergrowth
 is dense and full of thorny plants.  A sheet of mud covers the forest floor.
 You hear a constant rustle of animals in the undergrowth.  The air is heavy
 with the smell of flowers drifting on the air currents.  You feel a strange
-warmth in the air.  
+warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -8089,7 +8089,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Everywhere are huge plants with gigantic leaves.  The ground is barren
 with only a dusty dirt covering it.  You hear many birds of all types
 calling out in the distance.  There is a deep earthy smell around here.  The
-air feels cool.  
+air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -8116,7 +8116,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Around you there is an almost impassable maze of plant life.  The
 forest floor is quagmire of mud.  You hear many birds of all types calling
 out in the distance.  There is some terrible smell coming from some of the
-plants.  The air feels cool.  
+plants.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -8143,7 +8143,7 @@ Strangely brown moss clings erratically to the trees around here.  Around
 you stretch massive amounts of ferns and strange plants.  The ground is a
 hard packed dirt.  You hear some kind of animal calling out in the distance.
 The air is full of moisture and the smell of green things.  There is the
-feeling as if something is watching.  
+feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -8171,7 +8171,7 @@ sky.  Plants of all different types and shades of green are growing on
 everything around.  While the ground is covered in a carpet of flowers.  You
 hear many birds of all types calling out in the distance.  The air is heavy
 with the smell of flowers drifting on the air currents.  There is a
-stickiness in the air even with a cool breeze.  
+stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -8198,7 +8198,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Bright flowers are growing out of the trees.  A sheet of mud covers
 the forest floor.  Off somewhere you hear something crowing.  The air is
 full of moisture and the smell of green things.  There is a stickiness in
-the air even with a cool breeze.  
+the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -8225,7 +8225,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  The undergrowth is dense and full of thorny plants.  The forest floor
 is covered in a deep mat of dead leaves.  Sounds of strange birds echo
 through the area.  The air is full of moisture and the smell of green
-things.  The air feels cool.  
+things.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -8252,7 +8252,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  The undergrowth is dense and full of thorny plants.  While the ground
 is covered in a carpet of flowers.  There is a strange screeching coming
 from somewhere above you.  There is a deep earthy smell around here.  There
-is a stickiness in the air even with a cool breeze.  
+is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -8279,7 +8279,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Plants of all different types and shades of green are growing on
 everything around.  Leaves rustle beneath you.  Sounds of strange birds echo
 through the area.  There is a deep earthy smell around here.  The moisture
-in the air makes you feel damp.  
+in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -8306,7 +8306,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Around you stretch massive amounts of ferns and strange plants.  A
 sheet of mud covers the forest floor.  There is a strange screeching coming
 from somewhere above you.  There is some terrible smell coming from some of
-the plants.  There is the feeling as if something is watching.  
+the plants.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -8333,7 +8333,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  The undergrowth is dense and full of thorny plants.  The floor of the
 forest is a mess of twigs and leaves.  You hear a constant rustle of animals
 in the undergrowth.  There is a deep earthy smell around here.  The moisture
-in the air makes you feel damp.  
+in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -8361,7 +8361,7 @@ looking up into a green cave.  Plants of all different types and shades of
 green are growing on everything around.  While the ground is covered in a
 carpet of flowers.  Sounds of strange birds echo through the area.  The
 smell of living plants hangs heavy in the air.  The moisture in the air
-makes you feel damp.  
+makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -8388,7 +8388,7 @@ All that is above you is a solid mass of green leaves.  Around you
 stretch massive amounts of ferns and strange plants.  The ground is barren
 with only a dusty dirt covering it.  There is a strange howling noise coming
 from the distance.  There is some terrible smell coming from some of the
-plants.  The air feels cool.  
+plants.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -8415,7 +8415,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  The undergrowth is dense and full of thorny plants.  While the ground
 is covered in a carpet of flowers.  There is a strange screeching coming
 from somewhere above you.  The air is full of moisture and the smell of
-green things.  The air feels cool.  
+green things.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -8439,10 +8439,10 @@ S
 #30319
 Rainforest~
 A huge mat of moss hanging from massive tree branches block sight of the
-sky.  Around you are allot of small little plants poking out of the ground. 
+sky.  Around you are allot of small little plants poking out of the ground.
 The ground is a hard packed dirt.  Off somewhere you hear something crowing.
 The smell of living plants hangs heavy in the air.  There is the feeling as
-if something is watching.  
+if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -8462,9 +8462,9 @@ S
 #30320
 Rainforest~
 All that is above you is a solid mass of green leaves.  Bright flowers
-are growing out of the trees.  A sheet of mud covers the forest floor. 
+are growing out of the trees.  A sheet of mud covers the forest floor.
 There is a strange screeching coming from somewhere above you.  The smell of
-living plants hangs heavy in the air.  The air feels cool.  
+living plants hangs heavy in the air.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -8487,7 +8487,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Around you there is an almost impassable maze
 of plant life.  A sheet of mud covers the forest floor.  There is a strange
 howling noise coming from the distance.  There is some terrible smell coming
-from some of the plants.  The air feels cool.  
+from some of the plants.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -8514,7 +8514,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Everywhere are huge plants with gigantic
 leaves.  The floor of the forest is a mess of twigs and leaves.  There is a
 strange screeching coming from somewhere above you.  There is some terrible
-smell coming from some of the plants.  The air feels cool.  
+smell coming from some of the plants.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -8541,7 +8541,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Around you there is an almost impassable maze of plant life.  The
 ground is a hard packed dirt.  There is a strange howling noise coming from
 the distance.  The smell of living plants hangs heavy in the air.  The
-moisture in the air makes you feel damp.  
+moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -8593,8 +8593,8 @@ Rainforest~
 Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Bright flowers are growing out of the trees.  While the ground is
 covered in a carpet of flowers.  There is a strange screeching coming from
-somewhere above you.  The smell of living plants hangs heavy in the air. 
-There is the feeling as if something is watching.  
+somewhere above you.  The smell of living plants hangs heavy in the air.
+There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -8621,7 +8621,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Around you there is an almost impassable maze of plant life.  A sheet
 of mud covers the forest floor.  You hear some kind of animal calling out in
 the distance.  The air is heavy with the smell of flowers drifting on the
-air currents.  The moisture in the air makes you feel damp.  
+air currents.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -8647,8 +8647,8 @@ Rainforest~
 Strangely brown moss clings erratically to the trees around here.  Plants
 of all different types and shades of green are growing on everything around.
 Leaves rustle beneath you.  There is a strange howling noise coming from the
-distance.  There is some terrible smell coming from some of the plants. 
-There is a stickiness in the air even with a cool breeze.  
+distance.  There is some terrible smell coming from some of the plants.
+There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -8672,11 +8672,11 @@ S
 #30328
 Rainforest~
 A huge mat of moss hanging from massive tree branches block sight of the
-sky.  Around you are allot of small little plants poking out of the ground. 
+sky.  Around you are allot of small little plants poking out of the ground.
 The ground is barren with only a dusty dirt covering it.  You hear some kind
 of animal calling out in the distance.  The air is heavy with the smell of
 flowers drifting on the air currents.  The moisture in the air makes you
-feel damp.  
+feel damp.
 ~
 0 270352 3
 Rd     0
@@ -8704,7 +8704,7 @@ stretch massive amounts of ferns and strange plants.  The floor of the
 forest is a mess of twigs and leaves.  You hear many birds of all types
 calling out in the distance.  The air is heavy with the smell of flowers
 drifting on the air currents.  There is a stickiness in the air even with a
-cool breeze.  
+cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -8730,7 +8730,7 @@ Rainforest~
 Strangely brown moss clings erratically to the trees around here.  Bright
 flowers are growing out of the trees.  A sheet of mud covers the forest
 floor.  Off somewhere you hear something crowing.  There is a deep earthy
-smell around here.  You feel a strange warmth in the air.  
+smell around here.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -8757,7 +8757,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Everywhere are huge plants with gigantic leaves.  While the ground is
 covered in a carpet of flowers.  You hear many birds of all types calling
 out in the distance.  There is a deep earthy smell around here.  There is a
-stickiness in the air even with a cool breeze.  
+stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -8784,7 +8784,7 @@ A small break in the canopy is letting you view the sky.  Around you
 stretch massive amounts of ferns and strange plants.  A sheet of mud covers
 the forest floor.  There is a strange screeching coming from somewhere above
 you.  The air is full of moisture and the smell of green things.  There is a
-stickiness in the air even with a cool breeze.  
+stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -8812,7 +8812,7 @@ sky.  Plants of all different types and shades of green are growing on
 everything around.  A sheet of mud covers the forest floor.  There is a
 strange howling noise coming from the distance.  There is a deep earthy
 smell around here.  There is a stickiness in the air even with a cool
-breeze.  
+breeze.
 ~
 0 270352 3
 Rd     0
@@ -8839,8 +8839,8 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Plants of all different types and shades of
 green are growing on everything around.  The forest floor is covered in a
 deep mat of dead leaves.  You hear a constant rustle of animals in the
-undergrowth.  There is some terrible smell coming from some of the plants. 
-There is a stickiness in the air even with a cool breeze.  
+undergrowth.  There is some terrible smell coming from some of the plants.
+There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -8867,7 +8867,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Around you there is an almost impassable maze
 of plant life.  A sheet of mud covers the forest floor.  You hear some kind
 of animal calling out in the distance.  The air is full of moisture and the
-smell of green things.  The air feels cool.  
+smell of green things.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -8894,7 +8894,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Around you stretch massive amounts of ferns and strange plants.  The
 ground is a hard packed dirt.  You hear some kind of animal calling out in
 the distance.  The smell of living plants hangs heavy in the air.  There is
-a stickiness in the air even with a cool breeze.  
+a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -8921,7 +8921,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Around you there is an almost impassable maze of plant life.  While
 the ground is covered in a carpet of flowers.  You hear a constant rustle of
 animals in the undergrowth.  The smell of living plants hangs heavy in the
-air.  You feel a strange warmth in the air.  
+air.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -8948,7 +8948,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Around you stretch massive amounts of ferns and strange plants.  A
 shallow pool of murky water covers the ground.  You hear many birds of all
 types calling out in the distance.  There is a deep earthy smell around
-here.  There is the feeling as if something is watching.  
+here.  There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -8975,7 +8975,7 @@ All that is above you is a solid mass of green leaves.  Plants of all
 different types and shades of green are growing on everything around.  The
 forest floor is covered in a deep mat of dead leaves.  You hear some kind of
 animal calling out in the distance.  The smell of living plants hangs heavy
-in the air.  The air feels cool.  
+in the air.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -8998,7 +8998,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Around you there is an almost impassable maze of plant life.  The
 ground is barren with only a dusty dirt covering it.  There is a strange
 howling noise coming from the distance.  The air is heavy with the smell of
-flowers drifting on the air currents.  The air feels cool.  
+flowers drifting on the air currents.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -9019,7 +9019,7 @@ S
 Rainforest~
 A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Around you stretch massive amounts of ferns
-and strange plants.  The floor of the forest is a mess of twigs and leaves. 
+and strange plants.  The floor of the forest is a mess of twigs and leaves.
 There is a strange howling noise coming from the distance.  There is a deep
 earthy smell around here.  There is the feeling as if something is watching.
 ~
@@ -9045,10 +9045,10 @@ S
 #30342
 Rainforest~
 A huge mat of moss hanging from massive tree branches block sight of the
-sky.  Around you stretch massive amounts of ferns and strange plants. 
-Leaves rustle beneath you.  Sounds of strange birds echo through the area. 
-The air is heavy with the smell of flowers drifting on the air currents. 
-The moisture in the air makes you feel damp.  
+sky.  Around you stretch massive amounts of ferns and strange plants.
+Leaves rustle beneath you.  Sounds of strange birds echo through the area.
+The air is heavy with the smell of flowers drifting on the air currents.
+The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -9073,9 +9073,9 @@ S
 Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
 sky.  The undergrowth is dense and full of thorny plants.  A sheet of mud
-covers the forest floor.  Sounds of strange birds echo through the area. 
+covers the forest floor.  Sounds of strange birds echo through the area.
 There is a deep earthy smell around here.  You feel a strange warmth in the
-air.  
+air.
 ~
 0 270352 3
 Rd     0
@@ -9101,7 +9101,7 @@ Rainforest~
 A small break in the canopy is letting you view the sky.  Everywhere are
 huge plants with gigantic leaves.  While the ground is covered in a carpet
 of flowers.  Sounds of strange birds echo through the area.  The smell of
-living plants hangs heavy in the air.  The air feels cool.  
+living plants hangs heavy in the air.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -9156,7 +9156,7 @@ looking up into a green cave.  Around you there is an almost impassable maze
 of plant life.  The floor of the forest is a mess of twigs and leaves.  You
 hear many birds of all types calling out in the distance.  The air is heavy
 with the smell of flowers drifting on the air currents.  The moisture in the
-air makes you feel damp.  
+air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -9181,9 +9181,9 @@ S
 Rainforest~
 Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Around you there is an almost impassable maze of plant life.  The
-ground is a hard packed dirt.  Off somewhere you hear something crowing. 
+ground is a hard packed dirt.  Off somewhere you hear something crowing.
 The smell of living plants hangs heavy in the air.  You feel a strange
-warmth in the air.  
+warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -9211,7 +9211,7 @@ sky.  Around you stretch massive amounts of ferns and strange plants.  The
 ground is barren with only a dusty dirt covering it.  You hear a constant
 rustle of animals in the undergrowth.  The air is heavy with the smell of
 flowers drifting on the air currents.  There is the feeling as if something
-is watching.  
+is watching.
 ~
 0 270352 3
 Rd     0
@@ -9237,8 +9237,8 @@ Rainforest~
 Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Bright flowers are growing out of the trees.  The forest floor is
 quagmire of mud.  There is a strange howling noise coming from the distance.
-The air is heavy with the smell of flowers drifting on the air currents. 
-The air feels cool.  
+The air is heavy with the smell of flowers drifting on the air currents.
+The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -9263,9 +9263,9 @@ S
 Rainforest~
 A small break in the canopy is letting you view the sky.  Everywhere are
 huge plants with gigantic leaves.  The forest floor is covered in a deep mat
-of dead leaves.  You hear a constant rustle of animals in the undergrowth. 
+of dead leaves.  You hear a constant rustle of animals in the undergrowth.
 There is some terrible smell coming from some of the plants.  There is a
-stickiness in the air even with a cool breeze.  
+stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -9292,7 +9292,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Around you stretch massive amounts of ferns
 and strange plants.  The forest floor is quagmire of mud.  You hear many
 birds of all types calling out in the distance.  The air is full of moisture
-and the smell of green things.  The air feels cool.  
+and the smell of green things.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -9319,7 +9319,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  The undergrowth is dense and full of thorny
 plants.  The ground is barren with only a dusty dirt covering it.  You hear
 some kind of animal calling out in the distance.  The air is full of
-moisture and the smell of green things.  The air feels cool.  
+moisture and the smell of green things.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -9345,7 +9345,7 @@ Rainforest~
 All that is above you is a solid mass of green leaves.  Around you
 stretch massive amounts of ferns and strange plants.  A sheet of mud covers
 the forest floor.  You hear a constant rustle of animals in the undergrowth.
-There is a deep earthy smell around here.  The air feels cool.  
+There is a deep earthy smell around here.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -9369,10 +9369,10 @@ S
 #30354
 Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
-sky.  Around you are allot of small little plants poking out of the ground. 
+sky.  Around you are allot of small little plants poking out of the ground.
 Leaves rustle beneath you.  You hear a constant rustle of animals in the
 undergrowth.  The smell of living plants hangs heavy in the air.  The
-moisture in the air makes you feel damp.  
+moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -9399,7 +9399,7 @@ A small break in the canopy is letting you view the sky.  Around you
 stretch massive amounts of ferns and strange plants.  The ground is barren
 with only a dusty dirt covering it.  You hear many birds of all types
 calling out in the distance.  The air is full of moisture and the smell of
-green things.  The moisture in the air makes you feel damp.  
+green things.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -9426,7 +9426,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Around you are allot of small little plants
 poking out of the ground.  Leaves rustle beneath you.  Off somewhere you
 hear something crowing.  There is a deep earthy smell around here.  The air
-feels cool.  
+feels cool.
 ~
 0 270352 3
 Rd     0
@@ -9451,9 +9451,9 @@ S
 Rainforest~
 A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Around you stretch massive amounts of ferns and strange plants.  The
-forest floor is quagmire of mud.  Off somewhere you hear something crowing. 
-The air is heavy with the smell of flowers drifting on the air currents. 
-The air feels cool.  
+forest floor is quagmire of mud.  Off somewhere you hear something crowing.
+The air is heavy with the smell of flowers drifting on the air currents.
+The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -9480,7 +9480,7 @@ All that is above you is a solid mass of green leaves.  Bright flowers
 are growing out of the trees.  Leaves rustle beneath you.  There is a
 strange screeching coming from somewhere above you.  The smell of living
 plants hangs heavy in the air.  There is a stickiness in the air even with a
-cool breeze.  
+cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -9507,7 +9507,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Around you are allot of small little plants
 poking out of the ground.  The forest floor is quagmire of mud.  You hear a
 constant rustle of animals in the undergrowth.  There is a deep earthy smell
-around here.  The moisture in the air makes you feel damp.  
+around here.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -9529,8 +9529,8 @@ Rainforest~
 All that is above you is a solid mass of green leaves.  Around you there
 is an almost impassable maze of plant life.  The floor of the forest is a
 mess of twigs and leaves.  There is a strange screeching coming from
-somewhere above you.  The smell of living plants hangs heavy in the air. 
-There is a stickiness in the air even with a cool breeze.  
+somewhere above you.  The smell of living plants hangs heavy in the air.
+There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -9553,7 +9553,7 @@ All that is above you is a solid mass of green leaves.  Bright flowers
 are growing out of the trees.  A shallow pool of murky water covers the
 ground.  Sounds of strange birds echo through the area.  The air is full of
 moisture and the smell of green things.  There is the feeling as if
-something is watching.  
+something is watching.
 ~
 0 270352 3
 Rd     0
@@ -9579,8 +9579,8 @@ Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
 sky.  The undergrowth is dense and full of thorny plants.  A shallow pool of
 murky water covers the ground.  You hear a constant rustle of animals in the
-undergrowth.  The air is full of moisture and the smell of green things. 
-You feel a strange warmth in the air.  
+undergrowth.  The air is full of moisture and the smell of green things.
+You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -9607,7 +9607,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Bright flowers are growing out of the trees.  A sheet of mud covers
 the forest floor.  There is a strange screeching coming from somewhere above
 you.  There is a deep earthy smell around here.  The moisture in the air
-makes you feel damp.  
+makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -9634,7 +9634,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Around you there is an almost impassable maze of plant life.  The
 ground is a hard packed dirt.  You hear many birds of all types calling out
 in the distance.  There is some terrible smell coming from some of the
-plants.  You feel a strange warmth in the air.  
+plants.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -9661,7 +9661,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Everywhere are huge plants with gigantic leaves.  The floor of the
 forest is a mess of twigs and leaves.  You hear many birds of all types
 calling out in the distance.  There is a deep earthy smell around here.  You
-feel a strange warmth in the air.  
+feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -9688,7 +9688,7 @@ All that is above you is a solid mass of green leaves.  Around you
 stretch massive amounts of ferns and strange plants.  The forest floor is
 covered in a deep mat of dead leaves.  You hear a constant rustle of animals
 in the undergrowth.  The smell of living plants hangs heavy in the air.  The
-air feels cool.  
+air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -9712,10 +9712,10 @@ S
 #30367
 Rainforest~
 A mat of green moss covers everything above giving it the impression of
-looking up into a green cave.  Bright flowers are growing out of the trees. 
+looking up into a green cave.  Bright flowers are growing out of the trees.
 The forest floor is covered in a deep mat of dead leaves.  You hear some
 kind of animal calling out in the distance.  The smell of living plants
-hangs heavy in the air.  The moisture in the air makes you feel damp.  
+hangs heavy in the air.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -9742,7 +9742,7 @@ Strangely brown moss clings erratically to the trees around here.  Around
 you there is an almost impassable maze of plant life.  The ground is a hard
 packed dirt.  Off somewhere you hear something crowing.  The air is heavy
 with the smell of flowers drifting on the air currents.  There is a
-stickiness in the air even with a cool breeze.  
+stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -9768,8 +9768,8 @@ Rainforest~
 A small break in the canopy is letting you view the sky.  Around you
 stretch massive amounts of ferns and strange plants.  A shallow pool of
 murky water covers the ground.  There is a strange screeching coming from
-somewhere above you.  The smell of living plants hangs heavy in the air. 
-The air feels cool.  
+somewhere above you.  The smell of living plants hangs heavy in the air.
+The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -9796,7 +9796,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Everywhere are huge plants with gigantic leaves.  A sheet of mud
 covers the forest floor.  There is a strange howling noise coming from the
 distance.  The smell of living plants hangs heavy in the air.  There is a
-stickiness in the air even with a cool breeze.  
+stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -9823,7 +9823,7 @@ Strangely brown moss clings erratically to the trees around here.  Around
 you are allot of small little plants poking out of the ground.  While the
 ground is covered in a carpet of flowers.  You hear a constant rustle of
 animals in the undergrowth.  There is some terrible smell coming from some
-of the plants.  The air feels cool.  
+of the plants.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -9849,8 +9849,8 @@ Rainforest~
 Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  The undergrowth is dense and full of thorny plants.  A sheet of mud
 covers the forest floor.  You hear some kind of animal calling out in the
-distance.  There is some terrible smell coming from some of the plants. 
-There is the feeling as if something is watching.  
+distance.  There is some terrible smell coming from some of the plants.
+There is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -9877,7 +9877,7 @@ All that is above you is a solid mass of green leaves.  Around you
 stretch massive amounts of ferns and strange plants.  The ground is barren
 with only a dusty dirt covering it.  You hear a constant rustle of animals
 in the undergrowth.  The air is heavy with the smell of flowers drifting on
-the air currents.  The air feels cool.  
+the air currents.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -9904,7 +9904,7 @@ Strangely brown moss clings erratically to the trees around here.  Around
 you there is an almost impassable maze of plant life.  While the ground is
 covered in a carpet of flowers.  You hear many birds of all types calling
 out in the distance.  There is some terrible smell coming from some of the
-plants.  The moisture in the air makes you feel damp.  
+plants.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -9932,7 +9932,7 @@ looking up into a green cave.  Everywhere are huge plants with gigantic
 leaves.  The ground is barren with only a dusty dirt covering it.  You hear
 many birds of all types calling out in the distance.  There is some terrible
 smell coming from some of the plants.  The moisture in the air makes you
-feel damp.  
+feel damp.
 ~
 0 270352 3
 Rd     0
@@ -9959,7 +9959,7 @@ Strangely brown moss clings erratically to the trees around here.  Around
 you are allot of small little plants poking out of the ground.  Leaves
 rustle beneath you.  You hear a constant rustle of animals in the
 undergrowth.  There is a deep earthy smell around here.  There is a
-stickiness in the air even with a cool breeze.  
+stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -9985,7 +9985,7 @@ Rainforest~
 All that is above you is a solid mass of green leaves.  The undergrowth
 is dense and full of thorny plants.  While the ground is covered in a carpet
 of flowers.  Sounds of strange birds echo through the area.  There is a deep
-earthy smell around here.  The moisture in the air makes you feel damp.  
+earthy smell around here.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -10013,7 +10013,7 @@ sky.  Around you there is an almost impassable maze of plant life.  A
 shallow pool of murky water covers the ground.  You hear some kind of animal
 calling out in the distance.  The air is heavy with the smell of flowers
 drifting on the air currents.  There is the feeling as if something is
-watching.  
+watching.
 ~
 0 270352 3
 Rd     0
@@ -10041,7 +10041,7 @@ looking up into a green cave.  Plants of all different types and shades of
 green are growing on everything around.  The ground is barren with only a
 dusty dirt covering it.  There is a strange howling noise coming from the
 distance.  The air is full of moisture and the smell of green things.  The
-moisture in the air makes you feel damp.  
+moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -10064,7 +10064,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  The undergrowth is dense and full of thorny plants.  Leaves rustle
 beneath you.  You hear a constant rustle of animals in the undergrowth.  The
 air is heavy with the smell of flowers drifting on the air currents.  There
-is the feeling as if something is watching.  
+is the feeling as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -10079,7 +10079,7 @@ D3
 S
 #30381
 Rainforest~
-Strangely brown moss clings erratically to the trees around here. 
+Strangely brown moss clings erratically to the trees around here.
 Everywhere are huge plants with gigantic leaves.  The ground is a hard
 packed dirt.  Sounds of strange birds echo through the area.  The smell of
 living plants hangs heavy in the air.  You feel a strange warmth in the air.
@@ -10103,9 +10103,9 @@ S
 Rainforest~
 All that is above you is a solid mass of green leaves.  Bright flowers
 are growing out of the trees.  The floor of the forest is a mess of twigs
-and leaves.  You hear many birds of all types calling out in the distance. 
+and leaves.  You hear many birds of all types calling out in the distance.
 The air is full of moisture and the smell of green things.  You feel a
-strange warmth in the air.  
+strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -10125,10 +10125,10 @@ S
 #30383
 Rainforest~
 There is extremely dense foliage overhead, blocking all access to the
-sky.  Around you are allot of small little plants poking out of the ground. 
+sky.  Around you are allot of small little plants poking out of the ground.
 The ground is a hard packed dirt.  There is a strange howling noise coming
 from the distance.  There is a deep earthy smell around here.  The moisture
-in the air makes you feel damp.  
+in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -10151,7 +10151,7 @@ A small break in the canopy is letting you view the sky.  Plants of all
 different types and shades of green are growing on everything around.  A
 sheet of mud covers the forest floor.  Sounds of strange birds echo through
 the area.  There is some terrible smell coming from some of the plants.  You
-feel a strange warmth in the air.  
+feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -10170,11 +10170,11 @@ D3
 S
 #30385
 Rainforest~
-Strangely brown moss clings erratically to the trees around here. 
+Strangely brown moss clings erratically to the trees around here.
 Everywhere are huge plants with gigantic leaves.  A sheet of mud covers the
-forest floor.  There is a strange howling noise coming from the distance. 
-The air is heavy with the smell of flowers drifting on the air currents. 
-There is a stickiness in the air even with a cool breeze.  
+forest floor.  There is a strange howling noise coming from the distance.
+The air is heavy with the smell of flowers drifting on the air currents.
+There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -10197,7 +10197,7 @@ A huge mat of moss hanging from massive tree branches block sight of the
 sky.  Plants of all different types and shades of green are growing on
 everything around.  The ground is a hard packed dirt.  Sounds of strange
 birds echo through the area.  There is some terrible smell coming from some
-of the plants.  The moisture in the air makes you feel damp.  
+of the plants.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -10220,7 +10220,7 @@ All that is above you is a solid mass of green leaves.  Bright flowers
 are growing out of the trees.  The forest floor is quagmire of mud.  There
 is a strange screeching coming from somewhere above you.  The air is heavy
 with the smell of flowers drifting on the air currents.  There is a
-stickiness in the air even with a cool breeze.  
+stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -10243,7 +10243,7 @@ A small break in the canopy is letting you view the sky.  Around you are
 allot of small little plants poking out of the ground.  The floor of the
 forest is a mess of twigs and leaves.  There is a strange howling noise
 coming from the distance.  The smell of living plants hangs heavy in the
-air.  The moisture in the air makes you feel damp.  
+air.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -10265,7 +10265,7 @@ Rainforest~
 A small break in the canopy is letting you view the sky.  The undergrowth
 is dense and full of thorny plants.  The forest floor is covered in a deep
 mat of dead leaves.  You hear some kind of animal calling out in the
-distance.  There is a deep earthy smell around here.  The air feels cool.  
+distance.  There is a deep earthy smell around here.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -10288,7 +10288,7 @@ Huge branches interlock overhead, blocking all but brief glimpses of the
 sky.  Around you stretch massive amounts of ferns and strange plants.  The
 floor of the forest is a mess of twigs and leaves.  You hear a constant
 rustle of animals in the undergrowth.  There is a deep earthy smell around
-here.  The air feels cool.  
+here.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -10308,10 +10308,10 @@ S
 #30391
 Rainforest~
 All that is above you is a solid mass of green leaves.  Plants of all
-different types and shades of green are growing on everything around. 
+different types and shades of green are growing on everything around.
 Leaves rustle beneath you.  You hear a constant rustle of animals in the
-undergrowth.  There is some terrible smell coming from some of the plants. 
-There is a stickiness in the air even with a cool breeze.  
+undergrowth.  There is some terrible smell coming from some of the plants.
+There is a stickiness in the air even with a cool breeze.
 ~
 0 270352 3
 Rd     0
@@ -10333,7 +10333,7 @@ Rainforest~
 A small break in the canopy is letting you view the sky.  Around you
 stretch massive amounts of ferns and strange plants.  The forest floor is
 quagmire of mud.  Off somewhere you hear something crowing.  There is a deep
-earthy smell around here.  The moisture in the air makes you feel damp.  
+earthy smell around here.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -10356,7 +10356,7 @@ All that is above you is a solid mass of green leaves.  Bright flowers
 are growing out of the trees.  Leaves rustle beneath you.  There is a
 strange howling noise coming from the distance.  There is some terrible
 smell coming from some of the plants.  The moisture in the air makes you
-feel damp.  
+feel damp.
 ~
 0 270352 3
 Rd     0
@@ -10379,7 +10379,7 @@ Strangely brown moss clings erratically to the trees around here.  Bright
 flowers are growing out of the trees.  While the ground is covered in a
 carpet of flowers.  There is a strange howling noise coming from the
 distance.  There is a deep earthy smell around here.  There is the feeling
-as if something is watching.  
+as if something is watching.
 ~
 0 270352 3
 Rd     0
@@ -10402,7 +10402,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Around you stretch massive amounts of ferns and strange plants.  A
 sheet of mud covers the forest floor.  You hear many birds of all types
 calling out in the distance.  The air is heavy with the smell of flowers
-drifting on the air currents.  The moisture in the air makes you feel damp. 
+drifting on the air currents.  The moisture in the air makes you feel damp.
 ~
 0 270352 3
 Rd     0
@@ -10425,7 +10425,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  Around you there is an almost impassable maze of plant life.  The
 ground is barren with only a dusty dirt covering it.  You hear some kind of
 animal calling out in the distance.  There is some terrible smell coming
-from some of the plants.  You feel a strange warmth in the air.  
+from some of the plants.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0
@@ -10448,7 +10448,7 @@ A mat of green moss covers everything above giving it the impression of
 looking up into a green cave.  Around you there is an almost impassable maze
 of plant life.  While the ground is covered in a carpet of flowers.  You
 hear many birds of all types calling out in the distance.  The air is full
-of moisture and the smell of green things.  The air feels cool.  
+of moisture and the smell of green things.  The air feels cool.
 ~
 0 270352 3
 Rd     0
@@ -10471,7 +10471,7 @@ All that is above you is a solid mass of green leaves.  Bright flowers
 are growing out of the trees.  The ground is a hard packed dirt.  You hear a
 constant rustle of animals in the undergrowth.  The air is heavy with the
 smell of flowers drifting on the air currents.  You feel a strange warmth in
-the air.  
+the air.
 ~
 0 270352 3
 Rd     0
@@ -10494,7 +10494,7 @@ There is extremely dense foliage overhead, blocking all access to the
 sky.  The undergrowth is dense and full of thorny plants.  While the ground
 is covered in a carpet of flowers.  Sounds of strange birds echo through the
 area.  The air is heavy with the smell of flowers drifting on the air
-currents.  You feel a strange warmth in the air.  
+currents.  You feel a strange warmth in the air.
 ~
 0 270352 3
 Rd     0

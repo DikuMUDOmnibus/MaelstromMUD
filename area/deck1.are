@@ -1,5 +1,5 @@
 #AREADATA
-Name        {??-???} Part of Quest       Decklarean~
+Name        Part of Quest~
 Levels      0 0
 Builders    Decklarean~
 VNUMs       1500 1599
@@ -17,10 +17,10 @@ Megnamisan~
 The Crazed Mage Megnamisan the Magnificant~
 The Crazed Mage Megnamisan the Magnificant is here.
 ~
-The Crazed Mage Megnamisan the Magnificant stands here in all his glory. 
+The Crazed Mage Megnamisan the Magnificant stands here in all his glory.
 His glowing purple robes shine with an inner light.  His eyes also glow with
 insanity.  He stands a proud four and a half feet tall.  His bald head has a
-red dragon tattoed onto it.  The red dragon appears to be holding a key.  
+red dragon tattoed onto it.  The red dragon appears to be holding a key.
 ~
 395267 168 0 0 S
 150 0 0 20000d0+0 0d0+0
@@ -50,8 +50,8 @@ The Demon Tegnarean~
 The Demon Tegnarean stands here defiantly.
 ~
 The Demon Tengnarean looms above you, his eyes aglow with hell fire.  The
-stench of death raidates around him.  His bat like wings tower behind him. 
-A horrible unholly gleam surronds him.  
+stench of death raidates around him.  His bat like wings tower behind him.
+A horrible unholly gleam surronds him.
 ~
 16387 503865596 229556 -1000 S
 107 0 0 300000d0+0 0d0+0
@@ -65,7 +65,7 @@ A Demon is here.
 ~
 A hell spawned demon with glowing, blood red eyes.  Fangs dripping poison
 and wings as black as night.  A stench of death permeants everything around
-it.  
+it.
 ~
 35 33620010 0 -1000 S
 30 0 0 2000d0+0 0d0+0
@@ -96,7 +96,7 @@ The Prophet Senaren is here.
 ~
 Senaren is aglow with an inner fire.  Golden hair, deep blue eyes, she is
 what some would call perfect.  But her faith has changed her and she looks
-not towards this world but to the world beyond.  
+not towards this world but to the world beyond.
 ~
 3 0 0 0 S
 50 0 0 300000d0+0 0d0+0
@@ -110,7 +110,7 @@ A kabear is here.
 ~
 The blood shot eyes of the Kabear glares at you.  Covered in a brown
 blackish fur, the Kabear reeks of garbage.  It stands as tall as an ogre,
-with claws as long as daggers, a primel killing machine that fears nothing. 
+with claws as long as daggers, a primel killing machine that fears nothing.
 ~
 1 0 0 -125 S
 50 0 0 6000d0+0 0d0+0
@@ -143,7 +143,7 @@ A kabear is here.
 ~
 The blood shot eyes of the Kabear glares at you.  Covered in a brown
 blackish fur, the Kabear reeks of garbage.  It stands as tall as an ogre,
-with claws as long as daggers, a primel killing machine that fears nothing. 
+with claws as long as daggers, a primel killing machine that fears nothing.
 ~
 1 0 0 -125 S
 75 0 0 17500d0+0 0d0+0
@@ -158,7 +158,7 @@ if ispc($r)
  endif
 else
  if name($r) == kabear
-  yell Death to all!!! 
+  yell Death to all!!!
  else
   Yell Die $r!!!
   mpkill $r
@@ -191,7 +191,7 @@ if ispc($r)
  endif
 else
  if name($r) == kabear
-  yell Death to all!!! 
+  yell Death to all!!!
  else
   Yell Die $r!!!
   mpkill $r
@@ -224,7 +224,7 @@ if ispc($r)
  endif
 else
  if name($r) == kabear
-  yell Death to all!!! 
+  yell Death to all!!!
  else
   Yell Die $r!!!
   mpkill $r
@@ -294,7 +294,7 @@ a small mouse~
 A small mouse is here.
 ~
 It looks like a small gray mouse.  But it has a wierd red tinge to it's
-fur.  
+fur.
 ~
 129 32768 16 0 S
 10 0 0 1000d0+0 0d0+0
@@ -390,22 +390,22 @@ reserved~
 E
 demon~
 The remains of a demon stands here frozen forever in it's final moments
-of life on this plain.  
+of life on this plain.
 ~
 E
 remains~
 The remains of a demon stands here frozen forever in it's final moments
-of life on this plain.  
+of life on this plain.
 ~
 E
 stone~
 The remains of a demon stands here frozen forever in it's final moments
-of life on this plain.  
+of life on this plain.
 ~
 E
 statue~
 The remains of a demon stands here frozen forever in it's final moments
-of life on this plain.  
+of life on this plain.
 ~
 #1504
 dartboard~
@@ -421,7 +421,7 @@ reserved~
 0 0 0
 E
 dartboard~
-The dartboard looks like it has seen alot of use.  
+The dartboard looks like it has seen alot of use.
 ~
 #1505
 shackles magic anti-magic~
@@ -636,12 +636,12 @@ reserved~
 E
 hole~
 As you look at the small hole you relise that something has eaten it's
-way out of the wall creating the hole.  
+way out of the wall creating the hole.
 ~
 E
 small~
 As you look at the small hole you relise that something has eaten it's
-way out of the wall creating the hole.  
+way out of the wall creating the hole.
 ~
 #1551
 Quest Token~
@@ -671,7 +671,7 @@ E
 medallion~
 On one side is the signet of Decklarean.  A sword pointed to the sky half
 in and half out of shadow.  It is aglow with magical power.  On the flip
-side is the simple rune of the quest.  
+side is the simple rune of the quest.
 ~
 #1553
 Glowing Rock Gem~
@@ -699,7 +699,7 @@ This lab has been completely destroyed.  Lab equipment smashed against
 walls.  Tables and chairs shattered into peaces.  Scorched objects that
 could only have been books are scattered everywhere.  The only things that
 have servived are the door leading out of the lab and the giant pentagram
-drawn onto the floor in the center of the room.  
+drawn onto the floor in the center of the room.
 ~
 0 0 0
 Rd     0
@@ -714,7 +714,7 @@ These stairs are showing obvius signs of neglect and damage from the
 weather.  How they stay connected to the outside of the tower is almost
 magical.  The few supports that haven't rotted away could not be holding the
 stairs up.  The wooden door at the top of the stairs is only in slightly
-better condition.  
+better condition.
 ~
 0 0 0
 Rd     0
@@ -732,7 +732,7 @@ Stairs outside the Tower~
 Standing next to the old tower, obvious sings of age, weather, and
 neglect are apparent.  How it remains standing is a testimony to the
 carefull craftsmanship of long dead masons.  The stairs wraping around the
-outside of the tower are in far worse condition. 
+outside of the tower are in far worse condition.
 ~
 0 0 0
 Rd     0
@@ -762,7 +762,7 @@ Bottom level of the Pit of Death~
 &RYou are in the bottom level of the Pit of Death.  The inferno around you
 scortches you with every passing second.  You are experencing true hell fire
 as it sweaps over you without mercy.  In its cackling noise you can hear the
-screams of tormented souls.  Forever crying for mercy.  
+screams of tormented souls.  Forever crying for mercy.
 ~
 0 277102592 0
 Rd     3000
@@ -802,7 +802,7 @@ Near the Tower~
 The tower before you appears to be old by anybody standerds.  Made of
 gray stone it rises only two stories from the moss coverd forest floor.  The
 stairs which wraps around the tower starts off to the west.  The whole
-structure looks ready to collapse.  
+structure looks ready to collapse.
 ~
 0 0 0
 Rd     0
@@ -819,7 +819,7 @@ S
 Narrow Path~
 The heavy woods and foilage around confine you to the narrow path.  To
 the south can be heard the familer noises of the vale.  To the north an old
-crumbling tower stands in a small moss covered clearing.  
+crumbling tower stands in a small moss covered clearing.
 ~
 0 0 0
 Rd     0
@@ -836,7 +836,7 @@ S
 Narrow Path~
 The heavy woods and foilage around confine you to the narrow path.  To
 the south can be seen the vale path, to the north can be seen the barest
-hint of some kind of building.  
+hint of some kind of building.
 ~
 0 0 0
 Rd     0
@@ -874,7 +874,7 @@ Jungle~
 Extremely dense foliage overhead, blocking all access to the sky.  The
 undergrowth is dense and full of thorny plants.  A shallow pool of murky
 water covers the ground.  There is a strange screeching coming from
-somewhere above you.  There is deep earthy smell around here.  
+somewhere above you.  There is deep earthy smell around here.
 ~
 0 0 0
 Rd     0
@@ -915,7 +915,7 @@ D1
 S
 #1525
 Before the Quest Hall~
-Around you stretches an endless blackness, devoid of motion and color. 
+Around you stretches an endless blackness, devoid of motion and color.
 An endless emptyness that strips away sight and your every noise disapears
 as if never being.  The platform you stand on is almost indistinct, it's
 edge lost to the blackness no light source can remove or reveal.  To your
@@ -923,7 +923,7 @@ north a door stands on the edge of the platform or in the middle it is hard
 to determine but it stands to the north.  The door is framed in a gold arch
 contrasting with the plain polished wood of the door.  Carved into the door
 is the signent of Decklarean, a sword reaching for the stars ablaze with
-power, half in darkness, half in light.  
+power, half in darkness, half in light.
 ~
 0 0 0
 Rd     0
@@ -950,8 +950,8 @@ The platform is a grey compared to the emptiness around you, it is solid and flu
 E
 arch~
 The arch appears to be made of gold and fine carvings in a flowing script
-are etched into it's surface.  Warnings in the languages of all time. 
-Warning to those of the faint heart not to enter.  
+are etched into it's surface.  Warnings in the languages of all time.
+Warning to those of the faint heart not to enter.
 ~
 E
 door~
@@ -959,7 +959,7 @@ The door is made of some plain wood, polished to a shine.  The signent of
 Decklarean is carved into it's surface with the skill of the master
 artistant.  The appearance is of a sword reaching for the stars ablaze with
 power, half in darkness, half in light.  All done with the simple elegence
-of the carving.  
+of the carving.
 ~
 D0
 ~
@@ -1179,7 +1179,7 @@ You are in a field of flowing red grass.  A wall of glowing grey fog
 blocks your passage to the north and west.  It is a physical barrier, when
 you touch it is like touching a solid wall.  There is some distance above to
 the grey fog blocking the way up.  There is a strange gate to the southeast
-appearing to hang on nothing.  
+appearing to hang on nothing.
 ~
 0 0 0
 Rd     0
@@ -1206,7 +1206,7 @@ You are standing in a field of red grass.  A wall of fog blocks your
 passage to the north.  When you touch it is solid and does not yield.  High
 above you the grey fog blocks exit to the sky.  The light is an strange grey
 with the source coming from the fog itself.  There is a strange gate to the
-south.  It appears to sticking out of nowhere.  
+south.  It appears to sticking out of nowhere.
 ~
 0 0 0
 Rd     0
@@ -1233,7 +1233,7 @@ You are standing in a field of red grass.  The way north and east is
 blocked by some strangely glowing grey fog.  When you touch the fog it is
 like touching a solid object.  Above you the fog covers the sky letting only
 it's own strange grey light to illuminate the area.  There is a strange gate
-to the southwest, hanging in the air.  
+to the southwest, hanging in the air.
 ~
 0 0 0
 Rd     0
@@ -1254,7 +1254,7 @@ S
 A field~
 You are in a field of red grass.  A wall of fog blocks you from going
 west.  The fog is solid to the touch and unyielding.  High above you the
-wall of fog blocks out the sky.  A strange gate can be seen to the east.  
+wall of fog blocks out the sky.  A strange gate can be seen to the east.
 ~
 0 0 0
 Rd     0
@@ -1306,7 +1306,7 @@ A field~
 You are in a field of red grass.  A wall of glowing grey fog blocks your
 exit to the east.  When you touch the fog it is like touching a wall of
 solid stone.  Like a fluid stone that flows and ebbs like fog.  You can see
-a strange glowing gate to your west.  
+a strange glowing gate to your west.
 ~
 0 0 0
 Rd     0
@@ -1332,7 +1332,7 @@ A field~
 You are in a field of red grass.  There is a wall of glowing grey fog to
 you south and west.  The fog is solid to the touch, but continues to move as
 if a slight breeze was shifting it.  It still maintans a solid surface to
-you.  To the north east a gate appears to come out of nothings.  
+you.  To the north east a gate appears to come out of nothings.
 ~
 0 0 0
 Rd     0
@@ -1354,7 +1354,7 @@ A field~
 You are standing in a field of red grass.  A wall of strange glowing grey
 fog blocks you to the south.  It is solid to the touch and damp.  It flows
 and ebbs like fog but maintains the wall.  To the north there is a strange
-gate.  
+gate.
 ~
 0 0 0
 Rd     0
@@ -1381,7 +1381,7 @@ You are standing in a field of red grass.  A glowing wall of grey fog
 block you to the east and south.  When you touch the wall it is like
 touching a hard surface that constanty shifts and flows.  High above you the
 fog blocks out the sky.  To the north west a glowing gate appears to be
-coming out of no where.  
+coming out of no where.
 ~
 0 0 0
 Rd     0
@@ -1401,7 +1401,7 @@ S
 #1559
 Above a field~
 The grey fog surronds you, preventing you from leaving.  Below you is a
-field of red grass.  
+field of red grass.
 ~
 0 0 0
 Rd     0
@@ -1421,7 +1421,7 @@ S
 #1560
 Above a field~
 A wall of glowing grey fog prevents you from flying out of here.  Below
-you can see a field of red grass slowly swaying to an unfelt wind.  
+you can see a field of red grass slowly swaying to an unfelt wind.
 ~
 0 0 0
 Rd     0
@@ -1445,7 +1445,7 @@ S
 #1561
 Above a field~
 The wall of grey fog prevents you from flying out of here.  Below you a
-red grass field slowly sways to some unfelt breeze.  
+red grass field slowly sways to some unfelt breeze.
 ~
 0 0 0
 Rd     0
@@ -1512,8 +1512,8 @@ D5
 S
 #1564
 Above a field~
-The wall of glowing grey fog surronds you and prevents you from leaving. 
-Below you the field of red grass sways in some unfelt wind.  
+The wall of glowing grey fog surronds you and prevents you from leaving.
+Below you the field of red grass sways in some unfelt wind.
 ~
 0 0 0
 Rd     0
@@ -1538,7 +1538,7 @@ S
 Above a field~
 The wall of glowing grey fog surronds you preveting you from flying out
 of here.  Below you the field of red grass stands strangly still, as if
-frozen in a moment of time.  
+frozen in a moment of time.
 ~
 0 0 0
 Rd     0
@@ -1558,7 +1558,7 @@ S
 #1566
 Above a field~
 The wall of grey fog prevents you from leaving.  Below you the field of
-red grass moves in a checker pattern as it sways in an unfelt wind.  
+red grass moves in a checker pattern as it sways in an unfelt wind.
 ~
 0 0 0
 Rd     0
@@ -1583,7 +1583,7 @@ S
 Above a field~
 The wall of glowing grey fog swirles around you preventing you from
 leaving.  Below you the field of red grass appears to move in starnge
-gemetric shapes as it sways in an unfelt wind.  
+gemetric shapes as it sways in an unfelt wind.
 ~
 0 0 0
 Rd     0
@@ -1619,37 +1619,37 @@ Rd     0
 E
 quests~
 Quest Creation:
- 
+
 1.)  Get aprovel for a Quest from the Head of the Quest Council.
- 
+
 2.)  Have a story for the quest.  Write it out.
- 
+
 3.)  If there will be hints during the quest decie on them before the quest
      starts.  Write them out.
- 
+
 4.)  Have a deffinent conclusion to the quest that is attainable by the levels
      perticipating.  Write them out.
- 
+
 5.)  If you need any special rooms, mobs, or items created for the quest infrom
      the Head of the Quest Council so vnums can be assigned from the Quest
      Area.  Write them out.
- 
+
 6.)  If an item or mob needs to be added to an already existing area inform
      the Head of Quest Council.  Write them out.
- 
+
 7.)  Put this all in a note and send it to Decklarean.
 ~
 E
 items~
 Quest Items:
- 
+
 1.)  Quest items must all have QUEST in there name.  This goes for Items
      renamed as rewards for Quests.
- 
+
 2.)  They may be 5 levels more powerfull than a comparable item made with the
      building rules.  Get permission from the Head of the Quest Council if an
      item is beyond this.
- 
+
 3.)  A reqular game item can be lowered 5 levels as a reward in a quest but it
      may not be any immortal only item.
 ~
@@ -1706,7 +1706,7 @@ hunched over a map in a dark forest.  Monster of all discriptions are hinted
 at in the shadows of the woods, but Yenlar is stairing down unaware at his
 map.  The flame of his torch doesn't appear to the be the factor in holding
 back the monster.  The rembered bight of the gleeming sword being used
-casualy to hold his map flat appears to be the more potent deterent.  
+casualy to hold his map flat appears to be the more potent deterent.
 ~
 0 0 0
 Rd     0
@@ -1726,7 +1726,7 @@ shadow lies here that darkens your soul Above you the image is swirling
 darkness and shadows.  It all centering around Nemesis, his eyes gates into
 hell, no mercy ever existing in him.  Cloaked in darkness wouth a soul of
 evil, a pure hatred radiates from him.  His mouth a vishes smile as he walks
-across the shattered remains of the innocent.  
+across the shattered remains of the innocent.
 ~
 0 0 0
 Rd     0
@@ -1773,7 +1773,7 @@ resignation battle with each other in the fire of his eyes, a fire that
 radiates from his soul.  His right hand is clenched around the hilt of a
 shattered sword raised in triump.  Blood smeared face and shattered armor
 covered in gore, all attest to his bravery.  Yet all is drawn back to his
-pearcing blue eyes, demanding respect, and peering into your very being.  
+pearcing blue eyes, demanding respect, and peering into your very being.
 ~
 0 0 0
 Rd     0
@@ -1791,7 +1791,7 @@ with shovel and axe dominates the northeast corner.  A much used fire pit is
 just out from under the cover of the pavilion east side within easy reach of
 someone sitting on the stump.  Signs of a bit of fire damage can be seen in
 the ceiling near the fire pit.  The sounds and smells of the deep forest
-surrond the place.  Giving you a deep sense of peace.  
+surrond the place.  Giving you a deep sense of peace.
 ~
 0 4 3
 Rd     0

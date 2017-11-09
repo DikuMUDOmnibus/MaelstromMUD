@@ -1,5 +1,5 @@
 #AREADATA
-Name        {80-100} Tower of Sorcery    Grunt~
+Name        Tower of Sorcery~
 Levels      0 0
 Builders    Grunt~
 VNUMs       300 499
@@ -179,7 +179,7 @@ Page of Pentacles~
 The Page of Pentacles doesn't like vistitors in the hall!
 ~
 Like all the pages, this one is younge and loyal to his suit.  However,
-the family of pentacles is a little more reluctant of vistitors.  
+the family of pentacles is a little more reluctant of vistitors.
 ~
 35 8360 0 0 S
 80 0 0 16000d0+0 0d0+0
@@ -191,8 +191,8 @@ king pentacles pent~
 The King of Pentacles~
 A King hides here, darkened by the shadows that surround.
 ~
-A rather large man sits here guiding magic with the way of the pentacle. 
-A rather ritualistic man, he seems to mutter words of dire forbodence.  
+A rather large man sits here guiding magic with the way of the pentacle.
+A rather ritualistic man, he seems to mutter words of dire forbodence.
 ~
 3 33579688 0 0 S
 95 0 0 14080d0+0 0d0+0
@@ -206,7 +206,7 @@ The Queen gazes deeply into her pentacle, seemingly lost in time.
 ~
 You can't help but notice the intensity of which she places upon her
 pentacle.  She's a rather sturn lady with little desire to aid those outside
-her obvious solitary realm.  
+her obvious solitary realm.
 ~
 3 268460712 0 0 S
 95 0 0 14080d0+0 0d0+0
@@ -219,7 +219,7 @@ Knight of Pentacles~
 The Knight of Pentacles sits upon his black horse.
 ~
 A rather stubborn brunt of a man, whose pale horse seems to suit only he.
-Dressed in the Pentacle war gear, he is surely prepared to fight.  
+Dressed in the Pentacle war gear, he is surely prepared to fight.
 ~
 3 33570984 0 0 S
 95 0 0 14080d0+0 0d0+0
@@ -247,7 +247,7 @@ the horse~
 A bulky black horse stands ground here.
 ~
 A massive and froathing beast.  Probally conjured by Pentacles through
-magical means.  
+magical means.
 ~
 3 8232 0 0 S
 65 0 0 10000d0+0 0d0+0
@@ -275,7 +275,7 @@ A quick and lofty white horse rides past you like the wind!
 ~
 Pure white in colour, less the trickles of blood from battle, the
 Knight's horse seems to be very face paced.  It's hoofs look as though they
-could cut through your armor in an instance.  
+could cut through your armor in an instance.
 ~
 35 8232 0 0 S
 65 0 0 12000d0+0 0d0+0
@@ -288,7 +288,7 @@ The Queen of Swords~
 The Queen sits here in a rather pleasant state.
 ~
 Unlike the other swords, the queen seems to be uninterested in war.  Her
-sword represents more then that of combat.  
+sword represents more then that of combat.
 ~
 3 201334912 0 0 S
 90 0 0 12800d0+0 0d0+0
@@ -315,7 +315,7 @@ The Tower~
 The Tower of Sorcery comes to life and attacks YOU!
 ~
 You can hardly look at it, for it's magic is way beyond that of your
-knowledge.  The Tower is really built like a TANK!!  
+knowledge.  The Tower is really built like a TANK!!
 ~
 35 33570856 0 0 S
 100 0 0 17500d0+0 0d0+0
@@ -541,7 +541,7 @@ Adam~
 Adam stands amidst the lush garden.
 ~
 Representing the society of Mankind, Adam is the prime example of the
-rash and bold decisions we all make when faced with a choice.  
+rash and bold decisions we all make when faced with a choice.
 ~
 3 8192 0 0 S
 90 0 0 20000d0+0 0d0+0
@@ -559,7 +559,7 @@ Eve~
 Eve stares about the garden, naive to herself.
 ~
 Eve portays the softer, and somewhat innocent side of being human, and
-the unknowing foolishness which sometimes accomanies it.  
+the unknowing foolishness which sometimes accomanies it.
 ~
 3 8193 0 0 S
 95 0 0 20000d0+0 0d0+0
@@ -693,7 +693,7 @@ The great Martyr is here pondering his sacrifice
 A marvelous lad, the epitomy of all the reaches into the heavens.  He is
 the Son of Suns, and sits at the right hand of the holy one.  He brings
 miracle and sanctuary to the wicked world.  He has been hung for the sins of
-man, the sins of all that walk!  
+man, the sins of all that walk!
 ~
 3 470294656 0 1000 S
 100 0 0 12300d0+0 0d0+0
@@ -717,7 +717,7 @@ The Hierophant~
 The Hierophant blesses you as you pass through his domain.
 ~
 He is the ruling power of external relgion, also he is the keeper of the
-keys.  
+keys.
 ~
 3 369107176 0 0 S
 103 0 0 15375d0+0 0d0+0
@@ -807,7 +807,7 @@ the Empress~
 The Empress sits on her throne gazing across the land.
 ~
 She is the epitemy of grace, and all that is divine.  She splits planets
-with a wave of her wand, and controls the stars the sing high above.  
+with a wave of her wand, and controls the stars the sing high above.
 ~
 16387 469786792 0 0 S
 104 0 0 16400d0+0 0d0+0
@@ -3359,15 +3359,15 @@ A
 #300
 Tower of Sorcery~
 &cAmidst a cold and dark corridor, where light illuminates from tiny
-wafers of air, you find yourself immersed in a shower of hyper-awareness. 
+wafers of air, you find yourself immersed in a shower of hyper-awareness.
 Particles of energy form at the base of your spine then travel slowly upward
 creating a most unimaginable feeling.  Something with in the air, or perhaps
 the air itself, is forming your thoughts and deeds.  This is not the place
 for mere mortals to adventure freely, for the fibres of all that is magical
 in the land connect infallibly at the core of all that is around you.  To
-the north lies a massive wooden door, with carved faces for a frame. 
+the north lies a massive wooden door, with carved faces for a frame.
 Whatever the secret be that lies beyond the door will be surely kept upon
-your imminent death.  
+your imminent death.
 ~
 0 -2142896128 0
 Rd     0
@@ -3383,14 +3383,14 @@ S
 #301
 The Tower of Sorcery~
 &cImmediately upon your untimely entrance the door crashes shut behind you
-with an echo that sends tremors down the magical hall that lies before you. 
-Several groans reveal themselves from the mist that clutters your vision. 
+with an echo that sends tremors down the magical hall that lies before you.
+Several groans reveal themselves from the mist that clutters your vision.
 You have the feeling that your vision isn't going to help you for what you
 see dimly though the mist, is not part of your present reality.  It seems
 things are about to change forever.  A scream shrieks in the distance and
 the floor that was to the north shatters and caves into nothing.  Tilting
 your head up in utter despair an emerald vortex errupts, swirling near the
-speed of light, slowly hypnotizing you.  
+speed of light, slowly hypnotizing you.
 ~
 0 -2143018999 0
 Rd     0
@@ -3417,7 +3417,7 @@ you to observe your new surroundings.  You stand on a one foot cubed square
 which is marked with a strange and mystically symbol.  Identical stones head
 off into the distance only to cave into nothingness in a ten foot radius
 about you.  None of the four cardinal directions visually exist, however
-your soul reveals that all are possible.  
+your soul reveals that all are possible.
 ~
 0 -2143027191 0
 Rd     0
@@ -3483,7 +3483,7 @@ S
 Void of Zohar~
 You are covered in a substance that is not.  It is not black, nor is it
 white.  It is here and there, it is not here nor there.  Your body is
-trapped within Zohar's void.  
+trapped within Zohar's void.
 ~
 0 -2008670203 0
 Rd     0
@@ -3509,9 +3509,9 @@ S
 Hall of Wands~
 Suddenly you find yourself in a great hall.  The ceiling rushes up nearly
 twenty feet into the thin air about you.  The carpet is red, and the walls
-are decorated with paper marked with a yellow print of lizards and lions. 
+are decorated with paper marked with a yellow print of lizards and lions.
 You feel calm and safe, however a little confused as to how you actually got
-here.  Magic fills the halls, as you look off into the north.  
+here.  Magic fills the halls, as you look off into the north.
 ~
 0 -2142887931 0
 Rd     0
@@ -3532,7 +3532,7 @@ creating a marvelous spectrum of light that dances down onto the page, who
 awaits his and her majesty of wands' orders.  Taking a deep breath your body
 is filled with a magical sensation.  To the north, east and west huge doors
 protect the royal souls.  All may seem safe, however surely by now you
-should have realized that what you see and feel, isn't always the truth.  
+should have realized that what you see and feel, isn't always the truth.
 ~
 0 -2142887927 0
 Rd     0
@@ -3558,7 +3558,7 @@ Courtyard of Wands~
 You are experiencing quite a visual spectacle.  From the magical air of
 the hall before, you now are surrounded in desert.  This is where the knight
 of wands practices battle with his brown horse.  Perhaps he may confuse you
-for an outlaw, spilling your blood about the the sandy ground.  
+for an outlaw, spilling your blood about the the sandy ground.
 ~
 0 -2142887927 10
 Rd     0
@@ -3659,7 +3659,7 @@ Her Majesty's Domain~
 You have floated upon the majesty herself.  She seems fixated on the
 large cup that she holds.  It all reminds you of gypsy fortune telling,
 however this seems to be a little more serious.  The waves curve around her
-throne as though nothing should disturb her gazing.  
+throne as though nothing should disturb her gazing.
 ~
 0 -2147082240 7
 Rd     0
@@ -3674,7 +3674,7 @@ The King's throne seems to float with great ease on the water.  Waves
 seem to curl around it as though afraid of clashing with the obviously
 powerful force.  Far off in the distance a large ship can been seen, however
 you would easily be destroyed venturing after it.  A friendly dolphin swims
-along side the King watching you carefully.  
+along side the King watching you carefully.
 ~
 0 -2142887936 7
 Rd     0
@@ -3690,7 +3690,7 @@ to be all part of that which is evil.  The walls are lined with a sticky
 black mesh-like material.  The ground is damp and sounds of a dripping
 spring echoe off the walls about you.  Again you find it hard to believe
 your eyes.  To your west a giant rock with a pentacle carved in with blood
-blocks your exit.  
+blocks your exit.
 ~
 0 -2143018999 0
 Rd     0
@@ -3709,7 +3709,7 @@ You have entered into the heart of a black damp cavern, which seems to be
 home to the family Pentacles.  Your heart pounds as you gaze upward into a
 black void where you thought the roof would be.  It's hard to believe from
 this point of view that you are actually within a tower of sorts.  The page
-seems to be unaware of your entrance as he attends to his own matters.  
+seems to be unaware of your entrance as he attends to his own matters.
 ~
 0 -2143018999 0
 Rd     0
@@ -3735,7 +3735,7 @@ Courtyard of Pentacles~
 You have entered what seems to be a dungeon of sorts.  A savage man rides
 about ranting and raving about how he's about to crush you.  Perhaps it is
 time to leave?  Leaving would be a good idea, however you seem to be very
-stuck in a black web that erupts from the ground.  
+stuck in a black web that erupts from the ground.
 ~
 0 -2142887928 0
 Rd     0
@@ -3749,7 +3749,7 @@ The King's Domain~
 You've enter a small garden filled with lush flowers and vines.  A
 trinkle of water flows past you as you gaze up at the omnious throne sitting
 before you.  The vines cross in and out of the grailling of the throne,
-while the King sits patiently.  
+while the King sits patiently.
 ~
 0 -2143281151 0
 Rd     0
@@ -3764,7 +3764,7 @@ The room smells of sweet perfumes and magical essence.  Your head brushes
 a low tree that waves in the gentle breeze seemly created from something
 other then the wind.  You can't help but notice the immaculate glare and
 intensity in which the queen places upon the focus of her pentacle.  A wave
-of dispair falls upon you, as your spine cracks with sensations.  
+of dispair falls upon you, as your spine cracks with sensations.
 ~
 0 -2142887935 0
 Rd     0
@@ -3846,7 +3846,7 @@ S
 King's Domain~
 You have entered a massive garden.  A huge throne has been placed in the
 middle surrounded with wild flowers.  You body vibrates with passion as you
-enter into the garden of the king whose blade is sheathed.  
+enter into the garden of the king whose blade is sheathed.
 ~
 0 -2142887928 0
 Rd     0
@@ -3857,11 +3857,11 @@ D0
 S
 #327
 The Tower of Sorcery~
-Both the ceiling and floor seem to be encrusted with a swirling vortex. 
+Both the ceiling and floor seem to be encrusted with a swirling vortex.
 You can feel a cold draft coming from the east, and a red light seems to
 flicker deep within a cave to the west.  You are continually amazed at how
 surreal this tower is.  In fact it's very difficult to believe you are in a
-tower at all.  
+tower at all.
 ~
 0 -2147483648 0
 Rd     0
@@ -3889,14 +3889,14 @@ of this.  It seems that if one were to venture of to the east and follow the
 fool, it would most likely result in your death.  The fool is selling stuff
 that is fit for a fool, however one can never be to sure about price or
 value when dealing with a fool.  Perhaps the Fool only needs a friend to
-straighten him out.  There is a sign here.  A VERY BIG SIGN.  
+straighten him out.  There is a sign here.  A VERY BIG SIGN.
 ~
 0 -2147081216 0
 Rd     0
 E
 sign~
 A sign is here with words of wisdom:
- 
+
 &RIF YOU GO EAST YOU WILL DIE!!!!!!!!!
 ~
 D1
@@ -3912,7 +3912,7 @@ S
 Falling off a Cliff!!!~
 You float off the edge of a cliff, until you look down and see your
 inevibable doom!  A huge gust of wind pulls you down deep into the bowls of
-the tower!  
+the tower!
 ~
 0 -1979310079 0
 Rd     0
@@ -3926,7 +3926,7 @@ The Bowels of the Tower~
 You are struggling with all your might to be freed from this pit of doom.
 A brick falls onto you, knocking you silly.  As you awake you realize you
 are at war with the tower itself!  Can you destory such a powerful building?
-I suggest ye invoke the brick before it crushes you senseless!  
+I suggest ye invoke the brick before it crushes you senseless!
 ~
 0 -1878646780 0
 Rd     300
@@ -3964,7 +3964,7 @@ massive cycle of life and retrospection, you can only sit back and gaze
 deeply into the new found realty that exists.  At first it seems like
 perhaps this planetary experience is not very new at all, however this time
 you are immersed with in that which you've seen only from a million miles
-away.  
+away.
 ~
 0 -2147090423 0
 Rd     0
@@ -3999,7 +3999,7 @@ In complete silence, you begin to orbit around a massive rock.  To your
 eye it may seem that you are actually on the moon, however such is not the
 case.  You are witnessing the essence of the moon, the power that such a
 massive thing has.  It's a new way to look at things, a perception you shall
-never forget.  
+never forget.
 ~
 0 -2147082231 9
 Rd     0
@@ -4013,7 +4013,7 @@ The Star~
 The heat produce from the star is almost unbearable.  Your skin seems to
 shrivel and distort as the cancer-rays enter your body.  The star's magic is
 immense for it can filter through the air and enter at all angles.  A beam
-of light zooms past nearly dislodging your head.  
+of light zooms past nearly dislodging your head.
 ~
 0 -2012864503 7
 Rd     0
@@ -4091,7 +4091,7 @@ S
 The Pond of Temperance~
 You have come to a small and clear pond.  You feel that this is where men
 come to recieve immortallity.  Temperance wades delicately amongst the clear
-waters of the marvelous pond.  
+waters of the marvelous pond.
 ~
 0 -2012864503 0
 Rd     0
@@ -4117,7 +4117,7 @@ S
 Plains of Strength~
 You have come across a vast plain, where dried grasses seem nearly burnt.
 The wind blows lightly across the land creating tumble weed and warmth with
-in.  Harmony amongst all living things is most evident here.  
+in.  Harmony amongst all living things is most evident here.
 ~
 0 134619145 0
 Rd     0
@@ -4131,7 +4131,7 @@ Garden of Eden~
 You are inside the a vast a lush garden filled with many fruits and
 wildlife.  A giant tree juts out of the ground here, emitting a glow of
 peace and warmth.  It would be a bad idea to eat the fruit of this tree for
-the Lord Himself hath commanded it.  
+the Lord Himself hath commanded it.
 ~
 0 401417 0
 Rd     0
@@ -4144,9 +4144,9 @@ S
 Wheel of Fortune~
 Are you feeling lucky today mortal?  A massive wheel spins incessantly
 about you predicting your fate.  You look deep into the spiral seeing all at
-once.  Your childhood flashes before you, your death and life there after. 
+once.  Your childhood flashes before you, your death and life there after.
 A gust of wind knocks you to your feet, as the wheel spins for your present
-fate.  
+fate.
 ~
 0 401421 0
 Rd     0
@@ -4159,9 +4159,9 @@ S
 Halls of Justice~
 You have entered the court of Justice!  Here is where you shall be dealt
 with accordingly.  If thou does not permit this to occur then suffer the
-wrath of the court.  Two massive columns ivory columns separate the bench. 
+wrath of the court.  Two massive columns ivory columns separate the bench.
 A chair has been set off to the side for the accuse, who right now seems to
-be you.  
+be you.
 ~
 0 134619149 0
 Rd     0
@@ -4208,7 +4208,7 @@ The Void~
 You find yourself spinning out of control in complete darkness.  Several
 doors spin along with you, but it's hard to tell exactly which direction
 they lie in.  You spin, and spin until finally landing face first on another
-platform, disorientated and totally lost.  Where are you now?  
+platform, disorientated and totally lost.  Where are you now?
 ~
 0 401417 0
 Rd     0
@@ -4261,11 +4261,11 @@ D0
 S
 #351
 Tossed in Darkness~
-You slide off into a void-like darkness, encompassed by 'nothingness'. 
+You slide off into a void-like darkness, encompassed by 'nothingness'.
 Your body squirms and twitches to the new sensations, and all at once is
-thrown into convulsions from the mass hallucinations the darkness creates. 
+thrown into convulsions from the mass hallucinations the darkness creates.
 A beast roars, a flower blossoms, then an angel heals your soul.  Tis all a
-part of this magically tower no doubt.  
+part of this magically tower no doubt.
 ~
 0 -2147483648 0
 Rd     0
@@ -4285,7 +4285,7 @@ find yourself amidst a void of darkness.  You see trails of colour but can
 not make out any dominate shapes.  A vortex blasts into exist directly above
 you, then is gone as if it was never there.  Your eyes find it difficult to
 adjust to the constant flux of your surroundings, and finally you collapse
-in a fit of anxiety.  
+in a fit of anxiety.
 ~
 0 -2147082231 0
 Rd     0
@@ -4314,7 +4314,7 @@ preception seemingly presenting another hallucination.  Your mind wanders
 with violent rage, attracked to all edges of this black and desolate
 platform.  You feel as though you are on show, like a china doll in a glass
 cage.  For a breif second another swirling vortex directly above fades into
-existance, then is gone like ghosts of the past.  
+existance, then is gone like ghosts of the past.
 ~
 0 -2147082231 0
 Rd     0
@@ -4340,7 +4340,7 @@ Foothills of Mount Golgatha~
 You have come to the foothills of the great Mount Golgatha.  High up
 above you can see three wooden crosses emplanted into the ground.  The
 heavens seem to be in a sort of cosmic uproar, as you hear thunder
-incessantly.  Below a grate can be seen.  
+incessantly.  Below a grate can be seen.
 ~
 0 -2147082231 0
 Rd     0
@@ -4362,7 +4362,7 @@ Path up Golgatha~
 You are travelling a dirty path up the side of Golgatha where it's
 obvious from here that someone is being killed.  Thunder blazes through your
 skin, as dark red clouds hover high above.  Seems today is a rather dark day
-to be visiting the top of this bloody mountain.  
+to be visiting the top of this bloody mountain.
 ~
 0 -2147082231 9
 Rd     0
@@ -4398,11 +4398,11 @@ S
 #359
 Golgatha~
 You stand on a mound of death and decay.  Skulls from past victims
-scatter the ground, and presently yet another execution is occurring. 
+scatter the ground, and presently yet another execution is occurring.
 People come around the three men who are up high nailed to their crosses
 awaiting death.  Screams of pity from the pious who watch on with glazed
 eyes penetrate your heart.  Why?  Why are they killing these men in such a
-brutal fashion?  
+brutal fashion?
 ~
 0 -2147082231 9
 Rd     0
@@ -4433,7 +4433,7 @@ Below Golgatha~
 You continue to decend further into a the dirt below Mount Golgatha.  A
 voice taunts your journey downward, and the path seems to be unbarable.  The
 heat from below is so intence that you see red embers emitting an evil glow
-upward.  
+upward.
 ~
 0 -2147082231 0
 Rd     0
@@ -4450,7 +4450,7 @@ S
 Below Golgatha~
 You have dug along ways beneath the ancient city, and now a thin crust
 lies between you and your damned fate.  A red glow billows out from below
-you, not much is standing between you and the evil that lurks below.  
+you, not much is standing between you and the evil that lurks below.
 ~
 0 -2113527799 0
 Rd     0
@@ -4466,8 +4466,8 @@ S
 #363
 The Keeper of Keys~
 You part through branches and enter into a large garden.  A pale man sits
-on a throne deep within a gazebo that's surrounded with vines and berries. 
-You body is filled with awe, as you realize this is a religious ground.  
+on a throne deep within a gazebo that's surrounded with vines and berries.
+You body is filled with awe, as you realize this is a religious ground.
 ~
 0 -2008670207 0
 Rd     0
@@ -4489,7 +4489,7 @@ things are about to change forever.  A scream shrieks in the distance and
 the floor that was to the north shatters and caves into nothing.  Tilting
 your head up in utter despair an emerald vortex errupts, swirling near the
 speed of light, slowly hypnotizing you.  Directly above another vortex fades
-in and out of existance.  
+in and out of existance.
 ~
 0 -2147483648 0
 Rd     0
@@ -4512,7 +4512,7 @@ Mist rolls about your feet with great frenzy.  You've entered a dark
 valley seemingly secluded from the rest of the tower.  A voice passes
 through the mist echoing vibes of love and magic.  To the north a colourful
 garden breathes a motif of seduction, while the south a marble court lazily
-rests.  A massive bird swoops through the mist narrowly missing your brow.  
+rests.  A massive bird swoops through the mist narrowly missing your brow.
 ~
 0 -2147082231 0
 Rd     0
@@ -4535,7 +4535,7 @@ You've entered into a rather viney garden.  Berries grow in all different
 varieties, and their lush smell easily penatrates into your nostrils.  A
 lady lies elegantly on the cool grass awaiting your arival.  She's the
 empress of all that lives and moves, and this garden is as lovely an
-attraction as she is.  
+attraction as she is.
 ~
 0 -2012864503 0
 Rd     0
@@ -4550,7 +4550,7 @@ Here stands the emperor himself, veiled in magic from all reaches of the
 land.  His court is decorated to match that of any great royal figure.  Two
 giant columns mark the entrance to where his massive stone throne sits
 incessantly.  Invarible whisps of wind gail through the court brushing the
-embers of all life forms.  
+embers of all life forms.
 ~
 0 -2147082231 0
 Rd     0
@@ -4589,7 +4589,7 @@ You have reached the top of the tower.  Two great hallways lead of to
 the north and south, both equally majestic and intruiging.  Torches line the
 walls casting shadows down into the light fog that dances about.  A tiny
 ringing is occuring with in your ears: do not enter if ye are not prepared
-to visit the essence of all magic.  
+to visit the essence of all magic.
 ~
 0 -2147483648 0
 Rd     0
@@ -4616,7 +4616,7 @@ You walk slowly and unsure down a vast and omnious hall.  A layer of
 greenish fog rolls along the ground, dancing over your feet.  The tall
 ceiling gives a feeling of infinity and strength of all that exists.  Your
 spine tingles with an immense flux of energy as you casually strut down the
-hall filled with the awakenings of a magical essence.  
+hall filled with the awakenings of a magical essence.
 ~
 0 -2147082231 0
 Rd     0
@@ -4635,7 +4635,7 @@ To the north a massive door blocks your passage.  It's obvious that that
 which stands behind this very important looking door is something far beyond
 your comprehension.  A thin layer of mist rolls out from underneath the door
 to cast a haze over your feet.  A torch emits an eternal light through out
-the hall where you stand in preparation of the ultimate encounter.  
+the hall where you stand in preparation of the ultimate encounter.
 ~
 0 -2147081719 0
 Rd     0
@@ -4662,7 +4662,7 @@ that which is here is unimaginable, and unforgettable.  You face a large
 altar which is headed by the magician himself.  This youthful figure holds
 the power of all four suits; wands, cups, pentacles, and swords, thus making
 his magic omnipotient.  You gaze deep into the room, entranced by the
-hypnotic mist that trails about.  
+hypnotic mist that trails about.
 ~
 0 -2008670207 0
 Rd     0
@@ -4674,11 +4674,11 @@ S
 #374
 Hall of Magic~
 Through the fog that rolls along the ground you catch a glimpse of a
-crimson carpet that has been laid out with the upmost fashion and royalty. 
+crimson carpet that has been laid out with the upmost fashion and royalty.
 It's obvious that once you reach the end of this gothic hallway you'll
 witness that which is ruler of all, the essence of magic.  Gazing deep into
 the fog ahead you sence a ghost, perhaps that of those who cannot with stand
-the magic the exists.  
+the magic the exists.
 ~
 0 -2147483648 0
 Rd     0
@@ -4698,7 +4698,7 @@ this isn't already heaven).  To the left the pillar has a "T" for Tora
 written in black ink and the right a "L" for Luna can be seen.  Together the
 pillars mark the entrance to the High Priestess' chambers.  There are no
 tales or even myths of what happens to one who stands face to face with her,
-for no one has ever returned.  
+for no one has ever returned.
 ~
 0 -2147483648 0
 Rd     0
@@ -4713,12 +4713,12 @@ D2
 S
 #376
 Chamber of the High Priestess~
-Stepping between the pillars, your back arches and your knees collapse. 
+Stepping between the pillars, your back arches and your knees collapse.
 You are with magic.  You are truly alive here today, standing at the mercy
 of the High Priestess.  She seems like a pleasant lady, rather plain
 considering she is who she is, however her aura emmits a thick layer of
 energy casting all about the room.  You best not offend her, if you wish to
-leave; if you could ever leave this magnificient sight!  
+leave; if you could ever leave this magnificient sight!
 ~
 0 -2142887927 0
 Rd     0
@@ -4750,7 +4750,7 @@ Welcome to the Anti-Nexus~
 Welcome to the Anti-Nexus, you have been sentenced to DEATH!  Next time
 do not be such a fool.  The key you used is only one part of this tower, and
 to learn only that sect of such a powerful magic is to be a fool.  You shall
-now wander endlessly through pityful death!  
+now wander endlessly through pityful death!
 ~
 0 -2012995583 0
 Rd     0
@@ -5392,7 +5392,7 @@ Tombstone~
 You are DEAD!  You have wondered aimlessly through out the Anti-Nexus
 without hope of success, and now you shall rest eternally.  The gods have
 placed a tomb prepared for especially for such an occasion.  Rest in peace,
-mortal fool!  
+mortal fool!
 ~
 0 -2147081203 0
 Rd     0
@@ -5459,7 +5459,7 @@ Upon eternal rest, you hath met your death!  All around corpses mark
 those who hath offended the master, and now ye shall become dust like so
 many before you.  This be thine judgement!  Pray that Death takes pity on
 your soul!  Pray that your soul and corpse may be joined to live another
-day!  
+day!
 ~
 0 -2008670195 2
 Rd     0

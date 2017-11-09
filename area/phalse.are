@@ -1,5 +1,5 @@
 #AREADATA
-Name        {??-???} PROTO AREA          Phalse~
+Name        PROTO AREA~
 Levels      0 0
 Builders    Phalse~
 VNUMs       21799 21948
@@ -48,10 +48,10 @@ A Mad Polar Bear
 Before a Snowy Valley~
 You have been trudging through the Wasteland of the Artic for hours, or
 has it been days - "?"  - you don't know.  Your eyes are perpetually
-freezing open and/or shut.  Why did you decide to come here?  Adventure! 
+freezing open and/or shut.  Why did you decide to come here?  Adventure!
 Not likely.  You are walking through a pass, between hills.  As you come to
 the other side, you think you see a &gValley?  &cThe weather certainly can't
-get worse.  So you may as well continue.  
+get worse.  So you may as well continue.
 ~
 0 8196 4
 Rd     0
@@ -62,10 +62,10 @@ D0
 S
 #21800
 &YBefore a &WWinter &BWonderland~
-&WUtterly Amazing!  &cYou are standing at the top of a Wonderous Valley. 
+&WUtterly Amazing!  &cYou are standing at the top of a Wonderous Valley.
 The snow has lightened to a gentle fall.  Below you is a large village.  You
 can see forms moving about.  The village is at the very bottom of the
-valley, luckily the way is not treacherous.  
+valley, luckily the way is not treacherous.
 ~
 0 0 2
 Rd     0
@@ -84,7 +84,7 @@ A bit slippery, but not bad.  As you descend into the valley, the
 &Wsnow's &cdepth is lessening.  All around you are &Wsnow &cdusted
 Evergreens.  You can see more of the village now.  In the center of the
 village is a great House.  All about are smaller houses.  It is quite a
-lovely scene.  
+lovely scene.
 ~
 0 0 0
 Rd     0
@@ -100,7 +100,7 @@ S
 #21802
 Down You Go.~
 You are half-way down the mountain.  Moments before the attacke you here
-a growling from behind you!  
+a growling from behind you!
 ~
 0 0 0
 Rd     0

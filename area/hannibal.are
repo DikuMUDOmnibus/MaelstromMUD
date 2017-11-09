@@ -1,5 +1,5 @@
 #AREADATA
-Name        {80-105} Unholy Fortress     Hannibal~
+Name        Unholy Fortress~
 Levels      80 105
 Builders    Hannibal Sin Monique Derelor~
 VNUMs       4000 4299
@@ -21,7 +21,7 @@ A man in black armor is here guarding the fortress from intruders.
 As you gaze upon this devoted follower of Evil, you can clearly see his
 battle scars aswell as his countless number of skulls saved from previous
 encounters.  You're first thought is to run, but after you're return to
-faith, you decide to destroy this unholy cleric.  
+faith, you decide to destroy this unholy cleric.
 ~
 99 104 131072 -500 S
 85 0 0 15000d0+0 0d0+0
@@ -55,7 +55,7 @@ A small, intelligent looking thrull.
 ~
 The only way to describe this deformed creature is ugly.  It's members
 seem to be misorganisedand it appears to be quite threathening.  The only
-solution seems ot be the destruction of this thing.  
+solution seems ot be the destruction of this thing.
 ~
 1 49152 262144 -500 S
 73 0 0 18000d0+0 0d0+0
@@ -437,7 +437,7 @@ Ihsan's Shade, the fallen serra paladin, is here.
 &WKnown as the most unholy of them all, this once angel is now considered
 to be the most threathening enemy for the cause of good.  He stares around
 looking for something to kill, his hatred for humankind is so deep that the
-world will suffer from it.  Maybe you will be his next victim.  
+world will suffer from it.  Maybe you will be his next victim.
 ~
 3 34619520 295072 -100 S
 105 0 0 25000d0+0 0d0+0
@@ -1051,7 +1051,7 @@ A huge demon stands here, proud to be the element of worship.
 hidden inside thyself.  As ruler of this fortress Mephistopheles is a
 dangerous opponent to consider fighting against.  Lurking about at over 12
 feet in height, one whip from his chain would destroy your skull, better
-flee while you are still alive within this realm.  
+flee while you are still alive within this realm.
 ~
 3 503341288 426128 -1000 S
 115 0 0 35000d0+0 0d0+0
@@ -2119,7 +2119,7 @@ mile from on end to the other.  It is fashionned from dark black bricks that
 seem to have been welded together.  It is like looking at a huge puzzle.  In
 front of you are the gates to this dark looking place.  There is a small
 outpost for guards next to one of the gates.  Either leave or enter, because
-staying here is a bad idea.  
+staying here is a bad idea.
 ~
 0 270337 0
 Rd     0
@@ -2134,7 +2134,7 @@ The inside of the Fortress is dark and ominous.  Evil can be felt and
 tasted in the air.  Strange sounds float from the northern passageway.  Deep
 and hollow, it is best to be wary there.  A cast iron door hangs to the
 east.  An &zEbon Banner&c is engraved deep into the metal.  Directly west is a
-wide passage leading it seems, to a southern tower.  
+wide passage leading it seems, to a southern tower.
 ~
 0 131081 0
 Rd     0
@@ -2170,7 +2170,7 @@ S
 &cAs you assend into the northern passageway, the acrid smell burns your
 sinuses.  It smells like &zcharred flesh&c and burning hair here.  North of
 you and to the east are great pits.  What they hold, only the &zUnholy&c may
-be privileged to that kind of information...  
+be privileged to that kind of information...
 ~
 0 131081 0
 Rd     0
@@ -2192,7 +2192,7 @@ S
 &cAbruptly you stop at the edge of this deep narrow shaft.  From the
 moans below, you can almost guess that the gruesome dance of some loathsome
 beasts, smelly and fierce, must be causing the ground to shudder so under
-your feet.  Beware!  Don't fall in there...  
+your feet.  Beware!  Don't fall in there...
 ~
 0 33955853 0
 Rd     0
@@ -2208,7 +2208,7 @@ S
 #4004
 &zFalling Down the Pit!&w~
 &zYour foot slips on the sandy, rock-strewn edge and down you fall, your
-hands grasp at the rapidly passing sides of the shaft...  To no avail.  
+hands grasp at the rapidly passing sides of the shaft...  To no avail.
 ~
 0 33955853 0
 Rd     0
@@ -2224,7 +2224,7 @@ S
 #4005
 &zFalling Further Down the Pit!&w~
 &zFarther still you plummet, your head and body bouncing off of the
-earthen sides of this narrow shaft to only God knows where!  
+earthen sides of this narrow shaft to only God knows where!
 The squeals of mating beasts grow louder as you fall...
 ~
 0 33955853 0
@@ -2242,7 +2242,7 @@ S
 &zBottom of the Pit&w~
 &zWHAP!  Your body strikes the ground with a resounding thud as you land
 in piles of creamy goo!  You can hardly imagine exactly "what" this
-substance is, almost afraid to guess.  The smell here is horrific.  
+substance is, almost afraid to guess.  The smell here is horrific.
 ~
 0 401417 0
 Rd     0
@@ -2263,9 +2263,9 @@ S
 &wWithin the &zBreeding Pit&w~
 &zYou stumble around here, your steps catching on various regurgitated
 fodder and puddles of &Wmilky &Gglowing&z goo...  The mating cries of huge
-beasts echo about the caverns making their place of origin hard to place. 
+beasts echo about the caverns making their place of origin hard to place.
 You can only hope that you can find your way out of this place with your
-hide intact.  
+hide intact.
 ~
 0 401417 0
 Rd     0
@@ -2287,7 +2287,7 @@ S
 &zThe light here is so dim, you can barely see where you are going.  The
 caverns here seem to venture southward, and back to the west.  You almost
 slip in the gooey &Gglowing&z slime that seems to be everywhere throughtout
-the cavern floors.  You struggle to hold down your lunch...  
+the cavern floors.  You struggle to hold down your lunch...
 ~
 0 401417 0
 Rd     0
@@ -2305,7 +2305,7 @@ S
 &zAs you grope and feel your way around the cavern, you stick your hand
 right in some nasty &Gslime&z!  It smells awful and carries with it a
 slightly burning sensation.  Small swirls of smoke waft from your skin and
-armor - wherever the substance touches you.  
+armor - wherever the substance touches you.
 ~
 0 401417 0
 Rd     0
@@ -2324,7 +2324,7 @@ S
 creatures, you come upon the Entrance to a &rStrange Cavern&z.  The growling
 here is at it's loudest.  You can barely hear the pounding of your heart in
 your ears as you stare about you in the darkness, looking for a place to
-hide!  &GSlime&z drips from the entrance...  
+hide!  &GSlime&z drips from the entrance...
 ~
 0 401417 0
 Rd     0
@@ -2350,7 +2350,7 @@ S
 &zDeep gouges as if from great claws have grated the floors and walls of
 this dismal place.  The air here smells damp and fetid.  An occasional
 scream from the violent mating rituals burns at your ears as it rattles the
-very walls!  Carefully, you tredge onward...  
+very walls!  Carefully, you tredge onward...
 ~
 0 401417 0
 Rd     0
@@ -2380,7 +2380,7 @@ S
 &wYou stop just in time to keep from plummeting head-long into a huge
 pit!  The edge crumbles beneath your feet as you grasp for purchase!  The
 crumbling rocks bounce off of the walls of the pit as they disappear from
-view...  Into nothingness...  
+view...  Into nothingness...
 ~
 0 33955853 0
 Rd     0
@@ -2400,7 +2400,7 @@ S
 #4014
 &zFalling...~
 &wYour foot slips and you find yourself plunging swiftly down a huge pit!
-You grasp at the sides to no avail...  
+You grasp at the sides to no avail...
 ~
 0 33955853 0
 Rd     0
@@ -2439,7 +2439,7 @@ S
 &zAs you fall helplessly, banging from one side of the Huge Pit to the
 other as you go, you think that you can see the bottom of this place through
 the &Rscarlet veil&z of &Rblood&z that has managed to mingle with dirt in
-your eyes as you grapple, trying to save yourself...  
+your eyes as you grapple, trying to save yourself...
 ~
 0 33955853 0
 Rd     0
@@ -2454,7 +2454,7 @@ S
 the wind out of you!  You lay there for a few seconds and take mental
 inventory of your body parts.  Finally deciding that you are still in one
 piece, you gather your wits for there is nothing to do now but continue
-onward.  
+onward.
 ~
 0 401421 0
 Rd     0
@@ -2475,10 +2475,10 @@ D2
 S
 #4020
 A Small Intersection~
-Sounds of chains can be heard distinctly towards the northern passage. 
+Sounds of chains can be heard distinctly towards the northern passage.
 An iron door hangs tightly on its hinges, firmly nailed into the western
 stone wall.  Towards the east shines an eerie &Rcrimson &cglow.  Sounds of
-marching can be heard, muffled slightly.  
+marching can be heard, muffled slightly.
 ~
 0 131085 0
 Rd     0
@@ -2530,7 +2530,7 @@ North-West Corner of the Hall~
 south, a faint light struggles to enter this hall.  Other than that, the
 darkness grows darker in every direction.  The walls here are made of solid
 stone.  It is reinforced with a strange silver metal.  The walls are bare
-and cold.  
+and cold.
 ~
 0 131081 0
 Rd     0
@@ -2580,7 +2580,7 @@ End of the Hall~
 The end of the Hall allows passage deeper east, into the source of the
 strange mist.  Danger and despair flows through this room.  The sounds of
 the barely visible denizens of this Fortress seem to be closing in on this
-room.  The mist grows thicker...  As does the fear.  
+room.  The mist grows thicker...  As does the fear.
 ~
 0 131085 0
 Rd     0
@@ -2607,7 +2607,7 @@ Surrounded by complete &zdarkness&c...  The Hall of the Black Knights
 pulses with raw evil.  The light sounds of footsteps and clinking of armor
 come from all around this room.  Standing in the center of this room, one
 would feel as if they had lost their sight.  A wispy mist, barely noticable,
-blows from the east.  The smell is bittersweet and sickly.  
+blows from the east.  The smell is bittersweet and sickly.
 ~
 0 131081 0
 Rd     0
@@ -2633,7 +2633,7 @@ South-Western Corner of the Hall~
 The corner of the hall is pitch black.  Without a light, darkness reigns
 supreme.  The carpeting hugs the wall tightly.  Almost trying to absorb the
 walls itself.  In the dimness, the walls itself look as if it is absorbing
-what little light is shining.  Devouring the light and warmth.  
+what little light is shining.  Devouring the light and warmth.
 ~
 0 131081 0
 Rd     0
@@ -2652,7 +2652,7 @@ The southern wall is the only visible surface here.  Deep carvings can be
 seen in the stones.  They resemble letters of a language that is
 undecipherable.  Although, the structure of the words are in the shape of a
 poem.  A single word can be made out, '&RIhsan&c'.  All except the wall and
-letters are shrouded by the cloak of darkness.  
+letters are shrouded by the cloak of darkness.
 ~
 0 131081 0
 Rd     0
@@ -2676,7 +2676,7 @@ the hall spreads inky blackness.  The sounds of footsteps softly moving
 about is clear as a bell.  The lack of light seems to have heightened sounds
 in this area.  A porticulis is barely noticable towards the north.  It can
 be seen due to a strange and sinister glow radiating further east.  The wall
-is decorated with images of a single heavily-armored paladin.  
+is decorated with images of a single heavily-armored paladin.
 ~
 0 131081 0
 Rd     0
@@ -2697,7 +2697,7 @@ the middle of it.  There are paintings depicting angels on every wall.  Upon
 closed inspection, you can see that the canvas where some of the angel's
 wings are has been torn.  You see a huge statue in a corner of the room; it
 seems to be a paladin of the highest order.  At the base of the statue is a
-small plaque. 
+small plaque.
 ~
 0 131085 0
 Rd     0
@@ -3268,7 +3268,7 @@ S
 &wMaze-like now, you feel like you may be becoming hopelessly lost in
 this never ending &zhallway&w buried deep beneath the &zfortress&w within
 the bowels of wickedness.  You have no choice but to press onward and see
-what life - what is left of it - has in store for you now.  
+what life - what is left of it - has in store for you now.
 ~
 0 131081 0
 Rd     0
@@ -3289,7 +3289,7 @@ S
 &wA Small &bDamp &zCorridor&w~
 &wNarrowing further is this, a &bdamp&w and musty place.  It smells of
 &grot&w and &gmold&w here.  Your nose begins to burn and your eyes water at
-the &gstench&w.  You can hear water slightly trickling all around you.  
+the &gstench&w.  You can hear water slightly trickling all around you.
 ~
 0 131081 0
 Rd     0
@@ -3307,7 +3307,7 @@ S
 &wThe floor is slick with the &gslime&w of this dank and putrid tunnel
 like corridor.  Your feet slide in it.  You would hate like hell to fall
 down into this stuff, for no one knows the composition of it - whether it is
-alive.  Or not.  
+alive.  Or not.
 ~
 0 131081 0
 Rd     0
@@ -3324,7 +3324,7 @@ S
 &wA Small &bDamp &zCorridor&w~
 &wDeeper and deeper into the seemingly endless network of corridors you
 travel, hopelessly lost.  The contant &bdrip-drip-dripping&w of the moisture
-here is driving you mad!  And the smell here is almost unbearable.  
+here is driving you mad!  And the smell here is almost unbearable.
 ~
 0 131081 0
 Rd     0
@@ -3343,7 +3343,7 @@ S
 environment here.  The walls glisten with moisure, and you imagine that you
 must be very close to water here.  You hope that the danger of the walls
 caving in from the pressure of the water which is seeping in from all
-directions is not too great...  
+directions is not too great...
 ~
 0 131081 0
 Rd     0
@@ -3361,7 +3361,7 @@ S
 &wYour eyes burn as you strain to see in the darkness, the smell almost
 overpowering.  Your footfalls make watery noises as you proceed with extreme
 caution.  Occationally, you pause to study the walls, hoping for a clue as
-to what this place is or where it may lead.  
+to what this place is or where it may lead.
 ~
 0 131081 0
 Rd     0
@@ -3378,7 +3378,7 @@ S
 &wThe Bottom of Some &zOlde Stone Stairs&w~
 &wFinally you arrive at the foot of some olde stone stairs.  The moisture
 has corroded small niches from the cracks in each landing.  You can see now
-that the moisture is dripping from somewhere above these steps.  
+that the moisture is dripping from somewhere above these steps.
 ~
 0 0 0
 Rd     0
@@ -3394,7 +3394,7 @@ S
 #4075
 &wA &zDark hallway&w~
 &wHere the hallway narrows even further, and - crypt-like - you cannot
-even see your hand before your face, it is so pitch dark here.  
+even see your hand before your face, it is so pitch dark here.
 You press onward...
 ~
 0 131081 0
@@ -3412,7 +3412,7 @@ S
 &wAnother &zIntersection&w~
 &wYet again, another intersection avails itself to you.  You can go back
 to the south whence you came.  Or journey either to the east or the west to
-entertain careless folly.  
+entertain careless folly.
 ~
 0 131081 0
 Rd     0
@@ -3434,7 +3434,7 @@ S
 &wHere, the walls narrow in on themselves just a bit, making the area
 seem to close in on you.  You can smell the dank and dampness seeping from
 the &Wsparkling&w walls.  As you run your hands over the cold stoney
-surface, you question your own sanity...  
+surface, you question your own sanity...
 ~
 0 131081 0
 Rd     0
@@ -3469,7 +3469,7 @@ S
 &wCarefully you creep to the bottom of the stairs, trying not to make
 noise.  Who knows what lurks around down here in this horrible place!?  You
 think you feel something breathing down the back of your neck, and spin
-around nervously.  Nothing there.  Keep going...  
+around nervously.  Nothing there.  Keep going...
 ~
 0 131081 0
 Rd     0
@@ -3509,7 +3509,7 @@ S
 &wHere the hallway leads up at a slight incline to the south from the
 decline to the west.  The way south looks more brightly illuminated, but not
 much to be of any comfort.  You peer into the darkness, however, in each
-direction...  
+direction...
 ~
 0 131080 0
 Rd     0
@@ -3525,7 +3525,7 @@ S
 #4082
 &wA &zDimly &wLit &zHall&w~
 &zHere the dark hallway changes.  You find yourself standing in a slight
-depression of the floor.  To the east, the hallway continues into darkness. 
+depression of the floor.  To the east, the hallway continues into darkness.
 To the west, however, is a small jagged opening. It is pitch black in there...
 ~
 0 131085 0
@@ -3548,7 +3548,7 @@ S
 &zYou enter into a small dark chamber.  As your eyes adjust you can make
 out countless small depressions in the very walls around you.  Small glints
 of the reflection of your light reveal small trinkets and treasures so
-obscure that only the priests might be able to hint at their true meaning.  
+obscure that only the priests might be able to hint at their true meaning.
 ~
 0 4358153 0
 Rd     0
@@ -3560,9 +3560,9 @@ S
 #4084
 &wA &zDimly &wLit &zHall&w~
 &wYou have happened into a very dark hallway.  The walls, ceiling and
-floor seem to be made of ancient materials and are very close and cramped. 
+floor seem to be made of ancient materials and are very close and cramped.
 In the distance you think you can hear voices, but one cannot be sure as the
-sound seems to carry in a most peculiar way here.  
+sound seems to carry in a most peculiar way here.
 ~
 0 131081 0
 Rd     0
@@ -3581,7 +3581,7 @@ S
 your footfalls echoing back and forth from wall to wall to wall.  It
 sometimes matches the very cadence of the pounding of your heart at times,
 magnifying both sounds in a sureal way.  You carefully pick your way through
-the darkness...  
+the darkness...
 ~
 0 131081 0
 Rd     0
@@ -3598,7 +3598,7 @@ S
 &wA &zDimly &wLit &zHall&w~
 &wHere the little hallway seems to narrow down even smaller - something
 that seems almost impossible.  You have to almost stoop down to keep from
-scraping your head on the ceiling at this point.  
+scraping your head on the ceiling at this point.
 ~
 0 131081 0
 Rd     0
@@ -3615,7 +3615,7 @@ S
 &wA &zDimly &wLit &zHall&w~
 &wYou almost bang your nose on the wall as the hall sharply curves to the
 north.  You can barely make out where you are going or where you have
-been...  
+been...
 ~
 0 131081 0
 Rd     0
@@ -3633,7 +3633,7 @@ S
 &zInset into the wall is a set of Huge &rWard Sealed &zDoors&z.  A thin
 sliver of light creeps from beneath them, throwing large shadows from even
 the smallest chunk of dirt.  As you take a moment to pause and contemplate
-the barrier, faint obscure noises can be heard coming from the other side.  
+the barrier, faint obscure noises can be heard coming from the other side.
 ~
 0 131085 0
 Rd     0
@@ -3658,7 +3658,7 @@ S
 &wA &zDimly &wLit &zHall&w~
 &zHere the hallway curves back away from the huge ominous doors.  The
 incline of the floor gives the distinct impression that you are venturing
-downward and to who-knows-what.  The air here is oppressive...  
+downward and to who-knows-what.  The air here is oppressive...
 ~
 0 131081 0
 Rd     0
@@ -3675,7 +3675,7 @@ S
 &wA &zDimly &wLit &zHall&w~
 &zHere you come upon another curve in the hallway and again to the north.
 Even though you are venturing at a slight incline downwards, the hallway
-seems to open up somewhat here and afford a bit more room to move around.  
+seems to open up somewhat here and afford a bit more room to move around.
 The spooky part is, however, that it has become deathly quiet here...
 ~
 0 131081 0
@@ -3695,7 +3695,7 @@ S
 way past the rubble and debris that has sloughed from the walls and ceiling
 of this damp earthy place.  The smell of fresh-dug earth and slimy
 earthworms and fetid mulch stings at your nose.  The smell is stronger to
-the north...  
+the north...
 ~
 0 131081 0
 Rd     0
@@ -3713,7 +3713,7 @@ S
 &zYou stop, pebbles and dust bounce into the darkness below you as you
 stand at the top of some &rCrumbling &zStairs.  The way down looks dark and
 you see a &Gglowing &Wmist&z floating below at the bottom of the steps.  The
-smell of mold and fresh damp earth invades your senses...  
+smell of mold and fresh damp earth invades your senses...
 ~
 0 131081 0
 Rd     0
@@ -3727,8 +3727,8 @@ S
 &zYou enter into the sacred circle of worship.  All around are demure
 creatures clothed in red and black robes.  Upon closer inspection of them,
 you find that they are not small and wrinkling old men, but nubile young
-damsels caught up in the throes of devotion and worship for their god... 
-Whomever that may be...  
+damsels caught up in the throes of devotion and worship for their god...
+Whomever that may be...
 ~
 0 401417 0
 Rd     0
@@ -3754,7 +3754,7 @@ S
 &zAs you follow the circle around, you notice a wall of fire in the
 center of this circle.  It appears to be hiding something of great value -
 possibly an idol, as this seems to be the center of attention for the
-beautiful maidens of the Ebon Hand.  
+beautiful maidens of the Ebon Hand.
 ~
 0 401417 0
 Rd     0
@@ -3771,7 +3771,7 @@ S
 &wThe &rCircle &wof &zWorship&w~
 &zFalling into step behind the young women here, your feet shuffle upon
 the dirt floor which has been worn smooth by the thousands of miles trekked
-about the large circumfrence just on the edge of the pyre.  
+about the large circumfrence just on the edge of the pyre.
 ~
 0 401416 0
 Rd     0
@@ -3797,7 +3797,7 @@ S
 &zAt this, the far end of the circle, the air is becoming most unpleasant
 here.  The young waifs seem to be enthralled by the fire and sway their
 young bodies to steps of a silent dirge.  For reasons unexplained, you feel
-compelled to the fire.  
+compelled to the fire.
 ~
 0 401417 0
 Rd     0
@@ -3814,8 +3814,8 @@ S
 &wThe &rCircle &wof &zWorship&w~
 &zThe maidens bow in unison towards the great fire before you, tears of
 sublime ecstacy upon their face.  At closer inspection, however, you note a
-tinge of sublime fear as well.  You look from the faces of the initiates... 
-And then back again to the fire...  
+tinge of sublime fear as well.  You look from the faces of the initiates...
+And then back again to the fire...
 ~
 0 401417 0
 Rd     0
@@ -3837,7 +3837,7 @@ S
 &zHere - at the pinacle of the most &rsupreme &Revil&z - you shiver to
 your bones at the sight which has revealed itself before you!  The black
 stone beneath your feet is nearly burning through your boots!  The altar
-gleams in the flame it's ebony magic, grabbing at your very soul!  
+gleams in the flame it's ebony magic, grabbing at your very soul!
 May the gods show mercy...
 ~
 0 4 0
@@ -3875,11 +3875,11 @@ D3
 S
 #4100
 &wThe &rCircle &wof &zWorship&w~
-&zThe smell of sulpher burns your nose and brings water to your eyes. 
+&zThe smell of sulpher burns your nose and brings water to your eyes.
 The shadows mingle with the initiates here, creating many optical illusions
 to tantalize your senses.  All are facing the fire at the center of the
 circle, their faces blistered from the contant and nearly overwhelming
-intense heat here.  You can feel your eyelashes curl...  
+intense heat here.  You can feel your eyelashes curl...
 ~
 0 401417 0
 Rd     0
@@ -3905,7 +3905,7 @@ S
 &zYou crouch here in this corner, contemplating the sanity of being here
 and watching the initiates of the Ebon Hand in their mindless dance.  They
 seem to be drawn to the fire as like a moth to a flame.  Some of their robes
-have been singed, no doubt in the height of the passion of their worship.  
+have been singed, no doubt in the height of the passion of their worship.
 ~
 0 401417 0
 Rd     0
@@ -4146,7 +4146,7 @@ S
 &wTop of the &zDark Stairs&w~
 &wStanding upon the top landing of a &zdark stairs&w, you peer down into
 the darkness.  There is no way to tell exactly what awaits you below without
-actually going down.  Wisely, you consider turning around and going back.  
+actually going down.  Wisely, you consider turning around and going back.
 ~
 0 131081 0
 Rd     0
@@ -4163,7 +4163,7 @@ S
 &wBefore a &zBlack Runed Door&w~
 &wRight before you looms a huge &zblack steel door&w.  It is etched with
 ancient &zrunes&w which seem to &Cglow&w in the wicked darkness here.  On
-either stretches dark hallways, lending escape should the need arise.  
+either stretches dark hallways, lending escape should the need arise.
 ~
 0 131081 0
 Rd     0
@@ -4283,7 +4283,7 @@ and walls which surrond you.  Though very dark here, you cannot resist
 exploring just a bit further, the possibility of treasure and fortune
 overwhelming!  The huge old wooden door before you is slightly cracked and
 begging to be opened!  The huge old wooden door before you is slightly
-cracked and begging to be opened!  
+cracked and begging to be opened!
 ~
 0 401417 0
 Rd     0
@@ -4314,10 +4314,10 @@ D3
 S
 #4129
 &wA &rScarred &zIntersection&w~
-&wHere the hallway branches off, signs of violence prevail throughout. 
+&wHere the hallway branches off, signs of violence prevail throughout.
 You may continue to the north, further down the hallway.  Or, You can go
 back to the south wence you came.  There is a room to the east - was that
-movement that you saw there?  Or merely your imagination...  
+movement that you saw there?  Or merely your imagination...
 ~
 0 401416 0
 Rd     0
@@ -4339,7 +4339,7 @@ S
 &wAs you continue on your journey, you begin to see even heavier traces
 of conflict etched upon the smooth cold walls of this inner fortress.  Even
 the floors are sticky with &rdried &Rblood&w in spatters and smears amidst
-the deep trenches gouged by the weapons of the damned.  
+the deep trenches gouged by the weapons of the damned.
 ~
 0 401417 0
 Rd     0
@@ -4357,7 +4357,7 @@ S
 &wYou pause here to study a strange &Yglowing &w&Wdoor&w to the west.  It
 looks out of place in this &zominous&w hallway.  You may continue to the
 east and south through the anciant hall, though the &Cmystical&w door
-tantalizes your imagination.  You carefully weigh your options.  
+tantalizes your imagination.  You carefully weigh your options.
 ~
 0 401417 0
 Rd     0
@@ -4390,7 +4390,7 @@ S
 #4133
 &wA &rScarred &zHallway&w~
 &wMore battle-weary walls loom around you, bearing the scars of war and
-&Rbloody&w conflicts.  Quietly you continue, mustering courage.  
+&Rbloody&w conflicts.  Quietly you continue, mustering courage.
 ~
 0 401417 0
 Rd     0
@@ -4405,7 +4405,7 @@ D3
 S
 #4134
 &wA &rScarred &zHallway&w~
-&wMore battered walls surround you, the cuts in the stone etched deep. 
+&wMore battered walls surround you, the cuts in the stone etched deep.
 Some have traces of flesh and bone embedded within them.
 And some...  fresh &Rblood&w.
 ~
@@ -4423,7 +4423,7 @@ S
 #4135
 &wA &rScarred &zHallway&w~
 &wThe walls here are pitted and scratched, as if much fierce fighting has
-taken place here.  Some of the gouges appear to be fresh.  
+taken place here.  Some of the gouges appear to be fresh.
 ~
 0 401417 0
 Rd     0
@@ -4440,7 +4440,7 @@ S
 &wA &zBend &win the &zHallway&w~
 &wHere the hallway bends to the north and to the east.  But on the west
 wall you notice erosion close to the floor.  You bend closer to get a better
-look at it.  Further east is a dim hallway.  
+look at it.  Further east is a dim hallway.
 ~
 0 401417 0
 Rd     0
@@ -4487,7 +4487,7 @@ S
 &wA &rScarred &zHallway&w~
 &wStill further you traverse this wicked place.  It smells of &rmeat&w
 and &Rblood&w.  The &Wghosts&w of the &zdead&w flicker before your eyes,
-their moans echo and bounce, distorting your senses.  
+their moans echo and bounce, distorting your senses.
 ~
 0 401417 0
 Rd     0
@@ -4502,10 +4502,10 @@ D3
 S
 #4139
 &wA &rScarred &zHallway&w~
-&wThe &zhallway&w continues to wind it's way through the fortress. 
+&wThe &zhallway&w continues to wind it's way through the fortress.
 Neither the &Ylight&w of &Wday&w nor the &Cglowing&w &cmoon&Clight&w will ever strike this
 &zominous&w hall where countless men and women have died.  You can almost
-feel the haunted souls around you as you continue...  onward.  
+feel the haunted souls around you as you continue...  onward.
 ~
 0 401417 0
 Rd     0
@@ -4522,7 +4522,7 @@ S
 &wA &zForgotten &wPassage~
 &wYou stumble into a forgotten passage.  The opening is small, but you
 manage to make your way through the darkness.  Cobwebs cling to your face
-and head, giving you the creeps.  You have to paw them back to get through. 
+and head, giving you the creeps.  You have to paw them back to get through.
 It seems that even the &zspiders&w have even abandoned this place.
 You hope...
 ~
@@ -4542,7 +4542,7 @@ S
 &wHere the passage takes a bend to the east.  The walls are bumpy and
 rough to the touch.  All sorts of nasty things could be hiding in here, but
 it is too dark to detect them.  Hopefully your intrusion upon their hiding
-place will go unheeded.  But, then again, that seems quite impossible.  
+place will go unheeded.  But, then again, that seems quite impossible.
 ~
 0 401417 0
 Rd     0
@@ -4559,7 +4559,7 @@ S
 &wA &rBroken &zStairway&w~
 &wQuite unexpectedly, you chance upon a broken stairway.  It is almost
 completely hidden by cobwebs.  The steps are the remnants of crumbling
-mortar and carved rock and gravel.  It is in quite a state of disrepair.  
+mortar and carved rock and gravel.  It is in quite a state of disrepair.
 Only a complete fool would chance the climb.
 ~
 0 401417 0
@@ -4576,8 +4576,8 @@ S
 #4143
 A Small Passage Behind the Crack~
 &wHere behind the craigy crack in the stones is a small dusty passageway.
-With any luck, you will be able to squeeze through and see what lies ahead. 
-You hope that you won't tear your clothing or scratch your armour.  
+With any luck, you will be able to squeeze through and see what lies ahead.
+You hope that you won't tear your clothing or scratch your armour.
 ~
 0 401421 0
 Rd     0
@@ -4595,7 +4595,7 @@ S
 &wBent and crouched, you feel your way along this crumbling way to
 Goddess knows where, exactly.  Light is scarse here and you squint to see
 through the dust which is being churned from your foot steps from the
-powdery floor.  You struggle to keep from choking.  
+powdery floor.  You struggle to keep from choking.
 ~
 0 401421 0
 Rd     0
@@ -4612,7 +4612,7 @@ S
 &zA Decaying Passage&w~
 &wIt is here that the passage seems to have bottle-necked to a very small
 opening just ahead of you.  You break off some of the crumbling edge around
-the opening so you can chance a better look.  
+the opening so you can chance a better look.
 ~
 0 401421 0
 Rd     0
@@ -4629,7 +4629,7 @@ S
 &zA Decaying Chamber&w~
 &wSuch an olde and dusty place, no window permits the light of the world
 to enter here.  The stench of the dead permeate the thick, dank suspended
-air.  No one here gets out alive.  &w 
+air.  No one here gets out alive.  &w
 ~
 0 4595721 0
 Rd     0
@@ -4661,7 +4661,7 @@ S
 &wYou stand in the center of a very olde tower.  It seems to have been
 abandoned as it looks as though no one has happened upon this place nor
 visited this tower for a very long time.  You turn and gaze about you
-slowly, peering through the dust and stray cobwebs which surronds you here. 
+slowly, peering through the dust and stray cobwebs which surronds you here.
 ~
 0 131081 0
 Rd     0
@@ -4752,7 +4752,7 @@ S
 #4154
 &wWithin the &rAbandonned &zTower&w~
 &wYet another corner of this dismal place reveals nothing to you.  The
-dust floats up from your every footstep, nearly blinding and choking you.  
+dust floats up from your every footstep, nearly blinding and choking you.
 You cance to wander further and hope not to get lost...
 ~
 0 131073 0
@@ -4772,7 +4772,7 @@ S
 south you feel a draft and a shifting of air.  You notice that the dust
 seems to swirl a bit more here instead of floating aimlessly.  The cobwebs
 don't seem as prolific here, as well.  You strain your eyes to see more
-clearly...  
+clearly...
 ~
 0 131081 0
 Rd     0
@@ -4791,11 +4791,11 @@ D2
 S
 #4156
 &wWithin the &rAbandonned &zTower&w~
-&wYou immediately feel a draft from above and instinctively look up. 
+&wYou immediately feel a draft from above and instinctively look up.
 Upon careful inspection, you discover a place in the ceiling that has been
 worn away to expose an opening.  You crane your neck and peer at it, but
 nothing discernable can be seen.  Broken beams and splintered boards aford a
-way to climb upwards for a better look.  
+way to climb upwards for a better look.
 ~
 0 131073 0
 Rd     0
@@ -4818,7 +4818,7 @@ S
 your way around the room.  Dust and small debris litter this neglected
 place, making exploration easy, if not hazerdous.  You peer into the
 darkness trying to find your way.  To the south is a paneless window.  A
-shutter hangs from it's broken frame.  
+shutter hangs from it's broken frame.
 ~
 0 131081 0
 Rd     0
@@ -4842,8 +4842,8 @@ S
 #4158
 &wWithin the &rAbandonned &zTower&w~
 &wThe dark corners of this small neglected tower have an &zominous&w
-quality about them.  You can scarcely see the hand in front of your face. 
-Your feet trip on crumbling debris here and there.  Watch your step.  
+quality about them.  You can scarcely see the hand in front of your face.
+Your feet trip on crumbling debris here and there.  Watch your step.
 ~
 0 131081 0
 Rd     0
@@ -4859,7 +4859,7 @@ S
 #4159
 &wWithin the &rAbandonned &zTower&w~
 &wThe walls and floor here are bare except for the inch or so of dust and
-the obscure &zspider&w or two which peers down at you from the &zshadows&w. 
+the obscure &zspider&w or two which peers down at you from the &zshadows&w.
 You strain to see about you in the dark.
 ~
 0 131081 0
@@ -4881,7 +4881,7 @@ S
 &wWithin the &rAbandonned &zTower&w~
 &wHere in this dark corner you find nothing to help you in finding the
 answers to the questions for which you seek.  Just more dust and creepy
-shadows which seem to conceal things that are watching you.  
+shadows which seem to conceal things that are watching you.
 ~
 0 131081 0
 Rd     0
@@ -4900,7 +4900,7 @@ S
 of it, that is, for it is broken and in bad repair.  Rotted boards threaten
 to break and spill you into the abandonned room below should you not
 practice extreme caution.  Stray splinters of wood crack underfoot and
-possibly announce your presence here.  
+possibly announce your presence here.
 ~
 0 131072 0
 Rd     0
@@ -4916,9 +4916,9 @@ S
 #4162
 &zRoof &wof the &zTower&w~
 &wFrom this vantage point you can see almost the entire realm!  Hundreds
-of feet above the land, you feel a closeness with beings not of this world. 
+of feet above the land, you feel a closeness with beings not of this world.
 Possibly God.  Or could it be...  another, more ominous entity for which you
-have lofted closer to here in this strangest of places?  
+have lofted closer to here in this strangest of places?
 ~
 0 131072 0
 Rd     0
@@ -4929,10 +4929,10 @@ D2
 S
 #4163
 &wThe &zRooftop&w~
-&wOlde brick tiles scale the surface of the roof of the &zFortress&w. 
+&wOlde brick tiles scale the surface of the roof of the &zFortress&w.
 They are black in colour, but have become &Gslimey&w with &gmoss&w over
 time.  You chose your footing wisely, so as not to topple hundreds of feet
-through the thick dark clouds which surrond the entire structure.  
+through the thick dark clouds which surrond the entire structure.
 ~
 0 131072 0
 Rd     0
@@ -4949,7 +4949,7 @@ S
 &wThe &zRooftop&w~
 &wBravely, you make your way about the roof.  It seems that others have
 come this way in the not-to-distant past, for you notice that the moss has
-been torn away from the tiles exposing the obsidian hue of the roofwork.  
+been torn away from the tiles exposing the obsidian hue of the roofwork.
 ~
 0 131072 0
 Rd     0
@@ -4966,7 +4966,7 @@ S
 &wThe &zRooftop&w~
 &wFurther and further you carefully pick your way across the rooftop,
 avoiding what apear to be weak spots that look like good places to fall
-through.  The going is slow and slippery.  
+through.  The going is slow and slippery.
 ~
 0 131072 0
 Rd     0
@@ -4985,7 +4985,7 @@ S
 slick with dew.  You have traveled precariously close to the edge now.  Your
 feet slip, causing you to grab at the tiles with your hands, for it is also
 steeper here than the area closer to the tower.  You can almost catch a
-glimps of the edge.  
+glimps of the edge.
 ~
 0 131072 0
 Rd     0
@@ -5003,7 +5003,7 @@ S
 &wSuddenly!  You find you have slid quickly to the edge of the
 &zrooftop&w - almost plummeting over the side!  But you have caught yourself
 by the edge of the tiles, just barely!  You hang on for dear life, trying
-frantically not to fall through the &zominous&w clouds to sure death below. 
+frantically not to fall through the &zominous&w clouds to sure death below.
 ~
 0 131072 0
 Rd     0
@@ -5021,7 +5021,7 @@ S
 &wYou arrive at the top of the stairs of the &rSouthern Tower&w.  To the
 east and to the west there is an obscure walkway.  Sharp cornered, it is
 almost impossible to see where it leads.  You can step forward to
-investigate.  Or turn and RUN LIKE HELL!  back down the stairs...  
+investigate.  Or turn and RUN LIKE HELL!  back down the stairs...
 ~
 0 131081 0
 Rd     0
@@ -5047,7 +5047,7 @@ S
 &wGazing over the realm from the &zBalcony of the &rSouthern Tower&w, you
 sense impending &zdoom&w all about.  &WLightning&w streaks the sky, even on
 a clear day.  &gMoss&w clings to the stone here, on the walls and the
-walkway.  The rail is olde and rotted.  Don't fall.  
+walkway.  The rail is olde and rotted.  Don't fall.
 ~
 0 131072 0
 Rd     0
@@ -5068,7 +5068,7 @@ S
 &wOn the &zBalcony&w~
 &wThe west end of the balcony is sturdy, yet olde.  &gMoss&w here is not
 as prolific, and the &zclouds&w are not nearly as thick here.  You can
-almost make out the ground below through the mist and dampness.  
+almost make out the ground below through the mist and dampness.
 ~
 0 131072 0
 Rd     0
@@ -5088,9 +5088,9 @@ S
 #4171
 &wOn the &zBalcony&w~
 &wHere at the eastern end of the roomy balcony the &gmoss&w is thickest,
-as the morning haze, if ever, is the only &Wlight&w that this place gets. 
+as the morning haze, if ever, is the only &Wlight&w that this place gets.
 There seems to be a perpetual &zcloud&w hanging here about the outside of
-the &rtower&w.  You cannot see the ground.  
+the &rtower&w.  You cannot see the ground.
 ~
 0 131072 0
 Rd     0
@@ -5112,7 +5112,7 @@ S
 &rSouthern Tower &zWalkway&w~
 &wSquare cut, granite stone makes up the &zgothic &wstyle of this, the
 western path of the &rSouthern Tower &zWalkway&w.  The way is dry - even
-dusty - but fairly passable.  You press onward...  
+dusty - but fairly passable.  You press onward...
 ~
 0 131081 0
 Rd     0
@@ -5129,7 +5129,7 @@ S
 &rSouthern Tower &zWalkway&w~
 &wSquare cut, granite stone makes up the &zgothic&w style of this, the
 eastern path of the &rSouthern Tower &zWalkway&w.  The way is dry - even
-dusty - but fairly passable.  You press onward...  
+dusty - but fairly passable.  You press onward...
 ~
 0 131081 0
 Rd     0
@@ -5145,7 +5145,7 @@ S
 #4174
 &rSouthern Tower &zWalkway&w~
 &wThe way here is dark along the &rSouthern Tower &zWalkway&w.  Your
-footfalls echo upon the stagnant air.  You press onward...  
+footfalls echo upon the stagnant air.  You press onward...
 ~
 0 131081 0
 Rd     0
@@ -5161,7 +5161,7 @@ S
 #4175
 &rSouthern Tower &zWalkway&w~
 &wThe way here is dark along the &rSouthern Tower &zWalkway&w.  Your
-footfalls echo upon the stagnant air.  You press onward...  
+footfalls echo upon the stagnant air.  You press onward...
 ~
 0 131081 0
 Rd     0
@@ -5177,7 +5177,7 @@ S
 #4176
 &rSouthern Tower &zWalkway&w~
 &wThe way here is dark along the &rSouthern Tower &zWalkway&w.  Your
-footfalls echo upon the stagnant air.  You press onward...  
+footfalls echo upon the stagnant air.  You press onward...
 ~
 0 131081 0
 Rd     0
@@ -5193,7 +5193,7 @@ S
 #4177
 &rSouthern Tower &zWalkway&w~
 &wThe way here is dark along the &rSouther Tower &zWalkway&w.  Your
-footfalls echo upon the stagnant air.  You press onward...  
+footfalls echo upon the stagnant air.  You press onward...
 ~
 0 131081 0
 Rd     0
@@ -5209,7 +5209,7 @@ S
 #4178
 &rSouthern Tower &zWalkway&w~
 &wThe way here is dark along the &rSouthern Tower &zWalkway&w.  Your
-footfalls echo upon the stagnant air.  You press onward...  
+footfalls echo upon the stagnant air.  You press onward...
 ~
 0 131081 0
 Rd     0
@@ -5225,7 +5225,7 @@ S
 #4179
 &rSouthern Tower &zWalkway&w~
 &wThe way here is dark along the &rSouthern Tower &zWalkway&w.  Your
-footfalls echo upon the stagnant air.  You press onward...  
+footfalls echo upon the stagnant air.  You press onward...
 ~
 0 131081 0
 Rd     0
@@ -5245,7 +5245,7 @@ S
 #4180
 &rSouthern Tower &zWalkway&w~
 &wThe way here is dark along the &rSouthern Tower &zwalkway&w.  Your
-footfalls echo upon the stagnant air.  You press onward...  
+footfalls echo upon the stagnant air.  You press onward...
 ~
 0 131081 0
 Rd     0
@@ -5261,7 +5261,7 @@ S
 #4181
 &rSouthern Tower &zwalkway&w~
 &wThe way here is dark along the &rSouthern Tower &zwalkway&w.  Your
-footfalls echo upon the stagnant air.  You press onward...  
+footfalls echo upon the stagnant air.  You press onward...
 ~
 0 131081 0
 Rd     0
@@ -5277,7 +5277,7 @@ S
 #4182
 &rSouthern Tower &zWalkway&w~
 &wThe way here is dark along the &rSouthern Tower &zWalkway&w.  Your
-footfalls echo upon the stagnant air.  You press onward...  
+footfalls echo upon the stagnant air.  You press onward...
 ~
 0 131081 0
 Rd     0
@@ -5293,7 +5293,7 @@ S
 #4183
 &rSouthern Tower &zWalkway&w~
 &wThe way here is dark along the &rSouthern Tower &zWalkway&w.  Your
-footfalls echo upon the stagnant air.  You press onward...  
+footfalls echo upon the stagnant air.  You press onward...
 ~
 0 131081 0
 Rd     0
@@ -5309,7 +5309,7 @@ S
 #4184
 &rSouthern Tower &zWalkway&w~
 &wThe way here is dark along the &rSouthern Tower &zWalkway&w.  Your
-footfalls echo upon the stagnant air.  You press onward...  
+footfalls echo upon the stagnant air.  You press onward...
 ~
 0 131081 0
 Rd     0
@@ -5331,7 +5331,7 @@ S
 &wThe way here is &zdark&w along the &rSouthern Tower &zWalkway&w.  An
 irregularity in the cut of the stones catches your eye, however.  As you run
 your hand over the rough surface of the wall, a door makes itself known to
-you.  It is difficult to open...  
+you.  It is difficult to open...
 ~
 0 131081 0
 Rd     0
@@ -5348,8 +5348,8 @@ S
 &rLim-Dul's &zPaladin's &wWatch Room~
 &wThis dark stone room is the vantage point of the &rLim-Dul &zPaladin&w.
 The walls reveal slots carved through the stones, giving the &zknight&w a
-bird's eye view of his surroundings, thus guarding the &rSouthern Tower&w. 
-The walls drip of his gruesome trophies...  The heads of his enemies.  
+bird's eye view of his surroundings, thus guarding the &rSouthern Tower&w.
+The walls drip of his gruesome trophies...  The heads of his enemies.
 ~
 0 131081 0
 Rd     0
@@ -5363,7 +5363,7 @@ S
 &wThe steps here are slick with &gslime&w where &Galgae&w has tried to
 grow from the dim illumination coming from the top of the stairs.  The rough
 hewn stones glitter with dampness here.  The steps themselves rutted from
-travel...  
+travel...
 ~
 0 0 0
 Rd     0
@@ -5379,7 +5379,7 @@ S
 #4299
 The mpat room~
 Mpat room for rooms to mpat & mpgoto.
- 
+
 &zH&wannibal &zK&wing
 ~
 0 401412 0
@@ -5388,7 +5388,7 @@ E
 who1~
 &z[&W  MENTALLY AFK &z] &R<AFK> &c(Wizinvis 1) &wFlint &r-<Mud Cops>-
 &z[&W   1 Dum Ass   &z] &Y[1045] &wThalador &r-<Head Honchos>-
-&z[&W_]_Mr_Fix_iT_[_&z] &R<&WBuilding&R> &wHannibal King 
+&z[&W_]_Mr_Fix_iT_[_&z] &R<&WBuilding&R> &wHannibal King
 &z[&W     (null)    &z] &c(Wizinvis 110) &R<&WBuilding&R> &wGrimfang &r-<HH>-
 &z[&WWar/Thi     Drw&z] &wRage will kick your Ass.
 &wMag&z[&R0&z] &wCle&z[&R0&z] &wThi&z[&R0&z] &wWar&z[&R1&z] &wPsi&z[&R1&z] &wDru&z[&R1&z] &wRng&z[&R1&z] &wPal&z[&R1&z] &wBrd&z[&R0&z] &wVam&z[&R3&z] &wNec&z[&R0&z]
@@ -5399,7 +5399,7 @@ E
 who2~
 &z[&W   1 Dum Ass   &z] &Y&C[1045] &wThalador &r-<Head Honchos>-
 &z[&W  MENTALLY AFK &z] &R<AFK> &z(Wizinvis 1) &wFlint &r-<Mud Cops>-
-&z[&W_]_Mr_Fix_iT_[_&z] &R<&WBuilding&R> &wHannibal King 
+&z[&W_]_Mr_Fix_iT_[_&z] &R<&WBuilding&R> &wHannibal King
 &z[&WWar/Thi     Drw&z] &wRage will kick your Ass.
 &z[&W     (null)    &z] &z(Wizinvis 110) &R<&WBuilding&R> &wGrimfang &r-<HH>-
 &wMag&z[&W0&z] &wCle&z[&W0&z] &wThi&z[&W0&z] &wWar&z[&W1&z] &wPsi&z[&W1&z] &wDru&z[&W1&z] &wRng&z[&W1&z] &wPal&z[&W1&z] &wBrd&z[&W0&z] &wVam&z[&W3&z] &wNec&z[&W0&z]

@@ -1,5 +1,5 @@
 #AREADATA
-Name        {  1-5 } Ravenwood Academy   Grunt~
+Name        Ravenwood Academy~
 Levels      1 5
 Builders    Grunt~
 VNUMs       1251 1299
@@ -20,7 +20,7 @@ The Grand Master of Education stands here deep in thought.
 ~
 The Grand Master has been training young adventurers since long before
 you were born.  His job is to guide students in his own subtle way, and make
-sure that their studies are not interfered with.  
+sure that their studies are not interfered with.
 ~
 1966147 234897536 16 -1000 S
 120 0 0 99999d0+0 0d0+0
@@ -48,10 +48,10 @@ rat muskrat~
 A muskrat~
 A large muskrat furrows through some musty straw here.
 ~
-This rat looks to weigh about 40 pounds, and is a true king of rats. 
+This rat looks to weigh about 40 pounds, and is a true king of rats.
 It's eyes are bleak and covered with a film brought on by the disease
 infested filth in which it resides.  It appears frightened by your presence,
-and waits to see your next move.  
+and waits to see your next move.
 ~
 3 0 0 250 S
 2 0 0 12d0+0 0d0+0
@@ -66,7 +66,7 @@ A large cockroach skitters back and forth eyeing you hungrily.
 Disgusting.  Totally disgusting.  This insect of filth and disease is in
 dire need of being destroyed, and you are the one to do it.  The cockroach
 is 2 -1/2 feet long and moves like lightning, yet doesn't look like it could
-put up TOO much of a fight.  
+put up TOO much of a fight.
 ~
 3 0 0 250 S
 2 0 0 10d0+0 0d0+0
@@ -80,7 +80,7 @@ An adept of Ravenwood stands here casting spells for the young adventurers.
 ~
 He is a pious man, silent except for his incantations, healing and
 soothing those who rest before him.  Unpaid for his work, his satisfaction
-of seeing the students achieve their fame is his just reward.  
+of seeing the students achieve their fame is his just reward.
 ~
 1966083 16777216 16 -1000 S
 120 0 0 250000d0+0 0d0+0
@@ -95,7 +95,7 @@ A madman sits on the floor raving about his lost quizzleflump.
 You look at this man, and can sense that there's something not quite
 correct about him.  He's having a debate with himself, and losing quite
 horribly.  He smells of stale urine, and looks as though he hasn't washed in
-weeks.  
+weeks.
 ~
 3 0 0 250 S
 2 0 0 10d0+0 0d0+0
@@ -109,7 +109,7 @@ A thin man sits chained to the floor awaiting sentencing.
 ~
 He looks as though he hasn't eaten in days, and as his eyes meet yours,
 you can see the rage burning within them.  It may be best to leave him be,
-as he doesn't seem to be in the mood for much else.  
+as he doesn't seem to be in the mood for much else.
 ~
 3 0 0 250 S
 2 0 0 12d0+0 0d0+0
@@ -123,7 +123,7 @@ A vicious looking kobold catches sight of you and attacks!
 ~
 This is one ugly creature, looking at you with beady little eyes set deep
 into an overlapping forehead that turns up in a piglike snout.  It's crooked
-teeth glisten at you as it grins and attacks you mercilessly.  
+teeth glisten at you as it grins and attacks you mercilessly.
 ~
 35 0 0 250 S
 2 0 0 13d0+0 0d0+0
@@ -135,9 +135,9 @@ slug~
 A slug~
 A slug slithers towards you menacingly.
 ~
-The slug is almost 4 feet long, and covered in a wicked looking slime. 
+The slug is almost 4 feet long, and covered in a wicked looking slime.
 Though it cannot see you very well, it can definately sense your presence as
-it moves towards you to attack.  
+it moves towards you to attack.
 ~
 35 0 0 250 S
 2 0 0 13d0+0 0d0+0
@@ -151,7 +151,7 @@ A huge spider drops from the ceiling to attack you!
 ~
 This spider is large enough to easily take down a small dog, and its body
 spans about the size of your entire chest.  The eyes on this creature focus
-in on you as it moves to make you the meal of the day.  
+in on you as it moves to make you the meal of the day.
 ~
 35 0 0 250 S
 2 0 0 14d0+0 0d0+0
@@ -165,7 +165,7 @@ A small mummified child sees you enter the room and attacks!
 ~
 The child is carefully wrapped in cloth which has been covered in some
 sort of mystic runes.  It does not appear pleased that you have entered it's
-sanctuary, and seeks to end your life as quickly as possible.  
+sanctuary, and seeks to end your life as quickly as possible.
 ~
 35 0 0 250 S
 3 0 0 25d0+0 0d0+0
@@ -179,7 +179,7 @@ Jalis the examiner awaits your challenge with a sneer.
 ~
 Jalis is looking you over with a slight air of superiority, as he doesn't
 seem to believe that you could ever have amassed the skills to defeat him in
-such a short time.  Perhaps it is time to teach HIM a lesson or two.  
+such a short time.  Perhaps it is time to teach HIM a lesson or two.
 ~
 3 0 0 250 S
 3 0 0 30d0+0 0d0+0
@@ -194,7 +194,7 @@ Fizwak the enchanter is here selling his wares to all.
 Fizwak is an old and somewhat insane looking mage who mutters to himself
 as he sits mixing a potion.  The job he does is quite demanding upon him,
 yet he still does it to the best of his ability, and always has something
-for the needy adventurer.  For a price that is.  
+for the needy adventurer.  For a price that is.
 ~
 393219 16777344 0 -1000 S
 120 0 0 99999d0+0 0d0+0
@@ -208,7 +208,7 @@ Triaa stands ready to sell whatever you may need.
 ~
 Triaa is a very ugly old woman who reeks of smoke and alcohol.  Yet she
 seems to know her business as she sizes you up, deciding for herself what
-you may need to get you through your next adventure.  
+you may need to get you through your next adventure.
 ~
 393219 16777344 0 -1000 S
 120 0 0 99999d0+0 0d0+0
@@ -222,7 +222,7 @@ The guardian of the arena is here to help heal your wounds
 ~
 The arena guardian is an old being, so old that you cannot tell if it is
 male or female anymore.  Perhaps it is both, or neither.  It welcomes you to
-stay and rest, and will heal your wounds as needed.  
+stay and rest, and will heal your wounds as needed.
 ~
 393219 16777344 0 -1000 S
 120 0 0 99999d0+0 0d0+0
@@ -235,7 +235,7 @@ An orc child~
 A young orc is wandering through the arena with a dazed look.
 ~
 This young orc has the typical orcish features, yet portrays an air of
-impish innocence as it ponders whether or not it can take you down.  
+impish innocence as it ponders whether or not it can take you down.
 ~
 65 0 0 250 S
 3 0 0 25d0+0 0d0+0
@@ -248,9 +248,9 @@ A deformed lizard~
 &gAn ugly-looking lizard slithers along here.
 ~
 The lizard looks to be the failed attempt of some type of breeding
-experiment, having a strange hue to it's skin, and a largely deformed jaw. 
+experiment, having a strange hue to it's skin, and a largely deformed jaw.
 It slithers back and forth looking for the right opening to break your
-defenses and attack.  
+defenses and attack.
 ~
 65 0 0 250 S
 4 0 0 50d0+0 0d0+0
@@ -263,7 +263,7 @@ A wererat~
 A wererat eyes you suspiciously from the shadows.
 ~
 The wererat is a horrid abomination, crouching on it's hind legs snarling
-and fixing it's red eyes directly upon you.  
+and fixing it's red eyes directly upon you.
 ~
 65 0 0 250 S
 5 0 0 96d0+0 0d0+0
@@ -278,7 +278,7 @@ A tall firlbog stomps towards you..
 Somewhat taller than ogres, yet twice as stupid, an angry firlbog is not
 something you want to be on the opposing side of.  The smell from the
 creature is intensely putrid and he bares yellowed teeth at you in a
-lopsided grin.  
+lopsided grin.
 ~
 65 0 0 250 S
 6 0 0 109d0+0 0d0+0
@@ -291,7 +291,7 @@ The Storm Ambassador~
 The Storm Ambassador is here to help you on your way.
 ~
 The ambassador is an ageless being, sent forth to aid and advise the
-young adventurers who are new to the realm.  
+young adventurers who are new to the realm.
 ~
 393219 33554560 0 -1000 S
 1 0 0 99999d0+0 0d0+0
@@ -321,9 +321,9 @@ skeleton~
 A skeleton~
 A skeleton stands rather awkwardly here.
 ~
-A pile of bones that stands, walks and seemingly thinks all on it's own. 
+A pile of bones that stands, walks and seemingly thinks all on it's own.
 It is unclear whether the skeleton has been given life by magic, or by the
-restless soul which once inhabited the body that it used to be.  
+restless soul which once inhabited the body that it used to be.
 ~
 65 0 0 300 S
 4 0 0 60d0+0 0d0+0
@@ -350,7 +350,7 @@ reserved~
 E
 vortex~
 The vortex is a swirling mass of gases and energy, drawing you closer,
-and beckoning you to ENTER it. 
+and beckoning you to ENTER it.
 ~
 #1252
 ring red ravenwood~
@@ -782,10 +782,10 @@ redwood shield ravenwood~
 #ROOMDATA
 #1251
 The Mist Above the Storm~
-You are floating in perfect safety above The Storm which rages on below. 
+You are floating in perfect safety above The Storm which rages on below.
 From here, you must make your plunge, to join in the battle against the
 forces of good.  To join the world below you, you must first enter the
-vortex which swirls just below your toes.  
+vortex which swirls just below your toes.
 ~
 0 394252 0
 Rd     0
@@ -800,7 +800,7 @@ practice your skills (after level 3).  At any point, should you see a sign,
 it would probably be best to LOOK at it, as it may contain vital information
 for you.  You can get a better idea of where you stand with the SCORE,
 INVENTORY, and EQUIPMENT commands.  Try them now.  When you are ready to
-continue, choose your path and go.  
+continue, choose your path and go.
 ~
 0 1036 0
 Rd     0
@@ -860,7 +860,7 @@ Here, you are at a four way intersection, leaving you quite a few choices
 of which way to go.  To your east and west are small rooms, while to the
 north and south the school hallways continue.  Or perhaps, if you've already
 done some fighting, you'd like to REST or SLEEP and regain some of the
-hitpoints, mana, or movement points you may have lost in the struggle.  
+hitpoints, mana, or movement points you may have lost in the struggle.
 ~
 0 1036 0
 Rd     0
@@ -886,7 +886,7 @@ Within a Padded Cell~
 The padding covering the walls, ceiling, and floor here makes for ease in
 moving silently.  Judging by the restraints set into the walls, someone has
 been held here, most likely for being a menace to the townsfolk.  You may
-exit the room to the east.  
+exit the room to the east.
 ~
 0 8 0
 Rd     0
@@ -897,9 +897,9 @@ D1
 S
 #1256
 Within a Cramped Prison Cell~
-This room is tiny, and unkept by those in charge of this academy. 
+This room is tiny, and unkept by those in charge of this academy.
 Shackles are set into the wall, and a slab of wood mounted on a stone slab
-serves as some sort of crude bed.  You may exit the cell to the west.  
+serves as some sort of crude bed.  You may exit the cell to the west.
 ~
 0 8 0
 Rd     0
@@ -921,7 +921,7 @@ interest.  One of the first you should do is AUTOEXIT.  This will
 automatically show you the obvious exits from where you are.  Others are
 AUTOLOOT (gets all from corpse) AUTOSAC (automatically sacrifices the corpse
 to your deities) and AUTOGOLD (automatically gets the coins from the
-corpse).  
+corpse).
 ~
 0 1036 0
 Rd     0
@@ -940,7 +940,7 @@ In this dead-end room in the halls of the school there is a staircase
 leading downwards.  The room looks as though it has been inhabited by
 someone for quite some time, and though it reeks of a stale stench, it is
 still somewhat cleaner than most of the other rooms you have seen.  You may
-travel down the stairs or leave the room to the south.  
+travel down the stairs or leave the room to the south.
 ~
 0 12 0
 Rd     0
@@ -957,11 +957,11 @@ S
 On a Landing in the Stairwell~
 From this vantage point, you may travel in any of the six directions
 (north south east west up down).  Thin candles are set into the walls here
-giving off a dim glow, and filling the room with a sweet smelling smoke. 
+giving off a dim glow, and filling the room with a sweet smelling smoke.
 The next move is yours.  If you have advanced to the next level, you should
 SAVE now.  To find out how many more experience points you will need until
 the next advancement, type WORTH, which will show your current experience as
-well as your needed experience for the next level, and gold coins in hand.  
+well as your needed experience for the next level, and gold coins in hand.
 ~
 0 2098188 0
 Rd     0
@@ -995,7 +995,7 @@ Within a Small Cell~
 The cell is somewhat damp, and offers very little in the way of light or
 fresh air.  A pile of matted straw covers the floor, and you can definately
 hear something crawling around underneath it.  You may exit the cell to the
-south.  
+south.
 ~
 0 8 0
 Rd     0
@@ -1009,7 +1009,7 @@ Within a Dark Alcove~
 The room is covered in dust from ceiling to floor, with many cobwebs
 hanging in huge matted clump in the corners.  If you look closely, you can
 see some sort of entangled creature, long since dead, yet large enough to be
-the size of a large cat.  You may exit the room to the east.  
+the size of a large cat.  You may exit the room to the east.
 ~
 0 8 0
 Rd     0
@@ -1024,7 +1024,7 @@ The office is complete with a desk and chair, as well as trophies
 collected from various hunting expeditions.  This is obviously the workplace
 of one of the examiners of the school, who will test you on your finely
 honed skills.  Rumor has it, the only way to graduate is to successfully
-kill your teacher.  You may exit the office to the north.  
+kill your teacher.  You may exit the office to the north.
 ~
 0 0 0
 Rd     0
@@ -1038,8 +1038,8 @@ A Small Antechamber~
 The antechamber has been kept somewhat clean, save for the occasional
 bloodstain upon the wall or floor.  A small sarcophagus lies at the far
 wall, yet it does not appear to be sealed.  You may exit the room to the
-west.  
- 
+west.
+
 ~
 0 8 0
 Rd     0
@@ -1058,7 +1058,7 @@ At this point there are four small hallways running to the north, south,
 east, and west, as well as stairs leading upwards, and a small ladder
 leading down into a pit just below you.  A slight stench of something
 brewing is coming from the west, while to the east you can smell some
-freshly cooked food.  
+freshly cooked food.
 ~
 0 1032 0
 Rd     0
@@ -1100,8 +1100,8 @@ Within a School Hallway~
 This hallway runs to the north and south with the northbound exit leading
 further into the school, while the southern exit leads off to the Temple of
 Ravenwood, where adventurers gather to rest and discuss the issues of the
-day.  
- 
+day.
+
 ~
 0 0 0
 Rd     0
@@ -1141,7 +1141,7 @@ Ravenwood Academy General Store~
 This small and tidy little shop has been well stocked with the most basic
 adventuring supplies someone such as yourself would find useful.  You may
 buy an item, or see what is for sale by typing LIST.  The only exit from the
-shop is to the west.  
+shop is to the west.
 ~
 0 1032 0
 Rd     0
@@ -1156,7 +1156,7 @@ Within this fine shop you can buy some items which may give you that
 extra edge during a battle, or maybe just save your life.  The shop is
 filled with broken glass and has smoke clinging to the walls and ceiling so
 somebody has been busy keeping the supplies in full stock.  You may exit the
-shop to the east.  
+shop to the east.
 ~
 0 1036 0
 Rd     0
@@ -1173,7 +1173,7 @@ arena, where you can fight anything that gets in your way, and better hone
 your combat skills.  There is a healer in this arena, so find him if you get
 into trouble.  If you are in severe trouble and need to leave the arena
 immediately simply ENTER one of the portals.  The portals are in every room
-and are a safe gateway back to the upper floor of the academy.  
+and are a safe gateway back to the upper floor of the academy.
 ~
 0 0 0
 Rd     0
@@ -1191,7 +1191,7 @@ Entrance to Lord Drauzen's Arena~
 Drauzen's Arena stretches before you as a small maze, with exits leading
 off to the east, west, and north.  You may continue down any one of these
 exits to explore the Arena.  When in search of safety, simply enter the
-portal of safety before you.  
+portal of safety before you.
 ~
 0 0 0
 Rd     0
@@ -1215,8 +1215,8 @@ S
 #1271
 In the Academy Arena~
 The arena is filled with the sounds of various creatures who roam freely
-here.  This is by far your greatest test since coming to school here. 
-Remember if you get in trouble, enter the portal!  
+here.  This is by far your greatest test since coming to school here.
+Remember if you get in trouble, enter the portal!
 ~
 0 8 0
 Rd     0
@@ -1232,8 +1232,8 @@ S
 #1272
 In the Academy Arena~
 The arena is filled with the sounds of various creatures who roam freely
-here.  This is by far your greatest test since coming to school here. 
-Remember if you get in trouble, enter the portal!  
+here.  This is by far your greatest test since coming to school here.
+Remember if you get in trouble, enter the portal!
 ~
 0 8 0
 Rd     0
@@ -1249,8 +1249,8 @@ S
 #1273
 In the Academy Arena~
 The arena is filled with the sounds of various creatures who roam freely
-here.  This is by far your greatest test since coming to school here. 
-Remember if you get in trouble, enter the portal!  
+here.  This is by far your greatest test since coming to school here.
+Remember if you get in trouble, enter the portal!
 ~
 0 8 0
 Rd     0
@@ -1270,8 +1270,8 @@ S
 #1274
 In the Academy Arena~
 The arena is filled with the sounds of various creatures who roam freely
-here.  This is by far your greatest test since coming to school here. 
-Remember if you get in trouble, enter the portal!  
+here.  This is by far your greatest test since coming to school here.
+Remember if you get in trouble, enter the portal!
 ~
 0 8 0
 Rd     0
@@ -1283,8 +1283,8 @@ S
 #1275
 In the Academy Arena~
 The arena is filled with the sounds of various creatures who roam freely
-here.  This is by far your greatest test since coming to school here. 
-Remember if you get in trouble, enter the portal!  
+here.  This is by far your greatest test since coming to school here.
+Remember if you get in trouble, enter the portal!
 ~
 0 8 0
 Rd     0
@@ -1300,8 +1300,8 @@ S
 #1276
 In the Academy Arena~
 The arena is filled with the sounds of various creatures who roam freely
-here.  This is by far your greatest test since coming to school here. 
-Remember if you get in trouble, enter the portal!  
+here.  This is by far your greatest test since coming to school here.
+Remember if you get in trouble, enter the portal!
 ~
 0 8 0
 Rd     0
@@ -1317,8 +1317,8 @@ S
 #1277
 In the Academy Arena~
 The arena is filled with the sounds of various creatures who roam freely
-here.  This is by far your greatest test since coming to school here. 
-Remember if you get in trouble, enter the portal!  
+here.  This is by far your greatest test since coming to school here.
+Remember if you get in trouble, enter the portal!
 ~
 0 8 0
 Rd     0
@@ -1338,8 +1338,8 @@ S
 #1278
 In the Academy Arena~
 The arena is filled with the sounds of various creatures who roam freely
-here.  This is by far your greatest test since coming to school here. 
-Remember if you get in trouble, enter the portal!  
+here.  This is by far your greatest test since coming to school here.
+Remember if you get in trouble, enter the portal!
 ~
 0 8 0
 Rd     0
@@ -1355,8 +1355,8 @@ S
 #1279
 In the Academy Arena~
 The arena is filled with the sounds of various creatures who roam freely
-here.  This is by far your greatest test since coming to school here. 
-Remember if you get in trouble, enter the portal!  
+here.  This is by far your greatest test since coming to school here.
+Remember if you get in trouble, enter the portal!
 ~
 0 8 0
 Rd     0
@@ -1372,8 +1372,8 @@ S
 #1280
 In the Academy Arena~
 The arena is filled with the sounds of various creatures who roam freely
-here.  This is by far your greatest test since coming to school here. 
-Remember if you get in trouble, enter the portal!  
+here.  This is by far your greatest test since coming to school here.
+Remember if you get in trouble, enter the portal!
 ~
 0 8 0
 Rd     0
@@ -1393,8 +1393,8 @@ S
 #1281
 In the Academy Arena~
 The arena is filled with the sounds of various creatures who roam freely
-here.  This is by far your greatest test since coming to school here. 
-Remember if you get in trouble, enter the portal!  
+here.  This is by far your greatest test since coming to school here.
+Remember if you get in trouble, enter the portal!
 ~
 0 8 0
 Rd     0
@@ -1406,8 +1406,8 @@ S
 #1282
 In the Academy Arena~
 The arena is filled with the sounds of various creatures who roam freely
-here.  This is by far your greatest test since coming to school here. 
-Remember if you get in trouble, enter the portal!  
+here.  This is by far your greatest test since coming to school here.
+Remember if you get in trouble, enter the portal!
 ~
 0 8 0
 Rd     0
@@ -1423,8 +1423,8 @@ S
 #1283
 In the Academy Arena~
 The arena is filled with the sounds of various creatures who roam freely
-here.  This is by far your greatest test since coming to school here. 
-Remember if you get in trouble, enter the portal!  
+here.  This is by far your greatest test since coming to school here.
+Remember if you get in trouble, enter the portal!
 ~
 0 8 0
 Rd     0
@@ -1442,7 +1442,7 @@ Safe Zone~
 At this area here, there is a magic aura which prevents any opponents
 from entering the room or attacking you.  The healer will assist you in your
 regeneration process as best he can, and when you are ready, you may
-continue to fight.  
+continue to fight.
 ~
 0 2098188 0
 Rd     0
@@ -1460,7 +1460,7 @@ Within a Small Chamber~
 The smell in here is intense, with small flies buzzing about the waste
 which the creature inhabiting this room has seen fit to spread from one end
 of the floor to the other.  You may endure the stench, or leave the room to
-the east.  
+the east.
 ~
 0 8 0
 Rd     0
@@ -1472,10 +1472,10 @@ S
 #1286
 Inside a Damp Cell~
 The mildew clinging to the walls is as thick as the slime upon the floor
-here, making breathing difficult, and causing you to slip here and there. 
+here, making breathing difficult, and causing you to slip here and there.
 The lack of lighting in the room adds to the overall dreariness, as there
 are no windows to help clear the air.  Whoever or whatever lives here is
-truly a disgusting creature.  You may leave the room to the west.  
+truly a disgusting creature.  You may leave the room to the west.
 ~
 0 8 0
 Rd     0
@@ -1489,7 +1489,7 @@ The Donations Pit~
 This is one of the areas you may see in your travels where one adventurer
 has been kind enough to share his wealth of items with those less fortunate.
 Take only what you feel you need, as there are most likely others just as
-needy as yourself, if not more.  
+needy as yourself, if not more.
 ~
 0 1032 0
 Rd     0

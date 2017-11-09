@@ -1,7 +1,7 @@
 #AREADATA
-Name        { 10-45} Botanical Garden    Kalourin~
+Name        Botanical Garden~
 Levels      10 45
-Builders    None~
+Builders    Kalourin~
 VNUMs       14000 14099
 Security    5
 Recall      25001
@@ -45,7 +45,7 @@ A giant grasshopper~
 A giant grasshopper is here, munching on some grass.
 ~
 A grasshopper, at least 50 times bigger than an average grasshopper is
-here, feeding on grass and other forms of plant life.  
+here, feeding on grass and other forms of plant life.
 ~
 65 16384 0 0 S
 25 0 0 840d0+0 0d0+0
@@ -59,7 +59,7 @@ An electric dragonfly peacefully flies in circles.
 ~
 Currents of electricity flows within a dragonfly here.  This dragonfly is
 about the size of a pixie, and slower than a normal dragonfly.  Are all
-dragonflies supposed to be electrical?  This one is sure acting strange.  
+dragonflies supposed to be electrical?  This one is sure acting strange.
 ~
 65 67633152 0 0 S
 35 0 0 1600d0+0 0d0+0
@@ -88,7 +88,7 @@ red with white spots covering it's head with a green stem and a mouth with
 long, sharp, pointed teeth.  It is also rumored that this plant can breathe
 fire, yet it has not been proven since no one has attempted to get close to it
 or wake it up.  Fortunately, it has never woke up ever since it started
-growing in this garden.  
+growing in this garden.
 ~
 3 131072 0 -300 S
 30 0 0 1400d0+0 0d0+0
@@ -106,7 +106,7 @@ A giant bee is busily tending to the hive.
 ~
 This bee stands roughly 4 feet at the shoulder, and 6 feet long.  It has
 no wings, and the fur that once covered its body is now replaced with armor
-plating and spikes.  
+plating and spikes.
 ~
 129 40 0 0 S
 30 0 0 1500d0+0 0d0+0
@@ -120,7 +120,7 @@ An armored bee warrior guards the gate.
 ~
 The guard is similiar in frame to the drones, with a few exceptions.  He
 most certainly has wings, and his forearms have been modified to carry
-weapons and shields.  
+weapons and shields.
 ~
 67 128 0 -250 S
 33 0 0 1350d0+0 0d0+0
@@ -134,7 +134,7 @@ The Queens' elite soldier guards the hive treasury
 ~
 What a strange sight, wasps playing servant to a queen bee.  Nonetheless,
 the huge 14 foot wingspan of the pitch black wasp is the least of your
-worries.  You are quite aware that they can sting multiple times.  
+worries.  You are quite aware that they can sting multiple times.
 ~
 3 128 0 1000 S
 37 0 0 1675d0+0 0d0+0
@@ -150,7 +150,7 @@ By the gods!  The queen bee is roughly 25 feet tall at the shoulder, and
 about 40 feet long.  Her eyes are the size of tower shields, and her wings
 can span almost 100 ogres shoulder to shoulder.  She gazes at you
 impassively, until your eyes spot the treasure, you then feel a powerful
-urge to run.  
+urge to run.
 ~
 3 8320 0 250 S
 45 0 0 3400d0+0 0d0+0
@@ -164,7 +164,7 @@ mpforce bee mpkill $n
 ~
 >death_prog 100~
 emo lets out an ear shattering screech as shes dies
- 
+
 mpecho The queens' body slams into the ground, sending tremors throughout the hive
 cast 'earthquake'
 ~
@@ -180,7 +180,7 @@ A garden caretaker~
 A caretaker of the garden is making sure the plants are growing nicely.
 ~
 Covered in dirt and twigs, this poor woman is desperately seeking an
-exit, away from the insects.  
+exit, away from the insects.
 ~
 65 0 0 700 S
 26 0 0 1140d0+0 0d0+0
@@ -194,7 +194,7 @@ Garret is here, guarding the gate from any illegal entry.
 ~
 Garret is a rather well built human male.  He stands roughly six feet in
 height, and about 240 pounds.  Despite his bulky appearance, he appears to
-be quite friendly.  
+be quite friendly.
 ~
 3 128 0 1000 S
 48 0 0 5000d0+0 0d0+0
@@ -211,7 +211,7 @@ smile $n
 endif
 ~
 >bribe_prog 1~
-emote reaches for a key around his neck 
+emote reaches for a key around his neck
     mpoload 14004
     unlock n
     open n
@@ -259,7 +259,7 @@ A citizen of Bethaven~
 A young man is here, standing in line.
 ~
 This young citizen of Bethaven has been waiting for a very long time.  It
-is easily noticeable that he is very impatient.  
+is easily noticeable that he is very impatient.
 ~
 67 0 0 250 S
 18 0 0 520d0+0 0d0+0
@@ -285,8 +285,8 @@ A young man~
 A suspicious-looking young man wanders cautiously here.
 ~
 Here is an unfortunate soul.  This young man was caught robbing from the
-Bethaven bank, and is now on the run from the High Guard of Bethaven. 
-Fearful from all this running away, he looks like an easy kill.  
+Bethaven bank, and is now on the run from the High Guard of Bethaven.
+Fearful from all this running away, he looks like an easy kill.
 ~
 65 65536 0 0 S
 10 0 0 200d0+0 0d0+0
@@ -337,7 +337,7 @@ An insane mage is here, conducting experiments.
 This particular mage is covered from head to toe in various giant sized
 insect parts.  It seems he was conducting experiments with insects and plant
 growth formulae.  He spins as you enter, revealing the face of a fly instead
-of a man.  Fear is the only thing that fills you now.  
+of a man.  Fear is the only thing that fills you now.
 ~
 67 168 0 -1000 S
 35 0 0 1600d0+0 0d0+0
@@ -357,7 +357,7 @@ The High Guard of Bethaven is looking for the bank robber.
 ~
 Here stands the third highest ranked guard in the Bethaven army.  The
 High Guard has been sent to the Garden to search out the bank robber of
-Bethaven.  He looks very experienced, and not be meddled with.  
+Bethaven.  He looks very experienced, and not be meddled with.
 ~
 67 8320 0 1000 S
 60 0 0 8000d0+0 0d0+0
@@ -431,8 +431,8 @@ reserved~
 0 0 0
 E
 corpse~
-This poor soul was not able to escape the falling rocks of the cave in. 
-The gloom and mud now serve as his final resting place 
+This poor soul was not able to escape the falling rocks of the cave in.
+The gloom and mud now serve as his final resting place
 ~
 #14004
 garden key~
@@ -934,7 +934,7 @@ the Bethaven Botanical Garden.  The reception area is empty at the moment,
 the sounds of the city outside supplying the only real interest.  Glancing
 around, you notice numerous brochures scattered around the room.  Perhaps
 looking at one may provide some knowledge of the garden.  There is a door
-set into the southern wall here.  
+set into the southern wall here.
 ~
 0 12 0
 Rd     0
@@ -954,7 +954,7 @@ Coming into the hallway, you find that you may very well be the only
 person in here.  The hallway echoes with the sound of your footsteps, yet
 they garner no attention.  For a brief moment, you consider the possibility
 of the garden being closed to the public.  However, you do notice some
-footprints on the floor, signifying some sort of activity.  
+footprints on the floor, signifying some sort of activity.
 ~
 0 0 0
 Rd     0
@@ -977,7 +977,7 @@ Bend in Hallway~
 You follow the footprints as best as you can, yet are distracted by a
 sight not far up ahead.  Bright rays of sunlight filter in from the north,
 as does the sweet smell of roses.  You also hear voices as well, and the
-sounds of coins jingling.  
+sounds of coins jingling.
 ~
 0 0 0
 Rd     0
@@ -997,7 +997,7 @@ enormous glass structure.  Beyond the crystal clear walls lie hundreds of
 different varieties of plant life.  Roses, ferns and tall exotic looking
 trees fill your field of vision.  After a few seconds, you then notice the
 ticket taker, and a few citizens of Bethaven, awaiting entry into the
-garden.  
+garden.
 ~
 0 4 0
 Rd     0
@@ -1020,7 +1020,7 @@ Inside the Entrance~
 Coming in through the gateway, your nose is assaulted by the overwhelming
 fragrance of the garden.  Bright rays of light shine down from the sky,
 heating the interior of the structure.  A warm mist swirls up from the
-ground as tiny beads of sweat form on your skin.  
+ground as tiny beads of sweat form on your skin.
 ~
 0 0 0
 Rd     0
@@ -1048,7 +1048,7 @@ color and perfume.  A sight such as this would take the mind of the most
 hardened warrior, and put it at ease.  As you look around, you begin to
 notice something rather odd.  Towards the north, the garden seems to have
 been turned into a cave of sorts.  Suddenly, you begin to wonder whether or
-not the ticket taker offers refunds.  
+not the ticket taker offers refunds.
 ~
 0 0 0
 Rd     0
@@ -1066,7 +1066,7 @@ The Grotto~
 You are in the mouth of what looks like a huge fern grotto.  Odd sounds
 echo from within the cave-like opening.  A high pitched buzz erupts from
 behind you, causing you to instinctively duck for cover.  Spinning around
-to find the source of the noise, you lash out blindly, only to hit a tree.  
+to find the source of the noise, you lash out blindly, only to hit a tree.
 ~
 0 0 0
 Rd     0
@@ -1115,7 +1115,7 @@ Rose Covered Path~
 Overwhelmed with terror you flee in a blind panic, only to find yourself
 entangled in a massive rose bush.  The thorns rip through your clothing and
 leave stabs and blood trails as they tear into your skin.  Getting out is
-going to be tricky, but staying in here will only mean more pain.  
+going to be tricky, but staying in here will only mean more pain.
 ~
 0 268435456 0
 Rd     2
@@ -1130,12 +1130,12 @@ D3
 S
 #14009
 Bloody Carnage~
-The mist fades away into nothing, giving way to a gut wrenching sight. 
+The mist fades away into nothing, giving way to a gut wrenching sight.
 Your stomach knots, in an effort to keep your food down.  Strewn around in
 the mud, are the shredded, torn remains of the previous visitors to the
 garden.  Thick rivulets of blood flow through the mud, and the thick stench
 of decayed flesh overrides any chance to avoid vomiting.  Trying not to
-look, you spot an arm sinking...  No..  Being pulled down under the mud. 
+look, you spot an arm sinking...  No..  Being pulled down under the mud.
 ~
 0 0 0
 Rd     0
@@ -1168,7 +1168,7 @@ the mud, mist and the intense heat, you feel as if you are no longer in a
 garden, but rather, a jungle.  Your grip on your weapon becomes slippery,
 and your body spasms with the sensation of hundreds of insects, but as you
 look in horror, it is!  Not to mention the fact that the crunching, slurping
-sounds seem to be a few feet away, through the mist.  
+sounds seem to be a few feet away, through the mist.
 ~
 0 0 0
 Rd     0
@@ -1187,7 +1187,7 @@ You continue through the mist, only to find yourself suddenly falling
 forward.  You frantically flail about, hoping to grab onto something, yet
 you fail.  You fall for what seems like, two feet, and end up face down in
 thick, gooey mud.  You would normally laugh at this situation, its just that
-the crunching sound to the north continues.  
+the crunching sound to the north continues.
 ~
 0 0 0
 Rd     0
@@ -1206,7 +1206,7 @@ The mist begins to thin a bit, just enough for you to find the solid
 sanctuary of the walkway.  Something is definately out of place here,
 although you can't figure out what it could possibly be.  As you let your
 mind wander, the grim wake of reality re-enters your mind as an odd sound
-slowly emanates from the north.  It sounds like....something being eaten. 
+slowly emanates from the north.  It sounds like....something being eaten.
 ~
 0 0 0
 Rd     0
@@ -1224,7 +1224,7 @@ Misty Walkway~
 The mist has suddenly grown to fog-like proportions in this section of
 the garden.  The shapes of the plants begin to take on a more hideously evil
 look, as a cold chill runs down your spine.  A low buzzing drones on in your
-ear, accented by loud clicking noises.  
+ear, accented by loud clicking noises.
 ~
 0 0 0
 Rd     0
@@ -1243,7 +1243,7 @@ Thick waves of mist flow through the plants, surrounding your body, and
 blanketing the ground.  A warm breeze blows gently, causing nearby branches
 and leaves to brush against you, which does nothing to quell the feeling of
 paranoia slowly building in your mind.  You desperately try to get your
-bearings, yet inevitably, you fail.  
+bearings, yet inevitably, you fail.
 ~
 0 0 0
 Rd     0
@@ -1262,7 +1262,7 @@ Stumbling blindly in the mist, you slam against the glass wall of the
 building with a loud, painful THUNK!  You begin to feel around, despite the
 blood coming from your nose, and find that this particular path bends to the
 north.  The mist unfortunately obscures anything else in the area, leaving
-you no choice but to move on.  
+you no choice but to move on.
 ~
 0 0 0
 Rd     0
@@ -1277,10 +1277,10 @@ D1
 S
 #14016
 Cluttered Walkway~
-As you move through the mist, you find yourself on rough terrain. 
+As you move through the mist, you find yourself on rough terrain.
 Straining your eyes downward, you see the shattered remains of many clay
 pots on the ground.  Dead plants lie strewn between the pots, leading you to
-believe that this may have been part of the nursery.  
+believe that this may have been part of the nursery.
 ~
 0 0 0
 Rd     0
@@ -1296,9 +1296,9 @@ S
 #14017
 Cluttered Walkway~
 More and more dead plants and broken pots can be seen.  It would seem
-that something barreled its way through here at a high rate of speed. 
+that something barreled its way through here at a high rate of speed.
 Nearby tables have been totally demolished, and as you casually glance
-around, you notice a huge crack in the glass wall to the west.  
+around, you notice a huge crack in the glass wall to the west.
 ~
 0 0 0
 Rd     0
@@ -1321,7 +1321,7 @@ The path takes a sharp bend to the east here, and oddly enough, so do the
 broken pots.  Now you notice the fact they are lined strategically, showing
 the path as it heads towards the east.  You hear a strange sound, almost
 like the sound of fruit being mashed.  As you try to pinpoint the sound, a
-loud creak echoes from a loose plank in the floor..  
+loud creak echoes from a loose plank in the floor..
 ~
 0 0 0
 Rd     0
@@ -1349,7 +1349,7 @@ The terrain takes a turn for the worse here, as the plants suddenly rise
 up a good 10 feet above your head.  They fall towards each other,
 threatening to collapse upon you, but then they stop.  About ten feet up,
 the plants have created a huge canopy, cloaking the surrounding area in
-darkness.  
+darkness.
 ~
 0 0 0
 Rd     0
@@ -1365,10 +1365,10 @@ S
 #14020
 Moss Filled Pit~
 WHUMP!!!  You end up in a huge moss filled pit.  Luckily for you it
-absorbed most of the impact.  You quickly analyze the current situation. 
+absorbed most of the impact.  You quickly analyze the current situation.
 The floor above is a good 20 feet up.  The heavily mossed walls prevent any
 attempt to climb, leaving flight as the only other options.  There doesn't
-seem to be any visable exits, yet you sense a cool chill from the north.  
+seem to be any visable exits, yet you sense a cool chill from the north.
 ~
 0 9 0
 Rd     0
@@ -1385,8 +1385,8 @@ S
 #14021
 Muddy Tunnel~
 You push the moss aside, revealing a mud filled tunnel which extends
-towards the east and west.  The mud is very thick, and about boot high. 
-This could make travel somewhat difficult.  
+towards the east and west.  The mud is very thick, and about boot high.
+This could make travel somewhat difficult.
 ~
 0 9 0
 Rd     0
@@ -1440,7 +1440,7 @@ You pull yourself up from the mud, and onto a large ledge.  Crushed rocks
 lie scattered, as if something stood here at one point.  Examining the rocks
 more closely, you find some bits of metal as well.  Perhaps this was a wall
 of some sort, maybe a lower level foundation.  The tunnel extends towards
-the north.  
+the north.
 ~
 0 9 0
 Rd     0
@@ -1458,7 +1458,7 @@ Cave-In~
 CRASH!!!  The upper portion of the tunnel has just caved in, preventing
 any further travel.  It unfortunately claimed the life of a young man, whom
 you did not see until just now.  Looks as if he never saw it coming.  Just
-think, it could have been you. 
+think, it could have been you.
 ~
 0 9 0
 Rd     0
@@ -1472,7 +1472,7 @@ Dead End~
 The tunnel ends abruptly in the form of, not plants or dirt, but solid
 masonry.  Judging by the make of the material, you assume it to be one of
 the sewer pipes running below Bethaven.  It is indeed cool to the touch,
-must be one of the more widely used pipeways.  
+must be one of the more widely used pipeways.
 ~
 0 1033 0
 Rd     0
@@ -1485,7 +1485,7 @@ S
 Muddy Tunnel~
 The mud grows thicker here, almost up to your thighs.  The dampness in
 the air makes everything seem thick and stuffy, making breathing rather
-difficult.  
+difficult.
 ~
 0 9 0
 Rd     0
@@ -1502,7 +1502,7 @@ S
 Muddy Tunnel~
 You continue on through the thick mud.  The tunnel is silent, save for
 your sloshing foot steps, and the occasional water drops.  Other than that,
-there is nothing of any real interest.  
+there is nothing of any real interest.
 ~
 0 9 0
 Rd     0
@@ -1520,7 +1520,7 @@ Bend in Tunnel~
 The tunnel takes a sharp turn to the south here, sloping upwards as it
 goes.  Before you stands another tunnel, considerably older than the rest,
 shrouded in cobwebs.  Huge shapes can be seen in the webbing, and you
-suddenly find yourself wonderig about your safety.  
+suddenly find yourself wonderig about your safety.
 ~
 0 9 0
 Rd     0
@@ -1537,16 +1537,16 @@ S
 Webbed Passage~
 Pushing and slashing your way through the webs, the remains of numerous
 other people fall to your feet.  Whichever ones that are still intact, seem
-to have been drained of everything, leaving nothing but a withered shell. 
+to have been drained of everything, leaving nothing but a withered shell.
 Suddenly the webs shudder violently, as if something large struck or shook
-it.  
+it.
 ~
 0 9 0
 Rd     0
 E
 remains~
 Yummy!  These corpse shells remind you of fried potato skins.  You know
-they might have been a potato but they sure look hollow now!  
+they might have been a potato but they sure look hollow now!
 ~
 D0
 ~
@@ -1562,7 +1562,7 @@ Before the Pit~
 You follow the vibrations to the source.  Roughly five feet above and
 in front of you, a huge orc has been captured and webbed up.  Below him
 towards the western edge of the tunnel is a huge pit.  Even from here you
-can see the glistening of huge eyes glaring hungrily at its prey.  
+can see the glistening of huge eyes glaring hungrily at its prey.
 ~
 0 9 0
 Rd     0
@@ -1580,7 +1580,7 @@ Spider's Lair~
 You take a few steps into the tunnel, only to find yourself trapped in
 the sticky webbing.  You pull and tug frantically, as a huge shape begins to
 dart excitedly down the tunnel towards you.  You have no choice but to fight
-now, you are trapped in the spiders lair!  
+now, you are trapped in the spiders lair!
 ~
 0 13 0
 Rd     0
@@ -1594,7 +1594,7 @@ A Nest~
 After digging through the mud, and prying up some loose boards, an
 ungodly stench invades your nasal passages.  A huge nest has been created
 below the boards, and it would seem that its inhabitants are awaiting their
-next meal...quite possibly...YOU! 
+next meal...quite possibly...YOU!
 ~
 0 9 0
 Rd     0
@@ -1610,7 +1610,7 @@ More maggots!  You thought you saw the last of them when you left the
 Academy.  The soft ground of this pit is lined with rusted equipment,
 bleached bones, and other various remains.  The maggots themselves are too
 busy with one of their previous victims to bother with you, but that could
-change very soon. 
+change very soon.
 ~
 0 1 0
 Rd     0
@@ -1626,7 +1626,7 @@ Rocks and pebbles skitter left and right, a direct result of your feet
 hitting them.  Some of the larger stones have an odd, sticky looking residue
 on them.  It looks and smells almost like, honey?!  As if the flies werent
 bad enough, visions of six foot bees flood your mind.  It's only a matter of
-time before panic ensues.  
+time before panic ensues.
 ~
 0 9 0
 Rd     0
@@ -1651,9 +1651,9 @@ S
 Honeycomb Passage~
 The rocky path slowly makes way to an odd feeling substance.  As soon as
 your eyes adjust to the light, you instantly recognize the honycomb pattern.
-The thick scent of honey, along with an unknown one, wafts through the air. 
+The thick scent of honey, along with an unknown one, wafts through the air.
 Towards the east and west are what appear to be holding cells of some
-nature.  
+nature.
 ~
 0 9 0
 Rd     0
@@ -1680,7 +1680,7 @@ Travelling further down the honeycomb path, you are overwhelmed with the
 sudden outburst of noise.  The inhabitants of the hive swarm around you, but
 they seem more intent on their tasks.  A pair of workers stare coldly at
 you, as if to try and figure out what you are.  The loud buzzing causes your
-body to vibrate, and you eventually grow nauseous.  
+body to vibrate, and you eventually grow nauseous.
 ~
 0 9 0
 Rd     0
@@ -1707,7 +1707,7 @@ Cutting a swath through the swarm, you push your way north.  The bees
 swarm madly around you in an angry frenzy.  Their huge barbed stingers stab
 from all angles as you crush the bees left and right.  The end of the
 corridor has a passage to the east, and you spot a bright shimmering to the
-west. 
+west.
 ~
 0 268435465 0
 Rd     10
@@ -1729,14 +1729,14 @@ A Dead End~
 Oh no!  A dead end!  Using this as some sort of tactical advantage, the
 intensity of the swarm increases, in an attempt to wipe out the intruder,
 namely YOU!.  As you fight blindly, you stumble over the corpses of the
-other victims.  The only exit out is back to the west 
+other victims.  The only exit out is back to the west
 ~
 0 268435465 0
 Rd     10
 E
 corpses~
 All kinds of corpses litter the ground here.  You think you even see
-humanoid bones.  
+humanoid bones.
 ~
 D3
 ~
@@ -1749,7 +1749,7 @@ Dashing into a side room, before any of the bees can attack, you find
 yourself inside another storage room, much like the others.  A pair of
 workers are here, apparently checking on the contents of the walls.  You try
 to peer into an open hole, when the buzz of the workers grows to an almost
-aggressive state.  It may be best to back off at this point.  
+aggressive state.  It may be best to back off at this point.
 ~
 0 9 0
 Rd     0
@@ -1762,7 +1762,7 @@ S
 A Honeycomb Cell~
 You enter a small room about the size of a jail cell.  The individual
 combs and pockets have been sealed shut.  There is nothing else of interest
-here.  
+here.
 ~
 0 9 0
 Rd     0
@@ -1777,13 +1777,13 @@ The small room has a been molded into a makeshift cell of some kind.  A
 few open honeycomb pockets dot the walls, leading you to believe this is a
 storage room.  Cracking open a closed one, you rear back as the stench of
 death hits you like an ogres' warclub.  Inside the pocket, is the decayed
-corpse of some creature.  
+corpse of some creature.
 ~
 0 9 0
 Rd     0
 E
 corpse~
-This might have been a humanoid body but you can't be sure.  
+This might have been a humanoid body but you can't be sure.
 ~
 D1
 ~
@@ -1795,7 +1795,7 @@ Another Cell~
 Alas, another storage room section.  This one however, is completely
 empty.  The bees don't seem to be coming in here, so it may be a good chance
 you can rest safely.  As you settle down to rest, you spy a quick glint of
-light from inside one of the honeycomb pockets.  
+light from inside one of the honeycomb pockets.
 ~
 0 1037 0
 Rd     0
@@ -1803,7 +1803,7 @@ E
 light~
 As you study the light you realize it is probably one of the glowing bee
 larvas.  The thought of what the larva might be eating makes your stomach
-turn.  Even with that sick feeling this room still makes you feel better.  
+turn.  Even with that sick feeling this room still makes you feel better.
 ~
 D1
 ~
@@ -1817,7 +1817,7 @@ golden gate stands before you, guarded by two guards.  As you ready yourself
 for another fight, you realize the swarm has not followed you down this
 tunnel.  The guards eye you curiously, but as soon as you approach, they get
 ready to attack.  In the center of the gate is huge honeycomb shaped
-carving.  It looks as if that is the keyhole to the gate.  
+carving.  It looks as if that is the keyhole to the gate.
 ~
 0 13 0
 Rd     0
@@ -1840,7 +1840,7 @@ Queen's Lair~
 Stepping through the gates, The Queen of all Bees looks down at you from
 high atop a large pile of gold.  She glares at you with royal arrogance, and
 you feel that this may be the end of your life.  It could very well be just
-that, as a pair of nasty looking elite warriors appear from behind her.  
+that, as a pair of nasty looking elite warriors appear from behind her.
 You are now faced with a decision...the swarm out there, or here.
 ~
 0 9 0
@@ -1861,7 +1861,7 @@ Wandering in the darkness, you find yourself faced with the problem of a
 dead end.  A loud creak shatters the silence as the ground below you caves
 in!  You reach out in hope to grab a plank as you fall, but that too breaks.
 The only sound now is the echo of your scream as you plummet into more
-darkness.  
+darkness.
 ~
 0 33554436 0
 Rd     0
@@ -1876,10 +1876,10 @@ D5
 S
 #14047
 Among The Trees~
-As you climb into the trees, another huge fly shoots past your head. 
+As you climb into the trees, another huge fly shoots past your head.
 Not far above, you see the reason.  Out of the corner of your eye, a sharp
 jagged limb slowly draws back into the foliage.  You can continue further,
-or retreat back down.  
+or retreat back down.
 ~
 0 33554436 0
 Rd     0
@@ -1897,7 +1897,7 @@ Above The Trees~
 As you climb higher into the trees, the air around you suddenly grows
 very warm.  It's almost as if the temperature were rising.  A loud hum
 emanates from somewhere above, and you get the weird feeling that you are
-being watched.  
+being watched.
 ~
 0 33554432 3
 Rd     0
@@ -1917,7 +1917,7 @@ realize just how high you have climbed.  The garden below is nothing more
 than a lush jungle, and you can just barely see the Oracle on the other side
 of the city.  Bright beams of light shine from above, masking the gardens'
 hidden horrors.  A huge platform is levitating above you.  It seems to be
-the source of all the noise.  A closed trap door is right above you.  
+the source of all the noise.  A closed trap door is right above you.
 ~
 0 0 0
 Rd     0
@@ -1935,7 +1935,7 @@ The Floating Platform~
 You poke your head through the hatch just to get an idea of what this
 thing is.  It looks to be a huge, magically powered disc, covered with
 plants and grasses.  All around you the loud buzz of insects can be heard,
-and to the northern edge of this disc, a small hut can be seen. 
+and to the northern edge of this disc, a small hut can be seen.
 ~
 0 0 0
 Rd     0
@@ -1953,11 +1953,11 @@ A trap door is here in the floor.
 S
 #14051
 Lair of Insectus~
-This hut is cluttered with various flasks, scrolls and spell formulae. 
+This hut is cluttered with various flasks, scrolls and spell formulae.
 It looks comparatively normal, except for the many horrible looking specimen
 jars!  Inside some jars, are what appear to be human/insect cross breeds,
 animal/insect crosses, and many others.  The hairs on your neck rise up
-suddenly, as you realize you are being watched!  
+suddenly, as you realize you are being watched!
 ~
 0 0 0
 Rd     0

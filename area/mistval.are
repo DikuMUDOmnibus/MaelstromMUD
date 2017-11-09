@@ -1,5 +1,5 @@
 #AREADATA
-Name        {??-???} Lairich~
+Name        Misty Valley of the Lairich~
 Levels      0 0
 Builders    Isabo Dolguard~
 VNUMs       22101 22325
@@ -20,7 +20,7 @@ Alreha~
 ~
 You see a beautiful woman who has chosen the path of a warrior.  She is
 holding a sword with fresh blood dripping from it, obviously from a foe who
-challenged her earlier 
+challenged her earlier
 ~
 67 134234240 16 200 S
 100 0 0 19600d0+0 0d0+0
@@ -29,21 +29,21 @@ challenged her earlier
 3 0 0
 >greet_prog 100~
 If isimmort($n)
-   say &R Welcome to the Lairich Entrance Immortal,  
+   say &R Welcome to the Lairich Entrance Immortal,
    say &R You are &Galways&R welcomed here.
    break
 endif
 if isgood($n)
    say &W Welcome &G$n&W to the Misty Valley of the Lairich
    say &W My name is &GAlreha&W, I am the &Rguardian&W of this area.
-   say &W If you have &Rany questions&W regarding this area 
+   say &W If you have &Rany questions&W regarding this area
    say &W please feel free to ask me.
    break
 else
    if sex($n) == 2
       bow $n
       say &R Welcome lady $n, to the Misty Valley of the Lairich
-      say &R Thou hath chosen the path of Evil.  Change thy path 
+      say &R Thou hath chosen the path of Evil.  Change thy path
       say &R and join me in the battle against evil.
    else
       Yell &G Forces of Evil begone , Goodness shall prevail.
@@ -63,7 +63,7 @@ say &B guilty but because rich men needed to get rid of them they were
 say &B sent here for something they didn't commit.
 ~
 >speech_prog advanced~
-say &G Oh yeah, the civilizations started to beleive that stricter 
+say &G Oh yeah, the civilizations started to beleive that stricter
 say &G rules needed to be made to prevent overcrowding in prisons.
 ~
 >speech_prog laws~
@@ -98,7 +98,7 @@ You see before you what seems to be a soldier from the looks of his
 attire.  He is wearing a &bnavy blue uniform &Gwith gold lapels in the
 front.  From the look in his eyes you know he is not himself.  He carries
 with him a sharp wooden spear and he charges at you but in his eyes and his
-face there is no perception.  
+face there is no perception.
 ~
 97 8424 327696 100 S
 95 0 0 30000d0+0 0d0+0
@@ -184,8 +184,8 @@ The Evil Step Sister~
 ~
 &wHere sits the evil step sister, the true scion of the evil step mother.
 She knows nothing of the harshness of the world due to such blatant spoiling
-and succoring of their mother.  The only thing she does know is herself. 
-She glares at you and throws a tantrum when she sees you.  
+and succoring of their mother.  The only thing she does know is herself.
+She glares at you and throws a tantrum when she sees you.
 ~
 2275 34603072 163840 -100 S
 95 0 0 25000d0+0 0d0+0
@@ -203,7 +203,7 @@ rather not have one.  She is wearing the finest clothes and she nags at you
 and threatens you with a beating unless you do what she asks of you.  And
 from the looks of her you know it will not be a simple task she sets before
 you.  She sits at her bed lazily and is filing her nails with a crude nail
-file with a golden handle.  
+file with a golden handle.
 ~
 67 67109096 65584 -100 S
 98 0 0 30000d0+0 0d0+0
@@ -221,7 +221,7 @@ to describe and believe that such a thing can occur.  It is translucent and
 you can see right through it.  You know it is leering at you as it attacks
 you.  Although it has no face and body and is just a shapeless mass, you
 know it is very real and very harsh with one intent, to smother you to death
-in its embrace...  
+in its embrace...
 ~
 2147 268961000 65552 -100 S
 110 0 0 44000d0+0 0d0+0
@@ -255,7 +255,7 @@ else
     say &R AHAHAHAHAHAHH!!!  Your a IT, you have been neutered.
     rofl
     say &R Let me help you, with that burden.
-    c 'change sex' 
+    c 'change sex'
 endif
 endif
 ~
@@ -275,7 +275,7 @@ endif
 ~
 >fight_prog 17~
 say &ROuuuueeee, nice weapon.  GIVE IT TO ME!
-disarm 
+disarm
 get all
 say &RNow DIE! With thy own blade.
 wear all
@@ -290,7 +290,7 @@ mad soldier~
 too long and seeing too many unspeakable occurences.  He is very skinny and
 emaciated but don't be fooled by the exterior.  Insane people have been
 known to possess incredible powers.  All of his body is coated with grime
-and dirt and his face is almost grey from filth.  
+and dirt and his face is almost grey from filth.
 ~
 99 134217728 0 0 S
 110 0 0 30001d0+0 0d0+0
@@ -308,9 +308,9 @@ can understand from mere glance why they hold fear for this creature in
 their hearts.  It has &gdark green &Gskin with many scars on them and
 transparent yellow eyes which are bloodshot.  The eyes show that it has seen
 many deaths of its former foes.  It licks its lips in anticipation of
-tasting your flesh.  It is wearing a colorful mask worshipping its maker. 
+tasting your flesh.  It is wearing a colorful mask worshipping its maker.
 And it holds a spear with the head of its previous victim spiked onto its
-end.  
+end.
 ~
 67 169943208 65584 -200 S
 115 0 0 45000d0+0 0d0+0
@@ -389,7 +389,7 @@ emote laughs uproariously.
 cast 'shatter
 ~
 >all_greet_prog 100~
-if ispc($n)  
+if ispc($n)
    if isimmort($n)
       bow
       say Ahhh, an immortal to enlighten my doomed existence.
@@ -404,7 +404,7 @@ if ispc($n)
          say You cannot stop me from what I plan to do... but it's not with you!
          cackle
          cast 'frost breath' $n
-      endif 
+      endif
    endif
 endif
 ~
@@ -505,12 +505,12 @@ sarineus beholder~
 &BSarineus~
 &WThe beholder's fury is felt in your gut.
 ~
-&BThe woman that stands in front of you is a force to be reckoned with. 
+&BThe woman that stands in front of you is a force to be reckoned with.
 Just in her stance you tremble with fear and know that she senses your fear
 and it gives her power.  She wears the fiercest look on her face you have
 ever seen and in her eyes when you dare to meet them is an almost berserk
 look of power, power of the knowledge that she knows exactly what her power
-is.  
+is.
 ~
 99 201326760 196656 -200 S
 118 0 0 45000d0+0 0d0+0
@@ -552,7 +552,7 @@ Medusa with her snapping snakes~
 You see before you an evil force.  Her evil is so great you can feel your
 heart go leaden with fear.  Her eyes glow with &Wwhite heat.  &GHer skin is
 a sickly green pallor and she is wearing a bloody shroud.  But the most
-noticeable feature about her is the snakes which grow out from her hair.  
+noticeable feature about her is the snakes which grow out from her hair.
 ~
 67 469762240 196640 -300 S
 122 0 0 42500d0+0 0d0+0
@@ -608,7 +608,7 @@ chameleon~
 0 0 0
 67111683 0 0
 >speech_prog p How do I get out?~
-say Oh you have to kill many foul creatures and die many foul deaths 
+say Oh you have to kill many foul creatures and die many foul deaths
 say before you can leave this area.
 ~
 |
@@ -634,7 +634,7 @@ shark~
 ~
 &wA Black shark swims around charging at you as it notices your presence.
 It is so black it stands out in the dark seas.  It opens its jaws wide and
-shows its &Wsnow white, razor sharp &wteeth 
+shows its &Wsnow white, razor sharp &wteeth
 ~
 99 402653376 0 -100 S
 110 0 0 25000d0+0 0d0+0
@@ -671,7 +671,7 @@ An outcasted mermaid weeps here silently.
 &cYou see before you a beautiful mermaid with hair that has been shorn
 off.  You wonder at the fates that bemoan her. She sits here silently and
 weeps, her tears invisible in the water.  Her blue eyes implore silently.
-Her mermaid's tail is beautiful to behold.  All in shades of &Cpale blue 
+Her mermaid's tail is beautiful to behold.  All in shades of &Cpale blue
 &cand &gdark green.
 ~
 67 167772328 32 200 S
@@ -681,7 +681,7 @@ Her mermaid's tail is beautiful to behold.  All in shades of &Cpale blue
 133123 0 0
 >fight_prog 70~
 mpecho &zThe mermaid calls upon the darkest powers of the sea.
-cast 'stench 
+cast 'stench
 ~
 >fight_prog 60~
 emote flings back her tail and it gathers momentum towards $n
@@ -702,7 +702,7 @@ mare~
 Virgin ghost.  It has served her selflessly whilst she lived and it
 continues to stay with her in her after life.  It is wearing a
 &Cf&Gl&Co&Gr&Ca&Gl &Wcharm about its neck.  It moves around nibbling at the
-grass at its feet.  
+grass at its feet.
 ~
 69 98496 32 100 S
 100 0 0 25000d0+0 0d0+0
@@ -857,7 +857,7 @@ mysteriously.  You wonder how such a small man could defend himself
 especially in these dangerous parts.  But then you remember that these monks
 can conquer others through sheer will and mind over matter.  He shows no
 fear of you and is almost oblivious to anything but the harmony of himself
-and his environment.  
+and his environment.
 ~
 71 100663528 262288 300 S
 120 0 0 56000d0+0 0d0+0
@@ -936,8 +936,8 @@ sign~
 This is Lairich Valley of the mist.  It has been cursed with everlasting
 mist.  Relying on your vision is futile in these parts.  Few have made it
 out alive and fewer corpses have been retrieved in this area.  Tread
-lightly.  
- 
+lightly.
+
 &BLevel 90-105
 ~
 #22102
@@ -990,7 +990,7 @@ E
 mist~
 &wA clear bottle of glass filled with mist is here.  The mist seems to be
 about to evaporate in a minute but it keeps swirling around in the bottle
-looking for a way out.  It seems to glitter as you eye it.  
+looking for a way out.  It seems to glitter as you eye it.
 ~
 E
 bottle~
@@ -1013,7 +1013,7 @@ reserved~
 E
 key~
 &zA dark key that blends in with the mist is here.  It seems to give off
-some energy that it cannot contain in its small size.  
+some energy that it cannot contain in its small size.
 ~
 #22105
 spear wooden~
@@ -1038,7 +1038,7 @@ A
 E
 spear~
 &OThe wooden spear you see before you is quite sharp and honed finely and
-all by hand which is all the more impressive.  
+all by hand which is all the more impressive.
 ~
 E
 wooden~
@@ -1061,7 +1061,7 @@ E
 purple~
 &pThe purple flower before is so exotic and rare.  You have never seen
 any flower or orchid which possessed so much mystery as the flower that lies
-here.  The edges of its petals are lined &Pfuschia.  
+here.  The edges of its petals are lined &Pfuschia.
 ~
 E
 flower~
@@ -2364,7 +2364,7 @@ S
 Stumbling into the east Mist~
 &wAs you travel into the east, you can hear the singing almost vibrating through
 the mist. You can catch the sound of laughter echoing in a chilling manner.
-The laughter sounds very deranged. You know going east will bring you closer 
+The laughter sounds very deranged. You know going east will bring you closer
 to the source. The road has foot prints embedded in them.
 ~
 0 134610968 3
@@ -2388,7 +2388,7 @@ Ten steps further~
 but it seems to exude a presence that makes you fear for your unprotected
 back and as time loses all meaning in this valley, you lose touch with
 reality.  You walk on as though in a trance.  You can make out a small path
-to the east. 
+to the east.
 ~
 0 134610968 3
 Rd     0
@@ -2496,9 +2496,9 @@ S
 In the Choking Swirl Of the Mist~
 &R^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 &wThe wet suffocation continues and weakens your defenses.  You fail to see
-anything still.  The mist consumes the environment like a dark blanket. 
+anything still.  The mist consumes the environment like a dark blanket.
 There are strange looking trees with snapping branches reaching out for you.
-&R^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+&R^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ~
 0 403054616 3
 Rd     100
@@ -2533,7 +2533,7 @@ In the Choking Swirl Of the Mist~
 &wThe mist seems to have gotten thicker, VERY tangible like hovering wetness
 and you feel as if you are pushing your way through &zgrey sludge.  &wThe
 cold dampness sapping you of your energy, licks at your face with its wet
-tongue.  You make a hasty retreat ahead of you.  
+tongue.  You make a hasty retreat ahead of you.
 &R^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ~
 0 403054620 3
@@ -2575,7 +2575,7 @@ Before a Large Pit~
 &O^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 &wYou almost fall down in to a huge gaping hole before you that you didn't see
 until you were directly upon it. You look in and you see many skeletal remains
-of what appear to be humans and other poor adventurers. There are flowers 
+of what appear to be humans and other poor adventurers. There are flowers
 of the brightest hues strewn all around in contrast to the morbid site as if
 someone had recently paid it a visit. There seems to be a path to the north.
 Only you can't be too sure of anything in this mist.
@@ -2605,7 +2605,7 @@ Before a Hill~
 &O^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 &wYou stand before the base of a hill.  You look up but see mist surrounding
 your vision and thus cannot see where the hill leads or when it ends.  There
-is a barren road that leads up and disappears into the mist.  
+is a barren road that leads up and disappears into the mist.
 &O^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ~
 0 134619160 3
@@ -2629,7 +2629,7 @@ Between Two Tall Trees~
 &wYou carefully tread up through the mist and you have ended up here.  You
 find yorself standing between two trees of enormous circumference making an
 arch around you although you can't discern how tall they really are you can
-see from their roots that they are pretty tall.  
+see from their roots that they are pretty tall.
 &O^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ~
 0 134610968 3
@@ -2649,7 +2649,7 @@ On the Hill~
 &wThe hill is gently sloped and has a lot of lush &ggrass &wand many trees
 that you can barely make out in the mist.  The trail continues north and
 then to the south.  You can hear water trickling distantly but can't tell
-its source.  
+its source.
 &O^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ~
 0 134610968 3
@@ -2667,9 +2667,9 @@ S
 Before a Dark and Dimly lit House~
 &z======================================================================
 &wYou stand before a dark and &zdimly &wlit house with &rdark red &wtiles
-for the roof and all around are prickly rose bushes with no roses in bloom. 
+for the roof and all around are prickly rose bushes with no roses in bloom.
 The house seems unoccupied although there are many windows with lights
-coming feebly from them.  
+coming feebly from them.
 &z======================================================================
 ~
 0 134610968 3
@@ -2711,9 +2711,9 @@ S
 #22121
 In the Hall~
 &z=======================================================================
-&wYou have come west from the main door to the house. The walls are bare and 
+&wYou have come west from the main door to the house. The walls are bare and
 dark candles burn dimly in rows hanging from black candle holders. The hall
-continues to the north towards some unseen destination. But the mist as 
+continues to the north towards some unseen destination. But the mist as
 always, obscures your sight past that few feet.
 &z=======================================================================
 ~
@@ -2899,8 +2899,8 @@ The Evil Step Sisters Room~
 scattered here and there in an artful manner all made of the costliest
 &Ygold &wand a mirro that hangs on the wall is decorated with the &Rroses
 &wthat used to grow in the garden.  A huge black cat sits on a &pvelvet
-&wcushion and hisses at you as you enter. 
-&O********************************************************************** 
+&wcushion and hisses at you as you enter.
+&O**********************************************************************
 ~
 0 135135256 0
 Rd     0
@@ -2951,7 +2951,7 @@ In the Choking Swirl Of the Mist~
 &R^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 &wYou can smell a rotten smell coming from somewhere in this hell you are
 lost in.  But you can not discern the source.  You can hear the mad
-screeching from all around but you may wonder if its just in you head.  
+screeching from all around but you may wonder if its just in you head.
 &R^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ~
 0 403054620 3
@@ -3008,7 +3008,7 @@ In the Choking Swirl Of the Mist~
 &R^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 &wYou keep going north knowing that the mist closed behind you like an
 impenetrable wall.  There seems to be no end to this choking morass that
-sucks away at your life.  
+sucks away at your life.
 &R^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ~
 0 403054620 3
@@ -3024,7 +3024,7 @@ In the Choking Swirl Of the Mist~
 &wThe darkness continues to envelop your surroundings and your being.  The
 screeching and singing gets louder and seemingly closer as you progress
 north.  You wonder if its even human voices that create such hideous sounds.
-&R^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+&R^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ~
 0 403054616 3
 Rd     250
@@ -3237,7 +3237,7 @@ Edge of a Cliff~
 almost missed seeing it.  You feel luckly you caught yourself before it was
 too late.  You cannot see down from the point you are standing at.  The mist
 swirls below you seeming to change colors.  Staring at it too long seems to
-be a bad idea.  There seems to be soft whisperings here and there.  
+be a bad idea.  There seems to be soft whisperings here and there.
 &O-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--
 ~
 0 134619160 3
@@ -3689,7 +3689,7 @@ by the fiercest and the longest metal thorns you have EVER imagined existing.
 Upon close examination you see that the thorns have clutching in their deadly
 embrace, pieces of rotted flesh and bits of clothing and hair. The mist hangs
 in deceiving mellowness. You can see that the neat cobble stone road continues
-south along with the splendor of the rose bushes and the virulence of the 
+south along with the splendor of the rose bushes and the virulence of the
 thorns.
 &c`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#^#'#,#`#
 ~
@@ -3830,7 +3830,7 @@ In a Maze Of Thorn Bushes~
 &c`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#^#'#,#`#
 &wYou are surrounded by metal thorn rose bushes. You are careful not to get
 too close because the thorns do not look very kind. The path you are on is
-made up of tiny cobble stones hewn into a neat carpet that stretches out 
+made up of tiny cobble stones hewn into a neat carpet that stretches out
 before you. The road continues south and branches off to the east as do the
 rose bushes.
 &c`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#^#'#,#`#
@@ -3852,7 +3852,7 @@ D2
 S
 #22191
 In the Rose Bush Maze~
-&c`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#^#'#,#`# 
+&c`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#^#'#,#`#
 &wYou are surrounded by metal thorn rose bushes.  You are careful as always
 not to get too close to the ever present thorns.  The urge to pick some of
 the beautiful &Rr&Po&rs&Pe&Rs &wis strong but the thorns seem to get angrier as
@@ -3881,7 +3881,7 @@ Incubus' Hideout~
 to this world as a manifestation of his evil wishes. The room is dark with
 hardly any light of any remote source present. There is a metal fireplace
 that is closed in the center with the smell of something burning coming out
-in unpleasant waves of smoke. The bed in the room is blood stained and a 
+in unpleasant waves of smoke. The bed in the room is blood stained and a
 bloody basin sits beneath the bed. There is a jewelry box filled with many
 gems and trinkets that were taken as souvenirs from whoever dwells in this
 unholy house.
@@ -4051,7 +4051,7 @@ In the Rose Bush Maze~
 &c`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#^#'#,#`#
 &wThe rose bushes are ever present and they just seem to add to the bleakness
 of this forgotten land.  You see that the &.roses &wseem to change hues in
-this darkness which is called day in this land. You see the maze branch off 
+this darkness which is called day in this land. You see the maze branch off
 to the west and continue north.
 &c`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#`#^#'#,#^#'#,#`#
 ~
@@ -4112,7 +4112,7 @@ S
 A Dead End~
 &O=========================================================================
 &wYou have come to a dead end where petrified trees block your progress.
-The skies are hardly discernable through all the trees and it is dark 
+The skies are hardly discernable through all the trees and it is dark
 without the little light that you had before. There is a portal here and it
 is a source of light.
 &O=========================================================================
@@ -4158,8 +4158,8 @@ Succubus' Parlor~
 &wYou have entered Succubus' parlor of lust.  There is a canopied bed with
 lace frills all around.  On the nightstands next to the bed burns brightly
 many scented candles.  The walls have many sexy pictures on them and a
-gleaming tub sits in the corner filled with warm water. 
-&P^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+gleaming tub sits in the corner filled with warm water.
+&P^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ~
 0 134619160 0
 Rd     0
@@ -4561,8 +4561,8 @@ that seem to be hand made of straws and leaves that someone had put together
 with resources available in this area.  There is a straw mat in the corner
 and in the middle of the room a small pit is dug into the ground and a
 &Rf&Yi&Or&Re &wburns with a small cauldron sitting atop it.  The mist
-mingles pleasantly with the steam coming from the cauldron. 
-&g^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+mingles pleasantly with the steam coming from the cauldron.
+&g^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ~
 0 138813464 0
 Rd     0
@@ -4585,9 +4585,9 @@ S
 An Alcove Hidden by trees~
 &g^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 &wThe dark trees and mist come together to form an alcove. The trees gather
-around together as if sharing a secret as they shake with mirth and 
+around together as if sharing a secret as they shake with mirth and
 conspiracy. The mist is dark and damp in this hidden room. There are pine
-needles and pine cones littered all around. 
+needles and pine cones littered all around.
 &g^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ~
 0 134610973 3
@@ -4640,8 +4640,8 @@ S
 Before the Forbidden Cave~
 &R======================================================================
 &wYou have come to a huge cave entrance that is blocked off by a boulder
-which you find is too heavy to budge. The road ends abruptly there and to 
-the north you see a small hut with beads hanging at the entrance and herbs 
+which you find is too heavy to budge. The road ends abruptly there and to
+the north you see a small hut with beads hanging at the entrance and herbs
 hanging at the posts drying.
 &R======================================================================
 ~
@@ -4719,8 +4719,8 @@ Falling into the Pit~
 &O|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 &wYou are falling down a pit where you saw the skeletons earlier.  You did
 not realize that the pit was so deep.  When you saw it from above it seemed
-to be a shallow pit.  You steel yourself for a nasty fall. 
-&O||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| 
+to be a shallow pit.  You steel yourself for a nasty fall.
+&O|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ~
 0 168165404 9
 Rd     0
@@ -4773,7 +4773,7 @@ S
 Inside a Dark Cave~
 &z-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 &wYou continue down the tunnel. The mutated snake-bats start fluttering all
-around angrily at your entrance. They drop caustic venom on you and screech 
+around angrily at your entrance. They drop caustic venom on you and screech
 in their shrill high pitched voice making you wince. You see that the tunnel
 extends further south and north.
 &z-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -4798,7 +4798,7 @@ Zazu's Pit~
 &r=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 &RThe area you have entered in the cave is a pit littered with remains of
 many poor souls. It glows with an intense red light that emanates from some
-unknown source. Not only is it an intense red that bathes your body in a 
+unknown source. Not only is it an intense red that bathes your body in a
 bloody light, it is scorching hot as it burns into your skin.
 &r=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 ~
@@ -4820,7 +4820,7 @@ Before a Large Hollow Tree~
 height but in circumference.  It must have been a beautiful tree tree full
 of life and a home for many animals of the jungle.  Now it is just a tree a
 mere skeleton of what it used to be.  There seems to be an arch leading into
-the tree.  You can't be sure but there seems to be a room inside the tree.  
+the tree.  You can't be sure but there seems to be a room inside the tree.
 &g=========================================================================-
 ~
 0 134619160 3
@@ -4837,8 +4837,8 @@ S
 #22250
 Hidden Treasure Cave~
 &O========================================================================
-The cave you have entered smells of the fresh mud and clay. It is damp and 
-misty in here. But what dazzles you and catches your eyes is the fact that 
+The cave you have entered smells of the fresh mud and clay. It is damp and
+misty in here. But what dazzles you and catches your eyes is the fact that
 you have tumbled upon a veritable treasure room. &YGold and &wsilver &Yc&wo&Yi&wn&Ys &Olie all
 around for the taking. And &pjewels &Oof all sizes and shapes and descriptions
 gleam amidst all the coins.
@@ -4959,7 +4959,7 @@ Rd     0
 E
 shadows~
 &zThe shadows are long and dark.  So dark things can live in them without
-seeing light forever.  
+seeing light forever.
 ~
 D0
 ~
@@ -4976,8 +4976,8 @@ The Exit From Lairich~
 &YYou rejoice in the fact that you have made it out and can see the sun once
 more.  Magically the mist evaporates as you look around.  It forms this one
 huge cloud that rests at your feet.  There are many &Pf&Gl&Co&pw&ge&Rr&Cs
-&Yall around and birds singing perched upon lush &gt&Or&ge&Oe&gs. 
-&C====================================================================== 
+&Yall around and birds singing perched upon lush &gt&Or&ge&Oe&gs.
+&C======================================================================
 ~
 0 394260 3
 Rd     0
@@ -4988,7 +4988,7 @@ Inside the Forbidden Cave~
  &wYou are still inside the cave but before yet another door.  A cave within
 a cave.  The door you stand in front of is sleek with some foul smelling
 black substance.  You fear to explore it lest you find out what it is and
-what caused it to get there.  
+what caused it to get there.
 &R-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--
 ~
 0 134619160 0
@@ -5006,7 +5006,7 @@ S
 Dark Corner~
 &z-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--
 &wInside the cave is worse than you imagined.  You almost wished you hadn't
-had the enterpise to do such exploring.  
+had the enterpise to do such exploring.
 The walls are flithy @
 ~
 0 138813464 0
@@ -5500,9 +5500,9 @@ S
 #22292
 Before A Frosty Mirror~
 &W=======================================================================
-&CYou stand before a huge mirror about 20 feet in length that reaches the 
-ceiling. There is an ice sculpture of Corinth in the center of the room. 
-Before the sculpture lies a lot of flowers chisled from ice. 
+&CYou stand before a huge mirror about 20 feet in length that reaches the
+ceiling. There is an ice sculpture of Corinth in the center of the room.
+Before the sculpture lies a lot of flowers chisled from ice.
 &W=======================================================================
 ~
 0 134610968 0
@@ -5631,9 +5631,9 @@ S
 Under A Willow Tree~
 &g^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 &wYou stand below a tall weeping willow tree with arms that drag down to
-your head.  The tree sways gently in the breeze that blows occasionally. 
+your head.  The tree sways gently in the breeze that blows occasionally.
 The mist hangs around in steamy curtains weaving its way through the
-branches.  
+branches.
 &g^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ~
 0 134619153 3
@@ -5665,7 +5665,7 @@ S
 The Juniper Tree Court Yard~
 &g^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 &YYou have come to a hallowed ground. Peace emanates from the tree that stands
-tall. It bears plump berries that beg to be picked. There are many stones 
+tall. It bears plump berries that beg to be picked. There are many stones
 piled up neatly forming a low wall around the tree.
 &g^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ~
@@ -5688,7 +5688,7 @@ center which as you walk closer you see is a tree made of gold and silver
 bearing gorgeous &Yg&Oo&Yl&Od &wand &Ws&wi&Wl&wv&We&wr apples. The mist feels cool against
 your skin as it calms your overwrought nerves where as before only
 it seemed to be your enemy and suffocated your will along with your power.
-There is a large boulder next to the tree and it seems beckon your to rest 
+There is a large boulder next to the tree and it seems beckon your to rest
 your tired spirit.
 &W-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 ~
@@ -5895,7 +5895,7 @@ serenity prevelant. You are in a temple of Buddha. The temple is supported
 by columns that are carved and painted in bright splashes of &Ggreen &Rred &Bblue
 and &Yyellow. &BIn the front of the hallway sits a &Ygolden &Btwenty foot
 statue of Buddha. All around the smell of sweet smelling aromatic woods
-burning on a small brazier fills the air. The sounds of bells and chanting 
+burning on a small brazier fills the air. The sounds of bells and chanting
 are all around. You feel peace here.
 &G &R==&Y=================================================================&R==
 ~

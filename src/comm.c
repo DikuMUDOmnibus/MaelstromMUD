@@ -1151,18 +1151,15 @@ void bust_a_prompt( DESCRIPTOR_DATA * d ) {
         i = buf2;
         break;
       case 'a':
-
         if ( ch->level >= 5 ) {
           sprintf( buf2, "%d", ch->alignment );
         } else {
-          sprintf( buf2, "%s", IS_GOOD( ch ) ? "good"
-                   : IS_EVIL( ch ) ? "evil" : "neutral" );
+          sprintf( buf2, "%s", IS_GOOD( ch ) ? "good" : IS_EVIL( ch ) ? "evil" : "neutral" );
         }
 
         i = buf2;
         break;
       case 'r':
-
         if ( ch->in_room ) {
           sprintf( buf2, "%s", ch->in_room->name );
         } else {
@@ -1172,7 +1169,6 @@ void bust_a_prompt( DESCRIPTOR_DATA * d ) {
         i = buf2;
         break;
       case 'R':
-
         if ( IS_IMMORTAL( ch ) && ch->in_room ) {
           sprintf( buf2, "%d", ch->in_room->vnum );
         } else {
@@ -1182,23 +1178,17 @@ void bust_a_prompt( DESCRIPTOR_DATA * d ) {
         i = buf2;
         break;
       case 'z':
-
-        if ( IS_IMMORTAL( ch ) && ch->in_room ) {
-          sprintf( buf2, "%s", ch->in_room->area->name );
-        } else {
-          sprintf( buf2, " " );
-        }
-
+        sprintf( buf2, "%s", ch->in_room->area->name );
         i = buf2;
         break;
       case '%':
         sprintf( buf2, "%%" );
         i = buf2;
         break;
-      case 'c':     /* OLC */
+      case 'c':
         i = olc_ed_name( ch );
         break;
-      case 'C':     /* OLC */
+      case 'C':
         i = olc_ed_vnum( ch );
         break;
       case 'p': {
@@ -1214,7 +1204,6 @@ void bust_a_prompt( DESCRIPTOR_DATA * d ) {
         break;
       }
       case 'l':
-
         if ( IS_SET( ch->act, PLR_WIZINVIS ) ) {
           sprintf( buf2, "Invisible" );
         } else {
@@ -1224,7 +1213,6 @@ void bust_a_prompt( DESCRIPTOR_DATA * d ) {
         i = buf2;
         break;
       case 'd':
-
         if ( IS_SET( ch->act, PLR_CLOAKED ) ) {
           sprintf( buf2, "Cloaked" );
         } else {

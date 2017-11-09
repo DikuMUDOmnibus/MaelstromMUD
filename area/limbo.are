@@ -1,7 +1,7 @@
 #AREADATA
-Name        { None } Limbo               Diku~
+Name        Limbo~
 Levels      0 0
-Builders    Altrag  Decklarean Thalador~
+Builders    Altrag  Decklarean Thalador Diku~
 VNUMs       1 99
 Security    1
 Recall      25001
@@ -56,7 +56,7 @@ A huge guardian demon towers above you here.
 ~
 The demon does not look happy about being summoned to this plane.  He
 stands about twelve feet tall and his eyes glow with an inner light that
-seems to make what he looks at darker, not brighter.  
+seems to make what he looks at darker, not brighter.
 ~
 33 33554432 0 -100 S
 50 0 0 7500d0+0 0d0+0
@@ -139,7 +139,7 @@ Burt, the ogre guardian, awaits the return of Thalador.
 By far the largest ogre ever to walk the realms, Burt stands well over 25
 feet tall and weighs somewhere around that of a small keep.  His cruel smile
 makes the hairs on the back of your neck stand up.  You would not want to
-tangle with this creature.  
+tangle with this creature.
 ~
 1572867 301990056 65552 0 S
 32000 0 0 100000d0+0 0d0+0
@@ -268,7 +268,7 @@ A shadow~
 A shadow flickers in and out of reality here.
 ~
 The shadow blends into the surrounding area, looking like nothing more
-than it's namesake.  It is however quite twisted in shape.  
+than it's namesake.  It is however quite twisted in shape.
 ~
 1 4268162 0 0 S
 1 0 0 100d0+0 0d0+0
@@ -633,23 +633,23 @@ July  |          |                |             |         |        |
 E
 warning~
 WARNING!!!
- 
+
 When you are involved in a quest, what you do is permanent.  The storylines
 may continue onwards, and there is no "special favours" while competing.
- 
+
 You have been given ample warning, please do NOT join a quest unless you
 totally understand the risks involved.
- 
+
 1)  YOU MAY DIE!
 2)  YOU MAY LOSE YOUR CORPSE!
 3)  YOU MAY LOSE ALL OF YOUR EQUIPMENT!
- 
+
 I hope I have sufficiently scared you, the quests will TRY to be fair, but,
 remember, you are competing for powerfull Prizes, therefore there IS a lot
 of risk involved!
- 
+
 And please remember, this is just a game!
- 
+
 Have Fun!  :)
 ~
 E
@@ -666,23 +666,23 @@ Qst Pts         Name
 E
 questor~
 Hello Adventurers,
- 
+
 This is Lucid, the Deity of the Quest, I am the editor-in-chief of
 the Questor.  Hopefully you are enjoying yourself in the Storm.
- 
+
 Periodically I shall run quests for you to play, each quest is
 awarded with a Prize, and some points.  Points are calculated by how
 many other legitamate adventurers competed against you and the
 difficulty of the quest itself.
- 
+
 To see the list of quests won, type LOOK POINTS,
 and to see the standings of winners, type LOOK LEADERBOARD,
 and to see the quest warnings, type LOOK WARNING.
- 
+
         **************************************************
         ***   This is has been updated July 26, 1995   ***
         **************************************************
- 
+
 Give a hoot, Don't pollute......sac it!
 ~
 #35
@@ -857,7 +857,7 @@ Limbo~
 You are floating in a formless void, detached from all sensation of
 physical matter, surrounded by swirling, glowing light, which fades into the
 relative darkness around you without any trace of edges or shadow.  There is
-a "No Tipping" notice pinned to the darkness.  
+a "No Tipping" notice pinned to the darkness.
 ~
 0 12 1
 Rd     0
@@ -867,7 +867,7 @@ S
 &RAll around you sulfer fumes assault your senses.  Small demons and
 devils romp around in the eternity that is this place.  In the corner of the
 room stands a large man, seemingly out of place here.  It is then you
-realize that this is his hell, not yours.  
+realize that this is his hell, not yours.
 ~
 0 1208098828 0
 Rd     0
@@ -880,7 +880,7 @@ S
 Wedding Chapel~
 You are in a cozy little wedding chapel.  Looking around, you see very
 comfortable benches for the guests, and a podium at the front of the chapel
-where the wedding takes place.  
+where the wedding takes place.
 You see that the only exit is down, towards Bethaven.
 ~
 0 8781832 0
@@ -896,7 +896,7 @@ S
 dance at your hands and feet, and peer intently at your eyes, just on the
 verge of being able to taste you.  You wonder what you could have possibly
 done to end up here...  Perhaps you should rethink your actions of the past,
-you believe it is punishment.  &w 
+you believe it is punishment.  &w
 ~
 0 143056908 0
 Rd     0
@@ -913,7 +913,7 @@ S
 The Coder Room~
 This is a room where the coders can get together and talk about things
 way over Thal's head.  Then, when you get really bored, you can start
-documenting the entire code into pseudocode and flow charts.  
+documenting the entire code into pseudocode and flow charts.
 ~
 0 4 0
 Rd     0
@@ -1010,7 +1010,7 @@ S
 &RSin's &WYacht~
 &RA little red rubber boat bobs cheerfully in the water!  There is only
 room for a few people.  It has tasty snacks and a big bottle of chilled
-champaigne!  Hang on tight!  The waves are very big today!  
+champaigne!  Hang on tight!  The waves are very big today!
 &w
 ~
 0 16908292 0
@@ -1020,7 +1020,7 @@ S
 Forbidden Path~
 The pristine tunnel known as the forbidden path bends to the east.  From
 the East a blast of warm air hits you like a hammer.  Further on the path
-darkens into a tunnel.  
+darkens into a tunnel.
 ~
 0 536870917 0
 Rd     0

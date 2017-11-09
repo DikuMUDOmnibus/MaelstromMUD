@@ -1,7 +1,7 @@
 #AREADATA
-Name        { 50-60} The Labyrinth       Rune~
+Name        The Labyrinth~
 Levels      50 60
-Builders    None~
+Builders    Rune~
 VNUMs       11601 11750
 Security    100
 Recall      25001
@@ -26,7 +26,7 @@ jaws of the wolfen are huge as well, crammed full of more teeth than would
 be possible in nature.  Perhaps the most frightening feature of the wolfen
 is the almost human intelligence that peers at you through yellow eyes.  You
 get the feeling that the wolfen is looking at you like most hunters look at
-a rabbit.  
+a rabbit.
 ~
 101 66090 0 0 S
 55 0 0 8000d0+0 0d0+0
@@ -52,7 +52,7 @@ skin and slow gait.  But there the differences ended.  While undead have
 limited mental facilities, the gholam possess many mental powers.  These
 powers make up for a large physical deformity the gholam have: they are born
 blind.  But that does not stop them from being the fiercest creature in the
-Labyrinth.  
+Labyrinth.
 ~
 101 16425 16 0 S
 52 0 0 5440d0+0 0d0+0
@@ -81,11 +81,11 @@ Very little is known about phades.  While they have been 'seen' before,
 no one has been able to provide an accurate description.  Believed to come
 from one of the demi-planes, phades are thought to be able to dematerialize
 at will, allowing them to flow through walls and other objects.  For some
-unknown reason however, this ability does not allow them to change shape. 
+unknown reason however, this ability does not allow them to change shape.
 Phades always have the general form of a humanoid, complete with armor and
 weapons that change consistancy as the phade does.  Phades are dark
 creatures, wearing black and blending well with the night, and possessing
-all of the abilities that 'normal' nocturnal creatures do.  
+all of the abilities that 'normal' nocturnal creatures do.
 ~
 8293 1573416 0 -100 S
 58 0 0 9200d0+0 0d0+0
@@ -123,8 +123,8 @@ The Mad Wind howls at you out of the darkness.
 Only the legends speak of the Mad Wind.  One of the inhabitants of the
 outer planes, the Mad Wind feeds off of fear and suffering.  Apparently, the
 Labyrinth is rich in such feelings for it to become its home.  The Wind is
-difficult to look at; it seems solid one moment and indistinct the next. 
-That is, when it can be seen at all.  
+difficult to look at; it seems solid one moment and indistinct the next.
+That is, when it can be seen at all.
 ~
 8293 1671722 0 -500 S
 60 0 0 10000d0+0 0d0+0
@@ -141,7 +141,7 @@ mpforce $n drop all
 get all
 mpecho The haunting laughter of the Mad Wind echos all around you..
 endif
- 
+
 ~
 >fight_prog 20~
 If rand(50)
@@ -176,7 +176,7 @@ The corpse of Renu has not aged well.  Strips of flesh, where not
 entirely missing from his body, are wrinkled and grey.  An odour of decay
 emanates from his body, nearly making you gag.  The lich of Renu would be
 indistinguishable from a normal zombie except for the angry red glow that
-shines from his empty eye sockets.  
+shines from his empty eye sockets.
 ~
 8295 33555072 0 -25 S
 60 0 0 8000d0+0 0d0+0
@@ -233,12 +233,12 @@ doom guard~
 A Doom Guard~
 A doom guard stands silently, waiting for your response.
 ~
-The doom guard before you appears to be a man wearing a suit of black armor. 
+The doom guard before you appears to be a man wearing a suit of black armor.
 However, that is not so, for when you look into its open visor, you see
 nothing but a fiery red glow where its eyes should be.  The doom guard also
 moves slower than a normal person would, as if it was not exactly sure of
 how each part of its body relates to the others.  Aside from the open visor,
-there is no other chinks in the guards armor.  
+there is no other chinks in the guards armor.
 ~
 67 552 0 0 S
 58 0 0 9200d0+0 0d0+0
@@ -260,7 +260,7 @@ endif
 mpecho As the last blow is dealt, the guard's armor starts to crackle with energy.
 mpecho Suddenly, it dissolves into a fine black dust, which falls to the ground.
 mpjunk armor
- 
+
 ~
 >fight_prog 35~
 if rand(50)
@@ -282,7 +282,7 @@ that they cannot survive outside of the Grey Mists, and must wander here for
 all eternity.  However, this does give them some advantages.  Their grey
 skins blend perfectly with the fog, making them difficult to see.  As well,
 mist demons are excellent tricksters, and have been known to cause many
-people to become lost in this realm with them.  
+people to become lost in this realm with them.
 ~
 69 623106 0 0 S
 56 0 0 8400d0+0 0d0+0
@@ -312,7 +312,7 @@ squarish.  Rivets of steel can be easily seen on it, holding the gold plates
 that make up its skin together.  The gold golem has small emeralds as eyes,
 and even a ruby carved like lips for a mouth.  It seems harmless, but when
 you look at its hands you notice that each edge has been sharpened to razor
-thiness.  Obviously, the gold golem was not meant to be just an ornament.  
+thiness.  Obviously, the gold golem was not meant to be just an ornament.
 ~
 71 544 16 0 S
 57 0 0 8800d0+0 0d0+0
@@ -333,11 +333,11 @@ a small green demon~
 A small demon hisses at you, its green fur standing on end.
 ~
 This small green demon seems to be quite excited.  It flitters from place
-to place, unable to stay still for even a short period of time. 
+to place, unable to stay still for even a short period of time.
 Unfortunately, it looks quite strange doing this, with its long green fur
 and puny wings.  Its yellow eyes, slitted like those of a cat's, glare at
 you warrily when you look at it.  There is no doubt in your mind that this
-demon would try to destroy you if it was not restrained.  
+demon would try to destroy you if it was not restrained.
 ~
 67 541224 0 0 S
 50 0 0 4800d0+0 0d0+0
@@ -355,7 +355,7 @@ also help its appearance, with a tail and wings ending off the typical
 description of a demon.  There the similarities end though.  While demons
 are portrayed as dumb creatures, this one looks at you with an intelligence
 that is somehow more than human.  The small grin on its face makes you
-believe that its amused by what its looking at.  
+believe that its amused by what its looking at.
 ~
 67 786474 0 0 S
 60 0 0 10000d0+0 0d0+0
@@ -370,7 +370,7 @@ The Protector turns its head slowly to stare at you as you enter.
 Standing at least twice the height of a normal humanoid, the Guardian
 must weigh a thousand pounds.  Constructed of black granite, the Guardian is
 covered with glowing runes that animate him.  You get the feeling that the
-Guardian has no emotions, and will therefore never attack you.  
+Guardian has no emotions, and will therefore never attack you.
 ~
 71 520 0 0 S
 55 0 0 8000d0+0 0d0+0
@@ -518,7 +518,7 @@ E
 black~
 A black granite key is quite heavy, and quite large... about 6 inches in
 length.
- 
+
 ~
 E
 key~
@@ -1176,7 +1176,7 @@ the size of a house.  Such a profusion of dark rock can only be magical; the
 large black building ahead of you only confirms this suspicion.  The path
 that you are following winds in between boulders, stopping at the huge
 wooden gate that marks the entrance to the Labyrinth.  A small plaque,
-unrusted despite its age, has been attached somehow to a nearby boulder.  
+unrusted despite its age, has been attached somehow to a nearby boulder.
 ~
 0 25 2
 Rd     0
@@ -1185,7 +1185,7 @@ plaque~
 The plaque reads as follows: "Beware all who enter here.  The Labyrinth
 is the resting place of my father, Renu Fal-Terra.  I have placed many great
 wards around him to preserve him and his for all eternity.  My wrath shall
-fall on all who enter.  Signed Merra Mal-Renu, High Wizard."  
+fall on all who enter.  Signed Merra Mal-Renu, High Wizard."
 ~
 D0
 ~
@@ -1199,25 +1199,25 @@ S
 #11603
 Before the Gate~
 A huge black wall stretches to the east and west of you.  Made of the
-same black granite that predominates the area, the wall seems impregnable. 
+same black granite that predominates the area, the wall seems impregnable.
 Add to that the glowing sigla that entirely cover the wall, and you have a
 structure that is meant to last until the end of time.  A huge gate set into
 the wall appears to be the only entrance.  Some words seem to have been
 carved into the stone above the door.  The entire area emanates a sense of
 foreboding, nearly making you want to flee.  Aside from entering the
-Labyrinth, the only other way to leave the area is to the south.  
+Labyrinth, the only other way to leave the area is to the south.
 ~
 0 1053 2
 Rd     0
 E
 carving~
 Written in archaic Common, the words are difficult to read.  You think
-they say: 
+they say:
                           THE FIRST GATE
 ~
 D0
-Made from black oak, the gate would be difficult to destroy on its own. 
-However, sigla cover the gate as well, no doubt making it indestructable.  
+Made from black oak, the gate would be difficult to destroy on its own.
+However, sigla cover the gate as well, no doubt making it indestructable.
 ~
 "first gate"~
 19 0 11604
@@ -1238,7 +1238,7 @@ the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
 thought.  Exits to the north, west and east lead into unexplored parts of
-the maze.  
+the maze.
 ~
 0 401433 0
 Rd     0
@@ -1252,7 +1252,7 @@ D1
 0 0 11628
 D2
 The gate looks exactly the same as it does on the outside, except there
-are no sigla carved into it.  
+are no sigla carved into it.
 ~
 "first gate" first gate~
 19 0 11603
@@ -1272,7 +1272,7 @@ although no magical symbols adorn the walls of this grim place.  The dust on
 the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
-thought.  The hallway continues to the east and west.  
+thought.  The hallway continues to the east and west.
 ~
 0 401433 0
 Rd     0
@@ -1297,7 +1297,7 @@ the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
 thought.  A corner has been built here, allowing you to move to the north
-and east.  
+and east.
 ~
 0 401433 0
 Rd     0
@@ -1322,7 +1322,7 @@ the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
 thought.  The dank hallway continues to the north and south, leading to
-uncharted areas.  
+uncharted areas.
 ~
 0 401433 0
 Rd     0
@@ -1346,7 +1346,7 @@ although no magical symbols adorn the walls of this grim place.  The dust on
 the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
-thought.  Exits lead to the east and south.  
+thought.  Exits lead to the east and south.
 ~
 0 401433 0
 Rd     0
@@ -1372,8 +1372,8 @@ has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
 thought.  The hairs on your arms stand up, and a strange tingling sensation
 seems to have found a new home in your temples.  You sense that there's
-something strange in the area, but are unable to determine exactly where. 
-Exits lead to the north, south, east and west.  
+something strange in the area, but are unable to determine exactly where.
+Exits lead to the north, south, east and west.
 ~
 0 401433 0
 Rd     0
@@ -1405,7 +1405,7 @@ although no magical symbols adorn the walls of this grim place.  The dust on
 the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
-thought.  The dusty hall continues to both the north and south.  
+thought.  The dusty hall continues to both the north and south.
 ~
 0 401433 0
 Rd     0
@@ -1429,7 +1429,7 @@ although no magical symbols adorn the walls of this grim place.  The dust on
 the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
-thought.  A corner is formed here, allowing you to travel north or west.  
+thought.  A corner is formed here, allowing you to travel north or west.
 ~
 0 401433 0
 Rd     0
@@ -1451,16 +1451,16 @@ enough though, their light reaches the boundries of the room and stops
 abruptly.  An archway in the southern wall leads to a set of stairs, their
 bottom shrouded in darkness.  Something has been carved into the rock above
 the arch.  The only other exit from the room is to the north, into the maze
-of the Labyrinth.  
+of the Labyrinth.
 ~
 0 401432 0
 Rd     0
 E
 carving~
 The carving, chiseled deep into the black granite, reads:
- 
+
                          THE GREAT STAIRS
- 
+
 ~
 D0
 ~
@@ -1482,7 +1482,7 @@ although no magical symbols adorn the walls of this grim place.  The dust on
 the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
-thought.  The hall continues to both the west and south.  
+thought.  The hall continues to both the west and south.
 ~
 0 401433 0
 Rd     0
@@ -1507,7 +1507,7 @@ the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
 thought.  The hall bends here, allowing you to walk east and south into
-uncharted territory.  
+uncharted territory.
 ~
 0 401433 0
 Rd     0
@@ -1532,7 +1532,7 @@ the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
 thought.  The darkened expanse of narrow hall continues to both the north
-and south.  
+and south.
 ~
 0 401433 0
 Rd     0
@@ -1557,7 +1557,7 @@ the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
 thought.  The enshrouding darkness makes it difficult to see where you are
-going, but you sense that the passage continues to the north and south.  
+going, but you sense that the passage continues to the north and south.
 ~
 0 401433 0
 Rd     0
@@ -1581,7 +1581,7 @@ although no magical symbols adorn the walls of this grim place.  The dust on
 the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
-thought.  The hallway splits here, leading off to the north, west and east. 
+thought.  The hallway splits here, leading off to the north, west and east.
 ~
 0 401433 0
 Rd     0
@@ -1610,7 +1610,7 @@ the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
 thought.  A hallway bends here, so that the only exits are to the south and
-east.  
+east.
 ~
 0 401433 0
 Rd     0
@@ -1634,7 +1634,7 @@ although no magical symbols adorn the walls of this grim place.  The dust on
 the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
-thought.  The hallway continues to both the north and the south.  
+thought.  The hallway continues to both the north and the south.
 ~
 0 401433 0
 Rd     0
@@ -1659,7 +1659,7 @@ the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
 thought.  The dark hall you are in stretches to the east and west,
-apparently without end.  
+apparently without end.
 ~
 0 401433 0
 Rd     0
@@ -1684,7 +1684,7 @@ the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
 thought.  The dusty passage continues to the east and west, leading to
-darkened parts of the Labyrinth.  
+darkened parts of the Labyrinth.
 ~
 0 401433 0
 Rd     0
@@ -1711,7 +1711,7 @@ tracks of many different creatures.  Obviously, you are not as alone as you
 thought.  The ominous corridor you are in has exits leading to both the east
 and west.  The foreboding black stones of the walls reflect the light back
 at you dully, showing you that the passage continues to both the east and
-west.  
+west.
 ~
 0 401433 0
 Rd     0
@@ -1731,10 +1731,10 @@ this place makes it hard for you to see the walls of the passage on either
 side of you.  The ceiling is low as well, which when combined with the
 narrow hall, makes you feel slightly f, although no magical symbols adorn
 the walls of this grim place.  The dust on the floor is not thick,
-considering how long it has been since the Labyrinth has been sealed. 
+considering how long it has been since the Labyrinth has been sealed.
 However, in the grime that has accumulated, you notice the tracks of many
 different creatures.  Obviously, you are not as alone as you thought.  The
-hall you stand in continues to both the east and west.  
+hall you stand in continues to both the east and west.
 ~
 0 401433 0
 Rd     0
@@ -1759,7 +1759,7 @@ the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
 thought.  A corner is formed here, as the northern wall turns south.  Exits
-lead to the west and south.  
+lead to the west and south.
 ~
 0 401433 0
 Rd     0
@@ -1784,7 +1784,7 @@ the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
 thought.  The dismal hallway continues to both the north and south, leading
-you into other, perhaps more dangerous, areas of the Labyrinth.  
+you into other, perhaps more dangerous, areas of the Labyrinth.
 ~
 0 401433 0
 Rd     0
@@ -1808,7 +1808,7 @@ although no magical symbols adorn the walls of this grim place.  The dust on
 the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
-thought.  The passage you are in continues to both the north and south.  
+thought.  The passage you are in continues to both the north and south.
 ~
 0 401433 0
 Rd     0
@@ -1832,7 +1832,7 @@ although no magical symbols adorn the walls of this grim place.  The dust on
 the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
-thought.  The hallway bends here, forcing you to go either north or west.  
+thought.  The hallway bends here, forcing you to go either north or west.
 ~
 0 401433 0
 Rd     0
@@ -1856,7 +1856,7 @@ although no magical symbols adorn the walls of this grim place.  The dust on
 the floor is not thick, considering how long it has been since the Labyrinth
 has been sealed.  However, in the grime that has accumulated, you notice the
 tracks of many different creatures.  Obviously, you are not as alone as you
-thought.  The dark passage continues to the east and west.  
+thought.  The dark passage continues to the east and west.
 ~
 0 401433 0
 Rd     0
@@ -1882,7 +1882,7 @@ thick coating of dust that lies all around you.  The dust is not completely
 undisturbed: many of the Labyrinth's inhabitants have left their tracks here
 as they have climbed or descended these steps.  The stairs continue their
 trek into darkness to the east.  Above you awaits the first level of the
-Labyrinth.  
+Labyrinth.
 ~
 0 401433 0
 Rd     0
@@ -1908,7 +1908,7 @@ thick coating of dust that lies all around you.  The dust is not completely
 undisturbed: many of the Labyrinth's inhabitants have left their tracks here
 as they have climbed or descended these steps.  You figure that you are
 about halfway down the stairs, with steps leading upwards to the west and
-down.  
+down.
 ~
 0 401433 0
 Rd     0
@@ -1933,7 +1933,7 @@ time.  If she did however, her passage has long since been covered by the
 thick coating of dust that lies all around you.  The dust is not completely
 undisturbed: many of the Labyrinth's inhabitants have left their tracks here
 as they have climbed or descended these steps.  The Great Stair continues
-downwards to the west; above you is the way to return to light.  
+downwards to the west; above you is the way to return to light.
 ~
 0 401433 0
 Rd     0
@@ -1959,7 +1959,7 @@ thick coating of dust that lies all around you.  The dust is not completely
 undisturbed: many of the Labyrinth's inhabitants have left their tracks here
 as they have climbed or descended these steps.  East of you the stair
 returns to the first level of the Labyrinth.  Below you, in the awaiting
-darkness, lies the unknown.  
+darkness, lies the unknown.
 ~
 0 401417 0
 Rd     0
@@ -1985,7 +1985,7 @@ thick coating of dust that lies all around you.  The dust is not completely
 undisturbed: many of the Labyrinth's inhabitants have left their tracks here
 as they have climbed or descended these steps.  You feel a slight breeze
 stirring the air, making you think that you are close to the bottom.  Exits
-lead downwards to the east, and upwards above you.  
+lead downwards to the east, and upwards above you.
 ~
 0 401433 0
 Rd     0
@@ -2012,7 +2012,7 @@ undisturbed: many of the Labyrinth's inhabitants have left their tracks here
 as they have climbed or descended these steps.  Below you, you can barely
 make out where the floor straightens; the darkness prevents you from seeing
 more.  Somewhere above you, at the other end of the steps, lies the first
-floor of the Labyrinth.  
+floor of the Labyrinth.
 ~
 0 401433 0
 Rd     0
@@ -2027,21 +2027,21 @@ D5
 S
 #11635
 At the Stairs~
-The room you are in is similar to the one at the top of the stairs. 
+The room you are in is similar to the one at the top of the stairs.
 Magical symbols on the black granite walls provide dim illumination.  The
 same state of uncleanliness is abound here as well: dust, ages old, lies
 everywhere.  The only exits are to the south and up, each of which is
 shrouded in a magical darkness making it impossible to see what lies in that
-direction.  
+direction.
 ~
 0 401424 0
 Rd     0
 E
 carving~
 The glowing letters spell out three words in archaic common:
- 
+
                          THE GREAT STAIRS
- 
+
 ~
 D2
 ~
@@ -2064,7 +2064,7 @@ deserted halls, sounding like the spirits of a thousand dead.  However you
 find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
-the source of the tracks.  Exits lead in all directions.  
+the source of the tracks.  Exits lead in all directions.
 ~
 0 401433 0
 Rd     0
@@ -2097,7 +2097,7 @@ deserted halls, sounding like the spirits of a thousand dead.  However you
 find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
-the source of the tracks.  The black passage continues to the east and west. 
+the source of the tracks.  The black passage continues to the east and west.
 ~
 0 401433 0
 Rd     0
@@ -2123,7 +2123,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The hall splits here, allowing you to go east,
-west or south.  
+west or south.
 ~
 0 401433 0
 Rd     0
@@ -2152,8 +2152,8 @@ deserted halls, sounding like the spirits of a thousand dead.  However you
 find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
-the source of the tracks.  The southern wall bends here, forming a corner. 
-Exits lead to the west and north.  
+the source of the tracks.  The southern wall bends here, forming a corner.
+Exits lead to the west and north.
 ~
 0 401433 0
 Rd     0
@@ -2178,7 +2178,7 @@ deserted hallunding like the spirits of a thousand dead.  However blackness
 that surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The hall you are following splits here, allowing
-you to go east, west or south.  
+you to go east, west or south.
 ~
 0 401433 0
 Rd     0
@@ -2208,7 +2208,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  You can barely see that the black granite that
-surrounds you continues to the east and west.  
+surrounds you continues to the east and west.
 ~
 0 401433 0
 Rd     0
@@ -2234,8 +2234,8 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  A slight tingle runs over your body as you enter
-this part of the passage, but you cannot spot anything out of the ordinary. 
-Exits lead to the east and west.  
+this part of the passage, but you cannot spot anything out of the ordinary.
+Exits lead to the east and west.
 ~
 0 401433 0
 Rd     0
@@ -2262,7 +2262,7 @@ surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  A slight tingle runs over your body as you stand
 here, but you cannot find the source of it.  Exits lead to the east and
-west.  
+west.
 ~
 0 401433 0
 Rd     0
@@ -2288,7 +2288,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The southern wall bends north here, forming a
-corner which allows you to go north or east.  
+corner which allows you to go north or east.
 ~
 0 401433 0
 Rd     0
@@ -2314,7 +2314,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  A corner is formed here, allowing you to go east
-or south.  
+or south.
 ~
 0 401433 0
 Rd     0
@@ -2365,7 +2365,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The hallway splits here, allowing you to go east,
-west or south.  
+west or south.
 ~
 0 401433 0
 Rd     0
@@ -2394,7 +2394,7 @@ deserted halls, sounding like the spirits of a thousand dead.  However you
 find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
-the source of the tracks.  This passage continues to the north and south.  
+the source of the tracks.  This passage continues to the north and south.
 ~
 0 401433 0
 Rd     0
@@ -2420,7 +2420,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The hall splits here, allowing you to go north,
-west or east.  
+west or east.
 ~
 0 401433 0
 Rd     0
@@ -2450,7 +2450,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The magical darkness makes it difficult to see,
-but you think that exits lead to the east and west.  
+but you think that exits lead to the east and west.
 ~
 0 401433 0
 Rd     0
@@ -2476,7 +2476,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The northern wall bends southwards here, forming
-a corner.  The only exits are to the south and east.  
+a corner.  The only exits are to the south and east.
 ~
 0 401433 0
 Rd     0
@@ -2503,7 +2503,7 @@ surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  You sense something strange, but can't exactly
 define what it is.  Shrugging the feeling off as paranoia, you peer into the
-darkness, trying to decide whether to go north or south.  
+darkness, trying to decide whether to go north or south.
 ~
 0 401433 0
 Rd     0
@@ -2529,7 +2529,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The only exits from this portion of the dank
-hallway is to the north and west.  
+hallway is to the north and west.
 ~
 0 401417 0
 Rd     0
@@ -2555,7 +2555,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The black passgae that you are in continues to
-the north and south.  
+the north and south.
 ~
 0 401417 0
 Rd     0
@@ -2581,7 +2581,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The black granite halls that seem to extend
-forever do not end here unfortunately.  Exits lead to the east and west.  
+forever do not end here unfortunately.  Exits lead to the east and west.
 ~
 0 401417 0
 Rd     0
@@ -2608,7 +2608,7 @@ surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The magical darkness around you prevents you from
 determining how long the hall is, but you can see that it leads to both the
-east and west.  
+east and west.
 ~
 0 401417 0
 Rd     0
@@ -2634,7 +2634,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The black walls extend into darkness to both the
-east and west.  
+east and west.
 ~
 0 401421 0
 Rd     0
@@ -2660,7 +2660,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The passage splits here, allowing you to move in
-all the cardinal directions.  
+all the cardinal directions.
 ~
 0 401417 0
 Rd     0
@@ -2694,7 +2694,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  You feel that something is strange about this
-room, but cannot determine what it is.  Exits lead to the east and west.  
+room, but cannot determine what it is.  Exits lead to the east and west.
 ~
 0 401417 0
 Rd     0
@@ -2720,7 +2720,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The dingy corridor you are in continues to the
-east and west.  
+east and west.
 ~
 0 401417 0
 Rd     0
@@ -2767,7 +2767,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The hall stretches into darkness to the north and
-south.  
+south.
 ~
 0 401417 0
 Rd     0
@@ -2793,7 +2793,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  A corner is formed here, as the west wall meets
-the one to the south.  The only exits are to the east and north.  
+the one to the south.  The only exits are to the east and north.
 ~
 0 401417 0
 Rd     0
@@ -2819,7 +2819,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The black granite seems oppressive to you, as you
-stare at the walls extending east and west.  
+stare at the walls extending east and west.
 ~
 0 401417 0
 Rd     0
@@ -2845,7 +2845,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The hall splits here, allowing you to go north,
-south or west.  
+south or west.
 ~
 0 401417 0
 Rd     0
@@ -2875,7 +2875,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  A corner is formed here, as the southern wall
-bends north.  Exits lead to the north and west.  
+bends north.  Exits lead to the north and west.
 ~
 0 401417 0
 Rd     0
@@ -2901,7 +2901,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The hallway splits here, allowing you to move to
-the south, east or west.  
+the south, east or west.
 ~
 0 401417 0
 Rd     0
@@ -2930,7 +2930,7 @@ deserted halls, sounding like the spirits of a thousand dead.  However you
 find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
-the source of the tracks.  Exits lead to both the west and east.  
+the source of the tracks.  Exits lead to both the west and east.
 ~
 0 401417 0
 Rd     0
@@ -2956,7 +2956,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The black granite walls of the corridor extend to
-both the north and south.  
+both the north and south.
 ~
 0 401417 0
 Rd     0
@@ -2982,7 +2982,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The hallway splits here, allowing you to go in
-all four cardinal directions.  
+all four cardinal directions.
 ~
 0 401417 0
 Rd     0
@@ -3016,7 +3016,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The hall makes a sudden twist here, forming a
-corner.  Exits from this area lead to the north and east. 
+corner.  Exits from this area lead to the north and east.
 ~
 0 401417 0
 Rd     0
@@ -3042,7 +3042,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  Another corner is formed here, with the exits to
-the west and south.  
+the west and south.
 ~
 0 401417 0
 Rd     0
@@ -3068,7 +3068,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  A corner is formed here as the western wall
-intersects with one to the north.  Exits lead to the east and south.  
+intersects with one to the north.  Exits lead to the east and south.
 ~
 0 401417 0
 Rd     0
@@ -3095,7 +3095,7 @@ surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  A tingling sensation runs over you as you enter
 this room, but you cannot find its cause.  Exits lead to the north and
-south.  
+south.
 ~
 0 401417 0
 Rd     0
@@ -3121,7 +3121,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  A sudden bend in the hallway makes a corner form
-here, allowing you to move either north or west.  
+here, allowing you to move either north or west.
 ~
 0 401417 0
 Rd     0
@@ -3147,7 +3147,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The corridor splits here, with exits extending
-into darkness to the east, west and south.  
+into darkness to the east, west and south.
 ~
 0 401417 0
 Rd     0
@@ -3178,7 +3178,7 @@ surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The magical darkness that surrounds you makes it
 difficult to see where you are going, but you can determine that exits lead
-to the east and west.  
+to the east and west.
 ~
 0 401417 0
 Rd     0
@@ -3204,7 +3204,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The hall splits here, allowing you to go north,
-south or east.  
+south or east.
 ~
 0 401417 0
 Rd     0
@@ -3234,7 +3234,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The dingy passage continues to the north and
-south.  
+south.
 ~
 0 401417 0
 Rd     0
@@ -3260,7 +3260,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The magical darkness continues to the north and
-south.  
+south.
 ~
 0 401417 0
 Rd     0
@@ -3286,7 +3286,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  A corner is formed here, allowing you to go west
-or south.  
+or south.
 ~
 0 401417 0
 Rd     0
@@ -3312,7 +3312,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The black walls continue to both the north and
-south.  
+south.
 ~
 0 401417 0
 Rd     0
@@ -3337,7 +3337,7 @@ the spirits of a thousand dead.  However you find that the most disturbing
 thing is not the thick blackness that surrounds you, but rather the faint
 glimmers of light that can be seen farther down the hall periodically,
 making you think that you will soon find the source of the tracks.  The hall
-splits here, with exits leading to the north, west and east.  
+splits here, with exits leading to the north, west and east.
 ~
 0 401417 0
 Rd     0
@@ -3367,7 +3367,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  A corner has been made here, as the northern wall
-intersects with the western one.  Exits lead to the east and south.  
+intersects with the western one.  Exits lead to the east and south.
 ~
 0 401417 0
 Rd     0
@@ -3393,7 +3393,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The passage has been made into a three way split
-here, with exits leading north, east and west.  
+here, with exits leading north, east and west.
 ~
 0 401417 0
 Rd     0
@@ -3424,7 +3424,7 @@ surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The magical darkness that surrounds you makes it
 difficult to see, so that you nearly walk into a wall as the corridor makes
-a sudden bend.  Exits lead south and east.  
+a sudden bend.  Exits lead south and east.
 ~
 0 401417 0
 Rd     0
@@ -3450,7 +3450,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The passage splits here, with exits to the north,
-east and west leading into darkness.  
+east and west leading into darkness.
 ~
 0 401417 0
 Rd     0
@@ -3480,7 +3480,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The dust stirs silently around your feet as you
-trudge through this portion of the hall.  Exits lead to the east and west.  
+trudge through this portion of the hall.  Exits lead to the east and west.
 ~
 0 401417 0
 Rd     0
@@ -3506,7 +3506,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The hallway bends here, forming a corner.  Exits
-lead to the north and south.  
+lead to the north and south.
 ~
 0 401417 0
 Rd     0
@@ -3531,7 +3531,7 @@ deserted halls, sounding like the spirits of a thousand dead.  However you
 find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
-the source of the tracks.  Exits lead to the north and south.  
+the source of the tracks.  Exits lead to the north and south.
 ~
 0 401417 0
 Rd     0
@@ -3557,7 +3557,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The black walls of the passage extend into
-darkness to both the east and west.  
+darkness to both the east and west.
 ~
 0 401417 0
 Rd     0
@@ -3584,7 +3584,7 @@ surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  You sense something strange in the area, but
 dismiss it when you cannot find the source.  The only exit from this dead
-end is to the west.  
+end is to the west.
 ~
 0 401417 0
 Rd     0
@@ -3606,7 +3606,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The black walls of the passage continue to both
-the east and west.  
+the east and west.
 ~
 0 401417 0
 Rd     0
@@ -3632,7 +3632,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The hall splits here, allowing you to go east,
-west or south.  
+west or south.
 ~
 0 401417 0
 Rd     0
@@ -3662,7 +3662,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The hall bends here, making exits to the north
-and east.  
+and east.
 ~
 0 401417 0
 Rd     0
@@ -3688,7 +3688,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The hall stretches into darkness to the east and
-west.  
+west.
 ~
 0 401417 0
 Rd     0
@@ -3714,7 +3714,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The black granite hallway has exits to the east
-and west.  
+and west.
 ~
 0 401417 0
 Rd     0
@@ -3740,7 +3740,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The corrider splits here, allowing you to go
-north, south or west.  
+north, south or west.
 ~
 0 401417 0
 Rd     0
@@ -3770,7 +3770,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The black hall that you are in continues to the
-north and south.  
+north and south.
 ~
 0 401417 0
 Rd     0
@@ -3797,7 +3797,7 @@ surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  You feel something strange about this area, but
 are unable to determine what.  Dismissing this feeling a paranoia, you
-notice that exits lead to the north and south.  
+notice that exits lead to the north and south.
 ~
 0 401417 0
 Rd     0
@@ -3823,7 +3823,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The black hall that you are in continues to the
-east and west.  
+east and west.
 ~
 0 401417 0
 Rd     0
@@ -3848,8 +3848,8 @@ deserted halls, sounding like the spirits of a thousand dead.  However you
 find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
-the source of the tracks.  The hall bends sharply here, making a corner. 
-Exits lead to the north and west.  
+the source of the tracks.  The hall bends sharply here, making a corner.
+Exits lead to the north and west.
 ~
 0 401417 0
 Rd     0
@@ -3875,7 +3875,7 @@ find that the most disturbing thing is not the thick blackness that
 surrounds you, but rather the faint glimmers of light that can be seen
 farther down the hall periodically, making you think that you will soon find
 the source of the tracks.  The hallway bends again here, as the northern
-walls meets the western one.  Exits lead to the south and east.  
+walls meets the western one.  Exits lead to the south and east.
 ~
 0 401417 0
 Rd     0
@@ -3894,25 +3894,25 @@ This room is like any other part of the Labyrinth except for one thing:
 the door.  Entirely filling an arch laid into the wall, the door is at least
 twice the height that you are.  Made of the same black granite that the rest
 of the Labyrinth is constructed of, the door only has one symbol carved on
-it, as if to contrast the the many glowing sigla on the walls of this room. 
+it, as if to contrast the the many glowing sigla on the walls of this room.
 The light from these sigla extends to the edge of the room, then stops, held
 back by some unseeable magical force.  Something has been carved into the
 arch above the door.  Aside from the door, the only other exit is to the
-north.  
+north.
 ~
 0 401416 0
 Rd     0
 E
 words~
 Chiseled deep into the soft white rock, the words read:
- 
+
                        THE STAIRS OF LIGHT
- 
+
 ~
 E
 carving~
 Chiseled deeply into the black granite, the carving reads:
- 
+
                         THE STAIRS OF LIGHT
 ~
 D0
@@ -3921,7 +3921,7 @@ D0
 0 0 11667
 D5
 This huge piece of black granite is highly polished, and bears only one
-marking: a symbol carved in its exact center.  
+marking: a symbol carved in its exact center.
 ~
 door~
 19 0 11705
@@ -3938,7 +3938,7 @@ feet.  The dust lies all around you, thick and unbroken, except for your
 footprints.  The Stairs of Light are more silent than the levels above you,
 with only your footsteps to remind you that you are not dead.  But, as you
 have often learned, silence can hide many things.  The stairway continues
-downwards to the east, and above you is the Halls of the Dead.  
+downwards to the east, and above you is the Halls of the Dead.
 ~
 0 401416 0
 Rd     0
@@ -3965,7 +3965,7 @@ feet.  The dust lies all around you, thick and unbroken, except for your
 footprints.  The Stairs of Light are more silent than the levels above you,
 with only your footsteps to remind you that you are not dead.  But, as you
 have often learned, silence can hide many things.  The stairs continues
-downwards, and slope upwards to the west.  
+downwards, and slope upwards to the west.
 ~
 0 401416 0
 Rd     0
@@ -3990,7 +3990,7 @@ feet.  The dust lies all around you, thick and unbroken, except for your
 footprints.  The Stairs of Light are more silent than the levels above you,
 with only your footsteps to remind you that you are not dead.  But, as you
 have often learned, silence can hide many things.  The stairs continue
-downwards to the west, and lead upwards above you.  
+downwards to the west, and lead upwards above you.
 ~
 0 401416 0
 Rd     0
@@ -4016,7 +4016,7 @@ footprints.  The Stairs of Light are more silent than the levels above you,
 with only your footsteps to remind you that you are not dead.  But, as you
 have often learned, silence can hide many things.  The bottom of the stairs
 is visible to you directly below you, and they start to slope upwards to the
-east.  
+east.
 ~
 0 401416 0
 Rd     0
@@ -4040,7 +4040,7 @@ doing any serious damage to yourself Luckily, the bottom was not far from
 the top, which is a few lengths above your head.  Deciding that you will
 never be able to climb back out, you look around the small room hunting for
 a way to escape.  You find one quite easily: a large man-made tunnel runs
-east, leading to unknown portions of the Labyrinth.  
+east, leading to unknown portions of the Labyrinth.
 ~
 0 401421 0
 Rd     0
@@ -4059,14 +4059,14 @@ look at the walls.  You then realize that it is the same black granite as
 elsewhere, and that it is only mist coming out of a doorway to the south
 that makes the room look grey.  Aside from the fog enshrouded doorway, the
 only other exit from this room is up the Stairs of Light.  A small plaque
-has been inserted into one wall here.  
+has been inserted into one wall here.
 ~
 0 401420 0
 Rd     0
 E
 plaque~
 The brass plaque has been engraved with a flowing script, reading:
- 
+
                           THE GREY MISTS
 ~
 D2
@@ -4090,7 +4090,7 @@ is said that the Grey Mists are one of the demi-planes where the demons
 begin their existance.  You hope that this is not true, for the dark fog
 could hide a million demons without your knowledge.  To the north of you,
 appears to be a door floating in the mist, with no apparent support.  In all
-other directions lies the mist.  
+other directions lies the mist.
 ~
 0 401417 9
 Rd     0
@@ -4130,7 +4130,7 @@ all directions forever; and for all you know about this place, it may.  It
 is said that the Grey Mists are one of the demi-planes where the demons
 begin their existance.  You hope that this is not true, for the dark fog
 could hide a million demons without your knowledge.  Mist lies about you in
-all directions.  
+all directions.
 ~
 0 401417 9
 Rd     0
@@ -4170,7 +4170,7 @@ all directions forever; and for all you know about this place, it may.  It
 is said that the Grey Mists are one of the demi-planes where the demons
 begin their existance.  You hope that this is not true, for the dark fog
 could hide a million demons without your knowledge.  Mist lies around you in
-all directions.  
+all directions.
 ~
 0 401417 9
 Rd     0
@@ -4210,7 +4210,7 @@ all directions forever; and for all you know about this place, it may.  It
 is said that the Grey Mists are one of the demi-planes where the demons
 begin their existance.  You hope that this is not true, for the dark fog
 could hide a million demons without your knowledge.  Dense grey fog lies in
-all directions.  
+all directions.
 ~
 0 401417 9
 Rd     0
@@ -4250,7 +4250,7 @@ all directions forever; and for all you know about this place, it may.  It
 is said that the Grey Mists are one of the demi-planes where the demons
 begin their existance.  You hope that this is not true, for the dark fog
 could hide a million demons without your knowledge.  Thick dark mist swirls
-violently in whichever direction you look.  
+violently in whichever direction you look.
 ~
 0 401417 9
 Rd     0
@@ -4290,7 +4290,7 @@ all directions forever; and for all you know about this place, it may.  It
 is said that the Grey Mists are one of the demi-planes where the demons
 begin their existance.  You hope that this is not true, for the dark fog
 could hide a million demons without your knowledge.  A doorway to the south,
-seemingly suspended in mid-air, leads to a well lighted room.  
+seemingly suspended in mid-air, leads to a well lighted room.
 ~
 0 401417 9
 Rd     0
@@ -4330,7 +4330,7 @@ all directions forever; and for all you know about this place, it may.  It
 is said that the Grey Mists are one of the demi-planes where the demons
 begin their existance.  You hope that this is not true, for the dark fog
 could hide a million demons without your knowledge.  Grey mist lies as far
-as you can see in all directions.  
+as you can see in all directions.
 ~
 0 401417 9
 Rd     0
@@ -4370,7 +4370,7 @@ all directions forever; and for all you know about this place, it may.  It
 is said that the Grey Mists are one of the demi-planes where the demons
 begin their existance.  You hope that this is not true, for the dark fog
 could hide a million demons without your knowledge.  The dark fog extends as
-fas as you can see in all directions.  
+fas as you can see in all directions.
 ~
 0 401421 9
 Rd     0
@@ -4406,7 +4406,7 @@ this room.  It flows out of a door to the north, pouring out as if it came
 from a never ending supply.  It makes it difficult to walk in this room, so
 that you nearly fall down the stairs when you come to them.  Aside from the
 door leading into the grey fog to the north, the stairs are the only exit
-from the room, their bottom hidden in darkness.  
+from the room, their bottom hidden in darkness.
 ~
 0 401421 0
 Rd     0
@@ -4428,7 +4428,7 @@ because of the stillness.  No breeze wails through this room, nor do any
 noises break the silence.  Tall stone pillars stretch upwards, their tops
 lost in darkness.  Aside from the stairs, the only other exit is to the
 south, through a large granite door, above which something seems to have
-been carved.  
+been carved.
 ~
 0 401417 0
 Rd     0
@@ -4440,7 +4440,7 @@ carving~
 ~
 D2
 Constructed of black granite, the door is unadorned, except for a large
-lock carved from the same material along its one side.  
+lock carved from the same material along its one side.
 ~
 door~
 23 11605 11721
@@ -4456,8 +4456,8 @@ still see the footprints of the last person to enter - the tracks of Merra
 Mal-Renu are plainly visible in the thick dust.  The room only has one
 adornment: a huge stone casket, constructed out of the same black granite of
 the rest of the Labyrinth is, lies in the exact center of the room.  A red
-sigil glows brightly on the lid of the casket, unbroken despite its age. 
-The only exit from this room is the door to the north.  
+sigil glows brightly on the lid of the casket, unbroken despite its age.
+The only exit from this room is the door to the north.
 ~
 0 4595721 0
 Rd     0
@@ -4476,7 +4476,7 @@ of the Labyrinth is constructed of, the door only has one symbol carved on
 it, as if to contrast the many glowing sigla on the walls of this room.  The
 dim glow from these sigla extends to the edge of the room, then stops, help
 back be some unseeable magical force.  Aside from the door, the only other
-exit from this room is to the north.  
+exit from this room is to the north.
 ~
 0 401416 0
 Rd     0
@@ -4486,7 +4486,7 @@ D0
 0 0 11703
 D5
 Made of a polished piece of black granite, the door only has one marking:
-a glowing sigla in its center.  
+a glowing sigla in its center.
 ~
 door~
 19 0 11723
@@ -4503,7 +4503,7 @@ feet.  The dust lies all around you, thick and unbroken, except for your
 footprints.  The Stairs of Light are more silent than the levels above you,
 with only your footsteps to remind you that you are not dead.  But, as you
 have often learned, silence can hide many things.  The stairs lead downwards
-to the east, and end directly above you.  
+to the east, and end directly above you.
 ~
 0 401416 0
 Rd     0
@@ -4513,7 +4513,7 @@ D1
 0 0 11724
 D4
 The door is exactly the same as the other side, except that there is nor
-sigla.  
+sigla.
 ~
 door~
 19 0 11722
@@ -4530,7 +4530,7 @@ feet.  The dust lies all around you, thick and unbroken, except for your
 footprints.  The Stairs of Light are more silent than the levels above you,
 with only your footsteps to remind you that you are not dead.  But, as you
 have often learned, silence can hide many things.  The stairs continue below
-you, and lead upwards to the west.  
+you, and lead upwards to the west.
 ~
 0 401416 0
 Rd     0
@@ -4555,7 +4555,7 @@ feet.  The dust lies all around you, thick and unbroken, except for your
 footprints.  The Stairs of Light are more silent than the levels above you,
 with only your footsteps to remind you that you are not dead.  But, as you
 have often learned, silence can hide many things.  The stairs lead downwards
-to the west, and continue directly above you.  
+to the west, and continue directly above you.
 ~
 0 401416 0
 Rd     0
@@ -4580,7 +4580,7 @@ feet.  The dust lies all around you, thick and unbroken, except for your
 footprints.  The Stairs of Light are more silent than the levels above you,
 with only your footsteps to remind you that you are not dead.  But, as you
 have often learned, silence can hide many things.  Below you, you can barely
-make out the bottom of the stairs, which lead upwards to the east.  
+make out the bottom of the stairs, which lead upwards to the east.
 ~
 0 401416 0
 Rd     0
@@ -4602,20 +4602,20 @@ glow.  The light reveals a state of dustiness similar to all the other
 floors but for one thing.  Any markings you make in this dust disappear
 after a few seconds wait, effectively wiping out your trail.  A small plaque
 has been attached to the wall, and something has been carved above the arch
-leading to the stairs.  The only other exit from this room is to the south. 
+leading to the stairs.  The only other exit from this room is to the south.
 ~
 0 401416 0
 Rd     0
 E
 carving~
 These words have been deeply engraved into the black stone:
- 
+
                           THE STAIRS OF LIGHT
 ~
 E
 plaque~
 The small gold plaque bears only four words:
- 
+
                          THE HALLS OF ILLUSION
 ~
 D2
@@ -4629,15 +4629,15 @@ D4
 S
 #11728
 The Halls of Illusion~
-The sigla that surround you provide dim light, showing you a grim scene. 
+The sigla that surround you provide dim light, showing you a grim scene.
 Where the halls above you were merely repetitive, these are exactly the
-same.  Footprints that you leave in the dust disappear after a few steps. 
+same.  Footprints that you leave in the dust disappear after a few steps.
 Even the magical symbols are exactly alike, each one exuding the same amount
 of light.  There are no breezes; no echoes or sudden shifts in temperature
 to help you decide if you have been in this part of the hall already or not.
 The only sign that you are moving at all is the steady ache that has been
 growing in your legs: you would only feel this tired after walking quite
-some ways.  The only exits are to the north and south.  
+some ways.  The only exits are to the north and south.
 ~
 0 401416 0
 Rd     0
@@ -4652,15 +4652,15 @@ D2
 S
 #11729
 The Halls of Illusion~
-The sigla that surround you provide dim light, showing you a grim scene. 
+The sigla that surround you provide dim light, showing you a grim scene.
 Where the halls above you were merely repetitive, these are exactly the
-same.  Footprints that you leave in the dust disappear after a few steps. 
+same.  Footprints that you leave in the dust disappear after a few steps.
 Even the magical symbols are exactly alike, each one exuding the same amount
 of light.  There are no breezes; no echoes or sudden shifts in temperature
 to help you decide if you have been in this part of the hall already or not.
 The only sign that you are moving at all is the steady ache that has been
 growing in your legs: you would only feel this tired after walking quite
-some ways.  The only exits are to the north and south.  
+some ways.  The only exits are to the north and south.
 ~
 0 401416 0
 Rd     0
@@ -4675,15 +4675,15 @@ D2
 S
 #11730
 The Halls of Illusion~
-The sigla that surround you provide dim light, showing you a grim scene. 
+The sigla that surround you provide dim light, showing you a grim scene.
 Where the halls above you were merely repetitive, these are exactly the
-same.  Footprints that you leave in the dust disappear after a few steps. 
+same.  Footprints that you leave in the dust disappear after a few steps.
 Even the magical symbols are exact breezes; no echoes or sudden shifts in
 temperature to help you decide if you have been in this part of the hall
 already or not.  The only sign that you are moving at all is the steady ache
 that has been growing in your legs: you would only feel this tired after
 walking quite some ways.  The hall splits here, leading to the north, south,
-east and west.  
+east and west.
 ~
 0 401416 0
 Rd     0
@@ -4706,15 +4706,15 @@ D3
 S
 #11731
 The Halls of Illusion~
-The sigla that surround you provide dim light, showing you a grim scene. 
+The sigla that surround you provide dim light, showing you a grim scene.
 Where the halls above you were merely repetitive, these are exactly the
-same.  Footprints that you leave in the dust disappear after a few steps. 
+same.  Footprints that you leave in the dust disappear after a few steps.
 Even the magical symbols are exactly alike, each one exuding the same amount
 of light.  There are no breezes; no echoes or sudden shifts in temperature
 to help you decide if you have been in this part of the hall already or not.
 The only sign that you are moving at all is the steady ache that has been
 growing in your legs: you would only feel this tired after walking quite
-some ways.  The only exits are to the north and south.  
+some ways.  The only exits are to the north and south.
 ~
 0 401416 0
 Rd     0
@@ -4729,15 +4729,15 @@ D2
 S
 #11732
 The Halls of Illusion~
-The sigla that surround you provide dim light, showing you a grim scene. 
+The sigla that surround you provide dim light, showing you a grim scene.
 Where the halls above you were merely repetitive, these are exactly the
-same.  Footprints that you leave in the dust disappear after a few steps. 
+same.  Footprints that you leave in the dust disappear after a few steps.
 Even the magical symbols are exactly alike, each one exuding the same amount
 of light.  There are no breezes; no echoes or sudden shifts in temperature
 to help you decide if you have been in this part of the hall already or not.
 The only sign that you are moving at all is the steady ache that has been
 growing in your legs: you would only feel this tired after walking quite
-some ways.  The only exits are to the north and south.  
+some ways.  The only exits are to the north and south.
 ~
 0 401416 0
 Rd     0
@@ -4752,15 +4752,15 @@ D2
 S
 #11733
 The Halls of Illusion~
-The sigla that surround you provide dim light, showing you a grim scene. 
+The sigla that surround you provide dim light, showing you a grim scene.
 Where the halls above you were merely repetitive, these are exactly the
-same.  Footprints that you leave in the dust disappear after a few steps. 
+same.  Footprints that you leave in the dust disappear after a few steps.
 Even the magical symbols are exactly alike, each one exuding the same amount
 of light.  There are no breezes; no echoes or sudden shifts in temperature
 to help you decide if you have been in this part of the hall already or not.
 The only sign that you are moving at all is the steady ache that has been
 growing in your legs: you would only feel this tired after walking quite
-some ways.  The only exits are to the west and south.  
+some ways.  The only exits are to the west and south.
 ~
 0 401416 0
 Rd     0
@@ -4775,15 +4775,15 @@ D3
 S
 #11734
 The Halls of Illusion~
-The sigla that surround you provide dim light, showing you a grim scene. 
+The sigla that surround you provide dim light, showing you a grim scene.
 Where the halls above you were merely repetitive, these are exactly the
-same.  Footprints that you leave in the dust disappear after a few steps. 
+same.  Footprints that you leave in the dust disappear after a few steps.
 Even the magical symbols are exactly alike, each one exuding the same amount
 of light.  There are no breezes; no echoes or sudden shifts in temperature
 to help you decide if you have been in this part of the hall already or not.
 The only sign that you are moving at all is the steady ache that has been
 growing in your legs: you would only feel this tired after walking quite
-some ways.  The only exits are to the north and south.  
+some ways.  The only exits are to the north and south.
 ~
 0 401416 0
 Rd     0
@@ -4798,15 +4798,15 @@ D2
 S
 #11735
 The Halls of Illusion~
-The sigla that surround you provide dim light, showing you a grim scene. 
+The sigla that surround you provide dim light, showing you a grim scene.
 Where the halls above you were merely repetitive, these are exactly the
-same.  Footprints that you leave in the dust disappear after a few steps. 
+same.  Footprints that you leave in the dust disappear after a few steps.
 Even the magical symbols are exactly alike, each one exuding the same amount
 of light.  There are no breezes; no echoes or sudden shifts in temperature
 to help you decide if you have been in this part of the hall already or not.
 The only sign that you are moving at all is the steady ache that has been
 growing in your legs: you would only feel this tired after walking quite
-some ways.  The only exits are to the north and south.  
+some ways.  The only exits are to the north and south.
 ~
 0 401416 0
 Rd     0
@@ -4821,15 +4821,15 @@ D2
 S
 #11736
 The Halls of Illusion~
-The sigla that surround you provide dim light, showing you a grim scene. 
+The sigla that surround you provide dim light, showing you a grim scene.
 Where the halls above you were merely repetitive, these are exactly the
-same.  Footprints that you leave in the dust disappear after a few steps. 
+same.  Footprints that you leave in the dust disappear after a few steps.
 Even the magical symbols are exactly alike, each one exuding the same amount
 of light.  There are no breezes; no echoes or sudden shifts in temperature
 to help you decide if you have been in this part of the hall already or not.
 The only sign that you are moving at all is the steady ache that has been
 growing in your legs: you would only feel this tired after walking quite
-some ways.  The only exits from this room are to the east and south.  
+some ways.  The only exits from this room are to the east and south.
 ~
 0 401416 0
 Rd     0
@@ -4844,15 +4844,15 @@ D2
 S
 #11737
 The Halls of Illusion~
-The sigla that surround you provide dim light, showing you a grim scene. 
+The sigla that surround you provide dim light, showing you a grim scene.
 Where the halls above you were merely repetitive, these are exactly the
-same.  Footprints that you leave in the dust disappear after a few steps. 
+same.  Footprints that you leave in the dust disappear after a few steps.
 Even the magical symbols are exactly alike, each one exuding the same amount
 of light.  There are no breezes; no echoes or sudden shifts in temperature
 to help you decide if you have been in this part of the hall already or not.
 The only sign that you are moving at all is the steady ache that has been
 growing in your legs: you would only feel this tired after walking quite
-some ways.  The only exits are to the north and south.  
+some ways.  The only exits are to the north and south.
 ~
 0 401416 0
 Rd     0
@@ -4867,15 +4867,15 @@ D2
 S
 #11738
 The Halls of Illusion~
-The sigla that surround you provide dim light, showing you a grim scene. 
+The sigla that surround you provide dim light, showing you a grim scene.
 Where the halls above you were merely repetitive, these are exactly the
-same.  Footprints that you leave in the dust disappear after a few steps. 
+same.  Footprints that you leave in the dust disappear after a few steps.
 Even the magical symbols are exactly alike, each one exuding the same amount
 of light.  There are no breezes; no echoes or sudden shifts in temperature
 to help you decide if you have been in this part of the hall already or not.
 The only sign that you are moving at all is the steady ache that has been
 growing in your legs: you would only feel this tired g quite some ways.  The
-only exits are to the north and south.  
+only exits are to the north and south.
 ~
 0 401416 0
 Rd     0
@@ -4890,16 +4890,16 @@ D2
 S
 #11739
 The Halls of Illusion~
-The sigla that surround you provide dim light, showing you a grim scene. 
+The sigla that surround you provide dim light, showing you a grim scene.
 Where the halls above you were merely repetitive, these are exactly the
-same.  Footprints that you leave in the dust disappear after a few steps. 
+same.  Footprints that you leave in the dust disappear after a few steps.
 Even the magical symbols are exactly alike, each one exuding the same amount
 of light.  There are no breezes; no echoes or sudden shifts in temperature
 to help you decide if you have been in this part of the hall already or not.
 The only sign that you are moving at all is the steady ache that has been
 growing in your legs: you would only feel this tired after walking quite
 some ways.  The hall splits here, leading to the north, south, east and
-west.  
+west.
 ~
 0 401416 0
 Rd     0
@@ -4922,15 +4922,15 @@ D3
 S
 #11740
 The Halls of Illusion~
-The sigla that surround you provide dim light, showing you a grim scene. 
+The sigla that surround you provide dim light, showing you a grim scene.
 Where the halls above you were merely repetitive, these are exactly the
-same.  Footprints that you leave in the dust disappear after a few steps. 
+same.  Footprints that you leave in the dust disappear after a few steps.
 Even the magical symbols are exactly alike, each one exuding the same amount
 of light.  There are no breezes; no echoes or sudden shifts in temperature
 to help you decide if you have been in this part of the hall already or not.
 The only sign that you are moving at all is the steady ache that has been
 growing in your legs: you would only feel this tired after walking quite
-some ways.  The only exits are to the east and south.  
+some ways.  The only exits are to the east and south.
 ~
 0 401416 0
 Rd     0
@@ -4945,15 +4945,15 @@ D2
 S
 #11741
 The Halls of Illusion~
-The sigla that surround you provide dim light, showing you a grim scene. 
+The sigla that surround you provide dim light, showing you a grim scene.
 Where the halls above you were merely repetitive, these are exactly the
-same.  Footprints that you leave in the dust disappear after a few steps. 
+same.  Footprints that you leave in the dust disappear after a few steps.
 Even the magical symbols are exactly alike, each one exuding the same amount
 of light.  There are no breezes; no echoes or sudden shifts in temperature
 to help you decide if you have been in this part of the hall already or not.
 The only sign that you are moving at all is the steady ache that has been
 growing in your legs: you would only feel this tired after walking quite
-some ways.  The only exits are to the north and south.  
+some ways.  The only exits are to the north and south.
 ~
 0 401416 0
 Rd     0
@@ -4968,15 +4968,15 @@ D2
 S
 #11742
 The Halls of Illusion~
-The sigla that surround you provide dim light, showing you a grim scene. 
+The sigla that surround you provide dim light, showing you a grim scene.
 Where the halls above you were merely repetitive, these are exactly the
-same.  Footprints that you leave in the dust disappear after a few steps. 
+same.  Footprints that you leave in the dust disappear after a few steps.
 Even the magical symbols are exactly alike, each one exuding the same amount
 of light.  There are no breezes; no echoes or sudden shifts in temperature
 to help you decide if you have been in this part of the hall already or not.
 The only sign that you are moving at all is the steady ache that has been
 growing in your legs: you would only feel this tired after walking quite
-some ways.  The only exits are to the north and south.  
+some ways.  The only exits are to the north and south.
 ~
 0 401416 0
 Rd     0
@@ -4991,15 +4991,15 @@ D2
 S
 #11743
 The Halls of Illusion~
-The sigla that surround you provide dim light, showing you a grim scene. 
+The sigla that surround you provide dim light, showing you a grim scene.
 Where the halls above you were merely repetitive, these are exactly the
-same.  Footprints that you leave in the dust disappear after a few steps. 
+same.  Footprints that you leave in the dust disappear after a few steps.
 Even the magical symbols are exactly alike, each one exuding the same amount
 of light.  There are no breezes; no echoes or sudden shifts in temperature
 to help you decide if you have been in this part of the hall already or not.
 The only sign that you are moving at all is the steady ache that has been
 growing in your legs: you would only feel this tired after walking quite
-some ways.  The only exits are to the west and south.  
+some ways.  The only exits are to the west and south.
 ~
 0 401416 0
 Rd     0
@@ -5014,15 +5014,15 @@ D3
 S
 #11744
 The Halls of Illusion~
-The sigla that surround you provide dim light, showing you a grim scene. 
+The sigla that surround you provide dim light, showing you a grim scene.
 Where the halls above you were merely repetitive, these are exactly the
-same.  Footprints that you leave in the dust disappear after a few steps. 
+same.  Footprints that you leave in the dust disappear after a few steps.
 Even the magical symbols are exactly alike, each one exuding the same amount
 of light.  There are no breezes; no echoes or sudden shifts in temperature
 to help you decide if you have been in this part of the hall already or not.
 The only sign that you are moving at all is the steady ache that has been
 growing in your legs: you would only feel this tired after walking quite
-some ways.  The only exits are to the north and south.  
+some ways.  The only exits are to the north and south.
 ~
 0 401416 0
 Rd     0
@@ -5043,7 +5043,7 @@ reach down any further than the first few steps, as if it was held back by
 some unseen barrier.  Aside from that however, this room is much the same as
 any other part of the Labyrrinth, with black granite walls and centuries of
 dust on the floor.  The only exits from this room is the hall to the north,
-and the stairs leading down.  
+and the stairs leading down.
 ~
 0 401416 0
 Rd     0
@@ -5058,11 +5058,11 @@ D5
 S
 #11746
 The Vault of Renu Fal-Terra~
-Magical darkness surrounds you once again, making it difficult to see. 
+Magical darkness surrounds you once again, making it difficult to see.
 You can barely make out the black stone walls around you.  Suprisingly, the
 floors here are dust free, as if the Labyrinth actually cared about what lay
 in these rooms.  Or, as if something was here to clean the area.  The only
-exits are to the south and up the stairs above you.  
+exits are to the south and up the stairs above you.
 ~
 0 401421 0
 Rd     0
@@ -5084,7 +5084,7 @@ a silver faceplate with a small keyhole in it.  This room is different than
 other rooms.  Pillars, made of the same black rock, stretch upwards
 supporting a high ceiling that not even the magical darkness can hide.  The
 floor remains dust free, whether by mechanical of magical means you know
-not.  Aside from the three locked doors, the only exit is to the north.  
+not.  Aside from the three locked doors, the only exit is to the north.
 ~
 0 434185 0
 Rd     0
@@ -5115,7 +5115,7 @@ ablaze with the light from hundreds of sigla inscribed on the wall.  While
 looking at the walls is nearly impossible, you can tell by squinting that
 they are constructed of the same black granite that the rest of the
 Labyrinth is.  While the room seems like it was designed to hold something
-important, it does not, for the room is bare.    
+important, it does not, for the room is bare.
 ~
 0 401416 0
 Rd     0
@@ -5131,7 +5131,7 @@ ablaze with the light from hundreds of sigla inscribed on the wall.  While
 looks at the walls is nearly impossible now, you can tell by squinting that
 they are constructed of the same black granite as the rest of the Labyrinth
 is.  While the room seems like it was designed to hold something important,
-it does not, for the room is bare.    
+it does not, for the room is bare.
 ~
 0 401416 0
 Rd     0
@@ -5145,10 +5145,10 @@ The Vault of Renu Fal-Terra~
 This room seems like it should not belong in th Labyrinth at all.  It si
 ablaze with the light from hundreds of sigla inscribed on the walls.  While
 looking at the walls is nearly impossible now, you can tell that they are
-constructed of the same black granite that the rest of the Labyrinth is. 
+constructed of the same black granite that the rest of the Labyrinth is.
 The only furnishing in this room is the black stone box that sits in the
 exact center of the room, as if to draw your attention.  The only exit from
-this room is to the north.  
+this room is to the north.
 ~
 0 394252 0
 Rd     0

@@ -2260,8 +2260,7 @@ void do_alist( CHAR_DATA * ch, char * argument ) {
   char      * prot = "";
 
   /*    sprintf( result, "[%3s] [%-28s] (%-5s-%5s) [%-10s]  %3s  [%-8s]\n\r",*/
-  sprintf( result, "&z[&W%3s&z] &z[&B%-28s&z] &z(&W%-5s-%5s&z) &z[&G%-10s&z] &z[&W%3s&z][&W%-8s&z]\n\r",
-           "Num", "Area Name", "lvnum", "uvnum", "Filename", "Sec", "Builders" );
+  sprintf( result, "&z[&W%3s&z] &z[&B%-28s&z] &z(&W%-5s-%5s&z) &z[&G%-10s&z] &z[&W%3s&z][&W%-8s&z]\n\r", "Num", "Area Name", "lvnum", "uvnum", "Filename", "Sec", "Builders" );
 
   for ( pArea = area_first; pArea; pArea = pArea->next ) {
     if ( IS_SET( pArea->area_flags, AREA_PROTOTYPE ) ) {
@@ -2271,15 +2270,7 @@ void do_alist( CHAR_DATA * ch, char * argument ) {
     }
 
     /*	sprintf( buf, "[%3d] %s%-29.29s (%-5d-%5d) %-12.12s [%3d] [%-8.8s]\n\r",*/
-    sprintf( buf, "&z[&W%3d&z] &R%s&B%-29.29s &z(&W%-5d-%5d&z) &G%-12.12s &z[&w%3d&z][&W%-8.8s&z]\n\r",
-             pArea->vnum,
-             prot,
-             &pArea->name[ 8 ],
-             pArea->lvnum,
-             pArea->uvnum,
-             pArea->filename,
-             pArea->security,
-             pArea->builders );
+    sprintf( buf, "&z[&W%3d&z] &R%s&B%-29.29s &z(&W%-5d-%5d&z) &G%-12.12s &z[&w%3d&z][&W%-8.8s&z]\n\r", pArea->vnum, prot, pArea->name, pArea->lvnum, pArea->uvnum, pArea->filename, pArea->security, pArea->builders );
     strcat( result, buf );
   }
 

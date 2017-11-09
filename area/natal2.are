@@ -1,7 +1,7 @@
 #AREADATA
-Name        { 20-40} Myrkwood Swamp      Midnight~
+Name        Myrkwood Swamp~
 Levels      20 40
-Builders    Isabo~
+Builders    Isabo Midnight~
 VNUMs       7700 7799
 Security    1
 Recall      25001
@@ -19,7 +19,7 @@ A large humanoid lizard grins over at you before attacking!
 ~
 A large lizardman with motley colored green and black scales and glowing
 red eyes hisses softly to himself.  His long forked tongue flicks from his
-mouth as he grins in anticipation of the kill....  You!  
+mouth as he grins in anticipation of the kill....  You!
 ~
 97 512 0 10 S
 30 0 0 1500d0+0 0d0+0
@@ -35,7 +35,7 @@ Kracken are legendary sea and swamp monsters.  They attack with their
 large tentacles and pull ships and other victims down to their watery
 deaths.  Those that have seen an entire kracken and lived have reported that
 they are giant squids.  You hope to escape from this one before it makes you
-into supper.  
+into supper.
 ~
 97 512 0 10 S
 35 0 0 2000d0+0 0d0+0
@@ -50,7 +50,7 @@ A large, hungry-looking rat snaps its sharp teeth at you.
 This dog-sized creature looks literally like a drowned rat.  Dull, wet
 black hair bristles and its whiskers twitch as it looks at you and tries to
 take a bite out of your leg!  Its beady little eyes glitter as it tries to
-take you on.  
+take you on.
 ~
 97 512 0 -100 S
 25 0 0 1050d0+0 0d0+0
@@ -69,7 +69,7 @@ A large set of jaws lunges at you and tries to take off your head!
 An armor plated reptile with a broad snout and large, razor sharp teeth
 poking out from its closed mouth, you wonder if the stories you heard of
 this creature are true.  Whether or not it's a distant relative to the
-dragons, those powerful jaws could snap you in half if you're not careful!  
+dragons, those powerful jaws could snap you in half if you're not careful!
 ~
 97 512 0 0 S
 30 0 0 1500d0+0 0d0+0
@@ -84,7 +84,7 @@ A giant leech is here trying to suck the life from you.
 All the leeches you have ever seen before are the small ones that doctors
 use to suck out the bad blood from their patients.  This one, however, is
 almost half again your size and is trying to attach itself to your body and
-feast upon your blood.  
+feast upon your blood.
 ~
 97 512 0 -100 S
 25 0 0 1050d0+0 0d0+0
@@ -101,9 +101,9 @@ an eel~
 An eel snakes between your legs and attempts to bite you!
 ~
 Long, slim and snakelike, this fish is a dangerous one, indeed!  It has
-two rows of tiny, sharp teeth that it uses to take a bite into your leg. 
+two rows of tiny, sharp teeth that it uses to take a bite into your leg.
 You once heard that these creatures are venomous, and you don't think you
-want to test that theory now.  
+want to test that theory now.
 ~
 97 512 0 0 S
 20 0 0 600d0+0 0d0+0
@@ -117,7 +117,7 @@ An oozy swamp thing tries to smother you with its slimy body!
 ~
 You stare hard at this creature trying to make out exactly what it is,
 but all you can see is that it's somehow a huge ball of intelligent slime
-that looks like it wants to get a bit too friendly with you.  
+that looks like it wants to get a bit too friendly with you.
 ~
 229 512 0 -200 S
 40 0 0 2500d0+0 0d0+0
@@ -138,7 +138,7 @@ A giant toad leaps from the waters and attacks you!
 This warty amphibian leaps from the water with its powerful hind legs in
 your direction, its large mouth open and its sticky tongue ready to entangle
 you.  You wonder what in the swamps could have cause the creatures in here
-to have grown so much!  
+to have grown so much!
 ~
 97 512 0 0 S
 25 0 0 1050d0+0 0d0+0
@@ -152,7 +152,7 @@ Tiny lights seem to be dancing at the edge of your vision.
 ~
 You have a hard time looking at the wisp, but what glimpses you do catch
 are of a tiny blue sphere that wanders about endlessly.  Legends say that
-these tiny creatures lead lost adventurers about to their deaths.  
+these tiny creatures lead lost adventurers about to their deaths.
 ~
 65 524800 0 100 S
 20 0 0 600d0+0 0d0+0
@@ -168,7 +168,7 @@ Originally from dragon valley, this baby dragon wandered off one day and
 got lost in these swamps.  She found herself a small hole and has made her
 home in it.  The swamps don't seem to have harmed her smooth, ebony black
 skin or amethyst eyes in any way.  As a matter of fact, her teeth and claws
-seem to be extra sharp too!  
+seem to be extra sharp too!
 ~
 1572963 640 0 -100 S
 40 0 0 2000d0+0 0d0+0
@@ -182,9 +182,9 @@ An eldritch vapor slinks up from the swamp to attack you!
 ~
 Eldritch vapors dwell in cemetaries, bogs and swamps where fog can hide
 their evershifting forms.  Gleeful and mischievous, they enjoy snatching
-away the posessions of those foolish enough to wander into their realm. 
+away the posessions of those foolish enough to wander into their realm.
 Perhaps you should kill it now before it decides to snatch away your entire
-person to the netherworld!  
+person to the netherworld!
 ~
 101 1573376 0 -200 S
 35 0 0 2000d0+0 0d0+0
@@ -197,7 +197,7 @@ slimy worm~
 &zA black slimy worm slithers around here.
 ~
 A freak of nature is before you.  Blackened slimy skin on a ten foot
-body...  The sight is quite sickening.  
+body...  The sight is quite sickening.
 ~
 195 0 16 0 S
 25 0 0 1050d0+0 0d0+0
@@ -218,7 +218,7 @@ A mud piranha~
 cow in seconds.  Especially this one which is over ten feet long.  It's eyes
 glow of some strange magic.  The thing about this piranha is that it is
 pretty flat and can live in shallow waters.  It can even slither around like
-a snake.  But cannot live outside of the water for TOO long.  
+a snake.  But cannot live outside of the water for TOO long.
 ~
 97 66 65552 -200 S
 40 0 0 2500d0+0 0d0+0
@@ -242,7 +242,7 @@ troll servant~
 ~
 The poor troll walking around, is quite a harmless troll.  Always beaten
 around by other trolls it has run away only to get lost in the swamp.  It
-has been walking around for days and is quite exhasted.  
+has been walking around for days and is quite exhasted.
 ~
 193 134217920 16 200 S
 40 0 0 2000d0+0 0d0+0
@@ -379,7 +379,7 @@ This shield has been beautifully crafted from the purest amber by
 unearthly hands.  Sometime during the ages this treasure was lost and you
 rejoice at your luck in finding it.  An elegant phoenix has been carved into
 the amber as a tribute to the bird that never truely dies in hopes that it
-will gift the wearer of this incredible ability.  
+will gift the wearer of this incredible ability.
 ~
 #7707
 crayfish crawdad~
@@ -397,7 +397,7 @@ E
 crayfish~
 You bet you could catch this thing before it gets away and eat it for
 your supper.  It would probably taste better cooked, but if you're into
-sushi, go ahead and eat it as is.  
+sushi, go ahead and eat it as is.
 ~
 #7708
 grass swamp~
@@ -427,7 +427,7 @@ E
 toadstool~
 These poisonous mushrooms are rare in most areas of the world, but they
 seem to have found a way to grow and get into your posession.  Potion shops
-would probably pay handsomely for this specimen.  
+would probably pay handsomely for this specimen.
 ~
 E
 mushroom~
@@ -451,7 +451,7 @@ E
 skeleton~
 You look closely at the skeletal remains but can't quite make out what it
 once was.  Perhaps it was a dragon at one point in time, but you don't think
-you're going to have any luck identifying it.  
+you're going to have any luck identifying it.
 ~
 E
 skeletal~
@@ -482,7 +482,7 @@ skeleton~
 You find yourself studying the back end of a huge skeleton.  It may have
 been a dragon at one point in time, but it's not like any dragon you've seen
 before.  Time probably would have worn it away by now but the swamps seem to
-have preserved it with only the moss and muck disguising its form.  
+have preserved it with only the moss and muck disguising its form.
 ~
 E
 skeletal~
@@ -515,7 +515,7 @@ carcass~
 Your breath catches in your throat and you try to keep from gagging as
 the stench from the corpse pervades the area.  Scavengers have long since
 taken what they wanted and now only the maggots crawling all about in the
-corpse have claim to this once proud beast.  
+corpse have claim to this once proud beast.
 ~
 E
 horse~
@@ -628,7 +628,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You think you can make out a road to the north of you, or
-you can trude in more swamp to the west.  
+you can trude in more swamp to the west.
 ~
 0 0 11
 Rd     0
@@ -648,7 +648,7 @@ cattails, and murky water.  Strange tentacles wave at you from the sides of
 the road, but can't quite seem to reach you.  You pray that whatever is on
 the other end of those stay in the water and leave you be.  The road
 continues east and west or you can slog through the swamps to the south of
-you.  
+you.
 ~
 0 0 11
 Rd     0
@@ -671,7 +671,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You might be able to reach the road to the north or west
-of you or you can follow the swamp east and south.  
+of you or you can follow the swamp east and south.
 ~
 0 0 10
 Rd     0
@@ -698,7 +698,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  The swamps extend north and south of you, but there looks
-to be solid land to the west.  
+to be solid land to the west.
 ~
 0 0 11
 Rd     0
@@ -721,7 +721,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You can make your way back to the road west of you or
-muck around in the swamps to the north.  
+muck around in the swamps to the north.
 ~
 0 0 2
 Rd     0
@@ -739,7 +739,7 @@ Myrkwood Swamp~
 You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
-water around you.  The swamp lies west of you and a road is to the south.  
+water around you.  The swamp lies west of you and a road is to the south.
 ~
 0 0 2
 Rd     0
@@ -759,7 +759,7 @@ and muck collecting in your footprints as you walk along the road.  You hear
 something moving out in the swamps around you and you decide you'll stick to
 the road and leave the swamps for someone braver or more stupid.  The road
 here winds east and south, or you can trudge into the swamps north and west
-of you.  
+of you.
 ~
 0 0 2
 Rd     0
@@ -787,7 +787,7 @@ cattails, and murky water.  Strange tentacles wave at you from the sides of
 the road, but can't quite seem to reach you.  You pray that whatever is on
 the other end of those stay in the water and leave you be.  The road
 continues north and south or you can venture out into the swamps on the east
-and west sides of you.  
+and west sides of you.
 ~
 0 0 2
 Rd     0
@@ -814,7 +814,7 @@ You walk carefully on a road that winds in between large tree roots,
 cattails, and murky water.  Strange tentacles wave at you from the sides of
 the road, but can't quite seem to reach you.  You pray that whatever is on
 the other end of those stay in the water and leave you be.  You can follow
-the road north or south or you can explore the swamps to the east and west. 
+the road north or south or you can explore the swamps to the east and west.
 ~
 0 0 2
 Rd     0
@@ -842,7 +842,7 @@ and muck collecting in your footprints as you walk along the road.  You hear
 something moving out in the swamps around you and you decide you'll stick to
 the road and leave the swamps for someone braver or more stupid.  The road
 curves along to the north and to the west.  Exits are also east and south of
-you into the swamps.  
+you into the swamps.
 ~
 0 0 2
 Rd     0
@@ -869,7 +869,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  The swamp lies to the east and west of you and dangling
-tree branches block your view to the north.  
+tree branches block your view to the north.
 ~
 0 0 2
 Rd     0
@@ -891,7 +891,7 @@ Myrkwood Swamp~
 You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
-water around you.  All you can see is swamp all around you.  
+water around you.  All you can see is swamp all around you.
 ~
 0 0 2
 Rd     0
@@ -909,7 +909,7 @@ Myrkwood Swamp~
 You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
-water around you.  You see swamp in every direction you look.  
+water around you.  You see swamp in every direction you look.
 ~
 0 0 2
 Rd     0
@@ -936,7 +936,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  Swamp extends in all directions but west where you think
-you can make out solid land.  
+you can make out solid land.
 ~
 0 0 2
 Rd     0
@@ -963,7 +963,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You can get on drier land on all sides of you but north
-where the swamp seems to extend endlessly.  
+where the swamp seems to extend endlessly.
 ~
 0 0 2
 Rd     0
@@ -991,7 +991,7 @@ cattails, and murky water.  Strange tentacles wave at you from the sides of
 the road, but can't quite seem to reach you.  You pray that whatever is on
 the other end of those stay in the water and leave you be.  The road bends
 to the east and continues along to the west.  You can also explore the
-swamps north and south of you.  
+swamps north and south of you.
 ~
 0 0 2
 Rd     0
@@ -1018,7 +1018,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You see higher land to the north of you or you can wade
-through the murky waters in all other directions.  
+through the murky waters in all other directions.
 ~
 0 0 2
 Rd     0
@@ -1044,7 +1044,7 @@ Myrkwood Swamp~
 You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
-water around you.  The swamp continues north and west of you.  
+water around you.  The swamp continues north and west of you.
 ~
 0 0 2
 Rd     0
@@ -1063,7 +1063,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You start to wonder if you've become hopelessly lost as
-you see nothing but swamps stretching out in every direction.  
+you see nothing but swamps stretching out in every direction.
 ~
 0 0 2
 Rd     0
@@ -1090,7 +1090,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  Swamps stretch out all around you except for to the south
-where it looks like there may be higher ground.  
+where it looks like there may be higher ground.
 ~
 0 0 10
 Rd     0
@@ -1118,7 +1118,7 @@ and muck collecting in your footprints as you walk along the road.  You hear
 something moving out in the swamps around you and you decide you'll stick to
 the road and leave the swamps for someone braver or more stupid.  The road
 winds around to the west and to the south.  You can also enter into the
-swamps north and east of you.  
+swamps north and east of you.
 ~
 0 0 2
 Rd     0
@@ -1146,7 +1146,7 @@ and muck collecting in your footprints as you walk along the road.  You hear
 something moving out in the swamps around you and you decide you'll stick to
 the road and leave the swamps for someone braver or more stupid.  You can
 walk along the curve of the road to the north or to the east or you can
-enter into the swamps south of here.  
+enter into the swamps south of here.
 ~
 0 0 2
 Rd     0
@@ -1175,7 +1175,7 @@ as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  The sound of a hooting owl startles you for a moment and
 then you calm down as you realise what it is.  You might be able to reach
 the road north or west of you or you can slog through the swamps east and
-south.  
+south.
 ~
 0 0 10
 Rd     0
@@ -1202,7 +1202,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You grumble to yourself as a quick scan around shows that
-the swamp seems to stretch endlessly in all directions.  
+the swamp seems to stretch endlessly in all directions.
 ~
 0 0 2
 Rd     0
@@ -1229,7 +1229,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  Higher ground supporting a road is to the south and the
-swamp continues off to the east.  
+swamp continues off to the east.
 ~
 0 0 10
 Rd     0
@@ -1248,7 +1248,7 @@ You have reached a turn upon the swampy road.  You discover some water
 and muck collecting in your footprints as you walk along the road.  You hear
 something moving out in the swamps around you and you decide you'll stick to
 the road and leave the swamps for someone braver or more stupid.  You can
-follow the road east or south or you can brave the swamps to the north.  
+follow the road east or south or you can brave the swamps to the north.
 ~
 0 0 2
 Rd     0
@@ -1272,7 +1272,7 @@ cattails, and murky water.  Strange tentacles wave at you from the sides of
 the road, but can't quite seem to reach you.  You pray that whatever is on
 the other end of those stay in the water and leave you be.  You see the road
 continues to the north and south or you can trudge along in the swamps to
-the west and hope you don't get eaten by some passing swamp creature.  
+the west and hope you don't get eaten by some passing swamp creature.
 ~
 0 0 2
 Rd     0
@@ -1300,7 +1300,7 @@ and muck collecting in your footprints as you walk along the road.  You hear
 something moving out in the swamps around you and you decide you'll stick to
 the road and leave the swamps for someone braver or more stupid.  The road
 turns to the north and west or you may venture out into the swamps to the
-east and south.  
+east and south.
 ~
 0 0 2
 Rd     0
@@ -1327,7 +1327,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You peer around you and spot a road north of you and the
-creepy sounds of the swamp surrounds you from all other sides.  
+creepy sounds of the swamp surrounds you from all other sides.
 ~
 0 0 2
 Rd     0
@@ -1354,7 +1354,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You believe yourself hoplessly lost as you wander around
-for hours in all directions and find nothing but swamps around you.  
+for hours in all directions and find nothing but swamps around you.
 ~
 0 0 2
 Rd     0
@@ -1377,7 +1377,7 @@ You begin to wonder if you'll ever see dry land again as you wander about
 endlessly in the swamps.  Cattails and reeds wave in an unseen breeze and
 the water ripples slightly as an unseen creature swims quickly beneath the
 surface.  The swamps extend in all directions around you.  You should
-probably recall now before you become even more lost.  
+probably recall now before you become even more lost.
 ~
 0 0 2
 Rd     0
@@ -1400,7 +1400,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You can see the swamp stretching out to the north and
-west of you and you think you can get to higher ground east or south.  
+west of you and you think you can get to higher ground east or south.
 ~
 0 0 10
 Rd     0
@@ -1428,7 +1428,7 @@ cattails, and murky water.  Strange tentacles wave at you from the sides of
 the road, but can't quite seem to reach you.  You pray that whatever is on
 the other end of those stay in the water and leave you be.  You can walk
 along the road east and west or you can go into the swamps to either the
-north or south.  
+north or south.
 ~
 0 0 2
 Rd     0
@@ -1455,7 +1455,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You can make your way to the road north of you or trudge
-through the swamps to your east.  
+through the swamps to your east.
 ~
 0 0 2
 Rd     0
@@ -1474,7 +1474,7 @@ You begin to wonder if you'll ever see dry land again as you wander about
 endlessly in the swamps.  Cattails and reeds wave in an unseen breeze and
 the water ripples slightly as an unseen creature swims quickly beneath the
 surface.  A large tree seems to have managed to take root here and you think
-you might be able to find shelter beneath the roots.  
+you might be able to find shelter beneath the roots.
 ~
 0 0 2
 Rd     0
@@ -1505,7 +1505,7 @@ You begin to wonder if you'll ever see dry land again as you wander about
 endlessly in the swamps.  Cattails and reeds wave in an unseen breeze and
 the water ripples slightly as an unseen creature swims quickly beneath the
 surface.  The swamps extend in all directions around you.  You should
-probably recall now before you become even more lost.  
+probably recall now before you become even more lost.
 ~
 0 0 2
 Rd     0
@@ -1532,7 +1532,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You can get hopelessly lost in the swamps all around your
-or you can attempt to get to the road to the south.  
+or you can attempt to get to the road to the south.
 ~
 0 0 2
 Rd     0
@@ -1559,7 +1559,7 @@ You walk carefully on a road that winds in between large tree roots,
 cattails, and murky water.  Strange tentacles wave at you from the sides of
 the road, but can't quite seem to reach you.  You pray that whatever is on
 the other end of those stay in the water and leave you be.  The road leads
-east and west or you can venture out into the swamp to the north.  
+east and west or you can venture out into the swamp to the north.
 ~
 0 0 2
 Rd     0
@@ -1583,7 +1583,7 @@ yourself tripping over a partially buried bone.  It looks as if you've
 stumbled across the skeletal remains of some large creature.  It's no
 creature you've ever seen before so you don't think you can identify what it
 once was.  You can get lost in the swamps to the west or you can see the
-front half of the skeleton south of you.  
+front half of the skeleton south of you.
 ~
 0 0 2
 Rd     0
@@ -1622,7 +1622,7 @@ good hiding place from the elements and swamp residents outside, except it
 looks like someone or something else has already taken up residence in here.
 Small bones with tooth marks on them are strewn about the bottom of the
 hole.  You look up to escape from this place and you notice claw marks on
-the roots above you.  There seems to be no other obvious exit out.  
+the roots above you.  There seems to be no other obvious exit out.
 ~
 0 131097 0
 Rd     0
@@ -1637,7 +1637,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You think you can make out a road to the south of you or
-you can explore the swamps in the other directions.  
+you can explore the swamps in the other directions.
 ~
 0 0 2
 Rd     0
@@ -1664,7 +1664,7 @@ You walk carefully on a road that winds in between large tree roots,
 cattails, and murky water.  Strange tentacles wave at you from the sides of
 the road, but can't quite seem to reach you.  You pray that whatever is on
 the other end of those stay in the water and leave you be.  The road leads
-west and east or you can wade out into the swamp north of you.  
+west and east or you can wade out into the swamp north of you.
 ~
 0 0 2
 Rd     0
@@ -1687,7 +1687,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You spot a road to the west of you and branches block
-your view to the east.  The swamp continues south of you.  
+your view to the east.  The swamp continues south of you.
 ~
 0 0 2
 Rd     0
@@ -1710,7 +1710,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You think you can make out a road on higher ground west
-of you or you can explore the swamps north, east and south.  
+of you or you can explore the swamps north, east and south.
 ~
 0 0 2
 Rd     0
@@ -1737,7 +1737,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You find yourself hopelessly lost as you notice the swamp
-continues in all directions around you.  
+continues in all directions around you.
 ~
 0 0 2
 Rd     0
@@ -1760,7 +1760,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  A foul odor comes from the west of you and the swamp
-continues on to the north.  
+continues on to the north.
 ~
 0 0 2
 Rd     0
@@ -1778,7 +1778,7 @@ Myrkwood Swamp~
 You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
-water around you.  The swamp seems to extend to the west and south.  
+water around you.  The swamp seems to extend to the west and south.
 ~
 0 0 2
 Rd     0
@@ -1797,7 +1797,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You can continue to trudge through the swamps north, east
-and west of you or you can try to get to higher ground to the south of you. 
+and west of you or you can try to get to higher ground to the south of you.
 ~
 0 0 2
 Rd     0
@@ -1825,7 +1825,7 @@ cattails, and murky water.  Strange tentacles wave at you from the sides of
 the road, but can't quite seem to reach you.  You pray that whatever is on
 the other end of those stay in the water and leave you be.  The road curves
 to the west and continues to the east.  Or you can explore the swamp north
-of you.  
+of you.
 ~
 0 0 2
 Rd     0
@@ -1848,7 +1848,7 @@ You have reached a turn upon the swampy road.  You discover some water
 and muck collecting in your footprints as you walk along the road.  You hear
 something moving out in the swamps around you and you decide you'll stick to
 the road and leave the swamps for someone braver or more stupid.  You can
-follow the road to the west and south or enter the swamps to the east.  
+follow the road to the west and south or enter the swamps to the east.
 ~
 0 0 2
 Rd     0
@@ -1871,7 +1871,7 @@ You have reached a turn upon the swampy road.  You discover some water
 and muck collecting in your footprints as you walk along the road.  You hear
 something moving out in the swamps around you and you decide you'll stick to
 the road and leave the swamps for someone braver or more stupid.  The road
-turns to the north and west and swamps extend to the east and south.  
+turns to the north and west and swamps extend to the east and south.
 ~
 0 0 2
 Rd     0
@@ -1899,7 +1899,7 @@ on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You can get to the road north of you or you can muck
 about in the swamps all around you.  A horrible smell comes to you from the
-south.  
+south.
 ~
 0 0 10
 Rd     0
@@ -1926,7 +1926,7 @@ You start to choke and cough when you enter this small bog.  A greenish
 gas rises from the water and muck and you find that you can't breathe!  You
 stumble blindly about as your eyes water.  Grass roots trip you and you have
 difficulty finding the exit out.  You'd better hurry before the gas kills
-you!  
+you!
 ~
 0 268435461 2
 Rd     15
@@ -1944,7 +1944,7 @@ Myrkwood Swamp~
 You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
-water around you.  The swamp continues to the east, south and west of you.  
+water around you.  The swamp continues to the east, south and west of you.
 ~
 0 0 2
 Rd     0
@@ -1967,7 +1967,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You can trudge through the swamps north and east of you
-or try to get to the road south of you.  
+or try to get to the road south of you.
 ~
 0 0 2
 Rd     0
@@ -1990,7 +1990,7 @@ You have reached a turn upon the swampy road.  You discover some water
 and muck collecting in your footprints as you walk along the road.  You hear
 something moving out in the swamps around you and you decide you'll stick to
 the road and leave the swamps for someone braver or more stupid.  You can
-follow the road south or east, or you can enter the swamps to the north.  
+follow the road south or east, or you can enter the swamps to the north.
 ~
 0 0 2
 Rd     0
@@ -2013,7 +2013,7 @@ You have reached a turn upon the swampy road.  You discover some water
 and muck collecting in your footprints as you walk along the road.  You hear
 something moving out in the swamps around you and you decide you'll stick to
 the road and leave the swamps for someone braver or more stupid.  The road
-curves of north and east and the swamp extends west.  
+curves of north and east and the swamp extends west.
 ~
 0 0 2
 Rd     0
@@ -2037,7 +2037,7 @@ cattails, and murky water.  Strange tentacles wave at you from the sides of
 the road, but can't quite seem to reach you.  You pray that whatever is on
 the other end of those stay in the water and leave you be.  The road turns
 into a curve east of you and continues to the west.  You can also wade out
-into the swamps to the south.  
+into the swamps to the south.
 ~
 0 0 2
 Rd     0
@@ -2060,7 +2060,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  The swamps stretch out endlessly in all directions but
-north where you think the ground gets a bit more solid.  
+north where you think the ground gets a bit more solid.
 ~
 0 0 2
 Rd     0
@@ -2087,7 +2087,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  The swamp stretches out to the east, south and west of
-you.  
+you.
 ~
 0 0 2
 Rd     0
@@ -2110,7 +2110,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  A large weeping willow is growing to the south of you or
-you can continue in the swamps north and east of you.  
+you can continue in the swamps north and east of you.
 ~
 0 0 2
 Rd     0
@@ -2133,7 +2133,7 @@ You stand beneath the branches of an ancient weeping willow tree.  The
 long wispy branches droop low to the ground in a large curtain all around
 you, and you feel safe in here.  This is probably an ideal place to rest
 without having to worry about being attacked by nasty creatures or other
-travellers such as yourself.  The only obvious exit is to the north of you. 
+travellers such as yourself.  The only obvious exit is to the north of you.
 ~
 0 2098180 2
 Rd     0
@@ -2148,7 +2148,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You can reach the road and higher ground to the east,
-south and west of you.  
+south and west of you.
 ~
 0 0 2
 Rd     0
@@ -2176,7 +2176,7 @@ cattails, and murky water.  Strange tentacles wave at you from the sides of
 the road, but can't quite seem to reach you.  You pray that whatever is on
 the other end of those stay in the water and leave you be.  The road turns
 from a curve west of you and continues on to the east.  The swamps spread
-out to the north and south of you.  
+out to the north and south of you.
 ~
 0 0 2
 Rd     0
@@ -2204,7 +2204,7 @@ decaying remains of some animal.  It looks like it was a horse of some sort
 when it was still alice.  You hope whatever killed it is long gone and won't
 trouble you.  You wisely decide to leave the area as the maggots fight over
 what's left over.  You can escape into the swamps east, south and west of
-you, or you can get to higher ground to the north of you.  
+you, or you can get to higher ground to the north of you.
 ~
 0 0 10
 Rd     0
@@ -2230,7 +2230,7 @@ Myrkwood Swamp~
 You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
-water around you.  The swamp continues to the north and west.  
+water around you.  The swamp continues to the north and west.
 ~
 0 0 2
 Rd     0
@@ -2249,7 +2249,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You can continue through the swamp west of you or make
-your way to the road south of you.  
+your way to the road south of you.
 ~
 0 0 2
 Rd     0
@@ -2269,7 +2269,7 @@ and muck collecting in your footprints as you walk along the road.  You hear
 something moving out in the swamps around you and you decide you'll stick to
 the road and leave the swamps for someone braver or more stupid.  You can
 follow the road west or south.  The swamps also extend north and east of
-you.  
+you.
 ~
 0 0 2
 Rd     0
@@ -2296,7 +2296,7 @@ You walk carefully on a road that winds in between large tree roots,
 cattails, and murky water.  Strange tentacles wave at you from the sides of
 the road, but can't quite seem to reach you.  You pray that whatever is on
 the other end of those stay in the water and leave you be.  The road extends
-north and south or you can explore the swamps west of you.  
+north and south or you can explore the swamps west of you.
 ~
 0 0 2
 Rd     0
@@ -2319,7 +2319,7 @@ You walk carefully on a road that winds in between large tree roots,
 cattails, and murky water.  Strange tentacles wave at you from the sides of
 the road, but can't quite seem to reach you.  You pray that whatever is on
 the other end of those stay in the water and leave you be.  You can follow
-the road north or south, or you can explore the swamp east of you.  
+the road north or south, or you can explore the swamp east of you.
 ~
 0 0 2
 Rd     0
@@ -2343,7 +2343,7 @@ and muck collecting in your footprints as you walk along the road.  You hear
 something moving out in the swamps around you and you decide you'll stick to
 the road and leave the swamps for someone braver or more stupid.  You can
 follow the road north and east or you can venture out into the swamps to the
-south.  
+south.
 ~
 0 0 2
 Rd     0
@@ -2366,7 +2366,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  Drier looking ground is to the north of you and the
-swamps continue in all other directions.  
+swamps continue in all other directions.
 ~
 0 0 2
 Rd     0
@@ -2415,7 +2415,7 @@ You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  You can wade through the swampy waters west, north and
-east or you can make your way to drier ground to the south.  
+east or you can make your way to drier ground to the south.
 ~
 0 0 2
 Rd     0
@@ -2443,7 +2443,7 @@ cattails, and murky water.  Strange tentacles wave at you from the sides of
 the road, but can't quite seem to reach you.  You pray that whatever is on
 the other end of those stay in the water and leave you be.  You can continue
 along the swampy road east and west or you can explore the swamps to the
-north and south.  
+north and south.
 ~
 0 0 2
 Rd     0
@@ -2469,7 +2469,7 @@ Myrkwood Swamp~
 You trudge through the murky waters of the swamp, trying hard not to trip
 on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
-water around you.  You can make out a road to the north and east of you.  
+water around you.  You can make out a road to the north and east of you.
 ~
 0 0 2
 Rd     0
@@ -2489,7 +2489,7 @@ on objects you can't see beneath the surface.  You grip your weapon tightly
 as you hear the sounds of strange, unseen creatures slithering about in the
 water around you.  The sounds of toads and insects almost deafens you as you
 sludge around.  The swamp extends to the east of you or you can get to the
-road south of you.  
+road south of you.
 ~
 0 0 2
 Rd     0
@@ -2507,7 +2507,7 @@ The Swamp Road~
 You walk along a damp road that heads off into the Myrkwood Swamps.  A
 sign here bears the legend 'This way to Myrkwood.  Enter at your own risk'
 and it points off to the east.  You can also explore the swamps north of
-you.  
+you.
 ~
 0 4 2
 Rd     0
@@ -2529,7 +2529,7 @@ On a Muddy Path~
 As you walk long this pathway, your feet make a continuous, annoying
 squishing sound as you sink ankle deep into the muck.  The smell of
 something stagnant looms in the air, and you can hear mosquitos buzzing by
-your ears.  The path continues to the east and west.  
+your ears.  The path continues to the east and west.
 ~
 0 0 2
 Rd     0
@@ -2547,7 +2547,7 @@ On a Muddy Path~
 As you walk long this pathway, your feet make a continuous, annoying
 squishing sound as you sink ankle deep into the muck.  The smell of
 something stagnant looms in the air, and you can hear mosquitoes buzzing by
-your ears.  The path continues to the east and west.  
+your ears.  The path continues to the east and west.
 ~
 0 0 2
 Rd     0
@@ -2565,7 +2565,7 @@ On a Muddy Path~
 As you walk long this pathway, your feet make a continuous, annoying
 squishing sound as you sink ankle deep into the muck.  The smell of
 something stagnant looms in the air, and you can hear mosquitos buzzing by
-your ears.  The path continues to the east and west.  
+your ears.  The path continues to the east and west.
 ~
 0 0 2
 Rd     0

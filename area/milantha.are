@@ -1,7 +1,7 @@
 #AREADATA
-Name        { 15-30} Enchanted Forrest   Milantha~
+Name        Enchanted Forrest~
 Levels      15 30
-Builders    None~
+Builders    Milantha~
 VNUMs       10901 11000
 Security    100
 Recall      25001
@@ -18,9 +18,9 @@ A forest pixie~
 A forest pixie blinks at you in wonder.
 ~
 You see an exotic, tiny little woman in front of you.  Her hair is blonde
-and very long, and is pulled on top of her head with an ornamental comb. 
+and very long, and is pulled on top of her head with an ornamental comb.
 Her tiny little form is perfectly shaped, and magic oozes out of every pore
-of her body.  
+of her body.
 ~
 193 41000 0 1000 S
 20 0 0 600d0+0 0d0+0
@@ -36,7 +36,7 @@ The Satyr looks at you, and you can tell by the look that he's wondering
 what you look like in your skivvies.  You feel really uncomfortable, for you
 know that the Satyr is not very distinguishing in its tastes.  His infamy
 for lecherousness precedes him.  You'd better get out while the going's
-good.  
+good.
 ~
 67 33464 0 -1000 S
 20 0 0 480d0+0 0d0+0
@@ -66,7 +66,7 @@ A vicious dust bunny stands here.
 ~
 A dust bunny leaps from the heaps of junk and goes for your throat.  One
 of the most hideous beasts in the realm, its nasty teeth can strike fear in
-the hearts of even the most brave warrior.  
+the hearts of even the most brave warrior.
 ~
 97 0 0 -100 S
 25 0 0 1050d0+0 0d0+0
@@ -109,7 +109,7 @@ The Mother Crow stares at you suspiciously!
 This large black bird could be an opponent to reckon with.  However, the
 mother crow is not quite sure if you are an intruder or just one of her
 young.  Size-wise, you can certainly pass for one of these gigantic crow
-chicklets.  
+chicklets.
 ~
 67 524840 0 0 S
 22 0 0 780d0+0 0d0+0
@@ -178,7 +178,7 @@ elf~
 An Elf~
 An Elf hides between the leafy branches...
 ~
-A slender, fine boned creature hides within the lucious green leaves. 
+A slender, fine boned creature hides within the lucious green leaves.
 He seems to watch your every move rather suspiously. You must be close
 to the home of Elves....better proceed with great caution!
 ~
@@ -193,8 +193,8 @@ An Elven Guard~
 An Elven Guard protects the entrance to the village...
 ~
 This tall and slender warrior stand here and protects the village. As you
-pass by, he instinctively reaches for his weapon. However, he does not 
-attack you but it becomes clear to you that strangers are rare in this 
+pass by, he instinctively reaches for his weapon. However, he does not
+attack you but it becomes clear to you that strangers are rare in this
 region and probably not very welcome.
 ~
 67 680 0 500 S
@@ -208,7 +208,7 @@ An Elven Villager~
 An Elven Villager stares at you...
 ~
 This Elven female is of stunning beauty! She wears a fine silver necklace
-around her tender neck. Normally, you would probably be delighted to 
+around her tender neck. Normally, you would probably be delighted to
 engage into a conversation, but the suspicous look you get and the sharp
 dagger she is wearing make you reconsider.
 ~
@@ -223,9 +223,9 @@ An Elf~
 An Elf is worshipping the wind...
 ~
 This Elf is very occupied with the wind ceremony. He does not really notice
-your presence. All his thoughts and energy are focused on the ritual. 
+your presence. All his thoughts and energy are focused on the ritual.
 He seems to be talking to someone or something, but you cannot understand
-the words or see anyone around. It must be some sort of prayer he is 
+the words or see anyone around. It must be some sort of prayer he is
 reciting.
 ~
 67 8872 0 200 S
@@ -262,7 +262,7 @@ An ancient elven woman stands here leaning slightly on her staff for
 support.  She seems to be pondering the results of the last council meeting
 and is at first not aware of your presence here.  Once she realizes that you
 are here she gives you a hard look and urges you to leave the council
-chambers.  
+chambers.
 ~
 67 33555112 0 500 S
 32 0 0 1105d0+0 0d0+0
@@ -275,7 +275,7 @@ A Tree Spider~
 A giant tree spider launches at you!
 ~
 A huge, hairy tree spider attacks you without warning! It makes an angry
-fearsome noise with its mandribles. Obviously, this spider is very hungry 
+fearsome noise with its mandribles. Obviously, this spider is very hungry
 and you look like a good snack to it!
 ~
 99 66088 0 0 S
@@ -298,7 +298,7 @@ most things on this tree, it has grown to gigantic size.  Almost four times
 as big as those woodpeckers you have seen in other regions of the realm.  It
 seems, that this woodpecker is also not afraid of you at all.  In fact, it
 looks like it may consider to bang his sharp beak on your head instead of
-the branch you are standing on.  
+the branch you are standing on.
 ~
 67 524800 0 0 S
 15 0 0 400d0+0 0d0+0
@@ -324,7 +324,7 @@ raven~
 A Giant Raven~
 A HUGE raven croaks loudly and attacks!
 ~
-A rather beautiful huge black raven attacks you from the air! If you would 
+A rather beautiful huge black raven attacks you from the air! If you would
 not be so busy fighting it off, you would take a closer look at it...
 ~
 103 533000 0 0 S
@@ -357,7 +357,7 @@ An Elven Guard~
 An Elven Guard on his look-out post...
 ~
 This tall and slender warrior stands here on the look out. As you arrive,
-he takes on a defensive posture and reaches for his weapon. He does not 
+he takes on a defensive posture and reaches for his weapon. He does not
 attack you, but he obviously would like you to leave.
 ~
 67 680 0 500 S
@@ -370,7 +370,7 @@ bird~
 A large Bird~
 A large bird attacks you furiously!
 ~
-You have no idea what race or class this bird is! But it sure is big and 
+You have no idea what race or class this bird is! But it sure is big and
 ugly! And it seems to dislike you pretty much!
 ~
 99 524800 0 0 S
@@ -400,7 +400,7 @@ A silkworm has spun a cocoon here...
 ~
 This is a pretty big silkworm.  At the first glance, there seems to be
 nothing of particular interest, but upon further investigation, you can make
-out some shiny copper coins inside its cocoon...  
+out some shiny copper coins inside its cocoon...
 ~
 2243 65536 16 200 S
 15 0 0 400d0+0 0d0+0
@@ -414,7 +414,7 @@ A Game Master oversees all the players.
 ~
 You see before a short stout elf with spectacles on and he is holding a
 cane in his hand.  He is on a keen lookout for cheaters cause he doesn't
-like them very much.  He sneaks around looking over your shoulder. 
+like them very much.  He sneaks around looking over your shoulder.
 ~
 67 134251176 0 100 S
 33 0 0 1170d0+0 0d0+0
@@ -423,7 +423,7 @@ like them very much.  He sneaks around looking over your shoulder.
 0 0 0
 >all_greet_prog 100~
 emote looks at you and pokes you with a stick.
-say Have you been cheating? 
+say Have you been cheating?
 emote peers closely at your face.
 say You bear the look of one who's been cheating in the game of life!
 ~
@@ -1170,14 +1170,14 @@ Entrance to the Glade~
 You are at an entrance to a glade of trees.  It is dark inside the stand,
 but you are not afraid.  These trees are sacred to the inhabitants of the
 forest, and you know they will bid you no harm.  That is, as long as you
-don't desecrate the forest.  
+don't desecrate the forest.
 ~
 0 4 3
 Rd     0
 E
 trees~
 The trees here almost look as if they could talk, a strong magic presence
-seems to dance about them.  
+seems to dance about them.
 ~
 D0
 ~
@@ -1193,7 +1193,7 @@ A Copse of Trees~
 You are amidst a copse of trees.  On all sides you hear the light sighing
 of the forest.  Blinking eyes peek out at you from holes in the trunks of
 trees, then disappear as suddenly as they appeared.  Overhead, the branches
-seem to blend together, and to the south you can see a wide clearing.  
+seem to blend together, and to the south you can see a wide clearing.
 ~
 0 0 3
 Rd     0
@@ -1210,7 +1210,7 @@ S
 A large Clearing~
 You blink as you enter this large clearing in the forest.  Trees have
 been hewn from this area, and a large circular area is completely bare of
-any vegetation.  It looks like a fairy ring!  
+any vegetation.  It looks like a fairy ring!
 ~
 0 0 3
 Rd     0
@@ -1236,7 +1236,7 @@ A large Clearing~
 This is the northeastern end of the clearing.  The trees are so dense on
 the edges that the forest is impenetrable.  Even if you had an axe, it
 wouldn't do any good.  You can clearly see the runes of protection drawn on
-the bark of the trees.  This is truly a magical place.  
+the bark of the trees.  This is truly a magical place.
 ~
 0 262144 3
 Rd     0
@@ -1271,7 +1271,7 @@ The Middle of the Clearing~
 You are in the exact middle of the clearing.  Beneath some leaves which
 are scattered on the ground, you can barely make out the edges of a tunnel
 leading straight down.  You wonder to what delights and adventures it could
-lead.  Why don't you find out?  
+lead.  Why don't you find out?
 ~
 0 4 0
 Rd     0
@@ -1303,12 +1303,12 @@ D5
 S
 #10907
 A large Clearing~
-Running through the ground here are the roots of a very ancient tree. 
+Running through the ground here are the roots of a very ancient tree.
 The ground is very rough as a result, and you trip often if you walk around
 exploring.  A slight wind rustles the leaves that lie at your feet.  You
 feel like taking a nap at the base of the tree, but you can't quite get a
 nagging thought out of your head.  Too many people have permanently fallen
-asleep in magical forests.  You don't want to be the next.  
+asleep in magical forests.  You don't want to be the next.
 ~
 0 0 3
 Rd     0
@@ -1329,7 +1329,7 @@ S
 A large Clearing~
 In the boughs of the trees above, you catch a flicker of movement.  As
 you try to get a better look at the motion, you can barely see iridescent
-wings disappearing from sight.  This must really be an enchanted grove.  
+wings disappearing from sight.  This must really be an enchanted grove.
 ~
 0 0 3
 Rd     0
@@ -1349,8 +1349,8 @@ S
 #10909
 A large Clearing~
 You are at the southern end of the clearing.  Something about these trees
-just doesn't seem right.  You can't quite put your finger on it, though. 
-Maybe if you stare long enough at them you can figure it out.  
+just doesn't seem right.  You can't quite put your finger on it, though.
+Maybe if you stare long enough at them you can figure it out.
 ~
 0 0 3
 Rd     0
@@ -1372,7 +1372,7 @@ A large Clearing~
 You feel very strange in this clearing.  Usually graceful and at ease in
 the forest, you somehow feel like a big oaf.  Not a sound can be heard
 around you, but you have the uncomfortable feeling that someone is watching
-you.  You scan the area, but you cannot find anything irregular.  
+you.  You scan the area, but you cannot find anything irregular.
 ~
 0 0 4
 Rd     0
@@ -1390,7 +1390,7 @@ A large Clearing~
 Here in the northeast corner of the clearing, a huge oak juts out of the
 surrounding forest.  It is rumored that the acorns from this tree give
 wonderful magic properties.  Of course, it is also rumored that they can
-cause a hideously painful death.  You'd better not take any chances.  
+cause a hideously painful death.  You'd better not take any chances.
 ~
 0 0 3
 Rd     0
@@ -1411,8 +1411,8 @@ S
 Down the Narrow Tunnel~
 After you step in, you realize that there is no floor.  OOPS!  You're in
 for quite a ride.  Thankfully, you land on a platform before you kill
-yourself.  Looks like there's only one way out, though..  And that's down. 
-Get ready to jump!  
+yourself.  Looks like there's only one way out, though..  And that's down.
+Get ready to jump!
 ~
 0 9 9
 Rd     0
@@ -1438,7 +1438,7 @@ E
 junk~
 There are piles of who knows what from who knows where.  You cringe as
 you think you see something in the pile move.  YUCK!  Someone needs to
-demold this place.  
+demold this place.
 ~
 D0
 ~
@@ -1467,7 +1467,7 @@ This room is cluttered with objects that have been in disuse for some
 time.  The top layer is all purple, and poking out beneath is a layer of red
 objects.  Over the whole pile is a very thick layer of dust.  Inhaling a
 little too quickly, you stir up a bunch of dust which leads to a coughing
-fit.  Someone definitely needs to clean!  
+fit.  Someone definitely needs to clean!
 ~
 0 9 0
 Rd     0
@@ -1475,7 +1475,7 @@ E
 objects~
 Its a bunch of junk!  Everything from boxes to bags I am sure you would
 love to search through all this junk if it was not for all the dust and
-mold.  
+mold.
 ~
 D3
 ~
@@ -1487,14 +1487,14 @@ Dining Room~
 You're in a cozy little dining room.  Like every other room in the house,
 it is covered with a thick layer of dust.  The remains of a feast lie on the
 table, and the food remnants are covered in mold.  The sight is almost
-enough to make you gag.  
+enough to make you gag.
 ~
 0 9 0
 Rd     0
 E
 remains~
 Yak!  Its nasty rotten moldy food!  As you take a closer look you cover
-your nose and see that it is probably an old roasted rabbit.  
+your nose and see that it is probably an old roasted rabbit.
 ~
 E
 table~
@@ -1510,19 +1510,19 @@ Pantry~
 As you enter the pantry, you are assaulted by various smells.  A freshly
 cooked ham hock, a molding apple pie, and some evergreen boughs which have
 been tossed in the corner are just a few of the culprits.  The odor is
-extremely repulsive yet intriguing.  
+extremely repulsive yet intriguing.
 ~
 0 9 0
 Rd     0
 E
 hamhock~
 Yuck!  It's a freshly cooked hamhock and it looks like the cook added
-mold as the final disgusting touch.  
+mold as the final disgusting touch.
 ~
 E
 apple~
 Yum!  Looks just like the ones mom used to make.  That is if you hid it
-in your room for a year!  
+in your room for a year!
 ~
 D1
 ~
@@ -1533,7 +1533,7 @@ S
 Down a Long Corridor~
 The hallway is long and dimly lit.  Sooty traces show where candles have
 been burnt.  More trinkets litter the floor.  You notice that most of them
-are shiny and green, and you don't know what to make of this fact.  
+are shiny and green, and you don't know what to make of this fact.
 ~
 0 9 0
 Rd     0
@@ -1550,7 +1550,7 @@ S
 Down a Long Corridor~
 The hallway continues to the south.  It is very dark in here, and you are
 thankful if you brought some kind of light.  Up ahead you hear faint music,
-but you are unable to pinpoint the source.  
+but you are unable to pinpoint the source.
 ~
 0 9 0
 Rd     0
@@ -1568,7 +1568,7 @@ Down a Long Corridor~
 The music is a little louder here.  You hear the blending tones of
 flutes, clarinets, and something that sounds like a duck.  Whoever lives
 here really has strange tastes in music as well as in decor.  You call out,
-thinking the inhabitant must be near.  You get no response.  
+thinking the inhabitant must be near.  You get no response.
 ~
 0 9 0
 Rd     0
@@ -1610,7 +1610,7 @@ The Packrat's Bedroom~
 This has to be the nastiest room in this home.  Everything here is green
 and the smell is enough to knock a grown Troll on his butt.  There might be
 a desk against the west wall but with all the junk you couldn't be for sure.
-You get the sudden urge to bolt for the door to the north and run for air.  
+You get the sudden urge to bolt for the door to the north and run for air.
 ~
 0 4464649 0
 Rd     0
@@ -1621,7 +1621,7 @@ A plain wooden door stands in the north wall.
 E
 desk~
 Scraping the mold aside you notice that your assumption was correct its a
-desk.  
+desk.
 ~
 D0
 A plain wooden door.
@@ -1636,7 +1636,7 @@ branches spread out above you like a vast web of green.  The gnarled old
 branches are gigantic, and you think you can see a treehouse at the top of
 it.  The thought of the immense height sickens you, and you know you should
 turn back.  To the west you see that the bark has been disturbed in the
-tree.  
+tree.
 ~
 0 401412 3
 Rd     0
@@ -1687,7 +1687,7 @@ You appear to be at the junction of many branches.  Tired from climbing
 up the enormous trunk, you decide this might be a good place to rest.  You
 notice that the bark of the branches appears to be well worn on the topside,
 but very rough on the bottom.  You find this odd, but don't know what to
-make of it.  
+make of it.
 ~
 0 4 3
 Rd     0
@@ -1722,7 +1722,7 @@ You are on a very broad branch which has no trouble supporting your
 weight.  In fact, you estimate that you could take five large steps either
 to your left or right without having any worries about falling.  The
 gargantuan size of this tree sets you to pondering about its age, which must
-also be immense.  
+also be immense.
 ~
 0 0 3
 Rd     0
@@ -1738,9 +1738,9 @@ S
 #10926
 Stunted Branch~
 This branch appears to have been stunted on purpose.  You can see the
-knots where new branch growth was hacked away by someone or something. 
+knots where new branch growth was hacked away by someone or something.
 There appears to be no explanation of this.  Apparently, somebody only
-wanted four large branches in the tree.  
+wanted four large branches in the tree.
 ~
 0 0 3
 Rd     0
@@ -1752,9 +1752,9 @@ S
 #10927
 Out on a Limb~
 This branch appears to be well-worn, as do the rest of the branches you
-can see.  After some thought, this revelation does not seem so surprising. 
-Of course an ancient and very large tree will be inhabited by something. 
-You just hope they are friendly.  
+can see.  After some thought, this revelation does not seem so surprising.
+Of course an ancient and very large tree will be inhabited by something.
+You just hope they are friendly.
 ~
 0 0 3
 Rd     0
@@ -1772,7 +1772,7 @@ Out on a Limb~
 The limb which you are on goes sharply up into the air.  You notice
 niches cut into the limb which provide a means by which to climb.  You sense
 that this tree has been used for many centuries by some kind of intelligent
-being.  What this being is, however, you have yet to find out.  
+being.  What this being is, however, you have yet to find out.
 ~
 0 4 3
 Rd     0
@@ -1790,7 +1790,7 @@ Up the Main Branch~
 You are climbing up the main branch of the tree which goes straight up
 into the air.  A slight breeze makes it sway to and fro, taking you with it.
 Looking down would not be a good idea right now, and neither would looking
-up.  Already the height is dizzying.  
+up.  Already the height is dizzying.
 ~
 0 0 3
 Rd     0
@@ -1808,7 +1808,7 @@ Up the Main Branch~
 The inhabitants of the forest below seem like children's toys from this
 height.  Further up, you can make out the outline of what appears to be a
 lookout tower.  Humanoids can be seen wandering to and fro on the platform
-and seem to be pointing in your direction.  
+and seem to be pointing in your direction.
 ~
 0 0 3
 Rd     0
@@ -1827,7 +1827,7 @@ Directly above you is the lookout tower.  As you continue to climb the
 branch, one of your feet slips.  Frantic, you scrabble for another foothold.
 Thankfully, your foot comes to rest on a niche in the branch.  Looking down
 with a sick feeling in your stomach, you realize that you were one breath
-away from disaster.  
+away from disaster.
 ~
 0 0 3
 Rd     0
@@ -1844,8 +1844,8 @@ S
 Lookout Tower~
 From the top of this tower, you can see the entire enchanted forest and
 the valley beyond.  The panoramic view is spectacular and frightening.  The
-sense of vertigo overcomes you, and you clutch the railing for dear life. 
-The guards seem to be taking undue notice of you.  You'd better leave...  
+sense of vertigo overcomes you, and you clutch the railing for dear life.
+The guards seem to be taking undue notice of you.  You'd better leave...
 ~
 0 0 3
 Rd     0
@@ -1860,7 +1860,7 @@ You climb higher up into the tree.  It is becoming ever more apparent
 that humanoid creatures live in this tree.  Every now and then, you see a
 strip of bright fabric tied around a branch, and an occasional bauble left
 on the tree branch.  By the design of these items, you believe these
-creatures to be some kind of elf.  
+creatures to be some kind of elf.
 ~
 0 0 3
 Rd     0
@@ -1878,7 +1878,7 @@ Out on a Limb~
 As you climb further out on the branch, you notice more and more trinkets
 that have been left behind.  Up ahead, you hear the soft silvan tongue being
 spoken.  It is rare for mortals to see the beautiful elves, and even rarer
-for them to live to tell about it.  
+for them to live to tell about it.
 ~
 0 0 3
 Rd     0
@@ -1893,11 +1893,11 @@ D2
 S
 #10935
 Under the Ladder~
-The tree branch ends here, but there is a rope ladder leading upward. 
-Not just any rope, the tree elves carefully select fibers for their ropes. 
+The tree branch ends here, but there is a rope ladder leading upward.
+Not just any rope, the tree elves carefully select fibers for their ropes.
 It is said that not even the sharpest axe blade can cut through these
 special supports, and the secret of making the ropes is a well-guarded
-trust.  
+trust.
 ~
 0 0 3
 Rd     0
@@ -1915,7 +1915,7 @@ Elven Village~
 You are at the entrance to a large elven village.  Cold stares greet you
 from the doorways of the tented village.  You feel a little uncomfortable
 about just barging into the midst of these people's lives.  Perhaps you
-should just leave.  
+should just leave.
 ~
 0 4 3
 Rd     0
@@ -1933,7 +1933,7 @@ Elven Village~
 You continue to move down a limb which serves as the major street in this
 arboreal elven village.  You can occasionally get a glimpse of the
 inhabitants, but for the most part, they remain out of sight.  This gives
-you the uncomfortable feeling of being watched.  
+you the uncomfortable feeling of being watched.
 ~
 0 4 3
 Rd     0
@@ -1951,8 +1951,8 @@ Elven Village~
 The large limb you have been walking on spreads out into a mesh of many
 smaller limbs.  This conglomerate appears to be a central meeting point, and
 you notice large and colorful tents in abundance.  The opulence of these
-tents give the impression that this is a very rich and classy neighborhood. 
-You see the entrance to one of these tents before you.  
+tents give the impression that this is a very rich and classy neighborhood.
+You see the entrance to one of these tents before you.
 ~
 0 4 1
 Rd     0
@@ -1974,7 +1974,7 @@ Elven Village~
 You are in the northwest corner of the village square.  To your west you
 can see an entrance to an opulent dwelling, and to the north you see what
 appears to be the central meeting hall of the elves.  Each of these tents is
-suspended from the branches above and staked to the branches below.  
+suspended from the branches above and staked to the branches below.
 ~
 0 0 1
 Rd     0
@@ -1993,7 +1993,7 @@ Here on the northeastern edge of the town square, you see another
 magnificent tent.  The fabric used for the shell of the tent is unfamiliar
 to you.  In catching the breeze, it bends and ripples as if it has a life of
 its own.  The iridescent flickering of the fabric is mesmerizing, and you
-stand staring at the tent in awe.  
+stand staring at the tent in awe.
 ~
 0 0 1
 Rd     0
@@ -2011,7 +2011,7 @@ Elven Village~
 Another beautiful elven tent stands to your east here.  You marvel at the
 ingenuity of the elves which allow them to create such spectacular dwellings
 far above the earth.  You wonder if you would be able to sleep this far
-above the earth, though.  
+above the earth, though.
 ~
 0 0 1
 Rd     0
@@ -2029,7 +2029,7 @@ Out on a Limb~
 The broad limb which you are on continues to the east.  A slight breeze
 rustles the leaves which are hanging next to your head.  The warm, musky
 scent of the forest surrounds you and gives you a sense of peace.  Up ahead
-you can hear the chattering of forest creatures.  
+you can hear the chattering of forest creatures.
 ~
 0 0 3
 Rd     0
@@ -2047,7 +2047,7 @@ Out on a Limb~
 The limb which you are on begins to narrow a bit, but it is still
 comfortable to walk on.  It surprises you that this large, comfortable
 branch has not found any inhabitants.  Maybe you just aren't looking closely
-enough.  
+enough.
 ~
 0 0 3
 Rd     0
@@ -2065,7 +2065,7 @@ Out on a Limb~
 The tree branch takes a sharp turn upward at this point.  Claw marks and
 the occasional hole made by a woodpecker can be seen on this branch.  Like
 the size of the branch itself, the marks on the tree branch are rather large
-in size.  Hopefully, the critters are friendly ...  
+in size.  Hopefully, the critters are friendly ...
 ~
 0 0 3
 Rd     0
@@ -2083,7 +2083,7 @@ Out on a Limb~
 The signs of life are increasing all around you.  All manner of arboreal
 forest creatures can be seen scampering about.  Well, actually, scampering
 is probably not the best description.  The branch creaks and bounces under
-their immense weight.  You'd better hang on.  
+their immense weight.  You'd better hang on.
 ~
 0 0 3
 Rd     0
@@ -2101,7 +2101,7 @@ Out on a Limb~
 The branch is narrowing out a bit here, and it begins to branch out
 ahead.  Blinking eyes stare out at you from the shadows of the tree, only to
 disappear immediately afterward.  You hear the soft hoot of an owl coming
-from somewhere near to you.  You pause and enjoy the sound of the forest.  
+from somewhere near to you.  You pause and enjoy the sound of the forest.
 ~
 0 0 3
 Rd     0
@@ -2118,7 +2118,7 @@ S
 Out on a Limb~
 Two fairly large branches lead off to the north and to the south.  Some
 type of nest can be seen on each of these branches.  The main branch curves
-far up into the sky here, and looking down makes your stomach turn.  
+far up into the sky here, and looking down makes your stomach turn.
 ~
 0 0 3
 Rd     0
@@ -2145,7 +2145,7 @@ You are in the middle of a filthy, smelly crow's nest.  Black feathers
 and broken eggshells litter the nest.  The baby crows have their beaks
 stretched wide open, waiting for the worms that their parents are offering
 them.  The adults eye you warily, and you wonder if they will try to chase
-you out of the nest or feed you worms instead.  
+you out of the nest or feed you worms instead.
 ~
 0 1 0
 Rd     0
@@ -2159,7 +2159,7 @@ Cuckoo's Nest~
 You are in a nest.  Originally, the nest was intended to hatch a little
 brown bird of some sort.  Instead, a newly-hatched cuckoo is standing in the
 nest with its mouth wide open for food.  Around the nest you can see the
-remnants of the eggs which originally inhabited this nest.  
+remnants of the eggs which originally inhabited this nest.
 ~
 0 0 0
 Rd     0
@@ -2173,7 +2173,7 @@ Out on a Limb~
 With every step you take now, the branch creaks and sways.  It is no
 wonder, considering the immense length the branch grows to.  Already you
 feel as if you have hiked a mile.  You look down and immediately realize
-this was a mistake.  Stretching far beneath you is the rest of the forest.  
+this was a mistake.  Stretching far beneath you is the rest of the forest.
 ~
 0 0 3
 Rd     0
@@ -2190,7 +2190,7 @@ S
 Out on a Limb~
 You trip on a knot in the branch of the tree, causing you to land very
 heavily on your chest.  Looking down at the ground far beneath you, you
-scrabble for a hand-hold on the branch.  Whew!  That was a close one.  
+scrabble for a hand-hold on the branch.  Whew!  That was a close one.
 ~
 0 0 3
 Rd     0
@@ -2209,7 +2209,7 @@ The branch turns up here again.  Far to the west, and a little further
 above you, you can see the lookout tower of the elves.  Apparently, this
 limb is part of their hunting grounds, for you see a finely crafted arrow
 stuck deeply in the branch.  Hopefully, they won't mistake you for a large
-squirrel.  
+squirrel.
 ~
 0 0 3
 Rd     0
@@ -2225,7 +2225,7 @@ S
 #10953
 Out on a Limb~
 Far in the distance, you think you see the end of the branch.  It is
-quite a hike to get to the end.  You have more immediate problems, however. 
+quite a hike to get to the end.  You have more immediate problems, however.
 A very irritated woodpecker is blocking your path ahead, and the knocking of
 its beak against the wood is causing you to shake dangerously on the branch.
 ~
@@ -2245,7 +2245,7 @@ Out on a Limb~
 You are getting weary from climbing up this tree.  What began as an
 enjoyable trek has ended up giving you an aching back and head.  You peer up
 into the branches, wondering if the end is anywhere in sight.  The incessant
-noise of the forest is really beginning to bother you.  
+noise of the forest is really beginning to bother you.
 ~
 0 0 3
 Rd     0
@@ -2290,7 +2290,7 @@ Out on a Limb~
 You are on a branch where life forms thrive in their fight for daily
 existance.  Their fight can be so vicious some of them lose their lives in
 trying to live.  You feel very aware of your unprotected back and know that
-you are in a vulnerable position and are out on a limb literally.  
+you are in a vulnerable position and are out on a limb literally.
 ~
 0 4194304 3
 Rd     0
@@ -2303,7 +2303,7 @@ S
 Out on a Limb~
 A nasty-looking squirrel is baring its long ugly teeth at you.  Although
 you used to think squirrels were cute and cuddly creatures, you now see them
-for the ugly rodents they are.  
+for the ugly rodents they are.
 ~
 0 0 3
 Rd     0
@@ -2316,7 +2316,7 @@ S
 Out on a Limb~
 The branch takes a sharp turn upward here, and you can see the clear blue
 sky ahead.  You are exhausted from the long climb up here, and long for a
-rest.  Just a few feet more...  
+rest.  Just a few feet more...
 ~
 0 0 3
 Rd     0
@@ -2334,7 +2334,7 @@ Launching Pad~
 Finally, you have reached the end of this very long branch.  The foliage
 around you seems to have diminished drastically, leaving a wide open sky all
 around you.  The end of the branch eerily resembles a plank.  Going
-towards it does not seem like a savory idea.  
+towards it does not seem like a savory idea.
 ~
 0 0 0
 Rd     0
@@ -2347,7 +2347,7 @@ S
 Out on a Limb~
 Here and there along the branch you can see a colorful little bead or a
 tiny piece of cloth.  You hope you will find out more about the creatures
-that live on this tree, and you hurry your footsteps.  
+that live on this tree, and you hurry your footsteps.
 ~
 0 0 3
 Rd     0
@@ -2365,7 +2365,7 @@ Out on a Limb~
 Up ahead, you can see a group of five men and women.  They appear to be
 carrying hunting weapons, possibly spears.  By their graceful movements and
 brightly colored clothing, you guess they are elves.  You hail them, hoping
-they won't mistake you for game.  
+they won't mistake you for game.
 ~
 0 0 3
 Rd     0
@@ -2383,7 +2383,7 @@ Out on a Limb~
 This branch is teeming with life.  All around you can hear the squawk of
 birds.  You think you can distinguish crows, jays, and possibly a cuckoo or
 two.  All of a sudden, you are mobbed by a pack of birds.  Apparently, they
-are not happy with your intrusion.  
+are not happy with your intrusion.
 ~
 0 0 3
 Rd     0
@@ -2400,7 +2400,7 @@ S
 Out on a Limb~
 To the north and south are some more branches.  You pause, undecided on
 which branch to take next.  Perhaps sitting down and taking a rest would be
-a good idea.  
+a good idea.
 ~
 0 0 3
 Rd     0
@@ -2423,10 +2423,10 @@ D4
 S
 #10964
 Dead End~
-As you step onto this branch, it creaks loudly then falls away. 
+As you step onto this branch, it creaks loudly then falls away.
 Thankfully, you have quick reflexes and are able to hop off the branch
 before it crashes to the forest floor, far below.  That was a real close
-one!  
+one!
 ~
 0 0 3
 Rd     0
@@ -2440,7 +2440,7 @@ Dead End~
 You move out onto the branch and look around.  About five feet away from
 you, the branch is broken sharply off.  It looks like whatever was on it at
 the time met with a very nasty fate.  Far beneath you, you see a tree branch
-lying on top of a skeleton on the ground.  You shiver and turn back.  
+lying on top of a skeleton on the ground.  You shiver and turn back.
 ~
 0 0 3
 Rd     0
@@ -2454,7 +2454,7 @@ Out on a Limb~
 You have an eerie feeling of being watched.  Directly behind you, a twig
 snaps.  Jerking violently around, you succeed in doing nothing else than
 becoming off-balance.  You quickly drop to your knees and grab the branch
-for dear life.  
+for dear life.
 
 ~
 0 4 3
@@ -2474,7 +2474,7 @@ You have stumbled upon a very large spider web.  You have heard legends
 about these creatures but thought they were just that, legends.  Unlike
 normal spiders these creatures don't live in their webs.  They use it as
 traps for unsuspecting victims and jump out from the corner to prey upon
-your life.  
+your life.
 ~
 0 0 3
 Rd     0
@@ -2492,7 +2492,7 @@ Out on a Limb~
 You wonder if this branch is ever going to end, and curse your decision
 to come up here.  Just a few more feet you keep telling yourself.  If only a
 cool breeze would come up ...  But the air around this branch is stagnant
-due to the many leaves surrounding you.  
+due to the many leaves surrounding you.
 ~
 0 0 3
 Rd     0
@@ -2511,7 +2511,7 @@ The branch makes a sharp turn upward here.  You urge your aching muscles
 along, sorry that you ever began climbing this tree.  You grab what looks
 like a knot in the tree and realize too late that it is some sort of fungus.
 You quickly grab for another handhold and find one, but now your hand is
-covered with goo.  
+covered with goo.
 ~
 0 0 3
 Rd     0
@@ -2528,7 +2528,7 @@ S
 Out on a Limb~
 A raven comes out of nowhere and loudly dive-bombs you.  You wonder what
 you could have possibly done to enrage the bird.  Then again, the raven is
-five times larger than you.  Maybe it just mistook you for prey.  
+five times larger than you.  Maybe it just mistook you for prey.
 ~
 0 0 3
 Rd     0
@@ -2546,7 +2546,7 @@ Out on a Limb~
 The long climb so far has left you sweaty and exhausted.  You don't know
 how much further you can go, but you also realize that a tree branch is not
 a good place to take a nap.  There are some thorny looking branches.  Or
-maybe they're not part of the tree but insects!  
+maybe they're not part of the tree but insects!
 ~
 0 0 3
 Rd     0
@@ -2563,7 +2563,7 @@ S
 Out on a Limb~
 Ahead, you can see the end of the limb.  Your breath comes in wheezing
 gasps now, and you wonder if the air is actually thinner up here.  Either
-way, you long to take a good rest.  
+way, you long to take a good rest.
 ~
 0 0 3
 Rd     0
@@ -2581,7 +2581,7 @@ End of the Branch~
 Finally you have reached the end of the branch.  Looking out from the
 tree, you can see the enchanted forest stretching far off into the distance.
 Huge creatures of the air can be seen playing on the air currents.  You long
-to join them in their flight and wistfully follow them with your gaze.  
+to join them in their flight and wistfully follow them with your gaze.
 ~
 0 0 3
 Rd     0
@@ -2595,7 +2595,7 @@ Elven Tent~
 As you enter the elven tent, you are astounded by the magnificance of its
 design.  Hung on the billowy walls are shimmering paintings depicting the
 many creatures of the forest.  Covering the floor are soft silken pillows
-which ask to be sat upon.  You feel a deep sense of peace here.  
+which ask to be sat upon.  You feel a deep sense of peace here.
 ~
 0 9 0
 Rd     0
@@ -2612,7 +2612,7 @@ S
 Elven Tent~
 Here in the corner of the tent, you can see the sleeping mats of the
 elves who live here.  Woven of fine valley grasses, they are spread
-carefully over the interwoven branches which make up the floor of the tent. 
+carefully over the interwoven branches which make up the floor of the tent.
 ~
 0 9 0
 Rd     0
@@ -2630,7 +2630,7 @@ Elven Tent~
 Elves of all ages take reprieve in this section of the tent.  Games of
 wit, skill, and dexterity can be found aplenty here.  You do not recognize
 any of these games, nor do you think you would be capable of playing any of
-them.  The skill of the elves is legendary.  
+them.  The skill of the elves is legendary.
 ~
 0 16777225 0
 Rd     0
@@ -2648,7 +2648,7 @@ Elven Tent~
 Spread out on grassy mats on a short table of oak wood is a variety of
 food.  Berries in birch baskets, a steaming and savory squirrel roast, and a
 kind of unidentifiable fish are asthetically arranged here.  Your stomach
-growls in hunger at the sight of such wonderful food.  
+growls in hunger at the sight of such wonderful food.
 ~
 0 9 0
 Rd     0
@@ -2666,7 +2666,7 @@ Elven Tent~
 When you enter the tent, you notice the similarities and the differences
 between this tent and the other elven tents.  Each tent of the elves is very
 similar in theme, but each elf has certain belief which affect the decor of
-their tents.  This elf, for example, reveres the wind.  
+their tents.  This elf, for example, reveres the wind.
 ~
 0 9 0
 Rd     0
@@ -2684,7 +2684,7 @@ Elven Tent~
 The sleeping quarters of the tent are the same as you have seen elsewhere
 in the village.  Tightly woven grass mats form the bed, which is spread out
 carefully on interwoven branches.  Hanging above the bed, you notice a wind
-chime which rustles and tinkles on an unnatural breeze.  
+chime which rustles and tinkles on an unnatural breeze.
 ~
 0 9 0
 Rd     0
@@ -2703,7 +2703,7 @@ What is usually an entertainment room in most tents is here a meditation
 room.  Large sheets of gossamer enclose a very soft and ornately embroidered
 pillow.  Elves come here to worship the wind.  You can tell from the dark
 corners of the room that there are worshippers chanting softly with the
-wind.  
+wind.
 ~
 0 9 0
 Rd     0
@@ -2720,7 +2720,7 @@ S
 Elven Tent~
 The eating area of the tent has meager rations spread out.  A glass of
 clear water, some simple wayfairer bread, and a couple of pine nuts are all
-that can be found.  Clearly, this elf believes in simple living.  
+that can be found.  Clearly, this elf believes in simple living.
 ~
 0 9 0
 Rd     0
@@ -2738,7 +2738,7 @@ Elven Meeting Hall~
 This is the central meeting hall of the elves.  Important decisions
 concerning the elves are made here.  To mortals, the elven meetings can seem
 to take all of eternity.  This is because the elven life span is all but
-infinite, so a few years for a meeting is not too ridiculous.  
+infinite, so a few years for a meeting is not too ridiculous.
 ~
 0 9 0
 Rd     0
@@ -2756,7 +2756,7 @@ Elven Meeting Hall~
 A small table laden with refreshments is here.  Elves are notorious for
 their love of food and drink, and not even a grave meeting of the elven
 council can take away this desire.  The elven wine is rumored to be the best
-in the realm, and you consider snatching a glass.  
+in the realm, and you consider snatching a glass.
 ~
 0 9 0
 Rd     0
@@ -2779,7 +2779,7 @@ A polished oaken board is the perfect display table for the sumptious
 delights the host of this house has provided.  The finest elven wine,
 pressed cakes of honey and acorns, and a sumptuous squirrel roast glisten
 under the light falling from the top of the tent.  You feel your stomach
-rumbling at the sight and consider taking just a few bites.  
+rumbling at the sight and consider taking just a few bites.
 ~
 0 9 0
 Rd     0
@@ -2821,7 +2821,7 @@ Elven Meeting Hall~
 Some of the younger members of the council can be seen here in this
 corner.  The meetings of the council can become too tedious, even for elves.
 They are quietly talking and playing a game of Ak-hal, a strategy game
-similar to chess.  
+similar to chess.
 ~
 0 9 0
 Rd     0
@@ -2839,7 +2839,7 @@ Elven Meeting Hall~
 In contrast to the rest of the elven surroundings, the meeting hall is
 very stark and simple.  Clearly, functionality was the most important idea
 in designing this area.  A few sturdy chairs can be seen along the perimeter
-of the building.  
+of the building.
 ~
 0 9 0
 Rd     0
@@ -2856,9 +2856,9 @@ S
 Elven Meeting Hall~
 Council members can be seen split up into small groups here, quietly
 chatting in the soft silvan tongue.  Their fierce faces are like stone, but
-they cannot hide the softness and joy that is ever-present in their eyes. 
+they cannot hide the softness and joy that is ever-present in their eyes.
 The dimly lit room makes it hard to see the size and other features about
-it.  
+it.
 ~
 0 9 0
 Rd     0
@@ -2876,7 +2876,7 @@ Elven Tent~
 As you enter this tent, you notice that it is very spartan in appearance.
 Only the necessities are present, and nothing not originating in nature can
 be found.  Several tent flaps have been left open, allowing the fresh
-breezes from the forest to waft in.  
+breezes from the forest to waft in.
 ~
 0 9 0
 Rd     0
@@ -2892,10 +2892,10 @@ S
 #10990
 Elven Tent~
 The sleeping area of this elf looks particularly uncomfortable.  Not even
-the typical woven grass mats of most elves can be found in these quarters. 
+the typical woven grass mats of most elves can be found in these quarters.
 Only the interwoven tree branches support his weight.  The walls, too, are
 devoid of any adornment.  Only the silk of the tent wall itself provides any
-decoration.  
+decoration.
 ~
 0 9 0
 Rd     0
@@ -2913,7 +2913,7 @@ Elven Tent~
 Gone, too, from this tent are the many games which tend to occupy the
 minds of elves.  Apparently, this tent owner believes there are more
 important things than games to occupy the mind.  At least in this area there
-are woven mats to sit on.  The branches look mighty uncomfortable.  
+are woven mats to sit on.  The branches look mighty uncomfortable.
 ~
 0 9 0
 Rd     0
@@ -2930,8 +2930,8 @@ S
 Elven Tent~
 The fare which is spread out upon the ground is very meager.  Only a
 glass of clear cool water, and a piece of hard wayfairer bread is available.
-By the looks of things, it looks like they have been here for a long while. 
-You wonder what deep thoughts much occupy the mind of this elven owner.  
+By the looks of things, it looks like they have been here for a long while.
+You wonder what deep thoughts much occupy the mind of this elven owner.
 ~
 0 9 0
 Rd     0
@@ -2946,10 +2946,10 @@ D3
 S
 #10993
 Inside the Tree~
-Total darkness and nothingness is what you have entered into, a void. 
+Total darkness and nothingness is what you have entered into, a void.
 There is nothing here to make you want to come here again.  Or to enter any
 further.  Wait...  There seems to be a sound coming from further west of
-you.  But you can't see the source of the sound.  
+you.  But you can't see the source of the sound.
 ~
 0 9 0
 Rd     0
@@ -2969,7 +2969,7 @@ This is the termite's hideout.  Or rather its progress.  This hole here
 clearly is only its handiwork on display.  You wonder how much further it
 can go on before the whole tree is eaten away.  Holes are prevalent inside
 showing you that things are not as they seem on the outside and this
-certainly holds true for this tree.  
+certainly holds true for this tree.
 ~
 0 9 0
 Rd     0
@@ -2984,7 +2984,7 @@ When you enter this tent, you are immediately struck by the incredible
 oppulence displayed throughout.  Above your head you can hear the soft
 tinkling of a magically powered wind chime.  The floors are covered with
 soft silken pillows, and intricate wallhangings cover the otherwise drab
-walls of the tent.  
+walls of the tent.
 ~
 0 9 0
 Rd     0
@@ -3001,9 +3001,9 @@ S
 Elven Tent~
 Here in the sleeping quarters, you again notice the unusual amount of
 pampering provided by the owner.  Instead of the usual woven grass mats,
-this elf has an elevated bed which is stuffed with sweet, dried grasses. 
+this elf has an elevated bed which is stuffed with sweet, dried grasses.
 You marvel at the simple yet elegant beauty of this tent.  It is like a
-melding of the natural and elven-made.  
+melding of the natural and elven-made.
 ~
 0 9 0
 Rd     0
@@ -3021,7 +3021,7 @@ Elven Tent~
 All manner of strategy games and manner of peaceful entertainment can be
 found in this corner of the tent.  Some sort of magickal device provides a
 soft, lilting tune which sounds like a flute.  The pillows and soft floor
-covering seem especially inviting, and you consider taking a rest here.  
+covering seem especially inviting, and you consider taking a rest here.
 ~
 0 9 0
 Rd     0

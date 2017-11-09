@@ -1,7 +1,7 @@
 #AREADATA
-Name        { 25-50} Broken Pyramid      Lucid~
+Name        Broken Pyramid~
 Levels      25 50
-Builders    None~
+Builders    Lucid~
 VNUMs       14500 14599
 Security    100
 Recall      25001
@@ -20,7 +20,7 @@ A large hairy rat scurries at your feet.
 ~
 This monster of a rat looks more like a wolverine, and seems to have the
 temper of one.  It stands on its hind legs and bares it's sharp teeth as it
-sees you enter the room.  
+sees you enter the room.
 ~
 97 512 0 -100 S
 20 0 0 600d0+0 0d0+0
@@ -37,7 +37,7 @@ The Large Bat~
 A large bat swoops at your head.
 ~
 You seem to have disturbed this large flying rodents sleep.  It unfolds
-a pair of three foot wings and decends to attack.  DUCK!  
+a pair of three foot wings and decends to attack.  DUCK!
 ~
 97 524808 0 -100 S
 20 0 0 600d0+0 0d0+0
@@ -55,7 +55,7 @@ spider arachnid~
 The Large Spider~
 A large arachnid skitters toward you.
 ~
-The large hairy legged arachnid decides you look like a perfect meal.  
+The large hairy legged arachnid decides you look like a perfect meal.
 ~
 97 512 0 -200 S
 25 0 0 1050d0+0 0d0+0
@@ -76,7 +76,7 @@ The Black Vulture~
 A black vulture circles overhead.
 ~
 This large bird circles around the sky.  It appears to be looking for
-something.  Possibly something to eat.  
+something.  Possibly something to eat.
 ~
 71 524800 0 -200 S
 25 0 0 1050d0+0 0d0+0
@@ -95,7 +95,7 @@ shadow~
 &bThe Shadow&P~
 &bA shadow moves as though it had a life of its own.
 ~
-&bIt appears as though your shadow has taken on a life of its own.  
+&bIt appears as though your shadow has taken on a life of its own.
 ~
 65 524808 0 250 S
 25 0 0 1050d0+0 0d0+0
@@ -118,7 +118,7 @@ The Shade~
 A pitiful shade attempts to steal your life!
 ~
 A small and very wimpy looking creature indeed.  The undead though do
-have some surprises in them.  Might be wise to just let him be.  
+have some surprises in them.  Might be wise to just let him be.
 ~
 8257 524808 0 -250 S
 30 0 0 1500d0+0 0d0+0
@@ -140,7 +140,7 @@ dust cloud funnel~
 ~
 The wind seems to be picking up.  You can see what appears to be the
 outline of something.  It's hard to get a good look with all the dust flying
-around.  
+around.
 ~
 65 524800 0 0 S
 25 0 0 1050d0+0 0d0+0
@@ -160,7 +160,7 @@ Mescalito~
 A great green cactus stands here
 ~
 Looks like a cactus.  Well, except for the fact that is is walking
-towards you.  
+towards you.
 ~
 65 28 0 500 S
 40 0 0 2500d0+0 0d0+0
@@ -188,7 +188,7 @@ The Scorpion~
 A lethal looking scorpion scuttles about
 ~
 A large and lethal looking creature.  It raises its stinger in a
-defensive posture....  Hopefully.  
+defensive posture....  Hopefully.
 ~
 65 0 0 -200 S
 20 0 0 600d0+0 0d0+0
@@ -206,7 +206,7 @@ A ragged looking man mumbles to himself here
 ~
 A man stands here dressed in ragged clothes.  From the looks of him he's
 been here a while.  He looks up at you and you can see the insanity in his
-eyes.  Wonder what made him that way?  
+eyes.  Wonder what made him that way?
 ~
 65 0 0 150 S
 20 0 0 600d0+0 0d0+0
@@ -256,7 +256,7 @@ A man wrapped entirely in bandages stands here.
 ~
 He doesn't look happy that you have violated his after life home.  The
 rotting corpse is moving quicker as it looks towards you...  Might want to
-move.  
+move.
 ~
 8227 512 0 -100 S
 35 0 0 2000d0+0 0d0+0
@@ -337,7 +337,7 @@ Marilith, the Mistress of the Damned, prepares to judge you.
 She is a large demon with a multiarmed female torso atop the body of a
 great snake.  She is very tall and towers well over your head.  She is
 wielding a single blade in one hand, an orb in the other.  The other four
-arms are crossed as she peers right through your soul.  
+arms are crossed as she peers right through your soul.
 ~
 3 268435584 32784 0 S
 55 0 0 4000d0+0 0d0+0
@@ -404,15 +404,15 @@ fly~
 0 0 0
 E
 black~
-A long black feather from a very large bird.  
+A long black feather from a very large bird.
 ~
 E
 vulture~
-A long black feather from a very large bird.     
+A long black feather from a very large bird.
 ~
 E
 feather~
-A long black feather from a very large bird.     
+A long black feather from a very large bird.
 ~
 #14503
 shadow whip string~
@@ -542,12 +542,12 @@ of jewels.
 E
 sceptre~
 A beautifully carved ivory sceptre.  It is covered with different types of
-jewels.  
+jewels.
 ~
 E
 ancient~
 A beautifully carved ivory sceptre.  It is covered with different types of
-jewels.  
+jewels.
 ~
 #14508
 crown ancient kings~
@@ -575,12 +575,12 @@ base.
 E
 ancient~
 An elegantly jewelled crown inlaid with gold and silver around the ivory
-base.    
+base.
 ~
 E
 crown~
 An elegantly jewelled crown inlaid with gold and silver around the ivory
-base.  
+base.
 ~
 #14509
 pyramid key~
@@ -727,12 +727,12 @@ A
 E
 ragged~
 A long tattered piece of cloth that looks like it has been through many
-owners.  
+owners.
 ~
 E
 scarf~
 A long tattered piece of cloth that looks like it has been through many
-owners.  
+owners.
 ~
 #14516
 goggles pair dusty~
@@ -884,17 +884,17 @@ A
 E
 ball~
 A large ball of shimmering light; it glows chaotically giving off an aura
-of power.  
+of power.
 ~
 E
 mana~
 A large ball of shimmering light; it glows chaotically giving off an aura
-of power.  
+of power.
 ~
 E
 pure~
 A large ball of shimmering light; it glows chaotically giving off an aura
-of power.  
+of power.
 ~
 #14522
 ball pure mana~
@@ -917,17 +917,17 @@ A
 E
 ball~
 A large ball of shimmering light; it glows chaotically giving off an aura
-of power.  
+of power.
 ~
 E
 mana~
 A large ball of shimmering light; it glows chaotically giving off an aura
-of power. 
+of power.
 ~
 E
 pure~
 A large ball of shimmering light; it glows chaotically giving off an aura
-of power.  
+of power.
 ~
 #14523
 vortex swirling portal~
@@ -1002,7 +1002,7 @@ A
 North West Corner of the Broken Pyramid~
 You are standing to the north east of the great Broken Pyramid.  It
 towers above you, making everything seem small in comparison.  The heat
-presses down on you making you hot and uncomfortable.  
+presses down on you making you hot and uncomfortable.
 ~
 0 0 10
 Rd     0
@@ -1020,7 +1020,7 @@ North of the Broken Pyramid~
 You are standing to the north of the Broken Pyramid.  To the south, the
 pyramid towers over you.  There appears to be a great picture carved into
 the base of the wall.  It depicts a large group of people standing within
-the center of a vast desert.  
+the center of a vast desert.
 ~
 0 0 10
 Rd     0
@@ -1038,7 +1038,7 @@ North of the Broken Pyramid~
 You are standing to the north of the Broken Pyramid.  To the south, the
 pyramid towers over you.  There appears to be a great picture carved into
 the base of the wall.  It depicts a great beast, known from legends as the
-Mighty Sphinx, standing before a large group of people.  
+Mighty Sphinx, standing before a large group of people.
 ~
 0 0 10
 Rd     0
@@ -1056,7 +1056,7 @@ North of the Broken Pyramid~
 You are standing to the north of the Broken Pyramid.  To the south, the
 pyramid towers over you.  There appears to be a great picture carved into
 the base of the wall.  It depicts a Mighty Sphinx carrying large rocks upon
-its back, and placing them before a large group of people.  
+its back, and placing them before a large group of people.
 ~
 0 0 10
 Rd     0
@@ -1075,7 +1075,7 @@ You are standing to the north of the Broken Pyramid.  To the south, the
 pyramid towers over you.  There appears to be a great picture carved into
 the base of the wall.  It depicts a large group of people scampering over a
 great mound of rocks.  They appear to be cutting the rocks into blocks, and
-measuring them with pieces of rope.  
+measuring them with pieces of rope.
 ~
 0 0 10
 Rd     0
@@ -1093,7 +1093,7 @@ Entrance to the Great Broken Pyramid~
 You are standing before an enormous stone door.  The door is made from
 one large slab of rock, it must have taken many months for the builders to
 have hewn such a formidable entrance.  Although the door has been made in
-great dimensions, there is a normal sized keyhole within reach.  
+great dimensions, there is a normal sized keyhole within reach.
 ~
 0 4 10
 Rd     0
@@ -1125,7 +1125,7 @@ North East Corner of the Broken Pyramid~
 You stand before the mighty Broken Pyramid.  This giant monument belongs
 from an age long past.  You see that the desert sand has whipped against the
 sides for so long, that the pyramid has a near glossy appearance from the
-constant sanding.  
+constant sanding.
 ~
 0 0 10
 Rd     0
@@ -1163,7 +1163,7 @@ You are standing at the back of an ancient temple.  You see great
 tapestries lining the walls.  They show people doing unnatural things under
 the influence of their gods power.  The dust which has been so persistant
 during your travels through the pyramid appear to be gone, another facet of
-the power.  
+the power.
 ~
 0 1 0
 Rd     0
@@ -1182,7 +1182,7 @@ You are standing under a great jewel-encrusted archway.  Your mouth
 waters as you think of the fortune that has been embedded into the stone
 above your head.  You know that it would be futile to attempt to remove the
 treasure, for the deity to which this temple was created would have it's
-magic holding it firmly in place.  
+magic holding it firmly in place.
 ~
 0 1 0
 Rd     0
@@ -1199,7 +1199,7 @@ S
 Outside Ancient Confessionals~
 You are standing in a great hallway, the hallway continues from east to
 west.  To the south of you appears to be a string a dangling beads, they
-must have been magically created for they are still somewhat intact.  
+must have been magically created for they are still somewhat intact.
 ~
 0 1 0
 Rd     0
@@ -1221,7 +1221,7 @@ Entrance to an Ancient Temple~
 You are standing in a great hallway.  There are many religious symbols
 and runes carved into the walls on either side of you.  There are also
 pewter cups fastened securely to the walls.  It would seem that this is the
-entrance to an ancient temple.  
+entrance to an ancient temple.
 ~
 0 1 0
 Rd     0
@@ -1239,7 +1239,7 @@ Inside the Entrance to the Great Broken Pyramid~
 You are standing before a large stone door.  You can tell that this door
 has been sealed for some time.  There is a thick layer of dust on the floor
 that seems to have been accumulating for years.  There is a single group of
-tracks that are in the dust.  
+tracks that are in the dust.
 ~
 0 1 0
 Rd     0
@@ -1265,7 +1265,7 @@ East of the Broken Pyramid~
 You are standing to the east of the Broken Pyramid.  To the west, the
 pyramid towers over you.  There appears to be a great picture carved into
 the base of the wall.  It depicts a Mighty Sphinx labouring to upright great
-slabs of rock, as a group of people work to sculpt more slabs of equal size. 
+slabs of rock, as a group of people work to sculpt more slabs of equal size.
 ~
 0 0 10
 Rd     0
@@ -1284,7 +1284,7 @@ You are standing to the west of the Broken Pyramid.  To the east, the
 pyramid towers over you.  There appears to be a great picture carved into
 the base of the wall.  It depicts a Mighty Sphinx feasting upon the corpses
 of a Great Black Dragon and of a Great Red Dragon.  Scattered about this
-scene are bodies twisted in unnatural ways.  
+scene are bodies twisted in unnatural ways.
 ~
 0 0 10
 Rd     0
@@ -1302,7 +1302,7 @@ In the Midst of the Pews~
 You are standing amongst many rows of ancient pews.  The pews are made of
 a glossy wood, they appear to have smooth spots from the rubbing of
 thousands of people paying homage to their god.  You estimate that this
-temple could easily hold five-hundred worshippers at a time.  
+temple could easily hold five-hundred worshippers at a time.
 ~
 0 1 0
 Rd     0
@@ -1325,7 +1325,7 @@ You are standing amongst many rows of ancient pews.  The walls of the
 temple are made of a polished stone, it gives the temple a look of great
 beauty.  It appears that the builders of this temple were greatly devoted to
 their god, for the time and effort spent to create this work of art must
-have been extraordinary.  
+have been extraordinary.
 ~
 0 1 0
 Rd     0
@@ -1343,7 +1343,7 @@ Inside the Ancient Confessionals~
 You are standing in a cramped room.  There is a small wooden bench upon
 the floor.  This is where people knelt to confess their sins, that would
 mean that this temple is devoted to a good god, for it is common knowledge
-that the evil gods do not forgive their subjects.  
+that the evil gods do not forgive their subjects.
 ~
 0 1 0
 Rd     0
@@ -1361,7 +1361,7 @@ In an Ancient Latrine~
 You are standing in a great room.  The smell has long since departed from
 this large enclosure.  The floor of this room is full of holes. Looking down
 at one of the holes you see that a great pit has been built below.  Again, you
-notice the lack of privacy for there is nothing segmenting the many holes. 
+notice the lack of privacy for there is nothing segmenting the many holes.
 ~
 0 1 0
 Rd     0
@@ -1374,7 +1374,7 @@ S
 Dust Covered Hallway~
 You are standing in a great hallway.  The dust is piled thick and cobwebs
 line the walls.  From the rat droppings and footprints, you guess that this
-great building is largely overrun by vermin.  
+great building is largely overrun by vermin.
 ~
 0 1 0
 Rd     0
@@ -1392,7 +1392,7 @@ East of the Broken Pyramid~
 You are standing to the east of the Broken Pyramid.  To the west, the
 pyramid towers over you.  There appears to be a great picture carved into
 the base of the wall.  It depicts what you now recoginize to be a half built
-pyramid, and a large group of people working towards it's completion.  
+pyramid, and a large group of people working towards it's completion.
 ~
 0 0 10
 Rd     0
@@ -1413,7 +1413,7 @@ the base of the wall.  It depicts a large panorama of scenes.  On one side
 of the panorama is a Mighty Sphinx engaged in a fierce battle with a Great
 Red Dragon.  Upon the other side of the picture, is a Great Black Dragon in
 the midst of a great massacre, people are strewn all over the base of the
-pyramid.  
+pyramid.
 ~
 0 0 10
 Rd     0
@@ -1431,7 +1431,7 @@ Before a Great Altar in an Ancient Temple~
 You stand before an ancient altar.  There are great pewter candles lining
 the entire back wall behind the altar, although the wicks within the candles
 have long since turned to dust.  The altar itself is made of a single chunk
-of polished marble, beautiful to behold as the light dances around it.  
+of polished marble, beautiful to behold as the light dances around it.
 ~
 0 1 0
 Rd     0
@@ -1449,7 +1449,7 @@ Before a Great Mouth~
 You stand in the corner of the ancient temple.  To the east of you is a
 great opening in the shape of a giant open mouth.  You wonder what could
 possibly be through that opening to have warranted such an exquisitely
-designed entrance.  
+designed entrance.
 ~
 0 1 0
 Rd     0
@@ -1468,7 +1468,7 @@ D3
 S
 #14525
 Bottom of a Spiralling Staircase~
-You are standing at the base of a tightly spiralling bronze staircase. 
+You are standing at the base of a tightly spiralling bronze staircase.
 You look in mute wonder at the expertly crafted railing as it spirals high
 above you, only to be lost into the darkness above.
 ~
@@ -1488,7 +1488,7 @@ The Entrance to the Living Quarters~
 You are standing at the entrance of what appears to be a great living
 quarters.  It seems, judging from the cramped quarters, that the people
 living here lived a very communistic life style.  The quarters are all very
-open, not permitting any privacy between the individuals.  
+open, not permitting any privacy between the individuals.
 ~
 0 1 0
 Rd     0
@@ -1509,7 +1509,7 @@ S
 Ancient Conjuction of Hallways~
 You are standing at the conjunction of two large hallways.  Again you
 wonder at what manner of beast would create such a large and forboding
-building, only to leave it to the rats and bats which now inhabit it.  
+building, only to leave it to the rats and bats which now inhabit it.
 ~
 0 1 0
 Rd     0
@@ -1531,7 +1531,7 @@ East of the Broken Pyramid~
 You are standing to the east of the Broken Pyramid.  To the west, the
 pyramid towers over you.  There appears to be a great picture carved into
 the base of the wall.  It depicts a newly created pyramid sitting in a vast
-and empty desert.  Perched upon the top is a Mighty Sphinx.  
+and empty desert.  Perched upon the top is a Mighty Sphinx.
 ~
 0 0 10
 Rd     0
@@ -1553,7 +1553,7 @@ west side of a great pyramid.  There are people falling out of the great
 rending tear down the side of the wall.  On the other side of the pyramid is
 a Mighty Sphinx standing before a double image.  One image is of a man in
 red robes, the other, superimposed upon the first, is that of a Great Red
-Dragon.  
+Dragon.
 ~
 0 0 10
 Rd     0
@@ -1586,7 +1586,7 @@ Ancient and Decayed Diningroom~
 You are standing in a large and empty hall.  There are great mounds of
 brown dust here.  You realize that this is what has become of what once
 would have been a great dining room!  You see that this room could have held
-several hundred hungry people as they ate.  
+several hundred hungry people as they ate.
 ~
 0 1 0
 Rd     0
@@ -1603,7 +1603,7 @@ S
 In the Midst of Many Bunks~
 The walls are lined from floor to ceiling with many bunkbeds.  The mere
 size of this room is a testament to the magnitude of the building your
-standing in.  
+standing in.
 ~
 0 1 0
 Rd     0
@@ -1621,7 +1621,7 @@ In the Midst of Many Bunks~
 The walls are lined from floor to ceiling with many bunkbeds.  Although
 such things as blankets and pillows have long since deteriorated, the bunks
 themselves stand the test of time.  It would seem that this large room could
-hold perhaps as many as a thousand people.  
+hold perhaps as many as a thousand people.
 ~
 0 1 0
 Rd     0
@@ -1636,7 +1636,7 @@ D3
 S
 #14534
 Entrance to the Ancient Tombs~
-From your position under the large archway before a great hallway, you 
+From your position under the large archway before a great hallway, you
 have no doubts as to what this particular tunnel was created for. It appears
 that whomever built this strange monument had great respect for the dead.
 This is the beginning of a large tomb.
@@ -1658,7 +1658,7 @@ You are standing to the east of the Broken Pyramid.  To the west, the
 pyramid towers over you.  There appears to be a great picture carved into
 the base of the wall.  It depicts a group of people standing about the base
 of a great pyramid.  They appear scared and frightened. Far off in the
-distance a great reptilian shape flies towards them.  
+distance a great reptilian shape flies towards them.
 ~
 0 0 10
 Rd     0
@@ -1678,7 +1678,7 @@ pyramid towers over you.  There appears to be a great picture carved into
 the base of the wall.  It depicts a great pyramid, upon the west side there
 is a Great Black Dragon flying towards the monument.  And upon the east side
 there is a Mighty Sphinx flying away from the pyramid to help a man in red
-robes.  
+robes.
 ~
 0 0 10
 Rd     0
@@ -1711,7 +1711,7 @@ Among the Broken Shelves in the Ancient Tombs~
 You find yourself in a great hallway.  The shelves have been overturned,
 and the marks of a fight are imprinted upon the dust.  Whatever the looter
 must have found within these dark tunnels to put up such a terrible and
-violent fight, you will never know.  
+violent fight, you will never know.
 ~
 0 1 0
 Rd     0
@@ -1729,7 +1729,7 @@ In the Midst of the Ancient Tombs~
 You are in a great hallway.  The shelves that you ahd grown to expect
 upon both sides of the walls appear greatly disturbed.  Casting your glance
 to the dust and rubble upon the floor, you see fresh footprints as thoush
-someone had recently been searching through the human remains.  
+someone had recently been searching through the human remains.
 ~
 0 1 0
 Rd     0
@@ -1747,7 +1747,7 @@ In the Midst of the Ancient Tombs~
 You are in a great hallway.  Along both sides of the hall you see looking
 upon the shelves you see the remains of long dead corpses.  Peering intently
 at the rubble you notice that a recent sword point had disturbed the dust
-among the shelves.  
+among the shelves.
 ~
 0 1 0
 Rd     0
@@ -1765,7 +1765,7 @@ Among the Ancient Tombs~
 You are in a great hallway.  Along both sides of the hall you see shelves
 that start from the floor and rise all the way to the ceiling.  Looking upon
 these shelves you see the ancient debris of long rotted and deteriorated
-corpses.  Surprisingly you see nothing of any value among the dead.  
+corpses.  Surprisingly you see nothing of any value among the dead.
 ~
 0 1 0
 Rd     0
@@ -1784,7 +1784,7 @@ You are standing to the east of the Broken Pyramid.  To the west, the
 pyramid towers over you.  There appears to be a great picture carved into
 the base of the wall.  It depicts a Great Red Dragon standing before a large
 pyramid.  It appears to be snarling at a Mighty Sphinx which is perched upon
-the top of the pyramid.  
+the top of the pyramid.
 ~
 0 0 10
 Rd     0
@@ -1801,7 +1801,7 @@ S
 South of the Broken Pyramid~
 You are below a great pyramid.  You see why the great monument has been
 given the name the Broken Pryamid, for nearly the entire upper west wall is
-missing.  It looks as if something had taken a tremendous gouge out of it.  
+missing.  It looks as if something had taken a tremendous gouge out of it.
 ~
 0 0 10
 Rd     0
@@ -1819,9 +1819,9 @@ South of the Broken Pyramid~
 You are to the south of the Broken Pyramid.  To the north, the pyramid
 towers over you.  There appears to be a great picture carved into the base
 of the wall.  It depicts a small man wearing a long red robe, he appears
-injured and his hand is outstretched in a symbol of pleading for help. 
+injured and his hand is outstretched in a symbol of pleading for help.
 Flying towards the man is a Mighty Sphinx, he has a look of concern in his
-eyes.  
+eyes.
 ~
 0 0 10
 Rd     0
@@ -1841,7 +1841,7 @@ towers over you.  There appears to be a great picture carved into the base
 of the wall.  It depicts a small man standing before a great pyramid, he is
 wearing a flowing red robe.  But the man is not what he appears to be, for
 instead of a normal human shadow, he has the shadow of a great reptilian
-beast.  
+beast.
 ~
 0 0 10
 Rd     0
@@ -1860,7 +1860,7 @@ You are to the south of the Broken Pyramid.  To the north, the pyramid
 towers over you.  There appears to be a great picture carved into the base
 of the wall.  It depicts a Mighty Sphinx perched upon the top of a great
 pyramid.  About the base, people gaze up at the great beast in a mixture of
-awe and adoration.  
+awe and adoration.
 ~
 0 0 10
 Rd     0
@@ -1878,7 +1878,7 @@ South of the Broken Pyramid~
 You are to the south of the Broken Pyramid.  To the north, the pyramid
 towers over you.  There appears to be a great picture carved into the base
 of the wall.  It depicts a Mighty Sphinx feasting upon the mangled corpse of
-a Great Red Dragon.  
+a Great Red Dragon.
 ~
 0 0 10
 Rd     0
@@ -1897,7 +1897,7 @@ You are to the south of the Broken Pyramid.  To the north, the pyramid
 towers over you.  There appears to be a great picture carved into the base
 of the wall.  It depicts a Mighty Sphinx and a Great Red Dragon engaged in
 combat above a newly built pyramid.  Scattered about the base you see scared
-and frightened people clinging to the safety of the pyramid.  
+and frightened people clinging to the safety of the pyramid.
 ~
 0 0 10
 Rd     0
@@ -1915,7 +1915,7 @@ South East Corner of the Broken Pyramid~
 You are below a great pyramid.  The desert heat bears down on you from
 all around.  The dry desert air blows sand into your face and down your
 throat, making you constantly itch and cough as it unrelentlessly swirls
-about you.  
+about you.
 ~
 0 0 10
 Rd     0
@@ -1936,7 +1936,7 @@ S
 Floating Softly to the Ground~
 You are floating in midair.  To the east you can see the huge gaping hole
 in the pyrmid.  It is large enough to fit a dragon through.  Must have been
-something big that made it.  
+something big that made it.
 ~
 0 33554436 0
 Rd     0
@@ -1954,7 +1954,7 @@ Sand Blown Corridor~
 You are in a very windy tunnel, there is sand and light pouring in from
 the south.  Looking down you see that several feet of sand has accumulated
 in this tunnel, if it weren't for the constantly blowing wind this tunnel
-would have been clogged long ago.  
+would have been clogged long ago.
 ~
 0 0 0
 Rd     0
@@ -1972,7 +1972,7 @@ Intersection of Corridors~
 You are at an intersection of corridors.  There is a distinct breeze
 coming from the east.  A small pile of sand has accumulated in this room,
 although not enough to hinder your movement.  To the east there is a
-forboding glow and a strangely pleasant smell.  
+forboding glow and a strangely pleasant smell.
 ~
 0 1 0
 Rd     0
@@ -1994,7 +1994,7 @@ Entrance to a Grand Memorial~
 You are at the entrance of what can only be thought of as a great
 memorial to a long dead king.  You see that a great signature rune has been
 enscribed upon the archway going over your head.  The smell of incense is
-very intense here, although you don't see any burning.  
+very intense here, although you don't see any burning.
 ~
 0 1 0
 Rd     0
@@ -2019,7 +2019,7 @@ S
 Bend in the Memorial Corridor~
 You are in a bending corridor.  Upon the walls are pictures of a young
 man.  The man looks proud and strong, and upon his head is a crown of gold,
-and in his hand is a shining sceptre.  
+and in his hand is a shining sceptre.
 ~
 0 1 0
 Rd     0
@@ -2036,7 +2036,7 @@ S
 Northern Part of the Great Hole~
 You are in a large sand dune inside of an ancient tunnel.  There is a
 great hole in the west wall of the pyramid.  Looking west you can nearly see
-across the entire desert.  In the distance is a small grey blur.  
+across the entire desert.  In the distance is a small grey blur.
 ~
 0 0 0
 Rd     0
@@ -2061,7 +2061,7 @@ S
 Bend in the Corridor~
 You are in a bending corridor.  The dust is extremely thick here.  It
 must have been a long time since a human has tread this path.  To the north
-you see an intersection, and a glimmer of light.  
+you see an intersection, and a glimmer of light.
 ~
 0 1 0
 Rd     0
@@ -2078,7 +2078,7 @@ S
 Top of a Spiralling Staircase~
 You are at the top of a tightly spiralling bronze staircase.  You look
 dizzily down into the dark gloom, with no hope of seeing the bottom.  It is
-a marvel of ingenious engineering that must have created such a staircase. 
+a marvel of ingenious engineering that must have created such a staircase.
 ~
 0 1 0
 Rd     0
@@ -2096,7 +2096,7 @@ Ancient Weapons in the Memorial~
 You are in a narrow corridor.  Embedded into the rock is an assortment of
 weapons.  This must be the dead kings choice of armament.  Looking at the
 glow cast from the stones, it would seem that the weapons are held magically
-in place, probably preventing theft.  
+in place, probably preventing theft.
 ~
 0 1 0
 Rd     0
@@ -2118,7 +2118,7 @@ Middle of the Great Hole~
 You are at the peak of a great sand dune.  The entire western wall of
 this corridor is missing, and looking upon the eastern wall you see huge
 claw marks running across it.  Some of the stones themselves look almost
-melted, as if acid etched them.  
+melted, as if acid etched them.
 ~
 0 0 0
 Rd     0
@@ -2139,7 +2139,7 @@ S
 Beneath an Ancient Ladder~
 You are at the bottom of a long ladderwhich appears to be made of some
 unknown metal.  Looking up you see that the height is so great, that you can
-only see a dark gloom.  
+only see a dark gloom.
 ~
 0 5 0
 Rd     0
@@ -2172,7 +2172,7 @@ Ancient Armour in the Memorial~
 You are in a narrow corridor.  Embedded into the rock is a great set of
 platemail.  You see that the helm has a large dent in it, it would seem that
 the ancient king had died in battle.  Again the magic within the room
-prevents the burglary of this armour.  
+prevents the burglary of this armour.
 ~
 0 1 0
 Rd     0
@@ -2190,7 +2190,7 @@ Southern Part of the Great Hole~
 You are in a large sand dune.  To the west you see a great gouge in the
 pyramid wall.  Looking dizzily down you can see the desert sand swirling
 below you.  There are large bird droppings, making you think that some large
-avian creature has made this ledge it's nest.  
+avian creature has made this ledge it's nest.
 ~
 0 0 0
 Rd     0
@@ -2212,7 +2212,7 @@ Bend in the Sandy Corridor~
 You are in a sharply bending corridor.  Large amounts of sand and wind
 are blowing in from the west, and are accumulating within the corner of this
 tunnel.  Great claw marks can be seen lining the walls, as though some large
-beast had been reaching into the pyramid.  
+beast had been reaching into the pyramid.
 ~
 0 0 0
 Rd     0
@@ -2229,7 +2229,7 @@ S
 Sarcophagus~
 You are to the south of a great sarcophagus.  To the north the gleaming
 coffin rests against the walls.  The container appears to be made of solid
-gold, formed into the shape of a standing man.  
+gold, formed into the shape of a standing man.
 ~
 0 1 0
 Rd     0
@@ -2246,7 +2246,7 @@ S
 Great Treasure in the Memorial~
 You are in a narrow corridor.  Embedded into the rock is a small fortune
 in gems, gold and jewelry.  It would seem that the strange builders of this
-pyramid had some very unique ideas concerning death.  
+pyramid had some very unique ideas concerning death.
 ~
 0 1 0
 Rd     0
@@ -2264,7 +2264,7 @@ Within a Spiders Web~
 You are in a giant web; the strands are as thick as yarn and stick to
 your body.  The webs are hindering but not stopping your movement.  The only
 exit you can see is back the way you came.  Not that you could see another
-if there was one.  
+if there was one.
 ~
 0 1073872897 0
 Rd     0
@@ -2282,7 +2282,7 @@ Deep Within a Spiders Web~
 You are waist deep in a giant spider web.  You see large rats and bats
 wrapped within silky cocoons, awaiting a spiders fang.  Movement is slow and
 you constantly have to pause to hack at the sticky web that threatens to
-ensnare you.  
+ensnare you.
 ~
 0 1073872897 0
 Rd     0
@@ -2300,7 +2300,7 @@ At the Top of an Ancient Ladder~
 You are at the top of an ancient ladder.  Judging from the great piles of
 dust and cobwebs before you, you are sure that nobody has walked these halls
 for thousands of years.  You notice that there is an especially large amount
-of cobwebs lining the walls.  
+of cobwebs lining the walls.
 ~
 0 131073 0
 Rd     0
@@ -2316,9 +2316,9 @@ S
 #14570
 Below a Series of Spikes~
 You are at the bottom of a shaft.  Looking along the walls you see that a
-bunch of spikes have been driven into the wall to allow upward movement. 
+bunch of spikes have been driven into the wall to allow upward movement.
 Looking carefully at the spikes you realize that they are not made of metal,
-but are instead created from magical energy.  
+but are instead created from magical energy.
 ~
 0 1073872901 0
 Rd     0
@@ -2336,7 +2336,7 @@ At the Top of the Broken Pyramid~
 You are at the very top of the Broken Pyramid, the walls appear
 translucent, and you can see for miles about.  You see evidence that a
 Mighty Sphinx has made it's lair here, as though to watch for signs of
-danger that may harm the Pyramid.  
+danger that may harm the Pyramid.
 ~
 0 1073872896 0
 Rd     0
@@ -2349,7 +2349,7 @@ S
 Great Northern Desert~
 You are in the middle of a long path.  There is no mistake that this path
 is leading to a dry sandy desert, because the vegetation is nearly
-completely gone.  The heat is becoming more intense.  
+completely gone.  The heat is becoming more intense.
 ~
 0 0 2
 Rd     0
@@ -2384,7 +2384,7 @@ Great Northern Desert~
 You are in the middle of a dry and sandy desert.  Sand dunes rise all
 around you.  To the west you can almost make out the shape of a tall
 pyramid.  It must be large indeed for you to see it from such a long
-distance.  
+distance.
 ~
 0 0 10
 Rd     0
@@ -2399,15 +2399,15 @@ D3
 S
 #14576
 Before the Great Broken Pyramid~
-You are on a large sand dune.  To the west of you rises a great pyramid. 
+You are on a large sand dune.  To the west of you rises a great pyramid.
 It is known as the Broken Pryamid.  There is a sign firmly planted in the
-ground.  
+ground.
 ~
 0 4 10
 Rd     0
 E
 sign~
-The Broken Pyramid was made for levels 20-50.  
+The Broken Pyramid was made for levels 20-50.
 ~
 D1
 ~
@@ -2422,7 +2422,7 @@ S
 The Shore of a Bloody River~
 You are on the banks of a great river.  There is a shroud of mist that
 covers the area and blocks your vision.  You can see however, that the water
-is blood red.  Maybe it isn't water?  
+is blood red.  Maybe it isn't water?
 ~
 0 401425 0
 Rd     0
@@ -2436,7 +2436,7 @@ Judgement~
 You are amidst a great throne.  It is adorned with many strange symbols
 and writing.  Next to the thrown stands a giant scale that is perfectly
 balanced.  It looks large enough to hold a troll.  What would one use a
-scale of such size for?  
+scale of such size for?
 ~
 0 426009 0
 Rd     0
@@ -2447,10 +2447,10 @@ D1
 S
 #14579
 Near the Shore~
-The river now makes a sharp turn to the south as it's pace picks up. 
-Yet, some strange force stops you from going any further down the river. 
-Your only choice now is to return the way you came or go back to the shore. 
-There is a glow through the mist to the west.  Shore must be near by.  
+The river now makes a sharp turn to the south as it's pace picks up.
+Yet, some strange force stops you from going any further down the river.
+Your only choice now is to return the way you came or go back to the shore.
+There is a glow through the mist to the west.  Shore must be near by.
 ~
 0 134619153 7
 Rd     0
@@ -2468,7 +2468,7 @@ On the Red River~
 Mist clouds your vision and blinds you from what is up ahead.  The pace of
 the current seems to be picking up.  But, without an obvious reference
 point, like the shore, it is hard to tell.  You do seem to be traveling
-west.  
+west.
 ~
 0 134619153 7
 Rd     0

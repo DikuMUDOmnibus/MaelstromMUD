@@ -1,7 +1,7 @@
 #AREADATA
-Name        {  All } The West Coast      Lucid~
+Name        The West Coast~
 Levels      0 105
-Builders    Evan~
+Builders    Evan Lucid~
 VNUMs       4700 4799
 Security    1
 Recall      25001
@@ -108,7 +108,7 @@ reserved~
 #4700
 The Room of Creation~
 The West Lands 4700-4799
- 
+
 This area was created to make several areas
 seem more realistic... :)
 # 1-24   West Coast & Open Ocean.
@@ -116,8 +116,8 @@ seem more realistic... :)
 #49-82   Thinning Forrest & Northern Desert
 #83-93   North Western Plains
 #93-99   Extras for last second connectors.
- 
- 
+
+
 It was made by Star and Lucid!
 ~
 0 4 0
@@ -126,9 +126,9 @@ S
 #4701
 In the Great Western Sea~
 Stretching all around you is the vast expance of the Great Western Sea, you
-are nearly overwhelmed by all of the beautifull dark blue water stretching 
+are nearly overwhelmed by all of the beautifull dark blue water stretching
 out as far as the eye can see.  The sea wind blows overhead whipping at your
-hair and clothes. 
+hair and clothes.
 ~
 0 4 6
 Rd     0
@@ -143,10 +143,10 @@ D2
 S
 #4702
 In the Great Western Sea~
-Stretching all around you is the vast expance of the Great Western Sea, you 
-are nearly overwhelmed by all of the beautifull dark blue water stretching 
+Stretching all around you is the vast expance of the Great Western Sea, you
+are nearly overwhelmed by all of the beautifull dark blue water stretching
 out as far as the eye can see.  The sea wind blows overhead whipping at your
-hair and clothes.     
+hair and clothes.
 ~
 0 0 7
 Rd     0
@@ -171,8 +171,8 @@ S
 In the Great Western Sea~
 Stretching all around you is the vast expance of the Great Western Sea, you
 are nearly overwhelmed by all of the beautifull dark blue water stretching
-out as far as the eye can see.  The sea wind blows overhead whipping at your 
-hair and clothes. 
+out as far as the eye can see.  The sea wind blows overhead whipping at your
+hair and clothes.
 ~
 0 0 6
 Rd     0
@@ -227,7 +227,7 @@ S
 In the Great Western Sea~
 Stretching all around you is the vast expance of the Great Western Sea, you
 are nearly overwhelmed by all of the beautifull dark blue water stretching
-out as far as the eye can see.  The sea wind blows overhead whipping at your 
+out as far as the eye can see.  The sea wind blows overhead whipping at your
 hair and clothes.
 ~
 0 0 6
@@ -253,8 +253,8 @@ S
 In the Great Western Sea~
 Stretching all around you is the vast expance of the Great Western Sea, you
 are nearly overwhelmed by all of the beautifull dark blue water stretching
-out as far as the eye can see.  The sea wind blows overhead whipping at your 
-hair and clothes. 
+out as far as the eye can see.  The sea wind blows overhead whipping at your
+hair and clothes.
 ~
 0 0 6
 Rd     0
@@ -299,19 +299,19 @@ On the shore of this beautiful beach, you see the almost white sand
 stretching for miles in all directions.  There are strings of kelp that have
 been washed up from each high tide, and the empty shells of all sorts of
 marine life.  The waves lap gently up onto the sand, and roll back, meeting
-the next one, fighting to run back to the sea.  
+the next one, fighting to run back to the sea.
 ~
 0 4 0
 Rd     0
 E
 kelp~
 Lying in piles and twisted strands, the kelp decorates this otherwise
-clean and un littered beach.  
+clean and un littered beach.
 ~
 E
 shells~
 From the large and unbroken, to the tiny shards of pearlescent glitter,
-the shells that cover the beach reflect the sunlight.  
+the shells that cover the beach reflect the sunlight.
 ~
 D2
 ~
@@ -336,7 +336,7 @@ A Deserted Beach~
 The water splashes over your feet as the waves roll up the sand.  A
 slight breeze springs up, bringing the warm air off the water, and the smell
 of salty ocean to your nose.  A lone seagull cries his lonesome call, and
-the sound of the waves lulls you into a sense of peace.  
+the sound of the waves lulls you into a sense of peace.
 ~
 0 4 0
 Rd     0
@@ -367,7 +367,7 @@ At the End of the Docks on the Main Land~
 You are standing in a busy seaport.  There are many docks lining the
 shore, with many large ships tied to them.  The smell of fish is nearly
 unbarable, since the fishmongers gut there catch throw the remains into the
-ocean.  
+ocean.
 ~
 0 4 0
 Rd     0
@@ -398,7 +398,7 @@ At the End of the Docks on the Main Land~
 You are standing in a small wharf, the reek of fish is nearly
 overwhelming since the fishmongers merely toss their debris back into the
 sea.  A long dock reaches out the west into the ocean, this is where the
-ships are tied up to, while in port.  
+ships are tied up to, while in port.
 ~
 0 4 0
 Rd     0
@@ -429,7 +429,7 @@ On the Rocky Shore of the Great Western Sea~
 You are standing on a rocky shoreline, looking west you can see water as
 far as the eye can see.  This is considered by many people to be the end of
 land, although some of the more risky sailors claim that there are even
-stranger places found across the seemingly endless body of water.  
+stranger places found across the seemingly endless body of water.
 ~
 0 4 0
 Rd     0
@@ -457,7 +457,7 @@ mpecho The seagulls screech their lonely cries.
 |
 #4713
 On the Beach of the Great Western Sea~
-You are standing on a great sandy beach, the black greasy smoke 
+You are standing on a great sandy beach, the black greasy smoke
 from the volcano to the east drifts lazily overhead.  You can see
 the hissing water and steam, from where the lava current flows into
 the water.
@@ -596,7 +596,7 @@ D0
 S
 #4720
 In the Deep Blue Sea~
-You are in the midst of the Deep Blue Sea.  Great waves are crashing all 
+You are in the midst of the Deep Blue Sea.  Great waves are crashing all
 about you, and the wind whistles saltily overhead.  The Great Western sea
 is though to be endless, and journeying into it without the proper boat
 could be extremely perilous.
@@ -644,7 +644,7 @@ D3
 S
 #4722
 In the Deep Blue Sea~
-You are in the midst of the Deep Blue Sea.  Great waves are crashing all 
+You are in the midst of the Deep Blue Sea.  Great waves are crashing all
 about you, and the wind whistles saltily overhead.  The Great Western sea
 is though to be endless, and journeying into it without the proper boat
 could be extremely perilous.
@@ -670,8 +670,8 @@ D3
 S
 #4723
 In the Deep Blue Sea~
-You are in the midst of the Deep Blue Sea.  Great waves are crashing all 
-about you, and the wind whistles saltily overhead.  The Great Western sea  
+You are in the midst of the Deep Blue Sea.  Great waves are crashing all
+about you, and the wind whistles saltily overhead.  The Great Western sea
 is though to be endless, and journeying into it without the proper boat
 could be extremely perilous.
 ~
@@ -696,7 +696,7 @@ D3
 S
 #4724
 In the Deep Blue Sea~
-You are in the midst of the Deep Blue Sea.  Great waves are crashing all 
+You are in the midst of the Deep Blue Sea.  Great waves are crashing all
 about you, and the wind whistles saltily overhead.  The Great Western sea
 is though to be endless, and journeying into it without the proper boat
 could be extremely perilous.
@@ -732,7 +732,7 @@ S
 #4795
 Small Crevice Leading Down to the Beach~
 You are standing in a small crevice, this natural indentation in the
-side of the cliffs allows passage onto the beach from the rocky 
+side of the cliffs allows passage onto the beach from the rocky
 mountainside to the east.  Great seabirds have made there homes in the
 rocky ledges high above your head.
 ~

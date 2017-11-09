@@ -1,7 +1,7 @@
 #AREADATA
-Name        {  4-6 } Mud School Arena    Thalador~
+Name        Mud School Arena~
 Levels      4 6
-Builders    None~
+Builders    Thalador~
 VNUMs       100 174
 Security    100
 Recall      25001
@@ -68,7 +68,7 @@ It's big, it's gross, it's a BUG!
 0 0 0
 0 0 0
 >death_prog 5~
-mpoload 104 
+mpoload 104
 say Oh im gonna get Moksha after you for this....
 ~
 |
@@ -199,7 +199,7 @@ An &zEbony&P Golem is here sizing you up.
 Before you stands a massive creature with a maniacal gleam in it's eyes.
 It looks you over as if you were just another piece of meat.  His hands,
 arms, and apron are all spattered with blood and other solid matter.
- 
+
 ~
 3 0 0 0 S
 5 0 0 100d0+0 0d0+0
@@ -237,7 +237,7 @@ An &zEbony&P Golem glares at you in disgust.
 Standing before you is the meanest looking creature you've ever run
 across.  With shoulders that seem to fill the entire room, it glares at you
 with a look of total distain.  It licks it's lips and gets ready to spring
-upon you.  
+upon you.
 ~
 3 0 0 -1000 S
 5 0 0 100d0+0 0d0+0
@@ -293,7 +293,7 @@ An &zEbony&P Golem sneers at you.
 ~
 This creature is of enormous proportions.  His arms look as if they could
 easily snap you in two.  He seems to be frothing at the mouth.  He looks
-down upon you as if you were an insect.  
+down upon you as if you were an insect.
 ~
 3 0 0 -1000 S
 5 0 0 100d0+0 0d0+0
@@ -376,7 +376,7 @@ An &wIvory&P Golem is here smiling.
 ~
 In spite of the gargantuan size of this creature, it looks very friendly.
 It even seems to be happy to see you.  With a wink of it's eye, and a slight
-smile, it returns to it's work.  
+smile, it returns to it's work.
 ~
 3 0 0 1000 S
 5 0 0 100d0+0 0d0+0
@@ -416,7 +416,7 @@ An &wIvory&P Golem is here hard at work.
 ~
 A pleasant-looking creature is here smiling at you.  He seems to be
 enjoying his work.  He seems to be trying to help these poor creatures to
-become normal once again by gluing their eyes back in to their sockets.  
+become normal once again by gluing their eyes back in to their sockets.
 ~
 3 0 0 1000 S
 5 0 0 100d0+0 0d0+0
@@ -500,7 +500,7 @@ of some sort before him.  He is larger than all of the rest of the golems
 you have encountered thus far.  His massive shoulders appear even larger due
 to the fact he's hunched over, and his arms are as wide as tree trunks.  He
 pauses from time to time to push a pair of gold rimmed glasses back up on
-his nose.  
+his nose.
 ~
 3 0 0 0 S
 6 0 0 115d0+0 0d0+0
@@ -915,7 +915,7 @@ Entrance to the Arena~
 High fence surrounds the entire Arena, for your protection as well as the
 animals'.  As you gaze across the large pit, you should be able to see
 various animals to battle with.  You can travel east, west or south to
-explore the Arena.  To reach a &Wsafe&c haven, go up.  
+explore the Arena.  To reach a &Wsafe&c haven, go up.
 ~
 0 393224 0
 Rd     0
@@ -965,7 +965,7 @@ Maggot Room~
 You enter a room that seems to be filled with maggots.  The floor is
 absolutely covered with them!  You notice that there's a small pile off to
 one side that the maggots seem to be crawling all over.  You don't want to
-know what poor unfortunate soul that was.  
+know what poor unfortunate soul that was.
 ~
 0 8 0
 Rd     0
@@ -995,7 +995,7 @@ Along the South Wall~
 Along this wall, you notice there's a huge heap of trash that's collected
 here.  Maybe that's a good thing.  It shows that perhaps someone's cleaning
 up here after all.  Then you realize, the trash heap is moving.  Maybe it's
-not such a good thing after all....  
+not such a good thing after all....
 ~
 0 8 0
 Rd     0
@@ -1023,7 +1023,7 @@ garbage and left over segments of various other...  Things...  Maybe this is
 where that stench is coming from.  Looking for a quick exit, you spot a
 rolling mass of something or other off to the west.  Maybe that's people in
 danger, or maybe they're just more of those wonderfully disgusting features
-of this pit.  
+of this pit.
 ~
 0 8 0
 Rd     0
@@ -1075,9 +1075,9 @@ S
 #142
 South East Corner~
 In this corner of the pit, you notice that written in blood is an odd
-message.  "Omni was here" has been scrawled by some delinquent!  Oh no! 
+message.  "Omni was here" has been scrawled by some delinquent!  Oh no!
 However, before you can report this, you find your footing slipping,
-carrying you away to another room.  Maybe you should watch your footing?  
+carrying you away to another room.  Maybe you should watch your footing?
 ~
 0 8 0
 Rd     0
@@ -1100,7 +1100,7 @@ Crawling into this corner, you find a teensy tiny little draft that must
 be seeping through the cracks in the wall.  You wonder, where did all this
 ooze come from?!  Who created all this?!  Is there no end to it all?  With
 weary resignation, you continue to plod on in this pit.  Oh wait, you can
-just go up to escape all this.  
+just go up to escape all this.
 There is also a rusty &Ggrate &Yhere.
 ~
 0 8 0
@@ -1291,7 +1291,7 @@ This dimly lit passageway is damp and musty smelling, and far off in the
 distance water can be heard dripping.  The scurrying of some kind of
 creature echoes off the moss-encrusted walls, and various other strange
 sounds resound.  In the dim light an exit north can be seen, and the grate
-leading back to where you came from is here.  
+leading back to where you came from is here.
 ~
 0 0 0
 Rd     0
@@ -1331,7 +1331,7 @@ S
 #152
 Safe Room~
 Here you find yourself in a small, quiet room which is separate from the
-pit below.  You have a strange feeling of peace and safety here which wasn't 
+pit below.  You have a strange feeling of peace and safety here which wasn't
 apparent to you in the area below.
 ~
 0 1028 0
@@ -1345,7 +1345,7 @@ S
 Deeper into the tunnel~
 This room reeks of decay and mold, and the air is heavy to breathe.  In
 the faint glow of light the moss seems to throb.  The only exits here are to
-the north and south.  
+the north and south.
 ~
 0 0 0
 Rd     0
@@ -1382,7 +1382,7 @@ look promising.  All are too dark to see beyond the doorways so you are
 afforded no clues as to which route is the safest to take.  The scratching
 of some type of animals can be heard echoing throughout the area, and the
 air is damp and musty.  The faint sounds of maniacal laughter can also be
-heard.  This doesn't look good.  
+heard.  This doesn't look good.
 ~
 0 0 0
 Rd     0
@@ -1411,7 +1411,7 @@ fluids and matter join in to make this room look like total carnage.  Dim
 lighting makes it difficult to see distinctly, so all that can be discerned
 are a large table against the west wall, what appear to be piles of body
 parts, a few piles of what appear to be organs, and heading the mayhem, a
-large shape bent over the table, whistling while he works.  
+large shape bent over the table, whistling while he works.
 ~
 0 0 0
 Rd     0
@@ -1425,8 +1425,8 @@ Golem Workshop~
 This room seems to be another mob repair shop.  Blood and gore are
 splashed all over, and the smell of rotting flesh inspires nausea.  Various
 limbs and organs are piled up haphazardly all over and bodies in various
-stages of decomposition are stacked up awaiting their turn under the knife. 
-The only exit here is back to the west.  
+stages of decomposition are stacked up awaiting their turn under the knife.
+The only exit here is back to the west.
 ~
 0 131072 0
 Rd     0
@@ -1440,7 +1440,7 @@ The Tunnel~
 As you move further into the heart of this horrid place, the air seems
 heavier, the noises more distinct, and the sounds of vermin closer.  Mold
 hangs in fuzzy sheets in some places, making the footing trecherous.  Move
-slowly and cautiously.  There are exits to the east and west here.  
+slowly and cautiously.  There are exits to the east and west here.
 ~
 0 0 0
 Rd     0
@@ -1459,7 +1459,7 @@ The sounds of pain-filled cries can be faintly heard here, along with the
 scratching of some type of animal.  Dampness fills the air, making breathing
 a chore.  Water on the floor makes for hazardous walking conditions, and the
 dimness of the lighting isn't helping.  There are exits to the north, west,
-and east here.  
+and east here.
 ~
 0 0 0
 Rd     0
@@ -1481,8 +1481,8 @@ Cadaver Room~
 All around are piles of cadavers and arms.  Blood and tissue are
 splattered all over the walls, floor, and the golem.  The metallic smell of
 blood fills the air, mixed with the smell of decaying tissue.  There is a
-huge table next to the north wall and a massive creature is bent over it. 
-The only exit is to the south.  
+huge table next to the north wall and a massive creature is bent over it.
+The only exit is to the south.
 ~
 0 0 0
 Rd     0
@@ -1496,7 +1496,7 @@ The Tunnel~
 There's about an inch of water on the floor here, and it has a sour,
 stagnant odor to it.  Mold lines the walls here, and the air is heavy with
 dampness, the kind that chills a person to the bone.  The only exits are
-south and west.  
+south and west.
 ~
 0 0 0
 Rd     0
@@ -1511,11 +1511,11 @@ D3
 S
 #162
 Deep into the Tunnel~
-Stagnant water flows through here, making it smell rather foul. 
+Stagnant water flows through here, making it smell rather foul.
 Something brushes across your ankles, but it's shape cannot be distinguished
 due to the poor lighting.  The air is just as bad here, with no signs of it
 getting any better.  The lack of circulation is a major contributing factor
-in this.  The only exits are north and east.  
+in this.  The only exits are north and east.
 ~
 0 0 0
 Rd     0
@@ -1534,7 +1534,7 @@ The sounds of screaming seems to be louder here, yet you cannot see what
 is causing it.  Water drips down from the ceiling, making one feel damp and
 chilled.  The air is stale and damp still.  Small creatures scurry past you,
 as if they were trying to escape this place.  The only exits are to the west
-and south.  
+and south.
 ~
 0 0 0
 Rd     0
@@ -1552,7 +1552,7 @@ Another Four-Way Intersection~
 You can exit in any direction here, yet none look any more promising than
 what you've encountered since you started this journey.  The lack of light
 makes it impossible to see down any of the exits, so they'll just have to be
-explored.  
+explored.
 ~
 0 0 0
 Rd     0
@@ -1577,9 +1577,9 @@ S
 Ivory Golem's Mob Factory~
 A semi-cheery room in such a dismal place, this room seems as if it
 belongs somewhere else.  There are bodies neatly stacked, awaiting their
-turn under the careful ministratings of this seemingly harmless creature. 
+turn under the careful ministratings of this seemingly harmless creature.
 The creature seems to be treating them with loving care as he pieces them
-back together.  
+back together.
 ~
 0 0 0
 Rd     0
@@ -1595,7 +1595,7 @@ clean as they can possibly be considering the circumstances.  The corpses
 are neatly piled and in as good a shape as a dead mob can be.  Shelves line
 the walls and upon them are jars filled with a murky liquid and what seems
 to be eyeballs.  Against the east wall is a table and behind it is a
-creature hard at work.  
+creature hard at work.
 ~
 0 0 0
 Rd     0
@@ -1608,7 +1608,7 @@ S
 The Tunnel~
 Dismal conditions abound here.  The walls and floor are decayed and the
 smell of rot fills the air.  Dampness chills one to the bone.  Not a very
-cheery place to be at all.  The only exits are to the north and west.  
+cheery place to be at all.  The only exits are to the north and west.
 ~
 0 0 0
 Rd     0
@@ -1625,7 +1625,7 @@ S
 The Tunnel~
 This tunnel should be condemned it's in such deplorable condition.  The
 walls are crumbling all around you.  This tunnel looks as if it could
-collapse at any moment.  The only exits are to the east and west.  
+collapse at any moment.  The only exits are to the east and west.
 ~
 0 0 0
 Rd     0
@@ -1644,7 +1644,7 @@ This area is the worst yet.  The whole room is shaking and bits of stone
 are crumbling from the walls at every tremor.  The water level on the floor
 is higher here than anywhere else, and the air is so heavy it makes it
 almost impossible to breathe.  The only exits are to the north, west, and
-east.  
+east.
 ~
 0 0 0
 Rd     0
@@ -1668,7 +1668,7 @@ the other two Ivory Golem's workplaces, or as clean as they can get a room
 in this dank, damp area.  The corpses of undistinguishable mobs are neatly
 piled, awaiting their rebirth.  It seems this is the final checkpoint before
 they get hearts put in and sent on their way to once again die by brave
-adventurers' hands.  The supply of corpses seems endless.  
+adventurers' hands.  The supply of corpses seems endless.
 ~
 0 0 0
 Rd     0
@@ -1683,7 +1683,7 @@ This three-way intersection is much the same as all the others.  The air
 is heavier here as you are in the bowels of this tunnel system.  Mold covers
 just about every surface visible, and the squeaking' of some sort of vermin
 can be heard close by.  There's an exit to the south, one to the west, and a
-door to the north.  It may be beneficial to look at each exit.  
+door to the north.  It may be beneficial to look at each exit.
 ~
 0 0 0
 Rd     0
@@ -1712,7 +1712,7 @@ position, this office is sparcely furnished.  A simple oak desk, a plain
 chair behind it, and a few cheap-looking pictures adorning the walls are all
 you can see.  The pictures appear to be water-damaged and have a fine
 dusting of mold on them.  The desk and chair have been warped by years of
-exposure to the damp conditions here.  The only exit here is to the south.  
+exposure to the damp conditions here.  The only exit here is to the south.
 ~
 0 0 0
 Rd     0
@@ -1727,7 +1727,7 @@ Strange smells fill the air here, as if someone was burning flesh.  The
 air is so heavy with it that it makes one want to wretch and gag.  The
 lighting is dim and it makes it hard to discern shapes.  Water swirls around
 your ankles, and the smell of stagnation is overpowering.  The only exits
-are to the east and west.  
+are to the east and west.
 ~
 0 0 0
 Rd     0

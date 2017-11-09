@@ -1,7 +1,7 @@
 #AREADATA
-Name        {80-100} Bretonnia           Tyrion~
+Name        Bretonnia~
 Levels      80 100
-Builders    None~
+Builders    Tyrion~
 VNUMs       21401 21600
 Security    99
 Recall      25001
@@ -61,7 +61,7 @@ Malayis~
 Malayis the Boat-Keeper is here.
 ~
 Malayis is a rather tall individual.  He stands at this spot for all
-eternity, guarding the western docks and allowing passage.  
+eternity, guarding the western docks and allowing passage.
 ~
 67 201326636 0 0 S
 82 0 0 13650d0+0 0d0+0
@@ -628,7 +628,7 @@ Mandrake the banker is here.
 Mandrake is quite a large fellow.  His belly pours out over his baggy
 breeches and his shirt is tucked in making him look even larger.  It seems
 that Mandrake liked the drink in his younger days...  Or perhaps he still
-takes to the ale frequently.  
+takes to the ale frequently.
 ~
 67 16552 0 0 S
 80 0 0 13000d0+0 0d0+0
@@ -1454,7 +1454,7 @@ E
 silver bracer power~
 &wWhat seems like an everyday silver bracer, is more than that.  You can
 feel a power of some sort emanating from it.  Even if you are not magically
-inclined, it is strong.  
+inclined, it is strong.
 ~
 #21429
 warhammer~
@@ -1871,7 +1871,7 @@ S
 #21403
 Mountain Clearing~
 You are moving along the side of a mountain.  A large hole in the side of it
-is directly to the west of you.  Looking around, you can see a small path 
+is directly to the west of you.  Looking around, you can see a small path
 leading to the south, and to the west.  Perhaps this hole deserves some
 exploration.
 ~
@@ -2152,7 +2152,7 @@ Mountain Path~
 You are moving along a mountain path.  The peaks tower above your head,
 while a T-Junction can easily be seen to the east.  The cold air from above
 is being pushed down into this path, and is quite cold.  You had better
-hurry along.  
+hurry along.
 ~
 0 0 5
 Rd     0
@@ -2203,7 +2203,7 @@ S
 Mountain Path~
 You are moving along a mountain path.  To the north, you can see that the
 path bends to the east.  High peaks tower above you, they seem to be as high
-as the clouds.  Small rocks and pebbles clutter at your feet.  
+as the clouds.  Small rocks and pebbles clutter at your feet.
 ~
 0 0 5
 Rd     0
@@ -2339,9 +2339,9 @@ D3
 S
 #21429
 Forest Path~
-You are moving along a forest path, which is cutting through a mountain. 
+You are moving along a forest path, which is cutting through a mountain.
 The ground is sloping upward now, at a steady increase.  The trees here are
-not as tall as the ones to the south, perhaps they are not as old.  
+not as tall as the ones to the south, perhaps they are not as old.
 ~
 0 0 3
 Rd     0
@@ -2478,7 +2478,7 @@ S
 Forest Path~
 You are moving along a forest path.  The trees are very tall, but not as
 thick as you are used to seeing.  This forest must be very old, for you see
-no signs of saplings.  
+no signs of saplings.
 ~
 0 0 3
 Rd     0
@@ -2851,7 +2851,7 @@ Forge Way~
 You are at the end of Anvil Street, commonly known as Forge Way.  It is
 called this because of the armoury to the north, the weaponry to the south,
 and the repair shop to the east.  The clanging of metal on metal is heard
-almost constantly.  
+almost constantly.
 ~
 0 131072 0
 Rd     0
@@ -2890,7 +2890,7 @@ Main Street~
 You are on the Main Street.  A small building lies to the west of you,
 and a much larger building is to the east.  You can see a fountain to the
 south, and the information building is to the north.  The road is kept tidy,
-but it is not in the best of repair.  
+but it is not in the best of repair.
 ~
 0 131072 0
 Rd     0
@@ -2915,7 +2915,7 @@ S
 The Adventurer's Guild~
 You have entered the Adventurer's Guild.  An archway leads to the west,
 back to Main Street.  The brickwork here is immaculate, and very well
-constructed.  A small window is on the east wall.  
+constructed.  A small window is on the east wall.
 ~
 0 131072 0
 Rd     0
@@ -2981,7 +2981,7 @@ S
 Forest Clearing~
 You are in a clearing.  To the south you can see a fairly large town,
 although not nearly as large as Bethaven.  You see a few people walking to
-and from buildings.  
+and from buildings.
 ~
 0 4 3
 Rd     0
@@ -3016,7 +3016,7 @@ S
 Forest Path~
 You are deep within a large forest.  A small path travels to the south
 and to the east.  The trees towering above your head are so overpowering,
-you feel insignificant by comparison.  
+you feel insignificant by comparison.
 ~
 0 0 3
 Rd     0
@@ -3141,7 +3141,7 @@ The Docks~
 You are on the eastern docks.  The docks themselves look sturdy enough to
 hold your weight.  A small path leads westward into a forest, and it also
 turns south.  The sky here is very beautiful, and the smell of nature fills
-your nostrils.  
+your nostrils.
 ~
 0 131072 0
 Rd     0
@@ -3159,7 +3159,7 @@ Forest Path~
 You are moving along a forest path, which is definately thicker to the
 west.  You can see what looks like a beach a little ways to the east, and a
 path that leads back into the forest.  You can feel the warmth of the beach
-brushing against your skin.  
+brushing against your skin.
 ~
 0 0 3
 Rd     0
@@ -3178,7 +3178,7 @@ You are moving along a forest path, which leads back into the forest to
 the west and south.  There is an oceanfront a little ways to the east, and a
 well trodden path leads down to it.  The forest is very thick to the west,
 but not so thick to the south.  You hear the sounds of birds and squirrels
-as you walk along the path.  
+as you walk along the path.
 ~
 0 0 3
 Rd     0
@@ -3198,9 +3198,9 @@ S
 #21476
 Path to the Beach~
 You are moving down a long dusty path to the beach.  A large forest can
-be easily seen to the west, and the ocean lies a little ways to the east. 
+be easily seen to the west, and the ocean lies a little ways to the east.
 You smell the salty air wafting in from the ocean, and hear the birds
-chirping overhead.  
+chirping overhead.
 ~
 0 0 10
 Rd     0
@@ -3218,7 +3218,7 @@ Path to the Beach~
 You are moving down a path leading to the beach.  You can feel the warm
 sand beneath your feet if you walk, and you can't help but smile.  The sun
 too is warm, and the beach looks very inviting.  This path goes north a
-little ways, then turns east towards the beach.  
+little ways, then turns east towards the beach.
 ~
 0 0 10
 Rd     0
@@ -3236,7 +3236,7 @@ Path to the Beach~
 You are moving down a path towards the beach.  You can see it quite
 clearly from here, the waves splashing up against the shores.  A small hill
 to the northeast prevents you from seeing around it until you go down there.
-The gentle rocking motion of the waves is very relaxing.  
+The gentle rocking motion of the waves is very relaxing.
 ~
 0 0 10
 Rd     0
@@ -3251,10 +3251,10 @@ D2
 S
 #21479
 Path to the Beach~
-You are moving along a path to the beach, which is directly to the east. 
+You are moving along a path to the beach, which is directly to the east.
 The cool salty breeze wafting from the ocean is a refreshing change from the
 pine-filled smell of the forest back to the west.  Your veins pump with
-anticipation for an up-close look at the ocean.  
+anticipation for an up-close look at the ocean.
 ~
 0 0 10
 Rd     0
@@ -3291,7 +3291,7 @@ You are on the beach.  A large hill is directly to the north, but a thin
 path leads around it.  The beach extends far to the south, where you can see
 what looks like a tent.  The ocean is truly magnificent, its blue-green
 colouring not like anything you have seen before.  The smell of salt-water
-is strong in your nostrils.  
+is strong in your nostrils.
 ~
 0 0 10
 Rd     0
@@ -3314,7 +3314,7 @@ You are moving along the beach, with warm sand at your feet.  A small
 path leading to the mainland forest is to the north, and a small building,
 looking like a tent is to the south.  You see a small hill to the north, and
 cannot see around it.  You hear the birds calling overhead, and the sound of
-the waves splashing against the shores.  
+the waves splashing against the shores.
 ~
 0 0 10
 Rd     0
@@ -3331,7 +3331,7 @@ S
 The Beach~
 You are moving along a warm, sandy beach.  You take a moment to glance
 around, and realize just how peaceful and calm this place is.  You feel as
-though you could rest here forever.  A small tent can be seen to the south. 
+though you could rest here forever.  A small tent can be seen to the south.
 ~
 0 0 10
 Rd     0
@@ -3349,7 +3349,7 @@ The Beach~
 You are moving along a sandy beach.  You can see what seems to be a large
 tent to the west, and a small tree stands beside it.  The ocean continues to
 splash calmly agaist the beach to the east, and you can see the other
-continent far off on the horizon.  
+continent far off on the horizon.
 ~
 0 0 10
 Rd     0
@@ -3367,7 +3367,7 @@ An Oasis~
 You eyes have played tricks on you!  There is not a tent here, but there
 is a rather large tree.  A huge pool of water is here, perhaps that is what
 you saw the reflection from.  The beach is back to the east.  This place
-gives you a very safe feeling.  
+gives you a very safe feeling.
 ~
 0 1024 10
 Rd     0
@@ -3384,7 +3384,7 @@ S
 The Beach~
 You are moving along a thin path around a hill on a beach.  The ocean is
 a little more violent here, and gets even more violent to the north.  You
-feel something of great importance to the north.  
+feel something of great importance to the north.
 ~
 0 0 0
 Rd     0
@@ -3416,7 +3416,7 @@ Forest Path~
 You are moving along a forest path.  The beach can be seen off to the
 east, and a path leading down to it lies to the northeast.  You can see a
 cross-junction to the south.  The ground is very dry here, as leaves and
-twigs snap under the weight of your trodding feet if you walk.  
+twigs snap under the weight of your trodding feet if you walk.
 ~
 0 0 3
 Rd     0
@@ -3433,7 +3433,7 @@ S
 Forest Path~
 You are moving along a forest path.  The trees to the west are taller and
 thicker than the ones in your immediate surroundings.  The path continues to
-the north and to the south.  The ground is very dry here.  
+the north and to the south.  The ground is very dry here.
 ~
 0 0 3
 Rd     0
@@ -3450,7 +3450,7 @@ S
 Forest Path~
 You are moving along a forest path.  The tree canopy lets in the smallest
 amount of light, and the leaves can be heard swaying in the breeze.  Perhaps
-this is a sign of the turbulent things that lie in your future.  
+this is a sign of the turbulent things that lie in your future.
 ~
 0 0 3
 Rd     0
@@ -3467,7 +3467,7 @@ S
 Forest Path~
 You are moving along a forest path.  The forest is very dense and
 tranquil here and to the west, while the path east rapidly turns into
-desert.  
+desert.
 ~
 0 0 0
 Rd     0
@@ -3493,7 +3493,7 @@ Mountainside Path~
 You are moving along the foot of a large mountain range which extends
 northward.  The forest to the south is very dark and mysterious, you feel a
 sense of something evil in that direction.  The path continues east and
-west.  
+west.
 ~
 0 0 3
 Rd     0
@@ -3511,7 +3511,7 @@ Mountainside Path~
 You are moving along the foot of a large mountain range which extends
 northward.  The forest to the south is very dark and mysterious, you feel a
 sense of something evil in that direction.  The path continues east and west
-from here.  
+from here.
 ~
 0 0 5
 Rd     0
@@ -3529,7 +3529,7 @@ Mountainside Path~
 You are moving along the foot of a large mountain range which extends to
 the north.  The forest in the southerly direction is very dark and
 mysterious, you feel a sense of evil coming from that direction.  The path
-continues to the east and west.  
+continues to the east and west.
 ~
 0 0 5
 Rd     0
@@ -3547,7 +3547,7 @@ Mountainside Path~
 You are moving along the foot of a large mountain range which extends
 northward.  The forest to the southeast is very dark and mysterious, you
 feel something evil in that direction.  The path continues east and south,
-following the mountain base perfectly.  
+following the mountain base perfectly.
 ~
 0 0 5
 Rd     0
@@ -3565,7 +3565,7 @@ Mountainside Path~
 You are moving along the base of a large mountain range.  The forest to
 the east is very dark and mysterious, and impenetrable.  You feel a sense of
 something evil in that direction.  The path continues north and south.  A
-rocky path leads off to the west.  
+rocky path leads off to the west.
 ~
 0 0 5
 Rd     0
@@ -3587,7 +3587,7 @@ Swampy Path~
 You are moving along a path leading into a swamp.  You can see something
 very dark and gloomy to the south.  Perhaps you had better not go in that
 direction any longer.  The path travels north, to the base of an array of
-mountains, and south, deeper into the swamp.  
+mountains, and south, deeper into the swamp.
 ~
 0 0 3
 Rd     0
@@ -3604,7 +3604,7 @@ S
 Swampy Path~
 You are moving along a dark, dank swamp.  The further south you go, the
 darker it seems to get.  A large tree has been overturned here, and it is
-rotting quite seriously.  The path continues south and north.  
+rotting quite seriously.  The path continues south and north.
 ~
 0 1 11
 Rd     0
@@ -3621,7 +3621,7 @@ S
 Swampy Path~
 You are moving along a swampy path, the ground mushing beneath your feet.
 You can feel something grave to the west.  The path also traverses to the
-north, leading out of the swamp.  You can hear the howls of the wind.  
+north, leading out of the swamp.  You can hear the howls of the wind.
 ~
 0 1 11
 Rd     0
@@ -3673,7 +3673,7 @@ S
 Mountainside Path~
 You are moving along the base of a large mountain range.  The forest to
 the south is very dark and mysterious, and you feel something evil in that
-direction.  The path continues to the east and to the west.  
+direction.  The path continues to the east and to the west.
 ~
 0 0 5
 Rd     0
@@ -3690,7 +3690,7 @@ S
 Mountainside Path~
 You are moving along a mountainside path.  A rocky path leads off to the
 north and to the south.  You can see what looks like smoke coming over the
-horizon to the north.  
+horizon to the north.
 ~
 0 0 5
 Rd     0
@@ -3712,7 +3712,7 @@ Mountain path~
 You are moving through a path cut into a mountain.  Upon closer
 examination, you realize that this path was cut by molten lava.  You begin
 to speculate that the smoke to the north is actually burning rock.  You hope
-that it is no longer flowing.  
+that it is no longer flowing.
 ~
 0 0 5
 Rd     0
@@ -3729,7 +3729,7 @@ S
 Mountain Path~
 You are moving along a mountain path.  The area to the north is very hot,
 and it is obvious why.  The lava flows freely in that direction.  This path
-leads a little ways around it to the east.  
+leads a little ways around it to the east.
 ~
 0 0 5
 Rd     0
@@ -3853,7 +3853,7 @@ You are moving through a volcano.  The molten lava to the west is very
 hot, and you wonder how anyone could walk on it.  You think you can see some
 sort of opening in the rockface a little ways to the west and to the east,
 but you cannot get a good look at it from here.  The path continues to the
-north and to the south.  
+north and to the south.
 ~
 0 0 5
 Rd     0
@@ -4065,7 +4065,7 @@ S
 Hilly Path~
 You are moving through a bunnch of hills.  A mountain range can be seen
 easily to the north, while the hills continue for what seems like an
-eternity to the south.  
+eternity to the south.
 ~
 0 0 4
 Rd     0
@@ -4082,7 +4082,7 @@ S
 Hilly Path~
 You are moving along a hilly path.  It travels in a swooping motion over
 the rolling hills, in no set pattern.  The path takes a sharp turn a little
-ways to the west, or goes north from here into the mountains.  
+ways to the west, or goes north from here into the mountains.
 ~
 0 0 4
 Rd     0
@@ -4133,7 +4133,7 @@ S
 Hilly Path~
 You are moving along the western hills.  A small town can be seen easily
 to the south, while the path continues to the north.  The breeze ruffles
-around you playfully.  
+around you playfully.
 ~
 0 0 4
 Rd     0
@@ -4150,7 +4150,7 @@ S
 Hilly Path~
 You are moving on a path just north of a small town.  This path leads
 into a hilly area, with your vision severely impaired.  You can see a rather
-large building directly to the south.  
+large building directly to the south.
 ~
 0 4 4
 Rd     0
@@ -4167,7 +4167,7 @@ S
 Pinnacle Road~
 You are moving along Pinnacle Road.  A path leads off through the hills
 to the north and to the east, while a small down is to the west.  A rather
-large building is to the south.  You do not see a way in from here though.  
+large building is to the south.  You do not see a way in from here though.
 ~
 0 131072 0
 Rd     0
@@ -4187,8 +4187,8 @@ S
 #21528
 Corner of Pinnacle Road and Peak Road~
 You are at the corner of Pinnacle and Peak Road.  You can see all manors
-of shops in all directions, the buildings are all different shapes and sizes. 
-They are all quite large, showing well the prosperity of this town.  
+of shops in all directions, the buildings are all different shapes and sizes.
+They are all quite large, showing well the prosperity of this town.
 ~
 0 131072 0
 Rd     0
@@ -4238,7 +4238,7 @@ S
 Local Pub~
 You have come into the local pub.  A large bar extends the entire width
 of it, stretching along the north wall.  A large archway leads back out to
-Pinnacle Road to the south.  
+Pinnacle Road to the south.
 ~
 0 1024 0
 Rd     0
@@ -4267,7 +4267,7 @@ You have just entered an Inn.  A large kitchen can be seen coming from
 behind a large counter.  The archway on the east wall leads back out to
 Pinnacle Road.  The floor is well worn, for this establishment gets many
 customers.  A door is on the north wall, leading to a room for you to sleep
-in.  
+in.
 ~
 0 1028 0
 Rd     0
@@ -4347,7 +4347,7 @@ S
 Peak Road~
 You are moving along Peak Road.  You can see a bank to the east, and a
 small unmarked building to the west.  Peak Road continues to the north, or
-travels south to the western docks.  
+travels south to the western docks.
 ~
 0 131072 0
 Rd     0
@@ -4390,7 +4390,7 @@ Light Forest Path~
 You are moving through a light forest.  The trees are not very close
 together, and their size shows that they are obviously not very old.  A town
 lies a little ways to the north, and a T-Junction can be seen immediately to
-the south.  
+the south.
 ~
 0 0 3
 Rd     0
@@ -4406,8 +4406,8 @@ S
 #21540
 Light Forest Path~
 You are moving through a light forest.  A town is easily in view to the
-north, while the coast and western docks like a little ways to the west. 
-The path continues on to the east for what seems like an eternity.  
+north, while the coast and western docks like a little ways to the west.
+The path continues on to the east for what seems like an eternity.
 ~
 0 4 3
 Rd     0
@@ -4429,7 +4429,7 @@ Light Forest Path~
 You are moving through a lightly forested area.  The trees are not
 growing very close together, and their lack of size shows how young
 everything is.  The western docks lie directly to the west, and the path can
-be seen making a fork to the east.  
+be seen making a fork to the east.
 ~
 0 0 3
 Rd     0
@@ -4447,7 +4447,7 @@ Western Docks~
 You are on the western docks.  The docks themselves look sturdy enough to
 hold your weight.  A small path leads eastward into a light forest, where it
 seems to go on forever.  The sky here is very peaceful, and the smell of
-untouched nature fills your nostrils.  
+untouched nature fills your nostrils.
 ~
 0 131072 3
 Rd     0
@@ -4478,7 +4478,7 @@ S
 Light Forest Path~
 You are moving through a light forest.  The path is very smooth, and a
 little dust and sand blow around your feet.  The path travels to the east
-and to the west as far as the eye can see.  
+and to the west as far as the eye can see.
 ~
 0 0 3
 Rd     0
@@ -4496,7 +4496,7 @@ Light Forest Path~
 You are moving along a lightly forested path.  The ground is very dry
 here, probably due to the desert located somewhat to the south.  A large
 building can be seen to the north.  It looks like an arena of some kind, but
-you do not see any way to get into it from here.  
+you do not see any way to get into it from here.
 ~
 0 0 3
 Rd     0
@@ -4514,7 +4514,7 @@ Light Forest Path~
 You are moving along a light forest path.  A rather large desert
 stretches out to the south from here, while the path continues for a very
 long while to the east and to the west.  Some sand blows around at your
-feet.  
+feet.
 ~
 0 0 3
 Rd     0
@@ -4536,7 +4536,7 @@ Light Forest Path~
 You are moving along a path.  The trees here are scarce, but they become
 thicker and more often to the east.  A rather large hill is to the south,
 and it gets higher to the east.  It looks as though the path leads around
-it.  
+it.
 ~
 0 0 3
 Rd     0
@@ -4573,7 +4573,7 @@ Light Forest Path~
 You are moving along a light forest path.  The area to the south is a
 rather large hill, and this path conveniently travels around it.  Another
 path can be seen to the east that leads north, along the edge of a dense
-forest.  
+forest.
 ~
 0 0 3
 Rd     0
@@ -4590,8 +4590,8 @@ S
 Light Forest Path~
 You are moving along the edge of a light forest.  To the south of here a
 large hill can be seen, while the path travels around it.  Another path can
-be seen to the east leading north along the edge of a much denser forest. 
-Small bits of sand and pebbles blow at your feet.  
+be seen to the east leading north along the edge of a much denser forest.
+Small bits of sand and pebbles blow at your feet.
 ~
 0 0 3
 Rd     0
@@ -4626,7 +4626,7 @@ Light Forest Path~
 You are moving along the northern edge of a rather large hill.  The trees
 are much denser to the east and north of here, and a path follows the edge
 of the forest in both directions.  The path also travels to the west.  Small
-bits of sand and pebbles blow around at your feet.  
+bits of sand and pebbles blow around at your feet.
 ~
 0 0 3
 Rd     0
@@ -4780,7 +4780,7 @@ Forest Swamp~
 You are moving through a swamp.  The sound of sloshing is all around you,
 whether you are walking or not.  The mud gurgles here and there beneath you.
 It is one of the most disgusting noises you have ever heard.  The smell of
-this place is really starting to get to you.  
+this place is really starting to get to you.
 ~
 0 0 11
 Rd     0
@@ -4798,7 +4798,7 @@ Forest Swamp~
 You are moving along the basin of a swamp.  The stench of the dirty
 waters fills your lungs, almost making you gag.  The light reflects off the
 surface of the water, almost giving it a warm feeling, but then you look
-around, and the decay quickly removes that image from your mind.  
+around, and the decay quickly removes that image from your mind.
 ~
 0 0 11
 Rd     0
@@ -5029,7 +5029,7 @@ S
 Forest Path~
 You are moving along a forest path.  You can see a fork a little ways to
 the west.  The leaves rustle overhead as the wind blows through them, and
-the smell of fresh air fills your nostrils.  
+the smell of fresh air fills your nostrils.
 ~
 0 0 10
 Rd     0
@@ -5046,7 +5046,7 @@ S
 Forest Path~
 You are moving along a forest path.  The ground is wet with moisture, a
 sign of a healthy forest.  You hear the birds chirping playfully over your
-head, but you do not see them when you look up.  
+head, but you do not see them when you look up.
 ~
 0 0 10
 Rd     0
@@ -5115,7 +5115,7 @@ S
 Forest Path~
 You are moving along a forest path.  The trees all around you are taller
 and thicker than the ones to the north.  The path continues to the north and
-to the south.  A cross junction can easily be seen to the north.  
+to the south.  A cross junction can easily be seen to the north.
 ~
 0 0 3
 Rd     0
@@ -5150,8 +5150,8 @@ S
 Mystic Forest~
 You are moving through a large, dark, mysterious forest.  The ground is
 not very well traversed, but has been definately cleared of rubble.  You
-can't help but feel slightly dizzy in here, for the magic is very strong. 
-The path continues to the west and south from here.  
+can't help but feel slightly dizzy in here, for the magic is very strong.
+The path continues to the west and south from here.
 ~
 0 0 3
 Rd     0
@@ -5170,7 +5170,7 @@ You are moving through the Mystic Forest.  It is a dark and mysterious
 place, filled to the brim with magical energy.  The trees seem to be getting
 taller as you admire your surroundings.  You can't really tell which
 direction is which in here, but you assume the path travels to the east and
-north from here.  
+north from here.
 ~
 0 0 3
 Rd     0
@@ -5187,7 +5187,7 @@ S
 Mystic Forest~
 You are moving through a strange forest.  You are a little dizzy from all
 the magic bombarding you, and you aren't sure which direction you are
-moving.  The path seems to travel to the north and to the south.  
+moving.  The path seems to travel to the north and to the south.
 ~
 0 0 3
 Rd     0
@@ -5223,7 +5223,7 @@ Mystic Forest~
 You are moving through a dark, mysterious forest, teeming with magical
 energies.  You can feel the magic emanating from the trees, filling your
 body, making you quiver.  The path seems to go east and west from here, and
-the magic is incredibly strong to the north.  
+the magic is incredibly strong to the north.
 ~
 0 0 3
 Rd     0
@@ -5245,7 +5245,7 @@ Mystic Forest~
 You are moving through the Mystic Forest, a dark and mysterious place
 filled to the brim with magical energies.  The trees themselves seem to be
 giving off magic, seemingly endless in power.  The path seems to go east and
-west from here.  
+west from here.
 ~
 0 0 3
 Rd     0
@@ -5262,7 +5262,7 @@ S
 Mystic Forest~
 You are moving through a dark, strange forest.  You can feel a sense of
 magic coming from the trees themselves.  The path seems to head off to the
-south and to the west.  Strange visions continue to fill your head.  
+south and to the west.  Strange visions continue to fill your head.
 ~
 0 0 3
 Rd     0
@@ -5281,7 +5281,7 @@ You are moving through a dark, mysterious forest.  You cannot tell if you
 are moving in a straight line, or if the path curves.  The path appears to
 go to the north and to the east from here.  You still see visions of
 something in every direction, but you cannot make out what they are visions
-of.  
+of.
 ~
 0 0 3
 Rd     0
@@ -5298,7 +5298,7 @@ S
 Mystic Forest~
 You are moving through a dark, mysterious forest.  Your senses are
 somewhat disoriented, seeing strange visions wherever you look.  You wander
-aimlessly through it, not knowing for sure which direction you move.  
+aimlessly through it, not knowing for sure which direction you move.
 ~
 0 0 3
 Rd     0
@@ -5366,7 +5366,7 @@ The Docks~
 You are on the docks of the new continent.  The docks continue to the
 mainland to the west, it is the only way to go.  You can see the main
 continent far to the east.  You take a moment to breathe the fresh air, the
-smell of nature filling your lungs.  You let out a sigh of relief.  
+smell of nature filling your lungs.  You let out a sigh of relief.
 ~
 0 0 0
 Rd     0
@@ -5404,9 +5404,9 @@ S
 #21596
 The Repair Smithy~
 You are in the repair shop.  A large forge can be seen in the northeast
-corner of the room, and a counter stretches along the entire east wall. 
+corner of the room, and a counter stretches along the entire east wall.
 Greetz is usually here to repair your things.  An archway lies to the west,
-leading back to Forge Way.  
+leading back to Forge Way.
 ~
 0 67109896 0
 Rd     0

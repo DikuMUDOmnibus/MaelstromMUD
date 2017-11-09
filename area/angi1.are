@@ -1,5 +1,5 @@
 #AREADATA
-Name        {??-???} Quest VNUMs         Angi~
+Name        Quest VNUMs~
 Levels      0 0
 Builders    Angi~
 VNUMs       2400 2425
@@ -20,7 +20,7 @@ questmaster master man~
 &W An aging old man stands before you, wise beyond his years.  His
 &Cpeaceful&W &W blue eyes lower to meet your gaze, and you sense a feeling
 &Wof warmth and kindness all over.  &W He stands before you quietly, waiting
-for the next &cquestor&W to arrive.  
+for the next &cquestor&W to arrive.
 ~
 32833 0 0 1000 S
 111 0 0 30000d0+0 0d0+0
@@ -137,7 +137,7 @@ doll~
 &W And need to &Rscream&W and &Rshout,
 &W Here's a little &RDammit Doll
 &W You cannot do without.
-&W 
+&W
 &W Just grab it firmly by the legs
 &W And find a place to &Rslam&W it,
 &W And as you work the stuffing out,

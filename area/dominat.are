@@ -1,7 +1,7 @@
 #AREADATA
-Name        { 50-55} House of Domination Rasputin~
+Name        House of Domination~
 Levels      50 55
-Builders    None~
+Builders    Rasputin~
 VNUMs       22000 22100
 Security    100
 Recall      25001
@@ -142,9 +142,9 @@ Grappler~
 Grappler drools as he sees you enter the room.
 ~
 Grappler has been kept in this room for too long.  He must be clinically
-insane by now.  On his face, is a black leather mask with a zipper on the 
+insane by now.  On his face, is a black leather mask with a zipper on the
 mouth.  He wears his leather jacket and pants, as well as his spiked
-collar.  It must get awfully lonely in this room.  Better keep your 
+collar.  It must get awfully lonely in this room.  Better keep your
 distance from Grappler.
 ~
 3 301990016 0 -638 S
@@ -198,7 +198,7 @@ Mrs. Benson~
 Mrs. Benson the Piano Teacher will teach you!
 ~
 Mrs. Benson is an old woman.  Her days as a great pianist are over.  All
-she can do now, is teach.  The years of discipline  have made her 
+she can do now, is teach.  The years of discipline  have made her
 an angry woman.  Better hit all the right notes today!
 ~
 3 134217856 0 394 S
@@ -360,7 +360,7 @@ A cockroach~
 A mediteranean cockroach dwells here.
 ~
 The cockroach's compact outer shell protects it from most of it's predators.
-It seems to have made it's home here, in this tunnel. 
+It seems to have made it's home here, in this tunnel.
 ~
 69 201330728 0 -193 S
 53 0 0 6492d0+0 0d0+0
@@ -384,7 +384,7 @@ The strong jet of the Jacuzzi.
 As you get closer to the jacuzzi, you accidentally push the ON button.
 A violent jet of hot water comes spurting out at you.  There is no sense
 in turning if OFF now.  You must fight it.
- 
+
 ~
 3 134234282 0 -373 S
 51 0 0 4373d0+0 0d0+0
@@ -464,7 +464,7 @@ strange plant~
 ~
 This strange looking plant is hidden in a corner.  It lies under a hot
 lamp, absorbing the light.  You give a quick glance around the room
-and pick a few leaves for yourself.  
+and pick a few leaves for yourself.
 ~
 3 16384 0 1000 S
 51 0 0 5120d0+0 0d0+0
@@ -609,7 +609,7 @@ reserved~
 E
 key~
 This is a simple key.  Its color is red marble and its complex pattern on
-it is very beautiful.  
+it is very beautiful.
 ~
 E
 red~
@@ -664,7 +664,7 @@ thigh high leather~
 If you are quite tall and petite in size, these boots will go up a ways
 past your knees.  They are made of a soft leather, and the sole is made of a
 very hard leather.  Laces tie up from the palm of the foot to just under the
-knee.  
+knee.
 ~
 E
 boots~
@@ -692,7 +692,7 @@ A
 E
 whip~
 This is a long black leather whip.  The ends have been frayed to add to
-the pain upon use.  
+the pain upon use.
 ~
 #22006
 duster~
@@ -1153,9 +1153,9 @@ ceiling~
 S
 #22001
 The Dark Passage~
-You proceed down the hallway, guiding your steps carefully.  You 
+You proceed down the hallway, guiding your steps carefully.  You
 wonder how you ever found this secret passage.  Something must be
-being kept hidden down here.  You are amazed at the ceiling 
+being kept hidden down here.  You are amazed at the ceiling
 texture.
 ~
 0 9 0
@@ -1178,7 +1178,7 @@ The Dark Passage~
 You are at the bottom of a stone staircase.  The rough steps are carved
 from the rock beneath the house.  The air is stale here as if not much fresh
 air makes its way this far in.  You hear what sounds like screams of pain
-and suffering coming from the top of the stairs.  
+and suffering coming from the top of the stairs.
 ~
 0 9 0
 Rd     0
@@ -1197,7 +1197,7 @@ The Dark Passage~
 You are at the top of a flight of stone stairs.  Screams can be heard
 echoing through the halls, some of them don't sound quite human, almost as
 if they have a ghostly echo to them.  You can follow the stairs downward or
-follow the hall to the north.  
+follow the hall to the north.
 ~
 0 9 0
 Rd     0
@@ -1215,7 +1215,7 @@ S
 The Dark Passage~
 You begin to wonder if this hallway has an end, as the torturous
 screaming sends shivers down your spine.  You notice a door in the east wall
-that is covered with spider webs and several cracks.  
+that is covered with spider webs and several cracks.
 ~
 0 9 0
 Rd     0
@@ -1238,7 +1238,7 @@ A Cellar~
 You push the wooden door wide open and enter into a small room.  There is
 a table in the center of the room.  On the table, you manage to read the
 carved words "obedience" and "discipline".  The room is covered in blood and
-urine and has a very prominant odor about it.  
+urine and has a very prominant odor about it.
 ~
 0 9 0
 Rd     0
@@ -1255,8 +1255,8 @@ door to the north.  The loud screams appear to be coming from within.
 You take a deep breath and look to the west.  The left wing appears to
 be a dead end.  You turn to the right wing and squint your eyes as you
 are nearly blinded by a bright light.  In the center of the intersection
-lies a statue of stone.  It's shape is that of a nude woman.  The 
-inscription at the bottom reads "Marize".  You assume she must be a 
+lies a statue of stone.  It's shape is that of a nude woman.  The
+inscription at the bottom reads "Marize".  You assume she must be a
 goddess of some sort.
 ~
 0 8 0
@@ -1285,7 +1285,7 @@ The Right Wing~
 You proceed into the right wing, covering your eyes from the light
 emanating from the east.  To the south is an empty room used for the
 benefit of the owner of the house.  Stains cover the walls in this
-hallway.  
+hallway.
 ~
 0 8 0
 Rd     0
@@ -1311,7 +1311,7 @@ S
 Into the Light~
 You have entered a blinding light.  You can see nothing else around you
 due to the intensity of such a light.  You press on in the direction you
-where moving and hope that what awaits you on the other side is safe.  
+where moving and hope that what awaits you on the other side is safe.
 ~
 0 8 0
 Rd     0
@@ -1327,11 +1327,11 @@ S
 #22009
 The Hall of Obedience~
 You are in the Hall of Obedience.  A strong urge to kneel overcomes you
-as you become more submissive.  Your mind relieves you of all ambitions. 
+as you become more submissive.  Your mind relieves you of all ambitions.
 Many mortals have passed through here at one point or another, but few have
 ever felt the desire to leave.  Here you will be taught how to obey your
 superior.  Proceed to the north, if you survive.  Obedience is the only
-way...  
+way...
 ~
 0 0 0
 Rd     0
@@ -1349,7 +1349,7 @@ S
 #22010
 The Left Wing~
 As you hesitantly move into the left wing, you let out a sigh of
-despair.  There does not appear to be another exit other then the 
+despair.  There does not appear to be another exit other then the
 one you came through.  The walls are dirty and cold.  The air does
 not reach your lungs as easily, in this underground tunnel.  As you
 pause to regain your courage, you tell yourself that this must be
@@ -1373,8 +1373,8 @@ You are now in the Hall of Discipline.  You have passed the first test -
 Obedience.  Can you pass the next one?  You shall soon find out.  This room
 is quite similar to the previous one.  Here you must learn how to serve your
 superior.  A code of conduct will be taught to you.  An immense steel door
-blocks your way to the north.  Pleasures of the flesh await you behind it. 
-Discipline is the only way...  
+blocks your way to the north.  Pleasures of the flesh await you behind it.
+Discipline is the only way...
 ~
 0 8 0
 Rd     0
@@ -1392,7 +1392,7 @@ S
 #22012
 Marize's Room of Punishment~
 Marize's room is conveniently decorated for her special needs as a
-dominatrix.  You quickly glance at the surrounding walls to discover they 
+dominatrix.  You quickly glance at the surrounding walls to discover they
 are covered with the different 'tools' Marize uses.  The ceiling in this
 room is very high.  Several chains hang from it.  The soft glow of candles
 provides an almost calm atmosphere.  Marize's bedding is made of red satin.
@@ -1409,7 +1409,7 @@ door~
 S
 #22013
 The Padded Room~
-As you enter this secluded room, you can hear almost no sounds from outside 
+As you enter this secluded room, you can hear almost no sounds from outside
 of it. The walls are covered with a soft, rubber-like material as if it were
 made for protecting whomever was within them. There is a small lantern hanging
 far above you from the ceiling to add some light here. A few small holes have
@@ -1429,7 +1429,7 @@ The Whipping Room~
 This room sends a chill down your spine.  Two shackles hang from chains
 in the center of the ceiling.  On a small table, several different
 whips can be seen.  You can tell by the fresh blood puddles on the ground
-that this room was recently used.  You reflect on what it would feel 
+that this room was recently used.  You reflect on what it would feel
 like to be bonded by such chains and decide you are quite happy the way
 you are.
 ~
@@ -1442,11 +1442,11 @@ D0
 S
 #22015
 The Ledge~
-When you finally open your eyes, the images slowly come back into focus. 
+When you finally open your eyes, the images slowly come back into focus.
 You are on a ledge, along a brick wall.  It is now obvious that the blinding
 light was coming from the sun's rays.  You immediately notice that you are
 high above the ground but fail to balance your weight correctly.  You freeze
-up for a few seconds before you fall over the ledge!  
+up for a few seconds before you fall over the ledge!
 ~
 0 167804932 4
 Rd     0
@@ -1692,7 +1692,7 @@ The Living Room~
 As you enter the living room, you immediately notice the carpet in the
 middle of the floor is hand woven.  There are a few armchairs and a big
 couch here placed in front of the fire place which provides warmth during
-the winter seasons.  
+the winter seasons.
 ~
 0 8 0
 Rd     0
@@ -1718,7 +1718,7 @@ The Kitchen~
 The kitchen is the brightest room in the house.  It's windows also look
 onto the backyard.  The sweet aroma you smelled earlier is coming from one
 of the pots on the the beautiful woodstove that burns constantly, providing
-both heat and a cooking surface.  
+both heat and a cooking surface.
 ~
 0 8 0
 Rd     0
@@ -1744,7 +1744,7 @@ it is only set for one.  As you look into the china cabinet near the
 far wall, you notice plates and glasses of great value.  Some are
 imports from all around the world.  The owner of this house posseses
 a great appreciation for material things.  The windows in this room
-look onto the backyard.  The door to the greenhouse is to the 
+look onto the backyard.  The door to the greenhouse is to the
 east.
 ~
 0 8 0
@@ -1760,11 +1760,11 @@ D2
 S
 #22032
 The Family Room~
-"Those leather sofas look comfortable!", you say to yourself as you 
-walk into the family room.  You sit down for an instant, wondering 
+"Those leather sofas look comfortable!", you say to yourself as you
+walk into the family room.  You sit down for an instant, wondering
 why this home is called the house of domination.  A few magazines are
 neatly piled on the table next to the sofa.  You pick one up and begin
-to read the cover page.  "Doms and Subs" is it's title.  You read a 
+to read the cover page.  "Doms and Subs" is it's title.  You read a
 few pages and put it down.  It's interesting, to say the least.
 The windows in this room look out to the front of the house.
 ~
@@ -1784,7 +1784,7 @@ The Entrance Hall~
 You enter into the house of domination and shut the door behind
 you.  You forget to remove your shoes, like always, not thinking
 about your manners.  You see a curved staircase directly in front
-of you, leading to the second floor.  A crystal chandelier hangs 
+of you, leading to the second floor.  A crystal chandelier hangs
 high up on the ceiling.  There are several paintings carefully
 positioned on the walls.  A sweet odor is coming from the north.
 ~
@@ -1813,7 +1813,7 @@ D4
 S
 #22034
 Hallway Leading to Bedrooms~
-This hallway leads to the bedrooms of the house.  Some tapestries 
+This hallway leads to the bedrooms of the house.  Some tapestries
 decorate the walls.  To the west are the master chambers.  To the
 east is another bedroom and a bathroom.  Perhaps the attic is
 that way.
@@ -1864,7 +1864,7 @@ reach out and touch the bedding.  You have never felt such a smooth material
 before.  There are two mirrored closets on either side of the bed.  Several
 paintings add to the beautiful decor of this room.  You search the ceiling
 for a door to the attic without success.  You should look in the other
-bedroom.  To the south is a bathroom.  
+bedroom.  To the south is a bathroom.
 ~
 0 8 0
 Rd     0
@@ -1882,7 +1882,7 @@ A Bathroom~
 This small bathroom is painted with green.  As you look in the mirror
 to fix your hair, you notice that this room is very neat.  There is
 one sink here, with a soap resting in the holder.  All the cabinets
-and drawers are closed.  The bathtub occupies some space in the 
+and drawers are closed.  The bathtub occupies some space in the
 corner.  A shower head hangs above it.  Green shower curtains cling
 to the rod.  Everything is Spic and Span!
 ~
@@ -1897,7 +1897,7 @@ S
 A Bedroom~
 From the looks of this room, you conclude that it has not been used
 in a long time.  The double bed lies against the far wall, under the
-window.  It's bedding appears faded from the sunlight.  You walk to 
+window.  It's bedding appears faded from the sunlight.  You walk to
 the closet in this room, and look inside.  There are a few hangers,
 but no clothing.  Even the drawer on the desk, here, proves to be
 empty.  A red chair has left imprints in the carpet from being in
@@ -1960,10 +1960,10 @@ The Door to the House of Domination~
 You have reached the front of the House of Domination.  The facade
 of this abode is immense in size.  It appears to be two stories
 high, however there may be some floors beyond your sight range.  The
-house is made of brick and looks quite modern.  The front door is 
-also quite large.  The golden doorknob matches the mailbox fixed on 
+house is made of brick and looks quite modern.  The front door is
+also quite large.  The golden doorknob matches the mailbox fixed on
 the wall.  Some of the curtains have been closed in the upstairs
-windows.  For a moment you think you see the outline of a person 
+windows.  For a moment you think you see the outline of a person
 looking down at you.  An inviting doormat lies below the door.
 ~
 0 0 0
@@ -2069,7 +2069,7 @@ S
 Along a Dirt Path~
 You are standing on a somewhat crude, and seldom-used path, which runs to
 the east and west.  Small clouds of dust funnel up from beneath your feet as
-you walk along, getting into your eyes and nose.  
+you walk along, getting into your eyes and nose.
 ~
 0 0 4
 Rd     0
@@ -2086,7 +2086,7 @@ S
 Along a Small Path~
 The path continues to the east and west here, cutting its crude trail
 through the area.  It looks to have been made many years ago, and seldom
-used thereafter.  
+used thereafter.
 ~
 0 0 4
 Rd     0
@@ -2103,7 +2103,7 @@ S
 A Quiet Walk~
 You are standing on a walkway that leads from a large house to the grassy
 fields to the south.  The house is very large and surpriseingly well kept
-considering its relative remoteness from the city of bethaven.  
+considering its relative remoteness from the city of bethaven.
 ~
 0 0 4
 Rd     0
@@ -2121,7 +2121,7 @@ Along a Small Path~
 The path makes a turn here, leaving south and west as your current
 choices of travel.  To the south you can see a vast and wide open field.  A
 butterfly floats by you on its way to the field, stopping to rest for a
-moment on your shoulder before continuing it's journey.  
+moment on your shoulder before continuing it's journey.
 ~
 0 0 0
 Rd     0
@@ -2139,7 +2139,7 @@ Grassy Fields~
 You stand at the edge of the grassy fields.  To the north lies the city
 walls of Bethaven.  To the south of you stretches a vast grassy field.  The
 grass here seems of a strong breed unaffected by changes in weather.  You
-may continue to the north and south.  
+may continue to the north and south.
 ~
 0 0 2
 Rd     0
@@ -2157,7 +2157,7 @@ Grassy Fields~
 You stand in a grassy field.  All around you are more grassy fields.  You
 hear the sound of animals scurrying about.  The grass sways in the breeze,
 and brushes against you.  You can continue your travels in any direction,
-but all lead to more grassy fields.  
+but all lead to more grassy fields.
 ~
 0 0 0
 Rd     0
@@ -2183,7 +2183,7 @@ Grassy Fields~
 Grass is about the only thing you can see for miles around you except
 that far off to the north you can just barely make out the walls of the
 great city of bethaven.  Birds can be heard chirping happily as they nest
-somewhere off in the tall grass.  
+somewhere off in the tall grass.
 ~
 0 0 0
 Rd     0
@@ -2208,7 +2208,7 @@ S
 Grassy Fields~
 The fields stretch out around you for mile, the grass so tall that you
 can barely see over it sways slightly in the wing.  A long ways off to the
-north east the walls of the great city bethaven rise up around you.  
+north east the walls of the great city bethaven rise up around you.
 ~
 0 0 0
 Rd     0
@@ -2226,7 +2226,7 @@ Grassy Fields~
 Standing in the middle of a grassy field you can see forever.  To the
 north east the huge walls of bethaven rise up to meet the skys.  Tiny wild
 flowers of every color imaginable can be seen growing freely in the tall
-grasses.  
+grasses.
 ~
 0 0 0
 Rd     0
@@ -2244,7 +2244,7 @@ Grassy Fields~
 You are walking through a huge field, tiny mice skitter to get out of
 your way and birds start and fly off to a safe distance.  The area is fairly
 quiet with only mother natures music to sing to you as you continue on your
-way.  
+way.
 ~
 0 0 0
 Rd     0
@@ -2266,7 +2266,7 @@ Grassy Fields~
 As you walk through the tall grass, something touches your foot and runs
 off.  You hope it was just one of the many tiny field mice you have seen
 racing through the grass.  Tiny wild flowers grow abundantly here and send
-up a sweet fragrance as you walk.  
+up a sweet fragrance as you walk.
 ~
 0 0 0
 Rd     0
@@ -2288,7 +2288,7 @@ Grassy Fields~
 The tall grass around you sways slighty in the wind creating a soothing
 swishing sound.  Somewhere you can here a female sparrow calling to her mate
 and not to far off a squirrel chatters excitedly.  You can continue in a
-north or south direction.  
+north or south direction.
 ~
 0 0 0
 Rd     0
@@ -2305,7 +2305,7 @@ S
 Grassy Fields~
 Tiny wild flowers grow abundently amongst the tall grasses that can be
 seen swaying in the wind.  The flowers adding a spray of bright colors to
-the otherwise drab greens and browns of the grass.  
+the otherwise drab greens and browns of the grass.
 ~
 0 0 0
 Rd     0
@@ -2324,7 +2324,7 @@ Tiny wild flowers grow abundently amongst the tall grasses that can be
 seen swaying in the wind.  The flowers adding a spray of bright colors to
 the otherwise drab greens and browns of the grass.  A spiders web attached
 to a couple of tall blades is covered with sparking dew drops that make the
-web glisten in even the smallest light, as if it where set with jewels.  
+web glisten in even the smallest light, as if it where set with jewels.
 ~
 0 0 0
 Rd     0
@@ -2343,7 +2343,7 @@ The gassy field stretches you before you on all side.  Tiny wild flowers
 send up a sweet fragerance as they sway in the wind, constantly brushed by
 the grass around them.  The flowers give the area a much needed splash of
 color as the drab browns and greens of the grass threaten to take over the
-area.  
+area.
 ~
 0 0 0
 Rd     0
@@ -2360,7 +2360,7 @@ S
 Grassy Fields~
 You stand within a great semi circle of trees.  As you look at the trees
 the seem to grow together blocking any further travel.  You come to the
-realization that the only directions you may go are west and north.  
+realization that the only directions you may go are west and north.
 ~
 0 0 0
 Rd     0
@@ -2379,7 +2379,7 @@ As you look about your surroundings, you see tiny field mice playing
 around your feet.  You see a patch of wild flowers a short distance to the
 north.  Looking to the west you nothing but more grassy fields.  As you
 decide to move on you try not to step on the tiny field mice playing near
-your feet.  
+your feet.
 ~
 0 0 0
 Rd     0
@@ -2396,7 +2396,7 @@ S
 Grassy Fields~
 You stand in a grassy field.  The grass seems of a hardy breed and seems
 as if it could withstand the change of seasons without notice.  To the north
-and east are more grassy fields.  
+and east are more grassy fields.
 ~
 0 0 0
 Rd     0
@@ -2413,7 +2413,7 @@ S
 On a Small Dirt Path~
 The dirt path is very primitive in nature, and appears to be unused for
 many years.  It stretches to the east and west from this point, allowing you
-passage in either direction.  
+passage in either direction.
 ~
 0 0 0
 Rd     0
@@ -2430,7 +2430,7 @@ S
 On a Small Path~
 Though the path is very ancient looking, and appears to be unused, it has
 still maintained it's shape, and looks to be in better condition than would
-be expected.  You may continue to the east and west.  
+be expected.  You may continue to the east and west.
 ~
 0 0 0
 Rd     0
@@ -2447,7 +2447,7 @@ S
 Travelling a Small Dirt Path~
 The dust from the path rises and settles with your every step, throing up
 clouds which cause some discomfort in breathing.  You may continue along the
-path to the east and west from this point.  
+path to the east and west from this point.
 ~
 0 0 0
 Rd     0
@@ -2465,7 +2465,7 @@ On a Small Dirt Path~
 There is no vegetation grwoing along the sides of the pathway here, or on
 the path itself, almost as though the wildlife of the surrounding forests
 prefer to stay as far away from it as possible.  The path continues to the
-east and west from here.  
+east and west from here.
 ~
 0 0 0
 Rd     0
@@ -2482,7 +2482,7 @@ S
 A Small Path~
 The small path was made as a runoff of the ancient graveyard which lies
 to the west.  From this point it runs to the east and west, allowing you to
-make a choice as to which way you wish to go.  
+make a choice as to which way you wish to go.
 ~
 0 4 0
 Rd     0
@@ -2501,7 +2501,7 @@ Cigar smoke fills the air in this room.  The massive pool table in the
 center hovers in and out of it.  As you grab your personal cue and chalk
 it, you think of all the games you played back in England.  You set up the
 table and begin with a thunderous break.  Nothing like a few games of pool
-and a pint or twenty-three to top off a day.  
+and a pint or twenty-three to top off a day.
 ~
 0 132108 0
 Rd     0
@@ -2549,9 +2549,9 @@ S
 &rAs your eyes open, they are burnt by the lashing &Yflames&r that haunt
 this terrible place.  Only those who have discovered a gateway have ever
 been here.  Your stay here shall be temporary...  Unlike Rasputin's.  This
-poor being has been kept here against his will by the &zdevil&r himself. 
+poor being has been kept here against his will by the &zdevil&r himself.
 Forced to perform satanic deeds, he awaits salvation...  As should
-&pYOU&r!!!  
+&pYOU&r!!!
 ~
 0 140944396 0
 Rd     0
@@ -2564,7 +2564,7 @@ carpet from India.  Its fabric and design are incredible.  A sturdy
 wooden desk holds many objects.  Amongst these is a grey laptop
 computer, of great importance to Rasputin.  A comfortable leather
 chair of black color is near the desk.  An old fashioned lamp provides
-a reading light.  
+a reading light.
 ~
 0 140300 0
 Rd     0

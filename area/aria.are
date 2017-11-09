@@ -1,5 +1,5 @@
 #AREADATA
-Name        {??-???} PROTO AREA          Aria~
+Name        PROTO AREA~
 Levels      0 0
 Builders    Aria~
 VNUMs       6500 6599
@@ -17,10 +17,10 @@ Love~
 the Energy of Love~
 Love, in it's purest form, &rS&bW&pI&YR&WL&CS &Pall around you here.
 ~
-You never thought a sight as beautiful as this would be possible. 
+You never thought a sight as beautiful as this would be possible.
 Streams of colors float through the air, and surround you with a million
 tiny rainbows.  The colors seem to make a soft, pleasing noise as they pass
-you, almost as if they were singing to you.  
+you, almost as if they were singing to you.
 ~
 3 524416 0 1000 S
 5 0 0 100d0+0 0d0+0
@@ -34,7 +34,7 @@ a tiny faerie~
 ~
 Dressed in a pretty ruffled dress of pink, the faerie smiles down at you.
 Her long blonde hair is soaking wet from the mist and water.  She looks to
-you with bright, innocent green eyes as her tiny wings flutter behind her. 
+you with bright, innocent green eyes as her tiny wings flutter behind her.
 ~
 71 128 0 1000 S
 90 0 0 20000d0+0 0d0+0
@@ -54,7 +54,7 @@ a tiny faerie~
 ~
 Dressed in a pretty ruffled dress of black, the faerie smiles down at
 you.  Her long black hair blows softly in the gentle breeze.  She looks down
-to you with innocent red eyes as her tiny wings flutter behind her.  
+to you with innocent red eyes as her tiny wings flutter behind her.
 ~
 71 128 0 1000 S
 90 0 0 20000d0+0 0d0+0
@@ -74,7 +74,7 @@ a tiny faerie~
 ~
 Dressed in a pretty ruffled dress of orange, the faerie smiles down at
 you.  Her long brown hair frames her face.  She looks to you with bright,
-innocent brown eyes as her tiny wings flutter behind her.  
+innocent brown eyes as her tiny wings flutter behind her.
 ~
 71 128 0 1000 S
 90 0 0 20000d0+0 0d0+0
@@ -85,7 +85,7 @@ innocent brown eyes as her tiny wings flutter behind her.
 if ispc($n)
 cast 'armor' $n
 endif
- 
+
 ~
 |
 #0
@@ -119,7 +119,7 @@ reserved~
 0 0 0
 E
 plaque~
-Tammy and Daniel..  May 11th, 1996...  
+Tammy and Daniel..  May 11th, 1996...
 ~
 #6519
 fountain rose water~
@@ -137,7 +137,7 @@ E
 plaque~
 This rose stands here as a sign of Aria's contribution to the storm.  It
 signifies her love for the mud and her devotion to it.  She hopes You enjoy
-this area she has built for you and she also hopes to build many more.  
+this area she has built for you and she also hopes to build many more.
 ~
 #6530
 fountain water vampire~
@@ -156,7 +156,7 @@ plaque~
 Although there isn't actually blood in this fountain, it is here to
 commemerate one of my favorite characters in movies and novels alike.  It
 was modeled after the character Dracula, ofcourse..but after the original
-Dracula.  
+Dracula.
 ~
 #6561
 fountain water~
@@ -174,7 +174,7 @@ E
 plaque~
 It has been said that when a person dies, their soul gets carried to
 heaven by a sparrow.  This fountain is to commemorate the bird that carries
-our souls to their resting places.  
+our souls to their resting places.
 ~
 #0
 
@@ -206,7 +206,7 @@ barely see the tops of what appear to be tall stone statues.  A soft breeze
 seems to whisper "Intruder" as it gently passes your ear and you turn to
 leave.  In horror, you find that the opening in which you entered this place
 has sealed itself, leaving you with no way out.  The cobblestone path leads
-east and south.  
+east and south.
 ~
 0 401408 2
 Rd     0
@@ -228,7 +228,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both east and west.  
+gentle breeze.  The path continues both east and west.
 ~
 0 401408 2
 Rd     0
@@ -250,7 +250,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues east, south and west.  
+gentle breeze.  The path continues east, south and west.
 ~
 0 401408 2
 Rd     0
@@ -276,7 +276,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both east and west.  
+gentle breeze.  The path continues both east and west.
 ~
 0 401408 2
 Rd     0
@@ -298,7 +298,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both south and west.  
+gentle breeze.  The path continues both south and west.
 ~
 0 401408 2
 Rd     0
@@ -320,7 +320,7 @@ left are giant bags of dirt and fertilizer.  Above the stacks, covering the
 entire width of the wall, is a rack full of various gardening tools.  In the
 far right corner you see a large rusty wheelbarrow.  The gardener must be
 extremely strong to be able to push it all around the garden.  To the south
-you can see a large fountain.  The path extends south.  
+you can see a large fountain.  The path extends south.
 ~
 0 401417 0
 Rd     0
@@ -338,7 +338,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both east and south.  
+gentle breeze.  The path continues both east and south.
 ~
 0 401408 2
 Rd     0
@@ -360,7 +360,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both east and west.  
+gentle breeze.  The path continues both east and west.
 ~
 0 401408 2
 Rd     0
@@ -382,7 +382,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues east, south and west.  
+gentle breeze.  The path continues east, south and west.
 ~
 0 401408 2
 Rd     0
@@ -408,7 +408,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both east and west.  
+gentle breeze.  The path continues both east and west.
 ~
 0 401408 2
 Rd     0
@@ -430,7 +430,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both east and west.  
+gentle breeze.  The path continues both east and west.
 ~
 0 401408 2
 Rd     0
@@ -452,7 +452,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both east and west.  
+gentle breeze.  The path continues both east and west.
 ~
 0 401408 2
 Rd     0
@@ -474,7 +474,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both south and west.  
+gentle breeze.  The path continues both south and west.
 ~
 0 401408 2
 Rd     0
@@ -496,7 +496,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both north and south.  
+gentle breeze.  The path continues both north and south.
 ~
 0 401408 2
 Rd     0
@@ -528,7 +528,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both north and south.  
+gentle breeze.  The path continues both north and south.
 ~
 0 401408 2
 Rd     0
@@ -550,7 +550,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues north, east and south.  
+gentle breeze.  The path continues north, east and south.
 ~
 0 401408 2
 Rd     0
@@ -577,7 +577,7 @@ the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
 gentle breeze.  To the east you can see a large fountain.  The path
-continues both east and west.  
+continues both east and west.
 ~
 0 401408 2
 Rd     0
@@ -600,7 +600,7 @@ creating this wonder is magnificent.  Each petal is perfectly formed,
 painted in a bright shade of red.  Each leaf also pefrect, right down to the
 detail in it's veins.  A small brass plaque has been fastened to the base of
 the fountain.  To the north you can see a small shed.  The path continues in
-all directions.  
+all directions.
 ~
 0 394240 2
 Rd     0
@@ -631,7 +631,7 @@ the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
 gentle breeze.  To the west you can see a large fountain.  The path
-continues both east and west.  
+continues both east and west.
 ~
 0 401408 2
 Rd     0
@@ -653,7 +653,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues north, south and west.  
+gentle breeze.  The path continues north, south and west.
 ~
 0 401408 2
 Rd     0
@@ -680,7 +680,7 @@ the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
 gentle breeze.  To the south you can see a large fountain.  The path
-continues both north and south.  
+continues both north and south.
 ~
 0 401408 2
 Rd     0
@@ -702,7 +702,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both north and south.  
+gentle breeze.  The path continues both north and south.
 ~
 0 401408 2
 Rd     0
@@ -724,7 +724,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both north and south.  
+gentle breeze.  The path continues both north and south.
 ~
 0 401408 2
 Rd     0
@@ -746,7 +746,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both north and south.  
+gentle breeze.  The path continues both north and south.
 ~
 0 401408 2
 Rd     0
@@ -768,7 +768,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both north and south.  
+gentle breeze.  The path continues both north and south.
 ~
 0 401408 2
 Rd     0
@@ -789,7 +789,7 @@ water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
 gently in thesoft breeze.  To the north you can see a large fountain.  The
-brook flows both north and south.  
+brook flows both north and south.
 ~
 0 401408 2
 Rd     0
@@ -811,7 +811,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both north and east.  
+gentle breeze.  The path continues both north and east.
 ~
 0 401408 2
 Rd     0
@@ -834,7 +834,7 @@ the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
 gentle breeze.  To the east you can see a large fountain.  The path
-continues both east and west.  
+continues both east and west.
 ~
 0 401408 2
 Rd     0
@@ -856,7 +856,7 @@ tall lean body is clothed in all black with the exception of the red lining
 on his cape.  Falling from the two fangs which can be seen in the corner of
 his mouth are tiny red droplets which form a pool below.  A brass plaque is
 fastened to the base of the fountain.  To the south you can see a small
-shed.  The path continues in all directions.  
+shed.  The path continues in all directions.
 ~
 0 394240 2
 Rd     0
@@ -887,7 +887,7 @@ the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
 gentle breeze.  To the west you can see a large fountain.  The path
-continues both east and west.  
+continues both east and west.
 ~
 0 401408 2
 Rd     0
@@ -909,7 +909,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues east, south and west.  
+gentle breeze.  The path continues east, south and west.
 ~
 0 401408 2
 Rd     0
@@ -935,7 +935,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both east and west.  
+gentle breeze.  The path continues both east and west.
 ~
 0 401408 2
 Rd     0
@@ -957,7 +957,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues north, south and west.  
+gentle breeze.  The path continues north, south and west.
 ~
 0 401408 2
 Rd     0
@@ -982,7 +982,7 @@ water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
 gently in the soft breeze.  To the south you can see a small shed.  The
-brook flows north, east and south.  
+brook flows north, east and south.
 ~
 0 401408 2
 Rd     0
@@ -1006,7 +1006,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows both east and west.  
+gently in the soft breeze.  The brook flows both east and west.
 ~
 0 401408 2
 Rd     0
@@ -1026,7 +1026,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows north, south and west.  
+gently in the soft breeze.  The brook flows north, south and west.
 ~
 0 401408 2
 Rd     0
@@ -1052,7 +1052,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both north and south.  
+gentle breeze.  The path continues both north and south.
 ~
 0 401408 2
 Rd     0
@@ -1072,7 +1072,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows north.  
+gently in the soft breeze.  The brook flows north.
 ~
 0 401408 2
 Rd     0
@@ -1090,7 +1090,7 @@ left are giant bags of dirt and fertilizer.  Above the stacks, covering the
 entire width of the wall, is a rack full of various gardening tools.  In the
 far right corner you see a large rusty wheelbarrow.  The gardener must be
 extremely strong to be able to push it all around the garden.  To the north
-you see a large fountain.  The path extends north.  
+you see a large fountain.  The path extends north.
 ~
 0 401417 0
 Rd     0
@@ -1108,7 +1108,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both north and south.  
+gentle breeze.  The path continues both north and south.
 ~
 0 401408 2
 Rd     0
@@ -1130,7 +1130,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both north and south.  
+gentle breeze.  The path continues both north and south.
 ~
 0 401408 2
 Rd     0
@@ -1152,7 +1152,7 @@ left are giant bags of dirt and fertilizer.  Above the stacks, covering the
 entire width of the wall, is a rack full of various gardening tools.  In the
 far right corner you see a large rusty wheelbarrow.  The gardener must be
 extremely strong to be able to push it all around the garden.  The path
-extends north.  
+extends north.
 ~
 0 401417 0
 Rd     0
@@ -1168,7 +1168,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows both north and east.  
+gently in the soft breeze.  The brook flows both north and east.
 ~
 0 401408 2
 Rd     0
@@ -1188,7 +1188,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows east, south and west.  
+gently in the soft breeze.  The brook flows east, south and west.
 ~
 0 401408 2
 Rd     0
@@ -1212,7 +1212,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows north, east and west.  
+gently in the soft breeze.  The brook flows north, east and west.
 ~
 0 401408 2
 Rd     0
@@ -1236,7 +1236,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows east, south and west.  
+gently in the soft breeze.  The brook flows east, south and west.
 ~
 0 401408 2
 Rd     0
@@ -1260,7 +1260,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows north, east and west.  
+gently in the soft breeze.  The brook flows north, east and west.
 ~
 0 401408 2
 Rd     0
@@ -1284,7 +1284,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows both east and west.  
+gently in the soft breeze.  The brook flows both east and west.
 ~
 0 401408 2
 Rd     0
@@ -1304,7 +1304,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows east, south and west.  
+gently in the soft breeze.  The brook flows east, south and west.
 ~
 0 401408 2
 Rd     0
@@ -1328,7 +1328,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows west.  
+gently in the soft breeze.  The brook flows west.
 ~
 0 401408 2
 Rd     0
@@ -1346,7 +1346,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues north, east and south.  
+gentle breeze.  The path continues north, east and south.
 ~
 0 401408 2
 Rd     0
@@ -1372,7 +1372,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both east and west.  
+gentle breeze.  The path continues both east and west.
 ~
 0 401408 2
 Rd     0
@@ -1394,7 +1394,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both north and west.  
+gentle breeze.  The path continues both north and west.
 ~
 0 401408 2
 Rd     0
@@ -1417,7 +1417,7 @@ the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
 gentle breeze.  To the south you can see a large fountain.  The path
-continues both north and south.  
+continues both north and south.
 ~
 0 401408 2
 Rd     0
@@ -1437,7 +1437,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows both north and south.  
+gently in the soft breeze.  The brook flows both north and south.
 ~
 0 401412 2
 Rd     0
@@ -1457,7 +1457,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows both north and south.  
+gently in the soft breeze.  The brook flows both north and south.
 ~
 0 401412 2
 Rd     0
@@ -1479,7 +1479,7 @@ left are giant bags of dirt and fertilizer.  Above the stacks, covering the
 entire width of the wall, is a rack full of various gardening tools.  In the
 far right corner you see a large rusty wheelbarrow.  The gardener must be
 extremely strong to be able to push it all around the garden.  The path
-extends south.  
+extends south.
 ~
 0 401421 0
 Rd     0
@@ -1498,7 +1498,7 @@ the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
 gentle breeze.  To the south you can see a large fountain.  The path
-continues both north and south.  
+continues both north and south.
 ~
 0 401408 2
 Rd     0
@@ -1520,7 +1520,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both east and south.  
+gentle breeze.  The path continues both east and south.
 ~
 0 401408 2
 Rd     0
@@ -1543,7 +1543,7 @@ the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
 gentle breeze.  To the east you can see a large fountain.  The path
-continues both east and west.  
+continues both east and west.
 ~
 0 401408 2
 Rd     0
@@ -1564,7 +1564,7 @@ bending down for a drink.  Their small brown bodies and grey tinted wings
 seem to shine here.  The pool, filled with the clear sparkling water, is
 also contained in a marble casing.  A gentle breeze blows past you, making
 tiny ripples in the water.  A brass plaque is attached to the base of this
-fountain.  The path continues in all directions.  
+fountain.  The path continues in all directions.
 ~
 0 394240 2
 Rd     0
@@ -1595,7 +1595,7 @@ the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
 gentle breeze.  To the west you can see a large fountain.  The path
-continues both north and south.  
+continues both north and south.
 ~
 0 401408 2
 Rd     0
@@ -1615,7 +1615,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows in all directions.  
+gently in the soft breeze.  The brook flows in all directions.
 ~
 0 401408 2
 Rd     0
@@ -1644,7 +1644,7 @@ water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
 gently in the soft breeze.  To the south you can see a large fountain.  The
-brook flows both south and west.  
+brook flows both south and west.
 ~
 0 401408 2
 Rd     0
@@ -1664,7 +1664,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows both north and south.  
+gently in the soft breeze.  The brook flows both north and south.
 ~
 0 401412 2
 Rd     0
@@ -1687,7 +1687,7 @@ the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
 gentle breeze.  To the north you can see a small shed.  The path continues
-north, east and south.  
+north, east and south.
 ~
 0 401408 2
 Rd     0
@@ -1714,7 +1714,7 @@ the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
 gentle breeze.  To the east you can see a large fountain.  The path
-continues both east and west.  
+continues both east and west.
 ~
 0 401408 2
 Rd     0
@@ -1757,7 +1757,7 @@ water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
 gently in the soft breeze.  To the west you can see a large fountain and to
-the east you can see a small shed.  The brook flows both east and west.  
+the east you can see a small shed.  The brook flows both east and west.
 ~
 0 401408 2
 Rd     0
@@ -1779,7 +1779,7 @@ left are giant bags of dirt and fertilizer.  Above the stacks, covering the
 entire width of the wall, is a rack full of various gardening tools.  In the
 far right corner you see a large rusty wheelbarrow.  The gardener must be
 extremely strong to be able to push it all around the garden.  The path
-extends west.  
+extends west.
 ~
 0 401417 0
 Rd     0
@@ -1797,7 +1797,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both north and south.  
+gentle breeze.  The path continues both north and south.
 ~
 0 401412 2
 Rd     0
@@ -1820,7 +1820,7 @@ the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
 gentle breeze.  To the north you can see a large fountain.  The path
-continues both north and south.  
+continues both north and south.
 ~
 0 401408 2
 Rd     0
@@ -1843,7 +1843,7 @@ the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
 gentle breeze.  To the east you can see a large fountain.  The path
-continues both north and east.  
+continues both north and east.
 ~
 0 401408 2
 Rd     0
@@ -1886,7 +1886,7 @@ water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
 gently in the soft breeze.  To the west you can see a large fountain.  The
-brook flows both east and west.  
+brook flows both east and west.
 ~
 0 401408 2
 Rd     0
@@ -1906,7 +1906,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows north, east and west.  
+gently in the soft breeze.  The brook flows north, east and west.
 ~
 0 401408 2
 Rd     0
@@ -1930,7 +1930,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows both east and west.  
+gently in the soft breeze.  The brook flows both east and west.
 ~
 0 401408 2
 Rd     0
@@ -1950,7 +1950,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows north, south and west.  
+gently in the soft breeze.  The brook flows north, south and west.
 ~
 0 401408 2
 Rd     0
@@ -1975,7 +1975,7 @@ water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
 gently in the soft breeze.  To the north you can see a large fountain.  The
-brook flows north and south.  
+brook flows north and south.
 ~
 0 401408 2
 Rd     0
@@ -1997,7 +1997,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both north and south.  
+gentle breeze.  The path continues both north and south.
 ~
 0 401412 2
 Rd     0
@@ -2019,7 +2019,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both north and south.  
+gentle breeze.  The path continues both north and south.
 ~
 0 401408 2
 Rd     0
@@ -2042,7 +2042,7 @@ the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
 gentle breeze.  To the north you can see a large fountain.  The path
-continues both north and south.  
+continues both north and south.
 ~
 0 401412 2
 Rd     0
@@ -2064,7 +2064,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both norht and south.  
+gentle breeze.  The path continues both norht and south.
 ~
 0 401412 2
 Rd     0
@@ -2084,7 +2084,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows both north and south.  
+gently in the soft breeze.  The brook flows both north and south.
 ~
 0 401408 2
 Rd     0
@@ -2106,7 +2106,7 @@ left are giant bags of dirt and fertilizer.  Above the stacks, covering the
 entire width of the wall, is a rack full of various gardening tools.  In the
 far right corner you see a large rusty wheelbarrow.  The gardener must be
 extremely strong to be able to push it all around the garden.  The path
-extends south.  
+extends south.
 ~
 0 401421 0
 Rd     0
@@ -2125,7 +2125,7 @@ the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
 gentle breeze.  To the west you can hear the loud rumbling of falling water.
-The path continues both east and west.  
+The path continues both east and west.
 ~
 0 401408 2
 Rd     0
@@ -2147,7 +2147,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues north, east and west.  
+gentle breeze.  The path continues north, east and west.
 ~
 0 401408 2
 Rd     0
@@ -2173,7 +2173,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both east and west.  
+gentle breeze.  The path continues both east and west.
 ~
 0 401408 2
 Rd     0
@@ -2195,7 +2195,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both north and west.  
+gentle breeze.  The path continues both north and west.
 ~
 0 401408 2
 Rd     0
@@ -2217,7 +2217,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues east.  
+gentle breeze.  The path continues east.
 ~
 0 401408 2
 Rd     0
@@ -2235,7 +2235,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues north, east and west.  
+gentle breeze.  The path continues north, east and west.
 ~
 0 401408 2
 Rd     0
@@ -2261,7 +2261,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both east and west.  
+gentle breeze.  The path continues both east and west.
 ~
 0 401408 2
 Rd     0
@@ -2283,7 +2283,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both east and west.  
+gentle breeze.  The path continues both east and west.
 ~
 0 401408 2
 Rd     0
@@ -2305,7 +2305,7 @@ chosen carefully to ensure the safety of the delicate flowers that also line
 the path.  The angelic scents of the roses, daisies, carnations and many
 other types of flowers seem to be soothing to this place.  In the distance
 you hear a sparrow chirping, it's music is carried to your ears by a cool,
-gentle breeze.  The path continues both east and west.  
+gentle breeze.  The path continues both east and west.
 ~
 0 401408 2
 Rd     0
@@ -2339,7 +2339,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows both north and west.  
+gently in the soft breeze.  The brook flows both north and west.
 ~
 0 401408 2
 Rd     0
@@ -2359,7 +2359,7 @@ spring water flows gently through the bed of the brook.  The sound of the
 water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
-gently in the soft breeze.  The brook flows both east and west.  
+gently in the soft breeze.  The brook flows both east and west.
 ~
 0 401408 2
 Rd     0
@@ -2380,7 +2380,7 @@ water flowing past the sparkling rocks which lay in the brook bed seems to
 be calming to the plants around it.  The vibrantly colored flowers are
 thankful to have the water so near.  The trees seem to sing as they sway
 gently in the soft breeze.  To the north you can see a lagre fountain.  The
-brook flows both north and west.  
+brook flows both north and west.
 ~
 0 401408 2
 Rd     0

@@ -1,7 +1,7 @@
 #AREADATA
-Name        { 5-35 } Bethaven Sewers     Lucid~
+Name        Bethaven Sewers~
 Levels      5 35
-Builders    Reklar~
+Builders    Reklar Lucid~
 VNUMs       19700 19799
 Security    100
 Recall      25001
@@ -21,7 +21,7 @@ A toffsman stands here poking through the garbage.
 The toffsman is a poor sight.  Quite like the people who live down in the
 Serf Village.  He is thin and wears raggedy clothing.  He has not seen a
 shave since who knows when.  He does seem quite clean, however, regardless
-of all the filth in the water.  
+of all the filth in the water.
 ~
 69 512 0 250 S
 15 0 0 400d0+0 0d0+0
@@ -104,7 +104,7 @@ Rolf the Dog Boy, Leader of the Exiles is here.
 Rolf is not really all that strange looking.  A small fur covered tail
 pokes out from his rear, and he is a little more fuzzier than your average
 person.  Mostly though, he seems rather civilized despite some of his doggy
-mannerisms.  
+mannerisms.
 ~
 65 512 0 300 S
 25 0 0 1050d0+0 0d0+0
@@ -133,9 +133,9 @@ Polly the Bird Girl eyes you nervously.
 ~
 Polly is quite extraordinary to look at!  Instead of hair on her head,
 she has a headful of feathers.  The feathers continue down her neck and thin
-from that point.  But her hands are very rough and very yellow in colour. 
+from that point.  But her hands are very rough and very yellow in colour.
 Her mouth is almost like a beak because her top lip folds far down over her
-bottom one.  
+bottom one.
 ~
 65 524800 0 300 S
 15 0 0 400d0+0 0d0+0
@@ -151,7 +151,7 @@ emote eats the cracker.
 mpjunk cracker
 say Pretty bird!
 cast 'fly' $n
- 
+
 endif
 ~
 |
@@ -162,7 +162,7 @@ Tony the Tigerman eyes you warily.
 ~
 Tony's build is mostly humanoid.  The only difference being that his skin
 is a furry mass of stripes.  His teeth are also rather large, and he has the
-fangs of a tiger as well.  He looks very friendly and cuddly though.  
+fangs of a tiger as well.  He looks very friendly and cuddly though.
 ~
 65 512 0 300 S
 22 0 0 780d0+0 0d0+0
@@ -180,7 +180,7 @@ Andy the Insectman hovers near your head.
 ~
 Andy has huge fly-type wings sprouting from his back and they buzz loudly
 as he hovers about.  Two antennae also poke out from atop his head.  His
-eyes are larger than usual but are humanoid.  
+eyes are larger than usual but are humanoid.
 ~
 65 524800 0 300 S
 17 0 0 480d0+0 0d0+0
@@ -201,7 +201,7 @@ Reba is rather scary looking at first.  Her nose sticks out just like
 that of a rat and long whiskers stick out of her cheeks.  Her ears are
 rather small, but rat-like and you notice that her hands also look like
 rats-paws.  She's actually kind of cute in a way.  Out from behind her lies
-a long pink rat-tail.  
+a long pink rat-tail.
 ~
 3 640 0 300 S
 20 0 0 480d0+0 0d0+0
@@ -227,7 +227,7 @@ Sammy the Slugman is ready to sell you his wares.
 Sammy is very human in appearance.  His skin is a darker pink than your
 average human though.  It also has a very slimy texture, and he leaves a
 small trail of it as he walks.  Almost everything he touches is somewhat
-slimed.  
+slimed.
 ~
 3 640 0 300 S
 20 0 0 480d0+0 0d0+0
@@ -271,7 +271,7 @@ The bandit~
 A cat-like woman slinks around here.  She moves almost as though she were
 a shadow.  She is very pretty despite the fact that she is not groomed very
 well.  She wears a leather suit and breeches that are very well-worn and
-show off her figure.  
+show off her figure.
 ~
 65 98816 0 -250 S
 15 0 0 400d0+0 0d0+0
@@ -355,7 +355,7 @@ A pale female looks at you alluringly.
 ~
 A very beautiful woman indeed.  Her face is made up with red lipstick and
 rouge that only emphasizes her paleness.  She is a very voluptuous lady and
-her hair is of raven curls.  
+her hair is of raven curls.
 ~
 8257 524800 0 -100 S
 20 0 0 600d0+0 0d0+0
@@ -545,7 +545,7 @@ A skinny man in ragged clothing sits here.
 ~
 This man looks like he may have been important.  The clothes he wears
 look like they were once quite regal.  He has obviously been down here for
-quite a while though, as his beard is very long and grey.  
+quite a while though, as his beard is very long and grey.
 ~
 3 0 0 0 S
 1 0 0 5d0+0 0d0+0
@@ -670,7 +670,7 @@ reserved~
 E
 pile toff~
 This is a small pile of Toff.  It looks like it will serve no meaningful
-purpose.  
+purpose.
 ~
 #19702
 stick toff~
@@ -833,7 +833,7 @@ A
 E
 bone scalemail~
 This suit of well-fitting scalemail is made out of Bones.  It smells
-slightly from the decomposition process.  
+slightly from the decomposition process.
 ~
 #19710
 torch bone~
@@ -963,7 +963,7 @@ reserved~
 E
 wooden chest~
 This is a medium sized chest made of oak wood.  It has a small lock on
-the front.  
+the front.
 ~
 #19717
 key small brass~
@@ -1044,7 +1044,7 @@ A
 E
 ripped white pants~
 These pants of white have been torn and ripped.  They are in terrible
-condition.  But give free movement to its owner.  
+condition.  But give free movement to its owner.
 ~
 #19721
 teddy red silk~
@@ -1202,7 +1202,7 @@ A
 E
 nimbus energy~
 This is a small floating nimbus of sparkling energy.  It floats just out
-of your grasp..  And spins in circles.  
+of your grasp..  And spins in circles.
 ~
 #19730
 nimbus energy~
@@ -1219,7 +1219,7 @@ reserved~
 E
 nimbus energy~
 This is a small floating nimbus of sparkling energy.  It floats just out
-of your grasp..  And spins in circles.  
+of your grasp..  And spins in circles.
 ~
 #19731
 water sewer~
@@ -1280,7 +1280,7 @@ reserved~
 E
 shiny~
 You look at the ring, expecting some magical properties of invisibily,
-but to your amazement, find none.  Hey!  This ain't Tolkein!  
+but to your amazement, find none.  Hey!  This ain't Tolkein!
 ~
 E
 ring~
@@ -1365,7 +1365,7 @@ S
 The Grand Conjunction of Drainage Pipes~
 A ladder is fastened here to the side of the drainage tunnel wall.  All
 around you are small pipes which are draining water from the streets of
-Bethaven above.  Some of the pipes look large enough to crawl into.  
+Bethaven above.  Some of the pipes look large enough to crawl into.
 ~
 0 9 0
 Rd     0
@@ -1387,7 +1387,7 @@ Directly Below the Oracle~
 The water level here is about one foot in height.  It is everywhere, and
 it is anything but clean.  The walls here appear to be glowing with a
 strange light, perhaps a lichen of some sort grows here.  Using your
-directional sense, you guess that you would be directly under the oracle.  
+directional sense, you guess that you would be directly under the oracle.
 ~
 0 8 0
 Rd     0
@@ -1422,7 +1422,7 @@ Large Drainage Tunnel~
 The water level is about one foot high here and appears to bend around a
 corner to the north.  You being to move more carefully.  It would be sure
 death if you took a wrong step, or went down the wrong pipe and got stuck
-half underwater.  
+half underwater.
 ~
 0 9 0
 Rd     0
@@ -1441,7 +1441,7 @@ The water level is about one and a half feet deep here.  You look upon
 the tunnel walls, and notice that craftsmen must have spent many hours
 creating these pipes.  So much water flows through here daily that you
 shudder to think what would happen to Bethaven if these pipes were somehow
-clogged.  
+clogged.
 ~
 0 9 0
 Rd     0
@@ -1459,7 +1459,7 @@ Large Drainage Tunnel~
 The water seems to be flowing quickly to the north, and to the east a
 tunnel slopes upward and out of sight.  There is no water coming through it.
 It must be the tunnel which drains the poor quarter of Bethaven.  Clogged,
-and no one bothering to fix it.  
+and no one bothering to fix it.
 ~
 0 9 0
 Rd     0
@@ -1503,7 +1503,7 @@ Stagnet Pool of Sewerwater~
 The water level has risen here drastically.  It is almost at your chest
 level and you try not to breathe as the stench is nearly unbearable.  Brown
 squishy things float by you and it seems that these tunnels also serve as a
-disposal system for human waste as well.  
+disposal system for human waste as well.
 ~
 0 9 0
 Rd     0
@@ -1565,7 +1565,7 @@ S
 In the Midst of Constantly Splashing Water~
 Above you splashes a waterfall of sewer water.  The water falls from the
 pipe above you and drains to the east.  Lumps of garbage and animal waste
-splatter upon yourhead and shoulders.  Be careful or you'll get a mouthful. 
+splatter upon yourhead and shoulders.  Be careful or you'll get a mouthful.
 ~
 0 9 0
 Rd     0
@@ -1582,8 +1582,8 @@ S
 Bend in the Flowing Sewerwater~
 The water level has reached about two and a quarter feet high here.  The
 water appears to be moving to the south, but a stagnet pool of wate rhas
-accumulated to the north.  Above you, and to the east is another tunnel. 
-You could probably make it up there.  
+accumulated to the north.  Above you, and to the east is another tunnel.
+You could probably make it up there.
 ~
 0 9 0
 Rd     0
@@ -1610,7 +1610,7 @@ In the Widst of a Rapidly Spinning Whirlpool~
 You have come to a swirreling mass of murky water.  There is a large
 drain below you where the water is going.  The drain is significantly
 smaller than the one that you are currently in.  This place is rather
-enclosed.  
+enclosed.
 ~
 0 9 0
 Rd     0
@@ -1628,7 +1628,7 @@ Large and Stagnet Tunnel of Water~
 You have reached a large pool of water.  The water has a yellowish head
 upon it, and slimy things brush through the water and just above the
 surface.  The smell here is nearly unbearable and floating on the water is
-the corpse of a dead cat.  
+the corpse of a dead cat.
 ~
 0 13 0
 Rd     0
@@ -1666,7 +1666,7 @@ S
 Entrance to a Bandits Lair~
 You are at the top of a small ladder.  Below you smells of the sewer waft
 upwards.  There is a table and chairs sitting here, with a deck of cards
-upon it.  It would seem that this is a watchpost to the bandits hideout.  
+upon it.  It would seem that this is a watchpost to the bandits hideout.
 ~
 0 8 0
 Rd     0
@@ -1683,7 +1683,7 @@ S
 Sleeping Quarters for the Bandits~
 You are amongst a bunch of sleeping pallets.  They appear to be lice and
 vermin ridden.  This is where the bandits rest during the day, before going
-up to Bethaven to burglarize it's honest citizens.  
+up to Bethaven to burglarize it's honest citizens.
 ~
 0 8 0
 Rd     0
@@ -1751,7 +1751,7 @@ S
 Under a Waterfall of Murky Water~
 The water level here has almost reached about four feet in height.  You
 nervously see evidence of a rodent population.  Squeeling can be heard to
-the west of you, as though many rats are becoming excited by your presence. 
+the west of you, as though many rats are becoming excited by your presence.
 ~
 0 13 0
 Rd     0
@@ -1769,8 +1769,8 @@ Within the Rat Infested Sewers~
 The water level here is about four feet in height.  You see rat droppings
 floating in the water with you.  Along the walls you can see many small
 normal size rodents scurrying upon the scant ledges.  What worries you is
-the rumours of larger, man-sized rats that supposedly infest these pipes. 
-Of course, they are just old-maid's tales.  
+the rumours of larger, man-sized rats that supposedly infest these pipes.
+Of course, they are just old-maid's tales.
 ~
 0 0 0
 Rd     0
@@ -1788,7 +1788,7 @@ Upon a Large Grate~
 The water here is moving faster and is pouring into an easily accessible
 drain below you.  To your north is a widened ledge.  Looking carefully at
 the narrow outcropping, you notice that it appears as though the rock had
-been dug out by sharp little claws.  
+been dug out by sharp little claws.
 ~
 0 9 0
 Rd     0
@@ -1807,9 +1807,9 @@ D5
 S
 #19727
 Glowing Rat Warren~
-The ledge here seems to have been carved out by many sharp little claws. 
+The ledge here seems to have been carved out by many sharp little claws.
 The walls are glowing with a strange and unnatural light.  Again you realize
-that this room is directly below the Great Oracle of Bethaven.  
+that this room is directly below the Great Oracle of Bethaven.
 ~
 0 8 0
 Rd     0
@@ -1824,7 +1824,7 @@ You are below a constant spray of water which is coming through a large
 grate above you.  You see that the water flows to the south, in a swift and
 sure manner.  Looking at the walls you realize that these are the drain
 pipes of Old Bethaven.  The one that existed before the Battle of the
-Enraged Gods.  
+Enraged Gods.
 ~
 0 13 0
 Rd     0
@@ -1860,7 +1860,7 @@ S
 Top of an Emptying Pipe~
 You are in a large and ancient pipe.  It is draining into an even larger
 pipe below.  You see that small rungs have been fastened into the sides of
-the wall to allow passage into the larger drain below.  
+the wall to allow passage into the larger drain below.
 ~
 0 9 0
 Rd     0
@@ -1878,7 +1878,7 @@ Crude and Ancient Stairway~
 You are on a crudely made flight of stairs.  They rise out of the sewer
 water to the east, and form a small platform.  To the north is an old wooden
 door.  You notice that the hinges on the door seem well oiled, as though
-someone, or something, still uses it.  
+someone, or something, still uses it.
 ~
 0 13 0
 Rd     0
@@ -1894,10 +1894,10 @@ D1
 S
 #19732
 The Lounge of the Misfits~
-You are in a large room, there are chairs and couches scattered about. 
+You are in a large room, there are chairs and couches scattered about.
 This is where the misfits come to enjoy the company of each other.  Having
 been outcasted from society, they find the need for social gathering very
-stong.  
+stong.
 ~
 0 8 0
 Rd     0
@@ -1910,7 +1910,7 @@ S
 The Misfits General Store~
 You are in a small hut, there are tables and cupboards displaying common
 day items.  It appears that the owner of this store has made the items
-of this store himself, from refuse found in the sewers.  
+of this store himself, from refuse found in the sewers.
 ~
 0 1032 0
 Rd     0
@@ -1924,7 +1924,7 @@ Market Square of the Town of Misfits~
 You are in a large plaza, which could only be taken to be a large market
 place.  There are many vendors hawking there wares, which all seem to be
 made from things scavenged in the sewers.  There are only two permanent
-stores in this town, and they are to the east and west.  
+stores in this town, and they are to the east and west.
 ~
 0 8 0
 Rd     0
@@ -1950,7 +1950,7 @@ The Misfits Bakery~
 You are in a hot little hut.  The smells in this room are pleasing, but
 looking at the wares that the strange creature has to offer, you wonder how
 this could be so.  For even the food that the misfits eat is refuse from the
-sewers around them.  
+sewers around them.
 ~
 0 1032 0
 Rd     0
@@ -1963,7 +1963,7 @@ S
 Living Quarters for the Outcasts~
 You are in the midst of a strange assortment of sleeping pallets, there
 appears to be pearches on the wall, and large cat boxes on the floor.  The
-citizens of this small city are very strange and exotic indeed.  
+citizens of this small city are very strange and exotic indeed.
 ~
 0 8 0
 Rd     0
@@ -1975,9 +1975,9 @@ S
 #19737
 Entrance to the Outcasts of Old Bethaven~
 You are in a large open cavern.  You appear to be in a small
-village, there are torches all about casting light upon your surroundings. 
+village, there are torches all about casting light upon your surroundings.
 This is where those who are misfits of Bethaven come to live.  Passersby
-watch you nervously, for strangers are very uncommon.  
+watch you nervously, for strangers are very uncommon.
 ~
 0 8 0
 Rd     0
@@ -2018,7 +2018,7 @@ S
 Under the Waterfall of an Emptying Pipe~
 You are in the midst of a splashing waterfall.  Large amounts of water
 splash about you from the pipes above.  To the west appears to be steps
-leading up, and out of the water.  To the east the water flows onward.  
+leading up, and out of the water.  To the east the water flows onward.
 ~
 0 9 0
 Rd     0
@@ -2040,7 +2040,7 @@ At the Top of a Funnel of Water~
 The water level here is approximately four feet high.  You may have to do
 a bit of wading if you walk.  There is a grate below you, and the water
 seems to be draining into the darkness below.  The grate is quite large,
-since so much water passes through here daily.  
+since so much water passes through here daily.
 ~
 0 9 0
 Rd     0
@@ -2057,7 +2057,7 @@ S
 Under the Constant Spray of Water~
 You are under a waterfall of sewer water.  You see that the water has
 become very murky, from flowing through these dirty tunnels.  The current
-flows to the south, and to the north a strange pile of stones is piled.  
+flows to the south, and to the north a strange pile of stones is piled.
 ~
 0 9 0
 Rd     0
@@ -2082,7 +2082,7 @@ S
 Standing Within a Rapidly Swirrelling Whirlpool~
 You are over a large grate.  The sewer water is pouring into the tunnels
 below at a rapid speed.  You have to fight to keep your foot on the fast
-moving waters.  
+moving waters.
 ~
 0 9 0
 Rd     0
@@ -2100,7 +2100,7 @@ Upon the Ruins of a Mortared Wall~
 You are on the ruins of a wall.  Looking at the sides of the tunnel you
 determine that the wall was made from a different material as the rest of
 the sewers.  In it's prime, you guess that this ruined wall would have
-disguised the passageway that leads to the west.  
+disguised the passageway that leads to the west.
 ~
 0 9 0
 Rd     0
@@ -2117,7 +2117,7 @@ S
 Within a Formerly Hidden Passage~
 You are in an old passageway.  Looking to the north you see a great door
 with many old and faded magics upon it.  You wonder what sort of creature
-would go so far out of it's way to hide itself into these sewers.  
+would go so far out of it's way to hide itself into these sewers.
 ~
 0 13 0
 Rd     0
@@ -2141,7 +2141,7 @@ Standing in an Ancient Vampires Hideout~
 You are in a dark cavern.  Judging from the smell, you would guess that
 undead have made this their home.  You remember pieces of history saying
 that in the past, vampires were outcast from society.  This may have once
-been the hideout for one such vampire.  
+been the hideout for one such vampire.
 ~
 0 9 0
 Rd     0
@@ -2160,7 +2160,7 @@ Standing Before a Great Crypt~
 You are in an old hideout made by one of the very first vampires to enter
 the Storm.  To the north stands a great coffin, so large that it could only
 rightfully be called a crypt.  You wonder as to the hate and racism that Old
-Bethaven had, to force such creatures so far into the bowels of the earth.  
+Bethaven had, to force such creatures so far into the bowels of the earth.
 ~
 0 9 0
 Rd     0
@@ -2179,7 +2179,7 @@ Standing Within A Great Crypt~
 You are in great crypt.  You notice that the walls are glowing with
 supernatural powers.  Again, you realize, that this cave would be directly
 under the Bethaven Oracle.  You see signs that indicate that there has been
-recent movement in this cave.  
+recent movement in this cave.
 ~
 0 8 0
 Rd     0
@@ -2193,7 +2193,7 @@ S
 Standing Before a Large Crevice~
 You are under a waterfall of sewer water, the water pours south, and down
 into a great crack in the floor.  Looking across the crack you can see the
-continuation of the pipe.  
+continuation of the pipe.
 ~
 0 9 0
 Rd     0
@@ -2232,7 +2232,7 @@ In the Collapsed Tunnel of the Old Sewers~
 You are in the dry collapsed tunnel of the old sewers.  You see that the
 sewer was originally intended to continue south towards some unknown
 destination, but whatever caused the large crack to the north to appear,
-must have caved in the ceiling of this tunnel as well.  
+must have caved in the ceiling of this tunnel as well.
 ~
 0 0 0
 Rd     0
@@ -2244,9 +2244,9 @@ S
 #19751
 In the Living Quarters of the Slimy Green Troll~
 You are in a small hut, this is apparently where the Slimy Green Troll
-lives.  There is a crude table, chairs, and sleeping pallet on the ground. 
+lives.  There is a crude table, chairs, and sleeping pallet on the ground.
 You see fish bones scattered about, as the owner of the house isn't a very tidy
-creature.  
+creature.
 ~
 0 8 0
 Rd     0
@@ -2267,7 +2267,7 @@ You are in the deep and murky waters of a subterranean lake.  To the north
 the end of the cavern can be seen.  The cavern walls reach high above you
 and meet at the ceiling that is out of sight.  You ponder the fact that
 someday this cavern will be full, and Bethaven may be washed away.
-Upon further inspection, you notice a crack in the black rocky wall. Just 
+Upon further inspection, you notice a crack in the black rocky wall. Just
 wide enough for you to squeeze through...
 ~
 0 0 6
@@ -2285,7 +2285,7 @@ S
 The North End of a Small Island in and Underground Lake~
 You are on the shore of a small rocky island.  The murky waters lie to
 the north of the island.  To the south, you can see a small hut with a
-thatched roof.  The island is bare of any organic matter.  
+thatched roof.  The island is bare of any organic matter.
 ~
 0 9 0
 Rd     0
@@ -2302,7 +2302,7 @@ S
 In a Small Hut~
 You are in a small little hut.  The occupant of the hut is obviously not
 too worried about cleanliness, as there are fish bones scattered about the
-floor.  To the west you can see a small door.  
+floor.  To the west you can see a small door.
 ~
 0 8 0
 Rd     0
@@ -2324,7 +2324,7 @@ S
 On an Island in the Middle of a Subterranean Lake~
 You are on a stone island.  The soil is bare of any vegetation due to the
 lack of light in the cavern.  Looking to the north, you can see a small hut
-with a thatched roof.  
+with a thatched roof.
 ~
 0 9 0
 Rd     0
@@ -2341,7 +2341,7 @@ S
 On the Shore of a Small Island~
 You are on the rocky shore of a small island.  There is no organic matter
 of any type upon the island, this is due to the fact that the soil has never
-seen a drop of sunlight in its life.  
+seen a drop of sunlight in its life.
 ~
 0 8 2
 Rd     0
@@ -2393,7 +2393,7 @@ S
 At the Base of a Huge Underground Waterfall~
 You are under an enormous waterfall.  Water cascades through the sky
 before landing around you.  Looking north you can see a large underground
-pool has accumulated, to the south, you can see a small sandy hole.  
+pool has accumulated, to the south, you can see a small sandy hole.
 ~
 0 13 0
 Rd     0
@@ -2414,7 +2414,7 @@ S
 Entrance to the Ant-Peoples Realm~
 You are in a great archway of sand.  There are thousands of footprints
 all over the ground.  Judging from the size of the marks, you would guess
-that the Ant-People are about four feet high.  
+that the Ant-People are about four feet high.
 ~
 0 8 0
 Rd     0
@@ -2432,7 +2432,7 @@ Entrance to the Ant People's Realm~
 You are in a small sandy hole.  This is the entrance to the home of the
 Ant People.  The Ant People look like common ants, except that they are four
 feet high.  Nobody knows whether they are natural beings, or the
-victims of some magical experiment.  
+victims of some magical experiment.
 ~
 0 8 0
 Rd     0
@@ -2449,7 +2449,7 @@ S
 The Ant Queen's Royale Chamber~
 You are in a large chamber.  This is where the Ant Queen does her royal
 duties.  As the sole leader of the Ant People, it is her job to make all of
-the governing decisions.  
+the governing decisions.
 ~
 0 8 0
 Rd     0
@@ -2463,7 +2463,7 @@ Main Corridor of the Ant People's Home~
 You are in a large sandy corridor.  There are small foot prints all over
 the ground from the passage of thousands of ants.  You see dozens of small
 holes fill with sand at your entry, the common citizens' are afraid of all
-other races, and will hide in deep tunnels until you leave.  
+other races, and will hide in deep tunnels until you leave.
 ~
 0 8 0
 Rd     0
@@ -2486,7 +2486,7 @@ You are in a large sandy pit.  This tunnel is the main breeding grounds
 for the Ant People, their young are dropped upon the floor here at birth,
 and are then raised by the entire community.  Although the children don't
 have any one set of parents to love, they do have many loving ants and
-uncles.  
+uncles.
 ~
 0 8 0
 Rd     0
@@ -2499,7 +2499,7 @@ S
 Under the Small Hut~
 You are in an expertly carved corridor.  This tunnel is much more ancient
 than the hut above, apparently the maker of the hut built it upon this
-tunnel.  To the west is a small, delicately carved door.  
+tunnel.  To the west is a small, delicately carved door.
 ~
 0 8 0
 Rd     0
@@ -2520,7 +2520,7 @@ You are in a brightyly glowing field of energy.  This is the infamous
 magical energy grid, where mages draw their power from.  You realize that
 you are directly below where the Oracle stands.  This poses the problem,
 does the Oracle stand upon the energy field, or did the energy field form
-around the Oracle.  
+around the Oracle.
 ~
 0 8 0
 Rd     0
@@ -2552,7 +2552,7 @@ S
 Dry Drainage Pipe~
 You are on a ledge of a dry drainage pipe.  To the west and below you,
 sounds of constant splashing can be heard.  You notice for the first time,
-that there are many spider webs covering the ceiling of this tunnel.  
+that there are many spider webs covering the ceiling of this tunnel.
 ~
 0 13 0
 Rd     0
@@ -2569,7 +2569,7 @@ S
 Caught in a Mass of Spider Webs~
 You find yourself battling with many thick and sticky webs.  The webs
 form a very large spider nest here, you shudder to think of the size of
-spider it would take to make such a large nest.  
+spider it would take to make such a large nest.
 ~
 0 9 0
 Rd     0
@@ -2583,7 +2583,7 @@ Sloping Drainage Tunnel~
 You are in a sloping tunnel.  The tunnel is dry, as though it has been
 clogged up.  Using your innate direction sense, you guess that this leads to
 the poor quarters of the city.  The mayor hasn't bothered to get it
-unclogged it yet, since he has more urgent business to do.  
+unclogged it yet, since he has more urgent business to do.
 ~
 0 9 0
 Rd     0
@@ -2600,7 +2600,7 @@ S
 Clogged Drainage Tunnel~
 You are before a great clog in a dry drainage tunnel.  You see countless
 pieces of garbage, and several corpses of rats and dogs in the the clog to
-the east.  It looks as though it has become really packed in tight by time. 
+the east.  It looks as though it has become really packed in tight by time.
 ~
 0 9 0
 Rd     0

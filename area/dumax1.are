@@ -1,5 +1,5 @@
 #AREADATA
-Name        { 65-96} Temple of Chaos     Dumax~
+Name        Temple of Chaos~
 Levels      65 96
 Builders    Dumax~
 VNUMs       16000 16099
@@ -69,7 +69,7 @@ say Hello $n I see the great Meliki still suffers your existance.
 say One day he will smite you down and gloat over your ashes.
 break
 endif
- 
+
 if ispc($n) == 1
 say Welcome $n, may chaos fill your life with joy and purpose!
 smile $n
@@ -85,7 +85,7 @@ This creature is surrounded by multicoloured burst of chaotic energy. It seems
 to fade in and out and even disappears from one part of the room to another.
 The closer you get, you feel a pull of sorts... almost as if the Avatar was a
 magnet and you were a piece of steel--powerless against its force.
- 
+
 A voice booms in your head, "Come mortal! Bask in my Chaos!" and leaves a
 ringing in your ears. Did the Avatar speak to you, or was it an illusion?
 ~
@@ -118,7 +118,7 @@ The Hand of Chaos~
 &bAlways standing in the shadows, this slim man seems to move with both
 grace and power. His voice seems to eminate from everywhere at once but is
 strangely very soft.
- 
+
 As he notices you watching him, he chuckles to himself and then in that
 quiet almost dreamy voice he murmers, "Chaos is all around you, and in the
 end it will consume your very soul."
@@ -129,7 +129,7 @@ end it will consume your very soul."
 0 0 1
 4160 0 0
 >hitprcnt_prog 20~
-if rand(8) 
+if rand(8)
 say Goodbye $n, perhaps we will meet again.
 mpecho The Hand of Chaos disappears in a flash of light!
 mpteleport
@@ -172,7 +172,7 @@ Doli~
 A young apprentice-mage wanders about, muttering an unfamiliar language.
 ~
 Doli walks about, seemingly oblivious to everything, talking to himself in some
-strange sluring language you have never heard.  He is of medium height, with 
+strange sluring language you have never heard.  He is of medium height, with
 close cropped dark brown hair.  Just as you think he will sweep by you without
 acknowleging your presence he startles you by intently peering into your eyes,
 then as if not finding what he sought he mutters just a bit louder and stalks
@@ -218,7 +218,7 @@ if isimmort($n) == 1
 say You are welcome here Master $n, rest a bit before returning to your duties
 break
 endif
- 
+
 if ispc($n) == 1
 say Ahh, a visitor, come $n, tell me of your journies.
 smile $n
@@ -293,7 +293,7 @@ say Gas to fill your lungs!
 cast 'gas breath' $n
 ~
 >fight_prog 5~
-say See my magic reduce your defenses to nothing mortal! 
+say See my magic reduce your defenses to nothing mortal!
 cast 'dispel magic' $n
 ~
 |
@@ -322,7 +322,7 @@ near its muzzle. Its mane is a &r&rreddish&g-&wgrey&g, and dull black eyes
 dart to and fro in a mad frenzy. The look of shabbiness hangs about it in
 every way. It looks as if it hasn't had a bath in several months and all
 its clothes could use a good washing (or a good burning). In spite of all
-that it looks like he put put up a tough fight.  
+that it looks like he put put up a tough fight.
 ~
 97 268435456 0 -900 S
 62 0 0 8800d0+0 0d0+0
@@ -365,7 +365,7 @@ if isimmort($n) == 1
 say Begone from the sanctuary of Meliki $n, it is no place for you!
 break
 endif
- 
+
 if ispc($n) == 1
 say $n, Help me to smite this infedel!
 endif
@@ -448,7 +448,7 @@ The figure watches you as you as you enter, a condescending smile on his
 face.  He motions for his underling to attack you with one hand and the
 other absently caresses his sword-hilt as if youa ssure himself it is still
 there.  As your light crosses the room he shies away from it and backs into
-the shadowy depths of the room, snarling with anger.  
+the shadowy depths of the room, snarling with anger.
 ~
 3 268509352 0 0 S
 69 0 0 9425d0+0 0d0+0
@@ -531,7 +531,7 @@ say Hello fellow stalker of the night!
 shake $n
 break
 endif
- 
+
 if ispc($n) == 1
 say Your kind is not welcome here!
 growl $n
@@ -583,7 +583,7 @@ A haggard, but regal-looking woman rests here oblivious to her surroundings.
 ~
 Sylvia is taking her ease while surrounded by chaos. She seems to radiate a
 kind of peace and tranquility that is very reassuring.
- 
+
 "Hello wanderer," she says in a weary voice. "I continue my battle with the
 chaos that infests this place day and night. It pains me to see you hurt, as
 I am from the surrounding evil. I am beginnging to feel weary to my very
@@ -706,7 +706,7 @@ say Hello Lord $n, I am in your service
 bow $n
 break
 endif
- 
+
 if ispc($n) == 1
 say Chaos will rule, you made your last mistake opposing it
 backstab $n
@@ -2867,14 +2867,14 @@ but basically unremarkable. It is obvious by its very plainess that those
 who built this temple placed the room here merely as a convence, a way to
 link the connecting hallways. From here you can follow a long hall to the
 west or north, enter the library to the east or enter the temple to the
-south.  
+south.
 ~
 0 12 0
 Rd     0
 E
 archways~
 All the archways are intricately carved with dragons and demons.
- 
+
 ~
 D0
 ~
@@ -2936,8 +2936,8 @@ one catches your eye, "The Catacombs".
 ~
 E
 catacombs~
-Many generations ago Meliki built the Temple of Chaos on the ruins of an old 
-city whose name is unknown. It is believed that one can get to the old ruins 
+Many generations ago Meliki built the Temple of Chaos on the ruins of an old
+city whose name is unknown. It is believed that one can get to the old ruins
 from the temple somehow, but the way has eluded me for quite a time, and once
 there who knows what will be found. Monsters of every kind would be my guess.
 ~
@@ -3521,7 +3521,7 @@ D4
 S
 #16028
 Western Hallway~
-You are moving along the western hallway, which leads north and south. To 
+You are moving along the western hallway, which leads north and south. To
 the north you can see that the hallway bends to the east. Far to the south
 you can see a T-junction.
 ~
@@ -3560,7 +3560,7 @@ S
 #16030
 Western Hallway~
 You are moving along the western hallway. To the south, you can see a
-t-junction whilte the hallway continues to the north. The silence in 
+t-junction whilte the hallway continues to the north. The silence in
 this room is scary... you do not even hear yourself moving about.
 ~
 0 8388616 0

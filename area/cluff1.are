@@ -1,5 +1,5 @@
 #AREADATA
-Name        {??-???} PROTO AREA          Cluff~
+Name        PROTO AREA~
 Levels      0 0
 Builders    Cluff~
 VNUMs       941 960
@@ -109,7 +109,7 @@ Entrance to the Tower~
 Before you is the entrance to a rather small tower.  It looks as if it
 was used as a scouter's outpost at one point in time.  The bricks are faded
 and the condition of the stones is just short of being called a complete
-wreck.  It's a wonder that the tower is still standing..  
+wreck.  It's a wonder that the tower is still standing..
 ~
 0 0 0
 Rd     0
@@ -123,7 +123,7 @@ The Base of the Tower~
 You stand in the base of the tower.  It is rather cramped, with barrels
 and bags lining the walls.  It looks as if the barrels and bags are rations,
 buy you can't be sure.  In front of you is a stairway leading up to the rest
-of the tower.  
+of the tower.
 ~
 0 131073 0
 Rd     0
@@ -159,7 +159,7 @@ After a nervous trip up the stairs, you arrive on the first landing.  The
 room is dark, save the light coming from arrow slots in the walls.  More
 barrels and bags line the walls.  The dust in the place is amazingly low,
 then you soon realize why.  A man dressed in a dark cloak is pacing around
-the room, a sword in hand.  A trapdoor above you closes off the stairwell.  
+the room, a sword in hand.  A trapdoor above you closes off the stairwell.
 ~
 0 0 0
 Rd     0
@@ -176,7 +176,7 @@ S
 Stairwell~
 You continue up the stairwell of creaky wooden steps.  No much is
 different from the stairs you travelled on earlier.  The air is musty and
-hard to breathe, and you cough mildly.  
+hard to breathe, and you cough mildly.
 ~
 0 131073 0
 Rd     0
@@ -194,7 +194,7 @@ Second Landing~
 The second landing looks almost identical to the first.  Barrels and bags
 line the walls and light shines through arrow slots.  Above you is another
 trapdoor, but the key is nowhere to be seen.  A man wearing a heavy grey
-cloak is standing here.  Maybe he knows where the key is..  
+cloak is standing here.  Maybe he knows where the key is..
 ~
 0 0 0
 Rd     0

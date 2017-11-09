@@ -1,5 +1,5 @@
 #AREADATA
-Name        {  1-5 } New Mud School      Angi~
+Name        New Mud School~
 Levels      1 5
 Builders    Thalador Angi~
 VNUMs       800 899
@@ -21,7 +21,7 @@ Warrior Krenan, Protector of the Storm.
 &W&YThis tall, massive warrior resembles more a godly type creature, an
 odd glow forming about his body.  His kind eyes reveal his soul to you, as
 he smiles lightly in your direction.  You start to realize that your long,
-dreary journey to the Storm was well worth the effort.  
+dreary journey to the Storm was well worth the effort.
 ~
 1966147 16777344 0 0 S
 100 0 0 30000d0+0 0d0+0
@@ -52,7 +52,7 @@ Savienna the Elven Maiden is here to help you.
 ~
 &WThis beautiful maiden has appeared to help you through Mudschool.  She
 will follow you during your travels until you reach level 3, helping however
-she is able.  To get started, type &Rsay help&W and she shall inform you.  
+she is able.  To get started, type &Rsay help&W and she shall inform you.
 ~
 2097155 16777216 0 0 S
 2 0 0 100d0+0 0d0+0
@@ -70,7 +70,7 @@ Ember the Dwarven Mistress is here to help you.
 ~
 &WEmber, a young Dwarf, has appeared to help you through Mudschool.  She
 will follow you during your travels until you reach level 3, helping however
-she is able.  To get started, type &Rsay help&W and she shall inform you.  
+she is able.  To get started, type &Rsay help&W and she shall inform you.
 ~
 2097219 16777216 0 0 S
 2 0 0 100d0+0 0d0+0
@@ -84,7 +84,7 @@ Shara the Pixie is here to help you.
 ~
 &WShara the Pixie has appeared to help you through Mudschool.  She will
 follow you during your travels until you reach level 3, helping however she
-is able.  To get started, type &Rsay help&W and she shall inform you.  
+is able.  To get started, type &Rsay help&W and she shall inform you.
 ~
 2097219 16777216 0 0 S
 2 0 0 100d0+0 0d0+0
@@ -99,7 +99,7 @@ the RiddleMaster~
 &YThe RiddleMaster taps his foot to a beat only heard by himself.  His
 bright eyes glitter with a glimpse of evil, his grin fit for only a fool
 such as he.  If you watch him long enough, you will notice how he fades in
-and out of view!  
+and out of view!
 ~
 1966147 0 0 0 S
 113 0 0 30000d0+0 0d0+0
@@ -399,7 +399,7 @@ The Protector of Mudschool stands guard here.
 chosen as the sole Protector of the entire Mudschool Grounds.  His job is to
 keep the Mudschool Fighting Grounds safe from more experienced folks.  If
 you think you can enter the Fighting Grounds after you have surpassed the
-need to be here, think again.  
+need to be here, think again.
 ~
 1966147 436207616 0 0 S
 113 0 0 30000d0+0 0d0+0
@@ -438,7 +438,7 @@ The Storm Angel floats above a circle of mist before you.
 smiles delicately towards you.  Her wings are covered by layers of silken
 silver feathers, and her long slender legs gather around the white material
 swirling in the mist.  Torinne is the bearer of all that is Good, the
-protector to every land, town and folk in the Storm.  
+protector to every land, town and folk in the Storm.
 ~
 1966147 17318056 208 1000 S
 113 0 0 30000d0+0 0d0+0
@@ -461,7 +461,7 @@ if ispc($n)
         emote embraces you lovingly.
         say You do indeed wish to follow the path of &WGoodness&C and &WPeace&C?
         say &REnter&C this glowing circle of light to begin your travels.
-        say You will then magically appear in my Arena, where you  
+        say You will then magically appear in my Arena, where you
         say can further improve your fighting abilities and skills.
         mpechoat $n &WTorinne tells you 'Take caution my dear $n, be sure to read the writing on the &Rwall&W outside this room before deciding which path to follow.'
         emote motions towards the bright circle.
@@ -477,10 +477,10 @@ Lord of Chaos and Darkness stands ominously before you.
 ~
 &wEncircled by hundreds of spinning blades and a burning ring of chaotic
 fire, this eight foot creature does not look extremely friendly.  His sunken
-eyes are like bottomless black pits, his skin resembling roughened bark. 
+eyes are like bottomless black pits, his skin resembling roughened bark.
 This is Lord Drauzen, the most EVIL creature from anywhere within the Storm.
 Drauzen wears a long midnight black cape which hides his deformed horrid
-body beneath.  
+body beneath.
 ~
 1966147 268435500 48 -1000 S
 113 0 0 30000d0+0 0d0+0
@@ -501,7 +501,7 @@ if ispc($n)
 &G    if level($n) > 2
        emote looks at you with a stern glare.
        say You wish to follow the path of &WEVIL&C?
-       say If you choose to &Renter&C this black hole, you will be    
+       say If you choose to &Renter&C this black hole, you will be
        say taken to my evil Arena in a town called Ravenwood.
 &W       mpechoat $n &WDrauzen tells you 'Take caution and read the &Rwall&W outside this room before making your decision.'
        break
@@ -522,7 +522,7 @@ ones the ways of the Storm.  He's fairly old, having spent years training
 and fighting with the now deceased Mikan Warrior.  His wisdom comes from
 experience and culture, and the people of Bethaven put their faith in him to
 guide you.  Jyle directs his deep gaze towards you, offering a welcoming
-smile.  
+smile.
 ~
 1966659 0 0 1000 S
 100 0 0 30000d0+0 0d0+0
@@ -558,7 +558,7 @@ Master Staer awaits your arrival.
 &YRed hair flows wildly over Staer's medium built body.  Her face
 reflects a mixture of age old wiseness and young striking beauty.  Staer
 might appear to be of a weaker kind, but don't fool yourself.  This fiesty
-Necromancer has abilities you only pray to never discover.  
+Necromancer has abilities you only pray to never discover.
 ~
 1967171 16384 0 450 S
 100 0 0 30000d0+0 0d0+0
@@ -572,10 +572,10 @@ Kalin stands patiently behind his counter.
 ~
 &W&YKalin is a slim built Elven Ranger.  He wears a piece of cloth about
 his well defined chest, adorned with various symbols.  Kalin was once
-awarded by the town of Bethaven for his amazing battle skills and speed. 
+awarded by the town of Bethaven for his amazing battle skills and speed.
 Aged some by the trials of his past life, his silken blonde hair turns
 slightly white near the edges, and the fine lines of wisdom settle in on his
-rugged skin.  
+rugged skin.
 ~
 1966147 0 0 1000 S
 100 0 0 30000d0+0 0d0+0
@@ -590,7 +590,7 @@ Jakkor the Healer stands here peacefully.
 &YJakkor is known as one of the wisest Clerics of the lands.  He spent
 many years servicing the citizens of Bethaven with his magical healing
 powers.  Now he donates his time here at Mudschool, enjoying the peaceful
-atmosphere and helping young ones.  
+atmosphere and helping young ones.
 ~
 1966147 67108904 0 1000 S
 100 0 0 0d0+0 0d0+0
@@ -604,7 +604,7 @@ Markos the Banker sits behind his desk.
 ~
 &YMarkos rests comfortably behind a large desk, concentrating on accounts
 and figures.  His golden locks curl about his bushy eyebrows, shadowing his
-deep green eyes.  He motions towards an informative sign he has posted.  
+deep green eyes.  He motions towards an informative sign he has posted.
 ~
 1966147 0 0 243 S
 100 0 0 30000d0+0 0d0+0
@@ -618,7 +618,7 @@ A slimy slithery snake squirms in front of you.
 ~
 &YCovered with a slimy substance, the snake is an annoying creature to
 catch.  It &Rflees&Y away so easily while fighting, since it is so difficult
-to keep a hold of it.  
+to keep a hold of it.
 ~
 1573057 0 0 0 S
 1 0 0 10d0+0 0d0+0
@@ -638,9 +638,9 @@ frog~
 a frog~
 A large frog hops about here.
 ~
-&YThis frog looks as if it's had plenty to feast on by the size of it. 
+&YThis frog looks as if it's had plenty to feast on by the size of it.
 It's slimy leathery skin is dark green with shades of brown.  &YHis beady
-little eyes stare way up at you, wondering what's in store for him now.  
+little eyes stare way up at you, wondering what's in store for him now.
 ~
 1572931 0 0 0 S
 1 0 0 8d0+0 0d0+0
@@ -664,7 +664,7 @@ A creepy hairy spider stands here suspiciously.
 &PMOB&Y.  Whenever you encounter an unknown creature, you should ALWAYS type
 &Pcon <mob name>&Y to see if you are capable of killing it.  CON is short
 for consider, which you can find more about by typing &Phelp con&Y.  If you
-are sure you can conquer it, type &Pkill spider&Y.  
+are sure you can conquer it, type &Pkill spider&Y.
 ~
 1572931 0 0 0 S
 1 0 0 8d0+0 0d0+0
@@ -677,10 +677,10 @@ a salamander~
 A salamander slithers silently.
 ~
 &YA baby salamander stares up at you with bright yellow eyes.  It's a bit
-difficult to see him clearly, as he blends into the clay walls so well. 
-Maybe you should &Pconsider&Y a bit before attempting to kill this lizard. 
+difficult to see him clearly, as he blends into the clay walls so well.
+Maybe you should &Pconsider&Y a bit before attempting to kill this lizard.
 In the event that he does die, you could have the fortune of owning a pair
-of lizard gloves.  
+of lizard gloves.
 ~
 1572931 0 0 0 S
 2 0 0 15d0+0 0d0+0
@@ -698,7 +698,7 @@ a fight, you can type &Pflee&Y to flee to another room.  If you want to flee
 automatically when your hit points get to a certain amount, type &Pwimpy
 <amount of hit points>&Y.  Typing &Pwimpy&Y by itself will set it to your
 maximum hit points divided by five.  Then when your hit points reach your
-wimpy amount, you will automatically flee.     
+wimpy amount, you will automatically flee.
 ~
 1572931 0 0 0 S
 2 0 0 25d0+0 0d0+0
@@ -713,7 +713,7 @@ An ugly deformed ogre grunts loudly.
 &YThis massive creature can smell you from a mile away.  His bloodthirsty
 instincts make him a wild savage beast, ready to kill anyone who enters his
 abode.  To kill him is a great accomplishment for a young adventurer like
-yourself.  
+yourself.
 ~
 1572963 0 0 0 S
 2 0 0 15d0+0 0d0+0
@@ -733,7 +733,7 @@ A beautiful sparrow flies above you.
 &YSoaring high in the air, the sparrow seems as if it's in a world of
 it's own.  Perfect time to catch it off guard, it could make a great dinner.
 Also, you can eat parts of the creature if they fall off when it dies, such
-as arms and legs.  
+as arms and legs.
 ~
 1572931 524288 0 0 S
 2 0 0 19d0+0 0d0+0
@@ -746,7 +746,7 @@ a killer bee~
 A killer bee worker is looking for his queen.
 ~
 &YYow!  This is a huge bee!  As it buzzes around you, you notice it's
-large stinger pointed outwards ready to attack.  
+large stinger pointed outwards ready to attack.
 ~
 1572963 524288 0 0 S
 2 0 0 14d0+0 0d0+0
@@ -758,8 +758,8 @@ crow bird~
 a crow~
 An evil looking crow circles overhead.
 ~
-&YAs the crow circles overhead, it prepares for it's descent upon you. 
-Huge deformed claws stretch down, aiming directly for you!  
+&YAs the crow circles overhead, it prepares for it's descent upon you.
+Huge deformed claws stretch down, aiming directly for you!
 ~
 1572899 524288 0 0 S
 2 0 0 20d0+0 0d0+0
@@ -771,11 +771,11 @@ mentor shyan~
 Shyan~
 &YA brilliant young Mentor stands here to advise you.
 ~
-&YShyan's elegant chestnut locks fall loosely about her miniature face. 
+&YShyan's elegant chestnut locks fall loosely about her miniature face.
 She has a compassionate smile and deep hazel eyes.  You can often find her
 here in the forest, for she gains much joy from spreading her knowledge to
 those not yet familiar with the Storm's way of life.  Feel free to come to
-her when in need of some advice.  
+her when in need of some advice.
 ~
 4063299 16777384 16 0 S
 113 0 0 30000d0+0 0d0+0
@@ -815,7 +815,7 @@ A lost little girl cringes in terror.
 ~
 &YThis poor young girl seems to of lost her way.  She and her father were
 taking a stroll in Mudschool in seek of fresh berries.  He must of turned
-his back for one minute, and the two were separated.  
+his back for one minute, and the two were separated.
 ~
 1966147 0 0 0 S
 3 0 0 0d0+0 0d0+0
@@ -827,9 +827,9 @@ giant badger~
 a giant badger~
 &RA nasty giant Badger glares angrily at you.
 ~
-&RIt's fur is matted and dark brown, it's eyes glow in the darkness. 
+&RIt's fur is matted and dark brown, it's eyes glow in the darkness.
 Razor sharp fangs show themselves as the badger growls angrily in your
-direction.  It is apparent he won't wait long before making his attack.  
+direction.  It is apparent he won't wait long before making his attack.
 ~
 1966179 0 0 0 S
 3 0 0 25d0+0 0d0+0
@@ -844,7 +844,7 @@ Vines entwine themselves about the old trees.
 Thick green vines slither their way around the trees, covering the bark
 from the ground up.  These aren't just any ordinary kind of vines, they are
 a malformed bunch who hunt meat to survive!  An ear-piercing hissing sound
-fills your ears.  
+fills your ears.
 ~
 1966179 0 0 0 S
 3 0 0 25d0+0 0d0+0
@@ -858,7 +858,7 @@ a chipmunk~
 ~
 &PA small furry chipmunk with dark brown eyes scurries on the ground
 before you.  Not an extremely smart animal, or it would of figured out its
-destiny by now.  
+destiny by now.
 ~
 1573057 0 0 0 S
 1 0 0 8d0+0 0d0+0
@@ -885,7 +885,7 @@ reserved~
 E
 apple plump juicy red~
 &RAmazingly enough, this apple found lying on the ground has not one single
-bruise.  In fact, it is oddly bright and shiny for an ordinary apple.  
+bruise.  In fact, it is oddly bright and shiny for an ordinary apple.
 ~
 #801
 cloth piece decorated~
@@ -907,7 +907,7 @@ Attached to this cloth made of animal skin are several designs made of
 metal.  Pictures of assorted animals are etched into small round metal
 discs.  They are fastened to the cloth by tough silken ribbons the color of
 sunset.  There radiates a magical aura about this cloth.  It has been worn
-with honour by many Rangers for many generations.  
+with honour by many Rangers for many generations.
 ~
 >look_prog 100~
 0
@@ -939,9 +939,9 @@ E
 rune runes power leather crafted necklace~
 &WThis ancient symbol stirs the fires of action.  Years ago, when a
 Warrior faced great trials or challenges, he sought the help of the Gods and
-Godesses.  This rune was given as a talisman to inspire powerful actions. 
+Godesses.  This rune was given as a talisman to inspire powerful actions.
 The crescent arms move outward, influencing all things around the wearer of
-this ancient Rune.  &WIt is the symbol of Strength and Courage.  
+this ancient Rune.  &WIt is the symbol of Strength and Courage.
 ~
 #803
 candle friendship light cleric~
@@ -960,7 +960,7 @@ friendship candle colourful~
 &WThis candle symbolizing friendship contains a hidden treasure.  The
 treasure is a symbol of the qualities we all admire and aspire to.  May the
 treasures of friendship always colour your life with warmth, success and
-happiness.  
+happiness.
 ~
 #804
 crystal heart pendant cleric~
@@ -980,7 +980,7 @@ heart crystal pendant~
 when held up to the light.  May it remind you that friendship can transform
 a dull existence into a beautiful rainbow of life experiences - full of joy,
 enthusiasm, confidence and love.  The heart has a little hole in it so that
-it can be worn as a necklace.  
+it can be worn as a necklace.
 ~
 #805
 fire earth symbol druid~
@@ -997,12 +997,12 @@ reserved~
 E
 symbol oddly shaped fire earth~
 &WA magical symbol representing Fire and Earth glows bright red.  Written
-on the symbol is the following: 
- 
+on the symbol is the following:
+
 &R     I am Fire and I am Earth.
 &R     I represent the inner flame
 &R     and am forever married to the ocean.
- 
+
 &R     Alone, I am nothing.
 &R     The elements must join forces
 &R     to regain their powers once again.
@@ -1021,13 +1021,13 @@ reserved~
 807 0 0
 E
 symbol oddly shaped air water~
-&WA magical symbol representing Water and Air glows bright orange. 
-Written on the symbol is the following:&Y 
- 
+&WA magical symbol representing Water and Air glows bright orange.
+Written on the symbol is the following:&Y
+
 &R     &YI am Water and I am Air.
 &R     &YI represent silence and mystery,
 &R     &Ychange and versatility.
- 
+
 &R     &YAlone, I am nothing.
 &R     &YThe elements must join forces
 &R     &Yto regain their powers once again.
@@ -1051,7 +1051,7 @@ A
 E
 sword glowing element elements~
 &WAn inscription carved into the sword reads:
- 
+
 &R     Fire and Earth&P,&Y Air and Water&P.
 &P     United, we represent all Elements.
 &P     Joined together we create a great force,
@@ -1074,7 +1074,7 @@ wand glows flaming~
 &RIt looks as though you'd burn yourself trying to hold this flaming
 wand!  Don't be too easily fooled though, it holds strong magical
 capabilities within.  Trust your inner instincts and discover what the wand
-might offer.  
+might offer.
 ~
 #809
 sword trickery thief~
@@ -1097,7 +1097,7 @@ sword trickery~
 &CThis magnificent sword has been passed down from many generations of
 Thieves throughout Eye of the Storm II.  If you are so fortunate to possess
 one, power and victory can be yours.  Sneak thy way to an innocent
-adventurer, and let the Sword do it's work!  
+adventurer, and let the Sword do it's work!
 ~
 #810
 talisman inner harmony psionicist~
@@ -1118,7 +1118,7 @@ talisman inner harmony necklace~
 &YThis talisman is a symbol of what every Psionicist is.  It's very touch
 will send energy throughout your body.  Take great care while in possession
 of this crafted jewel, for it can be very powerful if fallen into the wrong
-hands.  
+hands.
 ~
 #811
 signet truth justice paladin~
@@ -1137,7 +1137,7 @@ signet truth justice ring~
 &WThe Signet of Truth and Justice symbolizes a Paladin's true nature and
 being.  It has been blessed by the wisest Paladins that walk the Storm, and
 given only to those whose achievments have surpassed the expected.  Use
-sparingly, for its magic is rare.  
+sparingly, for its magic is rare.
 ~
 #812
 claws raking glove werewolf~
@@ -1159,7 +1159,7 @@ E
 claws raking pair gloves sharp~
 &YBehold, the Claws of Raking.  Crafted for exceptional Werewolves of the
 Storm, this glove emits a magical aura about it.  Creatures, animals and
-people everywhere cringe at the sound of the Claws of Raking.  
+people everywhere cringe at the sound of the Claws of Raking.
 ~
 #813
 bard magical flute~
@@ -1181,7 +1181,7 @@ E
 magical flute glows~
 &YLulling music plays softly from this magical flute.  Only a Bard can
 truly master the likes of this flute.  A companion to any serious Bard, it
-should be treated carefully and kept from other no-gooders.  
+should be treated carefully and kept from other no-gooders.
 ~
 >wear_prog 100~
 0
@@ -1204,7 +1204,7 @@ E
 vampire belt blood red bloodbelt~
 &RA mystical Belt of Blood is filled with a deep red substance.  It is
 Holy Blood created by a very wise and ancient Vampire.  Drink with care, for
-when the last drop has vanished, the belt disintegrates into thin air.  
+when the last drop has vanished, the belt disintegrates into thin air.
 ~
 #815
 eyes undead necromancer~
@@ -1223,7 +1223,7 @@ eyes undead necromancer~
 &pYou are looking at the Eyes of the Undead.  Eyes as dark as the
 blackest pit.  These can be worn only by the most exceptional Necromancers
 within the Storm.  They have the ability of offering additional protection
-during a battle.  
+during a battle.
 ~
 #816
 aura mind power mindpower monk~
@@ -1243,7 +1243,7 @@ E
 aura mind power mindpower~
 &BOnly a Monk harnesses the power to control the Aura of MindPower you
 behold.  A Monk who chooses to wear this aura shall unleash wisdom within
-themself they never knew they had.  
+themself they never knew they had.
 ~
 #817
 tome guide eosii book newbie~
@@ -1337,7 +1337,7 @@ move.  To do training you use "practices" that you receive each level based on
 your Wisdom.  The higher your Wisdom the more practices you're able to get per
 level.  To train a stat, like Str, it costs 5 practices per train, but to train
 HP, mana or movement it costs only 1 practice.  Note: You can't train a statisti
-c like Str past 18 regardless of class.  To train a stat you simply type: 
+c like Str past 18 regardless of class.  To train a stat you simply type:
 &wtrain <item> &R#  &C(&R#&C is for how many practices to use.  Ie: train hp 50)
 &cPracticing is a bit more indepth where training deals with statistics,
 practicing is how you aquire new skills and spells.  It only takes one
@@ -1564,8 +1564,8 @@ E
 &z*&w cheating will not be tolerated.  This includes accepting favors from gods
   and exploiting bugs. If you find a bug, report it, then do not use it.
 &B
-&z*&w Absolutely NO summonsing any mobs to Bethaven, Ravenwood or Alor Raharo.  
-  I do NOT wish newbies jeopardized.  There's plenty of room outside those 
+&z*&w Absolutely NO summonsing any mobs to Bethaven, Ravenwood or Alor Raharo.
+  I do NOT wish newbies jeopardized.  There's plenty of room outside those
   towns, use them.
 &z--------------------------------------------------------------------------------
 ~
@@ -1581,8 +1581,8 @@ answer your question.  Also know that most immortals are busy doing something
 even if it may not be immediately appearant so if they don't answer right away
 give them time.  And if you ask for their attention and get it, don't tell them
 "just a sec" if it's something you could have taken care of before calling their
-attention.  These are just general notes of "etiquette" in dealing with 
-immortals.  They're happy to help you out if you give them the chance and don't 
+attention.  These are just general notes of "etiquette" in dealing with
+immortals.  They're happy to help you out if you give them the chance and don't
 disrespect them.
 &z--------------------------------------------------------------------------------
 ~
@@ -1601,7 +1601,7 @@ reserved~
 E
 well~
 &YA deep well made out of small stones and bricks raises above the
-ground.  It's filled with refreshing cold stream water.  
+ground.  It's filled with refreshing cold stream water.
 ~
 #826
 tree tree2 fallen~
@@ -1619,7 +1619,7 @@ E
 tree fallen~
 &YSince the tree is too huge to climb over, and there is no way to walk
 around it, you might just have to climb through it.  &REnter&Y the tree to
-get to the other side.  
+get to the other side.
 ~
 #827
 stream streamlet~
@@ -1649,7 +1649,7 @@ E
 tree large~
 &YSince the tree is too huge to climb over, and there is no way to walk
 around it, you might just have to climb through it.  &REnter&Y the tree to
-get to the other side.  
+get to the other side.
 ~
 #829
 message~
@@ -1679,7 +1679,7 @@ E
 sack black leather~
 &WUse this sack to store potions, food and equipment.  Soon you might
 notice that your hands can get rather full carrying around a whole bunch of
-items, so a bag can be handy.  
+items, so a bag can be handy.
 ~
 #831
 canteen rawhide~
@@ -1697,7 +1697,7 @@ E
 canteen rawhide~
 &WDuring tough battles and long journeys, a basic need is water.  Use
 this canteen to &Rfill&W it with water at a fountain by typing &Rfill
-canteen&W.  
+canteen&W.
 ~
 #832
 fountain brook tiny~
@@ -1714,7 +1714,7 @@ reserved~
 E
 tiny brook~
 &YClear blue water trickles down the brook, offering a cool refreshment
-to all.  Type &Rdrink brook&Y to quench your thirst.  
+to all.  Type &Rdrink brook&Y to quench your thirst.
 ~
 #833
 lizard glove gloves~
@@ -1735,7 +1735,7 @@ glove gloves~
 &YThese gloves were created from the scaly skin of a salamander.  They
 are not just ordinary gloves though.  Once worn, these gloves can be very
 difficult to remove.  The lizard skin seems to meld to your own.  It might
-be worth the risk though, if they improve your fighting abilities.  
+be worth the risk though, if they improve your fighting abilities.
 ~
 #834
 buckler shield~
@@ -1752,7 +1752,7 @@ reserved~
 E
 shield buckler wooden~
 &YThis buckler is a rather small round shield.  It is adorned with a
-tough leather strap which fits onto your arm.  
+tough leather strap which fits onto your arm.
 ~
 #835
 scourge whip leather~
@@ -1772,7 +1772,7 @@ E
 scourge whip leather~
 &YThis short whip has several leather tails along it.  Each tail has
 metal barbs attached along its length.  This scourge can indeed inflict
-great pain on it's victims.  
+great pain on it's victims.
 ~
 #836
 stiletto dagger~
@@ -1793,7 +1793,7 @@ A
 E
 stiletto dagger~
 &YA stiletto is a short dagger with a strong, triangular blade that
-tapers to a sharp point at the tip.  
+tapers to a sharp point at the tip.
 ~
 #837
 lantern hooded~
@@ -1811,7 +1811,7 @@ E
 hooded lantern~
 &YA hooded lantern projects light in 360 degrees and is capped overhead
 to limit the radiation of heat.  This allows it to be carried with a handle
-located at the top of the lantern.  
+located at the top of the lantern.
 ~
 #838
 backpack~
@@ -1831,7 +1831,7 @@ backpack pack back canvas~
 food and items, and then wear it while you fight for extra armor.  Type
 &Popen backpack&Y or &Pclose backpack&Y to open and close it.  By typing
 &Pget <item> backpack&Y and &Pput <item> backpack&Y, you can store and
-retrieve items.  &PWear backpack&Y to wear it.  
+retrieve items.  &PWear backpack&Y to wear it.
 ~
 #839
 ogre boots~
@@ -1851,7 +1851,7 @@ E
 boots boot ogre~
 &YThese boots might seem large and bulky, but they are made of a rare
 lightweight material.  You will find yourself much more dextrous with the
-aid of these marvelous boots!  
+aid of these marvelous boots!
 ~
 #840
 webbed cloak~
@@ -1869,7 +1869,7 @@ E
 webbed web cloak~
 &YThis cloak is made of a special kind of spider's web.  It is very tough
 and difficult to penetrate, making it an excellent addition to any
-adventurer's armor.  
+adventurer's armor.
 ~
 #841
 bush~
@@ -1886,7 +1886,7 @@ reserved~
 E
 bush bushes large~
 &PAs you examine this bush closely, a glimmer of light blue inside
-catches your eye.  Maybe there is something inside.  
+catches your eye.  Maybe there is something inside.
 ~
 #842
 blueberry blueberries~
@@ -1927,7 +1927,7 @@ reserved~
 E
 tree aging spruce~
 &YCarefully examining the tree for any signs of life, you notice a small
-hole near the bottom.  Perhaps you should look inside.  
+hole near the bottom.  Perhaps you should look inside.
 ~
 #845
 scroll giant strength~
@@ -1943,9 +1943,9 @@ reserved~
 0 0 0
 E
 scroll great powers magical~
-&YThis magical scroll must have been hidden here by a careless Cleric! 
+&YThis magical scroll must have been hidden here by a careless Cleric!
 To find out what kind of power it offers, you must type &Rrecite scroll&Y
-and hope for the best.  
+and hope for the best.
 ~
 #846
 potion crystal flask healing~
@@ -1989,7 +1989,7 @@ E
 gem sparkling necklace jewel~
 &YThe gem glitters of all the different colors in the rainbow, even
 without any sunshine.  A melodious humming sound emits from within it.  This
-necklace could make quite a conversation piece.  
+necklace could make quite a conversation piece.
 ~
 #849
 earring skull~
@@ -2022,7 +2022,7 @@ E
 circle bright white light large~
 &YA blinding light flashes before you!  This large opening of bright
 light is the beginning of your path to Peace and Goodwill.  &REnter&Y this
-light, and you shall be brought to &WTorinne's&Y Arena.  
+light, and you shall be brought to &WTorinne's&Y Arena.
 ~
 #851
 portal black hole~
@@ -2040,7 +2040,7 @@ E
 large black hole portal~
 &RGrey mist rises from the deep black hole.  This begins the path of all
 that is &YEVIL&R.  &WEnter&R this hole and you will be brought to &WLord
-Drauzen's&R Arena.  
+Drauzen's&R Arena.
 ~
 #852
 band metal~
@@ -2059,8 +2059,8 @@ A
 E
 silver band metal ring~
 &PShiny metal catches your eye.  It's solid and smooth, with a short
-inscription written on the inside: 
- 
+inscription written on the inside:
+
 &p          The password is &YCOMBAT&p.
 ~
 #853
@@ -2077,10 +2077,10 @@ reserved~
 0 0 0
 E
 strap woven material belt degree~
-&OThis appears to be some type of belt, approximately six feet long. 
+&OThis appears to be some type of belt, approximately six feet long.
 When worn in the proper manner, wrapped twice around the waist and tied with
 a square knot, it enhances a person's strength to fight!  A magical aura
-lights the ground beneath it.  
+lights the ground beneath it.
 ~
 #854
 anklet coral~
@@ -2099,7 +2099,7 @@ coral anklet~
 &OMade of coral found only in the deepest of the seas, this anklet has
 miniature symbols engraved on it.  For centuries, noone has ever been able
 to figure out what they mean.  They look like some type of language made
-from lines and dots.  
+from lines and dots.
 ~
 #855
 brass earring~
@@ -2117,7 +2117,7 @@ E
 brass earring~
 &YShining all over, this brass earring is beautiful.  The very touch of
 it sends warmth through your body.  It attaches in the back with a tiny
-golden clasp.  
+golden clasp.
 ~
 #856
 twine bracelet~
@@ -2133,9 +2133,9 @@ reserved~
 0 0 0
 E
 tiny twine bracelet~
-&CThis bracelet was created from tough twine and decorated with beads. 
+&CThis bracelet was created from tough twine and decorated with beads.
 It is lined with hardened leather underneath, to add protection from the
-rough twine.  
+rough twine.
 ~
 #857
 fur furlined scarf~
@@ -2153,7 +2153,7 @@ E
 delicate furlined fur lined scarf~
 &PSofter than a baby's skin, this beautiful scarf would be a definite
 asset to anyone's wardrobe.  It is lined with light orange fox fur to add
-warmth on those cold evenings.  
+warmth on those cold evenings.
 ~
 #858
 rustic bracers~
@@ -2171,7 +2171,7 @@ E
 rustic worn bracer~
 These bracers look as if they've been worn many years.  Made of a mixture
 of metals, their surface is slowly being worn down.  Although not brand new,
-they offer plenty of protection and are a great piece of armor.  
+they offer plenty of protection and are a great piece of armor.
 ~
 #859
 quilted vest~
@@ -2188,7 +2188,7 @@ reserved~
 E
 quilted colorful vest~
 Made of beautiful colored silk materials, this vest brighten's any young
-girl's wardrobe.  It offers warmth during the chilly evenings.  
+girl's wardrobe.  It offers warmth during the chilly evenings.
 ~
 #860
 red jumper~
@@ -2206,7 +2206,7 @@ E
 pil red cloth heap jumper~
 You see a bright red jumper made of pure cotton.  It is adorned with two
 large pockets in the front, great for storing berries during a walk through
-the bush.  
+the bush.
 ~
 #0
 
@@ -2219,7 +2219,7 @@ The mist is thick all about you, making it difficult to see very far.  It
 appears as though a storm is coming this way just off in the distance.  As
 you inhale the fresh cool air, you feel a great sense of accomplishment to
 have finally reached this odd but fascinating world.  This world that many
-call home, &WEye of the Storm II.  
+call home, &WEye of the Storm II.
 ~
 0 394268 0
 Rd     0
@@ -2231,10 +2231,10 @@ S
 #801
 Path of the Brave~
 Off in the distance, you can hear the voices of people throughout the
-Storm.  This path leads &Wsouth&c towards Bethaven, the central town. 
+Storm.  This path leads &Wsouth&c towards Bethaven, the central town.
 During your journey into Bethaven, you shall come across &WMudschool&c,
 where you can learn all about mudding and beginning your life here at Eye of
-the Storm II.  
+the Storm II.
 ~
 0 394264 0
 Rd     0
@@ -2249,7 +2249,7 @@ You are obviously on the right track!  Keep heading &Wsouth&c and watch
 out for any &Rsigns&c along the way.  Whenever there is a sign in Mudschool,
 it will be in &Rred&c.  You should always read these descriptions and signs,
 for they will help you discover more information.  Type &Rlook sign&c now as
-an example.  
+an example.
 ~
 0 394268 0
 Rd     0
@@ -2259,7 +2259,7 @@ sign~
 &W
 &WThis is just an example, for those of you
 who are very new here.
- 
+
 &PWishing you great adventures,
 Kalin
 ~
@@ -2273,7 +2273,7 @@ Path of the Brave~
 You are getting very close now.  The sounds of people hurrying about seem
 clearer.  Soon you will be nearing &WMudschool&c, a place the folks of
 Bethaven created to teach newcomers their ways.  Remember to keep an eye out
-for helpful signs.  
+for helpful signs.
 ~
 0 394264 0
 Rd     0
@@ -2288,7 +2288,7 @@ You have finally arrived at the entrance to Mudschool!  To your south
 lies the Main Grounds to Mudschool, where you will spend your first few
 levels learning how to survive here.  Mudschool is surrounded by large brick
 walls to protect you and keep the forest animals from roaming about the
-towns.  
+towns.
 ~
 0 394268 0
 Rd     0
@@ -2304,7 +2304,7 @@ your skills and attributes.  You will learn more about these as you explore
 and gain levels.  When you are finished exploring Mudschool, travel east to
 decide your fate.  The path to Bethaven leads &Wdown&c, but it is
 &Rstrongly&c advised to travel &Yeast&c when you are finished here, to be
-brought to an Arena for more practice.  
+brought to an Arena for more practice.
 ~
 0 393244 0
 Rd     0
@@ -2330,7 +2330,7 @@ Pebbled Walkway~
 To your west lies the &WTraining Grounds&c, where you practice skills and
 spells and train your attributes.  Often times newcomers will see
 experienced fighters in the Training Grounds as they reach higher levels and
-gain even more knowledge.  
+gain even more knowledge.
 ~
 0 393244 0
 Rd     0
@@ -2348,21 +2348,21 @@ Pebbled Walkway~
 A message board has been posted here for newcomers.  Citizens of Bethaven
 often post messages here that might be of interest to someone new at the
 Storm, or just to help in general.  Type &Rlook board&c to view what is on
-it.  
+it.
 ~
 0 393244 0
 Rd     0
 E
 board~
 &Y---------------==========&P Messages&Y ==========---------------
- 
+
 &PJezabel: &WWelcome to Eye of the Storm II! I, Jezabel, am here
 to protect every citizen of Bethaven from evil. Please feel welcome!
 &PDesiray:&W Come and visit me at my Armory! I will set you up with an
 entire outfit for cheap!
 &PZak:&W They're all crazy! I can't make enough magic to keep you all happy!
 &PMerc:&W Fairwell, friends of Bethaven. I must travel far away to help save
-my loved ones' cherished city of Lassarin. Wish me luck!  
+my loved ones' cherished city of Lassarin. Wish me luck!
 &PDukkoti: &WWelcome one and all. I can be found in Bethaven in my shoppe
 where I take in and sell groceries and imports of the finest quality.
 
@@ -2382,7 +2382,7 @@ Training Grounds of Mudschool~
 Surrounded by tall brick walls, the area here is well protected from
 stormy weather and rabid animals roaming about.  Directly north is where you
 must &Wtrain&c with Master Jyle.  To the south is where you &Wpractice&c at
-level three.  Another &Rsign&c is wedged here between two large rocks.  
+level three.  Another &Rsign&c is wedged here between two large rocks.
 ~
 0 393244 0
 Rd     0
@@ -2391,7 +2391,7 @@ sign~
 &WYou must travel &Ynorth&W at levels 1 and 2 to TRAIN.  Make certain to
 read the signs posted.  You should train first before you venture further
 into Mudschool.  Once you've reached level 3, you can travel &Ysouth&W to
-PRACTICE with your Master.  Don't forget to read the signs first!  
+PRACTICE with your Master.  Don't forget to read the signs first!
 ~
 D0
 ~
@@ -2411,21 +2411,21 @@ Master Jyle's Training Area~
 The atmosphere here is calm and soothing.  This is where venturers of the
 Storm come to train their attributes.  Master Jyle will guide you as you
 level, and help train you to survive in the most trying of times.  He has
-taken the time to prepare an informative &Rsign&c for newcomers.  
+taken the time to prepare an informative &Rsign&c for newcomers.
 ~
 0 394268 0
 Rd     0
 E
 sign~
 &YIMPORTANT INFORMATION FOR NEWBIES
- 
+
 &WEvery character has certain attributes that define how
 strong and intelligent you are, as well as other things.
 In order to increase your attributes, you must TRAIN them.
 By typing &Rtrain&W while at a trainer, you can see what
 attributes you can still improve. When you created your
-character, you were given several practice sessions. 
- 
+character, you were given several practice sessions.
+
 Practice sessions are used for both training and practicing.
 To view how many practice sessions you have, type &Rscore&W. By
 typing &Rtrain <attribute>&W you can train each attribute. To get
@@ -2441,26 +2441,26 @@ Master Staer's Practice Area~
 The room is filled with many kinds of equipment to aid fellow fighters
 and spellcasters.  This is where you will spend much time practicing skills
 and spells you acquire.  Master Staer is very wise, and will be your mentor
-throughout Mudschool.  She has posted a large &Rsign&c on the far wall.  
+throughout Mudschool.  She has posted a large &Rsign&c on the far wall.
 ~
 0 394268 0
 Rd     0
 E
 sign~
 &YIMPORTANT INFORMATION FOR NEWBIES
- 
+
 &WWhen you created your character, you chose what
 class and race you wished to be. Along with this class
 and race you get certain skills and spells. In order to
 use these skills, you must PRACTICE them. To see a list
 of skills and spells your character will get, type &Rslist&W.
- 
+
 You can only practice the skills and spells you receive at
 each level. Do this by typing &Rpractice <skill or spell name>&W.
 Once you have practiced it enough to use in the real world,
-you will have to use the skill or spell in order to become 
+you will have to use the skill or spell in order to become
 better at it.
- 
+
 &WIf you wish to see the skills and spells available to you at
 your current level, simply type &Rpractice&W. The percentage
 shown is how well you've become at each skill or spell. Remember,
@@ -2477,7 +2477,7 @@ Main Grounds of Mudschool~
 The path leads south&c from here, deeper into Mudschool.  Pebbles and
 dried leaves cover the worn path, but it is still easy to follow.  Tall red
 brick walls line either side of you, offering protection from the evil that
-you will soon discover.  
+you will soon discover.
 ~
 0 393244 0
 Rd     0
@@ -2505,7 +2505,7 @@ Main Grounds of Mudschool~
 A large &capple&R tree&c towers over part of the trail, dangling apples
 almost ready to fall off.  Perhaps you are lucky enough to find one lying on
 the ground.  The path continues south&c from here, leading you to a special
-place in Mudschool where you can learn how to fight mobs.  
+place in Mudschool where you can learn how to fight mobs.
 ~
 0 393244 0
 Rd     0
@@ -2545,7 +2545,7 @@ Mudschool Shop~
 The &Rshelves&c are filled with trinkets, food, and basic survival items.
 The citizens of Bethaven donate food and items to the shop, always making
 sure there is plenty to go around.  A crooked, wooden &Rsign&c hangs loosely
-against the wall.  
+against the wall.
 ~
 0 394268 0
 Rd     0
@@ -2554,7 +2554,7 @@ sign~
 &WIf you want to see what items I sell, type &Ylist&W and it will show
 you items and cost.  To buy an item here, type &Ybuy <item>&W and if you
 have enough money, I will gladly sell it to you.  For more detailed help
-about shops, type &Yhelp buy&W.  &WThank you, &WKalin.  
+about shops, type &Yhelp buy&W.  &WThank you, &WKalin.
 ~
 E
 shelf shelve shelves~
@@ -2569,10 +2569,10 @@ S
 #814
 Main Grounds of Mudschool~
 You have almost arrived at the &WFighting Grounds&c.  Exits branch off on
-the west and east sides, leading to a small shop and the Mudschool Bank. 
+the west and east sides, leading to a small shop and the Mudschool Bank.
 Once you've been through the Fighting Grounds, you might have enough coins
 to purchase some necessities, such as a bag and light.  Once you start
-accumulating more money, you can deposit it east.  
+accumulating more money, you can deposit it east.
 ~
 0 393244 0
 Rd     0
@@ -2598,31 +2598,31 @@ Main Grounds of Mudschool~
 &WSouth&c of here begins the Mudschool's Fighting Grounds.  That area is
 well fenced in to keep the creatures out of the main grounds.  A helpful
 &Rsign&c has been stuck on the brick wall, explaining some useful commands
-and strategies for newcomers.  
+and strategies for newcomers.
 ~
 0 393244 0
 Rd     0
 E
 sign~
 &YINFORMATION FOR NEWCOMERS
- 
+
 &Y**&W  Type &Rhelp&W and press enter to view help topics.
 &W    Type &Rhelp <topic>&W to get help on a certain word.
 
 &Y**&W  Type &Rconfig&W to view automatic settings you can
 &W    adjust. Type &Rhelp config&W for more information.
- 
+
 &Y**&W  Type &Rchannels&W to view the different channels
 &W    available to you at your level. You can also type
 &W    &Rhelp channels&W for details about the command.
- 
+
 &Y**&W  Always remember to &Rlook <item>&W or &Rlook <mob name>&W
 &W    as it can often give you more information.
 ~
 E
 gate~
 &PA large gate blocks your way to the Fighting Grounds.  You must type
-&Ropen south&P or &Ropen gate&P to open the gate south of you.  
+&Ropen south&P or &Ropen gate&P to open the gate south of you.
 ~
 D0
 ~
@@ -2630,7 +2630,7 @@ D0
 0 0 814
 D2
 &PDirectly south is an amazing view of a large fenced-in forest, home to
-many animals and creatures.  
+many animals and creatures.
 ~
 gate~
 3 0 816
@@ -2647,7 +2647,7 @@ Fighting Grounds of Mudschool~
 You have finally reached the &WFighting Grounds&c of Mudschool.  Beware,
 before you venture forth, it would be very wise to read every sign carefully
 for hints and instructions.  A large &Rsign&c is bolted into the soft soil
-by the edge of the trail.  
+by the edge of the trail.
 ~
 0 394268 0
 Rd     0
@@ -2655,20 +2655,20 @@ E
 sign~
 &WThroughout your journey in the Fighting Grounds, you will encounter
 many creatures and animals to kill. These are called &Rmobs&W.
- 
+
 &R1.&W  The most &Rimportant&W command to remember before you attempt
 &W    to kill a mob is to type &Rcon <mob name>&W.
 
 &Y**&W  The &Rcon&W command is short form for &Rconsider&W, which informs
 &W    you how well you will do against the mob, if you can kill it.
- 
+
 &R2.&W  Secondly, always keep an eye on your &Yhitpoints&W. These are
 &W    shown in your prompt and should look similar to &w20/20&C hp&W.
 
 &Y**&W  Your prompt is the text shown to the left of whatever you type.
 &Y**&W  If your hitpoints are getting very low while fighting a mob,
 &W    you can type &Rflee&W to attempt to flee away from the creature.
- 
+
 &R3.&W  There are Healers situated throughout the Fighting Grounds.
 &W    When you are hurt and wish to be healed, these Healers can help you.
 &W    You can also type &Rrest&W or &Rsleep&W to heal faster.
@@ -2679,11 +2679,11 @@ many creatures and animals to kill. These are called &Rmobs&W.
 E
 gate~
 &PIf the gate is closed, just type &Ropen gate&P &Por &Ropen north&P to
-be able to travel north.  
+be able to travel north.
 ~
 D0
 &PBeyond this gate lies the Main Grounds of Mudschool, where you must
-travel to practice, train, and visit the shops.  
+travel to practice, train, and visit the shops.
 ~
 gate~
 3 0 815
@@ -2714,7 +2714,7 @@ Eastern Grounds of Mudschool~
 Large trees and bushes surround the Fighting Grounds, shading out the
 burning sun.  This area is well taken care of, full of lively creatures
 roaming about for you to challenge.  Remember to &Rlook&c at the mobs and
-items for helpful information.  
+items for helpful information.
 ~
 0 393240 0
 Rd     0
@@ -2737,7 +2737,7 @@ of you achieve levels quicker.  To learn more about grouping, type &Whelp
 group&c.  Although some are simply brave enough to face the wilderness
 alone, having someone by your side usually has its advantages.  Beware of
 &Wagressive&c creatures throughout the Fighting Grounds.  These animals will
-attack you as soon as you enter the room.  
+attack you as soon as you enter the room.
 ~
 0 393240 0
 Rd     0
@@ -2755,7 +2755,7 @@ Eastern Grounds of Mudschool~
 Eventually, you might find equipment from animals and creatures that you
 already have.  Instead of just leaving it on the ground if you don't want
 it, you can either &Wdonate&c it, or &Wsacrifice&c it.  By typing &Whelp
-donate&c or &Whelp sacrifice&c, you can get a more detailed explanation.  
+donate&c or &Whelp sacrifice&c, you can get a more detailed explanation.
 ~
 0 393240 0
 Rd     0
@@ -2773,7 +2773,7 @@ Eastern Grounds of Mudschool~
 South of here you will find Jakkor, a Healer.  If you listen closely, you
 might be able to hear him whistling a magical tune with the birds, or
 perhaps he's busy healing another player.  By typing &Wwhere&c, you can see
-who else is exploring the same area you are in, and what room they are in.  
+who else is exploring the same area you are in, and what room they are in.
 ~
 0 393240 0
 Rd     0
@@ -2796,7 +2796,7 @@ You have arrived at a small central clearing, where Jakkor the Healer
 awaits your arrival.  Tiny feathered creatures surround him, singing their
 praise.  Tree stumps sit on either side of the healer, where you can rest
 your weary bones.  Tall trees line the clearing, making it an ideal shelter
-from the animals roaming about.  
+from the animals roaming about.
 ~
 0 394268 0
 Rd     0
@@ -2814,7 +2814,7 @@ Southeastern Grounds of Mudschool~
 The scent of pine needles and branches fill the air.  The path you travel
 on is well taken care of, with plenty of room on either side.  This seems
 like the perfect place to take a nap, especially if you've been fighting all
-day.  Remember you can &Wrest&c or &Wsleep&c to gain back your hit points.  
+day.  Remember you can &Wrest&c or &Wsleep&c to gain back your hit points.
 ~
 0 393240 0
 Rd     0
@@ -2847,7 +2847,7 @@ A huge tree is blocking your way west.  There is only one solution to
 bypass it.  You can probably figure out how if you &Rlook&c around.  It is
 way too enormous to crawl over, and the forest around you is too dense to
 walk around the tree.  A caretaker should of removed this old tree by now,
-if they all weren't so busy keeping Bethaven safe.  
+if they all weren't so busy keeping Bethaven safe.
 ~
 0 393240 0
 Rd     0
@@ -2867,10 +2867,10 @@ endif
 #824
 A Fallen Tree~
 A huge tree is blocking your way east.  You will have to figure out how
-to get to the other side.  Maybe you should examine the tree more closely. 
+to get to the other side.  Maybe you should examine the tree more closely.
 Mudschool caretakers should be around eventually to clean up this mess,
 although they have been extremely busy as of late.  It seems as though some
-dirt near the opening in the tree has been disturbed.  
+dirt near the opening in the tree has been disturbed.
 ~
 0 393240 0
 Rd     0
@@ -2914,7 +2914,7 @@ A small trail eastwards will lead you back towards the Eastern Grounds of
 Mudschool.  If you travel westwards, you will be sure to find more mobs
 scattered throughout.  Once you have killed enough creatures, you should
 have enough coins to &cbuy&c an item from Kalin at the Mudschool Shop, such
-as a canteen to store fresh water.  
+as a canteen to store fresh water.
 ~
 0 393240 0
 Rd     0
@@ -2933,7 +2933,7 @@ Edging alongside the Southeastern Grounds is a tiny footpath.  Flowers of
 all kinds have been carefully planted and tended to here.  This area of
 Mudschool attracts many folks from the nearby towns because of its mystical
 aura and simplicity.  Soothing feminine whispers float by you, being carried
-away by the light breeze.  
+away by the light breeze.
 ~
 0 393240 0
 Rd     0
@@ -2951,14 +2951,14 @@ A Narrow Footpath~
 A narrow footpath leads north to a comfortable resting place.  Animals
 and creatures travel freely all throughout the Fighting Grounds, oblivious
 to the many adventurers preying upon them.  A kind-hearted soul seems to of
-planted some &Rlilies&c bordering the path.  
+planted some &Rlilies&c bordering the path.
 ~
 0 393240 0
 Rd     0
 E
 lily lilie lilies~
 &pDark violet lilies line the edges of this beautiful path.  They emit an
-aroma so strong and heady one would think it magical.  
+aroma so strong and heady one would think it magical.
 ~
 D0
 ~
@@ -2975,7 +2975,7 @@ An old wooden bench occupies this clearing.  You can often find Shyan
 relaxing here writing about her brave adventures.  A tiny streamlet runs
 alongside, just enough to quench your thirst between battles.  Shyan is one
 of the wisest Mentors at &WEye of the Storm II&c.  Ask her what it is you
-seek, and she will do her best to inform you well.  
+seek, and she will do her best to inform you well.
 ~
 0 394264 0
 Rd     0
@@ -2993,7 +2993,7 @@ Trampled Leaves and Branches~
 Many bushes line the edge of the path you are travelling.  Sometimes you
 can hear little animals scurrying within them, attempting to hide from those
 of your kind.  Maybe you should take a look &Rinside&c the bush, you might
-find something worth your interest.  
+find something worth your interest.
 ~
 0 393240 0
 Rd     0
@@ -3012,7 +3012,7 @@ At &YEye of the Storm II&c, we like to promote &Wroleplaying&c with our
 characters.  We have a channel called &Ychat&c, which is used for
 roleplaying.  Type &Wchat <text>&c to talk on it.  If you want to learn more
 about your class or race, type &Whelp <class or race>&c.  Be creative and
-get involved!  
+get involved!
 ~
 0 393240 0
 Rd     0
@@ -3028,10 +3028,10 @@ S
 #832
 Trampled Leaves and Branches~
 As you travel south you will encounter more interesting creatures.  As
-you conquer more and more mobs, you will soon advance to your next level. 
+you conquer more and more mobs, you will soon advance to your next level.
 It is a good idea to head back to the training and practice rooms each time
 you level.  Although you cannot practice any skills or spells until level
-three, you can increase statistics such as wisdom and constitution.  
+three, you can increase statistics such as wisdom and constitution.
 ~
 0 393240 0
 Rd     0
@@ -3049,15 +3049,15 @@ Mudschool Bank~
 This is a rather small building branching off the main grounds.  This
 isn't a typical bank with many tellers lined up to serve you, as it is
 simply run by a local citizen donating his time to the Mudschool.  Any money
-you deposit here can still be accessed from any bank in many of the towns. 
-Markos has posted a large &Rsign&c explaining his services.  
+you deposit here can still be accessed from any bank in many of the towns.
+Markos has posted a large &Rsign&c explaining his services.
 ~
 0 17171468 0
 Rd     0
 E
 sign~
 &WThe following commands can be used at ANY bank:
- 
+
 &YDeposit:&W    To deposit coins, type &Rdeposit <gold/silver/copper> <amount>&W.
 &W            Example: deposit gold 100
 &YWithdraw:&W   To withdraw money, type &Rwithdraw <gold/silver/copper> <amount>&W.
@@ -3067,7 +3067,7 @@ sign~
 &W            amount of TYPE coins. To view what items you have in storage,
 &W            type &Rstore&W. To store an item, type &Rstore <item>&W. Then, to
 &W            retrieve an item from your storage box, type &Rretrieve <item>&W.
- 
+
 &WTo find out how much money you are carrying, you can either type &Rscore&W or
 &Rworth&W which both show you the amount of coins you have.
 ~
@@ -3083,7 +3083,7 @@ in their quest of survival.  Underground, you will learn how to fight a mob,
 make some money, find some equipment for yourself, and gain experience
 points.  A huge &Rboard&c with detailed instructions has been staked into
 the soil.  When you feel confident enough to fight in the main Fighting
-Grounds, simply go &Wup&c from here and start exploring.  
+Grounds, simply go &Wup&c from here and start exploring.
 ~
 0 393240 0
 Rd     0
@@ -3091,9 +3091,9 @@ E
 board~
 &PATTENTION NEWCOMERS
 &WYou must travel west until you can no more, then return here
-when you have killed all the mobs. You should be very careful  
+when you have killed all the mobs. You should be very careful
 and remember to always &Ylook&W at mobs and items for more information.
-Once you have learned all you can underground, travel upwards to  
+Once you have learned all you can underground, travel upwards to
 the main Fighting Grounds.
 ~
 D3
@@ -3111,7 +3111,7 @@ The clay walls on either side of you are damp and cold.  Torches attached
 at various intervals throughout this tunnel provide sufficient light for
 your purposes.  Your goal here is to kill this spider to gain &Wexperience
 points.  &cType &Whelp exp&c for details on gaining experience.  Type &Rlook
-spider&c if you are unsure of your next move.  
+spider&c if you are unsure of your next move.
 ~
 0 393240 0
 Rd     0
@@ -3129,8 +3129,8 @@ Deeper into the Tunnel~
 Type &Wgroup&c or &Wscore&c to see how many experience points and hit
 points you have.  Experience points help you reach your next level, by
 killing mobs.  Hit points are like your lifeline, with zero hit points
-&W(hp)&c you would die.  Each time a mob hits you, your hit points lower. 
-By resting or sleeping you can regain lost hit points.  
+&W(hp)&c you would die.  Each time a mob hits you, your hit points lower.
+By resting or sleeping you can regain lost hit points.
 ~
 0 393240 0
 Rd     0
@@ -3149,7 +3149,7 @@ The tunnel is quite a bit narrower near the end.  The ground is damp and
 cold.  Perhaps something to keep your feet warm would help.  Don't forget to
 &Rcon&c any mob before attempting to kill it, &Rlook&c at items and mobs for
 extra information, and &Rexamine&c a corpse after you've killed it for
-equipment and coins.  There is a &Rsign&c posted on the door to the west.  
+equipment and coins.  There is a &Rsign&c posted on the door to the west.
 ~
 0 393240 0
 Rd     0
@@ -3160,7 +3160,7 @@ here forewarned of this evil animal.  Before venturing westwards, be sure
 your hit points are full.  Type &Pgroup&W to see if you are at full hit
 points.  If you aren't, you can either &Psleep&W or &Prest&W to regain them.
 There is a door to your west that you may have to &Popen&W to get to the
-creature.  Good luck adventurer!  
+creature.  Good luck adventurer!
 ~
 D1
 ~
@@ -3177,7 +3177,7 @@ You have finally reached the end of the tunnel.  This is the home of a
 savage deformed ogre.  He is usually waiting here for his next victim,
 gnawing away at the wooden door.  Once you conquer this creature, head back
 east to find your way to the main Fighting Grounds above.  Be careful, he is
-usually very hungry!  
+usually very hungry!
 ~
 0 393240 0
 Rd     0
@@ -3191,7 +3191,7 @@ Edge of a River Bank~
 An odd mixture of trees and plants breathe life into the Fighting
 Grounds.  In the lands of the Storm, there is always an abundance of
 wildlife and plant life.  If you strain your eyes towards the west, you
-might be able to make out some sort of structure up in a tree.  
+might be able to make out some sort of structure up in a tree.
 ~
 0 393240 0
 Rd     0
@@ -3213,7 +3213,7 @@ A Rope Bridge~
 Water gushes ominously beneath you, splashing wildly against the soft
 river bank.  The bridge is quite unsteady, swaying back and forth teasingly.
 Perhaps you should quickly move onwards, before you fall in head first!  If
-you stand here too long, a gale of wind might make you lose your balance.  
+you stand here too long, a gale of wind might make you lose your balance.
 ~
 0 393240 0
 Rd     0
@@ -3244,7 +3244,7 @@ a sunny afternoon, you can sit at the edge of the river and watch the fish
 jumping.  If you happend across some old fishing line and a stick, you could
 even catch yourself a fine meal.  Bethaven folks strongly encourage you not
 to participate in such a sport though, as they are always trying to preserve
-the forest creatures and plant life.  
+the forest creatures and plant life.
 ~
 0 393240 0
 Rd     0
@@ -3259,18 +3259,18 @@ D3
 S
 #842
 An Old Oak Tree~
-&RInitials&c carved onto the old oak tree are barely visible these days. 
+&RInitials&c carved onto the old oak tree are barely visible these days.
 A young couple must of engraved them here a long time ago.  If you look up,
 you will notice a large treehouse made out of logs.  Tiny foot holes are
 carved into the side of the tree to use as a &Rladder&c.  A frayed rope
-hangs from an opening in the treehouse floor above.  
+hangs from an opening in the treehouse floor above.
 ~
 0 393240 0
 Rd     0
 E
 ladder~
 &OHoles are dug out for a pair of tiny feet, apparently once used as a
-ladder.  
+ladder.
 ~
 E
 initials~
@@ -3305,7 +3305,7 @@ A pile of leaves and brush are arranged on the left side of the
 treehouse, perhaps used as a couch or place to rest.  The walls are covered
 with cob webs and the floors creak as you walk about them.  It looks as if
 there hasn't been anyone up here in ages.  Off in the right corner lies a
-worn fragile &Rbook&c of some type.  
+worn fragile &Rbook&c of some type.
 ~
 0 393240 0
 Rd     0
@@ -3313,7 +3313,7 @@ E
 book~
 &CYou dust off the book, and see the title reads &RJournal of Kalin
 Mikeira&C.  As you open it, you notice a small inscription written on the
-inside cover.  
+inside cover.
 ~
 D4
 ~
@@ -3329,7 +3329,7 @@ On Top of a Treehouse~
 From this high up, you can see all of Mudschool surrounding you.  The
 view is breathtaking.  The river rumbles below, otters and beavers swimming
 about.  The landing you are standing on is not very strong, you should be
-very careful you don't fall off.  
+very careful you don't fall off.
 ~
 0 393240 0
 Rd     0
@@ -3340,17 +3340,17 @@ D5
 S
 #845
 Behind an Old Oak Tree~
-Flowers embrace the large oak tree, complementing its aging bark skin. 
+Flowers embrace the large oak tree, complementing its aging bark skin.
 There is a large boulder to the left of the tree, offering a comfortable
 place to rest.  It looks as if a huge &Rhole&c has been dug leading under
-the rock.  
+the rock.
 ~
 0 393240 0
 Rd     0
 E
 hole~
-&YYou look into a hole seemingly large enough for someone to crawl into. 
-Listening closely, you can hear muffled growls from below!  
+&YYou look into a hole seemingly large enough for someone to crawl into.
+Listening closely, you can hear muffled growls from below!
 ~
 D1
 ~
@@ -3371,7 +3371,7 @@ This obviously isn't a most desirable place to be.  Bright &Yyellow&c
 eyes glare at you hungrily.  This is the home of a giant wild badger!  He
 rarely leaves his cold and damp abode, and is extremely agressive to
 intruders.  If you aren't prepared for a nasty fight, you better scurry out
-of here quick!  
+of here quick!
 ~
 0 393240 0
 Rd     0
@@ -3385,7 +3385,7 @@ Southwestern Grounds of Mudschool~
 Many trees tower over the trodden path, offering shade and protection
 from the burning sun.  Berries and flowers grow wildly all over the Fighting
 Grounds, which are tended by citizens of Bethaven.  They take great care in
-preserving the natural life they cherish so much.  
+preserving the natural life they cherish so much.
 ~
 0 393240 0
 Rd     0
@@ -3403,7 +3403,7 @@ Southwestern Grounds of Mudschool~
 Folks from nearby towns often visit the Fighting Grounds in search of
 berries and wild flowers.  Although most are friendly, they aren't inclined
 to sit and chat for long.  Daily chores and responsibilities are always
-popping up, leaving little time for leisure.  
+popping up, leaving little time for leisure.
 ~
 0 393240 0
 Rd     0
@@ -3421,7 +3421,7 @@ Deep Within the Fighting Grounds~
 You've travelled quite deep into the Fighting Grounds.  Here it is much
 more quiet and dark, for many folks don't normally travel this far into the
 forest.  The atmosphere is eerie and extremely silent.  Occassionaly one can
-hear the wolves howling further into the Fighting Grounds.  
+hear the wolves howling further into the Fighting Grounds.
 ~
 0 393240 0
 Rd     0
@@ -3439,7 +3439,7 @@ Southern Trail~
 The southern trail leads you back into the main Fighting Grounds, where
 it is much more lively and not nearly as dark and dreary.  Vines line the
 old trees like snakes wrapping themselves about them.  Ruffling sounds get
-louder to your left, as you turn around you notice the vines are moving!  
+louder to your left, as you turn around you notice the vines are moving!
 ~
 0 393240 0
 Rd     0
@@ -3458,7 +3458,7 @@ Large rocks line the sides of the trail, colorful flowers planted
 randomly about them.  You might want to take a &Wrest&c soon, the humid air
 and burning sun can wear you out pretty fast.  Remember to keep a sharp eye
 out for aggressive creatures roaming within the grounds.  You always want to
-be prepared for a battle.  
+be prepared for a battle.
 ~
 0 393240 0
 Rd     0
@@ -3478,7 +3478,7 @@ longer offer you a challenge, your next stop will be the Arena.  The Arena
 was created also by the citizens of Bethaven.  Unlike Mudschool, it's
 purpose isn't to teach and guide, but to simply provide younger folks a
 place to practice their skills and gain a few more levels before venturing
-out on their own.  
+out on their own.
 ~
 0 393240 0
 Rd     0
@@ -3495,8 +3495,8 @@ S
 A Dim Walkway~
 The walkway is covered with long silken grass.  From up ahead a soft
 glowing light emits from beneath an entryway.  What is this odd addition to
-the Mudschool?  If you dare to discover, continue your venture eastwards. 
-Be prepared, and examine the rooms carefully.  
+the Mudschool?  If you dare to discover, continue your venture eastwards.
+Be prepared, and examine the rooms carefully.
 ~
 0 393240 0
 Rd     0
@@ -3515,7 +3515,7 @@ Directly &Rnorth&c from here a black mist seeps from beneath a large iron
 door.  The stench from it is almost unbearable.  The door to the &Rsouth&c
 is veiled in a bright white light.  Vibrations cause it to create a serene
 humming sound.  Something quite detailed has been etched into the &Rwall&c
-in front of you.  
+in front of you.
 ~
 0 393240 0
 Rd     0
@@ -3533,15 +3533,15 @@ D0
 &RBlood drips through the edges of this large door.  Black mist
 encompasses it entirely.  Beyond this door lies an EVIL man.  There are
 those within the Storm that choose to follow his ways.  If you are one of
-them, you will find your destiny beyond here.  
+them, you will find your destiny beyond here.
 ~
 ~
 3 0 855
 D2
 &PAncient myths reveal that a goddess Storm Angel is always near those
-that are GOOD.  It is said that her spirit spreads across the many lands. 
+that are GOOD.  It is said that her spirit spreads across the many lands.
 South of you she rests, awaiting the next follower of GOOD and PEACE.  If
-you wish to remain good, go to her and seek your destiny.  
+you wish to remain good, go to her and seek your destiny.
 ~
 ~
 3 0 856
@@ -3558,17 +3558,17 @@ S
 &wA Gloomy Black Room~
 You enter a pitch &zblack&c room, more resembling a dreary pit.  Lord
 Drauzen stands eerily in the corner, eyeing your every move.  Dark mist
-envelops you, blurring your vision and making it very difficult to breathe. 
+envelops you, blurring your vision and making it very difficult to breathe.
 One might reconsider sticking around here for long, it is not at all
-comforting.  
+comforting.
 ~
 0 394264 0
 Rd     0
 E
 sign~
 &RExtremely Important Information!
- 
-&YIf you choose to enter this black hole you will be transferred 
+
+&YIf you choose to enter this black hole you will be transferred
 &Yto Drauzen's Arena in Ravenwood. Your &Ralignment&Y right now is neutral.
 &YOnce you begin fighting in Ravenwood, your alignment will become EVIL. If
 you happen to be in Ravenwood with a GOOD alignment, the guards can throw
@@ -3583,7 +3583,7 @@ S
 &WYou have stepped into a heavenly room filled with flowers, tiny birds
 and many rainbows.  Colorful lights splash against the white marble floor,
 dancing playfully.  Torinne floats above you, her long blonde hair cascading
-behind her.  
+behind her.
 ~
 0 394264 0
 Rd     0
@@ -3599,7 +3599,7 @@ are covered from top to bottom with deformed looking mirrors.  This room
 somewhat resembles a circus.  Huge stuffed animals are lined up starting at
 each corner of the wall.  Books and loose papers are scattered all about.  A
 circular bed is sunken into the floor, lined with purple and green dotted
-sheets.  
+sheets.
 ~
 0 394776 0
 Rd     0

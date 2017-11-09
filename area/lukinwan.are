@@ -1,7 +1,7 @@
 #AREADATA
-Name        { 20-70} Dojo of Lukin Wan   Dirk~
+Name        Dojo of Lukin Wan~
 Levels      20 70
-Builders    None~
+Builders    Dirk~
 VNUMs       201 250
 Security    100
 Recall      25001
@@ -20,7 +20,7 @@ Master Chu stands here glaring at you with utter disregard.
 &GYou see a middle aged oriental man with a missing right eye.  He is
 dressed in a &ppurple&G and &zblack&G uniform with a &Ygold&G sash tied around his
 waist.  Master Chu looks as if he wasn't expecting to see you or anyone else
-at the moment. It is obvious that he is a battle hardened vetern who has lived 
+at the moment. It is obvious that he is a battle hardened vetern who has lived
 through many battles.
 ~
 67 33554592 0 -100 S
@@ -45,7 +45,7 @@ The Avatar of LuKin Wan stands before you revelling in its evillness.
 You see before you an awesome being of unimaginable power and evil.  His
 face seems to writhe like snakes underneath his dark hood.  His powerful
 body looks as if it could snap an elephant's neck with little effort.  The
-Avatar knows no mercy.  
+Avatar knows no mercy.
 ~
 99 67109096 16 -1000 S
 100 0 0 20800d0+0 0d0+0
@@ -70,7 +70,7 @@ A yamabushi dances in and out of your sight.
 ~
 &cYou see a &Ppurple&c and &zblack&c uniformed warrior. It seems that this deadly
 opponent may be female. She acts very confident in her abilities to &rkill&c. She
-watches you with the &zsteel&c &Beyes&c of a &zpanther&c about to strike.  
+watches you with the &zsteel&c &Beyes&c of a &zpanther&c about to strike.
 ~
 65 368648 0 -300 S
 27 0 0 1205d0+0 0d0+0
@@ -84,7 +84,7 @@ A shugenja approaches you to test your steel.
 ~
 &YYou see a warrior dressed in a &ppurple &Yand &zblack&Y uniform. The shugenja
 are fabled to be the &rdeadliest &Ywarriors. This shugenja looks as if she wants
-to test her skills against your own.  
+to test her skills against your own.
 ~
 65 41096 0 -400 S
 27 0 0 1010d0+0 0d0+0
@@ -98,7 +98,7 @@ A ninja sneaks around trying to become invisible.
 ~
 You can't really make out anything but a vague humanoid form.  The ninja
 is clothed in darkness, making her hard to see.  You hear metal scraping as
-the ninja advances on you.  
+the ninja advances on you.
 ~
 97 73736 0 -100 S
 20 0 0 600d0+0 0d0+0
@@ -140,7 +140,7 @@ A shugenja approaches you to test your steel.
 ~
 You see a warrior dressed in a purple and black uniform.  The shugenja
 are fabled to be the deadliest enemies.  This shugenja looks as if he wants
-to test his skills against your own.  
+to test his skills against your own.
 ~
 65 41096 0 -100 S
 25 0 0 740d0+0 0d0+0
@@ -154,7 +154,7 @@ A ninja sneaks around trying to become invisible.
 ~
 You can't really make out anything but a vague humanoid form.  The ninja
 is clothed in darkness, making it hard to see.  You hear metal scraping as
-the ninja advances on you.  
+the ninja advances on you.
 ~
 97 73736 0 -250 S
 20 0 0 600d0+0 0d0+0
@@ -168,7 +168,7 @@ The rotting corpse of a samurai stumbles towards you.
 ~
 You see the walking corpse of an ancient samurai warrior coming towards
 you.  Although it looks as if it would fall apart in a stiff wind, it may
-give you some trouble.  
+give you some trouble.
 ~
 8289 8 0 -500 S
 55 0 0 8000d0+0 0d0+0
@@ -182,7 +182,7 @@ A zombied ninja wanders close to you.
 ~
 This once powerful ninja is now a walking shell of its former life.  The
 ninja zombie is still wearing the traditional dress, but it seems as if the
-worms and maggots have eaten most of it, including the ninja itself.  
+worms and maggots have eaten most of it, including the ninja itself.
 ~
 8289 8 0 -500 S
 45 0 0 4250d0+0 0d0+0
@@ -196,7 +196,7 @@ The rotting corpse of an overlord looks at you with hunger.
 ~
 You see a gory scene as you look at the animated remains of what used to
 be a powerful overlord.  His chest looks like it was blown apart, probably
-from a musket shot.  
+from a musket shot.
 ~
 8289 8 0 -500 S
 60 0 0 10000d0+0 0d0+0
@@ -209,7 +209,7 @@ A shogun's poltergeist~
 A violent poltergeist is here screaming.
 ~
 You see the vague outline of an ancient shogun.  The poltergeist is
-screaming loudly at you and it is coming closer.  
+screaming loudly at you and it is coming closer.
 ~
 8291 8 0 -500 S
 65 0 0 12500d0+0 0d0+0
@@ -223,7 +223,7 @@ A spectre is here roaming about.
 ~
 You see a vague outline of a samurai warrior.  It looks VERY mean.  The
 spectre is about six feet tall and is colored red.  After a while, you
-notice that the spectre's color is becoming a deeper red.  
+notice that the spectre's color is becoming a deeper red.
 ~
 8291 524298 0 -500 S
 55 0 0 8000d0+0 0d0+0
@@ -237,7 +237,7 @@ The ghost of Kim Lan stands here, guarding her grave.
 ~
 You see a VERY tall and powerful looking figure dressed in old samurai
 armor.  Kim Lan was once a Dojo Master.  She now rests in the catacombs along
-with her fellow former masters.  
+with her fellow former masters.
 ~
 8259 136 16 -1000 S
 70 0 0 12000d0+0 0d0+0
@@ -252,7 +252,7 @@ The ghost of Tem Ki stands here, guarding her grave.
 You see a big ball of vapor like stuff.  This looks almost like a small
 thunderhead.  This powerful spectre isn't looking for any trouble, but it
 won't back down from a challenge.  Tem Ki was once a Dojo Master but now
-resides in the catacombs, watching over her final resting place.  
+resides in the catacombs, watching over her final resting place.
 ~
 8259 524968 16 -1000 S
 70 0 0 12000d0+0 0d0+0
@@ -267,7 +267,7 @@ The ghost of Kwi Lo stands here protecting its ancestors.
 You see the ghost of Kwi Lo.  Kwi Lo was once a Dojo Master and like all
 of his predecessors, he was buried in the catacombs.  The catacombs were
 raided one time when he was master.  He then vowed to protect his ancestor's
-resting place by protecting it forever.  
+resting place by protecting it forever.
 ~
 8259 8872 0 -1000 S
 70 0 0 12000d0+0 0d0+0
@@ -392,7 +392,7 @@ A
 E
 wakizashi~
 A beautifully hand made short sword with ancient script written on the
-hilt.  
+hilt.
 ~
 E
 sword~
@@ -545,12 +545,12 @@ A
 19 65
 E
 katana~
-A long curved sword that is over-run with rust from years of neglect.  
+A long curved sword that is over-run with rust from years of neglect.
 ~
 E
 rusty~
 A long curved sword that has been over-run with rust from countless years
-of neglect.  
+of neglect.
 ~
 E
 sword~
@@ -576,7 +576,7 @@ A large halberd that has been bent and warped to a very abnormal shape.
 ~
 E
 warped~
-A large halberd that has been bent and warped to a very abnormal shape.  
+A large halberd that has been bent and warped to a very abnormal shape.
 ~
 #212
 sai busted~
@@ -622,11 +622,11 @@ A
 14 45
 E
 tabi~
-A pair of molding footwear that are starting to look like vegetation.  
+A pair of molding footwear that are starting to look like vegetation.
 ~
 E
 moldy~
-A pair of molding footwear that are starting to look like vegetation.  
+A pair of molding footwear that are starting to look like vegetation.
 ~
 #214
 ring prismatic colors~
@@ -767,17 +767,17 @@ A
 E
 writing~
 The silver chalice reads: "He who drinks from this chalice before my eyes
-will be granted a great gift."  
+will be granted a great gift."
 ~
 E
 chalice~
 A large glowing silver chalice with carefully engraved writing on it.  It
-looks to be filled with some green liquid.  
+looks to be filled with some green liquid.
 ~
 E
 wutan~
 A large glowing silver chalice with carefully engraved writing on it.  It
-looks to be filled with some green liquid.  
+looks to be filled with some green liquid.
 ~
 E
 silver cup~
@@ -828,7 +828,7 @@ A
 E
 wakizashi~
 A small rusty sword that looks like it hasn't been used, more less
-cleaned in years.  
+cleaned in years.
 ~
 E
 rusty~
@@ -857,11 +857,11 @@ A
 E
 domaru~
 A long dagger that is craked right down the middle.  It still hums with
-an ancient power, or curse.  
+an ancient power, or curse.
 ~
 E
 broken~
-A long dagger that is craked right down the middle.  It still hums with 
+A long dagger that is craked right down the middle.  It still hums with
 an ancient power, or curse.
 ~
 #223
@@ -1055,7 +1055,7 @@ A
 E
 suneate~
 A pair of sturdy looking bamboo greaves ready to protect your valuable
-legs.  
+legs.
 ~
 E
 bamboo greaves~
@@ -1112,7 +1112,7 @@ A
 17 -20
 E
 kusazuri~
-A belt made of woven leather and reeds, which make it incredibly strong.  
+A belt made of woven leather and reeds, which make it incredibly strong.
 ~
 E
 belt~
@@ -1154,19 +1154,19 @@ E
 chunk~
 A piece of human flesh seems to move on its own, but upon closer
 observation it is the movement of maggots that are eating it, a very stomach
-turning sight.  
+turning sight.
 ~
 E
 flesh~
 A piece of human flesh seems to move on its own, but upon closer
 observation it is the movement of maggots that are eating it, a very stomach
-turning sight.  
+turning sight.
 ~
 E
 rotten~
 A piece of human flesh seems to move on its own, but upon closer
 observation it is the movement of maggots that are eating it, a very stomach
-turning sight.  
+turning sight.
 ~
 #242
 claw dragon forearm~
@@ -1190,7 +1190,7 @@ A bloody forearm of what looks to have been a very big red dragon.
 ~
 E
 dragon~
-A bloody forearm of what looks to have been a very big red dragon.  
+A bloody forearm of what looks to have been a very big red dragon.
 ~
 #243
 aura blood red glow~
@@ -1248,7 +1248,7 @@ A severed tiger's paw that still looks dangerous.
 ~
 E
 tiger~
-A severed tiger's paw that still looks dangerous.  
+A severed tiger's paw that still looks dangerous.
 ~
 E
 paw~
@@ -1267,7 +1267,7 @@ you, if your eyes are not playing tricks, is some sort of oriental style
 structure, covered in carvings and statues made of gold.  It appears to be
 some sort of battle ground, or some sort of ancient temple of worship.  You
 can faintly see what seems to be Lukin Wan engraved on the door, time would
-seem to have almost made it vanish.  
+seem to have almost made it vanish.
 ~
 0 4 0
 Rd     0
@@ -1298,7 +1298,7 @@ dust~
 ~
 E
 weapons~
-&wScattered about the chamber are many ancient and &cbroken&w or &cbrittle&w weapons of 
+&wScattered about the chamber are many ancient and &cbroken&w or &cbrittle&w weapons of
 years past. It is obvious that they are of little or no value.
 ~
 E
@@ -1315,10 +1315,10 @@ Dojo Entrance~
 &YYou are at the entrance to the &CDojo of Lukin Wan&Y.  It is rumored
 this is the domain of the dreaded &CSilent Warriors&Y.  The walls of this
 room are covered in &ppurple&Y and &Wblack&Y velvet and the floor is
-carpeted with oriental style &crugs&Y.  The room is very deafingly quiet. 
+carpeted with oriental style &crugs&Y.  The room is very deafingly quiet.
 The only sound you hear is your own heart beating.  The velvet covering the
 walls is slightly parted to the north.  There is a &Osign&Y tacked to the
-velvet, perhaps a closer look is in order.  
+velvet, perhaps a closer look is in order.
 ~
 0 393220 0
 Rd     0
@@ -1335,7 +1335,7 @@ E
 sign~
 &wYou are at the entrance to the &cDojo of LuKin Wan&w.
 You are &rnot welcome&w here, leave now.
- 
+
 &rWarning!!! &wThis is the only way in or out.
 ~
 E
@@ -1361,7 +1361,7 @@ Dojo of LuKin Wan~
 &YYou are at the southern end of a great training arena near the velvet
 covered entrance. The darkness beyond your light is almost impenetrable. From
 what you can tell, the floor is a bare hardwood. The scent of sweat fills the
-air. Every so often, you catch a glimpse of a &zshadowy&Y figure.  
+air. Every so often, you catch a glimpse of a &zshadowy&Y figure.
 ~
 0 401409 0
 Rd     0
@@ -1391,7 +1391,7 @@ Dojo of LuKin Wan~
 &YYou are at the southern end of a great training arena.  The
 &zdarkness&Y around the edges of your visible light is impenetrable.  The
 silence is almost deafening.  Every so often, you catch a glimpse of a
-&zshadowy&Y figure.  
+&zshadowy&Y figure.
 ~
 0 401409 0
 Rd     0
@@ -1412,8 +1412,8 @@ S
 Dojo of LuKin Wan~
 &YYou are at the southwestern corner of the training arena. The west wall
 is covered in &pvelvet&Y with pictures of ancient warriors. Every so often,
-you catch a glimse of a &zshadowy&Y figure. You see a faint &Wlight&Y far to 
-the north.  
+you catch a glimse of a &zshadowy&Y figure. You see a faint &Wlight&Y far to
+the north.
 ~
 0 401409 0
 Rd     0
@@ -1429,8 +1429,8 @@ S
 #209
 Dojo of LuKin Wan~
 &YYou are at the southern end of a great training arena. The silence around you
-makes your &rheart&Y beat like thunder. Every so often, you catch a glimpse of a 
-&zshadowy&Y figure.  
+makes your &rheart&Y beat like thunder. Every so often, you catch a glimpse of a
+&zshadowy&Y figure.
 ~
 0 401408 0
 Rd     0
@@ -1450,8 +1450,8 @@ S
 #210
 Dojo of LuKin Wan~
 &YYou are at the southern end of a great training arena. The silence around you
-makes your &rheart&Y beat like thunder. Every so often, you catch a glimpse of a 
-&zshadowy&Y figure.  
+makes your &rheart&Y beat like thunder. Every so often, you catch a glimpse of a
+&zshadowy&Y figure.
 ~
 0 401409 0
 Rd     0
@@ -1467,7 +1467,7 @@ S
 #211
 Dojo of LuKin Wan~
 &YYou are at the western end of a great training arena. The &zdarkness&Y around
-your &Wlighted&Y area is almost impenetrable. The deafening silence makes your 
+your &Wlighted&Y area is almost impenetrable. The deafening silence makes your
 heart beat sound like &Bthunder&Y in your ears. Every so often, you catch a glimpse
 of a &zshadowy&Y figure. You see a faint &Wlight&Y far to the north.
 ~
@@ -1489,7 +1489,7 @@ S
 #212
 Dojo of LuKin Wan~
 &YYou are at the center of a great training arena. The &zdarkness&Y around
-your &Wlighted&Y area is almost impenetrable. The deafening silence makes your 
+your &Wlighted&Y area is almost impenetrable. The deafening silence makes your
 heart beat sound like &Bthunder&Y in your ears.
 ~
 0 401409 0
@@ -1516,7 +1516,7 @@ Dojo of LuKin Wan~
 &bYou are at the very center of the training arena. Dried puddles of &rblood&b
 and &wteeth&b are scattered over the floor here. The deafening silence makes
 your &rheart&b beat sound like thunder.  Every so often, you catch a glimpse of a
-&zshadowy&b figure.  
+&zshadowy&b figure.
 ~
 0 401409 0
 Rd     0
@@ -1540,7 +1540,7 @@ S
 #214
 Dojo of LuKin Wan~
 &YYou are near the center of a great training arena. The &zdarkness&Y around
-your &wlighted&Y area is almost impenetrable. The deafening silence makes your 
+your &wlighted&Y area is almost impenetrable. The deafening silence makes your
 heart beat sound like &bthunder&Y in your ears.
 ~
 0 401409 0
@@ -1565,7 +1565,7 @@ S
 #215
 Dojo of LuKin Wan~
 &YYou are at the eastern end of a great training arena. The &zdarkness&Y around
-your &wlighted&Y area is almost impenetrable. The deafening silence makes your 
+your &wlighted&Y area is almost impenetrable. The deafening silence makes your
 heart beat sound like &bthunder&Y in your ears.
 ~
 0 401408 0
@@ -1586,9 +1586,9 @@ S
 #216
 Dojo of LuKin Wan~
 &YYou are at the northwestern corner of the great practice arena.  There is
-a strong &Wlight&Y coming from behind the &Pvelvet&Y curtain to the north. 
+a strong &Wlight&Y coming from behind the &Pvelvet&Y curtain to the north.
 You hear someone mumbling from behind the &Pvelvet&Y to the north. The shadowy
-figures seem to be avoiding the &Wlight&Y from behind the &Pvelvet&Y.  
+figures seem to be avoiding the &Wlight&Y from behind the &Pvelvet&Y.
 ~
 0 401412 0
 Rd     0
@@ -1617,7 +1617,7 @@ S
 Dojo of LuKin Wan~
 &YYou are at the northern and of a great training arena.  There is a faint
 &wlight&Y and the sound of someone mumbling coming from the west. It seems that
-&zshadowy&Y figures are dancing in and out of your sight, teasing you.  
+&zshadowy&Y figures are dancing in and out of your sight, teasing you.
 ~
 0 401408 0
 Rd     0
@@ -1638,7 +1638,7 @@ S
 Dojo of LuKin Wan~
 &YYou are at the northern and of a great training arena.  There is a faint
 &wlight&Y and the sound of someone mumbling coming from the west. It seems that
-&zshadowy&Y figures are dancing in and out of your sight, teasing you.  
+&zshadowy&Y figures are dancing in and out of your sight, teasing you.
 ~
 0 401409 0
 Rd     0
@@ -1660,7 +1660,7 @@ Dojo of LuKin Wan~
 &YYou are at the northern end of a great training arena.  You see a faint
 &Wlight&Y coming far to the west.  The deafening silence makes your &rheart&Y beat
 sound like &Bthunder&Y. Every so often, you catch a glimpse of a &zshadowy&Y
-figure.  
+figure.
 ~
 0 401409 0
 Rd     0
@@ -1682,7 +1682,7 @@ Dojo of LuKin Wan~
 &YYou are at the northeastern corner of the training arena. From what you
 can see, the east wall is coverend in &Pvelvet&Y with pictures of ancient warriors.
 The silence is almost insane. Every so often, you catch a glimpse of a &zshadowy&Y
-figure. You see a very faint &Wlight&Y far to the west.  
+figure. You see a very faint &Wlight&Y far to the west.
 ~
 0 401409 0
 Rd     0
@@ -1699,7 +1699,7 @@ S
 Dojo of LuKin Wan~
 &CYou are in a &Wlighted&C hallway just north of a &Pvelvet&C covered doorway. You
 see a few warriors who are dressed in &zblack&C and &Ppurple&C uniforms walking and
-running in and out of the doorway and heading west.  
+running in and out of the doorway and heading west.
 ~
 0 401408 0
 Rd     0
@@ -1722,21 +1722,21 @@ with the picture of a &Wdove&C woven into it covering the floor.
 Rd     0
 E
 dove~
-&CYou see a fine &coriental&C rug with a &Wdove&C woven into it. It 
+&CYou see a fine &coriental&C rug with a &Wdove&C woven into it. It
 seems to have a bump in the middle of it, like something is being
-concealed under it.  
+concealed under it.
 ~
 E
 d~
-&CYou see a fine &coriental&C rug with a &Wdove&C woven into it. It 
+&CYou see a fine &coriental&C rug with a &Wdove&C woven into it. It
 seems to have a bump in the middle of it, like something is being
-concealed under it.  
+concealed under it.
 ~
 E
 down~
-&CYou see a fine &coriental&C rug with a &Wdove&C woven into it. It 
+&CYou see a fine &coriental&C rug with a &Wdove&C woven into it. It
 seems to have a bump in the middle of it, like something is being
-concealed under it.  
+concealed under it.
 ~
 D1
 ~
@@ -1755,7 +1755,7 @@ S
 Dojo of LuKin Wan~
 &CYou are at a corner in a &Wlighted&C hallway. The hallway extends to the
 east and far to the south. Warriors in &Ppurple&C and &zblack&C uniforms gawk at
-you as they run past. You hear talking to the south.  
+you as they run past. You hear talking to the south.
 ~
 0 401408 0
 Rd     0
@@ -1774,7 +1774,7 @@ Dojo of LuKin Wan~
 someone talking fromsouth.  It sounds as if the man is &rangry&C.  Most
 of the warriors you pass look startled as if you weren't supposed to be
 here.  The &cacidy&C smell of &Rblood&C assaults your nose.  You see
-&Rblood&C spots on the &Bcold&C &zconcrete&C floor.  
+&Rblood&C spots on the &Bcold&C &zconcrete&C floor.
 ~
 0 401408 0
 Rd     0
@@ -1790,7 +1790,7 @@ S
 #225
 Dojo of LuKin Wan~
 &CYou are at the southern end of a long hallway.  There is a large &Ywooden&C
-door to the south. You see many &Rbloodspots&C on the floor that seem to 
+door to the south. You see many &Rbloodspots&C on the floor that seem to
 generate from underneath the door.
 ~
 0 401408 0
@@ -1812,7 +1812,7 @@ S
 Dojo Catacombs~
 &zYou are at the entrance to the &ccatacombs&z underneath the Dojo. It is
 rumoured that when Dojo masters &rdie&z, their &bbodies&z and &wspirits&z are put to rest
-down here. The &ccatacombs&z continue to the west.  
+down here. The &ccatacombs&z continue to the west.
 ~
 0 401409 0
 Rd     0
@@ -1833,7 +1833,7 @@ S
 Dojo Catacombs~
 &zYou are in the &ccatacombs&z underneath the Dojo.  The air smells &grotten&z and
 feels &bcold&z and &Yclammy&z. You hear &Ygroans&z and &bslobbers&z coming from the west,
-deeper into the &ccatacombs&z.  
+deeper into the &ccatacombs&z.
 ~
 0 401409 0
 Rd     0
@@ -1851,20 +1851,20 @@ Dojo Catacombs~
 &zYou are in the &ccatacombs&z underneath the Dojo.  The air smells &grotten&z and
 feels &bcold&z and &Yclammy&z. &YGroans&z, &bslobbers&z, and &Ydragging&z noises fill the
 passageway. You notice some &wgraves&z set into the sides of the passage walls,
-they look &Rempty&z.  
+they look &Rempty&z.
 ~
 0 401409 0
 Rd     0
 E
 graves~
 &YThe walls around you are lines of empty grave niches.
-A closer inspection shows fresh &Rdig&Y marks, that seem 
+A closer inspection shows fresh &Rdig&Y marks, that seem
 pretty recent.
 ~
 E
 walls~
 &YThe walls around you are lined with empty grave niches.
-A closer inspection shows fresh &Rdig&Y marks, that seem 
+A closer inspection shows fresh &Rdig&Y marks, that seem
 pretty recent.
 ~
 D1
@@ -1881,14 +1881,14 @@ Dojo Catacombs~
 &zYou are at a bend in the passageway.  The &ccatacomb&z passageway goes
 east and south.  You see what looks like gross &Ychunks&z of &protting&z
 &Yflesh&z on the floor.  The &wgraves&z set into the walls in this part of
-the &ccatacombs&z seem to be empty.  
+the &ccatacombs&z seem to be empty.
 ~
 0 401409 0
 Rd     0
 E
 graves~
 &YThe walls around you are lines of empty grave niches.
-A closer inspection shows fresh &Rdig&Y marks, that seem 
+A closer inspection shows fresh &Rdig&Y marks, that seem
 pretty recent.
 ~
 E
@@ -1898,7 +1898,7 @@ flesh~
 E
 chunks~
 &pNasty, rotting human flesh chunks.
- 
+
 ~
 D1
 ~
@@ -1911,9 +1911,9 @@ D2
 S
 #230
 Dojo Catacombs~
-&zYou are at a bend in the passageway. The &pstench&z here is overwhelming. 
-It seems that something &protten&z has passed through here recently. The 
-passage continues north and east.  
+&zYou are at a bend in the passageway. The &pstench&z here is overwhelming.
+It seems that something &protten&z has passed through here recently. The
+passage continues north and east.
 ~
 0 401409 0
 Rd     0
@@ -1931,7 +1931,7 @@ Dojo Catacombs~
 You are in a passageway in the catacombs underneath the Dojo.  Many of
 the graves that are set into the walls here are empty, but they seem to have
 been used recently.  You see pieces of rotten flesh scattered about the dirt
-floor of the passageway.  The dank air smells of death.  
+floor of the passageway.  The dank air smells of death.
 ~
 0 401408 0
 Rd     0
@@ -1949,7 +1949,7 @@ Dojo Catacombs~
 You are in a passageway in the catacombs underneath the Dojo.  Many of
 the graves that have been set into the walls are empty, but they seem to
 have been used recently.  You see pieces of rotten flesh scattered about the
-dirt floor of the passageway.  The dank air smells of death.  
+dirt floor of the passageway.  The dank air smells of death.
 ~
 0 401409 0
 Rd     0
@@ -1968,7 +1968,7 @@ You are in a passageway in the catacombs underneath the Dojo.  Many of
 the graves that have been set into the walls are empty, but they seem to
 have been used recently.  You see pieces of rotten flesh scattered about the
 dirt floor of the passageway.  The dank air smells of death.  The passageway
-continues west and far to the east.  
+continues west and far to the east.
 ~
 0 401409 0
 Rd     0
@@ -1987,7 +1987,7 @@ You are in a passageway in the catacombs underneath the Dojo.  Many of
 the graves that have been set into the walls are empty, but they seem to
 have been used recently.  You see pieces of rotten flesh scattered about the
 dirt floor of the passageway.  The passageway continues west and far to the
-east.  The dank air smells of death.  
+east.  The dank air smells of death.
 ~
 0 401409 0
 Rd     0
@@ -2006,7 +2006,7 @@ You are in a passageway in the catacombs underneath the Dojo.  Many of
 the graves that have been set into the walls are empty, but they seem to
 have been used recently.  You see pieces of rotten flesh scattered about the
 dirt floor of the passageway.  The passageway continues west and far to the
-east.  
+east.
 ~
 0 401409 0
 Rd     0
@@ -2025,7 +2025,7 @@ You are in a passageway in the catacombs underneath the Dojo.  Many of
 the graves that have been set into the walls are empty, but they seem to
 have been used recently.  You see pieces of rotten flesh scattered about the
 dirt floor.  The dank air smells of death.  The passageway continues east
-and west.  
+and west.
 ~
 0 401409 0
 Rd     0
@@ -2044,7 +2044,7 @@ You are in a passageway in the catacombs underneath the Dojo.  Many of
 the graves that have been set into the walls are empty, but they seem to
 have been used recently.  You see pieces of rotten flesh scattered about the
 dirt floor.  The dank air smells of death.  The passageway continues east
-and far to the west.  
+and far to the west.
 ~
 0 401409 0
 Rd     0
@@ -2062,7 +2062,7 @@ Dojo Catacombs~
 You are in a bend in the passageway.  The graves that have been set into
 the walls are empty, but they seem to have been used recently.  You see
 pieces of rotten flesh scattered about the dirt floor.  The passageway
-continues far to the west and south.  
+continues far to the west and south.
 ~
 0 401409 0
 Rd     0
@@ -2080,7 +2080,7 @@ Dojo Catacombs~
 You are in a bend in the passageway.  The graves that have been set into
 the walls are empty, but they seem to have been used recently.  You see
 pieces of rotten flesh scattered about the dirt floor.  The passageway
-continues north and far to the west.  
+continues north and far to the west.
 ~
 0 401409 0
 Rd     0
@@ -2098,7 +2098,7 @@ Dojo Catacombs~
 You are in a passageway in the catacombs.  Many of the graves that have
 been set into the walls are empty, but they seem to have been used recently.
 You see pieces of rotten flesh scattered about the dirt floor.  The dank air
-smells of death.  The passageway continues east and far to the west.  
+smells of death.  The passageway continues east and far to the west.
 ~
 0 401409 0
 Rd     0
@@ -2116,7 +2116,7 @@ Dojo Catacombs~
 You are in a passageway in the catacombs.  Many of the graves that have
 been set into the walls are empty, but they seem to have been used recently.
 You see pieces of rotten flesh scattered about the dirt floor.  The dank air
-smells of death.  The passageway continues east and west.  
+smells of death.  The passageway continues east and west.
 ~
 0 401409 0
 Rd     0
@@ -2135,7 +2135,7 @@ You are in a passageway in the catacombs.  Many of the graves that have
 been set into the walls are empty, but they seem to have been used recently.
 You see pieces of rotten flesh scattered about the dirt floor of the
 passageway.  The dank air smells of death.  The passageway continues east
-and west.  
+and west.
 ~
 0 401409 0
 Rd     0
@@ -2153,7 +2153,7 @@ Dojo Catacombs~
 You are in a passageway in the catacombs.  Many of the graves that have
 been set into the walls are empty, but they seem to have been used recently.
 You see pieces of rotten flesh scattered about the dirt floor.  The dank air
-smells of death.  The passageway continues west and far to the east.  
+smells of death.  The passageway continues west and far to the east.
 ~
 0 401409 0
 Rd     0
@@ -2171,7 +2171,7 @@ Dojo Catacombs~
 You are in a bend in the passageway.  The graves that have been set into
 the walls are empty, but they seem to have been used recently.  You see
 pieces of rotten flesh scattered about the dirt floor.  The dank air smells
-of death.  The passageway continues south and far to the east.  
+of death.  The passageway continues south and far to the east.
 ~
 0 401409 0
 Rd     0
@@ -2189,7 +2189,7 @@ Dojo Catacombs~
 You are in a bend in the passageway.  The graves that have been set into
 the walls are empty, but they seem to have been used recently.  You see
 pieces of rotten flesh scattered about the dirt floor.  The dank air smells
-of death.  The passageway continues north and east.  
+of death.  The passageway continues north and east.
 ~
 0 401409 0
 Rd     0
@@ -2207,7 +2207,7 @@ Dojo Catacombs~
 You are in a passageway in the catacombs.  Many of the graves that have
 been set into the walls are empty, but they seem to have been used recently.
 You see pieces of rotten flesh scattered about the dirt floor.  The dank air
-smells of death.  The passageway continues west and east.  
+smells of death.  The passageway continues west and east.
 ~
 0 401409 0
 Rd     0
@@ -2226,7 +2226,7 @@ You are in a passageway in the catacombs.  Many of the graves that have
 been set into the walls are empty, but they seem to have been used recently.
 You see pieces of rotten flesh scattered about the dirt floor of the
 passageway.  The dank air smells of death.  The passageway continues to the
-west and east.  
+west and east.
 ~
 0 401408 0
 Rd     0
@@ -2244,7 +2244,7 @@ Dojo Catacombs~
 You are just north of an alcove.  There are three graves that have been
 set into the ground, and look untouched.  The bodies in them look ancient,
 yet still almost alive.  You hear an odd humming noise coming from the
-alcove.  There seems to be something written above the exit to the south.  
+alcove.  There seems to be something written above the exit to the south.
 ~
 0 401409 0
 Rd     0
@@ -2272,7 +2272,7 @@ E
 sign~
 The sign reads: "A great evil lives beyond this doorway.  Once three
 great warriors defeated this evil and forced it into this place.  Don't be
-the fool that lets it free."  
+the fool that lets it free."
 "Turn around and live. Go on... and die!"
 ~
 D2
@@ -2289,7 +2289,7 @@ Dojo Catacombs - Alcove~
 You are inside an alcove deep within the catacombs underneath the Dojo
 of LuKin Wan.  The floor seems to be covered in spare body parts and rotting
 gore!  There is an odd humming noise coming from somewhere in this room, but
-there doesn't seem to be any other exits other than back the way you came.  
+there doesn't seem to be any other exits other than back the way you came.
 ~
 0 417797 0
 Rd     0
@@ -2315,7 +2315,7 @@ Dojo Catacombs - Avatar~
 You are in the secret lair of the Avatar of LuKin Wan.  The Avatar
 resides here while he is on this plane of existance.  The room is covered in
 blood.  The only piece of furniture the room has is a skeletal throne which
-the Avatar sits on contemplating his evilness.  
+the Avatar sits on contemplating his evilness.
 ~
 0 401409 0
 Rd     0

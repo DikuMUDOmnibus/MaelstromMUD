@@ -1,5 +1,5 @@
 #AREADATA
-Name        { 80-90} Tolaria             Tyrion~
+Name        Tolaria~
 Levels      80 90
 Builders    Tyrion Reklar~
 VNUMs       9101 9199
@@ -232,7 +232,7 @@ say Yes?  What do you want?
 say Yes, there are four of them.  Each one has a name.
 ~
 >speech_prog name~
-say I have no idea any of them.  But I heard that a High 
+say I have no idea any of them.  But I heard that a High
 say Cleric knows them all.
 ~
 >speech_prog high cleric~
@@ -430,7 +430,7 @@ Xira~
 Xira, the pet store owner, is here.
 ~
 Xira, one of the most beautiful in all of Tolaria, is here.  She runs the
-pet store, and is a mute.  
+pet store, and is a mute.
 ~
 67 201326720 0 200 S
 82 0 0 10500d0+0 0d0+0
@@ -805,7 +805,7 @@ A twisted reflection of you is here.
 ~
 From head to toe this image seems to mirror every feature of your
 appearance.  As you raise a hand towards it, your reflection raises a hand
-in the exact gesture towards your extended arm.  
+in the exact gesture towards your extended arm.
 ~
 67 369098856 0 0 S
 80 0 0 9000d0+0 0d0+0
@@ -1188,7 +1188,7 @@ else
     if class($n) == 10
         cast 'Hex' $n
         break
-else 
+else
     mpkill $n
 endif
 endif
@@ -1327,7 +1327,7 @@ mpat 9134 mpecho &CTuknir says "Now you have only to assemble these shards of gl
 mpat 9134 mpecho &C      out the palm made for holding this sacred orb of magic."
 ~
 >speech_prog "I stand ready to be judged."~
-if isimmort($n) == 1 
+if isimmort($n) == 1
     say &CThis test was built for mortals only, sorry $n.
     break
 endif
@@ -1354,7 +1354,7 @@ Terik thief shopkeeper elder~
 &zTerik&w~
 &zTerik, one of this realm's elder thieves, stands here tending shop.
 ~
-&zCrystal blue eyes watch your every move, without even seeming to. 
+&zCrystal blue eyes watch your every move, without even seeming to.
 Standing calmly against a wall's rack of shelves, he looks completely at
 ease, but you sense the readiness of a coiled spring ready to pounce upon a
 second's time.&w
@@ -2061,7 +2061,7 @@ A
 E
 shirt~
 A shirt with the crest of Tolaria.
- 
+
 &R&R&R&R&R###############################
 ###############################
 ###                         ###
@@ -2775,7 +2775,7 @@ S
 Corner of Queen and Princess Street~
 You have come to the corner of Queen and Princess street.  The clinking of
 coins can be heard to the north, perhaps a bank lies in that direction.  The
-two streets lead off to the west and to the south.  The immense magic of this 
+two streets lead off to the west and to the south.  The immense magic of this
 place can be felt focusing in the western direction.
 ~
 0 0 0
@@ -2797,7 +2797,7 @@ S
 Queen Street~
 You are walking along the northern end of Queen Street.  A building lies
 directly to the west of here, and all is quiet inside.  Queest Street
-continues to the north and the south.  
+continues to the north and the south.
 ~
 0 0 0
 Rd     0
@@ -2837,7 +2837,7 @@ You are at the crossing of Queen Street and Czar Street, just to the west
 of the towns general store.  This section of town is always bustling with
 activity, with people wandering here and there, all of them too busy to pay
 any attention to you.  Queen Street goes off to the north and the south,
-while Czar Street stretches to the west.  
+while Czar Street stretches to the west.
 ~
 0 0 0
 Rd     0
@@ -2861,7 +2861,7 @@ S
 #9111
 Queen Street~
 You are walking along the southern side of Queen Street, the smell of food is
-ripe in the air.  Some houses line both sides of the street.  You happen to 
+ripe in the air.  Some houses line both sides of the street.  You happen to
 glance at the sky, and notice that there does not appear to be one.  You can go
 north or south from here.
 ~
@@ -2881,7 +2881,7 @@ Queen Street~
 You are walking along the southern half of Queen Street.  The streets
 themselves are kept in very good shape, as though they have not seen the
 wear and tear of weather in their lifetime.  You can travel to the north or
-to the south from here.  
+to the south from here.
 ~
 0 0 0
 Rd     0
@@ -2898,8 +2898,8 @@ S
 Crossing of Queen and Royalle Street~
 You are at the crossing of Queen Street and Royalle Street, and what a
 sight it is.  It seems that the entire community comes to a restaurant
-located to the east of here, perhaps you can find some decent food there. 
-Queen Street will lead you north, while Royalle Street would lead you west. 
+located to the east of here, perhaps you can find some decent food there.
+Queen Street will lead you north, while Royalle Street would lead you west.
 ~
 0 0 0
 Rd     0
@@ -2921,7 +2921,7 @@ Royalle Street~
 You are walking along Royalle Street, its neverending pleasant atmosphere
 bringing joy to its inhabitants.  A large building to the north has the
 sounds of many things coming from it, you can't help but wonder what is
-there.  
+there.
 ~
 0 0 0
 Rd     0
@@ -2940,10 +2940,10 @@ D3
 S
 #9115
 Royalle Stret~
-You are walking along Royalle Street, just to the east of King Street. 
+You are walking along Royalle Street, just to the east of King Street.
 Several houses are located to the north and to the south, and they seem to
 be quite a bit larger than the ones located on Queen Street.  You conclude
-this must be the richer neighbourhood.  You can go east or west from here.  
+this must be the richer neighbourhood.  You can go east or west from here.
 ~
 0 0 0
 Rd     0
@@ -2961,7 +2961,7 @@ Crossing of King and Royalle Street~
 You have come to the crossing of King Street and Royalle Street.  A very
 large building is located to the south of here, with a sign located directly
 above its main door.  Royalle Street leads to the east and west, while King
-Street goes to the north.  
+Street goes to the north.
 ~
 0 0 0
 Rd     0
@@ -2991,7 +2991,7 @@ Royalle Street~
 You are walking by some very large houses on the north and south side of
 the street.  The houses look fit enough to hold a king, perhaps the fact
 that the street name signifies royalty wasn't a mistake.  Royalle Street
-leads to the east and west from here.  
+leads to the east and west from here.
 ~
 0 0 0
 Rd     0
@@ -3009,7 +3009,7 @@ Royalle Street~
 You are travelling along the intricate brickwork that forms Royalle
 Street.  Its patters, that of stars and moons, must have taken a very long
 time to build.  It seems to be giving off a magical quality.  The street
-goes to the east and west.  
+goes to the east and west.
 ~
 0 0 0
 Rd     0
@@ -3027,7 +3027,7 @@ Crossing of Prince and Royalle Street~
 You have reached the crossing of Prince and Royall Street.  A fairly
 large, but not overly large, building is to the south of here, its doors
 continuously open.  A sign hangs over its main entrance.  The two streets go
-to the north and east of here.  
+to the north and east of here.
 ~
 0 0 0
 Rd     0
@@ -3052,7 +3052,7 @@ S
 Prince Street~
 As you walk along the southern end of Prince Street, you happen to come
 across a building which eminates magical energies.  It is located to the
-east of here.  The street continues to the north and to the south.  
+east of here.  The street continues to the north and to the south.
 ~
 0 0 0
 Rd     0
@@ -3071,9 +3071,9 @@ D2
 S
 #9121
 Prince Street~
-You are walking along Prince Street, just to the south of Czar Street. 
+You are walking along Prince Street, just to the south of Czar Street.
 The many houses lining the streets of this town are all full, without a
-vacancy in sight.  The exits from here are to the north and south.  
+vacancy in sight.  The exits from here are to the north and south.
 ~
 0 0 0
 Rd     0
@@ -3091,7 +3091,7 @@ Crossing of Prince and Czar Street~
 You have arrived at the crossing of Prince Street and Czar Street, just
 to the east of the repair shop.  You can hear the clanging of metal from
 there, and from the north.  You can go to the north or south, following
-Prince Street, or you can follow Czar Street to the east.  
+Prince Street, or you can follow Czar Street to the east.
 ~
 0 0 0
 Rd     0
@@ -3116,7 +3116,7 @@ S
 Prince Street~
 You are walking along the northern end of Prince Street.  A rather large
 house is located to the west of here, but it has been boarded up.  The
-street continues to the north and the south.  
+street continues to the north and the south.
 ~
 0 0 0
 Rd     0
@@ -3132,8 +3132,8 @@ S
 #9124
 Prince Street~
 You are travelling along a rather long street.  The clanging of metal can
-easily be heard to the north and the south, and is very loud to the east. 
-Prince Street leads off in the north and south directions.  
+easily be heard to the north and the south, and is very loud to the east.
+Prince Street leads off in the north and south directions.
 ~
 0 0 0
 Rd     0
@@ -3151,7 +3151,7 @@ King Street~
 You are walking along the northern end of the main street of Tolaria,
 King Street.  You can feel a very strong sense of magic to the north of
 here, it seems to be drawing you in that direction.  You can move to the
-north or south from here.  
+north or south from here.
 ~
 0 0 0
 Rd     0
@@ -3169,7 +3169,7 @@ King Street~
 You are walking along the northern end of King Street, and you happen to
 come across a building with a closed door, located to the east.  It is the
 only closed door in the entire town.  The street continues to the north or
-the south.  
+the south.
 ~
 0 0 0
 Rd     0
@@ -3191,8 +3191,8 @@ Crossing of King and Czar Street~
 You have come to the central crossing of King and Czar street, the main
 crossing of Tolaria.  A large, translucent staircase leads up to a portal
 leading out of the city.  The two main streets, King Street and Czar Street,
-lead in the north- south direction and east-west direction respectively. 
-This city is vast in its wealth, and deserves some exploration.  
+lead in the north- south direction and east-west direction respectively.
+This city is vast in its wealth, and deserves some exploration.
 ~
 0 0 0
 Rd     0
@@ -3221,7 +3221,7 @@ S
 King Street~
 You are travelling along the southern end of King Street, and you spy a
 building with a friendly atmosphere to the west.  You can move along King
-Street to the north or to the south.  
+Street to the north or to the south.
 ~
 0 0 0
 Rd     0
@@ -3258,7 +3258,7 @@ D2
 S
 #9130
 Czar Street~
-As you walk along Czar street, you are amazed by the fine craftmanship of the 
+As you walk along Czar street, you are amazed by the fine craftmanship of the
 houses. Its long, sloping rooftops, the beautifully designed brickwork, all
 combine to make a brilliant work of art.
 ~
@@ -3277,7 +3277,7 @@ S
 Czar Street~
 You are walking along Czar Street, just to the west of King Street.  A
 small building is located directly to the north, its doors perpetually open.
-The street continues to the east or west.  
+The street continues to the east or west.
 ~
 0 0 0
 Rd     0
@@ -3298,7 +3298,7 @@ S
 Czar Street~
 You are walking along Czar street.  There is a large, open building to
 the south, with the sounds of swordplay coming from it.  The street itself
-leads to the east and west.  
+leads to the east and west.
 ~
 0 0 0
 Rd     0
@@ -3319,7 +3319,7 @@ S
 Czar Street~
 You are walking through Czar street, directly west of Queen Street.  You
 can easily see the general store a little ways to the east of here.  The
-street also traverses to the west.  
+street also traverses to the west.
 ~
 0 0 0
 Rd     0
@@ -3337,7 +3337,7 @@ The Hall of Power~
 You have entered a room and are almost emediately blown away by the
 immense magical powers eminating from within.  The walls themselves pulse
 with untold power, all seeming to focus on Tuknir Deathlock, a sorcerer whos
-power is equaled by no other.  
+power is equaled by no other.
 ~
 0 0 0
 Rd     0
@@ -3348,11 +3348,11 @@ D2
 S
 #9135
 Bank of Tolaria~
-All around people are conducting their transactions in a solumn manner. 
+All around people are conducting their transactions in a solumn manner.
 From the mere phesants to the heirchy of royalty, Corsi treats them all with
 the same respect.  The safe door stands slightly ajar, giving a limited view
 to the storage area, which appears to be quite full.  Business here must be
-good.  
+good.
 ~
 0 0 0
 Rd     0
@@ -3366,7 +3366,7 @@ Maltor's Armoury~
 Surrounding the three walls are shelves stocked with every type of armour
 imaginable, from the basic to the powerful.  All it takes is gold, and lots
 of it, to equip yourself to withstand the poundings of even the most hideous
-of creatures.  
+of creatures.
 ~
 0 1032 0
 Rd     0
@@ -3382,7 +3382,7 @@ open space to display his blades.  Upon closer examination, it appears
 that these blades have been well-cared for.  Their edges honed to a
 razor-sharp finish, and the steel shines so bright it seems like thousands
 of prisms adorn the room.  The choices here are endless and one could get so
-confused trying to decide.  
+confused trying to decide.
 ~
 0 0 0
 Rd     0
@@ -3396,7 +3396,7 @@ Johan's Treasure Trove~
 Shelves laden with trinkets twinkle, catching the eye.  Some look rare,
 some not so rare.  Customers come to buy and sell any baubles they've
 collected along their way.  Johan appears from behind a strangely-woven
-tapestry, moving as silent as a shadow.  
+tapestry, moving as silent as a shadow.
 ~
 0 0 0
 Rd     0
@@ -3410,7 +3410,7 @@ Gha-Ren's Scroll Shoppe~
 Magical energy crackles all through this room.  Scrolls are stacked
 neatly upon the shelves, strange writings upon their parchments.  Some even
 seem to emit a glow.  Now's the time to stock up on those scrolls you may
-need to continue your quest here.  
+need to continue your quest here.
 ~
 0 0 0
 Rd     0
@@ -3437,7 +3437,7 @@ Mishara's Repairs~
 Here you can repair any equipment that may have become damaged in past
 battles.  Mishara looks as if she knows her stuff about repairs, and perhaps
 a little more than she lets on.  Judging by the way she's looking at you,
-perhaps you could use some equipment repairing.  
+perhaps you could use some equipment repairing.
 ~
 0 0 0
 Rd     0
@@ -3451,7 +3451,7 @@ Shyndar's General Store~
 This is where the well-stocked adventurers shop.  Racks are lined with
 every kind of supply any adventurer could possibly need or require for their
 next quest.  If you need something and don't see it here, ask Shyndar, he
-may be able to tell you where to aquire it.  
+may be able to tell you where to aquire it.
 ~
 0 0 0
 Rd     0
@@ -3463,11 +3463,11 @@ S
 #9143
 Hazezon's Practice Salon~
 Here is where any adventurer can practice any newly aquired spells and
-skills.  The room has a very serene aura to it, as if peace abounds here. 
+skills.  The room has a very serene aura to it, as if peace abounds here.
 The smell of incense faintly assails your nostrils, not an unpleasant aroma
 in the least.  The lighting is low, and soothing music plays faintly in the
 background.  Hazezon is a large presence here, yet a comforting one.  Feel
-free to question Hazezon for he may know something.  
+free to question Hazezon for he may know something.
 ~
 0 0 0
 Rd     0
@@ -3482,7 +3482,7 @@ The clanging of steel on steel rings throughout the room as adventurers
 train their attributes here.  Sweat permeates the air, and the groans of the
 weak echo all around.  You take stock of yourself to see if you too could
 use a bit of training.  Ramses stand here glaring, his form filling the
-room.  He looks as if he knows things he wishes he did not.  
+room.  He looks as if he knows things he wishes he did not.
 ~
 0 0 0
 Rd     0
@@ -3496,7 +3496,7 @@ Thorack's Shoppe~
 You have entered a magical shoppe, its walls lined with potion upon
 potion upon potion.  The main exit, to the west, has an elaborate archway
 for a door.  The long countertop is the blocker between you and Thorack, to
-prevent theft.  
+prevent theft.
 ~
 0 0 0
 Rd     0
@@ -3509,7 +3509,7 @@ S
 Pet Store~
 This shoppe houses a selected assortment of Dracoforms for you to buy as
 pets.  They are costly, but more than worth the purchase.  The only exit is
-the way you came, to the south.  The pet shop is, for the moment, closed.  
+the way you came, to the south.  The pet shop is, for the moment, closed.
 ~
 0 0 0
 Rd     0
@@ -3535,7 +3535,7 @@ S
 Prince Furniture~
 You have entered a shoddy shop, its contents a mess, but still stately
 furniture.  Most if it is in a state of disrepair, but I'm sure there may be
-something that is still put together.  The exit is to the north.  
+something that is still put together.  The exit is to the north.
 ~
 0 0 0
 Rd     0
@@ -3548,7 +3548,7 @@ S
 The Mayor's Office~
 You have entered the mayor's office, and it is very stately.  The two
 east and west walls have large murals of the town, while a painting of a
-giant yellow orb is situated on the south wall.  The only exit is north.  
+giant yellow orb is situated on the south wall.  The only exit is north.
 ~
 0 0 0
 Rd     0
@@ -3562,7 +3562,7 @@ Above the Fountain~
 You are atop a large, translucet stairwell, overlooking the main fountain
 of Tolaria.  The stairs are magnificant in every way, and you realize just
 how magical this tent actually is.  A shimmering portal leads back to the
-beach.  
+beach.
 ~
 0 0 0
 Rd     0
@@ -3598,9 +3598,9 @@ A small crawlway~
 Climbing the length of a long wooden ladder, you glance up above you at
 the closed trapdoor, wondering how much longer Shund will be able to keep
 this hiding place secret.  Several braces of iron strapped across the wooden
-boards reinforce the door to hold against nearly any attack, save fire. 
+boards reinforce the door to hold against nearly any attack, save fire.
 Beneath you lies a small cavern area hiding away the secret meeting place of
-this storm's Guild of Thieves.  
+this storm's Guild of Thieves.
 ~
 0 0 0
 Rd     0
@@ -3618,7 +3618,7 @@ The bottom of the shaft~
 A small cloud of dust rises beneath your boots as you enter this section
 of the guild.  Just above you lies the end of a long wooden ladder leading
 straight up to the Thieve's Guild in Tolaria.  Eastward the cave continues
-to a small shop only the craftiest of thieves is aware of.  
+to a small shop only the craftiest of thieves is aware of.
 ~
 0 0 0
 Rd     0
@@ -3635,9 +3635,9 @@ S
 Terik's Thieving Utilities~
 Dust covered shelves line the walls of this, somewhat finished room,
 built into the end of a cave.  Dirt from parts where the wall wasn't
-finished trickles down upon some of the shelves as you step about the shop. 
+finished trickles down upon some of the shelves as you step about the shop.
 The watchful eyes of Terik, one of this realm's elder thieves, follow you
-about the room.  
+about the room.
 ~
 0 0 0
 Rd     0
