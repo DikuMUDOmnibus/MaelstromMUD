@@ -1387,6 +1387,7 @@ yourself.
         &WWill set your prompt to "&w<10hp 100m 100mv>&W"
 
 &BPrompt varables:
+        &W%% :  &YDisplay a %
         &W%h :  &YDisplay your current hits
         &W%H :  &YDisplay your maximum hits
         &W%m :  &YDisplay your current mana
@@ -1395,16 +1396,17 @@ yourself.
         &W%V :  &YDisplay your maximum moves
         &W%x :  &YDisplay your current experience
         &W%X :  &YDisplay experience needed to level
-        &W%g :  &YDisplay your gold held
+        &W%G :  &YDisplay your gold held
+        &W%S :  &YDisplay your silver held
+        &W%C :  &YDisplay your copper held
         &W%a :  &YDisplay your alignment
         &W%r :  &YDisplay the room name you are in
-        &W%% :  &YDisplay a %
-        &W%c :  &YDisplay the olc editor you are in
-        &W%C :  &YDisplay the vnum you are currenlty editing
+        &W%e :  &YDisplay the olc editor you are in
+        &W%E :  &YDisplay the vnum you are currenlty editing
         &W%l :  &YDisplay if you are wizinvis or not
         &W%d :  &YDisplay if you are cloaked or not
+        &W%z :  &YDisplay the area name you are in
         &W%R :  &YDisplay the vnum you are in &R(IMMORTAL ONLY)
-        &W%z :  &YDisplay the area name you are in &R(IMMORTAL ONLY)
         &W%p :  &YDisplay percentage of memory used &R(IMMORTAL ONLY)
 ~
 0 TITLE~

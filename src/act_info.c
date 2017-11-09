@@ -1966,9 +1966,7 @@ void do_help( CHAR_DATA * ch, char * argument ) {
     }
 
     if ( is_name( ch, argument, pHelp->keyword ) ) {
-      if ( pHelp->level >= 0 && str_cmp( argument, "imotd" )
-           && str_prefix( "advm_", argument )
-           && str_prefix( "demm_", argument ) ) {
+      if ( pHelp->level >= 0 && str_cmp( argument, "imotd" ) && str_prefix( "advm_", argument ) && str_prefix( "demm_", argument ) ) {
         send_to_char( AT_GREY, pHelp->keyword, ch );
         send_to_char( AT_GREY, "\n\r", ch );
       }
@@ -3853,7 +3851,7 @@ void do_prompt( CHAR_DATA * ch, char * argument ) {
 
   if ( !strcmp( argument, "all" ) ) {
     if ( IS_IMMORTAL( ch ) ) {
-      strcat( buf, "&r[ &c%R in &r| &c%C %c &r| &c%z &r] " );
+      strcat( buf, "&r[ &c%R in &r| &c%E %e &r| &c%z &r] " );
     } else {
       strcat( buf, "&r[ &c%h&r/&c%Hhp &r| &c%m&r/&c%Mm &r| &c%v&r/&c%Vmv &r| &c%Xtnl &r] " );
     }

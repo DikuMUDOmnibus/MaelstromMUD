@@ -1146,8 +1146,16 @@ void bust_a_prompt( DESCRIPTOR_DATA * d ) {
         sprintf( buf2, "%d", xp_tolvl( ch ) - ch->exp );
         i = buf2;
         break;
-      case 'g':
+      case 'G':
         sprintf( buf2, "%d", ch->money.gold );
+        i = buf2;
+        break;
+      case 'S':
+        sprintf( buf2, "%d", ch->money.silver );
+        i = buf2;
+        break;
+      case 'C':
+        sprintf( buf2, "%d", ch->money.copper );
         i = buf2;
         break;
       case 'a':
@@ -1185,10 +1193,10 @@ void bust_a_prompt( DESCRIPTOR_DATA * d ) {
         sprintf( buf2, "%%" );
         i = buf2;
         break;
-      case 'c':
+      case 'e':
         i = olc_ed_name( ch );
         break;
-      case 'C':
+      case 'E':
         i = olc_ed_vnum( ch );
         break;
       case 'p': {
