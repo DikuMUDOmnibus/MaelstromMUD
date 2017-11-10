@@ -528,7 +528,7 @@ void do_cast( CHAR_DATA * ch, char * argument ) {
 
   if ( !IS_NPC( ch ) ) {
     if ( sn < 0 || !can_use_skpell( ch, sn ) ) {
-      send_to_char( AT_BLUE, "You can't do that.\n\r", ch );
+      send_to_char( AT_BLUE, "You don't know that spell.\n\r", ch );
       return;
     }
   } else {
@@ -563,7 +563,7 @@ void do_cast( CHAR_DATA * ch, char * argument ) {
   }
 
   if ( skill_table[ sn ].spell_fun == spell_null ) {
-    send_to_char( AT_BLUE, "You can't do that.\n\r", ch );
+    send_to_char( AT_BLUE, "That's not a spell.\n\r", ch );
     return;
   }
 
@@ -667,7 +667,7 @@ void do_cast( CHAR_DATA * ch, char * argument ) {
       break;
   }
 
-  if ( !IS_NPC( ch ) ) {
+  if ( !IS_NPC( ch ) && ch->mana < mana ) {
     send_to_char( AT_BLUE, "You don't have enough mana.\n\r", ch );
     return;
   }
@@ -785,7 +785,7 @@ void obj_cast_spell( int sn, int level, CHAR_DATA * ch, CHAR_DATA * victim, OBJ_
       }
 
       if ( !victim || ( !IS_NPC( victim ) && ch != victim ) ) {
-        send_to_char( AT_BLUE, "You can't do that.\n\r", ch );
+        send_to_char( AT_BLUE, "You're not fighting anyone.\n\r", ch );
         return;
       }
 
@@ -803,10 +803,7 @@ void obj_cast_spell( int sn, int level, CHAR_DATA * ch, CHAR_DATA * victim, OBJ_
         REMOVE_BIT( ch->affected_by, AFF_PEACE );
       }
 
-      if ( ( ( ch->level - 9 > victim->level )
-             || ( ch->level + 9 < victim->level ) )
-           && ( !IS_NPC( victim ) )
-           && ( !IS_SET( victim->act2, PLR_WAR ) ) ) {
+      if ( ( ( ch->level - 9 > victim->level ) || ( ch->level + 9 < victim->level ) ) && ( !IS_NPC( victim ) ) && ( !IS_SET( victim->act2, PLR_WAR ) ) ) {
         send_to_char( AT_WHITE, "That is not in the pkill range... valid range is +/- 8 levels.\n\r", ch );
         return;
       }
@@ -830,7 +827,7 @@ void obj_cast_spell( int sn, int level, CHAR_DATA * ch, CHAR_DATA * victim, OBJ_
     case TAR_OBJ_INV:
 
       if ( !obj ) {
-        send_to_char( AT_BLUE, "You can't do that.\n\r", ch );
+        send_to_char( AT_BLUE, "You can't find that.\n\r", ch );
         return;
       }
 
