@@ -7178,7 +7178,7 @@ void spell_chi_shield( int sn, int level, CHAR_DATA * ch, void * vo ) {
 
 /* Adds + dam to spells for having spellcraft skill */
 int sc_dam( CHAR_DATA * ch, int dam ) {
-  float mod;
+  double mod;
 
   if ( ch->level < 50 ) {
     mod = 82.6;   /* x1.15 */

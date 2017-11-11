@@ -1449,8 +1449,7 @@ void do_say( CHAR_DATA * ch, char * argument ) {
 
   /* Check if ch is asking newbie helper for help */
 
-  if ( !IS_NPC( ch ) && ( ch->level < 4 ) &&
-       ( IS_SET( ch->in_room->area->area_flags, AREA_MUDSCHOOL ) ) ) {
+  if ( !IS_NPC( ch ) && ( ch->level < 4 ) && ( IS_SET( ch->in_room->area->area_flags, AREA_MUDSCHOOL ) ) ) {
     newbie_help( ch, argument );
   }
 
@@ -1464,8 +1463,7 @@ void do_tell( CHAR_DATA * ch, char * argument ) {
   int         position;
   char        buf[ MAX_STRING_LENGTH ];
 
-  if ( !IS_NPC( ch ) && (   IS_SET( ch->act, PLR_SILENCE )
-                            || IS_SET( ch->act, PLR_NO_TELL ) ) ) {
+  if ( !IS_NPC( ch ) && (   IS_SET( ch->act, PLR_SILENCE ) || IS_SET( ch->act, PLR_NO_TELL ) ) ) {
     send_to_char( AT_WHITE, "Your message didn't get through.\n\r", ch );
     return;
   }
@@ -1489,10 +1487,7 @@ void do_tell( CHAR_DATA * ch, char * argument ) {
 
   /*   if ( !( victim = get_char_world( ch, arg ) )
   || ( IS_NPC( victim ) && victim->in_room != ch->in_room ) ) */
-  if ( (    !( victim = get_pc_world( ch, arg ) )
-            && !( victim = get_char_world( ch, arg ) ) )
-       || (    IS_NPC( victim )
-               && victim->in_room != ch->in_room           ) ) {
+  if ( (    !( victim = get_pc_world( ch, arg ) ) && !( victim = get_char_world( ch, arg ) ) ) || ( IS_NPC( victim ) && victim->in_room != ch->in_room ) ) {
     send_to_char( AT_WHITE, "They aren't here.\n\r", ch );
     return;
   }
@@ -1519,9 +1514,7 @@ void do_tell( CHAR_DATA * ch, char * argument ) {
       return;
       } */
   if ( !IS_NPC( victim ) && IS_SET( victim->act, PLR_AFK ) ) {
-    sprintf( buf, "%s %s.", victim->name,
-             ( victim->pcdata && victim->pcdata->afkchar[ 0 ] != '\0' )
-             ? victim->pcdata->afkchar : "is AFK at the moment" );
+    sprintf( buf, "%s %s.", victim->name, ( victim->pcdata && victim->pcdata->afkchar[ 0 ] != '\0' ) ? victim->pcdata->afkchar : "is AFK at the moment" );
     act( AT_WHITE, buf, ch, NULL, victim, TO_CHAR );
     return;
   }
@@ -1534,6 +1527,7 @@ void do_tell( CHAR_DATA * ch, char * argument ) {
   act( AT_WHITE, "You tell $N '$t'", ch, argument, victim, TO_CHAR );
   position         = victim->position;
   victim->position = POS_STANDING;
+  
   act( AT_WHITE, "$n tells you '$t'", ch, argument, victim, TO_VICT );
   victim->position = position;
   victim->reply    = ch;
@@ -1542,13 +1536,11 @@ void do_tell( CHAR_DATA * ch, char * argument ) {
 }
 
 void do_remote( CHAR_DATA * ch, char * argument ) {
-/*** Remote, added by ShayDn 27/6/96 ***/
   CHAR_DATA * victim;
   char        arg[ MAX_INPUT_LENGTH ];
   int         position;
 
-  if ( !IS_NPC( ch ) && (   IS_SET( ch->act, PLR_SILENCE )
-                            || IS_SET( ch->act, PLR_NO_TELL ) ) ) {
+  if ( !IS_NPC( ch ) && (   IS_SET( ch->act, PLR_SILENCE ) || IS_SET( ch->act, PLR_NO_TELL ) ) ) {
     send_to_char( AT_WHITE, "Your message didn't get through.\n\r", ch );
     return;
   }
@@ -1565,12 +1557,7 @@ void do_remote( CHAR_DATA * ch, char * argument ) {
     return;
   }
 
-  /*
-   * Can tell to PC's anywhere, but NPC's only in same room.
-   * -- Furey
-   */
-  if ( !( victim = get_char_world( ch, arg ) )
-       || ( IS_NPC( victim ) && victim->in_room != ch->in_room ) ) {
+  if ( !( victim = get_char_world( ch, arg ) ) || ( IS_NPC( victim ) && victim->in_room != ch->in_room ) ) {
     send_to_char( AT_WHITE, "They aren't here.\n\r", ch );
     return;
   }
@@ -1624,9 +1611,7 @@ void do_reply( CHAR_DATA * ch, char * argument ) {
     return;
   }
 
-  if ( ( !IS_IMMORTAL( ch ) && !IS_AWAKE( victim ) )
-       || ( IS_SET( victim->in_room->room_flags, ROOM_SILENT )
-            && ( get_trust( ch ) < L_APP ) ) ) {
+  if ( ( !IS_IMMORTAL( ch ) && !IS_AWAKE( victim ) ) || ( IS_SET( victim->in_room->room_flags, ROOM_SILENT ) && ( get_trust( ch ) < L_APP ) ) ) {
     act( AT_WHITE, "$E can't hear you.", ch, 0, victim, TO_CHAR );
     return;
   }
@@ -1639,6 +1624,7 @@ void do_reply( CHAR_DATA * ch, char * argument ) {
   act( AT_WHITE, "You tell $N '$t'",  ch, argument, victim, TO_CHAR );
   position         = victim->position;
   victim->position = POS_STANDING;
+  
   act( AT_WHITE, "$n tells you '$t'", ch, argument, victim, TO_VICT );
   victim->position = position;
   victim->reply    = ch;
@@ -1729,10 +1715,6 @@ void do_quit( CHAR_DATA * ch, char * argument ) {
   CHAR_DATA       * gch;
   MONEY_DATA        tax;
 
-  if ( IS_NPC( ch ) ) {
-    return;
-  }
-
   if ( ch->position == POS_FIGHTING ) {
     send_to_char( AT_WHITE, "No way! You are fighting.\n\r", ch );
     return;
@@ -1755,27 +1737,21 @@ void do_quit( CHAR_DATA * ch, char * argument ) {
 
   if ( ch->questobj ) {
     if ( ch->questobj->carried_by == ch ) {
-      extract_obj( ch->questobj ); /* if on char extract */
+      extract_obj( ch->questobj );
     } else {
-      ch->questobj->timer = 1;     /* Let obj_update extract it - Hann */
+      ch->questobj->timer = 1;
     }
   }
 
   raffect_remall( ch );
 
-  if ( ( ch->money.gold > 500000 ) ||
-       ( ch->money.silver / SILVER_PER_GOLD > 500000 ) ||
-       ( ch->money.copper / COPPER_PER_GOLD > 500000 ) ) {
+  if ( ( ch->money.gold > 500000 ) || ( ch->money.silver / SILVER_PER_GOLD > 500000 ) || ( ch->money.copper / COPPER_PER_GOLD > 500000 ) ) {
 
-    tax.gold = ( ch->money.gold > 500000 ) ? ch->money.gold * 0.15
-               : 0;
-    tax.silver = ( ch->money.silver / SILVER_PER_GOLD > 500000 ) ?
-                 ch->money.silver * 0.15 : 0;
-    tax.copper = ( ch->money.copper / COPPER_PER_GOLD > 500000 ) ?
-                 ch->money.copper * 0.15 : 0;
+    tax.gold = ( ch->money.gold > 500000 ) ? ch->money.gold * 0.15 : 0;
+    tax.silver = ( ch->money.silver / SILVER_PER_GOLD > 500000 ) ? ch->money.silver * 0.15 : 0;
+    tax.copper = ( ch->money.copper / COPPER_PER_GOLD > 500000 ) ? ch->money.copper * 0.15 : 0;
 
-    sprintf( log_buf, "You have been charged an out of the bank protection fee of %s\n\r",
-             money_string( &tax ) );
+    sprintf( log_buf, "You have been charged an out of the bank protection fee of %s\n\r", money_string( &tax ) );
     send_to_char( AT_WHITE, log_buf, ch );
     sub_money( &ch->money, &tax );
   }
@@ -1786,8 +1762,7 @@ void do_quit( CHAR_DATA * ch, char * argument ) {
   send_to_char( AT_BLUE, " the storm that rages within... ]\n\r\n\r", ch );
   send_to_char( C_DEFAULT, "", ch );
 
-  if (   !IS_SET( ch->act, PLR_WIZINVIS )
-         && !IS_AFFECTED2( ch, AFF_PLOADED ) ) {
+  if (   !IS_SET( ch->act, PLR_WIZINVIS ) && !IS_AFFECTED2( ch, AFF_PLOADED ) ) {
     act( AT_BLOOD, "$n has left the game.", ch, NULL, NULL, TO_ROOM );
 
     if ( !IS_SET( ch->act, PLR_CLOAKED ) ) {
@@ -1795,16 +1770,12 @@ void do_quit( CHAR_DATA * ch, char * argument ) {
     }
   } else {
     for ( gch = ch->in_room->people; gch; gch = gch->next_in_room ) {
-      if ( ch != gch ) {
-        if ( get_trust( gch ) >= ch->wizinvis ) {
-          act( AT_BLOOD, "$N slightly phased has left the storm.",
-               gch, NULL, ch, TO_CHAR );
-        }
+      if ( ch != gch && get_trust( gch ) >= ch->wizinvis ) {
+        act( AT_BLOOD, "$N slightly phased has left the storm.", gch, NULL, ch, TO_CHAR );
       }
     }
   }
 
-  /*    close_socket( ch->desc );*/
   if ( IS_AFFECTED2( ch, AFF_PLOADED ) ) {
     REMOVE_BIT( ch->affected_by2, AFF_PLOADED );
   }
@@ -1815,37 +1786,27 @@ void do_quit( CHAR_DATA * ch, char * argument ) {
     wiznet( log_buf, ch, NULL, WIZ_LOGINS, 0, get_trust( ch ) );
   }
 
-  /*
-   * After extract_char the ch is no longer valid!
-   */
-  if ( !IS_NPC( ch ) ) {
-    if ( IS_SET( ch->act, PLR_QUEST ) ) {
-      REMOVE_BIT( ch->act, PLR_QUEST );
-    }
+  if ( IS_SET( ch->act, PLR_QUEST ) ) {
+    REMOVE_BIT( ch->act, PLR_QUEST );
+  }
 
-    if ( IS_SET( ch->act, PLR_QUESTOR ) ) {
-      REMOVE_BIT( ch->act, PLR_QUESTOR );
-    }
+  if ( IS_SET( ch->act, PLR_QUESTOR ) ) {
+    REMOVE_BIT( ch->act, PLR_QUESTOR );
   }
 
   if ( auc_held && ch == auc_held && auc_obj ) {
     if ( auc_bid ) {
-      if ( ( ( auc_bid->money.gold * C_PER_G ) + ( auc_bid->money.silver * S_PER_G ) +
-             auc_bid->money.copper ) < ( ( auc_cost.gold * C_PER_G ) +
-                                         ( auc_cost.silver * S_PER_G ) + auc_cost.copper ) ) {
-        sprintf( log_buf, "Holder of %s has left; bidder cannot pay for item; returning to owner.",
-                 auc_obj->short_descr );
+      if ( ( ( auc_bid->money.gold * C_PER_G ) + ( auc_bid->money.silver * S_PER_G ) + auc_bid->money.copper ) < ( ( auc_cost.gold * C_PER_G ) + ( auc_cost.silver * S_PER_G ) + auc_cost.copper ) ) {
+        sprintf( log_buf, "Holder of %s has left; bidder cannot pay for item; returning to owner.", auc_obj->short_descr );
         obj_to_char( auc_obj, ch );
       } else {
-        sprintf( log_buf, "Holder of %s has left; selling item to last bidder.",
-                 auc_obj->short_descr );
+        sprintf( log_buf, "Holder of %s has left; selling item to last bidder.", auc_obj->short_descr );
         obj_to_char( auc_obj, auc_bid );
         add_money( &ch->money, &auc_cost );
         spend_money( &auc_bid->money, &auc_cost );
       }
     } else {
-      sprintf( log_buf, "Holder of %s has left; removing item from auction.",
-               auc_obj->short_descr );
+      sprintf( log_buf, "Holder of %s has left; removing item from auction.", auc_obj->short_descr );
       auc_channel( log_buf );
       obj_to_char( auc_obj, ch );
     }
@@ -1895,8 +1856,7 @@ void do_quit( CHAR_DATA * ch, char * argument ) {
 }
 
 void do_delet( CHAR_DATA * ch, char * argument ) {
-  send_to_char( C_DEFAULT,
-                "If you want to DELETE yourself, spell it out!\n\r", ch );
+  send_to_char( C_DEFAULT, "If you want to DELETE yourself, spell it out!\n\r", ch );
   return;
 }
 
@@ -1908,14 +1868,12 @@ void do_delete( CHAR_DATA * ch, char * argument ) {
   }
 
   if ( str_cmp( ch->desc->incomm, "delete yes" ) ) {
-    send_to_char( C_DEFAULT,
-                  "If you want to DELETE yourself, type 'delete yes'\n\r", ch );
+    send_to_char( C_DEFAULT, "If you want to DELETE yourself, type 'delete yes'\n\r", ch );
     return;
   }
 
   if ( ch->desc->original || IS_NPC( ch ) ) {
-    send_to_char( C_DEFAULT, "You may not delete a switched character.\n\r",
-                  ch );
+    send_to_char( C_DEFAULT, "You may not delete a switched character.\n\r", ch );
     return;
   }
 
@@ -1923,8 +1881,7 @@ void do_delete( CHAR_DATA * ch, char * argument ) {
   send_to_char( C_DEFAULT, "You are no more.\n\r", ch );
   act( AT_BLOOD, "$n is no more.", ch, NULL, NULL, TO_ROOM );
   info( "%s is no more.", (int)( ch->name ), 0 );
-  sprintf( log_buf, "%s has DELETED in room vnum %d.", ch->name,
-           ch->in_room->vnum );
+  sprintf( log_buf, "%s has DELETED in room vnum %d.", ch->name, ch->in_room->vnum );
   log_string( log_buf, -1, -1 );
   wiznet( log_buf, ch, NULL, WIZ_LOGINS, 0, 0 );
 
@@ -1958,8 +1915,7 @@ void do_delete( CHAR_DATA * ch, char * argument ) {
   }
 
   if ( auc_bid && auc_bid == ch && auc_obj ) {
-    sprintf( log_buf, "Highest bidder for %s has left; returning item to owner.",
-             auc_obj->short_descr );
+    sprintf( log_buf, "Highest bidder for %s has left; returning item to owner.", auc_obj->short_descr );
 
     if ( auc_held ) {
       obj_to_char( auc_obj, auc_held );
@@ -1973,15 +1929,15 @@ void do_delete( CHAR_DATA * ch, char * argument ) {
     auc_count     = -1;
   }
 
-  /* Delete Player File */
+  // delete player file
   sprintf( log_buf, "%s%c/%s", PLAYER_DIR, LOWER( ch->name[ 0 ] ), capitalize( ch->name ) );
   remove( log_buf );
 
-  /* Delete Finger File */
+  // delete finger file
   sprintf( log_buf, "%s%c/%s.fng", PLAYER_DIR, LOWER( ch->name[ 0 ] ), capitalize( ch->name ) );
   remove( log_buf );
 
-  /* Delete Corpses */
+  // delete corpses
   sprintf( log_buf, "%s%c/%s.cps", PLAYER_DIR, LOWER( ch->name[ 0 ] ), capitalize( ch->name ) );
   remove( log_buf );
 
@@ -1999,10 +1955,6 @@ void do_delete( CHAR_DATA * ch, char * argument ) {
 }
 
 void do_save( CHAR_DATA * ch, char * argument ) {
-  if ( IS_NPC( ch ) ) {
-    return;
-  }
-
   save_char_obj( ch );
   save_finger( ch );
   send_to_char( AT_WHITE, "The gods smile upon you and save your soul.\n\r", ch );

@@ -10,7 +10,11 @@ TEST_BUILD_DIR = $(TEST_DIR)/build
 BIN_DIR        = bin
 
 # envy config
-C_FLAGS        = -c -O -Wall -g3 -DNOCRYPT
+C_FLAGS        = -c -O -Wall -g3 -DNOCRYPT -Wextra -Wformat=2                 \
+                 -Wno-unused-parameter -Wshadow -Wwrite-strings               \
+                 -Wstrict-prototypes -Wold-style-definition -Wredundant-decls \
+                 -Wnested-externs -Wmissing-include-dirs                      \
+                 -Wno-incompatible-pointer-types
 L_FLAGS        = -g
 OBJ_NAMES      = act_comm.o act_info.o act_move.o act_obj.o act_wiz.o comm.o const.o \
                  db.o fight.o handler.o magic.o save.o special.o update.o remort.o   \

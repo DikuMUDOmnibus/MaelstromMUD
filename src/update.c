@@ -1102,9 +1102,7 @@ void char_update( void ) {
           continue;
         }
 
-        if ( IS_AFFECTED2( victim, AFF_UNHOLYSTRENGTH ) ||
-             IS_AFFECTED2( victim, AFF_PLAGUE ) ||
-             IS_AFFECTED2( victim, AFF_VACCINATE ) ) {
+        if ( IS_AFFECTED2( victim, AFF_UNHOLYSTRENGTH ) || IS_AFFECTED2( victim, AFF_PLAGUE ) || IS_AFFECTED2( victim, AFF_VACCINATE ) ) {
           continue;
         }
 
@@ -1147,17 +1145,15 @@ void char_update( void ) {
       }
 
       if ( ch == ch_save ) {
-        /*	        send_to_char( AT_ORANGE, "Autosaved.\n\r", ch ); */
         save_char_obj( ch );
       }
 
-      if ( ch == ch_quit ) {
+      if ( ch == ch_quit && !IS_NPC( ch ) ) {
         do_quit( ch, "" );
       }
     }
   }
 
-  /* XOR */
   for ( ch = char_list; ch != NULL; ch = ch_next ) {
     ch_next = ch->next;
 
@@ -1168,8 +1164,7 @@ void char_update( void ) {
     }
 
     if ( IS_NPC( ch ) && ch->summon_timer == 0 ) {
-      act( AT_BLUE, "$n is consumed by a swirling vortex.",
-           ch, NULL, NULL, TO_ROOM );
+      act( AT_BLUE, "$n is consumed by a swirling vortex.", ch, NULL, NULL, TO_ROOM );
       extract_char( ch, TRUE );
     }
   }
@@ -1247,8 +1242,7 @@ void obj_update( void ) {
 
       if ( obj->carried_by ) {
         act( C_DEFAULT, message, obj->carried_by, obj, NULL, TO_CHAR );
-      } else if ( obj->in_room
-                  && ( rch = obj->in_room->people ) ) {
+      } else if ( obj->in_room && ( rch = obj->in_room->people ) ) {
         act( C_DEFAULT, message, rch, obj, NULL, TO_ROOM );
         act( C_DEFAULT, message, rch, obj, NULL, TO_CHAR );
       }
@@ -1264,19 +1258,17 @@ void obj_update( void ) {
         } else {
           strew_corpse( obj, inarea );
         }
-      } else {      /* (obj != object_list) */
+      } else {
         OBJ_DATA * previous;
 
-        for ( previous = object_list; previous;
-              previous = previous->next ) {
+        for ( previous = object_list; previous; previous = previous->next ) {
           if ( previous->next == obj ) {
             break;
           }
         }
 
-        if ( !previous ) { /* Can't see how, but... */
-          bug( "Obj_update: obj %d no longer in object_list",
-               obj->pIndexData->vnum );
+        if ( !previous ) {
+          bug( "Obj_update: obj %d no longer in object_list", obj->pIndexData->vnum );
         }
 
         if ( !pccorpse || !inarea ) {

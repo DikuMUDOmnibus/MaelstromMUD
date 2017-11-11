@@ -99,7 +99,7 @@ typedef void SPELL_FUN ( int sn, int level, CHAR_DATA * ch, void * vo );
 /*
  * String and memory management parameters.
  */
-#define MAX_KEY_HASH      8192/*1024*/
+#define MAX_KEY_HASH      8192 // 1024
 #define MAX_STRING_LENGTH 8192
 #define MAX_INPUT_LENGTH  256
 
@@ -112,7 +112,7 @@ typedef void SPELL_FUN ( int sn, int level, CHAR_DATA * ch, void * vo );
 #define MAX_GSPELL 2
 #define MAX_CLASS  3
 #define MAX_RACE   5
-#define MAX_CLAN   21                 /*max 20 clans + 1 for clan 0*/
+#define MAX_CLAN   21   // max 20 clans + 1 for clan 0
 #define MAX_LEVEL  113
 #define MAX_SIZE   9
 
@@ -152,13 +152,13 @@ struct money_data {
 };
 
 struct arena_data {
-  AREA_DATA * area;  // Arena area
-  CHAR_DATA * cch;   // Challenger char
+  AREA_DATA * area;  // arena area
+  CHAR_DATA * cch;   // challenger char
   CHAR_DATA * och;   // optional challengee char
-  CHAR_DATA * fch;   // First char in arena
-  CHAR_DATA * sch;   // Second char in arena
-  int         award; // Money in the pot
-  int         count; // Update ticker
+  CHAR_DATA * fch;   // first char in arena
+  CHAR_DATA * sch;   // second char in arena
+  int         award; // money in the pot
+  int         count; // update ticker
 };
 
 struct war_data {
@@ -458,15 +458,15 @@ struct playerlist_data {
  * Class Structure
  */
 struct  class_type {
-  char  who_name[ 4 ];      // Three-letter name for 'who'
-  char  who_long[ 15 ];     // Long name of Class
-  int   attr_prime;         // Prime attribute
-  int   skill_adept;        // Maximum skill level
-  float mbab;               // Base Attack Bonus Modifier (thac0 = 20 - (level * mbab))
-  int   hitdice;            // Hit Dice
-  int   d6gold;             // Number of starting d6 to roll for starting gold
-  bool  spellcaster;        // Class is a spellcaster
-  char  whotype[ 15 ];      // Class whotype
+  char   who_name[ 4 ];      // Three-letter name for 'who'
+  char   who_long[ 15 ];     // Long name of Class
+  int    attr_prime;         // Prime attribute
+  int    skill_adept;        // Maximum skill level
+  double mbab;               // Base Attack Bonus Modifier (thac0 = 20 - (level * mbab))
+  int    hitdice;            // Hit Dice
+  int    d6gold;             // Number of starting d6 to roll for starting gold
+  bool   spellcaster;        // Class is a spellcaster
+  char   whotype[ 15 ];      // Class whotype
 };
 
 /*
@@ -489,10 +489,10 @@ struct  race_type {
  * Size Structure
  */
 struct size_type {
-  char  name[ 20 ];           // Size name
-  int   mac;                  // AC modifier
-  int   mstealth;             // Stealth modifier
-  float mcarry;               // Carrying capacity modifier
+  char   name[ 20 ];           // Size name
+  int    mac;                  // AC modifier
+  int    mstealth;             // Stealth modifier
+  double mcarry;               // Carrying capacity modifier
 };
 
 /**

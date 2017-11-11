@@ -9,12 +9,10 @@ int scan_room( CHAR_DATA * ch, const ROOM_INDEX_DATA * room, char * buf ) {
   CHAR_DATA * target       = room->people;
   int         number_found = 0;
 
-  while ( target != NULL ) {       /* repeat as long more peple in the room */
-    if ( can_see( ch, target ) ) { /* show only if the character can see the
-                                      target */
+  while ( target != NULL ) {
+    if ( can_see( ch, target ) ) {
       strcat( buf, " - " );
-      strcat( buf, IS_NPC( target ) ? target->short_descr :
-              target->name );
+      strcat( buf, IS_NPC( target ) ? target->short_descr : target->name );
       strcat( buf, "\n\r" );
       number_found++;
     }

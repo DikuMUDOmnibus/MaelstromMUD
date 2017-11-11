@@ -962,11 +962,7 @@ void do_look( CHAR_DATA * ch, char * argument ) {
     return;
   }
 
-  if ( !IS_NPC( ch )
-       && !IS_SET( ch->act, PLR_HOLYLIGHT )
-       && room_is_dark( ch->in_room )
-       && ( ch->race != RACE_ELF   )
-       && ( ch->race != RACE_DWARF ) ) {
+  if ( !IS_NPC( ch ) && !IS_SET( ch->act, PLR_HOLYLIGHT ) && room_is_dark( ch->in_room ) && ( ch->race != RACE_ELF   ) && ( ch->race != RACE_DWARF ) ) {
     send_to_char( AT_DGREY, "It is pitch black ... \n\r", ch );
     show_char_to_char( ch->in_room->people, ch );
     return;
@@ -985,8 +981,7 @@ void do_look( CHAR_DATA * ch, char * argument ) {
        do_exits( ch, "auto" );
      */
 
-    if ( arg1[ 0 ] == '\0'
-         || ( !IS_NPC( ch ) && !IS_SET( ch->act, PLR_BRIEF ) ) ) {
+    if ( arg1[ 0 ] == '\0' || ( !IS_NPC( ch ) && !IS_SET( ch->act, PLR_BRIEF ) ) ) {
       /* Thalador room color change */
       send_to_char( ch->in_room->area->def_color, ch->in_room->description, ch );
     }
@@ -1010,7 +1005,6 @@ void do_look( CHAR_DATA * ch, char * argument ) {
     if ( !( obj = get_obj_here( ch, arg2 ) ) ) {
       if ( !str_prefix( arg2, "auction" ) ) {
         int  objcount = 1;
-        char buf[ MAX_INPUT_LENGTH ];
 
         if ( !auc_obj ) {
           send_to_char( C_DEFAULT, "There is no object being auctioned.\n\r", ch );
@@ -1087,8 +1081,7 @@ void do_look( CHAR_DATA * ch, char * argument ) {
         send_to_char( AT_WHITE, portroom->name, ch );
         send_to_char( AT_WHITE, "\n\r", ch );
 
-        if ( arg1[ 0 ] == '\0'
-             || ( !IS_NPC( ch ) && !IS_SET( ch->act, PLR_BRIEF ) ) ) {
+        if ( arg1[ 0 ] == '\0' || ( !IS_NPC( ch ) && !IS_SET( ch->act, PLR_BRIEF ) ) ) {
           send_to_char( AT_CYAN, portroom->description, ch );
         }
 
@@ -1097,17 +1090,12 @@ void do_look( CHAR_DATA * ch, char * argument ) {
         show_char_to_char( portroom->people,   ch );
         oprog_look_in_trigger( obj, ch );
         break;
-
     }
 
     return;
   }
 
   if ( ( victim = get_char_room( ch, arg1 ) ) ) {
-
-    /*	show_char_to_char_1( victim, ch );  Changed arguments so you
-       can look into char's storage (look victim storage) --Angi */
-
     show_char_to_char_1( victim, ch, arg2 );
     return;
   }
@@ -1176,8 +1164,6 @@ void do_look( CHAR_DATA * ch, char * argument ) {
   if ( is_direction( arg1 ) ) {
     door = get_direction( arg1 );
   }  else if ( !str_prefix( arg1, "auction" ) ) {
-    char buf[ MAX_STRING_LENGTH ];
-
     if ( !auc_obj ) {
       send_to_char( C_DEFAULT, "There is no object being auctioned.\n\r", ch );
       return;
@@ -1185,16 +1171,12 @@ void do_look( CHAR_DATA * ch, char * argument ) {
 
     sprintf( buf, "Object: %s\n\r", auc_obj->short_descr );
     send_to_char( AT_WHITE, buf, ch );
-    sprintf( buf, "Type: %s   Level: %d\n\r",
-             item_type_name( auc_obj ), auc_obj->level );
+    sprintf( buf, "Type: %s   Level: %d\n\r", item_type_name( auc_obj ), auc_obj->level );
     send_to_char( AT_WHITE, buf, ch );
-    sprintf( buf, "Value: %s  Price: %s\n\r", money_string( &auc_obj->cost ),
-             money_string( &auc_cost ) );
+    sprintf( buf, "Value: %s  Price: %s\n\r", money_string( &auc_obj->cost ), money_string( &auc_cost ) );
     send_to_char( AT_WHITE, buf, ch );
     return;
   } else if ( !str_prefix( arg1, "arena" ) && !IS_ARENA( ch ) ) {
-    char buf[ MAX_STRING_LENGTH ];
-
     if ( !arena.cch && !( arena.fch || arena.sch ) ) {
       send_to_char( C_DEFAULT, "There is no challenge being offered.\n\r",
                     ch );
@@ -1202,16 +1184,11 @@ void do_look( CHAR_DATA * ch, char * argument ) {
     }
 
     if ( arena.cch ) {
-      sprintf( buf, "Challenger: %s, a level %d %s.\n\r",
-               arena.cch->name, arena.cch->level,
-               class_long( arena.cch ) );
+      sprintf( buf, "Challenger: %s, a level %d %s.\n\r", arena.cch->name, arena.cch->level, class_long( arena.cch ) );
       sprintf( buf + strlen( buf ), "CHALLENGING\n\r" );
 
       if ( arena.och ) {
-        sprintf( buf + strlen( buf ),
-                 "Challenged: %s, a level %d %s.\n\r",
-                 arena.och->name, arena.och->level,
-                 class_long( arena.och ) );
+        sprintf( buf + strlen( buf ), "Challenged: %s, a level %d %s.\n\r", arena.och->name, arena.och->level, class_long( arena.och ) );
       } else {
         sprintf( buf + strlen( buf ), "Challenged: ANYONE\n\r" );
       }
@@ -1222,22 +1199,16 @@ void do_look( CHAR_DATA * ch, char * argument ) {
 
       fp = ( arena.fch->hit * 100 ) / MAX_HIT( arena.fch );
       sp = ( arena.sch->hit * 100 ) / MAX_HIT( arena.sch );
-      sprintf( buf, "Challenger: %s, a level %d %s.\n\r",
-               arena.fch->name, arena.fch->level,
-               class_long( arena.fch ) );
+      sprintf( buf, "Challenger: %s, a level %d %s.\n\r", arena.fch->name, arena.fch->level, class_long( arena.fch ) );
       sprintf( buf + strlen( buf ), "FIGHTING\n\r" );
-      sprintf( buf + strlen( buf ), "Challenged: %s, a level %d %s.\n\r",
-               arena.sch->name, arena.sch->level,
-               class_long( arena.sch ) );
+      sprintf( buf + strlen( buf ), "Challenged: %s, a level %d %s.\n\r", arena.sch->name, arena.sch->level, class_long( arena.sch ) );
       sprintf( buf + strlen( buf ), "Award is %d coins.\n\r", arena.award );
       send_to_char( AT_WHITE, buf, ch );
 
       if ( fp > sp ) {
-        sprintf( buf, "%s appears to be winning at the moment.\n\r",
-                 arena.fch->name );
+        sprintf( buf, "%s appears to be winning at the moment.\n\r", arena.fch->name );
       } else if ( sp > fp ) {
-        sprintf( buf, "%s appears to be winning at the moment.\n\r",
-                 arena.sch->name );
+        sprintf( buf, "%s appears to be winning at the moment.\n\r", arena.sch->name );
       } else {
         strcpy( buf, "They appear to be evenly matched at the moment.\n\r" );
       }
@@ -1262,11 +1233,10 @@ void do_look( CHAR_DATA * ch, char * argument ) {
     send_to_char( AT_GREY, "Nothing special there.\n\r", ch );
   }
 
-  if ( ( IS_AFFECTED( ch, AFF_SCRY ) ) /*&& ( pexit->to_room->description[0] != '\0' )*/ ) {
+  if ( IS_AFFECTED( ch, AFF_SCRY ) ) {
     ROOM_INDEX_DATA * rid;
 
-    if ( IS_SET( ch->in_room->room_flags, ROOM_NO_MAGIC )
-         || IS_SET( pexit->to_room->room_flags, ROOM_NOSCRY ) ) {
+    if ( IS_SET( ch->in_room->room_flags, ROOM_NO_MAGIC ) || IS_SET( pexit->to_room->room_flags, ROOM_NOSCRY ) ) {
       send_to_char( AT_BLUE, "You failed.\n\r", ch );
       return;
     }
@@ -1289,12 +1259,9 @@ void do_look( CHAR_DATA * ch, char * argument ) {
     return;
   }
 
-  if (   pexit->keyword
-         && pexit->keyword[ 0 ] != '\0'
-         && pexit->keyword[ 0 ] != ' ' ) {
+  if (   pexit->keyword && pexit->keyword[ 0 ] != '\0' && pexit->keyword[ 0 ] != ' ' ) {
     if ( IS_SET( pexit->exit_info, EX_BASHED ) ) {
-      act( AT_GREY, "The $d has been bashed from its hinges.",
-           ch, NULL, pexit->keyword, TO_CHAR );
+      act( AT_GREY, "The $d has been bashed from its hinges.", ch, NULL, pexit->keyword, TO_CHAR );
     } else if ( IS_SET( pexit->exit_info, EX_CLOSED ) ) {
       act( AT_GREY, "The $d is closed.", ch, NULL, pexit->keyword, TO_CHAR );
     } else if ( IS_SET( pexit->exit_info, EX_ISDOOR ) ) {
@@ -4737,30 +4704,26 @@ void do_plan( CHAR_DATA * ch, char * argument ) {
 void do_afkmes( CHAR_DATA * ch, char * argument ) {
   char buf[ MAX_STRING_LENGTH ];
 
-  if ( !IS_NPC( ch ) ) {
-    if ( argument[ 0 ] == '\0' ) {
-      send_to_char( AT_WHITE, "Syntax:\n\r", ch );
-      send_to_char( AT_YELLOW, "afkmes <string>\n\r", ch );
-      sprintf( buf, "&YAFK Message: &W%s\n\r", ch->pcdata->afkchar );
-      send_to_char( AT_WHITE, buf, ch );
-      return;
-    }
-
-    if ( longstring( ch, argument ) ) {
-      return;
-    }
-
-    smash_tilde( argument );
-    free_string( ch->pcdata->afkchar );
-    ch->pcdata->afkchar = str_dup( argument );
-    sprintf( buf, "&YAFK Message: &W%s\n\r", argument );
+  if ( argument[ 0 ] == '\0' ) {
+    send_to_char( AT_WHITE, "Syntax:\n\r", ch );
+    send_to_char( AT_YELLOW, "afkmes <string>\n\r", ch );
+    sprintf( buf, "&YAFK Message: &W%s\n\r", ch->pcdata->afkchar );
     send_to_char( AT_WHITE, buf, ch );
+    return;
   }
+
+  if ( longstring( ch, argument ) ) {
+    return;
+  }
+
+  smash_tilde( argument );
+  free_string( ch->pcdata->afkchar );
+  ch->pcdata->afkchar = str_dup( argument );
+  sprintf( buf, "&YAFK Message: &W%s\n\r", argument );
+  send_to_char( AT_WHITE, buf, ch );
 
   return;
 }
-
-/* Money functions, for new money format gold/silver/copper --Angi */
 
 MONEY_DATA * add_money( MONEY_DATA * a,  MONEY_DATA * b ) {
   a->gold   += b->gold;

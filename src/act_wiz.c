@@ -5518,8 +5518,6 @@ void do_holylight( CHAR_DATA * ch, char * argument ) {
   return;
 }
 
-/* Wizify and Wizbit sent in by M. B. King */
-
 void do_wizify( CHAR_DATA * ch, char * argument ) {
   CHAR_DATA * victim;
   char        arg1[ MAX_INPUT_LENGTH ];

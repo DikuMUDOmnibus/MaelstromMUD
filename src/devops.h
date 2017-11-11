@@ -2,8 +2,7 @@
  * GITHUB
  */
 #define GITHUB_ACCESS_TOKEN getenv( "GITHUB_ACCESS_TOKEN" )
-
-#define GITHUB_REPO_NAME "zachflower/maelstrom-mud"
+#define GITHUB_REPO_NAME getenv( "GITHUB_REPO_NAME" )
 
 #define GITHUB_LABEL_BUG  "bug"
 #define GITHUB_LABEL_IDEA "idea"
