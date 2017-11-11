@@ -2729,31 +2729,19 @@ void do_report( CHAR_DATA * ch, char * argument ) {
 }
 
 void do_practice( CHAR_DATA * ch, char * argument ) {
-  char buf[ MAX_STRING_LENGTH   ];
-  char buf1[ MAX_STRING_LENGTH * 2 ];
-  int  sn;
-
-  if ( IS_NPC( ch ) ) {
-    return;
-  }
-
-  buf1[ 0 ] = '\0';
+  CHAR_DATA * mob;
+  char        buf[ MAX_STRING_LENGTH   ];
+  int         adept;
+  int         sn;
 
   if ( argument[ 0 ] == '\0' ) {
-    CHAR_DATA * mob;
-    int         col;
+    char skbuf[ MAX_STRING_LENGTH * 2 ];
+    char spbuf[ MAX_STRING_LENGTH * 2 ];
+    int  skcol = 0;
+    int  spcol = 0;
 
-    for ( mob = ch->in_room->people; mob; mob = mob->next_in_room ) {
-      if ( mob->deleted ) {
-        continue;
-      }
-
-      if ( IS_NPC( mob ) && IS_SET( mob->act, ACT_PRACTICE ) ) {
-        break;
-      }
-    }
-
-    col = 0;
+    skbuf[ 0 ] = '\0';
+    spbuf[ 0 ] = '\0';
 
     for ( sn = 0; skill_table[ sn ].name[ 0 ] != '\0'; sn++ ) {
       if ( !skill_table[ sn ].name ) {
@@ -2764,106 +2752,87 @@ void do_practice( CHAR_DATA * ch, char * argument ) {
         continue;
       }
 
-      if ( ( mob ) || ( ch->pcdata->learned[ sn ] > 0 ) ) {
-        sprintf( buf, "&W%21s &Y%3d%%",
-                 skill_table[ sn ].name, ch->pcdata->learned[ sn ] );
-        strcat( buf1, buf );
+      sprintf( buf, "&W%21s &Y%3d%%", skill_table[ sn ].name, ch->pcdata->learned[ sn ] );
 
-        if ( ++col % 3 == 0 ) {
-          strcat( buf1, "\n\r" );
-        } else {
-          strcat( buf1, " " );
-        }
-      }
-    }
-
-    if ( col % 3 != 0 ) {
-      strcat( buf1, "\n\r" );
-    }
-
-    sprintf( buf, "You have %d practice sessions left.\n\r",
-             ch->practice );
-    strcat( buf1, buf );
-    send_to_char( C_DEFAULT, buf1, ch );
-  } else {
-    CHAR_DATA * mob;
-    int         adept;
-
-    if ( !IS_AWAKE( ch ) ) {
-      send_to_char( C_DEFAULT, "In your dreams, or what?\n\r", ch );
-      return;
-    }
-
-    for ( mob = ch->in_room->people; mob; mob = mob->next_in_room ) {
-      if ( mob->deleted ) {
-        continue;
-      }
-
-      if ( IS_NPC( mob ) && IS_SET( mob->act, ACT_PRACTICE ) ) {
-        break;
-      }
-    }
-
-    if ( !mob ) {
-      send_to_char( C_DEFAULT, "You can't do that here.\n\r", ch );
-      return;
-    }
-
-    if ( ch->practice <= 0 ) {
-      send_to_char( C_DEFAULT, "You have no practice sessions left.\n\r", ch );
-      return;
-    }
-
-    if ( ( sn = skill_lookup( argument ) ) < 0
-         || ( IS_NPC( ch ) ) ) {
-      send_to_char( C_DEFAULT, "You can't practice that.\n\r", ch );
-      return;
-    }
-
-    if ( !can_practice_skpell( ch, sn ) ) {
-      send_to_char( C_DEFAULT, "You can't practice that.\n\r", ch );
-      return;
-    }
-
-    /* Practice to approx 50% then use to learn */
-    if ( IS_NPC( ch ) || ch->pcdata->learned[ sn ] > 35 ) {
-      sprintf( buf, "&W%s tells you &c'&CI've already trained you all I can in %s&c'&w.\n\r",
-               capitalize( mob->name ), skill_table[ sn ].name );
-      send_to_char( C_DEFAULT, buf, ch );
-      sprintf( buf, "&W%s tells you &c'&CPractice in the real world for more experience&c'&w.\n\r",
-               capitalize( mob->name ) );
-      send_to_char( C_DEFAULT, buf, ch );
-      return;
-    }
-
-    adept = IS_NPC( ch ) ? 100 :
-            class_table[ prime_class( ch ) ].skill_adept;
-
-    if ( ch->pcdata->learned[ sn ] >= adept ) {
-      sprintf( buf, "You are already an adept of %s.\n\r",
-               skill_table[ sn ].name );
-      send_to_char( C_DEFAULT, buf, ch );
-    } else {
-      ch->practice--;
-      ch->pcdata->learned[ sn ] += int_app[ get_curr_int( ch ) ].learn;
-
-      /*	    ch->pcdata->learned[sn] += ( ( get_curr_int( ch ) * 4 ) / 3 );*/
-      if ( ch->pcdata->learned[ sn ] < adept ) {
-        act( C_DEFAULT, "You practice $T.",
-             ch, NULL, skill_table[ sn ].name, TO_CHAR );
-        act( C_DEFAULT, "$n practices $T.",
-             ch, NULL, skill_table[ sn ].name, TO_ROOM );
+      if ( skill_table[sn].spell_fun == spell_null ) {
+        strcat( skbuf, buf );
+        strcat( skbuf, (++skcol % 3 == 0) ? "\n\r" : " " );
       } else {
-        ch->pcdata->learned[ sn ] = adept;
-        act( C_DEFAULT, "You are now an adept of $T.",
-             ch, NULL, skill_table[ sn ].name, TO_CHAR );
-        act( C_DEFAULT, "$n is now an adept of $T.",
-             ch, NULL, skill_table[ sn ].name, TO_ROOM );
+        strcat( spbuf, buf );
+        strcat( spbuf, (++spcol % 3 == 0) ? "\n\r" : " " );
       }
+    }
+
+    strcat( skbuf, (skcol % 3 != 0) ? "\n\r" : "" );
+    strcat( spbuf, (spcol % 3 != 0) ? "\n\r" : "" );
+
+    send_to_char(AT_PINK,"-------------------=================[Spells]=================-------------------\n\r",ch );
+    send_to_char(AT_PINK, spbuf, ch );
+    send_to_char(AT_PURPLE,"-------------------=================[Skills]=================-------------------\n\r",ch );
+    send_to_char(AT_PURPLE, skbuf, ch );
+
+    sprintf( buf, "\n\rYou have %d practice sessions left.\n\r", ch->practice );
+    send_to_char( C_DEFAULT, buf, ch );
+    return;
+  }
+
+  if ( !IS_AWAKE( ch ) ) {
+    send_to_char( C_DEFAULT, "In your dreams, or what?\n\r", ch );
+    return;
+  }
+
+  for ( mob = ch->in_room->people; mob; mob = mob->next_in_room ) {
+    if ( mob->deleted ) {
+      continue;
+    }
+
+    if ( IS_NPC( mob ) && IS_SET( mob->act, ACT_PRACTICE ) ) {
+      break;
     }
   }
 
-  return;
+  if ( !mob ) {
+    send_to_char( C_DEFAULT, "You can't do that here.\n\r", ch );
+    return;
+  }
+
+  if ( ch->practice <= 0 ) {
+    send_to_char( C_DEFAULT, "You have no practice sessions left.\n\r", ch );
+    return;
+  }
+
+  if ( ( ( sn = skill_lookup( argument ) ) < 0 ) || !can_practice_skpell( ch, sn ) ) {
+    send_to_char( C_DEFAULT, "You can't practice that.\n\r", ch );
+    return;
+  }
+
+  // practice to approx 50% then use to learn
+  if ( ch->pcdata->learned[ sn ] > 35 ) {
+    sprintf( buf, "&W%s tells you &c'&CI've already trained you all I can in %s&c'&w.\n\r", capitalize( mob->name ), skill_table[ sn ].name );
+    send_to_char( C_DEFAULT, buf, ch );
+    sprintf( buf, "&W%s tells you &c'&CPractice in the real world for more experience&c'&w.\n\r", capitalize( mob->name ) );
+    send_to_char( C_DEFAULT, buf, ch );
+    return;
+  }
+
+  adept = class_table[ prime_class( ch ) ].skill_adept;
+
+  if ( ch->pcdata->learned[ sn ] >= adept ) {
+    sprintf( buf, "You are already an adept of %s.\n\r", skill_table[ sn ].name );
+    send_to_char( C_DEFAULT, buf, ch );
+  } else {
+    ch->practice--;
+    ch->pcdata->learned[ sn ] += int_app[ get_curr_int( ch ) ].learn;
+
+    if ( ch->pcdata->learned[ sn ] < adept ) {
+      act( C_DEFAULT, "You practice $T.", ch, NULL, skill_table[ sn ].name, TO_CHAR );
+      act( C_DEFAULT, "$n practices $T.", ch, NULL, skill_table[ sn ].name, TO_ROOM );
+    } else {
+      ch->pcdata->learned[ sn ] = adept;
+      act( C_DEFAULT, "You are now an adept of $T.", ch, NULL, skill_table[ sn ].name, TO_CHAR );
+      act( C_DEFAULT, "$n is now an adept of $T.", ch, NULL, skill_table[ sn ].name, TO_ROOM );
+    }
+  }
 }
 
 /*
