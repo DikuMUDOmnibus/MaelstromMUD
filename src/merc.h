@@ -2378,7 +2378,6 @@ DECLARE_DO_FUN( do_hotreboot );
 DECLARE_DO_FUN( do_identify );
 DECLARE_DO_FUN( do_idea );
 DECLARE_DO_FUN( do_ideas );
-DECLARE_DO_FUN( do_imc );
 DECLARE_DO_FUN( do_immlist );
 DECLARE_DO_FUN( do_immtalk );
 DECLARE_DO_FUN( do_indestructable );

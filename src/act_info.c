@@ -79,13 +79,11 @@ char * format_obj_to_char( OBJ_DATA * obj, CHAR_DATA * ch, bool fShort ) {
     strcat( buf, "(Invis) " );
   }
 
-  if ( IS_AFFECTED( ch, AFF_DETECT_EVIL )
-       && IS_OBJ_STAT( obj, ITEM_EVIL ) ) {
+  if ( IS_AFFECTED( ch, AFF_DETECT_EVIL ) && IS_OBJ_STAT( obj, ITEM_EVIL ) ) {
     strcat( buf, "&r(Red Aura)&w " );
   }
 
-  if ( IS_AFFECTED( ch, AFF_DETECT_MAGIC )
-       && IS_OBJ_STAT( obj, ITEM_MAGIC ) ) {
+  if ( IS_AFFECTED( ch, AFF_DETECT_MAGIC ) && IS_OBJ_STAT( obj, ITEM_MAGIC ) ) {
     strcat( buf, "&Y(Magical)&w " );
   }
 
@@ -113,14 +111,10 @@ char * format_obj_to_char( OBJ_DATA * obj, CHAR_DATA * ch, bool fShort ) {
     strcat( buf, "&B(Frosty)&w " );
   }
 
-  if ( fShort ) {
-    if ( obj->short_descr ) {
-      strcat( buf, obj->short_descr );
-    }
-  } else {
-    if ( obj->description ) {
-      strcat( buf, obj->description );
-    }
+  if ( fShort && obj->short_descr ) {
+    strcat( buf, obj->short_descr );
+  } else if ( obj->description ) {
+    strcat( buf, obj->description );
   }
 
   return buf;
@@ -3173,10 +3167,6 @@ void do_channels( CHAR_DATA * ch, char * argument ) {
                     ? " +IMMTALK"
                     : " -immtalk",
                     ch );
-      send_to_char( AT_PINK, !IS_SET( ch->deaf, CHANNEL_IMC )
-                    ? " +IMC"
-                    : " -imc",
-                    ch );
     }
 
     send_to_char( AT_PINK, !IS_SET( ch->deaf, CHANNEL_MUSIC )
@@ -3282,8 +3272,6 @@ void do_channels( CHAR_DATA * ch, char * argument ) {
       bit = CHANNEL_HERO;
     } else if ( !str_cmp( arg + 1, "immtalk" ) ) {
       bit = CHANNEL_IMMTALK;
-    } else if ( !str_cmp( arg + 1, "imc" ) ) {
-      bit = CHANNEL_IMC;
     } else if ( !str_cmp( arg + 1, "music" ) ) {
       bit = CHANNEL_MUSIC;
     } else if ( !str_cmp( arg + 1, "question" ) ) {

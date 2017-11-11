@@ -120,22 +120,7 @@ int               port;
 int               control;
 int               maxdesc;
 
-/* IMC functions */
-#include <arpa/inet.h>
-
-#define IMC_PORT 1046
-#define IMC_HOST ( 205 << 24 ) + ( 134 << 16 ) + ( 192 << 8 ) + 31
-#define TIMEOFS  ( 5739 * 86400 ) + ( 7 * 3600 ) + ( 24 * 60 )
-
-void imc_setup( void );
-void imc_accept( void );
-void imc_update( fd_set * ins, fd_set * outs, fd_set * excs );
-bool imc_read( void );
-bool imc_write( const char * txt );
-void imc_channel( const char * buf, int len );
-
-int imcport = -1;
-int imcdesc = -1;
+#define TIMEOFS (5739 * 86400) + (7 * 3600) + (24 * 60)
 
 int game_main( int argc, char ** argv ) {
   struct timeval now_time;
@@ -308,7 +293,7 @@ int init_socket( int port ) {
   sa.sin_port   = htons( port );
 
   if ( bind( fd, (struct sockaddr *) &sa, sizeof( sa ) ) < 0 ) {
-    if ( port != IMC_PORT || errno != EADDRINUSE ) {
+    if ( errno != EADDRINUSE ) {
       perror( "Init_socket: bind" );
     }
 
@@ -363,10 +348,6 @@ void game_loop_unix( int control ) {
     FD_ZERO( &exc_set );
     FD_SET( control, &in_set );
 
-    if ( imcport > 0 ) {
-      FD_SET( imcport, &in_set );
-    }
-
     maxdesc = control;
 
     for ( d = descriptor_list; d; d = d->next ) {
@@ -377,13 +358,6 @@ void game_loop_unix( int control ) {
     }
 
     auth_maxdesc( &maxdesc, &in_set, &out_set, &exc_set );
-
-    if ( imcdesc > 0 ) {
-      maxdesc = UMAX( maxdesc, imcdesc );
-      FD_SET( imcdesc, &in_set );
-      FD_SET( imcdesc, &out_set );
-      FD_SET( imcdesc, &exc_set );
-    }
 
     if ( select( maxdesc + 1, &in_set, &out_set, &exc_set, &null_time ) < 0 ) {
       perror( "Game_loop: select: poll" );
@@ -397,8 +371,6 @@ void game_loop_unix( int control ) {
       new_descriptor( control );
     }
 
-    /*	if ( port != 1045 )
-       imc_update(&in_set, &out_set, &exc_set); */
     auth_update( &in_set, &out_set, &exc_set );
 
     /*
@@ -3180,223 +3152,6 @@ void reset_builder_levels() {
     } else if ( !str_prefix( "oload", cmd_table[ cmd ].name ) ) {
       cmd_table[ cmd ].level = L_SEN;
     }
-  }
-
-  return;
-}
-
-/* IMC stuff.. -- Alty */
-void imc_setup( void ) {
-  struct sockaddr_in sock;
-
-  if ( ( imcport = init_socket( IMC_PORT ) ) != -2 ) {
-    return;
-  }
-
-  if ( ( imcdesc = socket( AF_INET, SOCK_STREAM, 0 ) ) < 0 ) {
-    perror( "imc_setup: socket" );
-    return;
-  }
-
-  sock.sin_addr.s_addr = inet_addr( "205.134.192.31" );
-  sock.sin_port        = htons( IMC_PORT );
-  sock.sin_family      = AF_INET;
-
-  if ( connect( imcdesc, (struct sockaddr *)&sock, sizeof( sock ) ) != 0 ) {
-    perror( "imc_setup: connect" );
-    close( imcdesc );
-    imcdesc = -1;
-    return;
-  }
-
-  return;
-}
-
-void imc_accept( void ) {
-  struct sockaddr_in sock;
-  socklen_t          size;
-  int                desc;
-
-  size = sizeof( sock );
-
-  if ( ( desc = accept( imcport, (struct sockaddr *)&sock, &size ) ) < 0 ) {
-    perror( "imc_accept: accept" );
-    return;
-  }
-
-#if !defined( FNDELAY )
-#define FNDELAY O_NDELAY
-#endif
-
-  if ( fcntl( desc, F_SETFL, FNDELAY ) == -1 ) {
-    perror( "imc_accept: fnctl: FNDELAY" );
-    close( desc );
-    return;
-  }
-
-  if ( imcdesc > 0 ) {
-    close( desc );
-    return;
-  }
-
-  imcdesc = desc;
-  return;
-}
-
-void imc_update( fd_set * ins, fd_set * outs, fd_set * excs ) {
-  if ( imcport < 0 && imcdesc < 0 ) {
-    static time_t ltime;
-
-    if ( ltime < current_time - ( 5 * 60 ) ) {
-      imc_setup();
-      ltime = current_time;
-    }
-
-    return;
-  }
-
-  if ( imcport > 0 && FD_ISSET( imcport, ins ) ) {
-    imc_accept();
-    return;
-  }
-
-  if ( imcdesc < 0 ) {
-    return;
-  }
-
-  if ( FD_ISSET( imcdesc, excs ) ) {
-    FD_CLR( imcdesc, ins );
-    FD_CLR( imcdesc, outs );
-    close( imcdesc );
-    imcdesc = -1;
-    return;
-  }
-
-  if ( FD_ISSET( imcdesc, ins ) && !imc_read() ) {
-    FD_CLR( imcdesc, outs );
-    close( imcdesc );
-    imcdesc = -1;
-    return;
-  }
-
-  if ( FD_ISSET( imcdesc, outs ) && !imc_write( NULL ) ) {
-    close( imcdesc );
-    imcdesc = -1;
-    return;
-  }
-
-  return;
-}
-
-bool imc_read( void ) {
-  static int  iStart;
-  static char buf[ MAX_STRING_LENGTH ];
-
-  if ( iStart >= sizeof( buf ) - 10 ) {
-    log_string( "imc overflow", CHANNEL_GOD, -1 );
-    iStart = 0;
-    return FALSE;
-  }
-
-  for (;; ) {
-    int nRead;
-
-    nRead = read( imcdesc, buf + iStart, sizeof( buf ) - 10 - iStart );
-
-    if ( nRead > 0 ) {
-      iStart += nRead;
-
-      if ( buf[ iStart - 1 ] == '\n' || buf[ iStart - 1 ] == '\r' ) {
-        break;
-      }
-    } else if ( nRead == 0 ) {
-      iStart = 0;
-      return FALSE;
-    } else if ( errno == EWOULDBLOCK || errno == EAGAIN ) {
-      break;
-    } else {
-      perror( "imc_read" );
-      iStart = 0;
-      return FALSE;
-    }
-  }
-
-  buf[ iStart ] = '\0';
-
-  if ( buf[ iStart - 1 ] == '\n' || buf[ iStart - 1 ] == '\r' ) {
-    imc_channel( buf, iStart );
-    iStart = 0;
-  }
-
-  return TRUE;
-}
-
-bool imc_write( const char * txt ) {
-  static char buf[ MAX_STRING_LENGTH ];
-  static int  btop;
-  int         iStart, nWrite, nBlock;
-
-  if ( txt ) {
-    nBlock = strlen( txt );
-    imc_channel( txt, nBlock );
-
-    if ( imcdesc < 0 ) {
-      return TRUE;
-    }
-
-    if ( btop + nBlock >= sizeof( buf ) - 10 ) {
-      log_string( "imc output overflow", CHANNEL_GOD, -1 );
-      btop = 0;
-      return FALSE;
-    }
-
-    strcpy( buf + btop, txt );
-    btop += nBlock;
-    return TRUE;
-  }
-
-  for ( iStart = 0; iStart < btop; iStart += nWrite ) {
-    nBlock = UMIN( btop - iStart, 4096 );
-
-    if ( ( nWrite = write( imcdesc, buf + iStart, nBlock ) ) < 0 ) {
-      perror( "imc_write" );
-      btop = 0;
-      return FALSE;
-    }
-  }
-
-  btop = 0;
-  return TRUE;
-}
-
-void imc_channel( const char * buf, int len ) {
-  DESCRIPTOR_DATA * d;
-
-  for ( d = descriptor_list; d; d = d->next ) {
-    CHAR_DATA * och = d->original ? d->original : d->character;
-
-    if ( d->connected == CON_PLAYING &&
-         IS_IMMORTAL( och ) &&
-         !IS_SET( och->deaf, CHANNEL_IMC ) ) {
-      write_to_buffer( d, buf, len );
-    }
-  }
-
-  return;
-}
-
-void do_imc( CHAR_DATA * ch, char * argument ) {
-  char buf[ MAX_STRING_LENGTH ];
-
-  sprintf( buf, "%s %d: %s\n\r", ch->name, port, argument );
-
-  if ( IS_SET( ch->deaf, CHANNEL_IMC ) ) {
-    REMOVE_BIT( ch->deaf, CHANNEL_IMC );
-  }
-
-  if ( !imc_write( buf ) ) {
-    close( imcdesc );
-    imcdesc = -1;
   }
 
   return;
