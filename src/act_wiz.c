@@ -479,49 +479,33 @@ void do_detract( CHAR_DATA * ch, char * argument ) {
 
 void do_wizhelp( CHAR_DATA * ch, char * argument ) {
   char buf[ MAX_STRING_LENGTH ];
-  int  cmd;
-  int  trust;
-  int  col = 0;
+  int  trust = get_trust( ch );
 
-  trust = get_trust( ch );
+  for ( int level = MAX_LEVEL; level > LEVEL_MORTAL; level-- ) {
+    int  col   = 0;
 
-  for ( cmd = 0; cmd_table[ cmd ].name[ 0 ] != '\0'; cmd++ ) {
-    int clr;
+    sprintf( buf, "&R\n\r=====================================[%d]=====================================\n\r&W", level );
+    send_to_char( C_DEFAULT, buf, ch );
 
-    if ( cmd_table[ cmd ].name[ 0 ] == '\0' ) {
-      break;
+    for ( int cmd = 0; cmd_table[ cmd ].name[ 0 ] != '\0'; cmd++ ) {
+      if ( cmd_table[ cmd ].name[ 0 ] == '\0' ) {
+        break;
+      }
+
+      if ( cmd_table[ cmd ].level != level || !can_use_cmd( cmd, ch, trust ) ) {
+        continue;
+      }
+
+      sprintf( buf, "%-16s", cmd_table[ cmd ].name );
+      strcat( buf, (++col % 5 == 0) ? "\n\r" : " " );
+
+      send_to_char( C_DEFAULT, buf, ch );
     }
-
-    if ( cmd_table[ cmd ].level < LEVEL_HERO ||
-         !can_use_cmd( cmd, ch, trust ) ||
-         ( ch->level < cmd_table[ cmd ].level ) ) {
-      continue;
+    
+    if ( col % 5 != 0 ) {
+      send_to_char( AT_GREY, "\n\r", ch );
     }
-
-    if ( cmd_table[ cmd ].level == L_DIR ) {
-      clr = AT_RED;
-    } else if ( cmd_table[ cmd ].level > L_DIR ) {
-      clr = AT_BLUE;
-    } else if ( cmd_table[ cmd ].level == L_SEN ) {
-      clr = AT_LBLUE;
-    } else {
-      clr = AT_GREY;
-    }
-
-    sprintf( buf, "%-16s", cmd_table[ cmd ].name );
-
-    if ( ++col % 5 == 0 ) {
-      strcat( buf, "\n\r" );
-    }
-
-    send_to_char( clr, buf, ch );
   }
-
-  if ( col % 5 != 0 ) {
-    send_to_char( AT_GREY, "\n\r", ch );
-  }
-
-  return;
 }
 
 void do_slaymes( CHAR_DATA * ch, char * argument ) {
