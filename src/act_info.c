@@ -4907,7 +4907,7 @@ void do_immlist( CHAR_DATA * ch, char * argument ) {
   char              buf[ MAX_STRING_LENGTH ];
   char              buf1[ MAX_STRING_LENGTH ];
 
-  send_to_char( AT_BLUE, "\b\rIMMORTAL STAFF OF THE STORM\n\r", ch );
+  send_to_char( AT_BLUE, "IMMORTAL STAFF OF THE STORM\n\r", ch );
 
   for ( level = MAX_LEVEL; level > LEVEL_MORTAL; level-- ) {
     buf1[ 0 ] = '\0';

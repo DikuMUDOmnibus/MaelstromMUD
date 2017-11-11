@@ -2265,6 +2265,7 @@ DECLARE_DO_FUN( do_mpteleport );
 DECLARE_DO_FUN( do_mptransfer );
 DECLARE_DO_FUN( do_opstat );
 DECLARE_DO_FUN( do_rpstat );
+DECLARE_DO_FUN( do_addlag );
 DECLARE_DO_FUN( do_accept );
 DECLARE_DO_FUN( do_account );
 DECLARE_DO_FUN( do_advance );

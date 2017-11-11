@@ -302,6 +302,7 @@ struct cmd_type cmd_table [] = {
   { "pkill",           do_pkill,             POS_DEAD,     0,     LOG_NORMAL, FALSE   },
   { "indestructable",  do_indestructable,    POS_STANDING, 0,     LOG_NORMAL, TRUE    },
   { "remake",          do_remake,            POS_STANDING, 0,     LOG_NORMAL, TRUE    },
+  { "addlag",          do_addlag,            POS_DEAD,     L_IMP, LOG_ALWAYS, FALSE   },
   { "advance",         do_advance,           POS_DEAD,     L_IMP, LOG_ALWAYS, TRUE    },
   { "allow",           do_allow,             POS_DEAD,     L_DIR, LOG_ALWAYS, TRUE    },
   { "astat",           do_astat,             POS_DEAD,     L_JUN, LOG_NORMAL, TRUE    },

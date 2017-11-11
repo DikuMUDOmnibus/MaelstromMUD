@@ -7331,3 +7331,39 @@ void do_rebuild( CHAR_DATA * ch, char * argument ) {
    }
 
  */
+
+void do_addlag( CHAR_DATA * ch, char * argument) {
+  CHAR_DATA * victim;
+  char        arg1[MAX_STRING_LENGTH];
+  int         x;
+
+  argument = one_argument(argument, arg1);
+
+  if ( arg1[0] == '\0' ) {
+    send_to_char(C_DEFAULT, "Syntax: addlag <character> <pulses>\n\r", ch);
+    return;
+  }
+
+  if ( ( victim = get_char_world(ch, arg1) ) == NULL ) {
+    send_to_char(C_DEFAULT, "They're not here.\n\r", ch);
+    return;
+  }
+
+  if ( IS_NPC(victim) ) {
+    send_to_char(C_DEFAULT, "Not on NPCs.\n\r", ch);
+    return;
+  }
+
+  if ( ( x = atoi(argument) ) <= 0 ) {
+    send_to_char(C_DEFAULT, "That makes a LOT of sense.\n\r", ch);
+    return;
+  }
+
+  if ( x > 100 ) {
+    send_to_char(C_DEFAULT, "There's a limit to cruel and unusual punishment.\n\r", ch);
+    return;
+  }
+
+  WAIT_STATE(victim, x);
+  send_to_char(AT_RED, "Adding lag now...\n\r", ch);
+}
